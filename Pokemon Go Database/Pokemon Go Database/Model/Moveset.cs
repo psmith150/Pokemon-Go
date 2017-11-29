@@ -6,10 +6,10 @@ namespace Pokemon_Go_Database.Model
     [Serializable]
     public class Moveset : ObservableObject
     {
-        private Move _fastMove; //The fast move
-        private Move _chargeMove; //The charge move
+        private FastMove _fastMove; //The fast move
+        private ChargeMove _chargeMove; //The charge move
 
-        public Moveset(Move fastMove, Move chargeMove)
+        public Moveset(FastMove fastMove, ChargeMove chargeMove)
         {
             _fastMove = fastMove;
             _chargeMove = chargeMove;
@@ -27,7 +27,7 @@ namespace Pokemon_Go_Database.Model
             RaisePropertyChanged("FastMove");
         }
 
-        public Move FastMove
+        public FastMove FastMove
         {
             get
             {
@@ -40,7 +40,7 @@ namespace Pokemon_Go_Database.Model
             }
         }
 
-        public Move ChargeMove
+        public ChargeMove ChargeMove
         {
             get
             {

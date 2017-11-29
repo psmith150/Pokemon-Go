@@ -20,12 +20,12 @@ namespace Pokemon_Go_Database.ViewModel
         private readonly IDataService _dataService;
 
         //Data used for file management
-        private String fileName = "data";   //Name of the data files: <fileName>_<_currentYear>.xml
+        private String fileName = "Pokemon_Go_Data";   //Name of the data files: <fileName>_<_currentYear>.xml
         private String filePath = "D:\\OneDrive\\Documents\\Miscellaneous\\";   //File path of the data files.
         private String completeFilePath;    //Complete file path
 
-        private MyObservableCollection<Move> _fastMoveList; //The list of all valid fast moves
-        private MyObservableCollection<Move> _chargeMoveList; //The list of all valid charge moves
+        private MyObservableCollection<FastMove> _fastMoveList; //The list of all valid fast moves
+        private MyObservableCollection<ChargeMove> _chargeMoveList; //The list of all valid charge moves
         private MyObservableCollection<PokedexEntry> _pokedex; //The pokedex entries for all pokemon
 
         /// <summary>
@@ -70,14 +70,15 @@ namespace Pokemon_Go_Database.ViewModel
                 });
             completeFilePath = filePath + fileName + ".xml";
 
-            _fastMoveList = new MyObservableCollection<Move>();
-            _chargeMoveList = new MyObservableCollection<Move>();
+            _fastMoveList = new MyObservableCollection<FastMove>();
+            _chargeMoveList = new MyObservableCollection<ChargeMove>();
             _pokedex = new MyObservableCollection<PokedexEntry>();
 
             SaveDataCommand = new RelayCommand(() => SaveData());
 
             Debug.WriteLine("Loading data from " + completeFilePath);
             LoadData();
+            Debug.WriteLine("Number of fast moves is " + _fastMoveList.Count);
             //_fastMoveList.Add(new Move("Test move"));
         }
 
@@ -88,7 +89,7 @@ namespace Pokemon_Go_Database.ViewModel
         ////    base.Cleanup();
         ////}
 
-        public MyObservableCollection<Move> FastMoveList
+        public MyObservableCollection<FastMove> FastMoveList
         {
             get
             {
@@ -96,7 +97,7 @@ namespace Pokemon_Go_Database.ViewModel
             }
         }
 
-        public MyObservableCollection<Move> ChargeMoveList
+        public MyObservableCollection<ChargeMove> ChargeMoveList
         {
             get
             {
@@ -188,8 +189,8 @@ namespace Pokemon_Go_Database.ViewModel
                     //Create the DataWrapper object and add the apprpriate data
                     XmlSerializer dataSerializer = new XmlSerializer(typeof(DataWrapper));
                     DataWrapper data = new DataWrapper();
-                    data.FastMoves = new MyObservableCollection<Move>();
-                    data.ChargeMoves = new MyObservableCollection<Move>();
+                    data.FastMoves = new MyObservableCollection<FastMove>();
+                    data.ChargeMoves = new MyObservableCollection<ChargeMove>();
                     data.PokedexEntries = new MyObservableCollection<PokedexEntry>();
 
                     dataSerializer.Serialize(stream, data); //Saves the data using the attributes defined in each class

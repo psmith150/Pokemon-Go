@@ -4,6 +4,8 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:ignore="http://www.galasoft.ch/ignore"
+        xmlns:Model="clr-namespace:Pokemon_Go_Database.Model"
+        xmlns:System="clr-namespace:System;assembly=mscorlib"
         mc:Ignorable="d ignore"
         Height="350"
         Width="525"
@@ -17,6 +19,12 @@
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="Skins/MainSkin.xaml" />
             </ResourceDictionary.MergedDictionaries>
+            <ObjectDataProvider x:Key="TypesEnum" MethodName="GetValues"
+                            ObjectType="{x:Type System:Enum}">
+                <ObjectDataProvider.MethodParameters>
+                    <x:Type TypeName="Model:Type"/>
+                </ObjectDataProvider.MethodParameters>
+            </ObjectDataProvider>
         </ResourceDictionary>
     </Window.Resources>
 
@@ -41,7 +49,9 @@
                             <DataGridTextColumn Header="Power" Binding="{Binding Path=Power}"/>
                             <DataGridTextColumn Header="Time" Binding="{Binding Path=Time}"/>
                             <DataGridTextColumn Header="Energy" Binding="{Binding Path=Energy}"/>
-                            <DataGridTextColumn Header="Type" Binding="{Binding Path=Type}"/>
+                            <DataGridComboBoxColumn Header="Type" ItemsSource="{Binding Source={StaticResource TypesEnum}}" SelectedItemBinding="{Binding Path=Type}"/>
+                            <DataGridTextColumn Header="DPS" Binding="{Binding Path=DPS}"/>
+                            <DataGridTextColumn Header="EPS" Binding="{Binding Path=EPS}"/>
                         </DataGrid.Columns>
                     </DataGrid>
                 </Grid>

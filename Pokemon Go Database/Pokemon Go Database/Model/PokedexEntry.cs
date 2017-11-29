@@ -17,8 +17,8 @@ namespace Pokemon_Go_Database.Model
         private String _species; //Pokemon species name
         private Type _type1; //Pokemon's first type
         private Type _type2; //Pokemon's second type
-        private MyObservableCollection<Move> _fastMoves; //Pokemon's fast moves
-        private MyObservableCollection<Move> _chargeMoves; //Pokemon's charge moves
+        private MyObservableCollection<FastMove> _fastMoves; //Pokemon's fast moves
+        private MyObservableCollection<ChargeMove> _chargeMoves; //Pokemon's charge moves
         private MyObservableCollection<Moveset> _movesets; //Pokemon's moveset
         private int _attack; //Pokemon's attack stat
         private int _defense; //Pokemon's defense stat
@@ -30,8 +30,8 @@ namespace Pokemon_Go_Database.Model
             _species = "New Pokemon";
             _type1 = Type.None;
             _type2 = Type.None;
-            _fastMoves = new MyObservableCollection<Move>();
-            _chargeMoves = new MyObservableCollection<Move>();
+            _fastMoves = new MyObservableCollection<FastMove>();
+            _chargeMoves = new MyObservableCollection<ChargeMove>();
             _movesets = new MyObservableCollection<Moveset>();
             _attack = 0;
             _defense = 0;
@@ -47,8 +47,8 @@ namespace Pokemon_Go_Database.Model
             _species = species;
             _type1 = type1;
             _type2 = type2;
-            _fastMoves = new MyObservableCollection<Move>();
-            _chargeMoves = new MyObservableCollection<Move>();
+            _fastMoves = new MyObservableCollection<FastMove>();
+            _chargeMoves = new MyObservableCollection<ChargeMove>();
             _movesets = new MyObservableCollection<Moveset>();
             _attack = 0;
             _defense = 0;
@@ -66,7 +66,7 @@ namespace Pokemon_Go_Database.Model
                 {
                     foreach (Moveset moveset in _movesets)
                     {
-                        if (moveset.ChargeMove == item as Move)
+                        if (moveset.ChargeMove == item as ChargeMove)
                         {
                             _movesets.Remove(moveset);
                         }
@@ -77,9 +77,9 @@ namespace Pokemon_Go_Database.Model
             {
                 foreach (INotifyPropertyChanged item in e.NewItems)
                 {
-                    foreach (Move fastMove in _fastMoves)
+                    foreach (FastMove fastMove in _fastMoves)
                     {
-                        _movesets.Add(new Moveset(fastMove, item as Move));
+                        _movesets.Add(new Moveset(fastMove, item as ChargeMove));
                     }
                 }
             }
@@ -93,7 +93,7 @@ namespace Pokemon_Go_Database.Model
                 {
                     foreach (Moveset moveset in _movesets)
                     {
-                        if (moveset.FastMove == item as Move)
+                        if (moveset.FastMove == item as FastMove)
                         {
                             _movesets.Remove(moveset);
                         }
@@ -104,9 +104,9 @@ namespace Pokemon_Go_Database.Model
             {
                 foreach (INotifyPropertyChanged item in e.NewItems)
                 {
-                    foreach (Move chargeMove in _chargeMoves)
+                    foreach (ChargeMove chargeMove in _chargeMoves)
                     {
-                        _movesets.Add(new Moveset(item as Move, chargeMove));
+                        _movesets.Add(new Moveset(item as FastMove, chargeMove));
                     }
                 }
             }
@@ -164,7 +164,7 @@ namespace Pokemon_Go_Database.Model
             }
         }
 
-        public MyObservableCollection<Move> FastMoves
+        public MyObservableCollection<FastMove> FastMoves
         {
             get
             {
@@ -176,7 +176,7 @@ namespace Pokemon_Go_Database.Model
                 RaisePropertyChanged("FastMoves");
             }
         }
-        public MyObservableCollection<Move> ChargeMoves
+        public MyObservableCollection<ChargeMove> ChargeMoves
         {
             get
             {

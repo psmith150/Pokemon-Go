@@ -72,6 +72,8 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Design\DesignDataService.cs" />
+    <Compile Include="Model\ChargeMove.cs" />
+    <Compile Include="Model\FastMove.cs" />
     <Compile Include="Model\DataWrapper.cs" />
     <Compile Include="Model\MyObservableCollection.cs" />
     <Compile Include="Model\Enums.cs" />

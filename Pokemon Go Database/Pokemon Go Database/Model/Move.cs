@@ -4,7 +4,7 @@ using System;
 namespace Pokemon_Go_Database.Model
 {
     [Serializable]
-    public class Move : ObservableObject
+    public abstract class Move : ObservableObject
     {
         private string _name; //The name of the move
         private int _power; //The power of the move
@@ -20,17 +20,15 @@ namespace Pokemon_Go_Database.Model
             _time = 1000;
             _energy = 10;
             _type = Type.None;
-            _moveType = MoveType.Fast;
         }
 
-        public Move(string name="New Move", int power=0, int time=1000, int energy=10, Type type=Type.None, MoveType moveType=MoveType.Fast)
+        public Move(string name="New Move", int power=0, int time=1000, int energy=10, Type type=Type.None)
         {
             _name = name;
             _power = power;
             _time = time;
             _energy = energy;
             _type = type;
-            _moveType = moveType;
         }
 
         public string Name
