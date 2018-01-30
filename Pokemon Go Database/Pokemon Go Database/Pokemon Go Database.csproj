@@ -36,6 +36,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Autofac, Version=4.6.2.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\packages\Autofac.4.6.2\lib\net45\Autofac.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="GalaSoft.MvvmLight, Version=5.3.0.19026, Culture=neutral, PublicKeyToken=e7570ab207bcb616, processorArchitecture=MSIL">
       <HintPath>..\packages\MvvmLightLibs.5.3.0.0\lib\net45\GalaSoft.MvvmLight.dll</HintPath>
     </Reference>
@@ -50,6 +54,11 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\MvvmLightLibs.5.3.0.0\lib\net45\System.Windows.Interactivity.dll</HintPath>
       <Private>True</Private>
@@ -71,22 +80,73 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Design\DesignDataService.cs" />
+    <Compile Include="BaseViewModel.cs" />
+    <Compile Include="CustomControls\HoverButton.cs" />
+    <Compile Include="IOC\IOCContainer.cs" />
     <Compile Include="Model\ChargeMove.cs" />
     <Compile Include="Model\FastMove.cs" />
     <Compile Include="Model\DataWrapper.cs" />
+    <Compile Include="Model\IVCalculator.cs" />
     <Compile Include="Model\MyObservableCollection.cs" />
     <Compile Include="Model\Enums.cs" />
     <Compile Include="Model\Moveset.cs" />
     <Compile Include="Model\Move.cs" />
     <Compile Include="Model\PokedexEntry.cs" />
     <Compile Include="Model\Pokemon.cs" />
-    <Compile Include="Model\DataItem.cs" />
-    <Compile Include="Model\DataService.cs" />
-    <Compile Include="Model\IDataService.cs" />
-    <Compile Include="ViewModel\MainViewModel.cs" />
-    <Compile Include="ViewModel\ViewModelLocator.cs" />
-    <Page Include="MainWindow.xaml">
+    <Compile Include="Popups\EditMovesetsPopup.xaml.cs">
+      <DependentUpon>EditMovesetsPopup.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Popups\EditMovesetsViewModel.cs" />
+    <Compile Include="Popups\PopupEventArgs.cs" />
+    <Compile Include="Popups\PopupViewModel.cs" />
+    <Compile Include="Screens\ChargeMoveScreen.xaml.cs">
+      <DependentUpon>ChargeMoveScreen.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\FastMoveScreen.xaml.cs">
+      <DependentUpon>FastMoveScreen.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\ChargeMoveViewModel.cs" />
+    <Compile Include="Screens\PokedexScreen.xaml.cs">
+      <DependentUpon>PokedexScreen.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\FastMoveViewModel.cs" />
+    <Compile Include="Screens\PokedexViewModel.cs" />
+    <Compile Include="Screens\ScreenViewModel.cs" />
+    <Compile Include="Screens\TemplateScreen.xaml.cs">
+      <DependentUpon>TemplateScreen.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\TemplateViewModel.cs" />
+    <Compile Include="Services\NavigationService.cs" />
+    <Compile Include="Services\SessionService.cs" />
+    <Compile Include="ValueConverters\IVEnumToNameConverter.cs" />
+    <Compile Include="ValueConverters\TypeToBoolConverter.cs" />
+    <Compile Include="ValueConverters\ViewModelToViewConverter.cs" />
+    <Compile Include="Windows\MainWindowViewModel.cs" />
+    <Page Include="Popups\EditMovesetsPopup.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resources\StyleDictionary.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Screens\ChargeMoveScreen.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Screens\FastMoveScreen.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Screens\PokedexScreen.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Screens\TemplateScreen.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -94,7 +154,7 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="MainWindow.xaml.cs">
+    <Compile Include="Windows\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
@@ -130,6 +190,13 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Down_arrow.png" />
+    <Resource Include="Resources\Filter.png" />
+    <Resource Include="Resources\minus_sign.png" />
+    <Resource Include="Resources\plus_sign.png" />
+    <Resource Include="Resources\Up_arrow.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

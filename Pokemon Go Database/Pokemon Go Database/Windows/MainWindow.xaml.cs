@@ -1,7 +1,6 @@
 ﻿using System.Windows;
-using Pokemon_Go_Database.ViewModel;
 
-namespace Pokemon_Go_Database
+namespace Pokemon_Go_Database.Windows
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -11,10 +10,10 @@ namespace Pokemon_Go_Database
         /// <summary>
         /// Initializes a new instance of the MainWindow class.
         /// </summary>
-        public MainWindow()
+        public MainWindow(MainWindowViewModel viewModel)
         {
+            this.DataContext = viewModel;
             InitializeComponent();
-            Closing += (s, e) => ViewModelLocator.Cleanup();
         }
     }
 }

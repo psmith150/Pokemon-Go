@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Data xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <FastMoves>
-    <Move>
+  <Moves>
+    <Move xsi:type="FastMove">
       <Name>Acid</Name>
       <Power>9</Power>
       <Time>800</Time>
@@ -9,7 +9,7 @@
       <Type>Poison</Type>
       <MoveType>Fast</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="FastMove">
       <Name>Air Slash</Name>
       <Power>14</Power>
       <Time>1200</Time>
@@ -17,7 +17,7 @@
       <Type>Flying</Type>
       <MoveType>Fast</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="FastMove">
       <Name>Astonish</Name>
       <Power>8</Power>
       <Time>1100</Time>
@@ -25,7 +25,7 @@
       <Type>Ghost</Type>
       <MoveType>Fast</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="FastMove">
       <Name>Bite</Name>
       <Power>6</Power>
       <Time>500</Time>
@@ -33,7 +33,7 @@
       <Type>Dark</Type>
       <MoveType>Fast</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="FastMove">
       <Name>Bubble</Name>
       <Power>12</Power>
       <Time>1200</Time>
@@ -41,7 +41,7 @@
       <Type>Water</Type>
       <MoveType>Fast</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="FastMove">
       <Name>Bug Bite</Name>
       <Power>5</Power>
       <Time>500</Time>
@@ -49,7 +49,7 @@
       <Type>Bug</Type>
       <MoveType>Fast</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="FastMove">
       <Name>Bullet Punch</Name>
       <Power>9</Power>
       <Time>900</Time>
@@ -57,7 +57,7 @@
       <Type>Steel</Type>
       <MoveType>Fast</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="FastMove">
       <Name>Bullet Seed</Name>
       <Power>8</Power>
       <Time>1100</Time>
@@ -65,7 +65,7 @@
       <Type>Grass</Type>
       <MoveType>Fast</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="FastMove">
       <Name>Charge Beam</Name>
       <Power>8</Power>
       <Time>1100</Time>
@@ -73,7 +73,7 @@
       <Type>Electric</Type>
       <MoveType>Fast</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="FastMove">
       <Name>Confusion</Name>
       <Power>20</Power>
       <Time>1600</Time>
@@ -81,7 +81,7 @@
       <Type>Psychic</Type>
       <MoveType>Fast</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="FastMove">
       <Name>Counter</Name>
       <Power>12</Power>
       <Time>900</Time>
@@ -89,7 +89,7 @@
       <Type>Fighting</Type>
       <MoveType>Fast</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="FastMove">
       <Name>Cut</Name>
       <Power>5</Power>
       <Time>500</Time>
@@ -97,7 +97,7 @@
       <Type>Normal</Type>
       <MoveType>Fast</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="FastMove">
       <Name>Dragon Breath</Name>
       <Power>6</Power>
       <Time>500</Time>
@@ -105,7 +105,7 @@
       <Type>Dragon</Type>
       <MoveType>Fast</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="FastMove">
       <Name>Dragon Tail</Name>
       <Power>15</Power>
       <Time>1100</Time>
@@ -113,7 +113,7 @@
       <Type>Dragon</Type>
       <MoveType>Fast</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="FastMove">
       <Name>Ember</Name>
       <Power>10</Power>
       <Time>1000</Time>
@@ -121,7 +121,7 @@
       <Type>Fire</Type>
       <MoveType>Fast</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="FastMove">
       <Name>Extrasensory</Name>
       <Power>12</Power>
       <Time>1100</Time>
@@ -129,7 +129,7 @@
       <Type>Psychic</Type>
       <MoveType>Fast</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="FastMove">
       <Name>Feint Attack</Name>
       <Power>10</Power>
       <Time>900</Time>
@@ -137,7 +137,7 @@
       <Type>Dark</Type>
       <MoveType>Fast</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="FastMove">
       <Name>Fire Fang</Name>
       <Power>11</Power>
       <Time>900</Time>
@@ -145,7 +145,7 @@
       <Type>Fire</Type>
       <MoveType>Fast</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="FastMove">
       <Name>Fire Spin</Name>
       <Power>14</Power>
       <Time>1100</Time>
@@ -153,7 +153,7 @@
       <Type>Fire</Type>
       <MoveType>Fast</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="FastMove">
       <Name>Frost Breath</Name>
       <Power>10</Power>
       <Time>900</Time>
@@ -161,7 +161,7 @@
       <Type>Ice</Type>
       <MoveType>Fast</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="FastMove">
       <Name>Fury Cutter</Name>
       <Power>3</Power>
       <Time>400</Time>
@@ -169,7 +169,7 @@
       <Type>Bug</Type>
       <MoveType>Fast</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="FastMove">
       <Name>Hex</Name>
       <Power>10</Power>
       <Time>1200</Time>
@@ -177,7 +177,7 @@
       <Type>Ghost</Type>
       <MoveType>Fast</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="FastMove">
       <Name>Hidden Power</Name>
       <Power>15</Power>
       <Time>1500</Time>
@@ -185,7 +185,7 @@
       <Type>Normal</Type>
       <MoveType>Fast</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="FastMove">
       <Name>Ice Shard</Name>
       <Power>12</Power>
       <Time>1200</Time>
@@ -193,7 +193,7 @@
       <Type>Ice</Type>
       <MoveType>Fast</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="FastMove">
       <Name>Infestation</Name>
       <Power>10</Power>
       <Time>1100</Time>
@@ -201,7 +201,7 @@
       <Type>Bug</Type>
       <MoveType>Fast</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="FastMove">
       <Name>Iron Tail</Name>
       <Power>15</Power>
       <Time>1100</Time>
@@ -209,7 +209,7 @@
       <Type>Steel</Type>
       <MoveType>Fast</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="FastMove">
       <Name>Karate Chop</Name>
       <Power>8</Power>
       <Time>800</Time>
@@ -217,7 +217,7 @@
       <Type>Fighting</Type>
       <MoveType>Fast</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="FastMove">
       <Name>Lick</Name>
       <Power>5</Power>
       <Time>500</Time>
@@ -225,7 +225,7 @@
       <Type>Ghost</Type>
       <MoveType>Fast</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="FastMove">
       <Name>Low Kick</Name>
       <Power>6</Power>
       <Time>600</Time>
@@ -233,7 +233,7 @@
       <Type>Fighting</Type>
       <MoveType>Fast</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="FastMove">
       <Name>Metal Claw</Name>
       <Power>8</Power>
       <Time>700</Time>
@@ -241,7 +241,7 @@
       <Type>Steel</Type>
       <MoveType>Fast</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="FastMove">
       <Name>Mud Shot</Name>
       <Power>5</Power>
       <Time>600</Time>
@@ -249,7 +249,7 @@
       <Type>Ground</Type>
       <MoveType>Fast</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="FastMove">
       <Name>Mud Slap</Name>
       <Power>15</Power>
       <Time>1400</Time>
@@ -257,7 +257,7 @@
       <Type>Ground</Type>
       <MoveType>Fast</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="FastMove">
       <Name>Peck</Name>
       <Power>10</Power>
       <Time>1000</Time>
@@ -265,7 +265,7 @@
       <Type>Flying</Type>
       <MoveType>Fast</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="FastMove">
       <Name>Poison Jab</Name>
       <Power>10</Power>
       <Time>800</Time>
@@ -273,7 +273,7 @@
       <Type>Poison</Type>
       <MoveType>Fast</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="FastMove">
       <Name>Poison Sting</Name>
       <Power>5</Power>
       <Time>600</Time>
@@ -281,7 +281,7 @@
       <Type>Poison</Type>
       <MoveType>Fast</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="FastMove">
       <Name>Pound</Name>
       <Power>7</Power>
       <Time>600</Time>
@@ -289,7 +289,7 @@
       <Type>Normal</Type>
       <MoveType>Fast</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="FastMove">
       <Name>Powder Snow</Name>
       <Power>6</Power>
       <Time>1000</Time>
@@ -297,7 +297,7 @@
       <Type>Ice</Type>
       <MoveType>Fast</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="FastMove">
       <Name>Psycho Cut</Name>
       <Power>5</Power>
       <Time>600</Time>
@@ -305,7 +305,7 @@
       <Type>Psychic</Type>
       <MoveType>Fast</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="FastMove">
       <Name>Quick Attack</Name>
       <Power>8</Power>
       <Time>800</Time>
@@ -313,7 +313,7 @@
       <Type>Normal</Type>
       <MoveType>Fast</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="FastMove">
       <Name>Razor Leaf</Name>
       <Power>13</Power>
       <Time>1000</Time>
@@ -321,7 +321,7 @@
       <Type>Grass</Type>
       <MoveType>Fast</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="FastMove">
       <Name>Rock Smash</Name>
       <Power>15</Power>
       <Time>1300</Time>
@@ -329,7 +329,7 @@
       <Type>Fighting</Type>
       <MoveType>Fast</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="FastMove">
       <Name>Rock Throw</Name>
       <Power>12</Power>
       <Time>900</Time>
@@ -337,7 +337,7 @@
       <Type>Rock</Type>
       <MoveType>Fast</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="FastMove">
       <Name>Scratch</Name>
       <Power>6</Power>
       <Time>500</Time>
@@ -345,7 +345,7 @@
       <Type>Normal</Type>
       <MoveType>Fast</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="FastMove">
       <Name>Shadow Claw</Name>
       <Power>9</Power>
       <Time>700</Time>
@@ -353,7 +353,7 @@
       <Type>Ghost</Type>
       <MoveType>Fast</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="FastMove">
       <Name>Snarl</Name>
       <Power>12</Power>
       <Time>1100</Time>
@@ -361,7 +361,7 @@
       <Type>Dark</Type>
       <MoveType>Fast</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="FastMove">
       <Name>Spark</Name>
       <Power>6</Power>
       <Time>700</Time>
@@ -369,7 +369,7 @@
       <Type>Electric</Type>
       <MoveType>Fast</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="FastMove">
       <Name>Splash</Name>
       <Power>0</Power>
       <Time>1730</Time>
@@ -377,7 +377,7 @@
       <Type>Water</Type>
       <MoveType>Fast</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="FastMove">
       <Name>Steel Wing</Name>
       <Power>11</Power>
       <Time>800</Time>
@@ -385,7 +385,7 @@
       <Type>Steel</Type>
       <MoveType>Fast</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="FastMove">
       <Name>Struggle Bug</Name>
       <Power>15</Power>
       <Time>1500</Time>
@@ -393,7 +393,7 @@
       <Type>Bug</Type>
       <MoveType>Fast</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="FastMove">
       <Name>Sucker Punch</Name>
       <Power>7</Power>
       <Time>700</Time>
@@ -401,7 +401,7 @@
       <Type>Dark</Type>
       <MoveType>Fast</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="FastMove">
       <Name>Tackle</Name>
       <Power>5</Power>
       <Time>500</Time>
@@ -409,7 +409,7 @@
       <Type>Normal</Type>
       <MoveType>Fast</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="FastMove">
       <Name>Thunder Shock</Name>
       <Power>5</Power>
       <Time>600</Time>
@@ -417,7 +417,7 @@
       <Type>Electric</Type>
       <MoveType>Fast</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="FastMove">
       <Name>Transform</Name>
       <Power>0</Power>
       <Time>2230</Time>
@@ -425,7 +425,7 @@
       <Type>Normal</Type>
       <MoveType>Fast</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="FastMove">
       <Name>Vine Whip</Name>
       <Power>7</Power>
       <Time>600</Time>
@@ -433,7 +433,7 @@
       <Type>Grass</Type>
       <MoveType>Fast</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="FastMove">
       <Name>Volt Switch</Name>
       <Power>20</Power>
       <Time>2300</Time>
@@ -441,7 +441,7 @@
       <Type>Electric</Type>
       <MoveType>Fast</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="FastMove">
       <Name>Water Gun</Name>
       <Power>5</Power>
       <Time>500</Time>
@@ -449,7 +449,7 @@
       <Type>Water</Type>
       <MoveType>Fast</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="FastMove">
       <Name>Wing Attack</Name>
       <Power>8</Power>
       <Time>800</Time>
@@ -457,7 +457,7 @@
       <Type>Flying</Type>
       <MoveType>Fast</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="FastMove">
       <Name>Zen Headbutt</Name>
       <Power>12</Power>
       <Time>1100</Time>
@@ -465,9 +465,7 @@
       <Type>Psychic</Type>
       <MoveType>Fast</MoveType>
     </Move>
-  </FastMoves>
-  <ChargeMoves>
-    <Move>
+    <Move xsi:type="ChargeMove">
       <Name>Aerial Ace</Name>
       <Power>55</Power>
       <Time>2400</Time>
@@ -475,7 +473,7 @@
       <Type>Flying</Type>
       <MoveType>Charge</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="ChargeMove">
       <Name>Air Cutter</Name>
       <Power>60</Power>
       <Time>2700</Time>
@@ -483,7 +481,7 @@
       <Type>Flying</Type>
       <MoveType>Charge</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="ChargeMove">
       <Name>Ancient Power</Name>
       <Power>70</Power>
       <Time>3500</Time>
@@ -491,7 +489,7 @@
       <Type>Rock</Type>
       <MoveType>Charge</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="ChargeMove">
       <Name>Aqua Jet</Name>
       <Power>45</Power>
       <Time>2600</Time>
@@ -499,7 +497,7 @@
       <Type>Water</Type>
       <MoveType>Charge</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="ChargeMove">
       <Name>Aqua Tail</Name>
       <Power>50</Power>
       <Time>1900</Time>
@@ -507,7 +505,7 @@
       <Type>Water</Type>
       <MoveType>Charge</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="ChargeMove">
       <Name>Aurora Beam</Name>
       <Power>80</Power>
       <Time>3550</Time>
@@ -515,7 +513,7 @@
       <Type>Ice</Type>
       <MoveType>Charge</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="ChargeMove">
       <Name>Avalanche</Name>
       <Power>90</Power>
       <Time>2700</Time>
@@ -523,7 +521,7 @@
       <Type>Ice</Type>
       <MoveType>Charge</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="ChargeMove">
       <Name>Blizzard</Name>
       <Power>130</Power>
       <Time>3100</Time>
@@ -531,7 +529,7 @@
       <Type>Ice</Type>
       <MoveType>Charge</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="ChargeMove">
       <Name>Body Slam</Name>
       <Power>50</Power>
       <Time>1900</Time>
@@ -539,7 +537,7 @@
       <Type>Normal</Type>
       <MoveType>Charge</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="ChargeMove">
       <Name>Bone Club</Name>
       <Power>40</Power>
       <Time>1600</Time>
@@ -547,7 +545,7 @@
       <Type>Ground</Type>
       <MoveType>Charge</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="ChargeMove">
       <Name>Brave Bird</Name>
       <Power>90</Power>
       <Time>2000</Time>
@@ -555,7 +553,7 @@
       <Type>Flying</Type>
       <MoveType>Charge</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="ChargeMove">
       <Name>Brick Break</Name>
       <Power>40</Power>
       <Time>1600</Time>
@@ -563,7 +561,7 @@
       <Type>Fighting</Type>
       <MoveType>Charge</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="ChargeMove">
       <Name>Brine</Name>
       <Power>60</Power>
       <Time>2300</Time>
@@ -571,7 +569,7 @@
       <Type>Water</Type>
       <MoveType>Charge</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="ChargeMove">
       <Name>Bubble Beam</Name>
       <Power>45</Power>
       <Time>1900</Time>
@@ -579,7 +577,7 @@
       <Type>Water</Type>
       <MoveType>Charge</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="ChargeMove">
       <Name>Bug Buzz</Name>
       <Power>90</Power>
       <Time>3700</Time>
@@ -587,7 +585,7 @@
       <Type>Bug</Type>
       <MoveType>Charge</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="ChargeMove">
       <Name>Bulldoze</Name>
       <Power>80</Power>
       <Time>3500</Time>
@@ -595,7 +593,7 @@
       <Type>Ground</Type>
       <MoveType>Charge</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="ChargeMove">
       <Name>Close Combat</Name>
       <Power>100</Power>
       <Time>2300</Time>
@@ -603,7 +601,7 @@
       <Type>Fighting</Type>
       <MoveType>Charge</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="ChargeMove">
       <Name>Cross Chop</Name>
       <Power>50</Power>
       <Time>1500</Time>
@@ -611,7 +609,7 @@
       <Type>Fighting</Type>
       <MoveType>Charge</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="ChargeMove">
       <Name>Cross Poison</Name>
       <Power>40</Power>
       <Time>1500</Time>
@@ -619,7 +617,7 @@
       <Type>Poison</Type>
       <MoveType>Charge</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="ChargeMove">
       <Name>Crunch</Name>
       <Power>70</Power>
       <Time>3200</Time>
@@ -627,7 +625,7 @@
       <Type>Dark</Type>
       <MoveType>Charge</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="ChargeMove">
       <Name>Dark Pulse</Name>
       <Power>80</Power>
       <Time>3000</Time>
@@ -635,7 +633,7 @@
       <Type>Dark</Type>
       <MoveType>Charge</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="ChargeMove">
       <Name>Dazzling Gleam</Name>
       <Power>100</Power>
       <Time>3500</Time>
@@ -643,7 +641,7 @@
       <Type>Fairy</Type>
       <MoveType>Charge</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="ChargeMove">
       <Name>Dig</Name>
       <Power>100</Power>
       <Time>4700</Time>
@@ -651,7 +649,7 @@
       <Type>Ground</Type>
       <MoveType>Charge</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="ChargeMove">
       <Name>Disarming Voice</Name>
       <Power>70</Power>
       <Time>3900</Time>
@@ -659,7 +657,7 @@
       <Type>Fairy</Type>
       <MoveType>Charge</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="ChargeMove">
       <Name>Discharge</Name>
       <Power>65</Power>
       <Time>2500</Time>
@@ -667,7 +665,7 @@
       <Type>Electric</Type>
       <MoveType>Charge</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="ChargeMove">
       <Name>Dragon Claw</Name>
       <Power>50</Power>
       <Time>1700</Time>
@@ -675,7 +673,7 @@
       <Type>Dragon</Type>
       <MoveType>Charge</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="ChargeMove">
       <Name>Dragon Pulse</Name>
       <Power>90</Power>
       <Time>3600</Time>
@@ -683,7 +681,7 @@
       <Type>Dragon</Type>
       <MoveType>Charge</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="ChargeMove">
       <Name>Draining Kiss</Name>
       <Power>60</Power>
       <Time>2600</Time>
@@ -691,7 +689,7 @@
       <Type>Fairy</Type>
       <MoveType>Charge</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="ChargeMove">
       <Name>Drill Peck</Name>
       <Power>60</Power>
       <Time>2300</Time>
@@ -699,7 +697,7 @@
       <Type>Flying</Type>
       <MoveType>Charge</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="ChargeMove">
       <Name>Drill Run</Name>
       <Power>80</Power>
       <Time>2800</Time>
@@ -707,7 +705,7 @@
       <Type>Ground</Type>
       <MoveType>Charge</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="ChargeMove">
       <Name>Dynamic Punch</Name>
       <Power>90</Power>
       <Time>2700</Time>
@@ -715,7 +713,7 @@
       <Type>Fighting</Type>
       <MoveType>Charge</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="ChargeMove">
       <Name>Earthquake</Name>
       <Power>120</Power>
       <Time>3600</Time>
@@ -723,7 +721,7 @@
       <Type>Ground</Type>
       <MoveType>Charge</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="ChargeMove">
       <Name>Energy Ball</Name>
       <Power>90</Power>
       <Time>3900</Time>
@@ -731,7 +729,7 @@
       <Type>Grass</Type>
       <MoveType>Charge</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="ChargeMove">
       <Name>Fire Blast</Name>
       <Power>140</Power>
       <Time>4200</Time>
@@ -739,7 +737,7 @@
       <Type>Fire</Type>
       <MoveType>Charge</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="ChargeMove">
       <Name>Fire Punch</Name>
       <Power>55</Power>
       <Time>2200</Time>
@@ -747,7 +745,7 @@
       <Type>Fire</Type>
       <MoveType>Charge</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="ChargeMove">
       <Name>Flame Burst</Name>
       <Power>70</Power>
       <Time>2600</Time>
@@ -755,7 +753,7 @@
       <Type>Fire</Type>
       <MoveType>Charge</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="ChargeMove">
       <Name>Flame Charge</Name>
       <Power>70</Power>
       <Time>3800</Time>
@@ -763,7 +761,7 @@
       <Type>Fire</Type>
       <MoveType>Charge</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="ChargeMove">
       <Name>Flame Wheel</Name>
       <Power>60</Power>
       <Time>2700</Time>
@@ -771,7 +769,7 @@
       <Type>Fire</Type>
       <MoveType>Charge</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="ChargeMove">
       <Name>Flamethrower</Name>
       <Power>60</Power>
       <Time>2200</Time>
@@ -779,7 +777,7 @@
       <Type>Fire</Type>
       <MoveType>Charge</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="ChargeMove">
       <Name>Flash Cannon</Name>
       <Power>100</Power>
       <Time>2700</Time>
@@ -787,7 +785,7 @@
       <Type>Steel</Type>
       <MoveType>Charge</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="ChargeMove">
       <Name>Focus Blast</Name>
       <Power>140</Power>
       <Time>3500</Time>
@@ -795,7 +793,7 @@
       <Type>Fighting</Type>
       <MoveType>Charge</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="ChargeMove">
       <Name>Foul Play</Name>
       <Power>70</Power>
       <Time>2000</Time>
@@ -803,7 +801,7 @@
       <Type>Dark</Type>
       <MoveType>Charge</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="ChargeMove">
       <Name>Future Sight</Name>
       <Power>120</Power>
       <Time>2700</Time>
@@ -811,7 +809,7 @@
       <Type>Psychic</Type>
       <MoveType>Charge</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="ChargeMove">
       <Name>Grass Knot</Name>
       <Power>90</Power>
       <Time>2600</Time>
@@ -819,7 +817,7 @@
       <Type>Grass</Type>
       <MoveType>Charge</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="ChargeMove">
       <Name>Gunk Shot</Name>
       <Power>130</Power>
       <Time>3100</Time>
@@ -827,7 +825,7 @@
       <Type>Poison</Type>
       <MoveType>Charge</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="ChargeMove">
       <Name>Gyro Ball</Name>
       <Power>80</Power>
       <Time>3300</Time>
@@ -835,7 +833,7 @@
       <Type>Steel</Type>
       <MoveType>Charge</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="ChargeMove">
       <Name>Heart Stamp</Name>
       <Power>40</Power>
       <Time>1900</Time>
@@ -843,7 +841,7 @@
       <Type>Psychic</Type>
       <MoveType>Charge</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="ChargeMove">
       <Name>Heat Wave</Name>
       <Power>95</Power>
       <Time>3000</Time>
@@ -851,7 +849,7 @@
       <Type>Fire</Type>
       <MoveType>Charge</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="ChargeMove">
       <Name>Heavy Slam</Name>
       <Power>70</Power>
       <Time>2100</Time>
@@ -859,7 +857,7 @@
       <Type>Normal</Type>
       <MoveType>Charge</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="ChargeMove">
       <Name>Horn Attack</Name>
       <Power>40</Power>
       <Time>1850</Time>
@@ -867,7 +865,7 @@
       <Type>Normal</Type>
       <MoveType>Charge</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="ChargeMove">
       <Name>Hurricane</Name>
       <Power>110</Power>
       <Time>2700</Time>
@@ -875,7 +873,7 @@
       <Type>Flying</Type>
       <MoveType>Charge</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="ChargeMove">
       <Name>Hydro Pump</Name>
       <Power>130</Power>
       <Time>3300</Time>
@@ -883,7 +881,7 @@
       <Type>Water</Type>
       <MoveType>Charge</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="ChargeMove">
       <Name>Hyper Beam</Name>
       <Power>150</Power>
       <Time>3800</Time>
@@ -891,7 +889,7 @@
       <Type>Normal</Type>
       <MoveType>Charge</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="ChargeMove">
       <Name>Hyper Fang</Name>
       <Power>80</Power>
       <Time>2500</Time>
@@ -899,7 +897,7 @@
       <Type>Normal</Type>
       <MoveType>Charge</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="ChargeMove">
       <Name>Ice Beam</Name>
       <Power>90</Power>
       <Time>3300</Time>
@@ -907,7 +905,7 @@
       <Type>Ice</Type>
       <MoveType>Charge</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="ChargeMove">
       <Name>Ice Punch</Name>
       <Power>50</Power>
       <Time>1900</Time>
@@ -915,7 +913,7 @@
       <Type>Ice</Type>
       <MoveType>Charge</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="ChargeMove">
       <Name>Icy Wind</Name>
       <Power>60</Power>
       <Time>3300</Time>
@@ -923,7 +921,7 @@
       <Type>Ice</Type>
       <MoveType>Charge</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="ChargeMove">
       <Name>Iron Head</Name>
       <Power>60</Power>
       <Time>1900</Time>
@@ -931,7 +929,7 @@
       <Type>Steel</Type>
       <MoveType>Charge</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="ChargeMove">
       <Name>Leaf Blade</Name>
       <Power>70</Power>
       <Time>2400</Time>
@@ -939,7 +937,7 @@
       <Type>Grass</Type>
       <MoveType>Charge</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="ChargeMove">
       <Name>Low Sweep</Name>
       <Power>40</Power>
       <Time>1900</Time>
@@ -947,7 +945,7 @@
       <Type>Fighting</Type>
       <MoveType>Charge</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="ChargeMove">
       <Name>Magnet Bomb</Name>
       <Power>70</Power>
       <Time>2800</Time>
@@ -955,7 +953,7 @@
       <Type>Steel</Type>
       <MoveType>Charge</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="ChargeMove">
       <Name>Mega Drain</Name>
       <Power>25</Power>
       <Time>2600</Time>
@@ -963,7 +961,7 @@
       <Type>Grass</Type>
       <MoveType>Charge</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="ChargeMove">
       <Name>Megahorn</Name>
       <Power>90</Power>
       <Time>2200</Time>
@@ -971,7 +969,7 @@
       <Type>Bug</Type>
       <MoveType>Charge</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="ChargeMove">
       <Name>Mirror Coat</Name>
       <Power>60</Power>
       <Time>2600</Time>
@@ -979,7 +977,7 @@
       <Type>Psychic</Type>
       <MoveType>Charge</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="ChargeMove">
       <Name>Moonblast</Name>
       <Power>130</Power>
       <Time>3900</Time>
@@ -987,7 +985,7 @@
       <Type>Fairy</Type>
       <MoveType>Charge</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="ChargeMove">
       <Name>Mud Bomb</Name>
       <Power>55</Power>
       <Time>2300</Time>
@@ -995,7 +993,7 @@
       <Type>Ground</Type>
       <MoveType>Charge</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="ChargeMove">
       <Name>Night Shade</Name>
       <Power>60</Power>
       <Time>2600</Time>
@@ -1003,7 +1001,7 @@
       <Type>Ghost</Type>
       <MoveType>Charge</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="ChargeMove">
       <Name>Night Slash</Name>
       <Power>50</Power>
       <Time>2200</Time>
@@ -1011,7 +1009,7 @@
       <Type>Dark</Type>
       <MoveType>Charge</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="ChargeMove">
       <Name>Ominous Wind</Name>
       <Power>50</Power>
       <Time>2300</Time>
@@ -1019,7 +1017,7 @@
       <Type>Ghost</Type>
       <MoveType>Charge</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="ChargeMove">
       <Name>Outrage</Name>
       <Power>110</Power>
       <Time>3900</Time>
@@ -1027,7 +1025,7 @@
       <Type>Dragon</Type>
       <MoveType>Charge</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="ChargeMove">
       <Name>Overheat</Name>
       <Power>160</Power>
       <Time>4000</Time>
@@ -1035,7 +1033,7 @@
       <Type>Fire</Type>
       <MoveType>Charge</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="ChargeMove">
       <Name>Parabolic Charge</Name>
       <Power>25</Power>
       <Time>2800</Time>
@@ -1043,7 +1041,7 @@
       <Type>Electric</Type>
       <MoveType>Charge</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="ChargeMove">
       <Name>Petal Blizzard</Name>
       <Power>110</Power>
       <Time>2600</Time>
@@ -1051,7 +1049,7 @@
       <Type>Grass</Type>
       <MoveType>Charge</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="ChargeMove">
       <Name>Play Rough</Name>
       <Power>90</Power>
       <Time>2900</Time>
@@ -1059,7 +1057,7 @@
       <Type>Fairy</Type>
       <MoveType>Charge</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="ChargeMove">
       <Name>Poison Fang</Name>
       <Power>35</Power>
       <Time>1700</Time>
@@ -1067,7 +1065,7 @@
       <Type>Poison</Type>
       <MoveType>Charge</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="ChargeMove">
       <Name>Power Gem</Name>
       <Power>80</Power>
       <Time>2900</Time>
@@ -1075,7 +1073,7 @@
       <Type>Rock</Type>
       <MoveType>Charge</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="ChargeMove">
       <Name>Power Whip</Name>
       <Power>90</Power>
       <Time>2600</Time>
@@ -1083,7 +1081,7 @@
       <Type>Grass</Type>
       <MoveType>Charge</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="ChargeMove">
       <Name>Psybeam</Name>
       <Power>70</Power>
       <Time>3200</Time>
@@ -1091,7 +1089,7 @@
       <Type>Psychic</Type>
       <MoveType>Charge</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="ChargeMove">
       <Name>Psychic</Name>
       <Power>100</Power>
       <Time>2800</Time>
@@ -1099,7 +1097,7 @@
       <Type>Psychic</Type>
       <MoveType>Charge</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="ChargeMove">
       <Name>Psyshock</Name>
       <Power>65</Power>
       <Time>2700</Time>
@@ -1107,7 +1105,7 @@
       <Type>Psychic</Type>
       <MoveType>Charge</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="ChargeMove">
       <Name>Psystrike</Name>
       <Power>100</Power>
       <Time>4400</Time>
@@ -1115,7 +1113,7 @@
       <Type>Psychic</Type>
       <MoveType>Charge</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="ChargeMove">
       <Name>Rest</Name>
       <Power>50</Power>
       <Time>1900</Time>
@@ -1123,7 +1121,7 @@
       <Type>Normal</Type>
       <MoveType>Charge</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="ChargeMove">
       <Name>Rock Blast</Name>
       <Power>50</Power>
       <Time>2100</Time>
@@ -1131,7 +1129,7 @@
       <Type>Rock</Type>
       <MoveType>Charge</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="ChargeMove">
       <Name>Rock Slide</Name>
       <Power>80</Power>
       <Time>2700</Time>
@@ -1139,7 +1137,7 @@
       <Type>Rock</Type>
       <MoveType>Charge</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="ChargeMove">
       <Name>Rock Tomb</Name>
       <Power>70</Power>
       <Time>3200</Time>
@@ -1147,7 +1145,7 @@
       <Type>Rock</Type>
       <MoveType>Charge</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="ChargeMove">
       <Name>Sand Tomb</Name>
       <Power>80</Power>
       <Time>4000</Time>
@@ -1155,7 +1153,7 @@
       <Type>Ground</Type>
       <MoveType>Charge</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="ChargeMove">
       <Name>Scald</Name>
       <Power>80</Power>
       <Time>3700</Time>
@@ -1163,7 +1161,7 @@
       <Type>Water</Type>
       <MoveType>Charge</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="ChargeMove">
       <Name>Seed Bomb</Name>
       <Power>55</Power>
       <Time>2100</Time>
@@ -1171,7 +1169,7 @@
       <Type>Grass</Type>
       <MoveType>Charge</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="ChargeMove">
       <Name>Shadow Ball</Name>
       <Power>100</Power>
       <Time>3000</Time>
@@ -1179,7 +1177,7 @@
       <Type>Ghost</Type>
       <MoveType>Charge</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="ChargeMove">
       <Name>Shadow Punch</Name>
       <Power>40</Power>
       <Time>1700</Time>
@@ -1187,7 +1185,7 @@
       <Type>Ghost</Type>
       <MoveType>Charge</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="ChargeMove">
       <Name>Shadow Sneak</Name>
       <Power>50</Power>
       <Time>2900</Time>
@@ -1195,7 +1193,7 @@
       <Type>Ghost</Type>
       <MoveType>Charge</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="ChargeMove">
       <Name>Signal Beam</Name>
       <Power>75</Power>
       <Time>2900</Time>
@@ -1203,7 +1201,7 @@
       <Type>Bug</Type>
       <MoveType>Charge</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="ChargeMove">
       <Name>Silver Wind</Name>
       <Power>70</Power>
       <Time>3700</Time>
@@ -1211,7 +1209,7 @@
       <Type>Bug</Type>
       <MoveType>Charge</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="ChargeMove">
       <Name>Sky Attack</Name>
       <Power>70</Power>
       <Time>2000</Time>
@@ -1219,7 +1217,7 @@
       <Type>Flying</Type>
       <MoveType>Charge</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="ChargeMove">
       <Name>Sludge</Name>
       <Power>50</Power>
       <Time>2100</Time>
@@ -1227,7 +1225,7 @@
       <Type>Poison</Type>
       <MoveType>Charge</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="ChargeMove">
       <Name>Sludge Bomb</Name>
       <Power>80</Power>
       <Time>2300</Time>
@@ -1235,7 +1233,7 @@
       <Type>Poison</Type>
       <MoveType>Charge</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="ChargeMove">
       <Name>Sludge Wave</Name>
       <Power>110</Power>
       <Time>3200</Time>
@@ -1243,7 +1241,7 @@
       <Type>Poison</Type>
       <MoveType>Charge</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="ChargeMove">
       <Name>Solar Beam</Name>
       <Power>180</Power>
       <Time>4900</Time>
@@ -1251,7 +1249,7 @@
       <Type>Grass</Type>
       <MoveType>Charge</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="ChargeMove">
       <Name>Stomp</Name>
       <Power>55</Power>
       <Time>1700</Time>
@@ -1259,7 +1257,7 @@
       <Type>Normal</Type>
       <MoveType>Charge</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="ChargeMove">
       <Name>Stone Edge</Name>
       <Power>100</Power>
       <Time>2300</Time>
@@ -1267,7 +1265,7 @@
       <Type>Rock</Type>
       <MoveType>Charge</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="ChargeMove">
       <Name>Struggle</Name>
       <Power>35</Power>
       <Time>2200</Time>
@@ -1275,7 +1273,7 @@
       <Type>Normal</Type>
       <MoveType>Charge</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="ChargeMove">
       <Name>Submission</Name>
       <Power>60</Power>
       <Time>2200</Time>
@@ -1283,7 +1281,7 @@
       <Type>Fighting</Type>
       <MoveType>Charge</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="ChargeMove">
       <Name>Swift</Name>
       <Power>60</Power>
       <Time>2800</Time>
@@ -1291,7 +1289,7 @@
       <Type>Normal</Type>
       <MoveType>Charge</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="ChargeMove">
       <Name>Thunder</Name>
       <Power>100</Power>
       <Time>2400</Time>
@@ -1299,7 +1297,7 @@
       <Type>Electric</Type>
       <MoveType>Charge</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="ChargeMove">
       <Name>Thunder Punch</Name>
       <Power>45</Power>
       <Time>1800</Time>
@@ -1307,7 +1305,7 @@
       <Type>Electric</Type>
       <MoveType>Charge</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="ChargeMove">
       <Name>Thunderbolt</Name>
       <Power>80</Power>
       <Time>2500</Time>
@@ -1315,7 +1313,7 @@
       <Type>Electric</Type>
       <MoveType>Charge</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="ChargeMove">
       <Name>Twister</Name>
       <Power>45</Power>
       <Time>2800</Time>
@@ -1323,7 +1321,7 @@
       <Type>Dragon</Type>
       <MoveType>Charge</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="ChargeMove">
       <Name>Vice Grip</Name>
       <Power>35</Power>
       <Time>2900</Time>
@@ -1331,7 +1329,7 @@
       <Type>Normal</Type>
       <MoveType>Charge</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="ChargeMove">
       <Name>Water Pulse</Name>
       <Power>70</Power>
       <Time>3200</Time>
@@ -1339,7 +1337,7 @@
       <Type>Water</Type>
       <MoveType>Charge</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="ChargeMove">
       <Name>Wild Charge</Name>
       <Power>90</Power>
       <Time>2600</Time>
@@ -1347,7 +1345,7 @@
       <Type>Electric</Type>
       <MoveType>Charge</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="ChargeMove">
       <Name>Wrap</Name>
       <Power>60</Power>
       <Time>2900</Time>
@@ -1355,7 +1353,7 @@
       <Type>Normal</Type>
       <MoveType>Charge</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="ChargeMove">
       <Name>X-Scissor</Name>
       <Power>45</Power>
       <Time>1600</Time>
@@ -1363,7 +1361,7 @@
       <Type>Bug</Type>
       <MoveType>Charge</MoveType>
     </Move>
-    <Move>
+    <Move xsi:type="ChargeMove">
       <Name>Zap Cannon</Name>
       <Power>140</Power>
       <Time>3700</Time>
@@ -1371,7 +1369,7 @@
       <Type>Electric</Type>
       <MoveType>Charge</MoveType>
     </Move>
-  </ChargeMoves>
+  </Moves>
   <PokedexEntries>
     <PokedexEntry>
       <Number>1</Number>

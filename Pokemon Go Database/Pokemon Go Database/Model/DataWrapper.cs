@@ -14,8 +14,7 @@ namespace Pokemon_Go_Database.Model
     [XmlRoot("Data")]
     public class DataWrapper
     {
-        public MyObservableCollection<FastMove> FastMoves { get; set; }   //Collection of fast moves
-        public MyObservableCollection<ChargeMove> ChargeMoves { get; set; }   //Collection of charge moves
+        public MyObservableCollection<Move> Moves { get; set; }   //Collection of all moves
         public MyObservableCollection<PokedexEntry> PokedexEntries { get; set; }   //Collection of pokedex entries
     }
 }
