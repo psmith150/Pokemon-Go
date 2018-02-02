@@ -85,7 +85,9 @@ namespace Pokemon_Go_Database.Services
                     //Create the DataWrapper object and add the apprpriate data
                     XmlSerializer dataSerializer = new XmlSerializer(typeof(DataWrapper));
                     DataWrapper data = new DataWrapper();
+                    data.Moves = new MyObservableCollection<Move>();
                     data.Moves.InsertRange(this.FastMoveList);
+                    data.Moves.InsertRange(this.ChargeMoveList);
                     data.PokedexEntries = this.Pokedex;
 
                     await Task.Run(() => dataSerializer.Serialize(stream, data)); //Saves the data using the attributes defined in each class
@@ -142,7 +144,42 @@ namespace Pokemon_Go_Database.Services
             }
             this.FastMoveList.InsertRange(tempFastMoves);
             this.ChargeMoveList.InsertRange(tempChargeMoves);
-            this.Pokedex.InsertRange(data.PokedexEntries);
+            List<PokedexEntry> tempPokedex = new List<PokedexEntry>();
+            foreach (PokedexEntry species in data.PokedexEntries)
+            {
+                //Debug.WriteLine($"{species.Species} has {species.FastMoves.Found fast move {move.Name} for {species.Species}");
+                for (int i = 0; i< species.FastMoves.Count; i++)
+                {
+                    //Debug.WriteLine($"Found fast move {move.Name} for {species.Species}");
+                    FastMove move = species.FastMoves[i];
+                    string moveName = move.Name;
+                    try
+                    {
+                        move = (this.FastMoveList.Single(x => x.Name.Equals(moveName)));
+                    }
+                    catch (ArgumentException ex)
+                    {
+                        throw new ArgumentException("Cannot find matching fast move " + move.Name + " in fast move list.", ex);
+                    }
+                }
+                for (int i = 0; i < species.ChargeMoves.Count; i++)
+                {
+                    //Debug.WriteLine($"Found fast move {move.Name} for {species.Species}");
+                    ChargeMove move = species.ChargeMoves[i];
+                    string moveName = move.Name;
+                    try
+                    {
+                        move = (this.ChargeMoveList.Single(x => x.Name.Equals(moveName)));
+                    }
+                    catch (ArgumentException ex)
+                    {
+                        throw new ArgumentException("Cannot find matching charge move " + move.Name + " in charge move list.", ex);
+                    }
+                }
+                tempPokedex.Add(species);
+            }
+            this.Pokedex.InsertRange(tempPokedex);
+
             //Debug.WriteLine($"Loaded {data.FastMoves.Count} fast moves, {data.ChargeMoves.Count} charge moves, and {Pokedex.Count} pokemon");
             //this.FastMoveList.Add(new Move())
         }

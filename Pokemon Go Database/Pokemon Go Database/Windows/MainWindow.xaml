@@ -16,6 +16,7 @@
         WindowState="Maximized"
         ResizeMode="CanResizeWithGrip"
         Title="Pokemon Go Database"
+        TextElement.Foreground="Black"
         Style="{StaticResource MainWindowStyle}"
         d:DataContext="{d:DesignInstance Type=local:MainWindowViewModel}">
 

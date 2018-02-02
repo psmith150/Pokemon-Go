@@ -9,6 +9,7 @@
     <Grid Background="{StaticResource MainBackgroundColor}" Width="500" Height="300">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
@@ -16,55 +17,66 @@
             <ColumnDefinition Width="5*"/>
             <ColumnDefinition Width="5*"/>
         </Grid.ColumnDefinitions>
-        <StackPanel Grid.Column="0" Grid.Row="0" Orientation="Horizontal" Width="Auto">
+        <TextBlock Grid.Row="0" Grid.ColumnSpan="2" Text="Movesets for" HorizontalAlignment="Center" FontSize="{StaticResource LargeFontSize}"/>
+        <StackPanel Grid.Column="0" Grid.Row="1" Orientation="Horizontal" Width="Auto">
             <Button Name="AddGroupButton" Style="{StaticResource AddGroupButton}" Command="{Binding AddFastMoveCommand}"/>
             <Button Name="RemoveGroupButton" Style="{StaticResource RemoveGroupButton}" Command="{Binding RemoveFastMoveCommand}"/>
         </StackPanel>
-        <StackPanel Grid.Row="0" Grid.Column="1" Orientation="Horizontal">
+        <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Horizontal">
             <Button Name="AddCategoryButton" Style="{StaticResource AddGroupButton}"  Command="{Binding AddChargeMoveCommand}">
             </Button>
             <Button Name="RemoveCategoryButton" Style="{StaticResource RemoveGroupButton}" Command="{Binding RemoveChargeMoveCommand}"/>
         </StackPanel>
-        <DataGrid Name="FastMovesList" Grid.Row="1" Grid.Column="0" ItemsSource="{Binding FastMoves}" 
+        <DataGrid Name="FastMovesList" Grid.Row="2" Grid.Column="0" ItemsSource="{Binding FastMoves}" 
                   AutoGenerateColumns="False" CellStyle="{StaticResource SelectedCellStyle}"
                   CanUserAddRows="False" CanUserDeleteRows="False">
             <DataGrid.Resources>
             </DataGrid.Resources>
             <DataGrid.Columns>
-                <DataGridComboBoxColumn Header="Name" DisplayMemberPath="Name" SortMemberPath="FastMove.Name">
+                <DataGridComboBoxColumn Header="Name" Width="*" SelectedItemBinding="{Binding Move}" DisplayMemberPath="Name">
+                    <!--<DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding FastMove.Name}"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                    <DataGridTemplateColumn.CellEditingTemplate>
+                        <DataTemplate>
+                            <ComboBox ItemsSource="{Binding Path=DataContext.AllFastMoves, RelativeSource={RelativeSource AncestorType={x:Type UserControl}}}" DisplayMemberPath="Name" SelectedItem="{Binding FastMove}"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellEditingTemplate>-->
                     <DataGridComboBoxColumn.ElementStyle>
                         <Style TargetType="{x:Type ComboBox}">
-                            <Setter Property="ItemsSource" Value="{Binding Path=DataContext.FastMoves, RelativeSource={RelativeSource AncestorType={x:Type UserControl}}}" />
+                            <Setter Property="ItemsSource" Value="{Binding Path=DataContext.AllFastMoves, RelativeSource={RelativeSource AncestorType={x:Type UserControl}}}" />
                         </Style>
                     </DataGridComboBoxColumn.ElementStyle>
                     <DataGridComboBoxColumn.EditingElementStyle>
                         <Style TargetType="{x:Type ComboBox}">
-                            <Setter Property="ItemsSource" Value="{Binding Path=DataContext.FastMoves, RelativeSource={RelativeSource AncestorType={x:Type UserControl}}}" />
+                            <Setter Property="ItemsSource" Value="{Binding Path=DataContext.AllFastMoves, RelativeSource={RelativeSource AncestorType={x:Type UserControl}}}" />
                             <!--<EventSetter Event="RequestBringIntoView" Handler="OnRequestBringIntoView"/>-->
                         </Style>
                     </DataGridComboBoxColumn.EditingElementStyle>
                 </DataGridComboBoxColumn>
             </DataGrid.Columns>
         </DataGrid>
-        <DataGrid Name="ChargeMovesList" Grid.Row="1" Grid.Column="1" AutoGenerateColumns="False" ItemsSource="{Binding ChargeMoves}"
+        <DataGrid Name="ChargeMovesList" Grid.Row="2" Grid.Column="1" AutoGenerateColumns="False" ItemsSource="{Binding ChargeMoves}"
                   CellStyle="{StaticResource SelectedCellStyle}" CanUserAddRows="False" CanUserSortColumns="False">
             <DataGrid.Columns>
-                <DataGridComboBoxColumn Header="Name" DisplayMemberPath="Name" SortMemberPath="FastMove.Name">
+                <DataGridComboBoxColumn Header="Name" Width="*" SelectedItemBinding="{Binding Move}" DisplayMemberPath="Name">
                     <DataGridComboBoxColumn.ElementStyle>
                         <Style TargetType="{x:Type ComboBox}">
-                            <Setter Property="ItemsSource" Value="{Binding Path=DataContext.ChargeMoves, RelativeSource={RelativeSource AncestorType={x:Type UserControl}}}" />
+                            <Setter Property="ItemsSource" Value="{Binding Path=DataContext.AllChargeMoves, RelativeSource={RelativeSource AncestorType={x:Type UserControl}}}" />
                         </Style>
                     </DataGridComboBoxColumn.ElementStyle>
                     <DataGridComboBoxColumn.EditingElementStyle>
                         <Style TargetType="{x:Type ComboBox}">
-                            <Setter Property="ItemsSource" Value="{Binding Path=DataContext.ChargeMoves, RelativeSource={RelativeSource AncestorType={x:Type UserControl}}}" />
+                            <Setter Property="ItemsSource" Value="{Binding Path=DataContext.AllChargeMoves, RelativeSource={RelativeSource AncestorType={x:Type UserControl}}}" />
                             <!--<EventSetter Event="RequestBringIntoView" Handler="OnRequestBringIntoView"/>-->
                         </Style>
                     </DataGridComboBoxColumn.EditingElementStyle>
                 </DataGridComboBoxColumn>
             </DataGrid.Columns>
         </DataGrid>
-        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center">
+        <StackPanel Grid.Row="3" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Center">
             <Button Content="Close" Command="{Binding ExitPopupCommand}" Width="50"/>
             <Separator Width="25" Background="Transparent"/>
             <Button Content="Save" Command="{Binding SaveCommand}" Width="50"/>

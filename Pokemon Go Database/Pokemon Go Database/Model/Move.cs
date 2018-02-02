@@ -126,4 +126,29 @@ namespace Pokemon_Go_Database.Model
         }
 
     }
+
+    public class MoveWrapper :ObservableObject
+    {
+        public MoveWrapper(Move move)
+        {
+            this.Move = move;
+        }
+
+        public MoveWrapper()
+        {
+        }
+
+        private Move _move;
+        public Move Move
+        {
+            get
+            {
+                return _move;
+            }
+            set
+            {
+                Set(ref this._move, value);
+            }
+        }
+    }
 }

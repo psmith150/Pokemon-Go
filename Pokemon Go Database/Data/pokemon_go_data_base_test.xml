@@ -1,0 +1,5663 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Data xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Moves>
+    <Move xsi:type="FastMove">
+      <Name>Acid</Name>
+      <Power>9</Power>
+      <Time>800</Time>
+      <Energy>8</Energy>
+      <Type>Poison</Type>
+      <MoveType>Fast</MoveType>
+    </Move>
+    <Move xsi:type="FastMove">
+      <Name>Air Slash</Name>
+      <Power>14</Power>
+      <Time>1200</Time>
+      <Energy>10</Energy>
+      <Type>Flying</Type>
+      <MoveType>Fast</MoveType>
+    </Move>
+    <Move xsi:type="FastMove">
+      <Name>Astonish</Name>
+      <Power>8</Power>
+      <Time>1100</Time>
+      <Energy>14</Energy>
+      <Type>Ghost</Type>
+      <MoveType>Fast</MoveType>
+    </Move>
+    <Move xsi:type="FastMove">
+      <Name>Bite</Name>
+      <Power>6</Power>
+      <Time>500</Time>
+      <Energy>4</Energy>
+      <Type>Dark</Type>
+      <MoveType>Fast</MoveType>
+    </Move>
+    <Move xsi:type="FastMove">
+      <Name>Bubble</Name>
+      <Power>12</Power>
+      <Time>1200</Time>
+      <Energy>14</Energy>
+      <Type>Water</Type>
+      <MoveType>Fast</MoveType>
+    </Move>
+    <Move xsi:type="FastMove">
+      <Name>Bug Bite</Name>
+      <Power>5</Power>
+      <Time>500</Time>
+      <Energy>6</Energy>
+      <Type>Bug</Type>
+      <MoveType>Fast</MoveType>
+    </Move>
+    <Move xsi:type="FastMove">
+      <Name>Bullet Punch</Name>
+      <Power>9</Power>
+      <Time>900</Time>
+      <Energy>10</Energy>
+      <Type>Steel</Type>
+      <MoveType>Fast</MoveType>
+    </Move>
+    <Move xsi:type="FastMove">
+      <Name>Bullet Seed</Name>
+      <Power>8</Power>
+      <Time>1100</Time>
+      <Energy>14</Energy>
+      <Type>Grass</Type>
+      <MoveType>Fast</MoveType>
+    </Move>
+    <Move xsi:type="FastMove">
+      <Name>Charge Beam</Name>
+      <Power>8</Power>
+      <Time>1100</Time>
+      <Energy>15</Energy>
+      <Type>Electric</Type>
+      <MoveType>Fast</MoveType>
+    </Move>
+    <Move xsi:type="FastMove">
+      <Name>Confusion</Name>
+      <Power>20</Power>
+      <Time>1600</Time>
+      <Energy>15</Energy>
+      <Type>Psychic</Type>
+      <MoveType>Fast</MoveType>
+    </Move>
+    <Move xsi:type="FastMove">
+      <Name>Counter</Name>
+      <Power>12</Power>
+      <Time>900</Time>
+      <Energy>8</Energy>
+      <Type>Fighting</Type>
+      <MoveType>Fast</MoveType>
+    </Move>
+    <Move xsi:type="FastMove">
+      <Name>Cut</Name>
+      <Power>5</Power>
+      <Time>500</Time>
+      <Energy>5</Energy>
+      <Type>Normal</Type>
+      <MoveType>Fast</MoveType>
+    </Move>
+    <Move xsi:type="FastMove">
+      <Name>Dragon Breath</Name>
+      <Power>6</Power>
+      <Time>500</Time>
+      <Energy>4</Energy>
+      <Type>Dragon</Type>
+      <MoveType>Fast</MoveType>
+    </Move>
+    <Move xsi:type="FastMove">
+      <Name>Dragon Tail</Name>
+      <Power>15</Power>
+      <Time>1100</Time>
+      <Energy>9</Energy>
+      <Type>Dragon</Type>
+      <MoveType>Fast</MoveType>
+    </Move>
+    <Move xsi:type="FastMove">
+      <Name>Ember</Name>
+      <Power>10</Power>
+      <Time>1000</Time>
+      <Energy>10</Energy>
+      <Type>Fire</Type>
+      <MoveType>Fast</MoveType>
+    </Move>
+    <Move xsi:type="FastMove">
+      <Name>Extrasensory</Name>
+      <Power>12</Power>
+      <Time>1100</Time>
+      <Energy>12</Energy>
+      <Type>Psychic</Type>
+      <MoveType>Fast</MoveType>
+    </Move>
+    <Move xsi:type="FastMove">
+      <Name>Feint Attack</Name>
+      <Power>10</Power>
+      <Time>900</Time>
+      <Energy>9</Energy>
+      <Type>Dark</Type>
+      <MoveType>Fast</MoveType>
+    </Move>
+    <Move xsi:type="FastMove">
+      <Name>Fire Fang</Name>
+      <Power>11</Power>
+      <Time>900</Time>
+      <Energy>8</Energy>
+      <Type>Fire</Type>
+      <MoveType>Fast</MoveType>
+    </Move>
+    <Move xsi:type="FastMove">
+      <Name>Fire Spin</Name>
+      <Power>14</Power>
+      <Time>1100</Time>
+      <Energy>10</Energy>
+      <Type>Fire</Type>
+      <MoveType>Fast</MoveType>
+    </Move>
+    <Move xsi:type="FastMove">
+      <Name>Frost Breath</Name>
+      <Power>10</Power>
+      <Time>900</Time>
+      <Energy>8</Energy>
+      <Type>Ice</Type>
+      <MoveType>Fast</MoveType>
+    </Move>
+    <Move xsi:type="FastMove">
+      <Name>Fury Cutter</Name>
+      <Power>3</Power>
+      <Time>400</Time>
+      <Energy>6</Energy>
+      <Type>Bug</Type>
+      <MoveType>Fast</MoveType>
+    </Move>
+    <Move xsi:type="FastMove">
+      <Name>Hex</Name>
+      <Power>10</Power>
+      <Time>1200</Time>
+      <Energy>15</Energy>
+      <Type>Ghost</Type>
+      <MoveType>Fast</MoveType>
+    </Move>
+    <Move xsi:type="FastMove">
+      <Name>Hidden Power</Name>
+      <Power>15</Power>
+      <Time>1500</Time>
+      <Energy>15</Energy>
+      <Type>Normal</Type>
+      <MoveType>Fast</MoveType>
+    </Move>
+    <Move xsi:type="FastMove">
+      <Name>Ice Shard</Name>
+      <Power>12</Power>
+      <Time>1200</Time>
+      <Energy>12</Energy>
+      <Type>Ice</Type>
+      <MoveType>Fast</MoveType>
+    </Move>
+    <Move xsi:type="FastMove">
+      <Name>Infestation</Name>
+      <Power>10</Power>
+      <Time>1100</Time>
+      <Energy>14</Energy>
+      <Type>Bug</Type>
+      <MoveType>Fast</MoveType>
+    </Move>
+    <Move xsi:type="FastMove">
+      <Name>Iron Tail</Name>
+      <Power>15</Power>
+      <Time>1100</Time>
+      <Energy>7</Energy>
+      <Type>Steel</Type>
+      <MoveType>Fast</MoveType>
+    </Move>
+    <Move xsi:type="FastMove">
+      <Name>Karate Chop</Name>
+      <Power>8</Power>
+      <Time>800</Time>
+      <Energy>10</Energy>
+      <Type>Fighting</Type>
+      <MoveType>Fast</MoveType>
+    </Move>
+    <Move xsi:type="FastMove">
+      <Name>Lick</Name>
+      <Power>5</Power>
+      <Time>500</Time>
+      <Energy>6</Energy>
+      <Type>Ghost</Type>
+      <MoveType>Fast</MoveType>
+    </Move>
+    <Move xsi:type="FastMove">
+      <Name>Low Kick</Name>
+      <Power>6</Power>
+      <Time>600</Time>
+      <Energy>6</Energy>
+      <Type>Fighting</Type>
+      <MoveType>Fast</MoveType>
+    </Move>
+    <Move xsi:type="FastMove">
+      <Name>Metal Claw</Name>
+      <Power>8</Power>
+      <Time>700</Time>
+      <Energy>7</Energy>
+      <Type>Steel</Type>
+      <MoveType>Fast</MoveType>
+    </Move>
+    <Move xsi:type="FastMove">
+      <Name>Mud Shot</Name>
+      <Power>5</Power>
+      <Time>600</Time>
+      <Energy>7</Energy>
+      <Type>Ground</Type>
+      <MoveType>Fast</MoveType>
+    </Move>
+    <Move xsi:type="FastMove">
+      <Name>Mud Slap</Name>
+      <Power>15</Power>
+      <Time>1400</Time>
+      <Energy>12</Energy>
+      <Type>Ground</Type>
+      <MoveType>Fast</MoveType>
+    </Move>
+    <Move xsi:type="FastMove">
+      <Name>Peck</Name>
+      <Power>10</Power>
+      <Time>1000</Time>
+      <Energy>10</Energy>
+      <Type>Flying</Type>
+      <MoveType>Fast</MoveType>
+    </Move>
+    <Move xsi:type="FastMove">
+      <Name>Poison Jab</Name>
+      <Power>10</Power>
+      <Time>800</Time>
+      <Energy>7</Energy>
+      <Type>Poison</Type>
+      <MoveType>Fast</MoveType>
+    </Move>
+    <Move xsi:type="FastMove">
+      <Name>Poison Sting</Name>
+      <Power>5</Power>
+      <Time>600</Time>
+      <Energy>7</Energy>
+      <Type>Poison</Type>
+      <MoveType>Fast</MoveType>
+    </Move>
+    <Move xsi:type="FastMove">
+      <Name>Pound</Name>
+      <Power>7</Power>
+      <Time>600</Time>
+      <Energy>6</Energy>
+      <Type>Normal</Type>
+      <MoveType>Fast</MoveType>
+    </Move>
+    <Move xsi:type="FastMove">
+      <Name>Powder Snow</Name>
+      <Power>6</Power>
+      <Time>1000</Time>
+      <Energy>15</Energy>
+      <Type>Ice</Type>
+      <MoveType>Fast</MoveType>
+    </Move>
+    <Move xsi:type="FastMove">
+      <Name>Psycho Cut</Name>
+      <Power>5</Power>
+      <Time>600</Time>
+      <Energy>8</Energy>
+      <Type>Psychic</Type>
+      <MoveType>Fast</MoveType>
+    </Move>
+    <Move xsi:type="FastMove">
+      <Name>Quick Attack</Name>
+      <Power>8</Power>
+      <Time>800</Time>
+      <Energy>10</Energy>
+      <Type>Normal</Type>
+      <MoveType>Fast</MoveType>
+    </Move>
+    <Move xsi:type="FastMove">
+      <Name>Razor Leaf</Name>
+      <Power>13</Power>
+      <Time>1000</Time>
+      <Energy>7</Energy>
+      <Type>Grass</Type>
+      <MoveType>Fast</MoveType>
+    </Move>
+    <Move xsi:type="FastMove">
+      <Name>Rock Smash</Name>
+      <Power>15</Power>
+      <Time>1300</Time>
+      <Energy>10</Energy>
+      <Type>Fighting</Type>
+      <MoveType>Fast</MoveType>
+    </Move>
+    <Move xsi:type="FastMove">
+      <Name>Rock Throw</Name>
+      <Power>12</Power>
+      <Time>900</Time>
+      <Energy>7</Energy>
+      <Type>Rock</Type>
+      <MoveType>Fast</MoveType>
+    </Move>
+    <Move xsi:type="FastMove">
+      <Name>Scratch</Name>
+      <Power>6</Power>
+      <Time>500</Time>
+      <Energy>4</Energy>
+      <Type>Normal</Type>
+      <MoveType>Fast</MoveType>
+    </Move>
+    <Move xsi:type="FastMove">
+      <Name>Shadow Claw</Name>
+      <Power>9</Power>
+      <Time>700</Time>
+      <Energy>6</Energy>
+      <Type>Ghost</Type>
+      <MoveType>Fast</MoveType>
+    </Move>
+    <Move xsi:type="FastMove">
+      <Name>Snarl</Name>
+      <Power>12</Power>
+      <Time>1100</Time>
+      <Energy>12</Energy>
+      <Type>Dark</Type>
+      <MoveType>Fast</MoveType>
+    </Move>
+    <Move xsi:type="FastMove">
+      <Name>Spark</Name>
+      <Power>6</Power>
+      <Time>700</Time>
+      <Energy>9</Energy>
+      <Type>Electric</Type>
+      <MoveType>Fast</MoveType>
+    </Move>
+    <Move xsi:type="FastMove">
+      <Name>Splash</Name>
+      <Power>0</Power>
+      <Time>1730</Time>
+      <Energy>20</Energy>
+      <Type>Water</Type>
+      <MoveType>Fast</MoveType>
+    </Move>
+    <Move xsi:type="FastMove">
+      <Name>Steel Wing</Name>
+      <Power>11</Power>
+      <Time>800</Time>
+      <Energy>6</Energy>
+      <Type>Steel</Type>
+      <MoveType>Fast</MoveType>
+    </Move>
+    <Move xsi:type="FastMove">
+      <Name>Struggle Bug</Name>
+      <Power>15</Power>
+      <Time>1500</Time>
+      <Energy>15</Energy>
+      <Type>Bug</Type>
+      <MoveType>Fast</MoveType>
+    </Move>
+    <Move xsi:type="FastMove">
+      <Name>Sucker Punch</Name>
+      <Power>7</Power>
+      <Time>700</Time>
+      <Energy>8</Energy>
+      <Type>Dark</Type>
+      <MoveType>Fast</MoveType>
+    </Move>
+    <Move xsi:type="FastMove">
+      <Name>Tackle</Name>
+      <Power>5</Power>
+      <Time>500</Time>
+      <Energy>5</Energy>
+      <Type>Normal</Type>
+      <MoveType>Fast</MoveType>
+    </Move>
+    <Move xsi:type="FastMove">
+      <Name>Thunder Shock</Name>
+      <Power>5</Power>
+      <Time>600</Time>
+      <Energy>8</Energy>
+      <Type>Electric</Type>
+      <MoveType>Fast</MoveType>
+    </Move>
+    <Move xsi:type="FastMove">
+      <Name>Transform</Name>
+      <Power>0</Power>
+      <Time>2230</Time>
+      <Energy>0</Energy>
+      <Type>Normal</Type>
+      <MoveType>Fast</MoveType>
+    </Move>
+    <Move xsi:type="FastMove">
+      <Name>Vine Whip</Name>
+      <Power>7</Power>
+      <Time>600</Time>
+      <Energy>6</Energy>
+      <Type>Grass</Type>
+      <MoveType>Fast</MoveType>
+    </Move>
+    <Move xsi:type="FastMove">
+      <Name>Volt Switch</Name>
+      <Power>20</Power>
+      <Time>2300</Time>
+      <Energy>25</Energy>
+      <Type>Electric</Type>
+      <MoveType>Fast</MoveType>
+    </Move>
+    <Move xsi:type="FastMove">
+      <Name>Water Gun</Name>
+      <Power>5</Power>
+      <Time>500</Time>
+      <Energy>5</Energy>
+      <Type>Water</Type>
+      <MoveType>Fast</MoveType>
+    </Move>
+    <Move xsi:type="FastMove">
+      <Name>Wing Attack</Name>
+      <Power>8</Power>
+      <Time>800</Time>
+      <Energy>9</Energy>
+      <Type>Flying</Type>
+      <MoveType>Fast</MoveType>
+    </Move>
+    <Move xsi:type="FastMove">
+      <Name>Zen Headbutt</Name>
+      <Power>12</Power>
+      <Time>1100</Time>
+      <Energy>10</Energy>
+      <Type>Psychic</Type>
+      <MoveType>Fast</MoveType>
+    </Move>
+    <Move xsi:type="ChargeMove">
+      <Name>Aerial Ace</Name>
+      <Power>55</Power>
+      <Time>2400</Time>
+      <Energy>33</Energy>
+      <Type>Flying</Type>
+      <MoveType>Charge</MoveType>
+    </Move>
+    <Move xsi:type="ChargeMove">
+      <Name>Air Cutter</Name>
+      <Power>60</Power>
+      <Time>2700</Time>
+      <Energy>50</Energy>
+      <Type>Flying</Type>
+      <MoveType>Charge</MoveType>
+    </Move>
+    <Move xsi:type="ChargeMove">
+      <Name>Ancient Power</Name>
+      <Power>70</Power>
+      <Time>3500</Time>
+      <Energy>33</Energy>
+      <Type>Rock</Type>
+      <MoveType>Charge</MoveType>
+    </Move>
+    <Move xsi:type="ChargeMove">
+      <Name>Aqua Jet</Name>
+      <Power>45</Power>
+      <Time>2600</Time>
+      <Energy>33</Energy>
+      <Type>Water</Type>
+      <MoveType>Charge</MoveType>
+    </Move>
+    <Move xsi:type="ChargeMove">
+      <Name>Aqua Tail</Name>
+      <Power>50</Power>
+      <Time>1900</Time>
+      <Energy>33</Energy>
+      <Type>Water</Type>
+      <MoveType>Charge</MoveType>
+    </Move>
+    <Move xsi:type="ChargeMove">
+      <Name>Aurora Beam</Name>
+      <Power>80</Power>
+      <Time>3550</Time>
+      <Energy>50</Energy>
+      <Type>Ice</Type>
+      <MoveType>Charge</MoveType>
+    </Move>
+    <Move xsi:type="ChargeMove">
+      <Name>Avalanche</Name>
+      <Power>90</Power>
+      <Time>2700</Time>
+      <Energy>50</Energy>
+      <Type>Ice</Type>
+      <MoveType>Charge</MoveType>
+    </Move>
+    <Move xsi:type="ChargeMove">
+      <Name>Blizzard</Name>
+      <Power>130</Power>
+      <Time>3100</Time>
+      <Energy>100</Energy>
+      <Type>Ice</Type>
+      <MoveType>Charge</MoveType>
+    </Move>
+    <Move xsi:type="ChargeMove">
+      <Name>Body Slam</Name>
+      <Power>50</Power>
+      <Time>1900</Time>
+      <Energy>33</Energy>
+      <Type>Normal</Type>
+      <MoveType>Charge</MoveType>
+    </Move>
+    <Move xsi:type="ChargeMove">
+      <Name>Bone Club</Name>
+      <Power>40</Power>
+      <Time>1600</Time>
+      <Energy>33</Energy>
+      <Type>Ground</Type>
+      <MoveType>Charge</MoveType>
+    </Move>
+    <Move xsi:type="ChargeMove">
+      <Name>Brave Bird</Name>
+      <Power>90</Power>
+      <Time>2000</Time>
+      <Energy>100</Energy>
+      <Type>Flying</Type>
+      <MoveType>Charge</MoveType>
+    </Move>
+    <Move xsi:type="ChargeMove">
+      <Name>Brick Break</Name>
+      <Power>40</Power>
+      <Time>1600</Time>
+      <Energy>33</Energy>
+      <Type>Fighting</Type>
+      <MoveType>Charge</MoveType>
+    </Move>
+    <Move xsi:type="ChargeMove">
+      <Name>Brine</Name>
+      <Power>60</Power>
+      <Time>2300</Time>
+      <Energy>50</Energy>
+      <Type>Water</Type>
+      <MoveType>Charge</MoveType>
+    </Move>
+    <Move xsi:type="ChargeMove">
+      <Name>Bubble Beam</Name>
+      <Power>45</Power>
+      <Time>1900</Time>
+      <Energy>33</Energy>
+      <Type>Water</Type>
+      <MoveType>Charge</MoveType>
+    </Move>
+    <Move xsi:type="ChargeMove">
+      <Name>Bug Buzz</Name>
+      <Power>90</Power>
+      <Time>3700</Time>
+      <Energy>50</Energy>
+      <Type>Bug</Type>
+      <MoveType>Charge</MoveType>
+    </Move>
+    <Move xsi:type="ChargeMove">
+      <Name>Bulldoze</Name>
+      <Power>80</Power>
+      <Time>3500</Time>
+      <Energy>50</Energy>
+      <Type>Ground</Type>
+      <MoveType>Charge</MoveType>
+    </Move>
+    <Move xsi:type="ChargeMove">
+      <Name>Close Combat</Name>
+      <Power>100</Power>
+      <Time>2300</Time>
+      <Energy>100</Energy>
+      <Type>Fighting</Type>
+      <MoveType>Charge</MoveType>
+    </Move>
+    <Move xsi:type="ChargeMove">
+      <Name>Cross Chop</Name>
+      <Power>50</Power>
+      <Time>1500</Time>
+      <Energy>33</Energy>
+      <Type>Fighting</Type>
+      <MoveType>Charge</MoveType>
+    </Move>
+    <Move xsi:type="ChargeMove">
+      <Name>Cross Poison</Name>
+      <Power>40</Power>
+      <Time>1500</Time>
+      <Energy>33</Energy>
+      <Type>Poison</Type>
+      <MoveType>Charge</MoveType>
+    </Move>
+    <Move xsi:type="ChargeMove">
+      <Name>Crunch</Name>
+      <Power>70</Power>
+      <Time>3200</Time>
+      <Energy>33</Energy>
+      <Type>Dark</Type>
+      <MoveType>Charge</MoveType>
+    </Move>
+    <Move xsi:type="ChargeMove">
+      <Name>Dark Pulse</Name>
+      <Power>80</Power>
+      <Time>3000</Time>
+      <Energy>50</Energy>
+      <Type>Dark</Type>
+      <MoveType>Charge</MoveType>
+    </Move>
+    <Move xsi:type="ChargeMove">
+      <Name>Dazzling Gleam</Name>
+      <Power>100</Power>
+      <Time>3500</Time>
+      <Energy>50</Energy>
+      <Type>Fairy</Type>
+      <MoveType>Charge</MoveType>
+    </Move>
+    <Move xsi:type="ChargeMove">
+      <Name>Dig</Name>
+      <Power>100</Power>
+      <Time>4700</Time>
+      <Energy>50</Energy>
+      <Type>Ground</Type>
+      <MoveType>Charge</MoveType>
+    </Move>
+    <Move xsi:type="ChargeMove">
+      <Name>Disarming Voice</Name>
+      <Power>70</Power>
+      <Time>3900</Time>
+      <Energy>33</Energy>
+      <Type>Fairy</Type>
+      <MoveType>Charge</MoveType>
+    </Move>
+    <Move xsi:type="ChargeMove">
+      <Name>Discharge</Name>
+      <Power>65</Power>
+      <Time>2500</Time>
+      <Energy>33</Energy>
+      <Type>Electric</Type>
+      <MoveType>Charge</MoveType>
+    </Move>
+    <Move xsi:type="ChargeMove">
+      <Name>Dragon Claw</Name>
+      <Power>50</Power>
+      <Time>1700</Time>
+      <Energy>33</Energy>
+      <Type>Dragon</Type>
+      <MoveType>Charge</MoveType>
+    </Move>
+    <Move xsi:type="ChargeMove">
+      <Name>Dragon Pulse</Name>
+      <Power>90</Power>
+      <Time>3600</Time>
+      <Energy>33</Energy>
+      <Type>Dragon</Type>
+      <MoveType>Charge</MoveType>
+    </Move>
+    <Move xsi:type="ChargeMove">
+      <Name>Draining Kiss</Name>
+      <Power>60</Power>
+      <Time>2600</Time>
+      <Energy>50</Energy>
+      <Type>Fairy</Type>
+      <MoveType>Charge</MoveType>
+    </Move>
+    <Move xsi:type="ChargeMove">
+      <Name>Drill Peck</Name>
+      <Power>60</Power>
+      <Time>2300</Time>
+      <Energy>33</Energy>
+      <Type>Flying</Type>
+      <MoveType>Charge</MoveType>
+    </Move>
+    <Move xsi:type="ChargeMove">
+      <Name>Drill Run</Name>
+      <Power>80</Power>
+      <Time>2800</Time>
+      <Energy>50</Energy>
+      <Type>Ground</Type>
+      <MoveType>Charge</MoveType>
+    </Move>
+    <Move xsi:type="ChargeMove">
+      <Name>Dynamic Punch</Name>
+      <Power>90</Power>
+      <Time>2700</Time>
+      <Energy>50</Energy>
+      <Type>Fighting</Type>
+      <MoveType>Charge</MoveType>
+    </Move>
+    <Move xsi:type="ChargeMove">
+      <Name>Earthquake</Name>
+      <Power>120</Power>
+      <Time>3600</Time>
+      <Energy>100</Energy>
+      <Type>Ground</Type>
+      <MoveType>Charge</MoveType>
+    </Move>
+    <Move xsi:type="ChargeMove">
+      <Name>Energy Ball</Name>
+      <Power>90</Power>
+      <Time>3900</Time>
+      <Energy>50</Energy>
+      <Type>Grass</Type>
+      <MoveType>Charge</MoveType>
+    </Move>
+    <Move xsi:type="ChargeMove">
+      <Name>Fire Blast</Name>
+      <Power>140</Power>
+      <Time>4200</Time>
+      <Energy>100</Energy>
+      <Type>Fire</Type>
+      <MoveType>Charge</MoveType>
+    </Move>
+    <Move xsi:type="ChargeMove">
+      <Name>Fire Punch</Name>
+      <Power>55</Power>
+      <Time>2200</Time>
+      <Energy>33</Energy>
+      <Type>Fire</Type>
+      <MoveType>Charge</MoveType>
+    </Move>
+    <Move xsi:type="ChargeMove">
+      <Name>Flame Burst</Name>
+      <Power>70</Power>
+      <Time>2600</Time>
+      <Energy>50</Energy>
+      <Type>Fire</Type>
+      <MoveType>Charge</MoveType>
+    </Move>
+    <Move xsi:type="ChargeMove">
+      <Name>Flame Charge</Name>
+      <Power>70</Power>
+      <Time>3800</Time>
+      <Energy>33</Energy>
+      <Type>Fire</Type>
+      <MoveType>Charge</MoveType>
+    </Move>
+    <Move xsi:type="ChargeMove">
+      <Name>Flame Wheel</Name>
+      <Power>60</Power>
+      <Time>2700</Time>
+      <Energy>50</Energy>
+      <Type>Fire</Type>
+      <MoveType>Charge</MoveType>
+    </Move>
+    <Move xsi:type="ChargeMove">
+      <Name>Flamethrower</Name>
+      <Power>60</Power>
+      <Time>2200</Time>
+      <Energy>50</Energy>
+      <Type>Fire</Type>
+      <MoveType>Charge</MoveType>
+    </Move>
+    <Move xsi:type="ChargeMove">
+      <Name>Flash Cannon</Name>
+      <Power>100</Power>
+      <Time>2700</Time>
+      <Energy>100</Energy>
+      <Type>Steel</Type>
+      <MoveType>Charge</MoveType>
+    </Move>
+    <Move xsi:type="ChargeMove">
+      <Name>Focus Blast</Name>
+      <Power>140</Power>
+      <Time>3500</Time>
+      <Energy>100</Energy>
+      <Type>Fighting</Type>
+      <MoveType>Charge</MoveType>
+    </Move>
+    <Move xsi:type="ChargeMove">
+      <Name>Foul Play</Name>
+      <Power>70</Power>
+      <Time>2000</Time>
+      <Energy>50</Energy>
+      <Type>Dark</Type>
+      <MoveType>Charge</MoveType>
+    </Move>
+    <Move xsi:type="ChargeMove">
+      <Name>Future Sight</Name>
+      <Power>120</Power>
+      <Time>2700</Time>
+      <Energy>100</Energy>
+      <Type>Psychic</Type>
+      <MoveType>Charge</MoveType>
+    </Move>
+    <Move xsi:type="ChargeMove">
+      <Name>Grass Knot</Name>
+      <Power>90</Power>
+      <Time>2600</Time>
+      <Energy>50</Energy>
+      <Type>Grass</Type>
+      <MoveType>Charge</MoveType>
+    </Move>
+    <Move xsi:type="ChargeMove">
+      <Name>Gunk Shot</Name>
+      <Power>130</Power>
+      <Time>3100</Time>
+      <Energy>100</Energy>
+      <Type>Poison</Type>
+      <MoveType>Charge</MoveType>
+    </Move>
+    <Move xsi:type="ChargeMove">
+      <Name>Gyro Ball</Name>
+      <Power>80</Power>
+      <Time>3300</Time>
+      <Energy>50</Energy>
+      <Type>Steel</Type>
+      <MoveType>Charge</MoveType>
+    </Move>
+    <Move xsi:type="ChargeMove">
+      <Name>Heart Stamp</Name>
+      <Power>40</Power>
+      <Time>1900</Time>
+      <Energy>33</Energy>
+      <Type>Psychic</Type>
+      <MoveType>Charge</MoveType>
+    </Move>
+    <Move xsi:type="ChargeMove">
+      <Name>Heat Wave</Name>
+      <Power>95</Power>
+      <Time>3000</Time>
+      <Energy>100</Energy>
+      <Type>Fire</Type>
+      <MoveType>Charge</MoveType>
+    </Move>
+    <Move xsi:type="ChargeMove">
+      <Name>Heavy Slam</Name>
+      <Power>70</Power>
+      <Time>2100</Time>
+      <Energy>50</Energy>
+      <Type>Normal</Type>
+      <MoveType>Charge</MoveType>
+    </Move>
+    <Move xsi:type="ChargeMove">
+      <Name>Horn Attack</Name>
+      <Power>40</Power>
+      <Time>1850</Time>
+      <Energy>33</Energy>
+      <Type>Normal</Type>
+      <MoveType>Charge</MoveType>
+    </Move>
+    <Move xsi:type="ChargeMove">
+      <Name>Hurricane</Name>
+      <Power>110</Power>
+      <Time>2700</Time>
+      <Energy>100</Energy>
+      <Type>Flying</Type>
+      <MoveType>Charge</MoveType>
+    </Move>
+    <Move xsi:type="ChargeMove">
+      <Name>Hydro Pump</Name>
+      <Power>130</Power>
+      <Time>3300</Time>
+      <Energy>100</Energy>
+      <Type>Water</Type>
+      <MoveType>Charge</MoveType>
+    </Move>
+    <Move xsi:type="ChargeMove">
+      <Name>Hyper Beam</Name>
+      <Power>150</Power>
+      <Time>3800</Time>
+      <Energy>100</Energy>
+      <Type>Normal</Type>
+      <MoveType>Charge</MoveType>
+    </Move>
+    <Move xsi:type="ChargeMove">
+      <Name>Hyper Fang</Name>
+      <Power>80</Power>
+      <Time>2500</Time>
+      <Energy>50</Energy>
+      <Type>Normal</Type>
+      <MoveType>Charge</MoveType>
+    </Move>
+    <Move xsi:type="ChargeMove">
+      <Name>Ice Beam</Name>
+      <Power>90</Power>
+      <Time>3300</Time>
+      <Energy>50</Energy>
+      <Type>Ice</Type>
+      <MoveType>Charge</MoveType>
+    </Move>
+    <Move xsi:type="ChargeMove">
+      <Name>Ice Punch</Name>
+      <Power>50</Power>
+      <Time>1900</Time>
+      <Energy>33</Energy>
+      <Type>Ice</Type>
+      <MoveType>Charge</MoveType>
+    </Move>
+    <Move xsi:type="ChargeMove">
+      <Name>Icy Wind</Name>
+      <Power>60</Power>
+      <Time>3300</Time>
+      <Energy>33</Energy>
+      <Type>Ice</Type>
+      <MoveType>Charge</MoveType>
+    </Move>
+    <Move xsi:type="ChargeMove">
+      <Name>Iron Head</Name>
+      <Power>60</Power>
+      <Time>1900</Time>
+      <Energy>50</Energy>
+      <Type>Steel</Type>
+      <MoveType>Charge</MoveType>
+    </Move>
+    <Move xsi:type="ChargeMove">
+      <Name>Leaf Blade</Name>
+      <Power>70</Power>
+      <Time>2400</Time>
+      <Energy>33</Energy>
+      <Type>Grass</Type>
+      <MoveType>Charge</MoveType>
+    </Move>
+    <Move xsi:type="ChargeMove">
+      <Name>Low Sweep</Name>
+      <Power>40</Power>
+      <Time>1900</Time>
+      <Energy>33</Energy>
+      <Type>Fighting</Type>
+      <MoveType>Charge</MoveType>
+    </Move>
+    <Move xsi:type="ChargeMove">
+      <Name>Magnet Bomb</Name>
+      <Power>70</Power>
+      <Time>2800</Time>
+      <Energy>33</Energy>
+      <Type>Steel</Type>
+      <MoveType>Charge</MoveType>
+    </Move>
+    <Move xsi:type="ChargeMove">
+      <Name>Mega Drain</Name>
+      <Power>25</Power>
+      <Time>2600</Time>
+      <Energy>50</Energy>
+      <Type>Grass</Type>
+      <MoveType>Charge</MoveType>
+    </Move>
+    <Move xsi:type="ChargeMove">
+      <Name>Megahorn</Name>
+      <Power>90</Power>
+      <Time>2200</Time>
+      <Energy>100</Energy>
+      <Type>Bug</Type>
+      <MoveType>Charge</MoveType>
+    </Move>
+    <Move xsi:type="ChargeMove">
+      <Name>Mirror Coat</Name>
+      <Power>60</Power>
+      <Time>2600</Time>
+      <Energy>50</Energy>
+      <Type>Psychic</Type>
+      <MoveType>Charge</MoveType>
+    </Move>
+    <Move xsi:type="ChargeMove">
+      <Name>Moonblast</Name>
+      <Power>130</Power>
+      <Time>3900</Time>
+      <Energy>100</Energy>
+      <Type>Fairy</Type>
+      <MoveType>Charge</MoveType>
+    </Move>
+    <Move xsi:type="ChargeMove">
+      <Name>Mud Bomb</Name>
+      <Power>55</Power>
+      <Time>2300</Time>
+      <Energy>33</Energy>
+      <Type>Ground</Type>
+      <MoveType>Charge</MoveType>
+    </Move>
+    <Move xsi:type="ChargeMove">
+      <Name>Night Shade</Name>
+      <Power>60</Power>
+      <Time>2600</Time>
+      <Energy>50</Energy>
+      <Type>Ghost</Type>
+      <MoveType>Charge</MoveType>
+    </Move>
+    <Move xsi:type="ChargeMove">
+      <Name>Night Slash</Name>
+      <Power>50</Power>
+      <Time>2200</Time>
+      <Energy>33</Energy>
+      <Type>Dark</Type>
+      <MoveType>Charge</MoveType>
+    </Move>
+    <Move xsi:type="ChargeMove">
+      <Name>Ominous Wind</Name>
+      <Power>50</Power>
+      <Time>2300</Time>
+      <Energy>33</Energy>
+      <Type>Ghost</Type>
+      <MoveType>Charge</MoveType>
+    </Move>
+    <Move xsi:type="ChargeMove">
+      <Name>Outrage</Name>
+      <Power>110</Power>
+      <Time>3900</Time>
+      <Energy>50</Energy>
+      <Type>Dragon</Type>
+      <MoveType>Charge</MoveType>
+    </Move>
+    <Move xsi:type="ChargeMove">
+      <Name>Overheat</Name>
+      <Power>160</Power>
+      <Time>4000</Time>
+      <Energy>100</Energy>
+      <Type>Fire</Type>
+      <MoveType>Charge</MoveType>
+    </Move>
+    <Move xsi:type="ChargeMove">
+      <Name>Parabolic Charge</Name>
+      <Power>25</Power>
+      <Time>2800</Time>
+      <Energy>50</Energy>
+      <Type>Electric</Type>
+      <MoveType>Charge</MoveType>
+    </Move>
+    <Move xsi:type="ChargeMove">
+      <Name>Petal Blizzard</Name>
+      <Power>110</Power>
+      <Time>2600</Time>
+      <Energy>100</Energy>
+      <Type>Grass</Type>
+      <MoveType>Charge</MoveType>
+    </Move>
+    <Move xsi:type="ChargeMove">
+      <Name>Play Rough</Name>
+      <Power>90</Power>
+      <Time>2900</Time>
+      <Energy>50</Energy>
+      <Type>Fairy</Type>
+      <MoveType>Charge</MoveType>
+    </Move>
+    <Move xsi:type="ChargeMove">
+      <Name>Poison Fang</Name>
+      <Power>35</Power>
+      <Time>1700</Time>
+      <Energy>33</Energy>
+      <Type>Poison</Type>
+      <MoveType>Charge</MoveType>
+    </Move>
+    <Move xsi:type="ChargeMove">
+      <Name>Power Gem</Name>
+      <Power>80</Power>
+      <Time>2900</Time>
+      <Energy>50</Energy>
+      <Type>Rock</Type>
+      <MoveType>Charge</MoveType>
+    </Move>
+    <Move xsi:type="ChargeMove">
+      <Name>Power Whip</Name>
+      <Power>90</Power>
+      <Time>2600</Time>
+      <Energy>50</Energy>
+      <Type>Grass</Type>
+      <MoveType>Charge</MoveType>
+    </Move>
+    <Move xsi:type="ChargeMove">
+      <Name>Psybeam</Name>
+      <Power>70</Power>
+      <Time>3200</Time>
+      <Energy>50</Energy>
+      <Type>Psychic</Type>
+      <MoveType>Charge</MoveType>
+    </Move>
+    <Move xsi:type="ChargeMove">
+      <Name>Psychic</Name>
+      <Power>100</Power>
+      <Time>2800</Time>
+      <Energy>100</Energy>
+      <Type>Psychic</Type>
+      <MoveType>Charge</MoveType>
+    </Move>
+    <Move xsi:type="ChargeMove">
+      <Name>Psyshock</Name>
+      <Power>65</Power>
+      <Time>2700</Time>
+      <Energy>33</Energy>
+      <Type>Psychic</Type>
+      <MoveType>Charge</MoveType>
+    </Move>
+    <Move xsi:type="ChargeMove">
+      <Name>Psystrike</Name>
+      <Power>100</Power>
+      <Time>4400</Time>
+      <Energy>50</Energy>
+      <Type>Psychic</Type>
+      <MoveType>Charge</MoveType>
+    </Move>
+    <Move xsi:type="ChargeMove">
+      <Name>Rest</Name>
+      <Power>50</Power>
+      <Time>1900</Time>
+      <Energy>33</Energy>
+      <Type>Normal</Type>
+      <MoveType>Charge</MoveType>
+    </Move>
+    <Move xsi:type="ChargeMove">
+      <Name>Rock Blast</Name>
+      <Power>50</Power>
+      <Time>2100</Time>
+      <Energy>33</Energy>
+      <Type>Rock</Type>
+      <MoveType>Charge</MoveType>
+    </Move>
+    <Move xsi:type="ChargeMove">
+      <Name>Rock Slide</Name>
+      <Power>80</Power>
+      <Time>2700</Time>
+      <Energy>50</Energy>
+      <Type>Rock</Type>
+      <MoveType>Charge</MoveType>
+    </Move>
+    <Move xsi:type="ChargeMove">
+      <Name>Rock Tomb</Name>
+      <Power>70</Power>
+      <Time>3200</Time>
+      <Energy>50</Energy>
+      <Type>Rock</Type>
+      <MoveType>Charge</MoveType>
+    </Move>
+    <Move xsi:type="ChargeMove">
+      <Name>Sand Tomb</Name>
+      <Power>80</Power>
+      <Time>4000</Time>
+      <Energy>50</Energy>
+      <Type>Ground</Type>
+      <MoveType>Charge</MoveType>
+    </Move>
+    <Move xsi:type="ChargeMove">
+      <Name>Scald</Name>
+      <Power>80</Power>
+      <Time>3700</Time>
+      <Energy>50</Energy>
+      <Type>Water</Type>
+      <MoveType>Charge</MoveType>
+    </Move>
+    <Move xsi:type="ChargeMove">
+      <Name>Seed Bomb</Name>
+      <Power>55</Power>
+      <Time>2100</Time>
+      <Energy>33</Energy>
+      <Type>Grass</Type>
+      <MoveType>Charge</MoveType>
+    </Move>
+    <Move xsi:type="ChargeMove">
+      <Name>Shadow Ball</Name>
+      <Power>100</Power>
+      <Time>3000</Time>
+      <Energy>50</Energy>
+      <Type>Ghost</Type>
+      <MoveType>Charge</MoveType>
+    </Move>
+    <Move xsi:type="ChargeMove">
+      <Name>Shadow Punch</Name>
+      <Power>40</Power>
+      <Time>1700</Time>
+      <Energy>33</Energy>
+      <Type>Ghost</Type>
+      <MoveType>Charge</MoveType>
+    </Move>
+    <Move xsi:type="ChargeMove">
+      <Name>Shadow Sneak</Name>
+      <Power>50</Power>
+      <Time>2900</Time>
+      <Energy>33</Energy>
+      <Type>Ghost</Type>
+      <MoveType>Charge</MoveType>
+    </Move>
+    <Move xsi:type="ChargeMove">
+      <Name>Signal Beam</Name>
+      <Power>75</Power>
+      <Time>2900</Time>
+      <Energy>50</Energy>
+      <Type>Bug</Type>
+      <MoveType>Charge</MoveType>
+    </Move>
+    <Move xsi:type="ChargeMove">
+      <Name>Silver Wind</Name>
+      <Power>70</Power>
+      <Time>3700</Time>
+      <Energy>33</Energy>
+      <Type>Bug</Type>
+      <MoveType>Charge</MoveType>
+    </Move>
+    <Move xsi:type="ChargeMove">
+      <Name>Sky Attack</Name>
+      <Power>70</Power>
+      <Time>2000</Time>
+      <Energy>50</Energy>
+      <Type>Flying</Type>
+      <MoveType>Charge</MoveType>
+    </Move>
+    <Move xsi:type="ChargeMove">
+      <Name>Sludge</Name>
+      <Power>50</Power>
+      <Time>2100</Time>
+      <Energy>33</Energy>
+      <Type>Poison</Type>
+      <MoveType>Charge</MoveType>
+    </Move>
+    <Move xsi:type="ChargeMove">
+      <Name>Sludge Bomb</Name>
+      <Power>80</Power>
+      <Time>2300</Time>
+      <Energy>50</Energy>
+      <Type>Poison</Type>
+      <MoveType>Charge</MoveType>
+    </Move>
+    <Move xsi:type="ChargeMove">
+      <Name>Sludge Wave</Name>
+      <Power>110</Power>
+      <Time>3200</Time>
+      <Energy>100</Energy>
+      <Type>Poison</Type>
+      <MoveType>Charge</MoveType>
+    </Move>
+    <Move xsi:type="ChargeMove">
+      <Name>Solar Beam</Name>
+      <Power>180</Power>
+      <Time>4900</Time>
+      <Energy>100</Energy>
+      <Type>Grass</Type>
+      <MoveType>Charge</MoveType>
+    </Move>
+    <Move xsi:type="ChargeMove">
+      <Name>Stomp</Name>
+      <Power>55</Power>
+      <Time>1700</Time>
+      <Energy>50</Energy>
+      <Type>Normal</Type>
+      <MoveType>Charge</MoveType>
+    </Move>
+    <Move xsi:type="ChargeMove">
+      <Name>Stone Edge</Name>
+      <Power>100</Power>
+      <Time>2300</Time>
+      <Energy>100</Energy>
+      <Type>Rock</Type>
+      <MoveType>Charge</MoveType>
+    </Move>
+    <Move xsi:type="ChargeMove">
+      <Name>Struggle</Name>
+      <Power>35</Power>
+      <Time>2200</Time>
+      <Energy>33</Energy>
+      <Type>Normal</Type>
+      <MoveType>Charge</MoveType>
+    </Move>
+    <Move xsi:type="ChargeMove">
+      <Name>Submission</Name>
+      <Power>60</Power>
+      <Time>2200</Time>
+      <Energy>50</Energy>
+      <Type>Fighting</Type>
+      <MoveType>Charge</MoveType>
+    </Move>
+    <Move xsi:type="ChargeMove">
+      <Name>Swift</Name>
+      <Power>60</Power>
+      <Time>2800</Time>
+      <Energy>50</Energy>
+      <Type>Normal</Type>
+      <MoveType>Charge</MoveType>
+    </Move>
+    <Move xsi:type="ChargeMove">
+      <Name>Thunder</Name>
+      <Power>100</Power>
+      <Time>2400</Time>
+      <Energy>100</Energy>
+      <Type>Electric</Type>
+      <MoveType>Charge</MoveType>
+    </Move>
+    <Move xsi:type="ChargeMove">
+      <Name>Thunder Punch</Name>
+      <Power>45</Power>
+      <Time>1800</Time>
+      <Energy>33</Energy>
+      <Type>Electric</Type>
+      <MoveType>Charge</MoveType>
+    </Move>
+    <Move xsi:type="ChargeMove">
+      <Name>Thunderbolt</Name>
+      <Power>80</Power>
+      <Time>2500</Time>
+      <Energy>50</Energy>
+      <Type>Electric</Type>
+      <MoveType>Charge</MoveType>
+    </Move>
+    <Move xsi:type="ChargeMove">
+      <Name>Twister</Name>
+      <Power>45</Power>
+      <Time>2800</Time>
+      <Energy>33</Energy>
+      <Type>Dragon</Type>
+      <MoveType>Charge</MoveType>
+    </Move>
+    <Move xsi:type="ChargeMove">
+      <Name>Vice Grip</Name>
+      <Power>35</Power>
+      <Time>2900</Time>
+      <Energy>33</Energy>
+      <Type>Normal</Type>
+      <MoveType>Charge</MoveType>
+    </Move>
+    <Move xsi:type="ChargeMove">
+      <Name>Water Pulse</Name>
+      <Power>70</Power>
+      <Time>3200</Time>
+      <Energy>50</Energy>
+      <Type>Water</Type>
+      <MoveType>Charge</MoveType>
+    </Move>
+    <Move xsi:type="ChargeMove">
+      <Name>Wild Charge</Name>
+      <Power>90</Power>
+      <Time>2600</Time>
+      <Energy>50</Energy>
+      <Type>Electric</Type>
+      <MoveType>Charge</MoveType>
+    </Move>
+    <Move xsi:type="ChargeMove">
+      <Name>Wrap</Name>
+      <Power>60</Power>
+      <Time>2900</Time>
+      <Energy>33</Energy>
+      <Type>Normal</Type>
+      <MoveType>Charge</MoveType>
+    </Move>
+    <Move xsi:type="ChargeMove">
+      <Name>X-Scissor</Name>
+      <Power>45</Power>
+      <Time>1600</Time>
+      <Energy>33</Energy>
+      <Type>Bug</Type>
+      <MoveType>Charge</MoveType>
+    </Move>
+    <Move xsi:type="ChargeMove">
+      <Name>Zap Cannon</Name>
+      <Power>140</Power>
+      <Time>3700</Time>
+      <Energy>100</Energy>
+      <Type>Electric</Type>
+      <MoveType>Charge</MoveType>
+    </Move>
+  </Moves>
+  <PokedexEntries>
+    <PokedexEntry>
+      <Number>1</Number>
+      <Species>Bulbasaur</Species>
+      <Type1>Grass</Type1>
+      <Type2>Poison</Type2>
+      <FastMoves>
+        <FastMove>
+          <Name>Acid</Name>
+          <Power>9</Power>
+          <Time>800</Time>
+          <Energy>8</Energy>
+          <Type>Poison</Type>
+          <MoveType>Fast</MoveType>
+        </FastMove>
+        <FastMove>
+          <Name>Vine Whip</Name>
+          <Power>7</Power>
+          <Time>600</Time>
+          <Energy>6</Energy>
+          <Type>Grass</Type>
+          <MoveType>Fast</MoveType>
+        </FastMove>
+      </FastMoves>
+      <ChargeMoves>
+        <ChargeMove>
+          <Name>Solar Beam</Name>
+          <Power>180</Power>
+          <Time>4900</Time>
+          <Energy>100</Energy>
+          <Type>Grass</Type>
+          <MoveType>Charge</MoveType>
+        </ChargeMove>
+        <ChargeMove>
+          <Name>Petal Blizzard</Name>
+          <Power>110</Power>
+          <Time>2600</Time>
+          <Energy>100</Energy>
+          <Type>Grass</Type>
+          <MoveType>Charge</MoveType>
+        </ChargeMove>
+        <ChargeMove>
+          <Name>Sludge Bomb</Name>
+          <Power>80</Power>
+          <Time>2300</Time>
+          <Energy>50</Energy>
+          <Type>Poison</Type>
+          <MoveType>Charge</MoveType>
+        </ChargeMove>
+      </ChargeMoves>
+      <Attack>118</Attack>
+      <Defense>118</Defense>
+      <Stamina>90</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>2</Number>
+      <Species>Ivysaur</Species>
+      <Type1>Grass</Type1>
+      <Type2>Poison</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>151</Attack>
+      <Defense>151</Defense>
+      <Stamina>120</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>3</Number>
+      <Species>Venusaur</Species>
+      <Type1>Grass</Type1>
+      <Type2>Poison</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>198</Attack>
+      <Defense>198</Defense>
+      <Stamina>160</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>4</Number>
+      <Species>Charmander</Species>
+      <Type1>Fire</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>116</Attack>
+      <Defense>96</Defense>
+      <Stamina>78</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>5</Number>
+      <Species>Charmeleon</Species>
+      <Type1>Fire</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>158</Attack>
+      <Defense>129</Defense>
+      <Stamina>116</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>6</Number>
+      <Species>Charizard</Species>
+      <Type1>Fire</Type1>
+      <Type2>Flying</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>223</Attack>
+      <Defense>176</Defense>
+      <Stamina>156</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>7</Number>
+      <Species>Squirtle</Species>
+      <Type1>Water</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>94</Attack>
+      <Defense>122</Defense>
+      <Stamina>88</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>8</Number>
+      <Species>Wartortle</Species>
+      <Type1>Water</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>126</Attack>
+      <Defense>155</Defense>
+      <Stamina>118</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>9</Number>
+      <Species>Blastoise</Species>
+      <Type1>Water</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>171</Attack>
+      <Defense>210</Defense>
+      <Stamina>158</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>10</Number>
+      <Species>Caterpie</Species>
+      <Type1>Bug</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>55</Attack>
+      <Defense>62</Defense>
+      <Stamina>90</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>11</Number>
+      <Species>Metapod</Species>
+      <Type1>Bug</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>45</Attack>
+      <Defense>64</Defense>
+      <Stamina>100</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>12</Number>
+      <Species>Butterfree</Species>
+      <Type1>Bug</Type1>
+      <Type2>Flying</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>167</Attack>
+      <Defense>151</Defense>
+      <Stamina>120</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>13</Number>
+      <Species>Weedle</Species>
+      <Type1>Bug</Type1>
+      <Type2>Poison</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>63</Attack>
+      <Defense>55</Defense>
+      <Stamina>80</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>14</Number>
+      <Species>Kakuna</Species>
+      <Type1>Bug</Type1>
+      <Type2>Poison</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>46</Attack>
+      <Defense>86</Defense>
+      <Stamina>90</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>15</Number>
+      <Species>Beedrill</Species>
+      <Type1>Bug</Type1>
+      <Type2>Poison</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>169</Attack>
+      <Defense>150</Defense>
+      <Stamina>130</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>16</Number>
+      <Species>Pidgey</Species>
+      <Type1>Normal</Type1>
+      <Type2>Flying</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>85</Attack>
+      <Defense>76</Defense>
+      <Stamina>80</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>17</Number>
+      <Species>Pidgeotto</Species>
+      <Type1>Normal</Type1>
+      <Type2>Flying</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>117</Attack>
+      <Defense>108</Defense>
+      <Stamina>126</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>18</Number>
+      <Species>Pidgeot</Species>
+      <Type1>Normal</Type1>
+      <Type2>Flying</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>166</Attack>
+      <Defense>157</Defense>
+      <Stamina>166</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>19</Number>
+      <Species>Rattata</Species>
+      <Type1>Normal</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>103</Attack>
+      <Defense>70</Defense>
+      <Stamina>60</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>20</Number>
+      <Species>Raticate</Species>
+      <Type1>Normal</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>161</Attack>
+      <Defense>144</Defense>
+      <Stamina>110</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>21</Number>
+      <Species>Spearow</Species>
+      <Type1>Normal</Type1>
+      <Type2>Flying</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>112</Attack>
+      <Defense>61</Defense>
+      <Stamina>80</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>22</Number>
+      <Species>Fearow</Species>
+      <Type1>Normal</Type1>
+      <Type2>Flying</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>182</Attack>
+      <Defense>135</Defense>
+      <Stamina>130</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>23</Number>
+      <Species>Ekans</Species>
+      <Type1>Poison</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>110</Attack>
+      <Defense>102</Defense>
+      <Stamina>70</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>24</Number>
+      <Species>Arbok</Species>
+      <Type1>Poison</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>167</Attack>
+      <Defense>158</Defense>
+      <Stamina>120</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>25</Number>
+      <Species>Pikachu</Species>
+      <Type1>Electric</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>112</Attack>
+      <Defense>101</Defense>
+      <Stamina>70</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>26</Number>
+      <Species>Raichu</Species>
+      <Type1>Electric</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>193</Attack>
+      <Defense>165</Defense>
+      <Stamina>120</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>27</Number>
+      <Species>Sandshrew</Species>
+      <Type1>Ground</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>126</Attack>
+      <Defense>145</Defense>
+      <Stamina>100</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>28</Number>
+      <Species>Sandslash</Species>
+      <Type1>Ground</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>182</Attack>
+      <Defense>202</Defense>
+      <Stamina>150</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>29</Number>
+      <Species>Nidoranf</Species>
+      <Type1>Poison</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>86</Attack>
+      <Defense>94</Defense>
+      <Stamina>110</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>30</Number>
+      <Species>Nidorina</Species>
+      <Type1>Poison</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>117</Attack>
+      <Defense>126</Defense>
+      <Stamina>140</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>31</Number>
+      <Species>Nidoqueen</Species>
+      <Type1>Poison</Type1>
+      <Type2>Ground</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>180</Attack>
+      <Defense>174</Defense>
+      <Stamina>180</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>32</Number>
+      <Species>Nidoranm</Species>
+      <Type1>Poison</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>105</Attack>
+      <Defense>76</Defense>
+      <Stamina>92</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>33</Number>
+      <Species>Nidorino</Species>
+      <Type1>Poison</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>137</Attack>
+      <Defense>112</Defense>
+      <Stamina>122</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>34</Number>
+      <Species>Nidoking</Species>
+      <Type1>Poison</Type1>
+      <Type2>Ground</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>204</Attack>
+      <Defense>157</Defense>
+      <Stamina>162</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>35</Number>
+      <Species>Clefairy</Species>
+      <Type1>Fairy</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>107</Attack>
+      <Defense>116</Defense>
+      <Stamina>140</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>36</Number>
+      <Species>Clefable</Species>
+      <Type1>Fairy</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>178</Attack>
+      <Defense>171</Defense>
+      <Stamina>190</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>37</Number>
+      <Species>Vulpix</Species>
+      <Type1>Fire</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>96</Attack>
+      <Defense>122</Defense>
+      <Stamina>76</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>38</Number>
+      <Species>Ninetales</Species>
+      <Type1>Fire</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>169</Attack>
+      <Defense>204</Defense>
+      <Stamina>146</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>39</Number>
+      <Species>Jigglypuff</Species>
+      <Type1>Normal</Type1>
+      <Type2>Fairy</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>80</Attack>
+      <Defense>44</Defense>
+      <Stamina>230</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>40</Number>
+      <Species>Wigglytuff</Species>
+      <Type1>Normal</Type1>
+      <Type2>Fairy</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>156</Attack>
+      <Defense>93</Defense>
+      <Stamina>280</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>41</Number>
+      <Species>Zubat</Species>
+      <Type1>Poison</Type1>
+      <Type2>Flying</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>83</Attack>
+      <Defense>76</Defense>
+      <Stamina>80</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>42</Number>
+      <Species>Golbat</Species>
+      <Type1>Poison</Type1>
+      <Type2>Flying</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>161</Attack>
+      <Defense>153</Defense>
+      <Stamina>150</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>43</Number>
+      <Species>Oddish</Species>
+      <Type1>Grass</Type1>
+      <Type2>Poison</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>131</Attack>
+      <Defense>116</Defense>
+      <Stamina>90</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>44</Number>
+      <Species>Gloom</Species>
+      <Type1>Grass</Type1>
+      <Type2>Poison</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>153</Attack>
+      <Defense>139</Defense>
+      <Stamina>120</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>45</Number>
+      <Species>Vileplume</Species>
+      <Type1>Grass</Type1>
+      <Type2>Poison</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>202</Attack>
+      <Defense>170</Defense>
+      <Stamina>150</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>46</Number>
+      <Species>Paras</Species>
+      <Type1>Bug</Type1>
+      <Type2>Grass</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>121</Attack>
+      <Defense>99</Defense>
+      <Stamina>70</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>47</Number>
+      <Species>Parasect</Species>
+      <Type1>Bug</Type1>
+      <Type2>Grass</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>165</Attack>
+      <Defense>146</Defense>
+      <Stamina>120</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>48</Number>
+      <Species>Venonat</Species>
+      <Type1>Bug</Type1>
+      <Type2>Poison</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>100</Attack>
+      <Defense>102</Defense>
+      <Stamina>120</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>49</Number>
+      <Species>Venomoth</Species>
+      <Type1>Bug</Type1>
+      <Type2>Poison</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>179</Attack>
+      <Defense>150</Defense>
+      <Stamina>140</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>50</Number>
+      <Species>Diglett</Species>
+      <Type1>Ground</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>109</Attack>
+      <Defense>88</Defense>
+      <Stamina>20</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>51</Number>
+      <Species>Dugtrio</Species>
+      <Type1>Ground</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>167</Attack>
+      <Defense>147</Defense>
+      <Stamina>70</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>52</Number>
+      <Species>Meowth</Species>
+      <Type1>Normal</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>92</Attack>
+      <Defense>81</Defense>
+      <Stamina>80</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>53</Number>
+      <Species>Persian</Species>
+      <Type1>Normal</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>150</Attack>
+      <Defense>139</Defense>
+      <Stamina>130</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>54</Number>
+      <Species>Psyduck</Species>
+      <Type1>Water</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>122</Attack>
+      <Defense>96</Defense>
+      <Stamina>100</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>55</Number>
+      <Species>Golduck</Species>
+      <Type1>Water</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>191</Attack>
+      <Defense>163</Defense>
+      <Stamina>160</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>56</Number>
+      <Species>Mankey</Species>
+      <Type1>Fighting</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>148</Attack>
+      <Defense>87</Defense>
+      <Stamina>80</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>57</Number>
+      <Species>Primeape</Species>
+      <Type1>Fighting</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>207</Attack>
+      <Defense>144</Defense>
+      <Stamina>130</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>58</Number>
+      <Species>Growlithe</Species>
+      <Type1>Fire</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>136</Attack>
+      <Defense>96</Defense>
+      <Stamina>110</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>59</Number>
+      <Species>Arcanine</Species>
+      <Type1>Fire</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>227</Attack>
+      <Defense>166</Defense>
+      <Stamina>180</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>60</Number>
+      <Species>Poliwag</Species>
+      <Type1>Water</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>101</Attack>
+      <Defense>82</Defense>
+      <Stamina>80</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>61</Number>
+      <Species>Poliwhirl</Species>
+      <Type1>Water</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>130</Attack>
+      <Defense>130</Defense>
+      <Stamina>130</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>62</Number>
+      <Species>Poliwrath</Species>
+      <Type1>Water</Type1>
+      <Type2>Fighting</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>182</Attack>
+      <Defense>187</Defense>
+      <Stamina>180</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>63</Number>
+      <Species>Abra</Species>
+      <Type1>Psychic</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>195</Attack>
+      <Defense>103</Defense>
+      <Stamina>50</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>64</Number>
+      <Species>Kadabra</Species>
+      <Type1>Psychic</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>232</Attack>
+      <Defense>138</Defense>
+      <Stamina>80</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>65</Number>
+      <Species>Alakazam</Species>
+      <Type1>Psychic</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>271</Attack>
+      <Defense>194</Defense>
+      <Stamina>110</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>66</Number>
+      <Species>Machop</Species>
+      <Type1>Fighting</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>137</Attack>
+      <Defense>88</Defense>
+      <Stamina>140</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>67</Number>
+      <Species>Machoke</Species>
+      <Type1>Fighting</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>177</Attack>
+      <Defense>130</Defense>
+      <Stamina>160</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>68</Number>
+      <Species>Machamp</Species>
+      <Type1>Fighting</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>234</Attack>
+      <Defense>162</Defense>
+      <Stamina>180</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>69</Number>
+      <Species>Bellsprout</Species>
+      <Type1>Grass</Type1>
+      <Type2>Poison</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>139</Attack>
+      <Defense>64</Defense>
+      <Stamina>100</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>70</Number>
+      <Species>Weepinbell</Species>
+      <Type1>Grass</Type1>
+      <Type2>Poison</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>172</Attack>
+      <Defense>95</Defense>
+      <Stamina>130</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>71</Number>
+      <Species>Victreebel</Species>
+      <Type1>Grass</Type1>
+      <Type2>Poison</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>207</Attack>
+      <Defense>138</Defense>
+      <Stamina>160</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>72</Number>
+      <Species>Tentacool</Species>
+      <Type1>Water</Type1>
+      <Type2>Poison</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>97</Attack>
+      <Defense>182</Defense>
+      <Stamina>80</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>73</Number>
+      <Species>Tentacruel</Species>
+      <Type1>Water</Type1>
+      <Type2>Poison</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>166</Attack>
+      <Defense>237</Defense>
+      <Stamina>160</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>74</Number>
+      <Species>Geodude</Species>
+      <Type1>Rock</Type1>
+      <Type2>Ground</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>132</Attack>
+      <Defense>163</Defense>
+      <Stamina>80</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>75</Number>
+      <Species>Graveler</Species>
+      <Type1>Rock</Type1>
+      <Type2>Ground</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>164</Attack>
+      <Defense>196</Defense>
+      <Stamina>110</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>76</Number>
+      <Species>Golem</Species>
+      <Type1>Rock</Type1>
+      <Type2>Ground</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>211</Attack>
+      <Defense>229</Defense>
+      <Stamina>160</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>77</Number>
+      <Species>Ponyta</Species>
+      <Type1>Fire</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>170</Attack>
+      <Defense>132</Defense>
+      <Stamina>100</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>78</Number>
+      <Species>Rapidash</Species>
+      <Type1>Fire</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>207</Attack>
+      <Defense>167</Defense>
+      <Stamina>130</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>79</Number>
+      <Species>Slowpoke</Species>
+      <Type1>Water</Type1>
+      <Type2>Psychic</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>109</Attack>
+      <Defense>109</Defense>
+      <Stamina>180</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>80</Number>
+      <Species>Slowbro</Species>
+      <Type1>Water</Type1>
+      <Type2>Psychic</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>177</Attack>
+      <Defense>194</Defense>
+      <Stamina>190</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>81</Number>
+      <Species>Magnemite</Species>
+      <Type1>Electric</Type1>
+      <Type2>Steel</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>165</Attack>
+      <Defense>128</Defense>
+      <Stamina>50</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>82</Number>
+      <Species>Magneton</Species>
+      <Type1>Electric</Type1>
+      <Type2>Steel</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>223</Attack>
+      <Defense>182</Defense>
+      <Stamina>100</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>83</Number>
+      <Species>Farfetch'd</Species>
+      <Type1>Normal</Type1>
+      <Type2>Flying</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>124</Attack>
+      <Defense>118</Defense>
+      <Stamina>104</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>84</Number>
+      <Species>Doduo</Species>
+      <Type1>Normal</Type1>
+      <Type2>Flying</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>158</Attack>
+      <Defense>88</Defense>
+      <Stamina>70</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>85</Number>
+      <Species>Dodrio</Species>
+      <Type1>Normal</Type1>
+      <Type2>Flying</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>218</Attack>
+      <Defense>145</Defense>
+      <Stamina>120</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>86</Number>
+      <Species>Seel</Species>
+      <Type1>Water</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>85</Attack>
+      <Defense>128</Defense>
+      <Stamina>130</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>87</Number>
+      <Species>Dewgong</Species>
+      <Type1>Water</Type1>
+      <Type2>Ice</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>139</Attack>
+      <Defense>184</Defense>
+      <Stamina>180</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>88</Number>
+      <Species>Grimer</Species>
+      <Type1>Poison</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>135</Attack>
+      <Defense>90</Defense>
+      <Stamina>160</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>89</Number>
+      <Species>Muk</Species>
+      <Type1>Poison</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>190</Attack>
+      <Defense>184</Defense>
+      <Stamina>210</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>90</Number>
+      <Species>Shellder</Species>
+      <Type1>Water</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>116</Attack>
+      <Defense>168</Defense>
+      <Stamina>60</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>91</Number>
+      <Species>Cloyster</Species>
+      <Type1>Water</Type1>
+      <Type2>Ice</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>186</Attack>
+      <Defense>323</Defense>
+      <Stamina>100</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>92</Number>
+      <Species>Gastly</Species>
+      <Type1>Ghost</Type1>
+      <Type2>Poison</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>186</Attack>
+      <Defense>70</Defense>
+      <Stamina>60</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>93</Number>
+      <Species>Haunter</Species>
+      <Type1>Ghost</Type1>
+      <Type2>Poison</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>223</Attack>
+      <Defense>112</Defense>
+      <Stamina>90</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>94</Number>
+      <Species>Gengar</Species>
+      <Type1>Ghost</Type1>
+      <Type2>Poison</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>261</Attack>
+      <Defense>156</Defense>
+      <Stamina>120</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>95</Number>
+      <Species>Onix</Species>
+      <Type1>Rock</Type1>
+      <Type2>Ground</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>85</Attack>
+      <Defense>288</Defense>
+      <Stamina>70</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>96</Number>
+      <Species>Drowzee</Species>
+      <Type1>Psychic</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>89</Attack>
+      <Defense>158</Defense>
+      <Stamina>120</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>97</Number>
+      <Species>Hypno</Species>
+      <Type1>Psychic</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>144</Attack>
+      <Defense>215</Defense>
+      <Stamina>170</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>98</Number>
+      <Species>Krabby</Species>
+      <Type1>Water</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>181</Attack>
+      <Defense>156</Defense>
+      <Stamina>60</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>99</Number>
+      <Species>Kingler</Species>
+      <Type1>Water</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>240</Attack>
+      <Defense>214</Defense>
+      <Stamina>110</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>100</Number>
+      <Species>Voltorb</Species>
+      <Type1>Electric</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>109</Attack>
+      <Defense>114</Defense>
+      <Stamina>80</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>101</Number>
+      <Species>Electrode</Species>
+      <Type1>Electric</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>173</Attack>
+      <Defense>179</Defense>
+      <Stamina>120</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>102</Number>
+      <Species>Exeggcute</Species>
+      <Type1>Grass</Type1>
+      <Type2>Psychic</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>107</Attack>
+      <Defense>140</Defense>
+      <Stamina>120</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>103</Number>
+      <Species>Exeggutor</Species>
+      <Type1>Grass</Type1>
+      <Type2>Psychic</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>233</Attack>
+      <Defense>158</Defense>
+      <Stamina>190</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>104</Number>
+      <Species>Cubone</Species>
+      <Type1>Ground</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>90</Attack>
+      <Defense>165</Defense>
+      <Stamina>100</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>105</Number>
+      <Species>Marowak</Species>
+      <Type1>Ground</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>144</Attack>
+      <Defense>200</Defense>
+      <Stamina>120</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>106</Number>
+      <Species>Hitmonlee</Species>
+      <Type1>Fighting</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>224</Attack>
+      <Defense>211</Defense>
+      <Stamina>100</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>107</Number>
+      <Species>Hitmonchan</Species>
+      <Type1>Fighting</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>193</Attack>
+      <Defense>212</Defense>
+      <Stamina>100</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>108</Number>
+      <Species>Lickitung</Species>
+      <Type1>Normal</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>108</Attack>
+      <Defense>137</Defense>
+      <Stamina>180</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>109</Number>
+      <Species>Koffing</Species>
+      <Type1>Poison</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>119</Attack>
+      <Defense>164</Defense>
+      <Stamina>80</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>110</Number>
+      <Species>Weezing</Species>
+      <Type1>Poison</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>174</Attack>
+      <Defense>221</Defense>
+      <Stamina>130</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>111</Number>
+      <Species>Rhyhorn</Species>
+      <Type1>Ground</Type1>
+      <Type2>Rock</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>140</Attack>
+      <Defense>157</Defense>
+      <Stamina>160</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>112</Number>
+      <Species>Rhydon</Species>
+      <Type1>Ground</Type1>
+      <Type2>Rock</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>222</Attack>
+      <Defense>206</Defense>
+      <Stamina>210</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>113</Number>
+      <Species>Chansey</Species>
+      <Type1>Normal</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>60</Attack>
+      <Defense>176</Defense>
+      <Stamina>500</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>114</Number>
+      <Species>Tangela</Species>
+      <Type1>Grass</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>183</Attack>
+      <Defense>205</Defense>
+      <Stamina>130</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>115</Number>
+      <Species>Kangaskhan</Species>
+      <Type1>Normal</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>181</Attack>
+      <Defense>165</Defense>
+      <Stamina>210</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>116</Number>
+      <Species>Horsea</Species>
+      <Type1>Water</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>129</Attack>
+      <Defense>125</Defense>
+      <Stamina>60</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>117</Number>
+      <Species>Seadra</Species>
+      <Type1>Water</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>187</Attack>
+      <Defense>182</Defense>
+      <Stamina>110</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>118</Number>
+      <Species>Goldeen</Species>
+      <Type1>Water</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>123</Attack>
+      <Defense>115</Defense>
+      <Stamina>90</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>119</Number>
+      <Species>Seaking</Species>
+      <Type1>Water</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>175</Attack>
+      <Defense>154</Defense>
+      <Stamina>160</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>120</Number>
+      <Species>Staryu</Species>
+      <Type1>Water</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>137</Attack>
+      <Defense>112</Defense>
+      <Stamina>60</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>121</Number>
+      <Species>Starmie</Species>
+      <Type1>Water</Type1>
+      <Type2>Psychic</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>210</Attack>
+      <Defense>184</Defense>
+      <Stamina>120</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>122</Number>
+      <Species>Mr. Mime</Species>
+      <Type1>Psychic</Type1>
+      <Type2>Fairy</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>192</Attack>
+      <Defense>233</Defense>
+      <Stamina>80</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>123</Number>
+      <Species>Scyther</Species>
+      <Type1>Bug</Type1>
+      <Type2>Flying</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>218</Attack>
+      <Defense>170</Defense>
+      <Stamina>140</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>124</Number>
+      <Species>Jynx</Species>
+      <Type1>Ice</Type1>
+      <Type2>Psychic</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>223</Attack>
+      <Defense>182</Defense>
+      <Stamina>130</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>125</Number>
+      <Species>Electabuzz</Species>
+      <Type1>Electric</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>198</Attack>
+      <Defense>173</Defense>
+      <Stamina>130</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>126</Number>
+      <Species>Magmar</Species>
+      <Type1>Fire</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>206</Attack>
+      <Defense>169</Defense>
+      <Stamina>130</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>127</Number>
+      <Species>Pinsir</Species>
+      <Type1>Bug</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>238</Attack>
+      <Defense>197</Defense>
+      <Stamina>130</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>128</Number>
+      <Species>Tauros</Species>
+      <Type1>Normal</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>198</Attack>
+      <Defense>197</Defense>
+      <Stamina>150</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>129</Number>
+      <Species>Magikarp</Species>
+      <Type1>Water</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>29</Attack>
+      <Defense>102</Defense>
+      <Stamina>40</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>130</Number>
+      <Species>Gyarados</Species>
+      <Type1>Water</Type1>
+      <Type2>Flying</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>237</Attack>
+      <Defense>197</Defense>
+      <Stamina>190</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>131</Number>
+      <Species>Lapras</Species>
+      <Type1>Water</Type1>
+      <Type2>Ice</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>165</Attack>
+      <Defense>180</Defense>
+      <Stamina>260</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>132</Number>
+      <Species>Ditto</Species>
+      <Type1>Normal</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>91</Attack>
+      <Defense>91</Defense>
+      <Stamina>96</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>133</Number>
+      <Species>Eevee</Species>
+      <Type1>Normal</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>104</Attack>
+      <Defense>121</Defense>
+      <Stamina>110</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>134</Number>
+      <Species>Vaporeon</Species>
+      <Type1>Water</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>205</Attack>
+      <Defense>177</Defense>
+      <Stamina>260</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>135</Number>
+      <Species>Jolteon</Species>
+      <Type1>Electric</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>232</Attack>
+      <Defense>201</Defense>
+      <Stamina>130</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>136</Number>
+      <Species>Flareon</Species>
+      <Type1>Fire</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>246</Attack>
+      <Defense>204</Defense>
+      <Stamina>130</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>137</Number>
+      <Species>Porygon</Species>
+      <Type1>Normal</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>153</Attack>
+      <Defense>139</Defense>
+      <Stamina>130</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>138</Number>
+      <Species>Omanyte</Species>
+      <Type1>Rock</Type1>
+      <Type2>Water</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>155</Attack>
+      <Defense>174</Defense>
+      <Stamina>70</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>139</Number>
+      <Species>Omastar</Species>
+      <Type1>Rock</Type1>
+      <Type2>Water</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>207</Attack>
+      <Defense>227</Defense>
+      <Stamina>140</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>140</Number>
+      <Species>Kabuto</Species>
+      <Type1>Rock</Type1>
+      <Type2>Water</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>148</Attack>
+      <Defense>162</Defense>
+      <Stamina>60</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>141</Number>
+      <Species>Kabutops</Species>
+      <Type1>Rock</Type1>
+      <Type2>Water</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>220</Attack>
+      <Defense>203</Defense>
+      <Stamina>120</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>142</Number>
+      <Species>Aerodactyl</Species>
+      <Type1>Rock</Type1>
+      <Type2>Flying</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>221</Attack>
+      <Defense>164</Defense>
+      <Stamina>160</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>143</Number>
+      <Species>Snorlax</Species>
+      <Type1>Normal</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>190</Attack>
+      <Defense>190</Defense>
+      <Stamina>320</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>144</Number>
+      <Species>Articuno</Species>
+      <Type1>Ice</Type1>
+      <Type2>Flying</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>192</Attack>
+      <Defense>249</Defense>
+      <Stamina>180</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>145</Number>
+      <Species>Zapdos</Species>
+      <Type1>Electric</Type1>
+      <Type2>Flying</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>253</Attack>
+      <Defense>188</Defense>
+      <Stamina>180</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>146</Number>
+      <Species>Moltres</Species>
+      <Type1>Fire</Type1>
+      <Type2>Flying</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>251</Attack>
+      <Defense>184</Defense>
+      <Stamina>180</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>147</Number>
+      <Species>Dratini</Species>
+      <Type1>Dragon</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>119</Attack>
+      <Defense>94</Defense>
+      <Stamina>82</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>148</Number>
+      <Species>Dragonair</Species>
+      <Type1>Dragon</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>163</Attack>
+      <Defense>138</Defense>
+      <Stamina>122</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>149</Number>
+      <Species>Dragonite</Species>
+      <Type1>Dragon</Type1>
+      <Type2>Flying</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>263</Attack>
+      <Defense>201</Defense>
+      <Stamina>182</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>150</Number>
+      <Species>Mewtwo</Species>
+      <Type1>Psychic</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>300</Attack>
+      <Defense>182</Defense>
+      <Stamina>193</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>151</Number>
+      <Species>Mew</Species>
+      <Type1>Psychic</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>210</Attack>
+      <Defense>210</Defense>
+      <Stamina>200</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>152</Number>
+      <Species>Chikorita</Species>
+      <Type1>Grass</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>92</Attack>
+      <Defense>122</Defense>
+      <Stamina>90</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>153</Number>
+      <Species>Bayleef</Species>
+      <Type1>Grass</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>122</Attack>
+      <Defense>155</Defense>
+      <Stamina>120</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>154</Number>
+      <Species>Meganium</Species>
+      <Type1>Grass</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>168</Attack>
+      <Defense>202</Defense>
+      <Stamina>160</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>155</Number>
+      <Species>Cyndaquil</Species>
+      <Type1>Fire</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>116</Attack>
+      <Defense>96</Defense>
+      <Stamina>78</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>156</Number>
+      <Species>Quilava</Species>
+      <Type1>Fire</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>158</Attack>
+      <Defense>129</Defense>
+      <Stamina>116</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>157</Number>
+      <Species>Typhlosion</Species>
+      <Type1>Fire</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>223</Attack>
+      <Defense>176</Defense>
+      <Stamina>156</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>158</Number>
+      <Species>Totodile</Species>
+      <Type1>Water</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>117</Attack>
+      <Defense>116</Defense>
+      <Stamina>100</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>159</Number>
+      <Species>Croconaw</Species>
+      <Type1>Water</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>150</Attack>
+      <Defense>151</Defense>
+      <Stamina>130</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>160</Number>
+      <Species>Feraligatr</Species>
+      <Type1>Water</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>205</Attack>
+      <Defense>197</Defense>
+      <Stamina>170</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>161</Number>
+      <Species>Sentret</Species>
+      <Type1>Normal</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>79</Attack>
+      <Defense>77</Defense>
+      <Stamina>70</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>162</Number>
+      <Species>Furret</Species>
+      <Type1>Normal</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>148</Attack>
+      <Defense>130</Defense>
+      <Stamina>170</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>163</Number>
+      <Species>Hoothoot</Species>
+      <Type1>Normal</Type1>
+      <Type2>Flying</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>67</Attack>
+      <Defense>101</Defense>
+      <Stamina>120</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>164</Number>
+      <Species>Noctowl</Species>
+      <Type1>Normal</Type1>
+      <Type2>Flying</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>145</Attack>
+      <Defense>179</Defense>
+      <Stamina>200</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>165</Number>
+      <Species>Ledyba</Species>
+      <Type1>Bug</Type1>
+      <Type2>Flying</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>72</Attack>
+      <Defense>142</Defense>
+      <Stamina>80</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>166</Number>
+      <Species>Ledian</Species>
+      <Type1>Bug</Type1>
+      <Type2>Flying</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>107</Attack>
+      <Defense>209</Defense>
+      <Stamina>110</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>167</Number>
+      <Species>Spinarak</Species>
+      <Type1>Bug</Type1>
+      <Type2>Poison</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>105</Attack>
+      <Defense>73</Defense>
+      <Stamina>80</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>168</Number>
+      <Species>Ariados</Species>
+      <Type1>Bug</Type1>
+      <Type2>Poison</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>161</Attack>
+      <Defense>128</Defense>
+      <Stamina>140</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>169</Number>
+      <Species>Crobat</Species>
+      <Type1>Poison</Type1>
+      <Type2>Flying</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>194</Attack>
+      <Defense>178</Defense>
+      <Stamina>170</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>170</Number>
+      <Species>Chinchou</Species>
+      <Type1>Water</Type1>
+      <Type2>Electric</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>106</Attack>
+      <Defense>106</Defense>
+      <Stamina>150</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>171</Number>
+      <Species>Lanturn</Species>
+      <Type1>Water</Type1>
+      <Type2>Electric</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>146</Attack>
+      <Defense>146</Defense>
+      <Stamina>250</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>172</Number>
+      <Species>Pichu</Species>
+      <Type1>Electric</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>77</Attack>
+      <Defense>63</Defense>
+      <Stamina>40</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>173</Number>
+      <Species>Cleffa</Species>
+      <Type1>Fairy</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>75</Attack>
+      <Defense>91</Defense>
+      <Stamina>100</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>174</Number>
+      <Species>Igglybuff</Species>
+      <Type1>Normal</Type1>
+      <Type2>Fairy</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>69</Attack>
+      <Defense>34</Defense>
+      <Stamina>180</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>175</Number>
+      <Species>Togepi</Species>
+      <Type1>Fairy</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>67</Attack>
+      <Defense>116</Defense>
+      <Stamina>70</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>176</Number>
+      <Species>Togetic</Species>
+      <Type1>Fairy</Type1>
+      <Type2>Flying</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>139</Attack>
+      <Defense>191</Defense>
+      <Stamina>110</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>177</Number>
+      <Species>Natu</Species>
+      <Type1>Psychic</Type1>
+      <Type2>Flying</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>134</Attack>
+      <Defense>89</Defense>
+      <Stamina>80</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>178</Number>
+      <Species>Xatu</Species>
+      <Type1>Psychic</Type1>
+      <Type2>Flying</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>192</Attack>
+      <Defense>146</Defense>
+      <Stamina>130</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>179</Number>
+      <Species>Mareep</Species>
+      <Type1>Electric</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>114</Attack>
+      <Defense>82</Defense>
+      <Stamina>110</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>180</Number>
+      <Species>Flaaffy</Species>
+      <Type1>Electric</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>145</Attack>
+      <Defense>112</Defense>
+      <Stamina>140</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>181</Number>
+      <Species>Ampharos</Species>
+      <Type1>Electric</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>211</Attack>
+      <Defense>172</Defense>
+      <Stamina>180</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>182</Number>
+      <Species>Bellossom</Species>
+      <Type1>Grass</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>169</Attack>
+      <Defense>189</Defense>
+      <Stamina>150</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>183</Number>
+      <Species>Marill</Species>
+      <Type1>Water</Type1>
+      <Type2>Fairy</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>37</Attack>
+      <Defense>93</Defense>
+      <Stamina>140</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>184</Number>
+      <Species>Azumarill</Species>
+      <Type1>Water</Type1>
+      <Type2>Fairy</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>112</Attack>
+      <Defense>152</Defense>
+      <Stamina>200</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>185</Number>
+      <Species>Sudowoodo</Species>
+      <Type1>Rock</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>167</Attack>
+      <Defense>198</Defense>
+      <Stamina>140</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>186</Number>
+      <Species>Politoed</Species>
+      <Type1>Water</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>174</Attack>
+      <Defense>192</Defense>
+      <Stamina>180</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>187</Number>
+      <Species>Hoppip</Species>
+      <Type1>Grass</Type1>
+      <Type2>Flying</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>67</Attack>
+      <Defense>101</Defense>
+      <Stamina>70</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>188</Number>
+      <Species>Skiploom</Species>
+      <Type1>Grass</Type1>
+      <Type2>Flying</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>91</Attack>
+      <Defense>127</Defense>
+      <Stamina>110</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>189</Number>
+      <Species>Jumpluff</Species>
+      <Type1>Grass</Type1>
+      <Type2>Flying</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>118</Attack>
+      <Defense>197</Defense>
+      <Stamina>150</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>190</Number>
+      <Species>Aipom</Species>
+      <Type1>Normal</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>136</Attack>
+      <Defense>112</Defense>
+      <Stamina>110</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>191</Number>
+      <Species>Sunkern</Species>
+      <Type1>Grass</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>55</Attack>
+      <Defense>55</Defense>
+      <Stamina>60</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>192</Number>
+      <Species>Sunflora</Species>
+      <Type1>Grass</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>185</Attack>
+      <Defense>148</Defense>
+      <Stamina>150</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>193</Number>
+      <Species>Yanma</Species>
+      <Type1>Bug</Type1>
+      <Type2>Flying</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>154</Attack>
+      <Defense>94</Defense>
+      <Stamina>130</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>194</Number>
+      <Species>Wooper</Species>
+      <Type1>Water</Type1>
+      <Type2>Ground</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>75</Attack>
+      <Defense>75</Defense>
+      <Stamina>110</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>195</Number>
+      <Species>Quagsire</Species>
+      <Type1>Water</Type1>
+      <Type2>Ground</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>152</Attack>
+      <Defense>152</Defense>
+      <Stamina>190</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>196</Number>
+      <Species>Espeon</Species>
+      <Type1>Psychic</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>261</Attack>
+      <Defense>194</Defense>
+      <Stamina>130</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>197</Number>
+      <Species>Umbreon</Species>
+      <Type1>Dark</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>126</Attack>
+      <Defense>250</Defense>
+      <Stamina>190</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>198</Number>
+      <Species>Murkrow</Species>
+      <Type1>Dark</Type1>
+      <Type2>Flying</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>175</Attack>
+      <Defense>87</Defense>
+      <Stamina>120</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>199</Number>
+      <Species>Slowking</Species>
+      <Type1>Water</Type1>
+      <Type2>Psychic</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>177</Attack>
+      <Defense>194</Defense>
+      <Stamina>190</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>200</Number>
+      <Species>Misdreavus</Species>
+      <Type1>Ghost</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>167</Attack>
+      <Defense>167</Defense>
+      <Stamina>120</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>201</Number>
+      <Species>Unown</Species>
+      <Type1>Psychic</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>136</Attack>
+      <Defense>91</Defense>
+      <Stamina>96</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>202</Number>
+      <Species>Wobbuffet</Species>
+      <Type1>Psychic</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>60</Attack>
+      <Defense>106</Defense>
+      <Stamina>380</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>203</Number>
+      <Species>Girafarig</Species>
+      <Type1>Normal</Type1>
+      <Type2>Psychic</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>182</Attack>
+      <Defense>133</Defense>
+      <Stamina>140</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>204</Number>
+      <Species>Pineco</Species>
+      <Type1>Bug</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>108</Attack>
+      <Defense>146</Defense>
+      <Stamina>100</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>205</Number>
+      <Species>Forretress</Species>
+      <Type1>Bug</Type1>
+      <Type2>Steel</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>161</Attack>
+      <Defense>242</Defense>
+      <Stamina>150</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>206</Number>
+      <Species>Dunsparce</Species>
+      <Type1>Normal</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>131</Attack>
+      <Defense>131</Defense>
+      <Stamina>200</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>207</Number>
+      <Species>Gligar</Species>
+      <Type1>Ground</Type1>
+      <Type2>Flying</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>143</Attack>
+      <Defense>204</Defense>
+      <Stamina>130</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>208</Number>
+      <Species>Steelix</Species>
+      <Type1>Steel</Type1>
+      <Type2>Ground</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>148</Attack>
+      <Defense>333</Defense>
+      <Stamina>150</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>209</Number>
+      <Species>Snubbull</Species>
+      <Type1>Fairy</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>137</Attack>
+      <Defense>89</Defense>
+      <Stamina>120</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>210</Number>
+      <Species>Granbull</Species>
+      <Type1>Fairy</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>212</Attack>
+      <Defense>137</Defense>
+      <Stamina>180</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>211</Number>
+      <Species>Qwilfish</Species>
+      <Type1>Water</Type1>
+      <Type2>Poison</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>184</Attack>
+      <Defense>148</Defense>
+      <Stamina>130</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>212</Number>
+      <Species>Scizor</Species>
+      <Type1>Bug</Type1>
+      <Type2>Steel</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>236</Attack>
+      <Defense>191</Defense>
+      <Stamina>140</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>213</Number>
+      <Species>Shuckle</Species>
+      <Type1>Bug</Type1>
+      <Type2>Rock</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>17</Attack>
+      <Defense>396</Defense>
+      <Stamina>40</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>214</Number>
+      <Species>Heracross</Species>
+      <Type1>Bug</Type1>
+      <Type2>Fighting</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>234</Attack>
+      <Defense>189</Defense>
+      <Stamina>160</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>215</Number>
+      <Species>Sneasel</Species>
+      <Type1>Dark</Type1>
+      <Type2>Ice</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>189</Attack>
+      <Defense>157</Defense>
+      <Stamina>110</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>216</Number>
+      <Species>Teddiursa</Species>
+      <Type1>Normal</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>142</Attack>
+      <Defense>93</Defense>
+      <Stamina>120</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>217</Number>
+      <Species>Ursaring</Species>
+      <Type1>Normal</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>236</Attack>
+      <Defense>144</Defense>
+      <Stamina>180</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>218</Number>
+      <Species>Slugma</Species>
+      <Type1>Fire</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>118</Attack>
+      <Defense>71</Defense>
+      <Stamina>80</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>219</Number>
+      <Species>Magcargo</Species>
+      <Type1>Fire</Type1>
+      <Type2>Rock</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>139</Attack>
+      <Defense>209</Defense>
+      <Stamina>100</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>220</Number>
+      <Species>Swinub</Species>
+      <Type1>Ice</Type1>
+      <Type2>Ground</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>90</Attack>
+      <Defense>74</Defense>
+      <Stamina>100</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>221</Number>
+      <Species>Piloswine</Species>
+      <Type1>Ice</Type1>
+      <Type2>Ground</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>181</Attack>
+      <Defense>147</Defense>
+      <Stamina>200</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>222</Number>
+      <Species>Corsola</Species>
+      <Type1>Water</Type1>
+      <Type2>Rock</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>118</Attack>
+      <Defense>156</Defense>
+      <Stamina>110</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>223</Number>
+      <Species>Remoraid</Species>
+      <Type1>Water</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>127</Attack>
+      <Defense>69</Defense>
+      <Stamina>70</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>224</Number>
+      <Species>Octillery</Species>
+      <Type1>Water</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>197</Attack>
+      <Defense>141</Defense>
+      <Stamina>150</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>225</Number>
+      <Species>Delibird</Species>
+      <Type1>Ice</Type1>
+      <Type2>Flying</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>128</Attack>
+      <Defense>90</Defense>
+      <Stamina>90</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>226</Number>
+      <Species>Mantine</Species>
+      <Type1>Water</Type1>
+      <Type2>Flying</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>148</Attack>
+      <Defense>260</Defense>
+      <Stamina>130</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>227</Number>
+      <Species>Skarmory</Species>
+      <Type1>Steel</Type1>
+      <Type2>Flying</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>148</Attack>
+      <Defense>260</Defense>
+      <Stamina>130</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>228</Number>
+      <Species>Houndour</Species>
+      <Type1>Dark</Type1>
+      <Type2>Fire</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>152</Attack>
+      <Defense>93</Defense>
+      <Stamina>90</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>229</Number>
+      <Species>Houndoom</Species>
+      <Type1>Dark</Type1>
+      <Type2>Fire</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>224</Attack>
+      <Defense>159</Defense>
+      <Stamina>150</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>230</Number>
+      <Species>Kingdra</Species>
+      <Type1>Water</Type1>
+      <Type2>Dragon</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>194</Attack>
+      <Defense>194</Defense>
+      <Stamina>150</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>231</Number>
+      <Species>Phanpy</Species>
+      <Type1>Ground</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>107</Attack>
+      <Defense>107</Defense>
+      <Stamina>180</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>232</Number>
+      <Species>Donphan</Species>
+      <Type1>Ground</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>214</Attack>
+      <Defense>214</Defense>
+      <Stamina>180</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>233</Number>
+      <Species>Porygon2</Species>
+      <Type1>Normal</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>198</Attack>
+      <Defense>183</Defense>
+      <Stamina>170</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>234</Number>
+      <Species>Stantler</Species>
+      <Type1>Normal</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>192</Attack>
+      <Defense>132</Defense>
+      <Stamina>146</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>235</Number>
+      <Species>Smeargle</Species>
+      <Type1>Normal</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>40</Attack>
+      <Defense>88</Defense>
+      <Stamina>110</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>236</Number>
+      <Species>Tyrogue</Species>
+      <Type1>Fighting</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>64</Attack>
+      <Defense>64</Defense>
+      <Stamina>70</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>237</Number>
+      <Species>Hitmontop</Species>
+      <Type1>Fighting</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>173</Attack>
+      <Defense>214</Defense>
+      <Stamina>100</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>238</Number>
+      <Species>Smoochum</Species>
+      <Type1>Ice</Type1>
+      <Type2>Psychic</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>153</Attack>
+      <Defense>116</Defense>
+      <Stamina>90</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>239</Number>
+      <Species>Elekid</Species>
+      <Type1>Electric</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>135</Attack>
+      <Defense>110</Defense>
+      <Stamina>90</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>240</Number>
+      <Species>Magby</Species>
+      <Type1>Fire</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>151</Attack>
+      <Defense>108</Defense>
+      <Stamina>90</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>241</Number>
+      <Species>Miltank</Species>
+      <Type1>Normal</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>157</Attack>
+      <Defense>211</Defense>
+      <Stamina>190</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>242</Number>
+      <Species>Blissey</Species>
+      <Type1>Normal</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>129</Attack>
+      <Defense>229</Defense>
+      <Stamina>510</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>243</Number>
+      <Species>Raikou</Species>
+      <Type1>Electric</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>241</Attack>
+      <Defense>210</Defense>
+      <Stamina>180</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>244</Number>
+      <Species>Entei</Species>
+      <Type1>Fire</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>235</Attack>
+      <Defense>176</Defense>
+      <Stamina>230</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>245</Number>
+      <Species>Suicune</Species>
+      <Type1>Water</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>180</Attack>
+      <Defense>235</Defense>
+      <Stamina>200</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>246</Number>
+      <Species>Larvitar</Species>
+      <Type1>Rock</Type1>
+      <Type2>Ground</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>115</Attack>
+      <Defense>93</Defense>
+      <Stamina>100</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>247</Number>
+      <Species>Pupitar</Species>
+      <Type1>Rock</Type1>
+      <Type2>Ground</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>155</Attack>
+      <Defense>133</Defense>
+      <Stamina>140</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>248</Number>
+      <Species>Tyranitar</Species>
+      <Type1>Rock</Type1>
+      <Type2>Dark</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>251</Attack>
+      <Defense>212</Defense>
+      <Stamina>200</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>249</Number>
+      <Species>Lugia</Species>
+      <Type1>Psychic</Type1>
+      <Type2>Flying</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>193</Attack>
+      <Defense>323</Defense>
+      <Stamina>212</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>250</Number>
+      <Species>Ho-Oh</Species>
+      <Type1>Fire</Type1>
+      <Type2>Flying</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>263</Attack>
+      <Defense>301</Defense>
+      <Stamina>212</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>251</Number>
+      <Species>Celebi</Species>
+      <Type1>Psychic</Type1>
+      <Type2>Grass</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>210</Attack>
+      <Defense>210</Defense>
+      <Stamina>200</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>252</Number>
+      <Species>Treecko</Species>
+      <Type1>Grass</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>124</Attack>
+      <Defense>104</Defense>
+      <Stamina>80</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>253</Number>
+      <Species>Grovyle</Species>
+      <Type1>Grass</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>172</Attack>
+      <Defense>130</Defense>
+      <Stamina>100</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>254</Number>
+      <Species>Sceptile</Species>
+      <Type1>Grass</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>223</Attack>
+      <Defense>180</Defense>
+      <Stamina>140</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>255</Number>
+      <Species>Torchic</Species>
+      <Type1>Fire</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>130</Attack>
+      <Defense>92</Defense>
+      <Stamina>90</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>256</Number>
+      <Species>Combusken</Species>
+      <Type1>Fire</Type1>
+      <Type2>Fighting</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>163</Attack>
+      <Defense>115</Defense>
+      <Stamina>120</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>257</Number>
+      <Species>Blaziken</Species>
+      <Type1>Fire</Type1>
+      <Type2>Fighting</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>240</Attack>
+      <Defense>141</Defense>
+      <Stamina>160</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>258</Number>
+      <Species>Mudkip</Species>
+      <Type1>Water</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>126</Attack>
+      <Defense>93</Defense>
+      <Stamina>100</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>259</Number>
+      <Species>Marshtomp</Species>
+      <Type1>Water</Type1>
+      <Type2>Ground</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>156</Attack>
+      <Defense>133</Defense>
+      <Stamina>140</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>260</Number>
+      <Species>Swampert</Species>
+      <Type1>Water</Type1>
+      <Type2>Ground</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>208</Attack>
+      <Defense>175</Defense>
+      <Stamina>200</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>261</Number>
+      <Species>Poochyena</Species>
+      <Type1>Dark</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>96</Attack>
+      <Defense>63</Defense>
+      <Stamina>70</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>262</Number>
+      <Species>Mightyena</Species>
+      <Type1>Dark</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>171</Attack>
+      <Defense>137</Defense>
+      <Stamina>140</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>263</Number>
+      <Species>Zigzagoon</Species>
+      <Type1>Normal</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>58</Attack>
+      <Defense>80</Defense>
+      <Stamina>76</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>264</Number>
+      <Species>Linoone</Species>
+      <Type1>Normal</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>142</Attack>
+      <Defense>128</Defense>
+      <Stamina>156</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>265</Number>
+      <Species>Wurmple</Species>
+      <Type1>Bug</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>75</Attack>
+      <Defense>61</Defense>
+      <Stamina>90</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>266</Number>
+      <Species>Silcoon</Species>
+      <Type1>Bug</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>60</Attack>
+      <Defense>91</Defense>
+      <Stamina>100</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>267</Number>
+      <Species>Beautifly</Species>
+      <Type1>Bug</Type1>
+      <Type2>Flying</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>189</Attack>
+      <Defense>98</Defense>
+      <Stamina>120</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>268</Number>
+      <Species>Cascoon</Species>
+      <Type1>Bug</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>60</Attack>
+      <Defense>91</Defense>
+      <Stamina>100</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>269</Number>
+      <Species>Dustox</Species>
+      <Type1>Bug</Type1>
+      <Type2>Poison</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>98</Attack>
+      <Defense>172</Defense>
+      <Stamina>120</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>270</Number>
+      <Species>Lotad</Species>
+      <Type1>Water</Type1>
+      <Type2>Grass</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>71</Attack>
+      <Defense>86</Defense>
+      <Stamina>80</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>271</Number>
+      <Species>Lombre</Species>
+      <Type1>Water</Type1>
+      <Type2>Grass</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>112</Attack>
+      <Defense>128</Defense>
+      <Stamina>120</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>272</Number>
+      <Species>Ludicolo</Species>
+      <Type1>Water</Type1>
+      <Type2>Grass</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>173</Attack>
+      <Defense>191</Defense>
+      <Stamina>160</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>273</Number>
+      <Species>Seedot</Species>
+      <Type1>Grass</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>71</Attack>
+      <Defense>86</Defense>
+      <Stamina>80</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>274</Number>
+      <Species>Nuzleaf</Species>
+      <Type1>Grass</Type1>
+      <Type2>Dark</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>134</Attack>
+      <Defense>78</Defense>
+      <Stamina>140</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>275</Number>
+      <Species>Shiftry</Species>
+      <Type1>Grass</Type1>
+      <Type2>Dark</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>200</Attack>
+      <Defense>121</Defense>
+      <Stamina>180</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>276</Number>
+      <Species>Taillow</Species>
+      <Type1>Normal</Type1>
+      <Type2>Flying</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>106</Attack>
+      <Defense>61</Defense>
+      <Stamina>80</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>277</Number>
+      <Species>Swellow</Species>
+      <Type1>Normal</Type1>
+      <Type2>Flying</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>185</Attack>
+      <Defense>130</Defense>
+      <Stamina>120</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>278</Number>
+      <Species>Wingull</Species>
+      <Type1>Water</Type1>
+      <Type2>Flying</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>106</Attack>
+      <Defense>61</Defense>
+      <Stamina>80</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>279</Number>
+      <Species>Pelipper</Species>
+      <Type1>Water</Type1>
+      <Type2>Flying</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>175</Attack>
+      <Defense>189</Defense>
+      <Stamina>120</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>280</Number>
+      <Species>Ralts</Species>
+      <Type1>Psychic</Type1>
+      <Type2>Fairy</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>79</Attack>
+      <Defense>63</Defense>
+      <Stamina>56</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>281</Number>
+      <Species>Kirlia</Species>
+      <Type1>Psychic</Type1>
+      <Type2>Fairy</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>117</Attack>
+      <Defense>100</Defense>
+      <Stamina>76</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>282</Number>
+      <Species>Gardevoir</Species>
+      <Type1>Psychic</Type1>
+      <Type2>Fairy</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>237</Attack>
+      <Defense>220</Defense>
+      <Stamina>136</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>283</Number>
+      <Species>Surskit</Species>
+      <Type1>Bug</Type1>
+      <Type2>Water</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>93</Attack>
+      <Defense>97</Defense>
+      <Stamina>80</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>284</Number>
+      <Species>Masquerain</Species>
+      <Type1>Bug</Type1>
+      <Type2>Flying</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>192</Attack>
+      <Defense>161</Defense>
+      <Stamina>140</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>285</Number>
+      <Species>Shroomish</Species>
+      <Type1>Grass</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>74</Attack>
+      <Defense>110</Defense>
+      <Stamina>120</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>286</Number>
+      <Species>Breloom</Species>
+      <Type1>Grass</Type1>
+      <Type2>Fighting</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>241</Attack>
+      <Defense>153</Defense>
+      <Stamina>120</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>287</Number>
+      <Species>Slakoth</Species>
+      <Type1>Normal</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>104</Attack>
+      <Defense>104</Defense>
+      <Stamina>120</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>288</Number>
+      <Species>Vigoroth</Species>
+      <Type1>Normal</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>159</Attack>
+      <Defense>159</Defense>
+      <Stamina>160</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>289</Number>
+      <Species>Slaking</Species>
+      <Type1>Normal</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>319</Attack>
+      <Defense>201</Defense>
+      <Stamina>300</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>290</Number>
+      <Species>Nincada</Species>
+      <Type1>Bug</Type1>
+      <Type2>Ground</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>80</Attack>
+      <Defense>153</Defense>
+      <Stamina>62</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>291</Number>
+      <Species>Ninjask</Species>
+      <Type1>Bug</Type1>
+      <Type2>Flying</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>196</Attack>
+      <Defense>114</Defense>
+      <Stamina>122</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>292</Number>
+      <Species>Shedinja</Species>
+      <Type1>Bug</Type1>
+      <Type2>Ghost</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>153</Attack>
+      <Defense>80</Defense>
+      <Stamina>2</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>293</Number>
+      <Species>Whismur</Species>
+      <Type1>Normal</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>92</Attack>
+      <Defense>42</Defense>
+      <Stamina>128</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>294</Number>
+      <Species>Loudred</Species>
+      <Type1>Normal</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>134</Attack>
+      <Defense>81</Defense>
+      <Stamina>168</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>295</Number>
+      <Species>Exploud</Species>
+      <Type1>Normal</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>179</Attack>
+      <Defense>142</Defense>
+      <Stamina>208</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>296</Number>
+      <Species>Makuhita</Species>
+      <Type1>Fighting</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>99</Attack>
+      <Defense>54</Defense>
+      <Stamina>144</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>297</Number>
+      <Species>Hariyama</Species>
+      <Type1>Fighting</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>209</Attack>
+      <Defense>114</Defense>
+      <Stamina>288</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>298</Number>
+      <Species>Azurill</Species>
+      <Type1>Normal</Type1>
+      <Type2>Fairy</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>36</Attack>
+      <Defense>71</Defense>
+      <Stamina>100</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>299</Number>
+      <Species>Nosepass</Species>
+      <Type1>Rock</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>82</Attack>
+      <Defense>236</Defense>
+      <Stamina>60</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>300</Number>
+      <Species>Skitty</Species>
+      <Type1>Normal</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>84</Attack>
+      <Defense>84</Defense>
+      <Stamina>100</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>301</Number>
+      <Species>Delcatty</Species>
+      <Type1>Normal</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>132</Attack>
+      <Defense>132</Defense>
+      <Stamina>140</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>302</Number>
+      <Species>Sableye</Species>
+      <Type1>Dark</Type1>
+      <Type2>Ghost</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>141</Attack>
+      <Defense>141</Defense>
+      <Stamina>100</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>303</Number>
+      <Species>Mawile</Species>
+      <Type1>Steel</Type1>
+      <Type2>Fairy</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>155</Attack>
+      <Defense>155</Defense>
+      <Stamina>100</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>304</Number>
+      <Species>Aron</Species>
+      <Type1>Steel</Type1>
+      <Type2>Rock</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>121</Attack>
+      <Defense>168</Defense>
+      <Stamina>100</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>305</Number>
+      <Species>Lairon</Species>
+      <Type1>Steel</Type1>
+      <Type2>Rock</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>158</Attack>
+      <Defense>240</Defense>
+      <Stamina>120</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>306</Number>
+      <Species>Aggron</Species>
+      <Type1>Steel</Type1>
+      <Type2>Rock</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>198</Attack>
+      <Defense>314</Defense>
+      <Stamina>140</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>307</Number>
+      <Species>Meditite</Species>
+      <Type1>Fighting</Type1>
+      <Type2>Psychic</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>78</Attack>
+      <Defense>107</Defense>
+      <Stamina>60</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>308</Number>
+      <Species>Medicham</Species>
+      <Type1>Fighting</Type1>
+      <Type2>Psychic</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>121</Attack>
+      <Defense>152</Defense>
+      <Stamina>120</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>309</Number>
+      <Species>Electrike</Species>
+      <Type1>Electric</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>123</Attack>
+      <Defense>78</Defense>
+      <Stamina>80</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>310</Number>
+      <Species>Manectric</Species>
+      <Type1>Electric</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>215</Attack>
+      <Defense>127</Defense>
+      <Stamina>140</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>311</Number>
+      <Species>Plusle</Species>
+      <Type1>Electric</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>167</Attack>
+      <Defense>147</Defense>
+      <Stamina>120</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>312</Number>
+      <Species>Minun</Species>
+      <Type1>Electric</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>147</Attack>
+      <Defense>167</Defense>
+      <Stamina>120</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>313</Number>
+      <Species>Volbeat</Species>
+      <Type1>Bug</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>143</Attack>
+      <Defense>171</Defense>
+      <Stamina>130</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>314</Number>
+      <Species>Illumise</Species>
+      <Type1>Bug</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>143</Attack>
+      <Defense>171</Defense>
+      <Stamina>130</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>315</Number>
+      <Species>Roselia</Species>
+      <Type1>Grass</Type1>
+      <Type2>Poison</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>186</Attack>
+      <Defense>148</Defense>
+      <Stamina>100</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>316</Number>
+      <Species>Gulpin</Species>
+      <Type1>Poison</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>80</Attack>
+      <Defense>99</Defense>
+      <Stamina>140</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>317</Number>
+      <Species>Swalot</Species>
+      <Type1>Poison</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>140</Attack>
+      <Defense>159</Defense>
+      <Stamina>200</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>318</Number>
+      <Species>Carvanha</Species>
+      <Type1>Water</Type1>
+      <Type2>Dark</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>171</Attack>
+      <Defense>39</Defense>
+      <Stamina>90</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>319</Number>
+      <Species>Sharpedo</Species>
+      <Type1>Water</Type1>
+      <Type2>Dark</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>243</Attack>
+      <Defense>83</Defense>
+      <Stamina>140</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>320</Number>
+      <Species>Wailmer</Species>
+      <Type1>Water</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>136</Attack>
+      <Defense>68</Defense>
+      <Stamina>260</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>321</Number>
+      <Species>Wailord</Species>
+      <Type1>Water</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>175</Attack>
+      <Defense>87</Defense>
+      <Stamina>340</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>322</Number>
+      <Species>Numel</Species>
+      <Type1>Fire</Type1>
+      <Type2>Ground</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>119</Attack>
+      <Defense>82</Defense>
+      <Stamina>120</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>323</Number>
+      <Species>Camerupt</Species>
+      <Type1>Fire</Type1>
+      <Type2>Ground</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>194</Attack>
+      <Defense>139</Defense>
+      <Stamina>140</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>324</Number>
+      <Species>Torkoal</Species>
+      <Type1>Fire</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>151</Attack>
+      <Defense>234</Defense>
+      <Stamina>140</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>325</Number>
+      <Species>Spoink</Species>
+      <Type1>Psychic</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>125</Attack>
+      <Defense>145</Defense>
+      <Stamina>120</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>326</Number>
+      <Species>Grumpig</Species>
+      <Type1>Psychic</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>171</Attack>
+      <Defense>211</Defense>
+      <Stamina>160</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>327</Number>
+      <Species>Spinda</Species>
+      <Type1>Normal</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>116</Attack>
+      <Defense>116</Defense>
+      <Stamina>120</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>328</Number>
+      <Species>Trapinch</Species>
+      <Type1>Ground</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>162</Attack>
+      <Defense>78</Defense>
+      <Stamina>90</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>329</Number>
+      <Species>Vibrava</Species>
+      <Type1>Ground</Type1>
+      <Type2>Dragon</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>134</Attack>
+      <Defense>99</Defense>
+      <Stamina>100</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>330</Number>
+      <Species>Flygon</Species>
+      <Type1>Ground</Type1>
+      <Type2>Dragon</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>205</Attack>
+      <Defense>168</Defense>
+      <Stamina>160</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>331</Number>
+      <Species>Cacnea</Species>
+      <Type1>Grass</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>156</Attack>
+      <Defense>74</Defense>
+      <Stamina>100</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>332</Number>
+      <Species>Cacturne</Species>
+      <Type1>Grass</Type1>
+      <Type2>Dark</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>221</Attack>
+      <Defense>115</Defense>
+      <Stamina>140</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>333</Number>
+      <Species>Swablu</Species>
+      <Type1>Normal</Type1>
+      <Type2>Flying</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>76</Attack>
+      <Defense>139</Defense>
+      <Stamina>90</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>334</Number>
+      <Species>Altaria</Species>
+      <Type1>Dragon</Type1>
+      <Type2>Flying</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>141</Attack>
+      <Defense>208</Defense>
+      <Stamina>150</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>335</Number>
+      <Species>Zangoose</Species>
+      <Type1>Normal</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>222</Attack>
+      <Defense>124</Defense>
+      <Stamina>146</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>336</Number>
+      <Species>Seviper</Species>
+      <Type1>Poison</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>196</Attack>
+      <Defense>118</Defense>
+      <Stamina>146</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>337</Number>
+      <Species>Lunatone</Species>
+      <Type1>Rock</Type1>
+      <Type2>Psychic</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>178</Attack>
+      <Defense>163</Defense>
+      <Stamina>180</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>338</Number>
+      <Species>Solrock</Species>
+      <Type1>Rock</Type1>
+      <Type2>Psychic</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>178</Attack>
+      <Defense>163</Defense>
+      <Stamina>180</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>339</Number>
+      <Species>Barboach</Species>
+      <Type1>Water</Type1>
+      <Type2>Ground</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>93</Attack>
+      <Defense>83</Defense>
+      <Stamina>100</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>340</Number>
+      <Species>Whiscash</Species>
+      <Type1>Water</Type1>
+      <Type2>Ground</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>151</Attack>
+      <Defense>142</Defense>
+      <Stamina>220</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>341</Number>
+      <Species>Corphish</Species>
+      <Type1>Water</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>141</Attack>
+      <Defense>113</Defense>
+      <Stamina>86</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>342</Number>
+      <Species>Crawdaunt</Species>
+      <Type1>Water</Type1>
+      <Type2>Dark</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>224</Attack>
+      <Defense>156</Defense>
+      <Stamina>126</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>343</Number>
+      <Species>Baltoy</Species>
+      <Type1>Ground</Type1>
+      <Type2>Psychic</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>77</Attack>
+      <Defense>131</Defense>
+      <Stamina>80</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>344</Number>
+      <Species>Claydol</Species>
+      <Type1>Ground</Type1>
+      <Type2>Psychic</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>140</Attack>
+      <Defense>236</Defense>
+      <Stamina>120</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>345</Number>
+      <Species>Lileep</Species>
+      <Type1>Rock</Type1>
+      <Type2>Grass</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>105</Attack>
+      <Defense>154</Defense>
+      <Stamina>132</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>346</Number>
+      <Species>Cradily</Species>
+      <Type1>Rock</Type1>
+      <Type2>Grass</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>152</Attack>
+      <Defense>198</Defense>
+      <Stamina>172</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>347</Number>
+      <Species>Anorith</Species>
+      <Type1>Rock</Type1>
+      <Type2>Bug</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>176</Attack>
+      <Defense>100</Defense>
+      <Stamina>90</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>348</Number>
+      <Species>Armaldo</Species>
+      <Type1>Rock</Type1>
+      <Type2>Bug</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>222</Attack>
+      <Defense>183</Defense>
+      <Stamina>150</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>349</Number>
+      <Species>Feebas</Species>
+      <Type1>Water</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>29</Attack>
+      <Defense>102</Defense>
+      <Stamina>40</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>350</Number>
+      <Species>Milotic</Species>
+      <Type1>Water</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>192</Attack>
+      <Defense>242</Defense>
+      <Stamina>190</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>351</Number>
+      <Species>Castform</Species>
+      <Type1>Normal</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>139</Attack>
+      <Defense>139</Defense>
+      <Stamina>140</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>352</Number>
+      <Species>Kecleon</Species>
+      <Type1>Normal</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>161</Attack>
+      <Defense>212</Defense>
+      <Stamina>120</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>353</Number>
+      <Species>Shuppet</Species>
+      <Type1>Ghost</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>138</Attack>
+      <Defense>66</Defense>
+      <Stamina>88</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>354</Number>
+      <Species>Banette</Species>
+      <Type1>Ghost</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>218</Attack>
+      <Defense>127</Defense>
+      <Stamina>128</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>355</Number>
+      <Species>Duskull</Species>
+      <Type1>Ghost</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>70</Attack>
+      <Defense>162</Defense>
+      <Stamina>40</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>356</Number>
+      <Species>Dusclops</Species>
+      <Type1>Ghost</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>124</Attack>
+      <Defense>234</Defense>
+      <Stamina>80</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>357</Number>
+      <Species>Tropius</Species>
+      <Type1>Grass</Type1>
+      <Type2>Flying</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>136</Attack>
+      <Defense>165</Defense>
+      <Stamina>198</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>358</Number>
+      <Species>Chimecho</Species>
+      <Type1>Psychic</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>175</Attack>
+      <Defense>174</Defense>
+      <Stamina>150</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>359</Number>
+      <Species>Absol</Species>
+      <Type1>Dark</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>246</Attack>
+      <Defense>120</Defense>
+      <Stamina>130</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>360</Number>
+      <Species>Wynaut</Species>
+      <Type1>Psychic</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>41</Attack>
+      <Defense>86</Defense>
+      <Stamina>190</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>361</Number>
+      <Species>Snorunt</Species>
+      <Type1>Ice</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>95</Attack>
+      <Defense>95</Defense>
+      <Stamina>100</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>362</Number>
+      <Species>Glalie</Species>
+      <Type1>Ice</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>162</Attack>
+      <Defense>162</Defense>
+      <Stamina>160</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>363</Number>
+      <Species>Spheal</Species>
+      <Type1>Ice</Type1>
+      <Type2>Water</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>95</Attack>
+      <Defense>90</Defense>
+      <Stamina>140</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>364</Number>
+      <Species>Sealeo</Species>
+      <Type1>Ice</Type1>
+      <Type2>Water</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>137</Attack>
+      <Defense>132</Defense>
+      <Stamina>180</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>365</Number>
+      <Species>Walrein</Species>
+      <Type1>Ice</Type1>
+      <Type2>Water</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>182</Attack>
+      <Defense>176</Defense>
+      <Stamina>220</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>366</Number>
+      <Species>Clamperl</Species>
+      <Type1>Water</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>133</Attack>
+      <Defense>149</Defense>
+      <Stamina>70</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>367</Number>
+      <Species>Huntail</Species>
+      <Type1>Water</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>197</Attack>
+      <Defense>194</Defense>
+      <Stamina>110</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>368</Number>
+      <Species>Gorebyss</Species>
+      <Type1>Water</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>211</Attack>
+      <Defense>194</Defense>
+      <Stamina>110</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>369</Number>
+      <Species>Relicanth</Species>
+      <Type1>Water</Type1>
+      <Type2>Rock</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>162</Attack>
+      <Defense>234</Defense>
+      <Stamina>200</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>370</Number>
+      <Species>Luvdisc</Species>
+      <Type1>Water</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>81</Attack>
+      <Defense>134</Defense>
+      <Stamina>86</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>371</Number>
+      <Species>Bagon</Species>
+      <Type1>Dragon</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>134</Attack>
+      <Defense>107</Defense>
+      <Stamina>90</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>372</Number>
+      <Species>Shelgon</Species>
+      <Type1>Dragon</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>172</Attack>
+      <Defense>179</Defense>
+      <Stamina>130</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>373</Number>
+      <Species>Salamence</Species>
+      <Type1>Dragon</Type1>
+      <Type2>Flying</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>277</Attack>
+      <Defense>168</Defense>
+      <Stamina>190</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>374</Number>
+      <Species>Beldum</Species>
+      <Type1>Steel</Type1>
+      <Type2>Psychic</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>96</Attack>
+      <Defense>141</Defense>
+      <Stamina>80</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>375</Number>
+      <Species>Metang</Species>
+      <Type1>Steel</Type1>
+      <Type2>Psychic</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>138</Attack>
+      <Defense>185</Defense>
+      <Stamina>120</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>376</Number>
+      <Species>Metagross</Species>
+      <Type1>Steel</Type1>
+      <Type2>Psychic</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>257</Attack>
+      <Defense>247</Defense>
+      <Stamina>160</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>377</Number>
+      <Species>Regirock</Species>
+      <Type1>Rock</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>179</Attack>
+      <Defense>356</Defense>
+      <Stamina>160</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>378</Number>
+      <Species>Regice</Species>
+      <Type1>Ice</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>179</Attack>
+      <Defense>356</Defense>
+      <Stamina>160</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>379</Number>
+      <Species>Registeel</Species>
+      <Type1>Steel</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>143</Attack>
+      <Defense>285</Defense>
+      <Stamina>160</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>380</Number>
+      <Species>Latias</Species>
+      <Type1>Dragon</Type1>
+      <Type2>Psychic</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>228</Attack>
+      <Defense>268</Defense>
+      <Stamina>160</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>381</Number>
+      <Species>Latios</Species>
+      <Type1>Dragon</Type1>
+      <Type2>Psychic</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>268</Attack>
+      <Defense>228</Defense>
+      <Stamina>160</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>382</Number>
+      <Species>Kyogre</Species>
+      <Type1>Water</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>297</Attack>
+      <Defense>276</Defense>
+      <Stamina>200</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>383</Number>
+      <Species>Groudon</Species>
+      <Type1>Ground</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>297</Attack>
+      <Defense>276</Defense>
+      <Stamina>200</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>384</Number>
+      <Species>Rayquaza</Species>
+      <Type1>Dragon</Type1>
+      <Type2>Flying</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>312</Attack>
+      <Defense>187</Defense>
+      <Stamina>210</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>385</Number>
+      <Species>Jirachi</Species>
+      <Type1>Steel</Type1>
+      <Type2>Psychic</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>210</Attack>
+      <Defense>210</Defense>
+      <Stamina>200</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>386</Number>
+      <Species>Deoxys</Species>
+      <Type1>Psychic</Type1>
+      <Type2>None</Type2>
+      <FastMoves />
+      <ChargeMoves />
+      <Attack>345</Attack>
+      <Defense>115</Defense>
+      <Stamina>100</Stamina>
+    </PokedexEntry>
+  </PokedexEntries>
+</Data>
