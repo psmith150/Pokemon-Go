@@ -17,7 +17,7 @@
             <ColumnDefinition Width="5*"/>
             <ColumnDefinition Width="5*"/>
         </Grid.ColumnDefinitions>
-        <TextBlock Grid.Row="0" Grid.ColumnSpan="2" Text="Movesets for" HorizontalAlignment="Center" FontSize="{StaticResource LargeFontSize}"/>
+        <TextBlock Grid.Row="0" Grid.ColumnSpan="2" Text="{Binding Species.Species, StringFormat=Movesets for {0}}" HorizontalAlignment="Center" FontSize="{StaticResource LargeFontSize}"/>
         <StackPanel Grid.Column="0" Grid.Row="1" Orientation="Horizontal" Width="Auto">
             <Button Name="AddGroupButton" Style="{StaticResource AddGroupButton}" Command="{Binding AddFastMoveCommand}"/>
             <Button Name="RemoveGroupButton" Style="{StaticResource RemoveGroupButton}" Command="{Binding RemoveFastMoveCommand}"/>
@@ -33,7 +33,7 @@
             <DataGrid.Resources>
             </DataGrid.Resources>
             <DataGrid.Columns>
-                <DataGridComboBoxColumn Header="Name" Width="*" SelectedItemBinding="{Binding Move}" DisplayMemberPath="Name">
+                <DataGridComboBoxColumn Header="Name" Width="*" SelectedItemBinding="{Binding FastMove}" DisplayMemberPath="Name">
                     <!--<DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
                             <TextBlock Text="{Binding FastMove.Name}"/>
@@ -56,12 +56,13 @@
                         </Style>
                     </DataGridComboBoxColumn.EditingElementStyle>
                 </DataGridComboBoxColumn>
+                <DataGridCheckBoxColumn Header="Is Legacy?" Width="Auto" Binding="{Binding IsLegacy}"/>
             </DataGrid.Columns>
         </DataGrid>
         <DataGrid Name="ChargeMovesList" Grid.Row="2" Grid.Column="1" AutoGenerateColumns="False" ItemsSource="{Binding ChargeMoves}"
                   CellStyle="{StaticResource SelectedCellStyle}" CanUserAddRows="False" CanUserSortColumns="False">
             <DataGrid.Columns>
-                <DataGridComboBoxColumn Header="Name" Width="*" SelectedItemBinding="{Binding Move}" DisplayMemberPath="Name">
+                <DataGridComboBoxColumn Header="Name" Width="*" SelectedItemBinding="{Binding ChargeMove}" DisplayMemberPath="Name">
                     <DataGridComboBoxColumn.ElementStyle>
                         <Style TargetType="{x:Type ComboBox}">
                             <Setter Property="ItemsSource" Value="{Binding Path=DataContext.AllChargeMoves, RelativeSource={RelativeSource AncestorType={x:Type UserControl}}}" />
@@ -74,6 +75,7 @@
                         </Style>
                     </DataGridComboBoxColumn.EditingElementStyle>
                 </DataGridComboBoxColumn>
+                <DataGridCheckBoxColumn Header="Is Legacy?" Width="Auto" Binding="{Binding IsLegacy}"/>
             </DataGrid.Columns>
         </DataGrid>
         <StackPanel Grid.Row="3" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Center">

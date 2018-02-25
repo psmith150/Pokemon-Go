@@ -1,6 +1,8 @@
-﻿namespace Pokemon_Go_Database.Model
+﻿using System.ComponentModel;
+
+namespace Pokemon_Go_Database.Model
 {
-    public enum Type { None, Normal, Fighting, Flying, Poison, Ground, Rock, Bug, Ghost, Steel, Fire, Water, Grass, Electric, Psychic, Ice, Dragon, Dark, Fairy };
+    public enum Type {[Description("None")] None, [Description("Normal")] Normal, [Description("Fighting")] Fighting, [Description("Flying")] Flying, [Description("Poison")] Poison, [Description("Ground")] Ground, [Description("Rock")] Rock, [Description("Bug")] Bug, [Description("Ghost")] Ghost, [Description("Steel")] Steel, [Description("Fire")] Fire, [Description("Water")] Water, [Description("Grass")] Grass, [Description("Electric")] Electric, [Description("Psychic")] Psychic, [Description("Ice")] Ice, [Description("Dragon")] Dragon, [Description("Dark")] Dark, [Description("Fairy")] Fairy };
     public enum MoveType { Fast, Charge };
     public enum CombatType { Offense, Defense };
     public enum IVLevel { Low, Medium, High, Max };

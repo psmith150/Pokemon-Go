@@ -4,13 +4,24 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Pokemon_Go_Database.Screens"
+             xmlns:converters="clr-namespace:Pokemon_Go_Database.ValueConverters"
+             xmlns:scm="clr-namespace:System.ComponentModel;assembly=WindowsBase"
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300"
              d:DataContext="{d:DesignInstance Type=local:FastMoveViewModel}">
+    <UserControl.Resources>
+        <CollectionViewSource x:Key="MoveView" Source="{Binding FastMoves}">
+            <CollectionViewSource.SortDescriptions>
+                <scm:SortDescription PropertyName="Name" Direction="Ascending"/>
+            </CollectionViewSource.SortDescriptions>
+        </CollectionViewSource>
+        <CollectionViewSource x:Key="TypeView" Source="{Binding Types}"/>
+    </UserControl.Resources>
     <Grid Background="{StaticResource MainBackgroundColor}">
-        <DataGrid ItemsSource="{Binding FastMoves}" HorizontalAlignment="Stretch" AutoGenerateColumns="False">
+        <DataGrid ItemsSource="{Binding Source={StaticResource MoveView}}" HorizontalAlignment="Stretch" AutoGenerateColumns="False">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Name" Binding="{Binding Path=Name}" Width="Auto"/>
+                <DataGridComboBoxColumn Header="Type" SelectedItemBinding="{Binding Type}" Width="Auto" ItemsSource="{Binding Source={StaticResource TypeView}}"/>
                 <DataGridTextColumn Header="Power" Binding="{Binding Path=Power}" Width="Auto"/>
                 <DataGridTextColumn Header="Duration" Binding="{Binding Path=Time}" Width="Auto"/>
                 <DataGridTextColumn Header="Energy Gain" Binding="{Binding Path=Energy}" Width="Auto"/>

@@ -55,6 +55,7 @@
                             </Style>
                         </MenuItem.ItemContainerStyle>
                     </MenuItem>
+                    <MenuItem Header="Import from Excel" Command="{Binding ImportExcelDataCommand}"/>
                 </MenuItem>
                 <MenuItem Header="Settings" Command="{Binding OpenSettingsCommand}"/>
         </Menu>

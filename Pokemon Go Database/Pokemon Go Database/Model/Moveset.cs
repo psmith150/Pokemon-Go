@@ -6,7 +6,7 @@ namespace Pokemon_Go_Database.Model
     [Serializable]
     public class Moveset : ObservableObject
     {
-        public Moveset(FastMove fastMove, ChargeMove chargeMove)
+        public Moveset(PokedexFastMoveWrapper fastMove, PokedexChargeMoveWrapper chargeMove)
         {
             FastMove = fastMove;
             ChargeMove = chargeMove;
@@ -14,8 +14,8 @@ namespace Pokemon_Go_Database.Model
             ChargeMove.PropertyChanged += ChargeMoveChanged;
         }
         #region Public Properties
-        private FastMove _fastMove;
-        public FastMove FastMove
+        private PokedexFastMoveWrapper _fastMove;
+        public PokedexFastMoveWrapper FastMove
         {
             get
             {
@@ -27,8 +27,8 @@ namespace Pokemon_Go_Database.Model
             }
         }
 
-        private ChargeMove _chargeMove;
-        public ChargeMove ChargeMove
+        private PokedexChargeMoveWrapper _chargeMove;
+        public PokedexChargeMoveWrapper ChargeMove
         {
             get
             {
@@ -45,11 +45,7 @@ namespace Pokemon_Go_Database.Model
         {
             get
             {
-                return this._isLegacy;
-            }
-            set
-            {
-                this.Set(ref this._isLegacy, value);
+                return this.ChargeMove.IsLegacy || this.FastMove.IsLegacy;
             }
         }
 
@@ -57,7 +53,7 @@ namespace Pokemon_Go_Database.Model
         {
             get
             {
-                return $"{this.FastMove.Name}/{this.ChargeMove.Name}" + (this.IsLegacy ? "*" : "");
+                return $"{this.FastMove.FastMove.Name}/{this.ChargeMove.ChargeMove.Name}" + (this.IsLegacy ? "*" : "");
             }
         }
         #endregion

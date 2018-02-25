@@ -8,6 +8,7 @@ using System.IO;
 using System.Xml.Serialization;
 using Pokemon_Go_Database.Model;
 using System.Diagnostics;
+using SpreadsheetLight;
 
 namespace Pokemon_Go_Database.Services
 {
@@ -148,37 +149,40 @@ namespace Pokemon_Go_Database.Services
             foreach (PokedexEntry species in data.PokedexEntries)
             {
                 //Debug.WriteLine($"{species.Species} has {species.FastMoves.Found fast move {move.Name} for {species.Species}");
-                for (int i = 0; i< species.FastMoves.Count; i++)
+                for (int i = 0; i < species.FastMoves.Count; i++)
                 {
                     //Debug.WriteLine($"Found fast move {move.Name} for {species.Species}");
-                    FastMove move = species.FastMoves[i];
-                    string moveName = move.Name;
+                    PokedexFastMoveWrapper move = species.FastMoves[i];
+                    string moveName = move.FastMove.Name;
                     try
                     {
-                        move = (this.FastMoveList.Single(x => x.Name.Equals(moveName)));
+                        move.FastMove = (this.FastMoveList.Single(x => x.Name.Equals(moveName)));
+                        species.FastMoves[i] = move;
                     }
                     catch (ArgumentException ex)
                     {
-                        throw new ArgumentException("Cannot find matching fast move " + move.Name + " in fast move list.", ex);
+                        throw new ArgumentException("Cannot find matching fast move " + move.FastMove.Name + " in fast move list.", ex);
                     }
                 }
                 for (int i = 0; i < species.ChargeMoves.Count; i++)
                 {
                     //Debug.WriteLine($"Found fast move {move.Name} for {species.Species}");
-                    ChargeMove move = species.ChargeMoves[i];
-                    string moveName = move.Name;
+                    PokedexChargeMoveWrapper move = species.ChargeMoves[i];
+                    string moveName = move.ChargeMove.Name;
                     try
                     {
-                        move = (this.ChargeMoveList.Single(x => x.Name.Equals(moveName)));
+                        move.ChargeMove = (this.ChargeMoveList.Single(x => x.Name.Equals(moveName)));
+                        species.ChargeMoves[i] = move;
                     }
                     catch (ArgumentException ex)
                     {
-                        throw new ArgumentException("Cannot find matching charge move " + move.Name + " in charge move list.", ex);
+                        throw new ArgumentException("Cannot find matching charge move " + move.ChargeMove.Name + " in charge move list.", ex);
                     }
                 }
                 tempPokedex.Add(species);
+                this.Pokedex.Add(species);
             }
-            this.Pokedex.InsertRange(tempPokedex);
+            //this.Pokedex.InsertRange(tempPokedex);
 
             //Debug.WriteLine($"Loaded {data.FastMoves.Count} fast moves, {data.ChargeMoves.Count} charge moves, and {Pokedex.Count} pokemon");
             //this.FastMoveList.Add(new Move())
@@ -206,6 +210,57 @@ namespace Pokemon_Go_Database.Services
         }
         #endregion
 
+        #region Excel Handling
+        public async Task ReadExcelData(string filePath)
+        {
+            SLDocument document = new SLDocument(filePath);
+            await ReadMovesetData(document);
+        }
+
+        #endregion
+        #endregion
+
+        #region Private Methods
+        private async Task ReadMovesetData(SLDocument document)
+        {
+            document.SelectWorksheet("Movesets");
+            string test = document.GetCellValueAsString(1,1);
+            int row = 2, col = 2;
+            while (!string.IsNullOrWhiteSpace(document.GetCellValueAsString(row, col)))
+            {
+                col = 2;
+                string name = document.GetCellValueAsString(row, col);
+                PokedexEntry species = this.Pokedex.Single(x => x.Species.Equals(name));
+                if (species == null)
+                {
+                    Debug.WriteLine($"Could not find species {name}");
+                    row++;
+                    continue;
+                }
+                species.FastMoves.Clear();
+                species.ChargeMoves.Clear();
+                for (int i = 0; i < 2; i++)
+                {
+                    string moveName = document.GetCellValueAsString(row, 3 + i);
+                    if (!string.IsNullOrWhiteSpace(moveName))
+                    {
+                        FastMove fastMove = await Task.Run(() => this.FastMoveList.Single(x => x.Name.Equals(moveName)));
+                        if (fastMove != null)
+                            species.FastMoves.Add(new PokedexFastMoveWrapper(fastMove));
+                    }
+                }
+                int index = 0;
+                while (!string.IsNullOrWhiteSpace(document.GetCellValueAsString(row, 5 + index)))
+                {
+                    string moveName = document.GetCellValueAsString(row, 5 + index);
+                    ChargeMove chargeMove = await Task.Run(() => this.ChargeMoveList.Single(x => x.Name.Equals(moveName)));
+                    if (chargeMove != null)
+                        species.ChargeMoves.Add(new PokedexChargeMoveWrapper(chargeMove));
+                    index++;
+                }
+                row++;
+            }
+        }
         #endregion
     }
 }

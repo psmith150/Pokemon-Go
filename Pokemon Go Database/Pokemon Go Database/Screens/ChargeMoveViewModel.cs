@@ -43,6 +43,13 @@ namespace Pokemon_Go_Database.Screens
                 this.Set(ref this._chargeMoves, value);
             }
         }
+        public Array Types
+        {
+            get
+            {
+                return Enum.GetValues(typeof(Model.Type));
+            }
+        }
         #endregion
     }
 }

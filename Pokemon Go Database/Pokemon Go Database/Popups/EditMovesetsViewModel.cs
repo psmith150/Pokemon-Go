@@ -28,11 +28,11 @@ namespace Pokemon_Go_Database.Popups
             this.AllChargeMoves = this.Session.ChargeMoveList;
             this.AllFastMoves = this.Session.FastMoveList;
             this.Movesets = new ObservableCollection<Moveset>();
-            this.FastMoves = new ObservableCollection<MoveWrapper>();
-            this.ChargeMoves = new ObservableCollection<MoveWrapper>();
+            this.FastMoves = new ObservableCollection<PokedexFastMoveWrapper>();
+            this.ChargeMoves = new ObservableCollection<PokedexChargeMoveWrapper>();
 
-            this.AddFastMoveCommand = new RelayCommand(() => this.FastMoves.Add(new MoveWrapper(this.AllFastMoves[0])));
-            this.AddChargeMoveCommand = new RelayCommand(() => this.ChargeMoves.Add(new MoveWrapper(this.AllChargeMoves[0])));
+            this.AddFastMoveCommand = new RelayCommand(() => this.FastMoves.Add(new PokedexFastMoveWrapper(this.AllFastMoves[0])));
+            this.AddChargeMoveCommand = new RelayCommand(() => this.ChargeMoves.Add(new PokedexChargeMoveWrapper(this.AllChargeMoves[0])));
 
             this.ExitPopupCommand = new RelayCommand(() => Exit());
             this.SaveCommand = new RelayCommand(() => Save());
@@ -44,19 +44,19 @@ namespace Pokemon_Go_Database.Popups
             this.Movesets.Clear();
             this.FastMoves.Clear();
             this.ChargeMoves.Clear();
-            this.species = param as PokedexEntry;
+            this.Species = param as PokedexEntry;
 
-            if (species != null)
+            if (this.Species != null)
             {
-                foreach (FastMove move in species.FastMoves)
-                    this.FastMoves.Add(new MoveWrapper(move));
-                foreach (ChargeMove move in species.ChargeMoves)
-                    this.ChargeMoves.Add(new MoveWrapper(move));
-                foreach (MoveWrapper fastMove in this.FastMoves)
+                foreach (PokedexFastMoveWrapper move in this.Species.FastMoves)
+                    this.FastMoves.Add(move);
+                foreach (PokedexChargeMoveWrapper move in this.Species.ChargeMoves)
+                    this.ChargeMoves.Add(move);
+                foreach (PokedexFastMoveWrapper fastMove in this.FastMoves)
                 {
-                    foreach (MoveWrapper chargeMove in this.ChargeMoves)
+                    foreach (PokedexChargeMoveWrapper chargeMove in this.ChargeMoves)
                     {
-                        this.Movesets.Add(new Moveset(fastMove.Move as FastMove, chargeMove.Move as ChargeMove));
+                        this.Movesets.Add(new Moveset(fastMove as PokedexFastMoveWrapper, chargeMove as PokedexChargeMoveWrapper));
                     }
                 }
             }
@@ -73,12 +73,23 @@ namespace Pokemon_Go_Database.Popups
 
         #region Private Fields
         private bool savingNeeded = false;
-        private PokedexEntry species;
+        private PokedexEntry _species;
         #endregion
 
         #region Public Properties
-        private ObservableCollection<MoveWrapper> _fastMoves;
-        public ObservableCollection<MoveWrapper> FastMoves
+        public PokedexEntry Species
+        {
+            get
+            {
+                return _species;
+            }
+            private set
+            {
+                Set(ref this._species, value);
+            }
+        }
+        private ObservableCollection<PokedexFastMoveWrapper> _fastMoves;
+        public ObservableCollection<PokedexFastMoveWrapper> FastMoves
         {
             get
             {
@@ -90,8 +101,8 @@ namespace Pokemon_Go_Database.Popups
             }
         }
 
-        private ObservableCollection<MoveWrapper> _chargeMoves;
-        public ObservableCollection<MoveWrapper> ChargeMoves
+        private ObservableCollection<PokedexChargeMoveWrapper> _chargeMoves;
+        public ObservableCollection<PokedexChargeMoveWrapper> ChargeMoves
         {
             get
             {
@@ -154,20 +165,18 @@ namespace Pokemon_Go_Database.Popups
             }
             else
             {
-                foreach (MoveWrapper move in this.FastMoves)
-                    Debug.WriteLine($"Fast move in collection: {move.Move.Name}");
                 this.ClosePopup(null);
             }
         }
 
         private void Save()
         {
-            this.species.FastMoves.Clear();
-            this.species.ChargeMoves.Clear();
-            foreach (MoveWrapper move in this.FastMoves)
-                this.species.FastMoves.Add(move.Move as FastMove);
-            foreach (MoveWrapper move in this.ChargeMoves)
-                this.species.ChargeMoves.Add(move.Move as ChargeMove);
+            this._species.FastMoves.Clear();
+            this._species.ChargeMoves.Clear();
+            foreach (PokedexFastMoveWrapper move in this.FastMoves)
+                this._species.FastMoves.Add(move);
+            foreach (PokedexChargeMoveWrapper move in this.ChargeMoves)
+                this._species.ChargeMoves.Add(move);
             this.ClosePopup(null);
         }
         #endregion

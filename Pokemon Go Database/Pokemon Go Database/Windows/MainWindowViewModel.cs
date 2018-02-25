@@ -26,6 +26,7 @@ namespace Pokemon_Go_Database.Windows
         public ICommand NewFileCommand { get; private set; }
         public ICommand OpenSettingsCommand { get; private set; }
         public ICommand OpenRecentFileCommand { get; private set; }
+        public ICommand ImportExcelDataCommand { get; private set; }
         #endregion
 
         #region Constructor
@@ -39,6 +40,7 @@ namespace Pokemon_Go_Database.Windows
             this.NewFileCommand = new RelayCommand(() => this.NewData());
             this.OpenSettingsCommand = new RelayCommand(() => this.OpenSettings());
             this.OpenRecentFileCommand = new RelayCommand<string>((s) => this.OpenRecentFile(s));
+            this.ImportExcelDataCommand = new RelayCommand(() => this.ImportExcelData());
 
             //Load list of recent files
             this.LastFiles = new ObservableCollection<string>();
@@ -251,6 +253,28 @@ namespace Pokemon_Go_Database.Windows
             if (this.LastFiles.Count > 10)
             {
                 this.LastFiles.RemoveAt(10);
+            }
+        }
+        #endregion
+        #region Excel Parsing
+        private async void ImportExcelData()
+        {
+            try
+            {
+                var fileSearch = new OpenFileDialog();
+                fileSearch.InitialDirectory = Properties.Settings.Default.DefaultDirectory;
+                fileSearch.Filter = "Excel File (*.xls*) | *.xls*";
+                fileSearch.FilterIndex = 2;
+                fileSearch.RestoreDirectory = true;
+                fileSearch.ShowDialog();
+                if (fileSearch.FileName != null)
+                {
+                    await Session.ReadExcelData(fileSearch.FileName);
+                }
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine("Error importing Excel data: " + ex);
             }
         }
         #endregion

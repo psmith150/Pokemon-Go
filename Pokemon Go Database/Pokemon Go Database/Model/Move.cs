@@ -35,12 +35,11 @@ namespace Pokemon_Go_Database.Model
         {
             get
             {
-                return string.Copy(_name);
+                return _name;
             }
             set
             {
-                _name = value;
-                RaisePropertyChanged("Name");
+                Set(ref this._name, value);
             }
         }
 
@@ -127,11 +126,12 @@ namespace Pokemon_Go_Database.Model
 
     }
 
-    public class MoveWrapper :ObservableObject
+    public class MoveWrapper : ObservableObject
     {
         public MoveWrapper(Move move)
         {
             this.Move = move;
+            this.Move.PropertyChanged += ((o, e) => this.RaisePropertyChanged("Move"));
         }
 
         public MoveWrapper()
