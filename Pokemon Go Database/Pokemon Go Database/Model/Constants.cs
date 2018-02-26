@@ -21,6 +21,8 @@ namespace Pokemon_Go_Database.Model
 
         public const int MaxIV = 15;
 
+        public const double MaxLevel = 40.0;
+
         static Constants()
         {
             double[] values = new double[78];

@@ -1,6 +1,9 @@
 ﻿using GalaSoft.MvvmLight;
 using System;
+using System.Collections.Generic;
 using System.Xml.Serialization;
+using System.Linq;
+using System.Diagnostics;
 
 namespace Pokemon_Go_Database.Model
 {
@@ -16,7 +19,7 @@ namespace Pokemon_Go_Database.Model
         {
             this.Name = name;
             this.Species = species;
-            this.Level = 1;
+            this.LevelExpression = "1";
         }
 
         #region Public Properties
@@ -42,32 +45,7 @@ namespace Pokemon_Go_Database.Model
             set
             {
                 Set(ref _Species, value);
-            }
-        }
-
-        private float _ActualCP;
-        public float ActualCP
-        {
-            get
-            {
-                return _ActualCP;
-            }
-            set
-            {
-                Set(ref _ActualCP, value);
-            }
-        }
-
-        private float _ActualHP;
-        public float ActualHP
-        {
-            get
-            {
-                return _ActualHP;
-            }
-            set
-            {
-                Set(ref _ActualHP, value);
+                this.UpdateAllCalculatedProperties();
             }
         }
 
@@ -149,55 +127,86 @@ namespace Pokemon_Go_Database.Model
             }
         }
 
-        private int _AttackIV;
-        public int AttackIV
+        private string _AttackIVExpression;
+        public string AttackIVExpression
         {
             get
             {
-                return _AttackIV;
+                return _AttackIVExpression;
             }
             set
             {
-                Set(ref _AttackIV, value);
+                Set(ref _AttackIVExpression, value);
+                RaisePropertyChanged("Attack");
+                RaisePropertyChanged("ActualCP");
+                RaisePropertyChanged("MaxCP");
             }
         }
 
-        private int _DefenseIV;
-        public int DefenseIV
+        private string _DefenseIVExpression;
+        public string DefenseIVExpression
         {
             get
             {
-                return _DefenseIV;
+                return _DefenseIVExpression;
             }
             set
             {
-                Set(ref _DefenseIV, value);
+                Set(ref _DefenseIVExpression, value);
+                RaisePropertyChanged("Defense");
+                RaisePropertyChanged("ActualCP");
+                RaisePropertyChanged("MaxCP");
             }
         }
 
-        private int _StaminaIV;
-        public int StaminaIV
+        private string _StaminaIVExpression;
+        public string StaminaIVExpression
         {
             get
             {
-                return _StaminaIV;
+                return _StaminaIVExpression;
             }
             set
             {
-                Set(ref _StaminaIV, value);
+                Set(ref _StaminaIVExpression, value);
+                RaisePropertyChanged("Stamina");
+                RaisePropertyChanged("ActualHP");
+                RaisePropertyChanged("ActualCP");
+                RaisePropertyChanged("MaxCP");
             }
         }
 
-        private double _Level;
-        public double Level
+        private string _LevelExpression;
+        public string LevelExpression
         {
             get
             {
-                return _Level;
+                return _LevelExpression;
             }
             set
             {
-                Set(ref _Level, value);
+                Set(ref _LevelExpression, value);
+                this.UpdateAllCalculatedProperties();
+            }
+        }
+        #region Calculated Properties
+        private float _ActualCP;
+        [XmlIgnore]
+        public float ActualCP
+        {
+            get
+            {
+                return this.GetCP();
+            }
+        }
+
+        private float _ActualHP;
+        [XmlIgnore]
+        public float ActualHP
+        {
+            get
+            {
+                return this.GetStamina();
             }
         }
 
@@ -221,11 +230,7 @@ namespace Pokemon_Go_Database.Model
         {
             get
             {
-                return _Attack;
-            }
-            private set
-            {
-                Set(ref _Attack, value);
+                return this.GetAttack();
             }
         }
 
@@ -235,11 +240,7 @@ namespace Pokemon_Go_Database.Model
         {
             get
             {
-                return _Defense;
-            }
-            private set
-            {
-                Set(ref _Defense, value);
+                return this.GetDefense();
             }
         }
 
@@ -249,11 +250,7 @@ namespace Pokemon_Go_Database.Model
         {
             get
             {
-                return _Stamina;
-            }
-            private set
-            {
-                Set(ref _Stamina, value);
+                return this.GetStamina();
             }
         }
 
@@ -263,11 +260,7 @@ namespace Pokemon_Go_Database.Model
         {
             get
             {
-                return _MaxCP;
-            }
-            private set
-            {
-                Set(ref _MaxCP, value);
+                return this.GetCP(-1,-1,-1, Constants.MaxLevel);
             }
         }
 
@@ -287,6 +280,148 @@ namespace Pokemon_Go_Database.Model
         private float _defenseDPSPercentAtMax;
         private float _defenseTotalDamage;
         private float _defenseTotalDamageAtMax;
+        #endregion
+        #endregion
+
+        #region Public Methods
+        public int GetAttackIV()
+        {
+            List<int> values = new List<int>();
+            foreach (string value in this.AttackIVExpression.Split('/'))
+            {
+                try
+                {
+                    values.Add(Int32.Parse(value));
+                }
+                catch (Exception)
+                {
+                    Debug.WriteLine($"Error parsing attack IV expression {this.AttackIVExpression} for pokemon {this.Name}.");
+                }
+            }
+            if (values.Count <= 0)
+                return 0;
+            return (int) values.Average();
+        }
+        public int GetStaminaIV()
+        {
+            List<int> values = new List<int>();
+            foreach (string value in this.StaminaIVExpression.Split('/'))
+            {
+                try
+                {
+                    values.Add(Int32.Parse(value));
+                }
+                catch (Exception)
+                {
+                    Debug.WriteLine($"Error parsing stamina IV expression {this.StaminaIVExpression} for pokemon {this.Name}.");
+                }
+            }
+            if (values.Count <= 0)
+                return 0;
+            return (int)values.Average();
+        }
+        public int GetDefenseIV()
+        {
+            List<int> values = new List<int>();
+            foreach (string value in this.DefenseIVExpression.Split('/'))
+            {
+                try
+                {
+                    values.Add(Int32.Parse(value));
+                }
+                catch (Exception)
+                {
+                    Debug.WriteLine($"Error parsing defense IV expression {this.DefenseIVExpression} for pokemon {this.Name}.");
+                }
+            }
+            if (values.Count <= 0)
+                return 0;
+            return (int)values.Average();
+        }
+        public double GetLevel()
+        {
+            List<double> values = new List<double>();
+            foreach (string value in this.LevelExpression.Split('/'))
+            {
+                try
+                {
+                    values.Add(Double.Parse(value));
+                }
+                catch (Exception)
+                {
+                    Debug.WriteLine($"Error parsing level expression {this.LevelExpression} for pokemon {this.Name}.");
+                }
+            }
+            if (values.Count <= 0)
+                return 1.0;
+            return Math.Round((values.Average() * 2.0)) / 2.0; //Used to round to the nearest 1/2
+        }
+
+        public int GetAttack(int attackIV = -1, double level = -1.0)
+        {
+            if (attackIV == -1)
+            {
+                attackIV = this.GetAttackIV();
+            }
+            return (int)Math.Round((Species.Attack + attackIV) * GetCpmValue(level));
+        }
+
+        public int GetStamina(int staminaIV = -1, double level = -1.0)
+        {
+            if (staminaIV == -1)
+            {
+                staminaIV = this.GetStaminaIV();
+            }
+            return (int)Math.Round((Species.Stamina + staminaIV) * GetCpmValue(level));
+        }
+
+        public int GetDefense(int defenseIV = -1, double level = -1.0)
+        {
+            if (defenseIV == -1)
+            {
+                defenseIV = this.GetDefenseIV();
+            }
+            return (int)Math.Round((Species.Defense + defenseIV) * GetCpmValue(level));
+        }
+
+        public double GetCpmValue(double level = -1.0)
+        {
+            if (level <= 0.0)
+            {
+                level = this.GetLevel();
+            }
+            return Constants.CpmValues[(int)(this.GetLevel() * 2 - 2)];
+        }
+
+        public int GetCP(int attackIV = -1, int staminaIV = -1, int defenseIV = -1, double level = -1.0)
+        {
+            if (attackIV == -1)
+            {
+                attackIV = this.GetAttackIV();
+            }
+            if (defenseIV == -1)
+            {
+                defenseIV = this.GetDefenseIV();
+            }
+            if (staminaIV == -1)
+            {
+                staminaIV = this.GetStaminaIV();
+            }
+            if (level <= 0.0)
+            {
+                level = this.GetLevel();
+            }
+            return (int)(((double)this.GetAttack(attackIV, level) * Math.Pow((double)this.GetStamina(attackIV, level), 0.5) * Math.Pow((double)this.GetDefense(attackIV, level), 0.5) * Math.Pow(this.GetCpmValue(level), 2)) / 10.0);
+
+        }
+        #endregion
+
+        #region Private Methods
+        private void UpdateAllCalculatedProperties()
+        {
+            RaisePropertyChanged("Attack");
+            //TODO
+        }
         #endregion
     }
 }

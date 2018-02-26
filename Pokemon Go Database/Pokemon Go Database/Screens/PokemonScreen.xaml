@@ -63,9 +63,9 @@
                 </DataGridComboBoxColumn>
                 <DataGridTextColumn Header="Game CP" Binding="{Binding Path=GameCP}" Width="Auto"/>
                 <DataGridTextColumn Header="Game HP" Binding="{Binding Path=GameHP}" Width="Auto"/>
-                <DataGridTextColumn Header="Attack IV" Binding="{Binding Path=AttackIV}" Width="Auto"/>
-                <DataGridTextColumn Header="Defense IV" Binding="{Binding Path=DefenseIV}" Width="Auto"/>
-                <DataGridTextColumn Header="Stamina IV" Binding="{Binding Path=StaminaIV}" Width="Auto"/>
+                <DataGridTextColumn Header="Attack IV" Binding="{Binding Path=AttackIVExpression}" Width="Auto"/>
+                <DataGridTextColumn Header="Defense IV" Binding="{Binding Path=DefenseIVExpression}" Width="Auto"/>
+                <DataGridTextColumn Header="Stamina IV" Binding="{Binding Path=StaminaIVExpression}" Width="Auto"/>
                 <DataGridTextColumn Header="Level" Binding="{Binding Path=Level}" Width="Auto"/>
                 <DataGridTextColumn Header="Attack" Binding="{Binding Path=Attack}" Width="Auto" IsReadOnly="True"/>
                 <DataGridTextColumn Header="Defense" Binding="{Binding Path=Defense}" Width="Auto" IsReadOnly="True"/>
