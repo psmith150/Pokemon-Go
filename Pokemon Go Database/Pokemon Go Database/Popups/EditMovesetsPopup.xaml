@@ -4,8 +4,21 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Pokemon_Go_Database.Popups"
+             xmlns:scm="clr-namespace:System.ComponentModel;assembly=WindowsBase"
              mc:Ignorable="d" 
              d:DataContext="{d:DesignInstance Type=local:EditMovesetsViewModel}">
+    <UserControl.Resources>
+        <CollectionViewSource x:Key="AllFastMovesView" Source="{Binding AllFastMoves}">
+            <CollectionViewSource.SortDescriptions>
+                <scm:SortDescription PropertyName="Name" Direction="Ascending"/>
+            </CollectionViewSource.SortDescriptions>
+        </CollectionViewSource>
+        <CollectionViewSource x:Key="AllChargeMovesView" Source="{Binding AllChargeMoves}">
+            <CollectionViewSource.SortDescriptions>
+                <scm:SortDescription PropertyName="Name" Direction="Ascending"/>
+            </CollectionViewSource.SortDescriptions>
+        </CollectionViewSource>
+    </UserControl.Resources>
     <Grid Background="{StaticResource MainBackgroundColor}" Width="500" Height="300">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
@@ -29,21 +42,11 @@
         </StackPanel>
         <DataGrid Name="FastMovesList" Grid.Row="2" Grid.Column="0" ItemsSource="{Binding FastMoves}" 
                   AutoGenerateColumns="False" CellStyle="{StaticResource SelectedCellStyle}"
-                  CanUserAddRows="False" CanUserDeleteRows="False">
+                  CanUserAddRows="False" CanUserDeleteRows="False" SelectedItem="{Binding SelectedFastMove}">
             <DataGrid.Resources>
             </DataGrid.Resources>
             <DataGrid.Columns>
                 <DataGridComboBoxColumn Header="Name" Width="*" SelectedItemBinding="{Binding FastMove}" DisplayMemberPath="Name">
-                    <!--<DataGridTemplateColumn.CellTemplate>
-                        <DataTemplate>
-                            <TextBlock Text="{Binding FastMove.Name}"/>
-                        </DataTemplate>
-                    </DataGridTemplateColumn.CellTemplate>
-                    <DataGridTemplateColumn.CellEditingTemplate>
-                        <DataTemplate>
-                            <ComboBox ItemsSource="{Binding Path=DataContext.AllFastMoves, RelativeSource={RelativeSource AncestorType={x:Type UserControl}}}" DisplayMemberPath="Name" SelectedItem="{Binding FastMove}"/>
-                        </DataTemplate>
-                    </DataGridTemplateColumn.CellEditingTemplate>-->
                     <DataGridComboBoxColumn.ElementStyle>
                         <Style TargetType="{x:Type ComboBox}">
                             <Setter Property="ItemsSource" Value="{Binding Path=DataContext.AllFastMoves, RelativeSource={RelativeSource AncestorType={x:Type UserControl}}}" />
@@ -60,7 +63,7 @@
             </DataGrid.Columns>
         </DataGrid>
         <DataGrid Name="ChargeMovesList" Grid.Row="2" Grid.Column="1" AutoGenerateColumns="False" ItemsSource="{Binding ChargeMoves}"
-                  CellStyle="{StaticResource SelectedCellStyle}" CanUserAddRows="False" CanUserSortColumns="False">
+                  CellStyle="{StaticResource SelectedCellStyle}" CanUserAddRows="False" CanUserSortColumns="False" SelectedItem="{Binding SelectedChargeMove}">
             <DataGrid.Columns>
                 <DataGridComboBoxColumn Header="Name" Width="*" SelectedItemBinding="{Binding ChargeMove}" DisplayMemberPath="Name">
                     <DataGridComboBoxColumn.ElementStyle>

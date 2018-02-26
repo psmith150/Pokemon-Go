@@ -88,6 +88,10 @@
                         <Setter Property="Width" Value="130"/>
                     </Style>
                 </UniformGrid.Resources>
+                    <customControls:HoverButton Content="My Pokemon" 
+                                            CommandParameter="{x:Type screens:PokemonViewModel}"
+                                            Command="{Binding NavigateToScreenCommand}"
+                                            IsEnabled="{Binding NavigationService.ActiveViewModel, Converter={StaticResource TypeToBoolConverter}, ConverterParameter={x:Type screens:PokemonViewModel}}"/>
                     <customControls:HoverButton Content="Pokedex" 
                                             CommandParameter="{x:Type screens:PokedexViewModel}"
                                             Command="{Binding NavigateToScreenCommand}"

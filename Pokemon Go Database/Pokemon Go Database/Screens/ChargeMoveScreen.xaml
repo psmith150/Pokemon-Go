@@ -19,7 +19,7 @@
     <Grid Background="{StaticResource MainBackgroundColor}">
         <DataGrid ItemsSource="{Binding Source={StaticResource MoveView}}" HorizontalAlignment="Stretch" AutoGenerateColumns="False">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Name" Binding="{Binding Path=Name}" Width="Auto" SortDirection="Descending"/>
+                <DataGridTextColumn Header="Name" Binding="{Binding Path=Name}"/>
                 <DataGridComboBoxColumn Header="Type" SelectedItemBinding="{Binding Type}" Width="Auto" ItemsSource="{Binding Source={StaticResource TypeView}}"/>
                 <DataGridTextColumn Header="Power" Binding="{Binding Path=Power}" Width="Auto"/>
                 <DataGridTextColumn Header="Duration" Binding="{Binding Path=Time}" Width="Auto"/>

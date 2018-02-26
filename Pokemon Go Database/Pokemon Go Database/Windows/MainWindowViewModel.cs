@@ -54,7 +54,7 @@ namespace Pokemon_Go_Database.Windows
             }
             this.LastFiles.CollectionChanged += ((o, e) => SaveLastFiles());
             // Set the starting page
-            this.NavigationService.NavigateTo<PokedexViewModel>();
+            this.NavigationService.NavigateTo<PokemonViewModel>();
         }
         #endregion
         #region Public Properties

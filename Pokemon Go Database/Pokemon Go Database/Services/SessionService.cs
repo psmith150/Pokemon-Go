@@ -19,6 +19,7 @@ namespace Pokemon_Go_Database.Services
             this.FastMoveList = new MyObservableCollection<FastMove>();
             this.ChargeMoveList = new MyObservableCollection<ChargeMove>();
             this.Pokedex = new MyObservableCollection<PokedexEntry>();
+            this.MyPokemon = new MyObservableCollection<Pokemon>();
         }
 
         #region Public Properties
@@ -73,6 +74,19 @@ namespace Pokemon_Go_Database.Services
                 this.Set(ref this._pokedex, value);
             }
         }
+
+        private MyObservableCollection<Pokemon> _MyPokemon;
+        public MyObservableCollection<Pokemon> MyPokemon
+        {
+            get
+            {
+                return _MyPokemon;
+            }
+            private set
+            {
+                this.Set(ref this._MyPokemon, value);
+            }
+        }
         #endregion
 
         #region Public Methods
@@ -90,6 +104,7 @@ namespace Pokemon_Go_Database.Services
                     data.Moves.InsertRange(this.FastMoveList);
                     data.Moves.InsertRange(this.ChargeMoveList);
                     data.PokedexEntries = this.Pokedex;
+                    data.Pokemon = this.MyPokemon;
 
                     await Task.Run(() => dataSerializer.Serialize(stream, data)); //Saves the data using the attributes defined in each class
                 }
@@ -117,7 +132,7 @@ namespace Pokemon_Go_Database.Services
                     data = await Task.Run(() => dataSerializer.Deserialize(file)) as DataWrapper;
                 }
             }
-            catch (IOException ex) //File does not exist; set everything to defaults
+            catch (IOException) //File does not exist; set everything to defaults
             {
                 await CreateNewFile(Properties.Settings.Default.DefaultDirectory + "\\data_new.xml");
             }
@@ -143,8 +158,8 @@ namespace Pokemon_Go_Database.Services
                     throw new InvalidOperationException("Unknown move type: " + move.MoveType);
                 }
             }
-            this.FastMoveList.InsertRange(tempFastMoves);
-            this.ChargeMoveList.InsertRange(tempChargeMoves);
+            this.FastMoveList.InsertRange(tempFastMoves.OrderBy(x => x.Name));
+            this.ChargeMoveList.InsertRange(tempChargeMoves.OrderBy(x => x.Name));
             List<PokedexEntry> tempPokedex = new List<PokedexEntry>();
             foreach (PokedexEntry species in data.PokedexEntries)
             {
@@ -214,23 +229,23 @@ namespace Pokemon_Go_Database.Services
         public async Task ReadExcelData(string filePath)
         {
             SLDocument document = new SLDocument(filePath);
-            await ReadMovesetData(document);
+            //await ReadMovesetExcelData(document);
+            await ReadPokemonExcelData(document);
         }
 
         #endregion
         #endregion
 
         #region Private Methods
-        private async Task ReadMovesetData(SLDocument document)
+        private async Task ReadMovesetExcelData(SLDocument document)
         {
             document.SelectWorksheet("Movesets");
-            string test = document.GetCellValueAsString(1,1);
             int row = 2, col = 2;
             while (!string.IsNullOrWhiteSpace(document.GetCellValueAsString(row, col)))
             {
                 col = 2;
                 string name = document.GetCellValueAsString(row, col);
-                PokedexEntry species = this.Pokedex.Single(x => x.Species.Equals(name));
+                PokedexEntry species = this.Pokedex.SingleOrDefault(x => x.Species.Equals(name));
                 if (species == null)
                 {
                     Debug.WriteLine($"Could not find species {name}");
@@ -244,7 +259,7 @@ namespace Pokemon_Go_Database.Services
                     string moveName = document.GetCellValueAsString(row, 3 + i);
                     if (!string.IsNullOrWhiteSpace(moveName))
                     {
-                        FastMove fastMove = await Task.Run(() => this.FastMoveList.Single(x => x.Name.Equals(moveName)));
+                        FastMove fastMove = await Task.Run(() => this.FastMoveList.SingleOrDefault(x => x.Name.Equals(moveName)));
                         if (fastMove != null)
                             species.FastMoves.Add(new PokedexFastMoveWrapper(fastMove));
                     }
@@ -253,11 +268,47 @@ namespace Pokemon_Go_Database.Services
                 while (!string.IsNullOrWhiteSpace(document.GetCellValueAsString(row, 5 + index)))
                 {
                     string moveName = document.GetCellValueAsString(row, 5 + index);
-                    ChargeMove chargeMove = await Task.Run(() => this.ChargeMoveList.Single(x => x.Name.Equals(moveName)));
+                    ChargeMove chargeMove = await Task.Run(() => this.ChargeMoveList.SingleOrDefault(x => x.Name.Equals(moveName)));
                     if (chargeMove != null)
                         species.ChargeMoves.Add(new PokedexChargeMoveWrapper(chargeMove));
                     index++;
                 }
+                row++;
+            }
+        }
+
+        private async Task ReadPokemonExcelData(SLDocument document)
+        {
+            document.SelectWorksheet("My Pokemon");
+            int row = 2, col = 2;
+            this.MyPokemon.Clear();
+            while (!string.IsNullOrWhiteSpace(document.GetCellValueAsString(row, col)))
+            {
+                col = 2;
+                string name = document.GetCellValueAsString(row, 2);
+                string speciesName = document.GetCellValueAsString(row, 3);
+                PokedexEntry species = this.Pokedex.SingleOrDefault(x => x.Species.Equals(speciesName));
+                if (species == null)
+                {
+                    Debug.WriteLine($"Could not find species {speciesName}");
+                    row++;
+                    continue;
+                }
+                Pokemon pokemon = new Pokemon(species, name);
+
+                pokemon.GameCP = document.GetCellValueAsInt32(row, 8);
+                pokemon.GameHP = document.GetCellValueAsInt32(row, 9);
+
+                string fastMoveName = document.GetCellValueAsString(row, 13);
+                PokedexFastMoveWrapper fastMove = await Task.Run(() => species.FastMoves.SingleOrDefault(x => x.FastMove.Name.Equals(fastMoveName)));
+                if (fastMove != null)
+                    pokemon.FastMove = fastMove;
+                string chargeMoveName = document.GetCellValueAsString(row, 14);
+                PokedexChargeMoveWrapper chargeMove = await Task.Run(() => species.ChargeMoves.SingleOrDefault(x => x.ChargeMove.Name.Equals(chargeMoveName)));
+                if (chargeMove != null)
+                    pokemon.ChargeMove = chargeMove;
+
+                this.MyPokemon.Add(pokemon);
                 row++;
             }
         }

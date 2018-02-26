@@ -90,6 +90,7 @@
     <Compile Include="CustomControls\HoverButton.cs" />
     <Compile Include="IOC\IOCContainer.cs" />
     <Compile Include="Model\ChargeMove.cs" />
+    <Compile Include="Model\Constants.cs" />
     <Compile Include="Model\FastMove.cs" />
     <Compile Include="Model\DataWrapper.cs" />
     <Compile Include="Model\IVCalculator.cs" />
@@ -114,10 +115,14 @@
       <DependentUpon>FastMoveScreen.xaml</DependentUpon>
     </Compile>
     <Compile Include="Screens\ChargeMoveViewModel.cs" />
+    <Compile Include="Screens\PokemonScreen.xaml.cs">
+      <DependentUpon>PokemonScreen.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Screens\PokedexScreen.xaml.cs">
       <DependentUpon>PokedexScreen.xaml</DependentUpon>
     </Compile>
     <Compile Include="Screens\FastMoveViewModel.cs" />
+    <Compile Include="Screens\PokemonViewModel.cs" />
     <Compile Include="Screens\PokedexViewModel.cs" />
     <Compile Include="Screens\ScreenViewModel.cs" />
     <Compile Include="Screens\TemplateScreen.xaml.cs">
@@ -143,6 +148,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Screens\FastMoveScreen.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Screens\PokemonScreen.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

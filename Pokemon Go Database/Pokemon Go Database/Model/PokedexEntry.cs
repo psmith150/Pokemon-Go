@@ -1,5 +1,6 @@
 ﻿using GalaSoft.MvvmLight;
 using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Collections.Specialized;
 using System.ComponentModel;
@@ -13,49 +14,49 @@ namespace Pokemon_Go_Database.Model
     [Serializable]
     public class PokedexEntry : ObservableObject
     {
-        private int _number; //Pokemon number
-        private String _species; //Pokemon species name
-        private Type _type1; //Pokemon's first type
-        private Type _type2; //Pokemon's second type
-        private MyObservableCollection<PokedexFastMoveWrapper> _fastMoves; //Pokemon's fast moves
-        private MyObservableCollection<PokedexChargeMoveWrapper> _chargeMoves; //Pokemon's charge moves
-        private MyObservableCollection<Moveset> _movesets; //Pokemon's moveset
-        private int _attack; //Pokemon's attack stat
-        private int _defense; //Pokemon's defense stat
-        private int _stamina; //Pokemon's stamina stat
+        private int _Number; //Pokemon number
+        private String _Species; //Pokemon species name
+        private Type _Type1; //Pokemon's first type
+        private Type _Type2; //Pokemon's second type
+        private MyObservableCollection<PokedexFastMoveWrapper> _FastMoves; //Pokemon's fast moves
+        private MyObservableCollection<PokedexChargeMoveWrapper> _ChargeMoves; //Pokemon's charge moves
+        private MyObservableCollection<Moveset> _Movesets; //Pokemon's moveset
+        private int _Attack; //Pokemon's attack stat
+        private int _Defense; //Pokemon's defense stat
+        private int _Stamina; //Pokemon's stamina stat
 
         public PokedexEntry()
         {
-            _number = 0;
-            _species = "New Pokemon";
-            _type1 = Type.None;
-            _type2 = Type.None;
-            _fastMoves = new MyObservableCollection<PokedexFastMoveWrapper>();
-            _chargeMoves = new MyObservableCollection<PokedexChargeMoveWrapper>();
-            _movesets = new MyObservableCollection<Moveset>();
-            _attack = 0;
-            _defense = 0;
-            _stamina = 0;
+            Number = 0;
+            Species = "New Pokemon";
+            Type1 = Type.None;
+            Type2 = Type.None;
+            FastMoves = new MyObservableCollection<PokedexFastMoveWrapper>();
+            ChargeMoves = new MyObservableCollection<PokedexChargeMoveWrapper>();
+            Movesets = new MyObservableCollection<Moveset>();
+            Attack = 0;
+            Defense = 0;
+            Stamina = 0;
 
-            _fastMoves.CollectionChanged += FastMovesChanged;
-            _chargeMoves.CollectionChanged += ChargeMovesChanged;
+            FastMoves.CollectionChanged += FastMovesChanged;
+            ChargeMoves.CollectionChanged += ChargeMovesChanged;
         }
 
-        public PokedexEntry(int number, String species="New Pokemon", Type type1=Type.None, Type type2=Type.None)
+        public PokedexEntry(int number, String species = "New Pokemon", Type type1 = Type.None, Type type2 = Type.None)
         {
-            _number = number;
-            _species = species;
-            _type1 = type1;
-            _type2 = type2;
-            _fastMoves = new MyObservableCollection<PokedexFastMoveWrapper>();
-            _chargeMoves = new MyObservableCollection<PokedexChargeMoveWrapper>();
-            _movesets = new MyObservableCollection<Moveset>();
-            _attack = 0;
-            _defense = 0;
-            _stamina = 0;
+            Number = number;
+            Species = species;
+            Type1 = type1;
+            Type2 = type2;
+            FastMoves = new MyObservableCollection<PokedexFastMoveWrapper>();
+            ChargeMoves = new MyObservableCollection<PokedexChargeMoveWrapper>();
+            Movesets = new MyObservableCollection<Moveset>();
+            Attack = 0;
+            Defense = 0;
+            Stamina = 0;
 
-            _fastMoves.CollectionChanged += FastMovesChanged;
-            _chargeMoves.CollectionChanged += ChargeMovesChanged;
+            FastMoves.CollectionChanged += FastMovesChanged;
+            ChargeMoves.CollectionChanged += ChargeMovesChanged;
         }
 
         private void ChargeMovesChanged(object sender, System.Collections.Specialized.NotifyCollectionChangedEventArgs e)
@@ -64,22 +65,25 @@ namespace Pokemon_Go_Database.Model
             {
                 foreach (INotifyPropertyChanged item in e.OldItems)
                 {
-                    foreach (Moveset moveset in _movesets)
+                    List<Moveset> toRemove = new List<Moveset>();
+                    foreach (Moveset moveset in _Movesets)
                     {
-                        if (moveset.ChargeMove.ChargeMove == item as ChargeMove)
+                        if (moveset.ChargeMove == item as PokedexChargeMoveWrapper)
                         {
-                            _movesets.Remove(moveset);
+                            toRemove.Add(moveset);
                         }
                     }
+                    foreach (Moveset moveset in toRemove)
+                        Movesets.Remove(moveset);
                 }
             }
             if (e.Action == NotifyCollectionChangedAction.Add)
             {
                 foreach (INotifyPropertyChanged item in e.NewItems)
                 {
-                    foreach (PokedexFastMoveWrapper fastMove in _fastMoves)
+                    foreach (PokedexFastMoveWrapper fastMove in FastMoves)
                     {
-                        _movesets.Add(new Moveset(fastMove, new PokedexChargeMoveWrapper(item as ChargeMove)));
+                        Movesets.Add(new Moveset(fastMove, item as PokedexChargeMoveWrapper));
                     }
                 }
             }
@@ -91,36 +95,41 @@ namespace Pokemon_Go_Database.Model
             {
                 foreach (INotifyPropertyChanged item in e.OldItems)
                 {
-                    foreach (Moveset moveset in _movesets)
+                    List<Moveset> toRemove = new List<Moveset>();
+                    foreach (Moveset moveset in _Movesets)
                     {
-                        if (moveset.FastMove.FastMove == item as FastMove)
+                        if (moveset.FastMove == item as PokedexFastMoveWrapper)
                         {
-                            _movesets.Remove(moveset);
+                            Movesets.Remove(moveset);
                         }
                     }
+                    foreach (Moveset moveset in toRemove)
+                        Movesets.Remove(moveset);
                 }
             }
             if (e.Action == NotifyCollectionChangedAction.Add)
             {
                 foreach (INotifyPropertyChanged item in e.NewItems)
                 {
-                    foreach (PokedexChargeMoveWrapper chargeMove in _chargeMoves)
+                    foreach (PokedexChargeMoveWrapper chargeMove in ChargeMoves)
                     {
-                        _movesets.Add(new Moveset(new PokedexFastMoveWrapper(item as FastMove), chargeMove));
+                        Movesets.Add(new Moveset(item as PokedexFastMoveWrapper, chargeMove));
                     }
                 }
             }
         }
 
+        #region Public Properties
+
         public int Number
         {
             get
             {
-                return _number;
+                return _Number;
             }
             set
             {
-                _number = value;
+                _Number = value;
                 RaisePropertyChanged("Number");
             }
         }
@@ -129,11 +138,11 @@ namespace Pokemon_Go_Database.Model
         {
             get
             {
-                return String.Copy(_species);
+                return String.Copy(_Species);
             }
             set
             {
-                _species = value;
+                _Species = value;
                 RaisePropertyChanged("Species");
             }
         }
@@ -142,11 +151,11 @@ namespace Pokemon_Go_Database.Model
         {
             get
             {
-                return _type1;
+                return _Type1;
             }
             set
             {
-                _type1 = value;
+                _Type1 = value;
                 RaisePropertyChanged("Type1");
             }
         }
@@ -155,11 +164,11 @@ namespace Pokemon_Go_Database.Model
         {
             get
             {
-                return _type2;
+                return _Type2;
             }
             set
             {
-                _type2 = value;
+                _Type2 = value;
                 RaisePropertyChanged("Type2");
             }
         }
@@ -168,11 +177,11 @@ namespace Pokemon_Go_Database.Model
         {
             get
             {
-                return _fastMoves;
+                return _FastMoves;
             }
             set
             {
-                _fastMoves = value;
+                _FastMoves = value;
                 RaisePropertyChanged("FastMoves");
             }
         }
@@ -180,11 +189,11 @@ namespace Pokemon_Go_Database.Model
         {
             get
             {
-                return _chargeMoves;
+                return _ChargeMoves;
             }
             set
             {
-                _chargeMoves = value;
+                _ChargeMoves = value;
                 RaisePropertyChanged("ChargeMoves");
             }
         }
@@ -193,42 +202,70 @@ namespace Pokemon_Go_Database.Model
         {
             get
             {
-                return _movesets;
+                return _Movesets;
+            }
+            private set
+            {
+                Set(ref this._Movesets, value);
             }
         }
         public int Attack
         {
             get
             {
-                return _attack;
+                return _Attack;
             }
             set
             {
-                _attack = value;
+                _Attack = value;
             }
         }
         public int Defense
         {
             get
             {
-                return _defense;
+                return _Defense;
             }
             set
             {
-                _defense = value;
+                _Defense = value;
             }
         }
         public int Stamina
         {
             get
             {
-                return _stamina;
+                return _Stamina;
             }
             set
             {
-                _stamina = value;
+                _Stamina = value;
             }
         }
 
+        #region Calculated Properties
+        [XmlIgnore]
+        public int TotalStats
+        {
+            get
+            {
+                return Attack + Defense + Stamina;
+            }
+        }
+
+        [XmlIgnore]
+        public int MaxCP
+        {
+            get
+            {
+                double temp1 = (double)Attack + Constants.MaxIV;
+                double temp2 = Math.Pow(((double)Stamina + Constants.MaxIV), 0.5);
+                double temp3 = Math.Pow(((double)Defense + Constants.MaxIV), 0.5);
+                double temp4 = Math.Pow(Constants.CpmValues[Constants.CpmValues.Length - 1], 2);
+                return (int)((((double)Attack + Constants.MaxIV) * Math.Pow(((double)Stamina + Constants.MaxIV), 0.5) * Math.Pow(((double)Defense + Constants.MaxIV), 0.5) * Math.Pow(Constants.CpmValues[Constants.CpmValues.Length - 1], 2)) / 10.0);
+            }
+        }
+        #endregion
+        #endregion
     }
 }

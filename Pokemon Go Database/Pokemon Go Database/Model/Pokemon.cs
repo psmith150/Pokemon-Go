@@ -8,259 +8,266 @@ namespace Pokemon_Go_Database.Model
     public class Pokemon : ObservableObject
     {
 
-        public Pokemon(string title)
+        public Pokemon() : this(new PokedexEntry())
         {
         }
 
+        public Pokemon(PokedexEntry species, string name = "New Pokemon")
+        {
+            this.Name = name;
+            this.Species = species;
+            this.Level = 1;
+        }
+
         #region Public Properties
-        private string _name;
+        private string _Name;
         public String Name
         {
             get
             {
-                return _name;
+                return _Name;
             }
             set
             {
-                this.Set(ref this._name, value);
+                this.Set(ref this._Name, value);
             }
         }
-        private PokedexEntry _species;
+        private PokedexEntry _Species;
         public PokedexEntry Species
         {
             get
             {
-                return _species;;
+                return _Species;;
             }
             set
             {
-                Set(ref _species, value);
+                Set(ref _Species, value);
             }
         }
 
-        private float _actualCP;
+        private float _ActualCP;
         public float ActualCP
         {
             get
             {
-                return _actualCP;
+                return _ActualCP;
             }
             set
             {
-                Set(ref _actualCP, value);
+                Set(ref _ActualCP, value);
             }
         }
 
-        private float _actualHP;
+        private float _ActualHP;
         public float ActualHP
         {
             get
             {
-                return _actualHP;
+                return _ActualHP;
             }
             set
             {
-                Set(ref _actualHP, value);
+                Set(ref _ActualHP, value);
             }
         }
 
-        private int _gameCP;
+        private int _GameCP;
         public int GameCP
         {
             get
             {
-                return _gameCP;
+                return _GameCP;
             }
             set
             {
-                Set(ref _gameCP, value);
+                Set(ref _GameCP, value);
             }
         }
 
-        private int _gameHP;
+        private int _GameHP;
         public int GameHP
         {
             get
             {
-                return _gameHP;
+                return _GameHP;
             }
             set
             {
-                Set(ref _gameHP, value);
+                Set(ref _GameHP, value);
             }
         }
 
-        private int _dustToPower;
+        private int _DustToPower;
         public int DustToPower
         {
             get
             {
-                return _dustToPower;
+                return _DustToPower;
             }
             set
             {
-                Set(ref _dustToPower, value);
+                Set(ref _DustToPower, value);
             }
         }
 
-        private bool _hasBeenPowered;
+        private bool _HasBeenPowered;
         public bool HasBeenPowered
         {
             get
             {
-                return _hasBeenPowered;
+                return _HasBeenPowered;
             }
             set
             {
-                Set(ref _hasBeenPowered, value);
+                Set(ref _HasBeenPowered, value);
             }
         }
 
-        private FastMove _fastMove;
-        public FastMove FastMove
+        private PokedexFastMoveWrapper _FastMove;
+        public PokedexFastMoveWrapper FastMove
         {
             get
             {
-                return _fastMove;
+                return _FastMove;
             }
             set
             {
-                Set(ref _fastMove, value);
+                Set(ref _FastMove, value);
             }
         }
 
-        private ChargeMove _chargeMove;
-        public ChargeMove ChargeMove
+        private PokedexChargeMoveWrapper _ChargeMove;
+        public PokedexChargeMoveWrapper ChargeMove
         {
             get
             {
-                return _chargeMove;
+                return _ChargeMove;
             }
             set
             {
-                Set(ref _chargeMove, value);
+                Set(ref _ChargeMove, value);
             }
         }
 
-        private int _attackIV;
+        private int _AttackIV;
         public int AttackIV
         {
             get
             {
-                return _attackIV;
+                return _AttackIV;
             }
             set
             {
-                Set(ref _attackIV, value);
+                Set(ref _AttackIV, value);
             }
         }
 
-        private int _defenseIV;
+        private int _DefenseIV;
         public int DefenseIV
         {
             get
             {
-                return _defenseIV;
+                return _DefenseIV;
             }
             set
             {
-                Set(ref _defenseIV, value);
+                Set(ref _DefenseIV, value);
             }
         }
 
-        private int _staminaIV;
+        private int _StaminaIV;
         public int StaminaIV
         {
             get
             {
-                return _staminaIV;
+                return _StaminaIV;
             }
             set
             {
-                Set(ref _staminaIV, value);
+                Set(ref _StaminaIV, value);
             }
         }
 
-        private int _level;
-        public int Level
+        private double _Level;
+        public double Level
         {
             get
             {
-                return _level;
+                return _Level;
             }
             set
             {
-                Set(ref _level, value);
+                Set(ref _Level, value);
             }
         }
 
-        private float _ivPercentage;
+        private float _IVPercentage;
         [XmlIgnore]
         public float IVPercentage
         {
             get
             {
-                return _ivPercentage;
+                return _IVPercentage;
             }
             private set
             {
-                Set(ref _ivPercentage, value);
+                Set(ref _IVPercentage, value);
             }
         }
 
-        private float _attack;
+        private float _Attack;
         [XmlIgnore]
         public float Attack
         {
             get
             {
-                return _attack;
+                return _Attack;
             }
             private set
             {
-                Set(ref _attack, value);
+                Set(ref _Attack, value);
             }
         }
 
-        private float _defense;
+        private float _Defense;
         [XmlIgnore]
         public float Defense
         {
             get
             {
-                return _defense;
+                return _Defense;
             }
             private set
             {
-                Set(ref _defense, value);
+                Set(ref _Defense, value);
             }
         }
 
-        private float _stamina;
+        private float _Stamina;
         [XmlIgnore]
         public float Stamina
         {
             get
             {
-                return _stamina;
+                return _Stamina;
             }
             private set
             {
-                Set(ref _stamina, value);
+                Set(ref _Stamina, value);
             }
         }
 
-        private int _maxCP;
+        private int _MaxCP;
         [XmlIgnore]
         public int MaxCP
         {
             get
             {
-                return _maxCP;
+                return _MaxCP;
             }
             private set
             {
-                Set(ref _maxCP, value);
+                Set(ref _MaxCP, value);
             }
         }
 
@@ -280,12 +287,6 @@ namespace Pokemon_Go_Database.Model
         private float _defenseDPSPercentAtMax;
         private float _defenseTotalDamage;
         private float _defenseTotalDamageAtMax;
-
-        #region Public Methods
-        #endregion
-
-
-
         #endregion
     }
 }

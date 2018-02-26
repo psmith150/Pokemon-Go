@@ -23,6 +23,7 @@ namespace Pokemon_Go_Database.Popups
         public ICommand ExitPopupCommand { get; private set; }
         public ICommand SaveCommand { get; private set; }
         #endregion
+
         public EditMovesetsViewModel(SessionService session) : base(session)
         {
             this.AllChargeMoves = this.Session.ChargeMoveList;
@@ -33,6 +34,9 @@ namespace Pokemon_Go_Database.Popups
 
             this.AddFastMoveCommand = new RelayCommand(() => this.FastMoves.Add(new PokedexFastMoveWrapper(this.AllFastMoves[0])));
             this.AddChargeMoveCommand = new RelayCommand(() => this.ChargeMoves.Add(new PokedexChargeMoveWrapper(this.AllChargeMoves[0])));
+
+            this.RemoveFastMoveCommand = new RelayCommand(() => RemoveFastMove());
+            this.RemoveChargeMoveCommand = new RelayCommand(() => RemoveChargeMove());
 
             this.ExitPopupCommand = new RelayCommand(() => Exit());
             this.SaveCommand = new RelayCommand(() => Save());
@@ -152,9 +156,51 @@ namespace Pokemon_Go_Database.Popups
                 Set(ref this._allChargeMoves, value);
             }
         }
+
+        private PokedexFastMoveWrapper _SelectedFastMove;
+        public PokedexFastMoveWrapper SelectedFastMove
+        {
+            get
+            {
+                return _SelectedFastMove;
+            }
+            set
+            {
+                Set(ref this._SelectedFastMove, value);
+            }
+        }
+
+        private PokedexChargeMoveWrapper _SelectedChargeMove;
+        public PokedexChargeMoveWrapper SelectedChargeMove
+        {
+            get
+            {
+                return _SelectedChargeMove;
+            }
+            set
+            {
+                Set(ref this._SelectedChargeMove, value);
+            }
+        }
         #endregion
 
         #region Private Methods
+
+        private void RemoveFastMove()
+        {
+            if (this.SelectedFastMove != null)
+            {
+                this.FastMoves.Remove(this.SelectedFastMove);
+            }
+        }
+
+        private void RemoveChargeMove()
+        {
+            if (this.SelectedChargeMove != null)
+            {
+                this.ChargeMoves.Remove(this.SelectedChargeMove);
+            }
+        }
         private void Exit()
         {
             if (this.savingNeeded)
@@ -171,12 +217,36 @@ namespace Pokemon_Go_Database.Popups
 
         private void Save()
         {
-            this._species.FastMoves.Clear();
-            this._species.ChargeMoves.Clear();
-            foreach (PokedexFastMoveWrapper move in this.FastMoves)
-                this._species.FastMoves.Add(move);
-            foreach (PokedexChargeMoveWrapper move in this.ChargeMoves)
-                this._species.ChargeMoves.Add(move);
+            //TODO: implement saving
+            List<PokedexFastMoveWrapper> toRemoveFast = new List<PokedexFastMoveWrapper>();
+            foreach (PokedexFastMoveWrapper fastMove in Species.FastMoves)
+            {
+                if (!this.FastMoves.Contains(fastMove))
+                    toRemoveFast.Add(fastMove);
+            }
+            foreach (PokedexFastMoveWrapper fastMove in toRemoveFast)
+                Species.FastMoves.Remove(fastMove);
+
+            foreach (PokedexFastMoveWrapper fastMove in this.FastMoves)
+            {
+                if (!Species.FastMoves.Contains(fastMove))
+                    Species.FastMoves.Add(fastMove);
+            }
+
+            List<PokedexChargeMoveWrapper> toRemoveCharge = new List<PokedexChargeMoveWrapper>();
+            foreach (PokedexChargeMoveWrapper chargeMove in Species.ChargeMoves)
+            {
+                if (!this.ChargeMoves.Contains(chargeMove))
+                    toRemoveCharge.Add(chargeMove);
+            }
+            foreach (PokedexChargeMoveWrapper chargeMove in toRemoveCharge)
+                Species.ChargeMoves.Remove(chargeMove);
+
+            foreach (PokedexChargeMoveWrapper chargeMove in this.ChargeMoves)
+            {
+                if (!Species.ChargeMoves.Contains(chargeMove))
+                    Species.ChargeMoves.Add(chargeMove);
+            }
             this.ClosePopup(null);
         }
         #endregion

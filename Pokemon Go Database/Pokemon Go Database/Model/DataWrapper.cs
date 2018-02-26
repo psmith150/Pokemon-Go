@@ -16,5 +16,6 @@ namespace Pokemon_Go_Database.Model
     {
         public MyObservableCollection<Move> Moves { get; set; }   //Collection of all moves
         public MyObservableCollection<PokedexEntry> PokedexEntries { get; set; }   //Collection of pokedex entries
+        public MyObservableCollection<Pokemon> Pokemon { get; set; }
     }
 }

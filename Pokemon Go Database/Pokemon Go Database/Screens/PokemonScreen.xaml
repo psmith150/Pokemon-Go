@@ -1,0 +1,77 @@
+﻿<UserControl x:Class="Pokemon_Go_Database.Screens.PokemonScreen"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Pokemon_Go_Database.Screens"
+             xmlns:scm="clr-namespace:System.ComponentModel;assembly=WindowsBase"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="500"
+             d:DataContext="{d:DesignInstance Type=local:PokemonViewModel}">
+    <UserControl.Resources>
+        <CollectionViewSource x:Key="PokemonView" Source="{Binding MyPokemon}">
+            <CollectionViewSource.SortDescriptions>
+                <scm:SortDescription PropertyName="Species.Number" Direction="Ascending"/>
+            </CollectionViewSource.SortDescriptions>
+        </CollectionViewSource>
+    </UserControl.Resources>
+    <Grid Background="{StaticResource MainBackgroundColor}">
+        <DataGrid Name="PokemonGrid" ItemsSource="{Binding Source={StaticResource PokemonView}}" HorizontalAlignment="Stretch" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Number" Binding="{Binding Path=Species.Number}" Width="Auto" IsReadOnly="True"/>
+                <DataGridComboBoxColumn Header="Species" Width="Auto" SelectedItemBinding="{Binding Species}" DisplayMemberPath="Species">
+                    <DataGridComboBoxColumn.ElementStyle>
+                        <Style TargetType="{x:Type ComboBox}">
+                            <Setter Property="ItemsSource" Value="{Binding Path=DataContext.AllSpecies, RelativeSource={RelativeSource AncestorType={x:Type UserControl}}}" />
+                        </Style>
+                    </DataGridComboBoxColumn.ElementStyle>
+                    <DataGridComboBoxColumn.EditingElementStyle>
+                        <Style TargetType="{x:Type ComboBox}">
+                            <Setter Property="ItemsSource" Value="{Binding Path=DataContext.AllSpecies, RelativeSource={RelativeSource AncestorType={x:Type UserControl}}}" />
+                            <!--<EventSetter Event="RequestBringIntoView" Handler="OnRequestBringIntoView"/>-->
+                        </Style>
+                    </DataGridComboBoxColumn.EditingElementStyle>
+                </DataGridComboBoxColumn>
+                <DataGridTextColumn Header="Name" Binding="{Binding Path=Name}" Width="Auto"/>
+                <DataGridTextColumn Header="Type1" Binding="{Binding Path=Species.Type1}" Width="Auto"/>
+                <DataGridTextColumn Header="Type2" Binding="{Binding Path=Species.Type2}" Width="Auto"/>
+                <DataGridComboBoxColumn Header="Fast Move" Width="Auto" SelectedItemBinding="{Binding FastMove}" DisplayMemberPath="FastMove.Name" SortMemberPath="FastMove.FastMove.Name">
+                    <DataGridComboBoxColumn.ElementStyle>
+                        <Style TargetType="{x:Type ComboBox}">
+                            <Setter Property="ItemsSource" Value="{Binding Path=Species.FastMoves}" />
+                        </Style>
+                    </DataGridComboBoxColumn.ElementStyle>
+                    <DataGridComboBoxColumn.EditingElementStyle>
+                        <Style TargetType="{x:Type ComboBox}">
+                            <Setter Property="ItemsSource" Value="{Binding Path=Species.FastMoves}" />
+                            <!--<EventSetter Event="RequestBringIntoView" Handler="OnRequestBringIntoView"/>-->
+                        </Style>
+                    </DataGridComboBoxColumn.EditingElementStyle>
+                </DataGridComboBoxColumn>
+                <DataGridComboBoxColumn Header="Charge Move" Width="Auto" SelectedItemBinding="{Binding ChargeMove}" DisplayMemberPath="ChargeMove.Name" SortMemberPath="ChargeMove.ChargeMove.Name">
+                    <DataGridComboBoxColumn.ElementStyle>
+                        <Style TargetType="{x:Type ComboBox}">
+                            <Setter Property="ItemsSource" Value="{Binding Path=Species.ChargeMoves}" />
+                        </Style>
+                    </DataGridComboBoxColumn.ElementStyle>
+                    <DataGridComboBoxColumn.EditingElementStyle>
+                        <Style TargetType="{x:Type ComboBox}">
+                            <Setter Property="ItemsSource" Value="{Binding Path=Species.ChargeMoves}" />
+                            <!--<EventSetter Event="RequestBringIntoView" Handler="OnRequestBringIntoView"/>-->
+                        </Style>
+                    </DataGridComboBoxColumn.EditingElementStyle>
+                </DataGridComboBoxColumn>
+                <DataGridTextColumn Header="Game CP" Binding="{Binding Path=GameCP}" Width="Auto"/>
+                <DataGridTextColumn Header="Game HP" Binding="{Binding Path=GameHP}" Width="Auto"/>
+                <DataGridTextColumn Header="Attack IV" Binding="{Binding Path=AttackIV}" Width="Auto"/>
+                <DataGridTextColumn Header="Defense IV" Binding="{Binding Path=DefenseIV}" Width="Auto"/>
+                <DataGridTextColumn Header="Stamina IV" Binding="{Binding Path=StaminaIV}" Width="Auto"/>
+                <DataGridTextColumn Header="Level" Binding="{Binding Path=Level}" Width="Auto"/>
+                <DataGridTextColumn Header="Attack" Binding="{Binding Path=Attack}" Width="Auto" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Defense" Binding="{Binding Path=Defense}" Width="Auto" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Stamina" Binding="{Binding Path=Stamina}" Width="Auto" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Max Possible CP" Binding="{Binding Path=Species.MaxCP}" Width="Auto" IsReadOnly="True"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</UserControl>

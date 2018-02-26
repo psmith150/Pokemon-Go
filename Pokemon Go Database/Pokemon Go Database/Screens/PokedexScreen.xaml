@@ -4,11 +4,19 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Pokemon_Go_Database.Screens"
+             xmlns:scm="clr-namespace:System.ComponentModel;assembly=WindowsBase"
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="500"
              d:DataContext="{d:DesignInstance Type=local:PokedexViewModel}">
+    <UserControl.Resources>
+        <CollectionViewSource x:Key="PokedexView" Source="{Binding PokedexEntries}">
+            <CollectionViewSource.SortDescriptions>
+                <scm:SortDescription PropertyName="Number" Direction="Ascending"/>
+            </CollectionViewSource.SortDescriptions>
+        </CollectionViewSource>
+    </UserControl.Resources>
     <Grid Background="{StaticResource MainBackgroundColor}">
-        <DataGrid Name="PokedexGrid" ItemsSource="{Binding PokedexEntries}" HorizontalAlignment="Stretch" AutoGenerateColumns="False">
+        <DataGrid Name="PokedexGrid" ItemsSource="{Binding Source={StaticResource PokedexView}}" HorizontalAlignment="Stretch" AutoGenerateColumns="False">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Number" Binding="{Binding Path=Number}" Width="Auto"/>
                 <DataGridTextColumn Header="Species" Binding="{Binding Path=Species}" Width="Auto"/>
@@ -17,6 +25,8 @@
                 <DataGridTextColumn Header="Attack" Binding="{Binding Path=Attack}" Width="Auto"/>
                 <DataGridTextColumn Header="Defense" Binding="{Binding Path=Defense}" Width="Auto"/>
                 <DataGridTextColumn Header="Stamina" Binding="{Binding Path=Stamina}" Width="Auto"/>
+                <DataGridTextColumn Header="Total Stats" Binding="{Binding Path=TotalStats}" Width="Auto"/>
+                <DataGridTextColumn Header="Max CP" Binding="{Binding Path=MaxCP}" Width="Auto"/>
                 <DataGridTemplateColumn Header="Movesets" IsReadOnly="True">
                     <!--<DataGridTemplateColumn.CellEditingTemplate>
                         <DataTemplate>
