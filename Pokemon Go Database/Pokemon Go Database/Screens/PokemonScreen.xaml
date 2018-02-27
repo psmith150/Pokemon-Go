@@ -66,7 +66,8 @@
                 <DataGridTextColumn Header="Attack IV" Binding="{Binding Path=AttackIVExpression}" Width="Auto"/>
                 <DataGridTextColumn Header="Defense IV" Binding="{Binding Path=DefenseIVExpression}" Width="Auto"/>
                 <DataGridTextColumn Header="Stamina IV" Binding="{Binding Path=StaminaIVExpression}" Width="Auto"/>
-                <DataGridTextColumn Header="Level" Binding="{Binding Path=Level}" Width="Auto"/>
+                <DataGridTextColumn Header="Level" Binding="{Binding Path=LevelExpression}" Width="Auto" SortMemberPath="Level"/>
+                <DataGridTextColumn Header="IV %" Binding="{Binding Path=IVPercentage, StringFormat=P2}" Width="Auto"/>
                 <DataGridTextColumn Header="Attack" Binding="{Binding Path=Attack}" Width="Auto" IsReadOnly="True"/>
                 <DataGridTextColumn Header="Defense" Binding="{Binding Path=Defense}" Width="Auto" IsReadOnly="True"/>
                 <DataGridTextColumn Header="Stamina" Binding="{Binding Path=Stamina}" Width="Auto" IsReadOnly="True"/>

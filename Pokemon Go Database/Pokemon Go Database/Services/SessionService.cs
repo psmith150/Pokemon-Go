@@ -197,10 +197,36 @@ namespace Pokemon_Go_Database.Services
                 tempPokedex.Add(species);
                 this.Pokedex.Add(species);
             }
-            //this.Pokedex.InsertRange(tempPokedex);
-
-            //Debug.WriteLine($"Loaded {data.FastMoves.Count} fast moves, {data.ChargeMoves.Count} charge moves, and {Pokedex.Count} pokemon");
-            //this.FastMoveList.Add(new Move())
+            List<Pokemon> tempPokemon = new List<Pokemon>();
+            foreach(Pokemon pokemon in data.Pokemon)
+            {
+                try
+                {
+                    pokemon.Species = this.Pokedex.Single(x => x.Species.Equals(pokemon.Species.Species));
+                }
+                catch (ArgumentException)
+                {
+                    throw new ArgumentException("Cannot find matching species " + pokemon.Species.Species + " in Pokedex.");
+                }
+                try
+                {
+                    pokemon.FastMove = pokemon.Species.FastMoves.Single(x => x.FastMove.Name.Equals(pokemon.FastMove.FastMove.Name));
+                }
+                catch (ArgumentException)
+                {
+                    throw new ArgumentException($"Cannot find matching fast move {pokemon.FastMove.FastMove.Name} in fast move list for {pokemon.Species.Species}");
+                }
+                try
+                {
+                    pokemon.ChargeMove = pokemon.Species.ChargeMoves.Single(x => x.ChargeMove.Name.Equals(pokemon.ChargeMove.ChargeMove.Name));
+                }
+                catch (ArgumentException)
+                {
+                    throw new ArgumentException($"Cannot find matching charge move {pokemon.ChargeMove.ChargeMove.Name} in fast move list for {pokemon.Species.Species}");
+                }
+                tempPokemon.Add(pokemon);
+            }
+            this.MyPokemon.InsertRange(tempPokemon);
         }
 
         /// <summary>
@@ -298,6 +324,12 @@ namespace Pokemon_Go_Database.Services
 
                 pokemon.GameCP = document.GetCellValueAsInt32(row, 8);
                 pokemon.GameHP = document.GetCellValueAsInt32(row, 9);
+                pokemon.DustToPower = document.GetCellValueAsInt32(row, 10);
+                pokemon.HasBeenPowered = document.GetCellValueAsString(row, 11).Equals("Yes");
+                pokemon.StaminaIVExpression = document.GetCellValueAsString(row, 15);
+                pokemon.AttackIVExpression = document.GetCellValueAsString(row, 16);
+                pokemon.DefenseIVExpression = document.GetCellValueAsString(row, 17);
+                pokemon.LevelExpression = document.GetCellValueAsString(row, 18);
 
                 string fastMoveName = document.GetCellValueAsString(row, 13);
                 PokedexFastMoveWrapper fastMove = await Task.Run(() => species.FastMoves.SingleOrDefault(x => x.FastMove.Name.Equals(fastMoveName)));

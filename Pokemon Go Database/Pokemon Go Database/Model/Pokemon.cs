@@ -139,6 +139,7 @@ namespace Pokemon_Go_Database.Model
                 Set(ref _AttackIVExpression, value);
                 RaisePropertyChanged("Attack");
                 RaisePropertyChanged("ActualCP");
+                RaisePropertyChanged("IVPercentage");
                 RaisePropertyChanged("MaxCP");
             }
         }
@@ -155,6 +156,7 @@ namespace Pokemon_Go_Database.Model
                 Set(ref _DefenseIVExpression, value);
                 RaisePropertyChanged("Defense");
                 RaisePropertyChanged("ActualCP");
+                RaisePropertyChanged("IVPercentage");
                 RaisePropertyChanged("MaxCP");
             }
         }
@@ -172,6 +174,7 @@ namespace Pokemon_Go_Database.Model
                 RaisePropertyChanged("Stamina");
                 RaisePropertyChanged("ActualHP");
                 RaisePropertyChanged("ActualCP");
+                RaisePropertyChanged("IVPercentage");
                 RaisePropertyChanged("MaxCP");
             }
         }
@@ -190,9 +193,8 @@ namespace Pokemon_Go_Database.Model
             }
         }
         #region Calculated Properties
-        private float _ActualCP;
         [XmlIgnore]
-        public float ActualCP
+        public int ActualCP
         {
             get
             {
@@ -200,33 +202,25 @@ namespace Pokemon_Go_Database.Model
             }
         }
 
-        private float _ActualHP;
         [XmlIgnore]
-        public float ActualHP
+        public int ActualHP
         {
             get
             {
                 return this.GetStamina();
             }
         }
-
-        private float _IVPercentage;
         [XmlIgnore]
-        public float IVPercentage
+        public double IVPercentage
         {
             get
             {
-                return _IVPercentage;
-            }
-            private set
-            {
-                Set(ref _IVPercentage, value);
+                return (GetAttackIV() + GetStaminaIV() + GetDefenseIV()) / (3.0 * Constants.MaxIV);
             }
         }
 
-        private float _Attack;
         [XmlIgnore]
-        public float Attack
+        public int Attack
         {
             get
             {
@@ -234,19 +228,16 @@ namespace Pokemon_Go_Database.Model
             }
         }
 
-        private float _Defense;
         [XmlIgnore]
-        public float Defense
+        public int Defense
         {
             get
             {
                 return this.GetDefense();
             }
         }
-
-        private float _Stamina;
         [XmlIgnore]
-        public float Stamina
+        public int Stamina
         {
             get
             {
@@ -254,7 +245,15 @@ namespace Pokemon_Go_Database.Model
             }
         }
 
-        private int _MaxCP;
+        [XmlIgnore]
+        public double Level
+        {
+            get
+            {
+                return this.GetLevel();
+            }
+        }
+
         [XmlIgnore]
         public int MaxCP
         {
@@ -420,6 +419,7 @@ namespace Pokemon_Go_Database.Model
         private void UpdateAllCalculatedProperties()
         {
             RaisePropertyChanged("Attack");
+            RaisePropertyChanged("Level");
             //TODO
         }
         #endregion
