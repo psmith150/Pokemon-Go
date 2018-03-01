@@ -12,6 +12,21 @@ namespace Pokemon_Go_Database.Model
         public IVCalculator(Pokemon pokemon)
         {
             this.Pokemon = pokemon;
+            if (this.Pokemon.GetAttackIV() >= this.Pokemon.GetStaminaIV() && this.Pokemon.GetAttackIV() >= this.Pokemon.GetDefenseIV())
+            {
+                this.AttackBest = true;
+                GetIVLevels(this.Pokemon.GetAttackIV());
+            }
+            if (this.Pokemon.GetStaminaIV() >= this.Pokemon.GetAttackIV() && this.Pokemon.GetStaminaIV() >= this.Pokemon.GetDefenseIV())
+            {
+                this.DefenseBest = true;
+                GetIVLevels(this.Pokemon.GetStaminaIV());
+            }
+            if (this.Pokemon.GetDefenseIV() >= this.Pokemon.GetAttackIV() && this.Pokemon.GetDefenseIV() >= this.Pokemon.GetStaminaIV())
+            {
+                this.StaminaBest = true;
+                GetIVLevels(this.Pokemon.GetDefenseIV());
+            }
         }
 
         #region Public Properties
@@ -63,6 +78,8 @@ namespace Pokemon_Go_Database.Model
                 Set(ref this._StaminaBest, value);
             }
         }
+        public IVLevel IVLevel { get; set; }
+        public TotalIVLevel TotalIVLevel { get; set; }
         #endregion
 
         #region Public Methods
@@ -93,6 +110,23 @@ namespace Pokemon_Go_Database.Model
                     }
                 }
             }
+        }
+        #endregion
+
+        #region Private Methods
+        private void GetIVLevels(int bestIV)
+        {
+            IVLevel ivLevel = IVLevel.Low;
+            TotalIVLevel totalIVLevel = TotalIVLevel.Low;
+            for (int i=0; i<Constants.IVLevelCutoffs.Count(); i++)
+            {
+                if (bestIV <= Constants.IVLevelCutoffs[i])
+                    ivLevel = (IVLevel)i;
+                if (Pokemon.GetAttackIV() + Pokemon.GetStaminaIV() + Pokemon.GetDefenseIV() <= Constants.IVSumCutoffs[i])
+                    totalIVLevel = (TotalIVLevel)i;
+            }
+            this.IVLevel = ivLevel;
+            this.TotalIVLevel = totalIVLevel;
         }
         #endregion
 

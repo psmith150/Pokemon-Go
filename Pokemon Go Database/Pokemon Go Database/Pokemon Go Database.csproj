@@ -102,9 +102,13 @@
     <Compile Include="Model\PokedexEntry.cs" />
     <Compile Include="Model\PokedexFastMoveWrapper.cs" />
     <Compile Include="Model\Pokemon.cs" />
+    <Compile Include="Popups\IVCalculatorPopup.xaml.cs">
+      <DependentUpon>IVCalculatorPopup.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Popups\EditMovesetsPopup.xaml.cs">
       <DependentUpon>EditMovesetsPopup.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Popups\IVCalculatorViewModel.cs" />
     <Compile Include="Popups\EditMovesetsViewModel.cs" />
     <Compile Include="Popups\PopupEventArgs.cs" />
     <Compile Include="Popups\PopupViewModel.cs" />
@@ -131,10 +135,15 @@
     <Compile Include="Screens\TemplateViewModel.cs" />
     <Compile Include="Services\NavigationService.cs" />
     <Compile Include="Services\SessionService.cs" />
+    <Compile Include="ValueConverters\TotalIVEnumToNameConverter.cs" />
     <Compile Include="ValueConverters\IVEnumToNameConverter.cs" />
     <Compile Include="ValueConverters\TypeToBoolConverter.cs" />
     <Compile Include="ValueConverters\ViewModelToViewConverter.cs" />
     <Compile Include="Windows\MainWindowViewModel.cs" />
+    <Page Include="Popups\IVCalculatorPopup.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Popups\EditMovesetsPopup.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

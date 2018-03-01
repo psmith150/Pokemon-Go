@@ -33,8 +33,8 @@
                     </DataGridComboBoxColumn.EditingElementStyle>
                 </DataGridComboBoxColumn>
                 <DataGridTextColumn Header="Name" Binding="{Binding Path=Name}" Width="Auto"/>
-                <DataGridTextColumn Header="Type1" Binding="{Binding Path=Species.Type1}" Width="Auto"/>
-                <DataGridTextColumn Header="Type2" Binding="{Binding Path=Species.Type2}" Width="Auto"/>
+                <DataGridTextColumn Header="Type1" Binding="{Binding Path=Species.Type1}" Width="Auto" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Type2" Binding="{Binding Path=Species.Type2}" Width="Auto" IsReadOnly="True"/>
                 <DataGridComboBoxColumn Header="Fast Move" Width="Auto" SelectedItemBinding="{Binding FastMove}" DisplayMemberPath="FastMove.Name" SortMemberPath="FastMove.FastMove.Name">
                     <DataGridComboBoxColumn.ElementStyle>
                         <Style TargetType="{x:Type ComboBox}">
@@ -67,7 +67,7 @@
                 <DataGridTextColumn Header="Defense IV" Binding="{Binding Path=DefenseIVExpression}" Width="Auto"/>
                 <DataGridTextColumn Header="Stamina IV" Binding="{Binding Path=StaminaIVExpression}" Width="Auto"/>
                 <DataGridTextColumn Header="Level" Binding="{Binding Path=LevelExpression}" Width="Auto" SortMemberPath="Level"/>
-                <DataGridTextColumn Header="IV %" Binding="{Binding Path=IVPercentage, StringFormat=P2}" Width="Auto"/>
+                <DataGridTextColumn Header="IV %" Binding="{Binding Path=IVPercentage, StringFormat=P2}" Width="Auto" IsReadOnly="True"/>
                 <DataGridTextColumn Header="Attack" Binding="{Binding Path=Attack}" Width="Auto" IsReadOnly="True"/>
                 <DataGridTextColumn Header="Defense" Binding="{Binding Path=Defense}" Width="Auto" IsReadOnly="True"/>
                 <DataGridTextColumn Header="Stamina" Binding="{Binding Path=Stamina}" Width="Auto" IsReadOnly="True"/>

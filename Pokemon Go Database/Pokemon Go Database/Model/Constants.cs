@@ -23,6 +23,10 @@ namespace Pokemon_Go_Database.Model
 
         public const double MaxLevel = 40.0;
 
+        public static readonly int[] IVLevelCutoffs = { 7, 12, 14, 15 };
+
+        public static readonly double[] IVSumCutoffs = { 22, 29, 36, 45 };
+
         static Constants()
         {
             double[] values = new double[78];

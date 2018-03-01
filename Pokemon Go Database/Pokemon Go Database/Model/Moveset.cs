@@ -40,7 +40,6 @@ namespace Pokemon_Go_Database.Model
             }
         }
 
-        private bool _isLegacy;
         public bool IsLegacy
         {
             get

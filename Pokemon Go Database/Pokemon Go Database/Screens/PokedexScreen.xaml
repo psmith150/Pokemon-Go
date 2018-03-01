@@ -14,14 +14,15 @@
                 <scm:SortDescription PropertyName="Number" Direction="Ascending"/>
             </CollectionViewSource.SortDescriptions>
         </CollectionViewSource>
+        <CollectionViewSource x:Key="TypeView" Source="{Binding Types}"/>
     </UserControl.Resources>
     <Grid Background="{StaticResource MainBackgroundColor}">
         <DataGrid Name="PokedexGrid" ItemsSource="{Binding Source={StaticResource PokedexView}}" HorizontalAlignment="Stretch" AutoGenerateColumns="False">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Number" Binding="{Binding Path=Number}" Width="Auto"/>
                 <DataGridTextColumn Header="Species" Binding="{Binding Path=Species}" Width="Auto"/>
-                <DataGridTextColumn Header="Type1" Binding="{Binding Path=Type1}" Width="Auto"/>
-                <DataGridTextColumn Header="Type2" Binding="{Binding Path=Type2}" Width="Auto"/>
+                <DataGridComboBoxColumn Header="Type" SelectedItemBinding="{Binding Path=Type1}" Width="Auto" ItemsSource="{Binding Source={StaticResource TypeView}}"/>
+                <DataGridComboBoxColumn Header="Type" SelectedItemBinding="{Binding Path=Type2}" Width="Auto" ItemsSource="{Binding Source={StaticResource TypeView}}"/>
                 <DataGridTextColumn Header="Attack" Binding="{Binding Path=Attack}" Width="Auto"/>
                 <DataGridTextColumn Header="Defense" Binding="{Binding Path=Defense}" Width="Auto"/>
                 <DataGridTextColumn Header="Stamina" Binding="{Binding Path=Stamina}" Width="Auto"/>

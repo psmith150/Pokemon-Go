@@ -59,6 +59,13 @@ namespace Pokemon_Go_Database.Screens
         {
             await this.navigationService.OpenPopup<EditMovesetsViewModel>(species);
         }
+        public Array Types
+        {
+            get
+            {
+                return Enum.GetValues(typeof(Model.Type));
+            }
+        }
         #endregion
     }
 }

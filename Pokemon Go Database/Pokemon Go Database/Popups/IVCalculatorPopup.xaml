@@ -1,0 +1,38 @@
+﻿<UserControl x:Class="Pokemon_Go_Database.Popups.IVCalculatorPopup"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Pokemon_Go_Database.Popups"
+             xmlns:scm="clr-namespace:System.ComponentModel;assembly=WindowsBase"
+             mc:Ignorable="d" 
+             d:DataContext="{d:DesignInstance Type=local:IVCalculatorViewModel}">
+    <UserControl.Resources>
+    </UserControl.Resources>
+    <Grid Background="{StaticResource MainBackgroundColor}" Width="600" Height="300">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Row="0" Text="{Binding Calculator.Pokemon.Species.Species, StringFormat={}{0}}" HorizontalAlignment="Center" FontSize="{StaticResource LargeFontSize}"/>
+        <StackPanel Grid.Row="1" Orientation="Horizontal">
+            <ComboBox ItemsSource="{Binding Session.Pokedex}" DisplayMemberPath="Species" IsReadOnly="{Binding IsNewPokemon}" SelectedItem="{Binding Calculator.Pokemon.Species}" Width="150"/>
+            <TextBox Text="{Binding Calculator.Pokemon.GameCP}" Width="20"/>
+            <TextBox Text="{Binding Calculator.Pokemon.GameHP}" Width="20"/>
+            <TextBox Text="{Binding Calculator.Pokemon.DustToPower}" Width="50"/>
+            <CheckBox IsChecked="{Binding Calculator.Pokemon.HasBeenPowered}"/>
+            <CheckBox IsChecked="{Binding Calculator.AttackBest}"/>
+            <CheckBox IsChecked="{Binding Calculator.StaminaBest}"/>
+            <CheckBox IsChecked="{Binding Calculator.DefenseBest}"/>
+            <ComboBox ItemsSource="{Binding IVLevels}" SelectedItem="{Binding Calculator.IVLevel}" Width="100"/>
+            <ComboBox ItemsSource="{Binding TotalIVLevels}" SelectedItem="{Binding Calculator.TotalIVLevel}" Width="100"/>
+        </StackPanel>
+        <StackPanel Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Center">
+            <Button Content="Close" Command="{Binding ExitPopupCommand}" Width="50"/>
+            <Separator Width="25" Background="Transparent"/>
+            <Button Content="Save" Command="{Binding SaveCommand}" Width="50"/>
+        </StackPanel>
+    </Grid>
+</UserControl>

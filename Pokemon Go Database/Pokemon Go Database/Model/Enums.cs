@@ -6,4 +6,5 @@ namespace Pokemon_Go_Database.Model
     public enum MoveType { Fast, Charge };
     public enum CombatType { Offense, Defense };
     public enum IVLevel { Low, Medium, High, Max };
+    public enum TotalIVLevel { Low, Medium, High, Max};
 }
