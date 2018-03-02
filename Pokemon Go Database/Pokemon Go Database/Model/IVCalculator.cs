@@ -1,6 +1,7 @@
 ﻿using GalaSoft.MvvmLight;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,24 +13,35 @@ namespace Pokemon_Go_Database.Model
         public IVCalculator(Pokemon pokemon)
         {
             this.Pokemon = pokemon;
-            if (this.Pokemon.GetAttackIV() >= this.Pokemon.GetStaminaIV() && this.Pokemon.GetAttackIV() >= this.Pokemon.GetDefenseIV())
+            if (this.Pokemon.GetAttackIV() >= this.Pokemon.GetDefenseIV() && this.Pokemon.GetAttackIV() >= this.Pokemon.GetStaminaIV())
             {
                 this.AttackBest = true;
-                GetIVLevels(this.Pokemon.GetAttackIV());
-            }
-            if (this.Pokemon.GetStaminaIV() >= this.Pokemon.GetAttackIV() && this.Pokemon.GetStaminaIV() >= this.Pokemon.GetDefenseIV())
-            {
-                this.DefenseBest = true;
-                GetIVLevels(this.Pokemon.GetStaminaIV());
             }
             if (this.Pokemon.GetDefenseIV() >= this.Pokemon.GetAttackIV() && this.Pokemon.GetDefenseIV() >= this.Pokemon.GetStaminaIV())
             {
-                this.StaminaBest = true;
-                GetIVLevels(this.Pokemon.GetDefenseIV());
+                this.DefenseBest = true;
             }
+            if (this.Pokemon.GetStaminaIV() >= this.Pokemon.GetAttackIV() && this.Pokemon.GetStaminaIV() >= this.Pokemon.GetDefenseIV())
+            {
+                this.StaminaBest = true;
+            }
+            this.GetIVLevels();
+            this.ValueCombinations = new ObservableCollection<ValueCombination>();
         }
 
         #region Public Properties
+        private ObservableCollection<ValueCombination> _ValueCombinations;
+        public ObservableCollection<ValueCombination> ValueCombinations
+        {
+            get
+            {
+                return this._ValueCombinations;
+            }
+            set
+            {
+                Set(ref this._ValueCombinations, value);
+            }
+        }
         private Pokemon _Pokemon;
         public Pokemon Pokemon
         {
@@ -78,8 +90,14 @@ namespace Pokemon_Go_Database.Model
                 Set(ref this._StaminaBest, value);
             }
         }
-        public IVLevel IVLevel { get; set; }
+        public IVLevel BestIVLevel { get; set; }
         public TotalIVLevel TotalIVLevel { get; set; }
+        #endregion
+
+        #region Private Fields
+        private IVLevel _AttackIVLevel;
+        private IVLevel _DefenseIVLevel;
+        private IVLevel _StaminaIVLevel;
         #endregion
 
         #region Public Methods
@@ -87,24 +105,24 @@ namespace Pokemon_Go_Database.Model
         {
             if (this.Pokemon == null)
                 return;
-            List<double> possibleLevels = new List<double>();
-            List<int> possibleAttackIVs = new List<int>();
-            List<int> possibleDefenseIVs = new List<int>();
-            List<int> possibleStaminaIVs = new List<int>();
-            List<ValueCombination> combinations = new List<ValueCombination>();
+            List<double> possibleLevels = GetPossibleLevels();
+            List<int> possibleAttackIVs = GetPossibleIVs(this._AttackIVLevel);
+            List<int> possibleDefenseIVs = GetPossibleIVs(this._DefenseIVLevel);
+            List<int> possibleStaminaIVs = GetPossibleIVs(this._StaminaIVLevel);
+            this.ValueCombinations.Clear();
             foreach (double level in possibleLevels)
             {
                 foreach (int attackIV in possibleAttackIVs)
                 {
-                    foreach (int staminaIV in possibleStaminaIVs)
+                    foreach (int defenseIV in possibleDefenseIVs)
                     {
-                        foreach (int defenseIV in possibleDefenseIVs)
+                        foreach (int staminaIV in possibleStaminaIVs)
                         {
                             int cp = Pokemon.GetCP(attackIV, staminaIV, defenseIV, level);
                             int hp = Pokemon.GetStamina(staminaIV, level);
                             if (cp == Pokemon.ActualCP && hp == Pokemon.ActualHP)
                             {
-                                combinations.Add(new ValueCombination(attackIV, staminaIV, defenseIV, level));
+                                this.ValueCombinations.Add(new ValueCombination(attackIV, defenseIV, staminaIV, level));
                             }
                         }
                     }
@@ -114,36 +132,48 @@ namespace Pokemon_Go_Database.Model
         #endregion
 
         #region Private Methods
-        private void GetIVLevels(int bestIV)
+        private void GetIVLevels()
         {
-            IVLevel ivLevel = IVLevel.Low;
             TotalIVLevel totalIVLevel = TotalIVLevel.Low;
             for (int i=0; i<Constants.IVLevelCutoffs.Count(); i++)
             {
-                if (bestIV <= Constants.IVLevelCutoffs[i])
-                    ivLevel = (IVLevel)i;
-                if (Pokemon.GetAttackIV() + Pokemon.GetStaminaIV() + Pokemon.GetDefenseIV() <= Constants.IVSumCutoffs[i])
+                if (this.Pokemon.GetAttackIV() >= Constants.IVLevelCutoffs[i])
+                    _AttackIVLevel = (IVLevel)i;
+                if (this.Pokemon.GetDefenseIV() >= Constants.IVLevelCutoffs[i])
+                    _DefenseIVLevel = (IVLevel)i;
+                if (this.Pokemon.GetStaminaIV() >= Constants.IVLevelCutoffs[i])
+                    _StaminaIVLevel = (IVLevel)i;
+                if (Pokemon.GetAttackIV() + Pokemon.GetStaminaIV() + Pokemon.GetDefenseIV() >= Constants.IVSumCutoffs[i])
                     totalIVLevel = (TotalIVLevel)i;
             }
-            this.IVLevel = ivLevel;
+            IVLevel[] tempArray = {_AttackIVLevel, _DefenseIVLevel, _StaminaIVLevel};
+            this.BestIVLevel = tempArray.Max();
             this.TotalIVLevel = totalIVLevel;
         }
-        #endregion
 
-        #region Value Combination Class
-        private class ValueCombination
+        private List<int> GetPossibleIVs(IVLevel level)
         {
-            public ValueCombination(int attackIV = 0, int staminaIV = 0, int defenseIV = 0, double level = 1.0)
+            List<int> values = new List<int>();
+            int endIndex = (level == IVLevel.Max) ? Constants.IVLevelCutoffs.Max()+1 : Constants.IVLevelCutoffs[(int)level + 1];
+            int startIndex = Constants.IVLevelCutoffs[(int)level];
+            for (int i = startIndex; i < endIndex; i++)
             {
-                AttackIV = attackIV;
-                StaminaIV = staminaIV;
-                DefenseIV = defenseIV;
-                Level = level;
+                values.Add(i);
             }
-            public int AttackIV { get; set; }
-            public int StaminaIV { get; set; }
-            public int DefenseIV { get; set; }
-            public double Level { get; set; }
+            return values;
+        }
+        private List<double> GetPossibleLevels()
+        {
+            List<double> values = new List<double>();
+            double endIndex = (this.Pokemon.DustToPower == Constants.DustCutoffs.Max()) ? Constants.DustLevelCutoffs.Max() + 0.5 : Constants.DustLevelCutoffs[Array.IndexOf(Constants.DustCutoffs, this.Pokemon.DustToPower)+1];
+            double startIndex = Constants.DustLevelCutoffs[Array.IndexOf(Constants.DustCutoffs, this.Pokemon.DustToPower)];
+            for (double i = startIndex; i < endIndex; i+= 0.5)
+            {
+                if (!this.Pokemon.HasBeenPowered && (int)(i * 2) % 2 == 1)
+                    continue;
+                values.Add(i);
+            }
+            return values;
         }
         #endregion
     }

@@ -16,7 +16,12 @@
         </CollectionViewSource>
     </UserControl.Resources>
     <Grid Background="{StaticResource MainBackgroundColor}">
-        <DataGrid Name="PokemonGrid" ItemsSource="{Binding Source={StaticResource PokemonView}}" HorizontalAlignment="Stretch" AutoGenerateColumns="False">
+        <DataGrid Name="PokemonGrid" ItemsSource="{Binding Source={StaticResource PokemonView}}" HorizontalAlignment="Stretch" AutoGenerateColumns="False" SelectedItem="{Binding SelectedPokemon}">
+            <DataGrid.ContextMenu>
+                <ContextMenu>
+                    <MenuItem Header="CheckIVs" Command="{Binding CheckIVCommand}"/>
+                </ContextMenu>
+            </DataGrid.ContextMenu>
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Number" Binding="{Binding Path=Species.Number}" Width="Auto" IsReadOnly="True"/>
                 <DataGridComboBoxColumn Header="Species" Width="Auto" SelectedItemBinding="{Binding Species}" DisplayMemberPath="Species">

@@ -14,17 +14,7 @@ namespace Pokemon_Go_Database.Model
     [Serializable]
     public class PokedexEntry : ObservableObject
     {
-        private int _Number; //Pokemon number
-        private String _Species; //Pokemon species name
-        private Type _Type1; //Pokemon's first type
-        private Type _Type2; //Pokemon's second type
-        private MyObservableCollection<PokedexFastMoveWrapper> _FastMoves; //Pokemon's fast moves
-        private MyObservableCollection<PokedexChargeMoveWrapper> _ChargeMoves; //Pokemon's charge moves
-        private MyObservableCollection<Moveset> _Movesets; //Pokemon's moveset
-        private int _Attack; //Pokemon's attack stat
-        private int _Defense; //Pokemon's defense stat
-        private int _Stamina; //Pokemon's stamina stat
-
+        #region Constructors
         public PokedexEntry()
         {
             Number = 0;
@@ -58,7 +48,9 @@ namespace Pokemon_Go_Database.Model
             FastMoves.CollectionChanged += FastMovesChanged;
             ChargeMoves.CollectionChanged += ChargeMovesChanged;
         }
+        #endregion
 
+        #region Event Handlers
         private void ChargeMovesChanged(object sender, System.Collections.Specialized.NotifyCollectionChangedEventArgs e)
         {
             if (e.Action == NotifyCollectionChangedAction.Remove)
@@ -118,9 +110,10 @@ namespace Pokemon_Go_Database.Model
                 }
             }
         }
+        #endregion
 
         #region Public Properties
-
+        private int _Number; //Pokemon number
         public int Number
         {
             get
@@ -134,6 +127,7 @@ namespace Pokemon_Go_Database.Model
             }
         }
 
+        private String _Species; //Pokemon species name
         public String Species
         {
             get
@@ -147,6 +141,7 @@ namespace Pokemon_Go_Database.Model
             }
         }
 
+        private Type _Type1; //Pokemon's first type
         public Type Type1
         {
             get
@@ -160,6 +155,7 @@ namespace Pokemon_Go_Database.Model
             }
         }
 
+        private Type _Type2; //Pokemon's second type
         public Type Type2
         {
             get
@@ -173,6 +169,7 @@ namespace Pokemon_Go_Database.Model
             }
         }
 
+        private MyObservableCollection<PokedexFastMoveWrapper> _FastMoves; //Pokemon's fast moves
         public MyObservableCollection<PokedexFastMoveWrapper> FastMoves
         {
             get
@@ -185,6 +182,8 @@ namespace Pokemon_Go_Database.Model
                 RaisePropertyChanged("FastMoves");
             }
         }
+
+        private MyObservableCollection<PokedexChargeMoveWrapper> _ChargeMoves; //Pokemon's charge moves
         public MyObservableCollection<PokedexChargeMoveWrapper> ChargeMoves
         {
             get
@@ -197,6 +196,8 @@ namespace Pokemon_Go_Database.Model
                 RaisePropertyChanged("ChargeMoves");
             }
         }
+
+        private MyObservableCollection<Moveset> _Movesets; //Pokemon's moveset
         [XmlIgnore]
         public MyObservableCollection<Moveset> Movesets
         {
@@ -209,6 +210,8 @@ namespace Pokemon_Go_Database.Model
                 Set(ref this._Movesets, value);
             }
         }
+
+        private int _Attack; //Pokemon's attack stat
         public int Attack
         {
             get
@@ -220,6 +223,8 @@ namespace Pokemon_Go_Database.Model
                 _Attack = value;
             }
         }
+
+        private int _Defense; //Pokemon's defense stat
         public int Defense
         {
             get
@@ -231,6 +236,8 @@ namespace Pokemon_Go_Database.Model
                 _Defense = value;
             }
         }
+
+        private int _Stamina; //Pokemon's stamina stat
         public int Stamina
         {
             get

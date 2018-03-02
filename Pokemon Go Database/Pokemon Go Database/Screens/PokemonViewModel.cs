@@ -17,6 +17,7 @@ namespace Pokemon_Go_Database.Screens
     public class PokemonViewModel : ScreenViewModel
     {
         #region Commands
+        public ICommand CheckIVCommand { get; private set; }
         #endregion
 
         private readonly NavigationService navigationService;
@@ -24,6 +25,8 @@ namespace Pokemon_Go_Database.Screens
         public PokemonViewModel(NavigationService navigationService, SessionService session) : base(session)
         {
             this.navigationService = navigationService;
+
+            this.CheckIVCommand = new RelayCommand(async () => await CheckIVAsync());
 
             this.AllSpecies = this.Session.Pokedex;
             this.MyPokemon = this.Session.MyPokemon;
@@ -40,6 +43,7 @@ namespace Pokemon_Go_Database.Screens
         }
 
         #region Public Properties
+        public Pokemon SelectedPokemon { get; set; }
         private MyObservableCollection<Pokemon> _MyPokemon;
         public MyObservableCollection<Pokemon> MyPokemon
         {
@@ -68,6 +72,12 @@ namespace Pokemon_Go_Database.Screens
         #endregion
 
         #region Private Methods
+        private async Task CheckIVAsync()
+        {
+            if (this.SelectedPokemon == null)
+                return;
+            await navigationService.OpenPopup<IVCalculatorViewModel>(new IVCalculator(this.SelectedPokemon));
+        }
         #endregion
     }
 }

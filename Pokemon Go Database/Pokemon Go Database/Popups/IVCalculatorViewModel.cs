@@ -47,8 +47,19 @@ namespace Pokemon_Go_Database.Popups
         #endregion
 
         #region Public Properties
-        public IVCalculator Calculator { get; set; }
-        public bool IsNewPokemon { get; set; }
+        private IVCalculator _Calculator;
+        public IVCalculator Calculator
+        {
+            get
+            {
+                return this._Calculator;
+            }
+            set
+            {
+                Set(ref this._Calculator, value);
+            }
+        }
+        public bool IsNotNewPokemon { get; set; }
         public Array IVLevels
         {
             get
@@ -61,6 +72,13 @@ namespace Pokemon_Go_Database.Popups
             get
             {
                 return Enum.GetValues(typeof(Model.TotalIVLevel));
+            }
+        }
+        public int[] DustValues
+        {
+            get
+            {
+                return Constants.DustCutoffs;
             }
         }
         #endregion

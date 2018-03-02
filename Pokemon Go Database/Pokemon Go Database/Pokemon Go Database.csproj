@@ -102,6 +102,7 @@
     <Compile Include="Model\PokedexEntry.cs" />
     <Compile Include="Model\PokedexFastMoveWrapper.cs" />
     <Compile Include="Model\Pokemon.cs" />
+    <Compile Include="Model\ValueCombination.cs" />
     <Compile Include="Popups\IVCalculatorPopup.xaml.cs">
       <DependentUpon>IVCalculatorPopup.xaml</DependentUpon>
     </Compile>

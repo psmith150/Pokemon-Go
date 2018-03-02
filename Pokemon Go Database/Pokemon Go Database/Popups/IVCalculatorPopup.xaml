@@ -9,27 +9,67 @@
              d:DataContext="{d:DesignInstance Type=local:IVCalculatorViewModel}">
     <UserControl.Resources>
     </UserControl.Resources>
-    <Grid Background="{StaticResource MainBackgroundColor}" Width="600" Height="300">
+    <Grid Background="{StaticResource MainBackgroundColor}" Width="700" Height="300">
         <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
         <TextBlock Grid.Row="0" Text="{Binding Calculator.Pokemon.Species.Species, StringFormat={}{0}}" HorizontalAlignment="Center" FontSize="{StaticResource LargeFontSize}"/>
-        <StackPanel Grid.Row="1" Orientation="Horizontal">
-            <ComboBox ItemsSource="{Binding Session.Pokedex}" DisplayMemberPath="Species" IsReadOnly="{Binding IsNewPokemon}" SelectedItem="{Binding Calculator.Pokemon.Species}" Width="150"/>
-            <TextBox Text="{Binding Calculator.Pokemon.GameCP}" Width="20"/>
-            <TextBox Text="{Binding Calculator.Pokemon.GameHP}" Width="20"/>
-            <TextBox Text="{Binding Calculator.Pokemon.DustToPower}" Width="50"/>
-            <CheckBox IsChecked="{Binding Calculator.Pokemon.HasBeenPowered}"/>
-            <CheckBox IsChecked="{Binding Calculator.AttackBest}"/>
-            <CheckBox IsChecked="{Binding Calculator.StaminaBest}"/>
-            <CheckBox IsChecked="{Binding Calculator.DefenseBest}"/>
-            <ComboBox ItemsSource="{Binding IVLevels}" SelectedItem="{Binding Calculator.IVLevel}" Width="100"/>
-            <ComboBox ItemsSource="{Binding TotalIVLevels}" SelectedItem="{Binding Calculator.TotalIVLevel}" Width="100"/>
+        <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center">
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Pokemon:"/>
+                <ComboBox ItemsSource="{Binding Session.Pokedex}" DisplayMemberPath="Species" IsReadOnly="{Binding IsNotNewPokemon}" SelectedItem="{Binding Calculator.Pokemon.Species}" Width="150"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="CP:"/>
+                <TextBox Text="{Binding Calculator.Pokemon.GameCP}" Width="50"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="HP:"/>
+                <TextBox Text="{Binding Calculator.Pokemon.GameHP}" Width="50"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Dust:"/>
+                <ComboBox ItemsSource="{Binding DustValues}" SelectedItem="{Binding Calculator.Pokemon.DustToPower}" Width="100"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Has Been Powered Up:"/>
+                <CheckBox IsChecked="{Binding Calculator.Pokemon.HasBeenPowered}"/>
+            </StackPanel>
         </StackPanel>
-        <StackPanel Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Center">
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center">
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Attack is Best IV:"/>
+                <CheckBox IsChecked="{Binding Calculator.AttackBest}"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Defense is Best IV:"/>
+                <CheckBox IsChecked="{Binding Calculator.DefenseBest}"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Stamina is Best IV:"/>
+                <CheckBox IsChecked="{Binding Calculator.StaminaBest}"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Best IV Level:"/>
+                <ComboBox ItemsSource="{Binding IVLevels}" SelectedItem="{Binding Calculator.BestIVLevel}" Width="75"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Overall IV Level:"/>
+                <ComboBox ItemsSource="{Binding TotalIVLevels}" SelectedItem="{Binding Calculator.TotalIVLevel}" Width="75"/>
+            </StackPanel>
+        </StackPanel>
+        <DataGrid Grid.Row="3" ItemsSource="{Binding Calculator.ValueCombinations}" IsReadOnly="True" GridLinesVisibility="Vertical" AutoGenerateColumns="False" HorizontalAlignment="Stretch">
+            <DataGridTextColumn Header="Level" Binding="{Binding Path=Level, Mode=OneWay}" Width="Auto"/>
+            <DataGridTextColumn Header="Attack IV" Binding="{Binding Path=AttackIV, Mode=OneWay}" Width="Auto"/>
+            <DataGridTextColumn Header="Defense IV" Binding="{Binding Path=DefenseIV, Mode=OneWay}" Width="Auto"/>
+            <DataGridTextColumn Header="Stamina IV" Binding="{Binding Path=StaminaIV, Mode=OneWay}" Width="Auto"/>
+            <DataGridTextColumn Header="IV %" Binding="{Binding Path=IVPercentage, StringFormat=P2 ,Mode=OneWay}" Width="Auto"/>
+        </DataGrid>
+        <StackPanel Grid.Row="4" Orientation="Horizontal" HorizontalAlignment="Center">
             <Button Content="Close" Command="{Binding ExitPopupCommand}" Width="50"/>
             <Separator Width="25" Background="Transparent"/>
             <Button Content="Save" Command="{Binding SaveCommand}" Width="50"/>
