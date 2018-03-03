@@ -33,7 +33,7 @@ namespace Pokemon_Go_Database.Model
 
         static Constants()
         {
-            double[] values = new double[78];
+            double[] values = new double[79];
             int tempIndex = 0;
             for (int i = 0; i < values.Length; i++)
             {

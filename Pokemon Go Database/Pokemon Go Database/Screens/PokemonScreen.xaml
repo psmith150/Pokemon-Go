@@ -11,7 +11,12 @@
     <UserControl.Resources>
         <CollectionViewSource x:Key="PokemonView" Source="{Binding MyPokemon}">
             <CollectionViewSource.SortDescriptions>
-                <scm:SortDescription PropertyName="Species.Number" Direction="Ascending"/>
+                <scm:SortDescription PropertyName="GameCP" Direction="Descending"/>
+            </CollectionViewSource.SortDescriptions>
+        </CollectionViewSource>
+        <CollectionViewSource x:Key="SpeciesView" Source="{Binding AllSpecies}">
+            <CollectionViewSource.SortDescriptions>
+                <scm:SortDescription PropertyName="Species" Direction="Ascending"/>
             </CollectionViewSource.SortDescriptions>
         </CollectionViewSource>
     </UserControl.Resources>
@@ -24,20 +29,8 @@
             </DataGrid.ContextMenu>
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Number" Binding="{Binding Path=Species.Number}" Width="Auto" IsReadOnly="True"/>
-                <DataGridComboBoxColumn Header="Species" Width="Auto" SelectedItemBinding="{Binding Species}" DisplayMemberPath="Species">
-                    <DataGridComboBoxColumn.ElementStyle>
-                        <Style TargetType="{x:Type ComboBox}">
-                            <Setter Property="ItemsSource" Value="{Binding Path=DataContext.AllSpecies, RelativeSource={RelativeSource AncestorType={x:Type UserControl}}}" />
-                        </Style>
-                    </DataGridComboBoxColumn.ElementStyle>
-                    <DataGridComboBoxColumn.EditingElementStyle>
-                        <Style TargetType="{x:Type ComboBox}">
-                            <Setter Property="ItemsSource" Value="{Binding Path=DataContext.AllSpecies, RelativeSource={RelativeSource AncestorType={x:Type UserControl}}}" />
-                            <!--<EventSetter Event="RequestBringIntoView" Handler="OnRequestBringIntoView"/>-->
-                        </Style>
-                    </DataGridComboBoxColumn.EditingElementStyle>
-                </DataGridComboBoxColumn>
                 <DataGridTextColumn Header="Name" Binding="{Binding Path=Name}" Width="Auto"/>
+                <DataGridComboBoxColumn Header="Species" Width="Auto" SelectedItemBinding="{Binding Path=Species}" DisplayMemberPath="Species" ItemsSource="{Binding Source={StaticResource SpeciesView}}"/>
                 <DataGridTextColumn Header="Type1" Binding="{Binding Path=Species.Type1}" Width="Auto" IsReadOnly="True"/>
                 <DataGridTextColumn Header="Type2" Binding="{Binding Path=Species.Type2}" Width="Auto" IsReadOnly="True"/>
                 <DataGridComboBoxColumn Header="Fast Move" Width="Auto" SelectedItemBinding="{Binding FastMove}" DisplayMemberPath="FastMove.Name" SortMemberPath="FastMove.FastMove.Name">
@@ -68,6 +61,9 @@
                 </DataGridComboBoxColumn>
                 <DataGridTextColumn Header="Game CP" Binding="{Binding Path=GameCP}" Width="Auto"/>
                 <DataGridTextColumn Header="Game HP" Binding="{Binding Path=GameHP}" Width="Auto"/>
+                <DataGridTextColumn Header="Actual CP" Binding="{Binding Path=ActualCP}" Width="Auto"/>
+                <DataGridTextColumn Header="Actual HP" Binding="{Binding Path=ActualHP}" Width="Auto"/>
+                <DataGridTextColumn Header="Stardust" Binding="{Binding Path=DustToPower}" Width="Auto"/>
                 <DataGridTextColumn Header="Attack IV" Binding="{Binding Path=AttackIVExpression}" Width="Auto"/>
                 <DataGridTextColumn Header="Defense IV" Binding="{Binding Path=DefenseIVExpression}" Width="Auto"/>
                 <DataGridTextColumn Header="Stamina IV" Binding="{Binding Path=StaminaIVExpression}" Width="Auto"/>
@@ -76,6 +72,7 @@
                 <DataGridTextColumn Header="Attack" Binding="{Binding Path=Attack}" Width="Auto" IsReadOnly="True"/>
                 <DataGridTextColumn Header="Defense" Binding="{Binding Path=Defense}" Width="Auto" IsReadOnly="True"/>
                 <DataGridTextColumn Header="Stamina" Binding="{Binding Path=Stamina}" Width="Auto" IsReadOnly="True"/>
+                <DataGridTextColumn Header="CP At Max" Binding="{Binding Path=MaxCP}" Width="Auto" IsReadOnly="True"/>
                 <DataGridTextColumn Header="Max Possible CP" Binding="{Binding Path=Species.MaxCP}" Width="Auto" IsReadOnly="True"/>
             </DataGrid.Columns>
         </DataGrid>

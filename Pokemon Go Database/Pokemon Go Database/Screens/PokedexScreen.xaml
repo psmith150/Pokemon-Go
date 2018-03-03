@@ -26,8 +26,8 @@
                 <DataGridTextColumn Header="Attack" Binding="{Binding Path=Attack}" Width="Auto"/>
                 <DataGridTextColumn Header="Defense" Binding="{Binding Path=Defense}" Width="Auto"/>
                 <DataGridTextColumn Header="Stamina" Binding="{Binding Path=Stamina}" Width="Auto"/>
-                <DataGridTextColumn Header="Total Stats" Binding="{Binding Path=TotalStats}" Width="Auto"/>
-                <DataGridTextColumn Header="Max CP" Binding="{Binding Path=MaxCP}" Width="Auto"/>
+                <DataGridTextColumn Header="Total Stats" Binding="{Binding Path=TotalStats, Mode=OneWay}" IsReadOnly="True" Width="Auto"/>
+                <DataGridTextColumn Header="Max CP" Binding="{Binding Path=MaxCP, Mode=OneWay}" IsReadOnly="True" Width="Auto"/>
                 <DataGridTemplateColumn Header="Movesets" IsReadOnly="True">
                     <!--<DataGridTemplateColumn.CellEditingTemplate>
                         <DataTemplate>

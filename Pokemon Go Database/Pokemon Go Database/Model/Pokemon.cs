@@ -207,7 +207,15 @@ namespace Pokemon_Go_Database.Model
         {
             get
             {
-                return this.GetStamina();
+                return (int)this.GetStamina();
+            }
+        }
+        [XmlIgnore]
+        public double CPM
+        {
+            get
+            {
+                return this.GetCpmValue();
             }
         }
         [XmlIgnore]
@@ -224,7 +232,7 @@ namespace Pokemon_Go_Database.Model
         {
             get
             {
-                return this.GetAttack();
+                return (int)this.GetAttack();
             }
         }
 
@@ -233,7 +241,7 @@ namespace Pokemon_Go_Database.Model
         {
             get
             {
-                return this.GetDefense();
+                return (int)this.GetDefense();
             }
         }
         [XmlIgnore]
@@ -241,7 +249,7 @@ namespace Pokemon_Go_Database.Model
         {
             get
             {
-                return this.GetStamina();
+                return (int)this.GetStamina();
             }
         }
 
@@ -356,31 +364,31 @@ namespace Pokemon_Go_Database.Model
             return Math.Round((values.Average() * 2.0)) / 2.0; //Used to round to the nearest 1/2
         }
 
-        public int GetAttack(int attackIV = -1, double level = -1.0)
+        public double GetAttack(int attackIV = -1, double level = -1.0)
         {
             if (attackIV == -1)
             {
                 attackIV = this.GetAttackIV();
             }
-            return (int)Math.Round((Species.Attack + attackIV) * GetCpmValue(level));
+            return (Species.Attack + attackIV) * GetCpmValue(level);
         }
 
-        public int GetStamina(int staminaIV = -1, double level = -1.0)
+        public double GetStamina(int staminaIV = -1, double level = -1.0)
         {
             if (staminaIV == -1)
             {
                 staminaIV = this.GetStaminaIV();
             }
-            return (int)Math.Round((Species.Stamina + staminaIV) * GetCpmValue(level));
+            return (Species.Stamina + staminaIV) * GetCpmValue(level);
         }
 
-        public int GetDefense(int defenseIV = -1, double level = -1.0)
+        public double GetDefense(int defenseIV = -1, double level = -1.0)
         {
             if (defenseIV == -1)
             {
                 defenseIV = this.GetDefenseIV();
             }
-            return (int)Math.Round((Species.Defense + defenseIV) * GetCpmValue(level));
+            return (Species.Defense + defenseIV) * GetCpmValue(level);
         }
 
         public double GetCpmValue(double level = -1.0)
@@ -389,7 +397,7 @@ namespace Pokemon_Go_Database.Model
             {
                 level = this.GetLevel();
             }
-            return Constants.CpmValues[(int)(this.GetLevel() * 2 - 2)];
+            return Constants.CpmValues[(int)(level * 2 - 2)];
         }
 
         public int GetCP(int attackIV = -1, int staminaIV = -1, int defenseIV = -1, double level = -1.0)
@@ -410,7 +418,7 @@ namespace Pokemon_Go_Database.Model
             {
                 level = this.GetLevel();
             }
-            return (int)(((double)this.GetAttack(attackIV, level) * Math.Pow((double)this.GetStamina(attackIV, level), 0.5) * Math.Pow((double)this.GetDefense(attackIV, level), 0.5) * Math.Pow(this.GetCpmValue(level), 2)) / 10.0);
+            return (int) Math.Truncate((this.GetAttack(attackIV, level) * Math.Pow(this.GetStamina(staminaIV, level), 0.5) * Math.Pow(this.GetDefense(defenseIV, level), 0.5)) / 10.0);
 
         }
         #endregion
@@ -419,7 +427,14 @@ namespace Pokemon_Go_Database.Model
         private void UpdateAllCalculatedProperties()
         {
             RaisePropertyChanged("Attack");
+            RaisePropertyChanged("Defense");
+            RaisePropertyChanged("Stamina");
+            RaisePropertyChanged("Attack");
             RaisePropertyChanged("Level");
+            RaisePropertyChanged("ActualCP");
+            RaisePropertyChanged("ActualHP");
+            RaisePropertyChanged("MaxCP");
+            RaisePropertyChanged("CPM");
             //TODO
         }
         #endregion

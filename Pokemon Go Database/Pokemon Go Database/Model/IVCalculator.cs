@@ -119,7 +119,7 @@ namespace Pokemon_Go_Database.Model
                         foreach (int staminaIV in possibleStaminaIVs)
                         {
                             int cp = Pokemon.GetCP(attackIV, staminaIV, defenseIV, level);
-                            int hp = Pokemon.GetStamina(staminaIV, level);
+                            int hp = (int)Pokemon.GetStamina(staminaIV, level);
                             if (cp == Pokemon.ActualCP && hp == Pokemon.ActualHP)
                             {
                                 this.ValueCombinations.Add(new ValueCombination(attackIV, defenseIV, staminaIV, level));

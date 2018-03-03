@@ -220,7 +220,9 @@ namespace Pokemon_Go_Database.Model
             }
             set
             {
-                _Attack = value;
+                Set(ref this._Attack, value);
+                RaisePropertyChanged("TotalStats");
+                RaisePropertyChanged("MaxCP");
             }
         }
 
@@ -233,7 +235,9 @@ namespace Pokemon_Go_Database.Model
             }
             set
             {
-                _Defense = value;
+                Set(ref this._Defense, value);
+                RaisePropertyChanged("TotalStats");
+                RaisePropertyChanged("MaxCP");
             }
         }
 
@@ -246,7 +250,9 @@ namespace Pokemon_Go_Database.Model
             }
             set
             {
-                _Stamina = value;
+                Set(ref this._Stamina, value);
+                RaisePropertyChanged("TotalStats");
+                RaisePropertyChanged("MaxCP");
             }
         }
 
