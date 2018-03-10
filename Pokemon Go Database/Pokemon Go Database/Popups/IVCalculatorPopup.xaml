@@ -14,6 +14,8 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
@@ -62,16 +64,21 @@
                 <ComboBox ItemsSource="{Binding TotalIVLevels}" SelectedItem="{Binding Calculator.TotalIVLevel}" Width="75"/>
             </StackPanel>
         </StackPanel>
-        <DataGrid Grid.Row="3" ItemsSource="{Binding Calculator.ValueCombinations}" IsReadOnly="True" GridLinesVisibility="Vertical" AutoGenerateColumns="False" HorizontalAlignment="Stretch">
+        <Button Grid.Row="3" Content="Calculate IVs" Command="{Binding CalculateIVsCommand}"/>
+        <StackPanel Grid.Row="4" HorizontalAlignment="Center" Orientation="Horizontal">
+            <Label Content="Average Perfection: " VerticalAlignment="Center"/>
+            <TextBlock Text="{Binding Calculator.AverageIVPercentage, StringFormat=P2, Mode=OneWay}" Width="50" VerticalAlignment="Center"/>
+        </StackPanel>
+        <DataGrid Grid.Row="5" ItemsSource="{Binding Calculator.ValueCombinations}" IsReadOnly="True" GridLinesVisibility="Vertical" AutoGenerateColumns="False" HorizontalAlignment="Stretch">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Level" Binding="{Binding Path=Level, Mode=OneWay}" Width="Auto"/>
-                <DataGridTextColumn Header="Attack IV" Binding="{Binding Path=AttackIV, Mode=OneWay}" Width="Auto"/>
-                <DataGridTextColumn Header="Defense IV" Binding="{Binding Path=DefenseIV, Mode=OneWay}" Width="Auto"/>
-                <DataGridTextColumn Header="Stamina IV" Binding="{Binding Path=StaminaIV, Mode=OneWay}" Width="Auto"/>
-                <DataGridTextColumn Header="IV %" Binding="{Binding Path=IVPercentage, StringFormat=P2 ,Mode=OneWay}" Width="Auto"/>
+                <DataGridTextColumn Header="Level" Binding="{Binding Path=Level, Mode=OneWay}" Width="*"/>
+                <DataGridTextColumn Header="Attack IV" Binding="{Binding Path=AttackIV, Mode=OneWay}" Width="*"/>
+                <DataGridTextColumn Header="Defense IV" Binding="{Binding Path=DefenseIV, Mode=OneWay}" Width="*"/>
+                <DataGridTextColumn Header="Stamina IV" Binding="{Binding Path=StaminaIV, Mode=OneWay}" Width="*"/>
+                <DataGridTextColumn Header="IV %" Binding="{Binding Path=IVPercentage, StringFormat=P2 ,Mode=OneWay}" Width="*"/>
             </DataGrid.Columns>
         </DataGrid>
-        <StackPanel Grid.Row="4" Orientation="Horizontal" HorizontalAlignment="Center">
+        <StackPanel Grid.Row="6" Orientation="Horizontal" HorizontalAlignment="Center">
             <Button Content="Close" Command="{Binding ExitPopupCommand}" Width="50"/>
             <Separator Width="25" Background="Transparent"/>
             <Button Content="Save" Command="{Binding SaveCommand}" Width="50"/>

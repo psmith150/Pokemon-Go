@@ -18,6 +18,7 @@ namespace Pokemon_Go_Database.Screens
     {
         #region Commands
         public ICommand CheckIVCommand { get; private set; }
+        public ICommand AddNewPokemonCommand { get; private set; }
         #endregion
 
         private readonly NavigationService navigationService;
@@ -27,6 +28,7 @@ namespace Pokemon_Go_Database.Screens
             this.navigationService = navigationService;
 
             this.CheckIVCommand = new RelayCommand(async () => await CheckIVAsync());
+            this.AddNewPokemonCommand = new RelayCommand(async () => await AddNewPokemonAsync());
 
             this.AllSpecies = this.Session.Pokedex;
             this.MyPokemon = this.Session.MyPokemon;
@@ -76,7 +78,15 @@ namespace Pokemon_Go_Database.Screens
         {
             if (this.SelectedPokemon == null)
                 return;
-            await navigationService.OpenPopup<IVCalculatorViewModel>(new IVCalculator(this.SelectedPokemon));
+            await navigationService.OpenPopup<IVCalculatorViewModel>(new IVCalculatorWrapper(new IVCalculator(this.SelectedPokemon)));
+        }
+        private async Task AddNewPokemonAsync()
+        {
+            Pokemon newPokemon = new Pokemon();
+            IVCalculator calculator = new IVCalculator(newPokemon);
+            IVCalculatorPopupEventArgs args =  await navigationService.OpenPopup<IVCalculatorViewModel>(new IVCalculatorWrapper(calculator, true)) as IVCalculatorPopupEventArgs;
+            if (args != null)
+                this.Session.MyPokemon.Add(args.NewPokemon);
         }
         #endregion
     }

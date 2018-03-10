@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace Pokemon_Go_Database.Model
 {
+    [Serializable]
     public class PokedexChargeMoveWrapper : ObservableObject
     {
         #region Constructor

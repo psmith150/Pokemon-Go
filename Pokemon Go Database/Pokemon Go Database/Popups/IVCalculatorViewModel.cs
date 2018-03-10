@@ -17,6 +17,7 @@ namespace Pokemon_Go_Database.Popups
     {
         #region Commands
         public ICommand ExitPopupCommand { get; private set; }
+        public ICommand CalculateIVsCommand { get; private set; }
         public ICommand SaveCommand { get; private set; }
         #endregion
 
@@ -25,12 +26,15 @@ namespace Pokemon_Go_Database.Popups
 
             this.ExitPopupCommand = new RelayCommand(() => Exit());
             this.SaveCommand = new RelayCommand(() => Save());
+            this.CalculateIVsCommand = new RelayCommand(() => this.Calculator.CalculateValues());
 
         }
 
         public override void Initialize(object param)
         {
-            this.Calculator = param as IVCalculator;
+            IVCalculatorWrapper wrapper = param as IVCalculatorWrapper;
+            this.Calculator = wrapper.Calculator;
+            this.IsNotNewPokemon = !wrapper.IsNewPokemon;
             if (Calculator == null)
             {
                 MessageBox.Show("Invalid pokemon!", "Invalid Pokemon", MessageBoxButton.OK);
@@ -101,8 +105,42 @@ namespace Pokemon_Go_Database.Popups
 
         private void Save()
         {
-            //TODO: implement saving
-            this.ClosePopup(null);
+            this.Calculator.Pokemon.AttackIVExpression = "";
+            this.Calculator.Pokemon.DefenseIVExpression = "";
+            this.Calculator.Pokemon.StaminaIVExpression = "";
+            this.Calculator.Pokemon.LevelExpression = "";
+            List<int> attackIVs = new List<int>();
+            List<int> defenseIVs = new List<int>();
+            List<int> staminaIVs = new List<int>();
+            List<double> levels = new List<double>();
+            foreach (ValueCombination combination in this.Calculator.ValueCombinations)
+            {
+                if (!attackIVs.Contains(combination.AttackIV))
+                    attackIVs.Add(combination.AttackIV);
+                if (!defenseIVs.Contains(combination.DefenseIV))
+                    defenseIVs.Add(combination.DefenseIV);
+                if (!staminaIVs.Contains(combination.StaminaIV))
+                    staminaIVs.Add(combination.StaminaIV);
+                if (!levels.Contains(combination.Level))
+                    levels.Add(combination.Level);
+            }
+            this.Calculator.Pokemon.AttackIVExpression = string.Join("/", attackIVs.OrderBy(x => x).ToArray());
+            if (this.Calculator.Pokemon.AttackIVExpression.Equals(""))
+                this.Calculator.Pokemon.AttackIVExpression = "0";
+            this.Calculator.Pokemon.DefenseIVExpression = string.Join("/", defenseIVs.OrderBy(x => x).ToArray());
+            if (this.Calculator.Pokemon.DefenseIVExpression.Equals(""))
+                this.Calculator.Pokemon.DefenseIVExpression = "0";
+            this.Calculator.Pokemon.StaminaIVExpression = string.Join("/", staminaIVs.OrderBy(x => x).ToArray());
+            if (this.Calculator.Pokemon.StaminaIVExpression.Equals(""))
+                this.Calculator.Pokemon.StaminaIVExpression = "0";
+            this.Calculator.Pokemon.LevelExpression = string.Join("/", levels.OrderBy(x => x).ToArray());
+            if (this.Calculator.Pokemon.LevelExpression.Equals(""))
+                this.Calculator.Pokemon.LevelExpression = "1";
+
+            if (!this.IsNotNewPokemon)
+                this.ClosePopup(new IVCalculatorPopupEventArgs(this.Calculator.Pokemon));
+            else
+                this.ClosePopup(null);
         }
         #endregion
     }

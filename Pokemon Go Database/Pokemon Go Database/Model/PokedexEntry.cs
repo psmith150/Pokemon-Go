@@ -118,12 +118,11 @@ namespace Pokemon_Go_Database.Model
         {
             get
             {
-                return _Number;
+                return this._Number;
             }
             set
             {
-                _Number = value;
-                RaisePropertyChanged("Number");
+                Set(ref this._Number, value);
             }
         }
 
@@ -132,12 +131,11 @@ namespace Pokemon_Go_Database.Model
         {
             get
             {
-                return String.Copy(_Species);
+                return this._Species;
             }
             set
             {
-                _Species = value;
-                RaisePropertyChanged("Species");
+                Set(ref this._Species, value);
             }
         }
 
@@ -150,8 +148,7 @@ namespace Pokemon_Go_Database.Model
             }
             set
             {
-                _Type1 = value;
-                RaisePropertyChanged("Type1");
+                Set(ref this._Type1, value);
             }
         }
 
@@ -164,8 +161,7 @@ namespace Pokemon_Go_Database.Model
             }
             set
             {
-                _Type2 = value;
-                RaisePropertyChanged("Type2");
+                Set(ref this._Type2, value);
             }
         }
 
@@ -174,12 +170,11 @@ namespace Pokemon_Go_Database.Model
         {
             get
             {
-                return _FastMoves;
+                return this._FastMoves;
             }
             set
             {
-                _FastMoves = value;
-                RaisePropertyChanged("FastMoves");
+                Set(ref this._FastMoves, value);
             }
         }
 
@@ -188,12 +183,11 @@ namespace Pokemon_Go_Database.Model
         {
             get
             {
-                return _ChargeMoves;
+                return this._ChargeMoves;
             }
             set
             {
-                _ChargeMoves = value;
-                RaisePropertyChanged("ChargeMoves");
+                Set(ref this._ChargeMoves, value);
             }
         }
 
@@ -203,7 +197,7 @@ namespace Pokemon_Go_Database.Model
         {
             get
             {
-                return _Movesets;
+                return this._Movesets;
             }
             private set
             {

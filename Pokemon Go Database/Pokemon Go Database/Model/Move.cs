@@ -1,9 +1,12 @@
 ﻿using GalaSoft.MvvmLight;
 using System;
+using System.Xml.Serialization;
 
 namespace Pokemon_Go_Database.Model
 {
     [Serializable]
+    [XmlInclude(typeof(FastMove))]
+    [XmlInclude(typeof(ChargeMove))]
     public abstract class Move : ObservableObject
     {
         private string _name; //The name of the move

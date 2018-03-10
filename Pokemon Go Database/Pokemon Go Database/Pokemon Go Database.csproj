@@ -94,6 +94,7 @@
     <Compile Include="Model\FastMove.cs" />
     <Compile Include="Model\DataWrapper.cs" />
     <Compile Include="Model\IVCalculator.cs" />
+    <Compile Include="Model\IVCalculatorWrapper.cs" />
     <Compile Include="Model\MyObservableCollection.cs" />
     <Compile Include="Model\Enums.cs" />
     <Compile Include="Model\Moveset.cs" />
@@ -109,6 +110,7 @@
     <Compile Include="Popups\EditMovesetsPopup.xaml.cs">
       <DependentUpon>EditMovesetsPopup.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Popups\IVCalculatorPopupEventArgs.cs" />
     <Compile Include="Popups\IVCalculatorViewModel.cs" />
     <Compile Include="Popups\EditMovesetsViewModel.cs" />
     <Compile Include="Popups\PopupEventArgs.cs" />

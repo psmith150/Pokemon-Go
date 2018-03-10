@@ -204,7 +204,7 @@ namespace Pokemon_Go_Database.Services
                 {
                     pokemon.Species = this.Pokedex.Single(x => x.Species.Equals(pokemon.Species.Species));
                 }
-                catch (ArgumentException)
+                catch (Exception)
                 {
                     throw new ArgumentException("Cannot find matching species " + pokemon.Species.Species + " in Pokedex.");
                 }
@@ -212,7 +212,7 @@ namespace Pokemon_Go_Database.Services
                 {
                     pokemon.FastMove = pokemon.Species.FastMoves.Single(x => x.FastMove.Name.Equals(pokemon.FastMove.FastMove.Name));
                 }
-                catch (ArgumentException)
+                catch (Exception)
                 {
                     throw new ArgumentException($"Cannot find matching fast move {pokemon.FastMove.FastMove.Name} in fast move list for {pokemon.Species.Species}");
                 }
@@ -220,11 +220,18 @@ namespace Pokemon_Go_Database.Services
                 {
                     pokemon.ChargeMove = pokemon.Species.ChargeMoves.Single(x => x.ChargeMove.Name.Equals(pokemon.ChargeMove.ChargeMove.Name));
                 }
-                catch (ArgumentException)
+                catch (Exception)
                 {
                     throw new ArgumentException($"Cannot find matching charge move {pokemon.ChargeMove.ChargeMove.Name} in fast move list for {pokemon.Species.Species}");
                 }
-                tempPokemon.Add(pokemon);
+                try
+                {
+                    tempPokemon.Add(pokemon);
+                }
+                catch(Exception)
+                {
+                    string temp = pokemon.Name;
+                }
             }
             this.MyPokemon.InsertRange(tempPokemon);
         }

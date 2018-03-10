@@ -19,6 +19,9 @@ namespace Pokemon_Go_Database.Model
         {
             this.Name = name;
             this.Species = species;
+            this.AttackIVExpression = "0";
+            this.DefenseIVExpression = "0";
+            this.StaminaIVExpression = "0";
             this.LevelExpression = "1";
         }
 
@@ -40,7 +43,7 @@ namespace Pokemon_Go_Database.Model
         {
             get
             {
-                return _Species;;
+                return _Species; ;
             }
             set
             {
@@ -111,6 +114,7 @@ namespace Pokemon_Go_Database.Model
             set
             {
                 Set(ref _FastMove, value);
+                UpdateAllCalculatedProperties();
             }
         }
 
@@ -124,6 +128,7 @@ namespace Pokemon_Go_Database.Model
             set
             {
                 Set(ref _ChargeMove, value);
+                UpdateAllCalculatedProperties();
             }
         }
 
@@ -193,6 +198,14 @@ namespace Pokemon_Go_Database.Model
             }
         }
         #region Calculated Properties
+        [XmlIgnore]
+        public Moveset Moveset
+        {
+            get
+            {
+                return this.Species.Movesets.SingleOrDefault(x => x.FastMove == this.FastMove && x.ChargeMove == this.ChargeMove);
+            }
+        }
         [XmlIgnore]
         public int ActualCP
         {
@@ -267,26 +280,147 @@ namespace Pokemon_Go_Database.Model
         {
             get
             {
-                return this.GetCP(-1,-1,-1, Constants.MaxLevel);
+                return this.GetCP(-1, -1, -1, Constants.MaxLevel);
             }
         }
 
-        private float _offenseMovesetPercent;
-        private float _offenseDPS;
+        [XmlIgnore]
+        public double OffenseMovesetPercentage
+        {
+            get
+            {
+                if (this.Moveset == null)
+                    return 0.0;
+                double movesetDPS = this.Moveset.GetDPS(this.GetAttack(), this.Species.Type1, this.Species.Type2);
+                double maxDPS = -1.0;
+                foreach (Moveset moveset in this.Species.Movesets)
+                {
+                    maxDPS = moveset.GetDPS(this.GetAttack(), this.Species.Type1, this.Species.Type2) > maxDPS ? moveset.GetDPS(this.GetAttack(), this.Species.Type1, this.Species.Type2) : maxDPS;
+                }
+                return movesetDPS / maxDPS;
+            }
+        }
+        [XmlIgnore]
+        public double OffenseDPS
+        {
+            get
+            {
+                if (this.Moveset == null)
+                    return 0.0;
+                return this.Moveset.GetDPS(this.GetAttack(), this.Species.Type1, this.Species.Type2);
+            }
+        }
         private float _offenseDPSPercent;
-        private float _offenseDPSAtMax;
+        [XmlIgnore]
+        public double OffenseDPSAtMaxLevel
+        {
+            get
+            {
+                if (this.Moveset == null)
+                    return 0.0;
+                return this.Moveset.GetDPS(this.GetAttack(-1, Constants.MaxLevel), this.Species.Type1, this.Species.Type2);
+            }
+        }
         private float _offenseDPSPercentAtMax;
-        private float _timeToDeath;
-        private float _timeToDeathAtMax;
-        private float _offenseTotalDamage;
-        private float _offenseTotalDamageAtMax;
-        private float _defenseMovesetPercent;
-        private float _defenseDPS;
+        [XmlIgnore]
+        public double OffenseTotalDamage
+        {
+            get
+            {
+                if (this.Moveset == null)
+                    return 0.0;
+                return this.OffenseDPS * this.TimeToDeath;
+            }
+        }
+        [XmlIgnore]
+        public double OffenseTotalDamageAtMaxLevel
+        {
+            get
+            {
+                if (this.Moveset == null)
+                    return 0.0;
+                return this.OffenseDPSAtMaxLevel * this.TimeToDeathAtMaxLevel;
+            }
+        }
+        [XmlIgnore]
+        public double DefenseMovesetPercentage
+        {
+            get
+            {
+                if (this.Moveset == null)
+                    return 0.0;
+                double movesetDPS = this.Moveset.GetDPS(this.GetAttack(), this.Species.Type1, this.Species.Type2, true);
+                double maxDPS = -1.0;
+                foreach (Moveset moveset in this.Species.Movesets)
+                {
+                    maxDPS = moveset.GetDPS(this.GetAttack(), this.Species.Type1, this.Species.Type2, true) > maxDPS ? moveset.GetDPS(this.GetAttack(), this.Species.Type1, this.Species.Type2, true) : maxDPS;
+                }
+                return movesetDPS / maxDPS;
+            }
+        }
+        [XmlIgnore]
+        public double DefenseDPS
+        {
+            get
+            {
+                if (this.Moveset == null)
+                    return 0.0;
+                return this.Moveset.GetDPS(this.GetAttack(), this.Species.Type1, this.Species.Type2, true);
+            }
+        }
         private float _defenseDPSPercent;
-        private float _defenseDPSAtMax;
+        [XmlIgnore]
+        public double DefenseDPSAtMaxLevel
+        {
+            get
+            {
+                if (this.Moveset == null)
+                    return 0.0;
+                return this.Moveset.GetDPS(this.GetAttack(-1, Constants.MaxLevel), this.Species.Type1, this.Species.Type2, true);
+            }
+        }
         private float _defenseDPSPercentAtMax;
-        private float _defenseTotalDamage;
-        private float _defenseTotalDamageAtMax;
+        [XmlIgnore]
+        public double DefenseTotalDamage
+        {
+            get
+            {
+                if (this.Moveset == null)
+                    return 0.0;
+                return this.DefenseDPS * this.TimeToDeath * Constants.DefenseHPBonus;
+            }
+        }
+        [XmlIgnore]
+        public double DefenseTotalDamageAtMaxLevel
+        {
+            get
+            {
+                if (this.Moveset == null)
+                    return 0.0;
+                return this.DefenseDPSAtMaxLevel * this.TimeToDeathAtMaxLevel * Constants.DefenseHPBonus;
+            }
+        }
+
+        [XmlIgnore]
+        public double TimeToDeath
+        {
+            get
+            {
+                if (this.Moveset == null)
+                    return 0.0;
+                return this.GetStamina() / (Math.Floor(0.5 * Constants.IncomingAttack / this.GetDefense() * Constants.IncomingPower) + 1);
+            }
+        }
+        [XmlIgnore]
+        public double TimeToDeathAtMaxLevel
+        {
+            get
+            {
+                if (this.Moveset == null)
+                    return 0.0;
+                return this.GetStamina(-1, Constants.MaxLevel) / (Math.Floor(0.5 * Constants.IncomingAttack / this.GetDefense(-1,Constants.MaxLevel) * Constants.IncomingPower) + 1);
+            }
+        }
         #endregion
         #endregion
 
@@ -307,7 +441,7 @@ namespace Pokemon_Go_Database.Model
             }
             if (values.Count <= 0)
                 return 0;
-            return (int) values.Average();
+            return (int)values.Average();
         }
         public int GetStaminaIV()
         {
@@ -418,7 +552,7 @@ namespace Pokemon_Go_Database.Model
             {
                 level = this.GetLevel();
             }
-            return (int) Math.Truncate((this.GetAttack(attackIV, level) * Math.Pow(this.GetStamina(staminaIV, level), 0.5) * Math.Pow(this.GetDefense(defenseIV, level), 0.5)) / 10.0);
+            return (int)Math.Truncate((this.GetAttack(attackIV, level) * Math.Pow(this.GetStamina(staminaIV, level), 0.5) * Math.Pow(this.GetDefense(defenseIV, level), 0.5)) / 10.0);
 
         }
         #endregion
@@ -426,15 +560,29 @@ namespace Pokemon_Go_Database.Model
         #region Private Methods
         private void UpdateAllCalculatedProperties()
         {
+            RaisePropertyChanged("ActualCP");
+            RaisePropertyChanged("ActualHP");
+            RaisePropertyChanged("CPM");
             RaisePropertyChanged("Attack");
             RaisePropertyChanged("Defense");
             RaisePropertyChanged("Stamina");
-            RaisePropertyChanged("Attack");
             RaisePropertyChanged("Level");
-            RaisePropertyChanged("ActualCP");
-            RaisePropertyChanged("ActualHP");
             RaisePropertyChanged("MaxCP");
-            RaisePropertyChanged("CPM");
+
+            RaisePropertyChanged("OffenseMovesetPercentage");
+            RaisePropertyChanged("OffenseDPS");
+            RaisePropertyChanged("OffenseDPSAtMaxLevel");
+            RaisePropertyChanged("OffenseTotalDamage");
+            RaisePropertyChanged("OffenseTotalDamageAtMaxLevel");
+
+            RaisePropertyChanged("DefenseMovesetPercentage");
+            RaisePropertyChanged("DefenseDPS");
+            RaisePropertyChanged("DefenseDPSAtMaxLevel");
+            RaisePropertyChanged("DefenseTotalDamage");
+            RaisePropertyChanged("DefenseTotalDamageAtMaxLevel");
+
+            RaisePropertyChanged("TimeToDeath");
+            RaisePropertyChanged("TimeToDeathAtMaxLevel");
             //TODO
         }
         #endregion

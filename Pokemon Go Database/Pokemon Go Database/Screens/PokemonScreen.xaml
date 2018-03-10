@@ -21,16 +21,18 @@
         </CollectionViewSource>
     </UserControl.Resources>
     <Grid Background="{StaticResource MainBackgroundColor}">
-        <DataGrid Name="PokemonGrid" ItemsSource="{Binding Source={StaticResource PokemonView}}" HorizontalAlignment="Stretch" AutoGenerateColumns="False" SelectedItem="{Binding SelectedPokemon}">
+        <DataGrid Name="PokemonGrid" ItemsSource="{Binding Source={StaticResource PokemonView}}" HorizontalAlignment="Stretch" AutoGenerateColumns="False" 
+                  SelectedItem="{Binding SelectedPokemon}" FrozenColumnCount="3">
             <DataGrid.ContextMenu>
                 <ContextMenu>
                     <MenuItem Header="CheckIVs" Command="{Binding CheckIVCommand}"/>
+                    <MenuItem Header="Add New Pokemon" Command="{Binding AddNewPokemonCommand}"/>
                 </ContextMenu>
             </DataGrid.ContextMenu>
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Number" Binding="{Binding Path=Species.Number}" Width="Auto" IsReadOnly="True"/>
                 <DataGridTextColumn Header="Name" Binding="{Binding Path=Name}" Width="Auto"/>
-                <DataGridComboBoxColumn Header="Species" Width="Auto" SelectedItemBinding="{Binding Path=Species}" DisplayMemberPath="Species" ItemsSource="{Binding Source={StaticResource SpeciesView}}"/>
+                <DataGridComboBoxColumn Header="Species" Width="Auto" SelectedItemBinding="{Binding Path=Species}" DisplayMemberPath="Species" ItemsSource="{Binding Source={StaticResource SpeciesView}}" SortMemberPath="Species.Species"/>
                 <DataGridTextColumn Header="Type1" Binding="{Binding Path=Species.Type1}" Width="Auto" IsReadOnly="True"/>
                 <DataGridTextColumn Header="Type2" Binding="{Binding Path=Species.Type2}" Width="Auto" IsReadOnly="True"/>
                 <DataGridComboBoxColumn Header="Fast Move" Width="Auto" SelectedItemBinding="{Binding FastMove}" DisplayMemberPath="FastMove.Name" SortMemberPath="FastMove.FastMove.Name">
@@ -61,19 +63,29 @@
                 </DataGridComboBoxColumn>
                 <DataGridTextColumn Header="Game CP" Binding="{Binding Path=GameCP}" Width="Auto"/>
                 <DataGridTextColumn Header="Game HP" Binding="{Binding Path=GameHP}" Width="Auto"/>
-                <DataGridTextColumn Header="Actual CP" Binding="{Binding Path=ActualCP}" Width="Auto"/>
-                <DataGridTextColumn Header="Actual HP" Binding="{Binding Path=ActualHP}" Width="Auto"/>
+                <DataGridTextColumn Header="Actual CP" Binding="{Binding Path=ActualCP, Mode=OneWay}" IsReadOnly="True" Width="Auto"/>
+                <DataGridTextColumn Header="Actual HP" Binding="{Binding Path=ActualHP, Mode=OneWay}" IsReadOnly="True" Width="Auto"/>
                 <DataGridTextColumn Header="Stardust" Binding="{Binding Path=DustToPower}" Width="Auto"/>
                 <DataGridTextColumn Header="Attack IV" Binding="{Binding Path=AttackIVExpression}" Width="Auto"/>
                 <DataGridTextColumn Header="Defense IV" Binding="{Binding Path=DefenseIVExpression}" Width="Auto"/>
                 <DataGridTextColumn Header="Stamina IV" Binding="{Binding Path=StaminaIVExpression}" Width="Auto"/>
                 <DataGridTextColumn Header="Level" Binding="{Binding Path=LevelExpression}" Width="Auto" SortMemberPath="Level"/>
                 <DataGridTextColumn Header="IV %" Binding="{Binding Path=IVPercentage, StringFormat=P2}" Width="Auto" IsReadOnly="True"/>
-                <DataGridTextColumn Header="Attack" Binding="{Binding Path=Attack}" Width="Auto" IsReadOnly="True"/>
-                <DataGridTextColumn Header="Defense" Binding="{Binding Path=Defense}" Width="Auto" IsReadOnly="True"/>
-                <DataGridTextColumn Header="Stamina" Binding="{Binding Path=Stamina}" Width="Auto" IsReadOnly="True"/>
-                <DataGridTextColumn Header="CP At Max" Binding="{Binding Path=MaxCP}" Width="Auto" IsReadOnly="True"/>
-                <DataGridTextColumn Header="Max Possible CP" Binding="{Binding Path=Species.MaxCP}" Width="Auto" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Attack" Binding="{Binding Path=Attack, Mode=OneWay}" Width="Auto" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Defense" Binding="{Binding Path=Defense, Mode=OneWay}" Width="Auto" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Stamina" Binding="{Binding Path=Stamina, Mode=OneWay}" Width="Auto" IsReadOnly="True"/>
+                <DataGridTextColumn Header="CP At Max" Binding="{Binding Path=MaxCP, Mode=OneWay}" Width="Auto" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Max Possible CP" Binding="{Binding Path=Species.MaxCP, Mode=OneWay}" Width="Auto" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Offense Moveset %" Binding="{Binding Path=OffenseMovesetPercentage, StringFormat=P2, Mode=OneWay}" Width="Auto" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Offense DPS" Binding="{Binding Path=OffenseDPS, StringFormat={}{0:0.000}, Mode=OneWay}" Width="Auto" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Offense DPS At 40" Binding="{Binding Path=OffenseDPSAtMaxLevel, StringFormat={}{0:0.000}, Mode=OneWay}" Width="Auto" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Offense Total Damage" Binding="{Binding Path=OffenseTotalDamage, StringFormat={}{0:0.000}, Mode=OneWay}" Width="Auto" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Offense Total Damage At Max" Binding="{Binding Path=OffenseTotalDamageAtMaxLevel, StringFormat={}{0:0.000}, Mode=OneWay}" Width="Auto" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Defense Moveset %" Binding="{Binding Path=DefenseMovesetPercentage, StringFormat=P2, Mode=OneWay}" Width="Auto" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Defense DPS" Binding="{Binding Path=DefenseDPS, StringFormat={}{0:0.000}, Mode=OneWay}" Width="Auto" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Defense DPS At 40" Binding="{Binding Path=DefenseDPSAtMaxLevel, StringFormat={}{0:0.000}, Mode=OneWay}" Width="Auto" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Defense Total Damage" Binding="{Binding Path=DefenseTotalDamage, StringFormat={}{0:0.000}, Mode=OneWay}" Width="Auto" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Defense Total Damage At Max" Binding="{Binding Path=DefenseTotalDamageAtMaxLevel, StringFormat={}{0:0.000}, Mode=OneWay}" Width="Auto" IsReadOnly="True"/>
             </DataGrid.Columns>
         </DataGrid>
     </Grid>
