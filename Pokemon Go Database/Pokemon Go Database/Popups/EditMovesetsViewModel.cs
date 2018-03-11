@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Data;
 using System.Windows.Input;
 
 namespace Pokemon_Go_Database.Popups
@@ -22,15 +23,21 @@ namespace Pokemon_Go_Database.Popups
         public ICommand RemoveChargeMoveCommand { get; private set; }
         public ICommand ExitPopupCommand { get; private set; }
         public ICommand SaveCommand { get; private set; }
+        public ICommand ShowEditMovesetsCommand { get; private set; }
+        public ICommand ShowOffenseDetailsCommand { get; private set; }
+        public ICommand ShowDefenseDetailsCommand { get; private set; }
         #endregion
 
         public EditMovesetsViewModel(SessionService session) : base(session)
         {
             this.AllChargeMoves = this.Session.ChargeMoveList;
             this.AllFastMoves = this.Session.FastMoveList;
-            this.Movesets = new ObservableCollection<Moveset>();
+            this.Movesets = new ObservableCollection<MovesetDetailsWrapper>();
             this.FastMoves = new ObservableCollection<PokedexFastMoveWrapper>();
             this.ChargeMoves = new ObservableCollection<PokedexChargeMoveWrapper>();
+
+            this.FastMoves.CollectionChanged += FastMoves_CollectionChanged;
+            this.ChargeMoves.CollectionChanged += ChargeMoves_CollectionChanged;
 
             this.AddFastMoveCommand = new RelayCommand(() => this.FastMoves.Add(new PokedexFastMoveWrapper(this.AllFastMoves[0])));
             this.AddChargeMoveCommand = new RelayCommand(() => this.ChargeMoves.Add(new PokedexChargeMoveWrapper(this.AllChargeMoves[0])));
@@ -41,8 +48,13 @@ namespace Pokemon_Go_Database.Popups
             this.ExitPopupCommand = new RelayCommand(() => Exit());
             this.SaveCommand = new RelayCommand(() => Save());
 
+            this.ShowEditMovesetsCommand = new RelayCommand(() => { this.EditMovesetsVisible = true; this.OffenseDetailsVisible = false; this.DefenseDetailsVisible = false; });
+            this.ShowOffenseDetailsCommand = new RelayCommand(() => ShowOffenseDetails());
+            this.ShowDefenseDetailsCommand = new RelayCommand(() => ShowDefenseDetails());
+
         }
 
+        
         public override void Initialize(object param)
         {
             this.Movesets.Clear();
@@ -56,19 +68,15 @@ namespace Pokemon_Go_Database.Popups
                     this.FastMoves.Add(move);
                 foreach (PokedexChargeMoveWrapper move in this.Species.ChargeMoves)
                     this.ChargeMoves.Add(move);
-                foreach (PokedexFastMoveWrapper fastMove in this.FastMoves)
-                {
-                    foreach (PokedexChargeMoveWrapper chargeMove in this.ChargeMoves)
-                    {
-                        this.Movesets.Add(new Moveset(fastMove as PokedexFastMoveWrapper, chargeMove as PokedexChargeMoveWrapper));
-                    }
-                }
             }
             else
             {
                 MessageBox.Show("Please select a valid Pokemon!", "Invalid Pokemon", MessageBoxButton.OK);
                 this.ClosePopup(null);
             }
+            this.EditMovesetsVisible = true;
+            this.OffenseDetailsVisible = false;
+            this.DefenseDetailsVisible = false;
         }
 
         public override void Deinitialize()
@@ -92,68 +100,81 @@ namespace Pokemon_Go_Database.Popups
                 Set(ref this._species, value);
             }
         }
-        private ObservableCollection<PokedexFastMoveWrapper> _fastMoves;
+        private ObservableCollection<PokedexFastMoveWrapper> _FastMoves;
         public ObservableCollection<PokedexFastMoveWrapper> FastMoves
         {
             get
             {
-                return _fastMoves;
+                return _FastMoves;
             }
             private set
             {
-                Set(ref this._fastMoves, value);
+                Set(ref this._FastMoves, value);
             }
         }
 
-        private ObservableCollection<PokedexChargeMoveWrapper> _chargeMoves;
+        private ObservableCollection<PokedexChargeMoveWrapper> _ChargeMoves;
         public ObservableCollection<PokedexChargeMoveWrapper> ChargeMoves
         {
             get
             {
-                return _chargeMoves;
+                return _ChargeMoves;
             }
             private set
             {
-                Set(ref this._chargeMoves, value);
+                Set(ref this._ChargeMoves, value);
             }
         }
-
-        private ObservableCollection<Moveset> _movesets;
-        public ObservableCollection<Moveset> Movesets
+        private ListCollectionView _MovesetsView;
+        public ListCollectionView MovesetsView
         {
             get
             {
-                return _movesets;
+                return this._MovesetsView;
             }
             private set
             {
-                Set(ref this._movesets, value);
+                Set(ref this._MovesetsView, value);
+                this.MovesetsView.SortDescriptions.Add(new System.ComponentModel.SortDescription("DPS", System.ComponentModel.ListSortDirection.Descending));
+            }
+        }
+        private ObservableCollection<MovesetDetailsWrapper> _Movesets;
+        public ObservableCollection<MovesetDetailsWrapper> Movesets
+        {
+            get
+            {
+                return _Movesets;
+            }
+            private set
+            {
+                Set(ref this._Movesets, value);
+                this.MovesetsView = new ListCollectionView(this.Movesets);
             }
         }
 
-        private ObservableCollection<FastMove> _allFastMoves;
+        private ObservableCollection<FastMove> _AllFastMoves;
         public ObservableCollection<FastMove> AllFastMoves
         {
             get
             {
-                return _allFastMoves;
+                return _AllFastMoves;
             }
             private set
             {
-                Set(ref this._allFastMoves, value);
+                Set(ref this._AllFastMoves, value);
             }
         }
 
-        private ObservableCollection<ChargeMove> _allChargeMoves;
+        private ObservableCollection<ChargeMove> _AllChargeMoves;
         public ObservableCollection<ChargeMove> AllChargeMoves
         {
             get
             {
-                return _allChargeMoves;
+                return _AllChargeMoves;
             }
             private set
             {
-                Set(ref this._allChargeMoves, value);
+                Set(ref this._AllChargeMoves, value);
             }
         }
 
@@ -182,6 +203,67 @@ namespace Pokemon_Go_Database.Popups
                 Set(ref this._SelectedChargeMove, value);
             }
         }
+
+        private bool _EditMovesetsVisible;
+        public bool EditMovesetsVisible
+        {
+            get
+            {
+                return this._EditMovesetsVisible;
+            }
+            set
+            {
+                Set(ref this._EditMovesetsVisible, value);
+            }
+        }
+        private bool _OffenseDetailsVisible;
+        public bool OffenseDetailsVisible
+        {
+            get
+            {
+                return this._OffenseDetailsVisible;
+            }
+            set
+            {
+                Set(ref this._OffenseDetailsVisible, value);
+            }
+        }
+        private bool _DefenseDetailsVisible;
+        public bool DefenseDetailsVisible
+        {
+            get
+            {
+                return this._DefenseDetailsVisible;
+            }
+            set
+            {
+                Set(ref this._DefenseDetailsVisible, value);
+            }
+        }
+        private double _MinDPS;
+        public double MinDPS
+        {
+            get
+            {
+                return this._MinDPS;
+            }
+            private set
+            {
+                Set(ref this._MinDPS, value);
+            }
+        }
+        private double _MaxDPS;
+        public double MaxDPS
+        {
+            get
+            {
+                return this._MaxDPS;
+            }
+            private set
+            {
+                Set(ref this._MaxDPS, value);
+            }
+        }
         #endregion
 
         #region Private Methods
@@ -201,6 +283,101 @@ namespace Pokemon_Go_Database.Popups
                 this.ChargeMoves.Remove(this.SelectedChargeMove);
             }
         }
+
+        private void ShowOffenseDetails()
+        {
+            this.EditMovesetsVisible = false;
+            this.OffenseDetailsVisible = true;
+            this.DefenseDetailsVisible = false;
+            double minDps = double.MaxValue;
+            double maxDps = double.MinValue;
+
+            foreach (MovesetDetailsWrapper moveset in Movesets)
+            {
+                moveset.IsDefending = false;
+                if (moveset.DPS >= maxDps)
+                    maxDps = moveset.DPS;
+                if (moveset.DPS <= minDps)
+                    minDps = moveset.DPS;
+            }
+            foreach (MovesetDetailsWrapper moveset in Movesets)
+                moveset.DPSUpperLimit = maxDps;
+            this.MaxDPS = maxDps;
+            this.MinDPS = minDps;
+            this.MovesetsView.Refresh();
+        }
+
+        private void ShowDefenseDetails()
+        {
+            this.EditMovesetsVisible = false;
+            this.OffenseDetailsVisible = false;
+            this.DefenseDetailsVisible = true;
+            double minDps = double.MaxValue;
+            double maxDps = double.MinValue;
+
+            foreach (MovesetDetailsWrapper moveset in Movesets)
+            {
+                moveset.IsDefending = true;
+                if (moveset.DPS >= maxDps)
+                    maxDps = moveset.DPS;
+                if (moveset.DPS <= minDps)
+                    minDps = moveset.DPS;
+            }
+            foreach (MovesetDetailsWrapper moveset in Movesets)
+                moveset.DPSUpperLimit = maxDps;
+            this.MaxDPS = maxDps;
+            this.MinDPS = minDps;
+            this.MovesetsView.Refresh();
+        }
+
+        private void ChargeMoves_CollectionChanged(object sender, System.Collections.Specialized.NotifyCollectionChangedEventArgs e)
+        {
+            if (e.Action == System.Collections.Specialized.NotifyCollectionChangedAction.Add)
+            {
+                foreach (PokedexChargeMoveWrapper chargeMove in e.NewItems)
+                {
+                    foreach (PokedexFastMoveWrapper fastMove in this.FastMoves)
+                    {
+                        this.Movesets.Add(new MovesetDetailsWrapper(new Moveset(fastMove as PokedexFastMoveWrapper, chargeMove as PokedexChargeMoveWrapper), this.Species.Type1, this.Species.Type2, this.Species.Attack, false));
+                    }
+                }
+            }
+            if (e.Action == System.Collections.Specialized.NotifyCollectionChangedAction.Remove)
+            {
+                foreach (PokedexChargeMoveWrapper chargeMove in e.OldItems)
+                {
+                    foreach (PokedexFastMoveWrapper fastMove in this.FastMoves)
+                    {
+                        this.Movesets.Remove(this.Movesets.FirstOrDefault(x => x.Moveset.FastMove == fastMove && x.Moveset.ChargeMove == chargeMove));
+                    }
+                }
+            }
+        }
+
+        private void FastMoves_CollectionChanged(object sender, System.Collections.Specialized.NotifyCollectionChangedEventArgs e)
+        {
+            if (e.Action == System.Collections.Specialized.NotifyCollectionChangedAction.Add)
+            {
+                foreach (PokedexFastMoveWrapper fastMove in e.NewItems)
+                {
+                    foreach (PokedexChargeMoveWrapper chargeMove in this.ChargeMoves)
+                    {
+                        this.Movesets.Add(new MovesetDetailsWrapper(new Moveset(fastMove as PokedexFastMoveWrapper, chargeMove as PokedexChargeMoveWrapper), this.Species.Type1, this.Species.Type2, this.Species.Attack, false));
+                    }
+                }
+            }
+            if (e.Action == System.Collections.Specialized.NotifyCollectionChangedAction.Remove)
+            {
+                foreach (PokedexFastMoveWrapper fastMove in e.OldItems)
+                {
+                    foreach (PokedexChargeMoveWrapper chargeMove in this.ChargeMoves)
+                    {
+                        this.Movesets.Remove(this.Movesets.FirstOrDefault(x => x.Moveset.FastMove == fastMove && x.Moveset.ChargeMove == chargeMove));
+                    }
+                }
+            }
+        }
+
         private void Exit()
         {
             if (this.savingNeeded)

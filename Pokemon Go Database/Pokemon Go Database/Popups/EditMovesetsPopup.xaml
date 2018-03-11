@@ -4,7 +4,10 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Pokemon_Go_Database.Popups"
+             xmlns:customControls="clr-namespace:Pokemon_Go_Database.CustomControls"
+             xmlns:converters="clr-namespace:Pokemon_Go_Database.ValueConverters"
              xmlns:scm="clr-namespace:System.ComponentModel;assembly=WindowsBase"
+             xmlns:xvc="clr-namespace:Xceed.Wpf.DataGrid.Converters;assembly=Xceed.Wpf.DataGrid.v6.5"
              mc:Ignorable="d" 
              d:DataContext="{d:DesignInstance Type=local:EditMovesetsViewModel}">
     <UserControl.Resources>
@@ -18,69 +21,188 @@
                 <scm:SortDescription PropertyName="Name" Direction="Ascending"/>
             </CollectionViewSource.SortDescriptions>
         </CollectionViewSource>
+        <xvc:InverseBooleanConverter x:Key="InverseBooleanConverter"/>
+        <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter"/>
+        <converters:DPSValueToBrushConverter x:Key="DPSValueToBrushConverter"/>
     </UserControl.Resources>
     <Grid Background="{StaticResource MainBackgroundColor}" Width="500" Height="300">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="5*"/>
-            <ColumnDefinition Width="5*"/>
-        </Grid.ColumnDefinitions>
-        <TextBlock Grid.Row="0" Grid.ColumnSpan="2" Text="{Binding Species.Species, StringFormat=Movesets for {0}}" HorizontalAlignment="Center" FontSize="{StaticResource LargeFontSize}"/>
-        <StackPanel Grid.Column="0" Grid.Row="1" Orientation="Horizontal" Width="Auto">
-            <Button Name="AddGroupButton" Style="{StaticResource AddGroupButton}" Command="{Binding AddFastMoveCommand}"/>
-            <Button Name="RemoveGroupButton" Style="{StaticResource RemoveGroupButton}" Command="{Binding RemoveFastMoveCommand}"/>
-        </StackPanel>
-        <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Horizontal">
-            <Button Name="AddCategoryButton" Style="{StaticResource AddGroupButton}"  Command="{Binding AddChargeMoveCommand}">
-            </Button>
-            <Button Name="RemoveCategoryButton" Style="{StaticResource RemoveGroupButton}" Command="{Binding RemoveChargeMoveCommand}"/>
-        </StackPanel>
-        <DataGrid Name="FastMovesList" Grid.Row="2" Grid.Column="0" ItemsSource="{Binding FastMoves}" 
+        <TextBlock Grid.Row="0" Text="{Binding Species.Species, StringFormat=Movesets for {0}}" HorizontalAlignment="Center" FontSize="{StaticResource LargeFontSize}"/>
+        <Grid Name="EditMovesetsGrid" Grid.Row="1" Visibility="{Binding EditMovesetsVisible, Converter={StaticResource BooleanToVisibilityConverter}}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="5*"/>
+                <ColumnDefinition Width="5*"/>
+            </Grid.ColumnDefinitions>
+            <StackPanel Grid.Row="0" Grid.Column="0" Orientation="Horizontal" Width="Auto">
+                <Button Name="AddGroupButton" Style="{StaticResource AddGroupButton}" Command="{Binding AddFastMoveCommand}"/>
+                <Button Name="RemoveGroupButton" Style="{StaticResource RemoveGroupButton}" Command="{Binding RemoveFastMoveCommand}"/>
+            </StackPanel>
+            <StackPanel Grid.Row="0" Grid.Column="1" Orientation="Horizontal">
+                <Button Name="AddCategoryButton" Style="{StaticResource AddGroupButton}"  Command="{Binding AddChargeMoveCommand}">
+                </Button>
+                <Button Name="RemoveCategoryButton" Style="{StaticResource RemoveGroupButton}" Command="{Binding RemoveChargeMoveCommand}"/>
+            </StackPanel>
+            <DataGrid Name="FastMovesList" Grid.Row="1" Grid.Column="0" ItemsSource="{Binding FastMoves}" 
                   AutoGenerateColumns="False" CellStyle="{StaticResource SelectedCellStyle}"
                   CanUserAddRows="False" CanUserDeleteRows="False" SelectedItem="{Binding SelectedFastMove}">
-            <DataGrid.Resources>
-            </DataGrid.Resources>
-            <DataGrid.Columns>
-                <DataGridComboBoxColumn Header="Name" Width="*" SelectedItemBinding="{Binding FastMove}" DisplayMemberPath="Name">
-                    <DataGridComboBoxColumn.ElementStyle>
-                        <Style TargetType="{x:Type ComboBox}">
-                            <Setter Property="ItemsSource" Value="{Binding Path=DataContext.AllFastMoves, RelativeSource={RelativeSource AncestorType={x:Type UserControl}}}" />
-                        </Style>
-                    </DataGridComboBoxColumn.ElementStyle>
-                    <DataGridComboBoxColumn.EditingElementStyle>
-                        <Style TargetType="{x:Type ComboBox}">
-                            <Setter Property="ItemsSource" Value="{Binding Path=DataContext.AllFastMoves, RelativeSource={RelativeSource AncestorType={x:Type UserControl}}}" />
-                            <!--<EventSetter Event="RequestBringIntoView" Handler="OnRequestBringIntoView"/>-->
-                        </Style>
-                    </DataGridComboBoxColumn.EditingElementStyle>
-                </DataGridComboBoxColumn>
-                <DataGridCheckBoxColumn Header="Is Legacy?" Width="Auto" Binding="{Binding IsLegacy}"/>
-            </DataGrid.Columns>
-        </DataGrid>
-        <DataGrid Name="ChargeMovesList" Grid.Row="2" Grid.Column="1" AutoGenerateColumns="False" ItemsSource="{Binding ChargeMoves}"
+                <DataGrid.Resources>
+                </DataGrid.Resources>
+                <DataGrid.Columns>
+                    <DataGridComboBoxColumn Header="Name" Width="*" SelectedItemBinding="{Binding FastMove}" DisplayMemberPath="Name">
+                        <DataGridComboBoxColumn.ElementStyle>
+                            <Style TargetType="{x:Type ComboBox}">
+                                <Setter Property="ItemsSource" Value="{Binding Path=DataContext.AllFastMoves, RelativeSource={RelativeSource AncestorType={x:Type UserControl}}}" />
+                            </Style>
+                        </DataGridComboBoxColumn.ElementStyle>
+                        <DataGridComboBoxColumn.EditingElementStyle>
+                            <Style TargetType="{x:Type ComboBox}">
+                                <Setter Property="ItemsSource" Value="{Binding Path=DataContext.AllFastMoves, RelativeSource={RelativeSource AncestorType={x:Type UserControl}}}" />
+                                <!--<EventSetter Event="RequestBringIntoView" Handler="OnRequestBringIntoView"/>-->
+                            </Style>
+                        </DataGridComboBoxColumn.EditingElementStyle>
+                    </DataGridComboBoxColumn>
+                    <DataGridCheckBoxColumn Header="Is Legacy?" Width="Auto" Binding="{Binding IsLegacy}"/>
+                </DataGrid.Columns>
+            </DataGrid>
+            <DataGrid Name="ChargeMovesList" Grid.Row="1" Grid.Column="1" AutoGenerateColumns="False" ItemsSource="{Binding ChargeMoves}"
                   CellStyle="{StaticResource SelectedCellStyle}" CanUserAddRows="False" CanUserSortColumns="False" SelectedItem="{Binding SelectedChargeMove}">
-            <DataGrid.Columns>
-                <DataGridComboBoxColumn Header="Name" Width="*" SelectedItemBinding="{Binding ChargeMove}" DisplayMemberPath="Name">
-                    <DataGridComboBoxColumn.ElementStyle>
-                        <Style TargetType="{x:Type ComboBox}">
-                            <Setter Property="ItemsSource" Value="{Binding Path=DataContext.AllChargeMoves, RelativeSource={RelativeSource AncestorType={x:Type UserControl}}}" />
-                        </Style>
-                    </DataGridComboBoxColumn.ElementStyle>
-                    <DataGridComboBoxColumn.EditingElementStyle>
-                        <Style TargetType="{x:Type ComboBox}">
-                            <Setter Property="ItemsSource" Value="{Binding Path=DataContext.AllChargeMoves, RelativeSource={RelativeSource AncestorType={x:Type UserControl}}}" />
-                            <!--<EventSetter Event="RequestBringIntoView" Handler="OnRequestBringIntoView"/>-->
-                        </Style>
-                    </DataGridComboBoxColumn.EditingElementStyle>
-                </DataGridComboBoxColumn>
-                <DataGridCheckBoxColumn Header="Is Legacy?" Width="Auto" Binding="{Binding IsLegacy}"/>
-            </DataGrid.Columns>
-        </DataGrid>
+                <DataGrid.Columns>
+                    <DataGridComboBoxColumn Header="Name" Width="*" SelectedItemBinding="{Binding ChargeMove}" DisplayMemberPath="Name">
+                        <DataGridComboBoxColumn.ElementStyle>
+                            <Style TargetType="{x:Type ComboBox}">
+                                <Setter Property="ItemsSource" Value="{Binding Path=DataContext.AllChargeMoves, RelativeSource={RelativeSource AncestorType={x:Type UserControl}}}" />
+                            </Style>
+                        </DataGridComboBoxColumn.ElementStyle>
+                        <DataGridComboBoxColumn.EditingElementStyle>
+                            <Style TargetType="{x:Type ComboBox}">
+                                <Setter Property="ItemsSource" Value="{Binding Path=DataContext.AllChargeMoves, RelativeSource={RelativeSource AncestorType={x:Type UserControl}}}" />
+                                <!--<EventSetter Event="RequestBringIntoView" Handler="OnRequestBringIntoView"/>-->
+                            </Style>
+                        </DataGridComboBoxColumn.EditingElementStyle>
+                    </DataGridComboBoxColumn>
+                    <DataGridCheckBoxColumn Header="Is Legacy?" Width="Auto" Binding="{Binding IsLegacy}"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </Grid>
+        <Grid Name="OffenseDetailsGrid" Grid.Row="1" Visibility="{Binding OffenseDetailsVisible, Converter={StaticResource BooleanToVisibilityConverter}}">
+            <DataGrid ItemsSource="{Binding MovesetsView}" IsReadOnly="True" AutoGenerateColumns="False" HorizontalAlignment="Stretch">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Moveset" Binding="{Binding Moveset.Name}" Width="6*"/>
+                    <DataGridTextColumn Header="DPS" Binding="{Binding DPS, StringFormat={}{0:0.00}}" Width="2*">
+                        <DataGridTextColumn.CellStyle>
+                            <Style TargetType="DataGridCell">
+                                <Setter Property="Background">
+                                    <Setter.Value>
+                                        <MultiBinding Converter="{StaticResource DPSValueToBrushConverter}">
+                                            <Binding Path="DPS"/>
+                                            <Binding Path="DataContext.MinDPS" RelativeSource="{RelativeSource AncestorType={x:Type UserControl}}"/>
+                                            <Binding Path="DataContext.MaxDPS" RelativeSource="{RelativeSource AncestorType={x:Type UserControl}}"/>
+                                        </MultiBinding>
+                                    </Setter.Value>
+                                </Setter>
+                            </Style>
+                        </DataGridTextColumn.CellStyle>
+                    </DataGridTextColumn>
+                    <DataGridTextColumn Header="% Max DPS" Binding="{Binding DPSPercentage, StringFormat=P2}" Width="2*">
+                        <DataGridTextColumn.CellStyle>
+                            <Style TargetType="DataGridCell">
+                                <Setter Property="Background">
+                                    <Setter.Value>
+                                        <MultiBinding Converter="{StaticResource DPSValueToBrushConverter}">
+                                            <Binding Path="DPS"/>
+                                            <Binding Path="DataContext.MinDPS" RelativeSource="{RelativeSource AncestorType={x:Type UserControl}}"/>
+                                            <Binding Path="DataContext.MaxDPS" RelativeSource="{RelativeSource AncestorType={x:Type UserControl}}"/>
+                                        </MultiBinding>
+                                    </Setter.Value>
+                                </Setter>
+                            </Style>
+                        </DataGridTextColumn.CellStyle>
+                    </DataGridTextColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+        </Grid>
+        <Grid Name="DefenseDetailsGrid" Grid.Row="1" Visibility="{Binding DefenseDetailsVisible, Converter={StaticResource BooleanToVisibilityConverter}}">
+            <DataGrid ItemsSource="{Binding MovesetsView}" IsReadOnly="True" AutoGenerateColumns="False" HorizontalAlignment="Stretch">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Moveset" Binding="{Binding Moveset.Name}" Width="6*"/>
+                    <DataGridTextColumn Header="DPS" Binding="{Binding DPS, StringFormat={}{0:0.00}}" Width="2*">
+                        <DataGridTextColumn.CellStyle>
+                            <Style TargetType="DataGridCell">
+                                <Setter Property="Background">
+                                    <Setter.Value>
+                                        <MultiBinding Converter="{StaticResource DPSValueToBrushConverter}">
+                                            <Binding Path="DPS"/>
+                                            <Binding Path="DataContext.MinDPS" RelativeSource="{RelativeSource AncestorType={x:Type UserControl}}"/>
+                                            <Binding Path="DataContext.MaxDPS" RelativeSource="{RelativeSource AncestorType={x:Type UserControl}}"/>
+                                        </MultiBinding>
+                                    </Setter.Value>
+                                </Setter>
+                            </Style>
+                        </DataGridTextColumn.CellStyle>
+                    </DataGridTextColumn>
+                    <DataGridTextColumn Header="% Max DPS" Binding="{Binding DPSPercentage, StringFormat=P2}" Width="2*">
+                        <DataGridTextColumn.CellStyle>
+                            <Style TargetType="DataGridCell">
+                                <Setter Property="Background">
+                                    <Setter.Value>
+                                        <MultiBinding Converter="{StaticResource DPSValueToBrushConverter}">
+                                            <Binding Path="DPS"/>
+                                            <Binding Path="DataContext.MinDPS" RelativeSource="{RelativeSource AncestorType={x:Type UserControl}}"/>
+                                            <Binding Path="DataContext.MaxDPS" RelativeSource="{RelativeSource AncestorType={x:Type UserControl}}"/>
+                                        </MultiBinding>
+                                    </Setter.Value>
+                                </Setter>
+                            </Style>
+                        </DataGridTextColumn.CellStyle>
+                    </DataGridTextColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+        </Grid>
+        <StackPanel Grid.Row="2" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Center">
+            <StackPanel.Resources>
+                <Style TargetType="customControls:HoverButton" BasedOn="{StaticResource {x:Type customControls:HoverButton}}">
+                    <Setter Property="Background">
+                        <Setter.Value>
+                            <RadialGradientBrush>
+                                <GradientStop Color="#D8ADE8E3" Offset="0"/>
+                                <GradientStop Color="#B2D2F7E7" Offset="0.987"/>
+                            </RadialGradientBrush>
+                        </Setter.Value>
+                    </Setter>
+                    <Setter Property="HoverBackgroundBrush" Value="LightBlue"/>
+                    <Setter Property="DisabledBackgroundBrush">
+                        <Setter.Value>
+                            <RadialGradientBrush>
+                                <GradientStop Color="#FF64B9B2" Offset="0.01"/>
+                                <GradientStop Color="#FF5EA687" Offset="0.987"/>
+                            </RadialGradientBrush>
+                        </Setter.Value>
+                    </Setter>
+                    <Setter Property="DisabledForegroundBrush" Value="White" />
+                    <Setter Property="Margin" Value="1 0 1 0"/>
+                    <Setter Property="Width" Value="100"/>
+                    <Setter Property="Height" Value="25"/>
+                    <Setter Property="TextBlock.FontSize" Value="{StaticResource SmallFontSize}"/>
+                </Style>
+            </StackPanel.Resources>
+            <customControls:HoverButton Content="Edit Movesets" Command="{Binding ShowEditMovesetsCommand}"
+                IsEnabled="{Binding EditMovesetsVisible, Converter={StaticResource InverseBooleanConverter}}"/>
+            <Separator Width="15" Background="Transparent"/>
+            <customControls:HoverButton Content="Offense Details" Command="{Binding ShowOffenseDetailsCommand}"
+                IsEnabled="{Binding OffenseDetailsVisible, Converter={StaticResource InverseBooleanConverter}}"/>
+            <Separator Width="15" Background="Transparent"/>
+            <customControls:HoverButton Content="Defense Details" Command="{Binding ShowDefenseDetailsCommand}"
+                IsEnabled="{Binding DefenseDetailsVisible, Converter={StaticResource InverseBooleanConverter}}"/>
+        </StackPanel>
         <StackPanel Grid.Row="3" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Center">
             <Button Content="Close" Command="{Binding ExitPopupCommand}" Width="50"/>
             <Separator Width="25" Background="Transparent"/>

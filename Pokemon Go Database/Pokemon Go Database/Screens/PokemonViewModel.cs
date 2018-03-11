@@ -19,6 +19,8 @@ namespace Pokemon_Go_Database.Screens
         #region Commands
         public ICommand CheckIVCommand { get; private set; }
         public ICommand AddNewPokemonCommand { get; private set; }
+        public ICommand ShowMovesetsCommand { get; private set; }
+        public ICommand GoToSpeciesCommand { get; private set; }
         #endregion
 
         private readonly NavigationService navigationService;
@@ -29,6 +31,8 @@ namespace Pokemon_Go_Database.Screens
 
             this.CheckIVCommand = new RelayCommand(async () => await CheckIVAsync());
             this.AddNewPokemonCommand = new RelayCommand(async () => await AddNewPokemonAsync());
+            this.ShowMovesetsCommand = new RelayCommand(async () => await ShowMovesetsAsync());
+            this.GoToSpeciesCommand = new RelayCommand(() => GoToSpecies());
 
             this.AllSpecies = this.Session.Pokedex;
             this.MyPokemon = this.Session.MyPokemon;
@@ -71,6 +75,13 @@ namespace Pokemon_Go_Database.Screens
                 Set(ref this._AllSpecies, value);
             }
         }
+        public int[] DustValues
+        {
+            get
+            {
+                return Constants.DustCutoffs;
+            }
+        }
         #endregion
 
         #region Private Methods
@@ -87,6 +98,16 @@ namespace Pokemon_Go_Database.Screens
             IVCalculatorPopupEventArgs args =  await navigationService.OpenPopup<IVCalculatorViewModel>(new IVCalculatorWrapper(calculator, true)) as IVCalculatorPopupEventArgs;
             if (args != null)
                 this.Session.MyPokemon.Add(args.NewPokemon);
+        }
+        private async Task ShowMovesetsAsync()
+        {
+            if (this.SelectedPokemon == null)
+                return;
+            await this.navigationService.OpenPopup<EditMovesetsViewModel>(this.SelectedPokemon.Species);
+        }
+        private void GoToSpecies()
+        {
+            this.navigationService.NavigateTo<PokedexViewModel>();
         }
         #endregion
     }

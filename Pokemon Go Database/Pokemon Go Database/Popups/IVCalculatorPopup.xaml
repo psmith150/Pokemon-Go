@@ -8,6 +8,11 @@
              mc:Ignorable="d" 
              d:DataContext="{d:DesignInstance Type=local:IVCalculatorViewModel}">
     <UserControl.Resources>
+        <CollectionViewSource x:Key="AllPokemonView" Source="{Binding Session.Pokedex}">
+            <CollectionViewSource.SortDescriptions>
+                <scm:SortDescription PropertyName="Species" Direction="Ascending"/>
+            </CollectionViewSource.SortDescriptions>
+        </CollectionViewSource>
     </UserControl.Resources>
     <Grid Background="{StaticResource MainBackgroundColor}" Width="700" Height="300">
         <Grid.RowDefinitions>
@@ -18,12 +23,13 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
         <TextBlock Grid.Row="0" Text="{Binding Calculator.Pokemon.Species.Species, StringFormat={}{0}}" HorizontalAlignment="Center" FontSize="{StaticResource LargeFontSize}"/>
         <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center">
             <StackPanel Orientation="Horizontal">
                 <Label Content="Pokemon:"/>
-                <ComboBox ItemsSource="{Binding Session.Pokedex}" DisplayMemberPath="Species" IsReadOnly="{Binding IsNotNewPokemon}" SelectedItem="{Binding Calculator.Pokemon.Species}" Width="150"/>
+                <ComboBox ItemsSource="{Binding Source={StaticResource AllPokemonView}}" DisplayMemberPath="Species" IsReadOnly="{Binding IsNotNewPokemon}" SelectedItem="{Binding Calculator.Pokemon.Species}" Width="150"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal">
                 <Label Content="CP:"/>
@@ -78,7 +84,36 @@
                 <DataGridTextColumn Header="IV %" Binding="{Binding Path=IVPercentage, StringFormat=P2 ,Mode=OneWay}" Width="*"/>
             </DataGrid.Columns>
         </DataGrid>
-        <StackPanel Grid.Row="6" Orientation="Horizontal" HorizontalAlignment="Center">
+        <Expander Grid.Row="6">
+            <Expander.Style>
+                <Style TargetType="Expander">
+                    <Setter Property="IsExpanded" Value="False" />
+                    <Setter Property="Header" Value="Show Power up Costs" />
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding IsExpanded,RelativeSource={RelativeSource Self}}" Value="True">
+                            <Setter Property="Header" Value="Hide Power up Costs" />
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </Expander.Style>
+            <StackPanel HorizontalAlignment="Stretch" Orientation="Vertical">
+                <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
+                    <Label Content="Candy Required:"/>
+                    <TextBlock Text="{Binding CandyRequired}" Width="30" TextAlignment="Left" VerticalAlignment="Center"/>
+                    <Separator Width="50" Background="Transparent"/>
+                    <Label Content="Stardust Required:"/>
+                    <TextBlock Text="{Binding StardustRequired}" Width="40" TextAlignment="Left" VerticalAlignment="Center"/>
+                    <Separator Width="50" Background="Transparent"/>
+                    <Label Content="CP At Level:"/>
+                    <TextBlock Text="{Binding CPAtTargetLevel}" Width="30" TextAlignment="Left" VerticalAlignment="Center"/>
+                </StackPanel>
+                <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
+                    <Slider Value="{Binding TargetLevel}" Maximum="{Binding MaxLevel}" Minimum="{Binding MinLevel}" TickPlacement="BottomRight" IsSnapToTickEnabled="True" TickFrequency="0.5" Name="LevelValueSlider" Width="500" AutoToolTipPlacement="BottomRight" AutoToolTipPrecision="1"/>
+                    <TextBox Text="{Binding ElementName=LevelValueSlider, Path=Value, UpdateSourceTrigger=PropertyChanged}" TextAlignment="Right" Width="40" />
+                </StackPanel>
+            </StackPanel>
+        </Expander>
+        <StackPanel Grid.Row="7" Orientation="Horizontal" HorizontalAlignment="Center">
             <Button Content="Close" Command="{Binding ExitPopupCommand}" Width="50"/>
             <Separator Width="25" Background="Transparent"/>
             <Button Content="Save" Command="{Binding SaveCommand}" Width="50"/>

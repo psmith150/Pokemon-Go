@@ -19,13 +19,16 @@
                 <scm:SortDescription PropertyName="Species" Direction="Ascending"/>
             </CollectionViewSource.SortDescriptions>
         </CollectionViewSource>
+        <CollectionViewSource x:Key="DustValues" Source="{Binding DustValues}"/>
     </UserControl.Resources>
     <Grid Background="{StaticResource MainBackgroundColor}">
         <DataGrid Name="PokemonGrid" ItemsSource="{Binding Source={StaticResource PokemonView}}" HorizontalAlignment="Stretch" AutoGenerateColumns="False" 
                   SelectedItem="{Binding SelectedPokemon}" FrozenColumnCount="3">
             <DataGrid.ContextMenu>
                 <ContextMenu>
-                    <MenuItem Header="CheckIVs" Command="{Binding CheckIVCommand}"/>
+                    <MenuItem Header="Check IVs" Command="{Binding CheckIVCommand}"/>
+                    <MenuItem Header="View Movesets" Command="{Binding ShowMovesetsCommand}"/>
+                    <!--TODO: <MenuItem Header="Go To Pokedex" Command="{Binding GoToSpeciesCommand}"/>-->
                     <MenuItem Header="Add New Pokemon" Command="{Binding AddNewPokemonCommand}"/>
                 </ContextMenu>
             </DataGrid.ContextMenu>
@@ -65,7 +68,7 @@
                 <DataGridTextColumn Header="Game HP" Binding="{Binding Path=GameHP}" Width="Auto"/>
                 <DataGridTextColumn Header="Actual CP" Binding="{Binding Path=ActualCP, Mode=OneWay}" IsReadOnly="True" Width="Auto"/>
                 <DataGridTextColumn Header="Actual HP" Binding="{Binding Path=ActualHP, Mode=OneWay}" IsReadOnly="True" Width="Auto"/>
-                <DataGridTextColumn Header="Stardust" Binding="{Binding Path=DustToPower}" Width="Auto"/>
+                <DataGridComboBoxColumn Header="Stardust" ItemsSource="{Binding Source={StaticResource DustValues}}" SelectedItemBinding="{Binding Path=DustToPower}" Width="Auto"/>
                 <DataGridTextColumn Header="Attack IV" Binding="{Binding Path=AttackIVExpression}" Width="Auto"/>
                 <DataGridTextColumn Header="Defense IV" Binding="{Binding Path=DefenseIVExpression}" Width="Auto"/>
                 <DataGridTextColumn Header="Stamina IV" Binding="{Binding Path=StaminaIVExpression}" Width="Auto"/>

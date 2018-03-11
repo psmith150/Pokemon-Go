@@ -39,6 +39,8 @@ namespace Pokemon_Go_Database.Popups
             {
                 MessageBox.Show("Invalid pokemon!", "Invalid Pokemon", MessageBoxButton.OK);
             }
+            this.MinLevel = this.Calculator.Pokemon.Level;
+            this.TargetLevel = this.Calculator.Pokemon.Level;
         }
 
         public override void Deinitialize()
@@ -83,6 +85,71 @@ namespace Pokemon_Go_Database.Popups
             get
             {
                 return Constants.DustCutoffs;
+            }
+        }
+        private double _MinLevel = 1.0;
+        public double MinLevel
+        {
+            get
+            {
+                return this._MinLevel;
+            }
+            private set
+            {
+                Set(ref this._MinLevel, value);
+            }
+        }
+        private double _MaxLevel = Constants.MaxLevel;
+        public double MaxLevel
+        {
+            get
+            {
+                return this._MaxLevel;
+            }
+            private set
+            {
+                Set(ref this._MaxLevel, value);
+            }
+        }
+        private double _TargetLevel;
+        public double TargetLevel
+        {
+            get
+            {
+                return this._TargetLevel;
+            }
+            set
+            {
+                Set(ref this._TargetLevel, value);
+                RaisePropertyChanged("CandyRequired");
+                RaisePropertyChanged("StardustRequired");
+                RaisePropertyChanged("CPAtTargetLevel");
+            }
+        }
+
+        public int CandyRequired
+        {
+            get
+            {
+                return this.CalculateCandyRequired();
+            }
+        }
+
+        public int StardustRequired
+        {
+            get
+            {
+                return this.CalculateStardustRequired();
+            }
+        }
+
+        public int CPAtTargetLevel
+        {
+            get
+            {
+                if (this.Calculator == null || this.Calculator.Pokemon == null)
+                    return 0;
+                return this.Calculator.Pokemon.GetCP(-1, -1, -1, this.TargetLevel);
             }
         }
         #endregion
@@ -141,6 +208,31 @@ namespace Pokemon_Go_Database.Popups
                 this.ClosePopup(new IVCalculatorPopupEventArgs(this.Calculator.Pokemon));
             else
                 this.ClosePopup(null);
+        }
+
+        private int CalculateCandyRequired()
+        {
+            int candy = 0;
+            int lookupIndex = 0;
+            for (double i = this.MinLevel; i < this.TargetLevel; i+=0.5)
+            {
+                while (i >= Constants.DustLevelCutoffs[lookupIndex + 1])
+                    lookupIndex++;
+                candy += Constants.CandyCutoffs[lookupIndex];
+            }
+            return candy;
+        }
+        private int CalculateStardustRequired()
+        {
+            int stardust = 0;
+            int lookupIndex = 0;
+            for (double i = this.MinLevel; i < this.TargetLevel; i+=0.5)
+            {
+                while (i >= Constants.DustLevelCutoffs[lookupIndex + 1])
+                    lookupIndex++;
+                stardust += Constants.DustCutoffs[lookupIndex];
+            }
+            return stardust;
         }
         #endregion
     }

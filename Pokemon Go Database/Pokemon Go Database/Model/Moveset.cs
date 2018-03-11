@@ -62,7 +62,7 @@ namespace Pokemon_Go_Database.Model
         {
             double fastMoveStab = 1.0;
             double chargeMoveStab = 1.0;
-            if (type1 == this.FastMove.FastMove.Type || type2 == this.ChargeMove.ChargeMove.Type)
+            if (type1 == this.FastMove.FastMove.Type || type2 == this.FastMove.FastMove.Type)
                 fastMoveStab = Constants.StabBonus;
             if (type1 == this.ChargeMove.ChargeMove.Type || type2 == this.ChargeMove.ChargeMove.Type)
                 chargeMoveStab = Constants.StabBonus;
