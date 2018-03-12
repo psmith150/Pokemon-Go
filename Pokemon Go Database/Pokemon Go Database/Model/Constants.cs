@@ -29,7 +29,11 @@ namespace Pokemon_Go_Database.Model
 
         public const double TypeAdvantageBonus = 1.40;
 
+        public const double TypeAdvantageDoubleBonus = 1.96;
+
         public const double TypeDisadvantageBonus = 0.714;
+
+        public const double TypeDisadvantageDoubleBonus = 0.51;
 
         public const double TestDefense = 100.0;
 
@@ -48,6 +52,42 @@ namespace Pokemon_Go_Database.Model
         public static readonly int[] DustCutoffs = { 200, 400, 600, 800, 1000, 1300, 1600, 1900, 2200, 2500, 3000, 3500, 4000, 4500, 5000, 6000, 7000, 8000, 9000, 10000, 11000 };
         public static readonly int[] CandyCutoffs = { 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 3, 3, 4, 4, 4, 6, 8, 10, 12, 15, 16 };
 
+        public static readonly int[] RaidBossHP = { 600, 1800, 3000, 7500, 12500 };
+
+        public const int RaidTimer = 180;
+
+        public const int GymTimer = 100;
+
+        public const int DamageWindowStartMs = 0;
+
+        public const int PokemonSwitchDelayMs = 2000;
+
+        public const int DefenderFastMoveDelay = 2000;
+
+        public static readonly Dictionary<string, int> RaidBosses = new Dictionary<string, int>
+        {
+            {"Snorunt", 1 },
+            {"Swablu", 1 },
+            {"Wailmer", 1 },
+            {"Magikarp", 1 },
+            {"Mawile", 2 },
+            {"Sableye",2 },
+            {"Exeggutor", 2 },
+            {"Slowbro", 2 },
+            {"Claydol", 3 },
+            {"Aerodactyl", 3 },
+            {"Scyther", 3 },
+            {"Starmie", 3 },
+            {"Machamp", 3 },
+            {"Alakazam", 3 },
+            {"Absol", 4 },
+            {"Aggron", 4 },
+            {"Tyranitar", 4 },
+            {"Charizard", 4 },
+            {"Rayquaza", 5 },
+            {"Mewtwo", 5 }
+        };
+
         static Constants()
         {
             double[] values = new double[79];
@@ -65,6 +105,16 @@ namespace Pokemon_Go_Database.Model
                 }
             }
             CpmValues = values;
+        }
+
+        public static int CalculateDamage(int power, double attack, double defense, double bonus)
+        {
+            return (int)Math.Floor(0.5 * power * attack * bonus / defense);
+        }
+
+        public static double CalculateTypeBonus(Type moveType, PokedexEntry species)
+        {
+            return 1.0;
         }
     }
 }

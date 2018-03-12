@@ -555,6 +555,23 @@ namespace Pokemon_Go_Database.Model
             return (int)Math.Truncate((this.GetAttack(attackIV, level) * Math.Pow(this.GetStamina(staminaIV, level), 0.5) * Math.Pow(this.GetDefense(defenseIV, level), 0.5)) / 10.0);
 
         }
+
+        public Pokemon Copy()
+        {
+            Pokemon copy = new Pokemon(this.Species, this.Name);
+            copy.GameCP = this.GameCP;
+            copy.GameHP = this.GameHP;
+            copy.DustToPower = this.DustToPower;
+            copy.HasBeenPowered = this.HasBeenPowered;
+            copy.FastMove = this.FastMove;
+            copy.ChargeMove = this.ChargeMove;
+            copy.AttackIVExpression = this.AttackIVExpression;
+            copy.DefenseIVExpression = this.DefenseIVExpression;
+            copy.StaminaIVExpression = this.StaminaIVExpression;
+            copy.LevelExpression = this.LevelExpression;
+
+            return copy;
+        }
         #endregion
 
         #region Private Methods

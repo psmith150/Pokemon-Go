@@ -96,6 +96,7 @@
     <Compile Include="BaseViewModel.cs" />
     <Compile Include="CustomControls\HoverButton.cs" />
     <Compile Include="IOC\IOCContainer.cs" />
+    <Compile Include="Model\BattleResult.cs" />
     <Compile Include="Model\ChargeMove.cs" />
     <Compile Include="Model\Constants.cs" />
     <Compile Include="Model\FastMove.cs" />
@@ -140,9 +141,13 @@
     <Compile Include="Screens\PokemonViewModel.cs" />
     <Compile Include="Screens\PokedexViewModel.cs" />
     <Compile Include="Screens\ScreenViewModel.cs" />
+    <Compile Include="Screens\BattleSimulationScreen.xaml.cs">
+      <DependentUpon>BattleSimulationScreen.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Screens\TemplateScreen.xaml.cs">
       <DependentUpon>TemplateScreen.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Screens\BattleSimulationViewModel.cs" />
     <Compile Include="Screens\TemplateViewModel.cs" />
     <Compile Include="Services\NavigationService.cs" />
     <Compile Include="Services\SessionService.cs" />
@@ -179,6 +184,10 @@
     <Page Include="Screens\PokedexScreen.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Screens\BattleSimulationScreen.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Screens\TemplateScreen.xaml">
       <SubType>Designer</SubType>
