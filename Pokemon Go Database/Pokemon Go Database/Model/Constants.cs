@@ -137,36 +137,142 @@ namespace Pokemon_Go_Database.Model
             TypeChart[(int)Type.Fighting, (int)Type.Fairy] = TypeDisadvantageBonus;
 
             //Flying Type
+            TypeChart[(int)Type.Flying, (int)Type.Fighting] = TypeAdvantageBonus;
+            TypeChart[(int)Type.Flying, (int)Type.Rock] = TypeDisadvantageBonus;
+            TypeChart[(int)Type.Flying, (int)Type.Bug] = TypeAdvantageBonus;
+            TypeChart[(int)Type.Flying, (int)Type.Steel] = TypeDisadvantageBonus;
+            TypeChart[(int)Type.Flying, (int)Type.Grass] = TypeAdvantageBonus;
+            TypeChart[(int)Type.Flying, (int)Type.Electric] = TypeDisadvantageBonus;
 
             //Poison Type
+            TypeChart[(int)Type.Poison, (int)Type.Poison] = TypeDisadvantageBonus;
+            TypeChart[(int)Type.Poison, (int)Type.Ground] = TypeDisadvantageBonus;
+            TypeChart[(int)Type.Poison, (int)Type.Rock] = TypeDisadvantageBonus;
+            TypeChart[(int)Type.Poison, (int)Type.Ghost] = TypeDisadvantageBonus;
+            TypeChart[(int)Type.Poison, (int)Type.Steel] = TypeDisadvantageBonus;
+            TypeChart[(int)Type.Poison, (int)Type.Grass] = TypeAdvantageBonus;
+            TypeChart[(int)Type.Poison, (int)Type.Fairy] = TypeAdvantageBonus;
 
             //Ground Type
+            TypeChart[(int)Type.Ground, (int)Type.Flying] = TypeDisadvantageDoubleBonus;
+            TypeChart[(int)Type.Ground, (int)Type.Poison] = TypeAdvantageBonus;
+            TypeChart[(int)Type.Ground, (int)Type.Rock] = TypeAdvantageBonus;
+            TypeChart[(int)Type.Ground, (int)Type.Bug] = TypeDisadvantageBonus;
+            TypeChart[(int)Type.Ground, (int)Type.Steel] = TypeAdvantageBonus;
+            TypeChart[(int)Type.Ground, (int)Type.Fire] = TypeAdvantageBonus;
+            TypeChart[(int)Type.Ground, (int)Type.Grass] = TypeDisadvantageBonus;
+            TypeChart[(int)Type.Ground, (int)Type.Electric] = TypeAdvantageBonus;
 
             //Rock Type
+            TypeChart[(int)Type.Rock, (int)Type.Fighting] = TypeDisadvantageBonus;
+            TypeChart[(int)Type.Rock, (int)Type.Flying] = TypeAdvantageBonus;
+            TypeChart[(int)Type.Rock, (int)Type.Ground] = TypeDisadvantageBonus;
+            TypeChart[(int)Type.Rock, (int)Type.Bug] = TypeAdvantageBonus;
+            TypeChart[(int)Type.Rock, (int)Type.Steel] = TypeDisadvantageBonus;
+            TypeChart[(int)Type.Rock, (int)Type.Fire] = TypeAdvantageBonus;
+            TypeChart[(int)Type.Rock, (int)Type.Ice] = TypeAdvantageBonus;
 
             //Bug Type
+            TypeChart[(int)Type.Bug, (int)Type.Fighting] = TypeDisadvantageBonus;
+            TypeChart[(int)Type.Bug, (int)Type.Flying] = TypeDisadvantageBonus;
+            TypeChart[(int)Type.Bug, (int)Type.Poison] = TypeDisadvantageBonus;
+            TypeChart[(int)Type.Bug, (int)Type.Ghost] = TypeDisadvantageBonus;
+            TypeChart[(int)Type.Bug, (int)Type.Steel] = TypeDisadvantageBonus;
+            TypeChart[(int)Type.Bug, (int)Type.Fire] = TypeDisadvantageBonus;
+            TypeChart[(int)Type.Bug, (int)Type.Grass] = TypeAdvantageBonus;
+            TypeChart[(int)Type.Bug, (int)Type.Psychic] = TypeAdvantageBonus;
+            TypeChart[(int)Type.Bug, (int)Type.Dark] = TypeAdvantageBonus;
+            TypeChart[(int)Type.Bug, (int)Type.Fairy] = TypeDisadvantageBonus;
 
             //Ghost Type
+            TypeChart[(int)Type.Ghost, (int)Type.Normal] = TypeDisadvantageDoubleBonus;
+            TypeChart[(int)Type.Ghost, (int)Type.Ghost] = TypeAdvantageBonus;
+            TypeChart[(int)Type.Ghost, (int)Type.Psychic] = TypeAdvantageBonus;
+            TypeChart[(int)Type.Ghost, (int)Type.Dark] = TypeDisadvantageBonus;
 
             //Steel Type
+            TypeChart[(int)Type.Steel, (int)Type.Rock] = TypeAdvantageBonus;
+            TypeChart[(int)Type.Steel, (int)Type.Steel] = TypeDisadvantageBonus;
+            TypeChart[(int)Type.Steel, (int)Type.Fire] = TypeDisadvantageBonus;
+            TypeChart[(int)Type.Steel, (int)Type.Water] = TypeDisadvantageBonus;
+            TypeChart[(int)Type.Steel, (int)Type.Electric] = TypeDisadvantageBonus;
+            TypeChart[(int)Type.Steel, (int)Type.Ice] = TypeAdvantageBonus;
+            TypeChart[(int)Type.Steel, (int)Type.Fairy] = TypeAdvantageBonus;
 
             //Fire Type
+            TypeChart[(int)Type.Fire, (int)Type.Rock] = TypeDisadvantageBonus;
+            TypeChart[(int)Type.Fire, (int)Type.Bug] = TypeAdvantageBonus;
+            TypeChart[(int)Type.Fire, (int)Type.Steel] = TypeAdvantageBonus;
+            TypeChart[(int)Type.Fire, (int)Type.Fire] = TypeDisadvantageBonus;
+            TypeChart[(int)Type.Fire, (int)Type.Water] = TypeDisadvantageBonus;
+            TypeChart[(int)Type.Fire, (int)Type.Grass] = TypeAdvantageBonus;
+            TypeChart[(int)Type.Fire, (int)Type.Ice] = TypeAdvantageBonus;
+            TypeChart[(int)Type.Fire, (int)Type.Dragon] = TypeDisadvantageBonus;
 
             //Water Type
+            TypeChart[(int)Type.Water, (int)Type.Rock] = TypeAdvantageBonus;
+            TypeChart[(int)Type.Water, (int)Type.Ground] = TypeAdvantageBonus;
+            TypeChart[(int)Type.Water, (int)Type.Fire] = TypeAdvantageBonus;
+            TypeChart[(int)Type.Water, (int)Type.Water] = TypeDisadvantageBonus;
+            TypeChart[(int)Type.Water, (int)Type.Grass] = TypeDisadvantageBonus;
+            TypeChart[(int)Type.Water, (int)Type.Dragon] = TypeDisadvantageBonus;
 
             //Grass Type
+            TypeChart[(int)Type.Grass, (int)Type.Flying] = TypeDisadvantageBonus;
+            TypeChart[(int)Type.Grass, (int)Type.Poison] = TypeDisadvantageBonus;
+            TypeChart[(int)Type.Grass, (int)Type.Ground] = TypeAdvantageBonus;
+            TypeChart[(int)Type.Grass, (int)Type.Rock] = TypeAdvantageBonus;
+            TypeChart[(int)Type.Grass, (int)Type.Bug] = TypeDisadvantageBonus;
+            TypeChart[(int)Type.Grass, (int)Type.Steel] = TypeDisadvantageBonus;
+            TypeChart[(int)Type.Grass, (int)Type.Fire] = TypeDisadvantageBonus;
+            TypeChart[(int)Type.Grass, (int)Type.Water] = TypeAdvantageBonus;
+            TypeChart[(int)Type.Grass, (int)Type.Grass] = TypeDisadvantageBonus;
+            TypeChart[(int)Type.Grass, (int)Type.Dragon] = TypeDisadvantageBonus;
 
             //Electric Type
+            TypeChart[(int)Type.Electric, (int)Type.Flying] = TypeAdvantageBonus;
+            TypeChart[(int)Type.Electric, (int)Type.Ground] = TypeDisadvantageDoubleBonus;
+            TypeChart[(int)Type.Electric, (int)Type.Water] = TypeAdvantageBonus;
+            TypeChart[(int)Type.Electric, (int)Type.Grass] = TypeDisadvantageBonus;
+            TypeChart[(int)Type.Electric, (int)Type.Electric] = TypeDisadvantageBonus;
+            TypeChart[(int)Type.Electric, (int)Type.Dragon] = TypeDisadvantageBonus;
 
             //Psychic Type
+            TypeChart[(int)Type.Psychic, (int)Type.Fighting] = TypeAdvantageBonus;
+            TypeChart[(int)Type.Psychic, (int)Type.Poison] = TypeAdvantageBonus;
+            TypeChart[(int)Type.Psychic, (int)Type.Steel] = TypeDisadvantageBonus;
+            TypeChart[(int)Type.Psychic, (int)Type.Psychic] = TypeDisadvantageBonus;
+            TypeChart[(int)Type.Psychic, (int)Type.Dark] = TypeDisadvantageDoubleBonus;
 
             //Ice Type
+            TypeChart[(int)Type.Ice, (int)Type.Flying] = TypeAdvantageBonus;
+            TypeChart[(int)Type.Ice, (int)Type.Ground] = TypeAdvantageBonus;
+            TypeChart[(int)Type.Ice, (int)Type.Steel] = TypeDisadvantageBonus;
+            TypeChart[(int)Type.Ice, (int)Type.Fire] = TypeDisadvantageBonus;
+            TypeChart[(int)Type.Ice, (int)Type.Water] = TypeDisadvantageBonus;
+            TypeChart[(int)Type.Ice, (int)Type.Grass] = TypeAdvantageBonus;
+            TypeChart[(int)Type.Ice, (int)Type.Ice] = TypeDisadvantageBonus;
+            TypeChart[(int)Type.Ice, (int)Type.Dragon] = TypeAdvantageBonus;
 
             //Dragon Type
+            TypeChart[(int)Type.Dragon, (int)Type.Steel] = TypeDisadvantageBonus;
+            TypeChart[(int)Type.Dragon, (int)Type.Dragon] = TypeAdvantageBonus;
+            TypeChart[(int)Type.Dragon, (int)Type.Fairy] = TypeDisadvantageDoubleBonus;
 
             //Dark Type
+            TypeChart[(int)Type.Dark, (int)Type.Fighting] = TypeDisadvantageBonus;
+            TypeChart[(int)Type.Dark, (int)Type.Ghost] = TypeAdvantageBonus;
+            TypeChart[(int)Type.Dark, (int)Type.Psychic] = TypeAdvantageBonus;
+            TypeChart[(int)Type.Dark, (int)Type.Dark] = TypeDisadvantageBonus;
+            TypeChart[(int)Type.Dark, (int)Type.Fairy] = TypeDisadvantageBonus;
 
             //Fairy Type
+            TypeChart[(int)Type.Fairy, (int)Type.Fighting] = TypeAdvantageBonus;
+            TypeChart[(int)Type.Fairy, (int)Type.Poison] = TypeDisadvantageBonus;
+            TypeChart[(int)Type.Fairy, (int)Type.Steel] = TypeDisadvantageBonus;
+            TypeChart[(int)Type.Fairy, (int)Type.Fire] = TypeDisadvantageBonus;
+            TypeChart[(int)Type.Fairy, (int)Type.Dragon] = TypeAdvantageBonus;
+            TypeChart[(int)Type.Fairy, (int)Type.Dark] = TypeAdvantageBonus;
         }
 
         public static int CalculateDamage(int power, double attack, double defense, double bonus)
