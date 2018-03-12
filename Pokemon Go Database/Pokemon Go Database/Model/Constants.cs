@@ -63,6 +63,10 @@ namespace Pokemon_Go_Database.Model
         public const int PokemonSwitchDelayMs = 2000;
 
         public const int DefenderFastMoveDelay = 2000;
+        /// <summary>
+        /// Attacker,Defender
+        /// </summary>
+        public static readonly double[,] TypeChart;
 
         public static readonly Dictionary<string, int> RaidBosses = new Dictionary<string, int>
         {
@@ -105,16 +109,74 @@ namespace Pokemon_Go_Database.Model
                 }
             }
             CpmValues = values;
+
+            TypeChart = new double[Enum.GetNames(typeof(Type)).Length, Enum.GetNames(typeof(Type)).Length];
+            for(int i = 0; i < TypeChart.GetLength(0); i++)
+            {
+                for(int j = 0; j < TypeChart.GetLength(1); j++)
+                {
+                    TypeChart[i, j] = 1.0;
+                }
+            }
+            //Normal Type
+            TypeChart[(int)Type.Normal, (int)Type.Rock] = TypeDisadvantageBonus;
+            TypeChart[(int)Type.Normal, (int)Type.Ghost] = TypeDisadvantageDoubleBonus;
+            TypeChart[(int)Type.Normal, (int)Type.Steel] = TypeDisadvantageBonus;
+
+            //Fighting Type
+            TypeChart[(int)Type.Fighting, (int)Type.Normal] = TypeAdvantageBonus;
+            TypeChart[(int)Type.Fighting, (int)Type.Flying] = TypeDisadvantageBonus;
+            TypeChart[(int)Type.Fighting, (int)Type.Poison] = TypeDisadvantageBonus;
+            TypeChart[(int)Type.Fighting, (int)Type.Rock] = TypeAdvantageBonus;
+            TypeChart[(int)Type.Fighting, (int)Type.Bug] = TypeDisadvantageBonus;
+            TypeChart[(int)Type.Fighting, (int)Type.Ghost] = TypeDisadvantageDoubleBonus;
+            TypeChart[(int)Type.Fighting, (int)Type.Steel] = TypeAdvantageBonus;
+            TypeChart[(int)Type.Fighting, (int)Type.Psychic] = TypeDisadvantageBonus;
+            TypeChart[(int)Type.Fighting, (int)Type.Ice] = TypeAdvantageBonus;
+            TypeChart[(int)Type.Fighting, (int)Type.Dark] = TypeAdvantageBonus;
+            TypeChart[(int)Type.Fighting, (int)Type.Fairy] = TypeDisadvantageBonus;
+
+            //Flying Type
+
+            //Poison Type
+
+            //Ground Type
+
+            //Rock Type
+
+            //Bug Type
+
+            //Ghost Type
+
+            //Steel Type
+
+            //Fire Type
+
+            //Water Type
+
+            //Grass Type
+
+            //Electric Type
+
+            //Psychic Type
+
+            //Ice Type
+
+            //Dragon Type
+
+            //Dark Type
+
+            //Fairy Type
         }
 
         public static int CalculateDamage(int power, double attack, double defense, double bonus)
         {
-            return (int)Math.Floor(0.5 * power * attack * bonus / defense);
+            return (int)Math.Floor(0.5 * power * attack * bonus / defense) + 1;
         }
 
-        public static double CalculateTypeBonus(Type moveType, PokedexEntry species)
+        public static double CalculateTypeBonus(Type moveType, Type pokemonType1, Type pokemonType2)
         {
-            return 1.0;
+            return TypeChart[(int)moveType, (int)pokemonType1] * TypeChart[(int)moveType, (int)pokemonType2];
         }
     }
 }

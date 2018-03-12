@@ -3,6 +3,7 @@ using Pokemon_Go_Database.Model;
 using Pokemon_Go_Database.Services;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -145,56 +146,69 @@ namespace Pokemon_Go_Database.Screens
                 {
                     int power = 0;
                     double bonus = 1.0;
+                    //Use charge move
                     if (attackerEnergy >= Attacker.ChargeMove.ChargeMove.Energy)
                     {
                         power = Attacker.ChargeMove.ChargeMove.Power;
-                        attackerNextAttackTime = Attacker.ChargeMove.ChargeMove.Time;
+                        attackerNextAttackTime = time + Attacker.ChargeMove.ChargeMove.Time;
                         attackerEnergy -= Attacker.ChargeMove.ChargeMove.Energy;
                         if (Attacker.Species.Type1 == Attacker.ChargeMove.ChargeMove.Type || Attacker.Species.Type2 == Attacker.ChargeMove.ChargeMove.Type)
                             bonus *= Constants.StabBonus;
+                        bonus *= Constants.CalculateTypeBonus(Attacker.ChargeMove.ChargeMove.Type, Defender.Species.Type1, Defender.Species.Type2);
                     }
+                    //Use fast move
                     else
                     {
                         power = Attacker.FastMove.FastMove.Power;
-                        attackerNextAttackTime = Attacker.FastMove.FastMove.Time;
+                        attackerNextAttackTime = time + Attacker.FastMove.FastMove.Time;
                         attackerEnergy += Attacker.FastMove.FastMove.Energy;
                         if (Attacker.Species.Type1 == Attacker.FastMove.FastMove.Type || Attacker.Species.Type2 == Attacker.FastMove.FastMove.Type)
                             bonus *= Constants.StabBonus;
+                        bonus *= Constants.CalculateTypeBonus(Attacker.FastMove.FastMove.Type, Defender.Species.Type1, Defender.Species.Type2);
                     }
+                    
                     attackerDamage = Constants.CalculateDamage(power, Attacker.GetAttack(), Defender.GetDefense(), bonus);
+                    //Debug.WriteLine($"Hariyama used")
                 }
                 if (time >= defenderNextAttackTime)
                 {
                     int power = 0;
                     double bonus = 1.0;
+                    //Check for charge move
                     if (attackerEnergy >= Attacker.ChargeMove.ChargeMove.Energy)
                     {
+                        //Use charge move
                         if (defenderUseChargeMove)
                         {
                             power = Defender.ChargeMove.ChargeMove.Power;
-                            defenderNextAttackTime = Defender.ChargeMove.ChargeMove.Time;
+                            defenderNextAttackTime = time + Defender.ChargeMove.ChargeMove.Time;
                             defenderEnergy -= Defender.ChargeMove.ChargeMove.Energy;
                             if (Defender.Species.Type1 == Defender.ChargeMove.ChargeMove.Type || Defender.Species.Type2 == Defender.ChargeMove.ChargeMove.Type)
                                 bonus *= Constants.StabBonus;
+                            bonus *= Constants.CalculateTypeBonus(Defender.ChargeMove.ChargeMove.Type, Attacker.Species.Type1, Attacker.Species.Type2);
                             defenderUseChargeMove = false;
                         }
+                        //Use fast move
                         else
                         {
                             defenderUseChargeMove = rand.Next(0, 10) >= 5;
                             power = Defender.FastMove.FastMove.Power;
-                            defenderNextAttackTime = Defender.FastMove.FastMove.Time + Constants.DefenderFastMoveDelay;
+                            defenderNextAttackTime = time + Defender.FastMove.FastMove.Time + Constants.DefenderFastMoveDelay;
                             defenderEnergy += Defender.FastMove.FastMove.Energy;
                             if (Defender.Species.Type1 == Defender.FastMove.FastMove.Type || Defender.Species.Type2 == Defender.FastMove.FastMove.Type)
                                 bonus *= Constants.StabBonus;
+                            bonus *= Constants.CalculateTypeBonus(Defender.FastMove.FastMove.Type, Attacker.Species.Type1, Attacker.Species.Type2);
                         }
                     }
+                    //Use fast move
                     else
                     {
                         power = Defender.FastMove.FastMove.Power;
-                        defenderNextAttackTime = Defender.FastMove.FastMove.Time;
-                        defenderEnergy += Defender.FastMove.FastMove.Energy + Constants.DefenderFastMoveDelay;
+                        defenderNextAttackTime = time + Defender.FastMove.FastMove.Time + Constants.DefenderFastMoveDelay;
+                        defenderEnergy += Defender.FastMove.FastMove.Energy;
                         if (Defender.Species.Type1 == Defender.FastMove.FastMove.Type || Defender.Species.Type2 == Defender.FastMove.FastMove.Type)
                             bonus *= Constants.StabBonus;
+                        bonus *= Constants.CalculateTypeBonus(Defender.FastMove.FastMove.Type, Attacker.Species.Type1, Attacker.Species.Type2);
                     }
                     defenderDamage = Constants.CalculateDamage(power, Defender.GetAttack(), Attacker.GetDefense(), bonus);
                 }
