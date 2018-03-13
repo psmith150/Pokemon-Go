@@ -58,11 +58,13 @@ namespace Pokemon_Go_Database.Model
 
         public const int GymTimer = 100;
 
-        public const int DamageWindowStartMs = 0;
+        public const int PokemonSwitchDelayMs = 1000;
 
-        public const int PokemonSwitchDelayMs = 2000;
+        public const int dodgeDurationMs = 500;
 
         public const int DefenderFastMoveDelay = 2000;
+
+        public const int NumSimulations = 100;
         /// <summary>
         /// Attacker,Defender
         /// </summary>

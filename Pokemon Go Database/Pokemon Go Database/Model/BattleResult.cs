@@ -13,7 +13,7 @@ namespace Pokemon_Go_Database.Model
         public BattleResult()
         {
             this.BattleDuration = 0.0;
-            this.NumberOfDeaths = 0;
+            this.NumberOfDeaths = 0.0;
         }
         #endregion
 
@@ -31,8 +31,8 @@ namespace Pokemon_Go_Database.Model
             }
         }
 
-        private int _NumberOfDeaths;
-        public int NumberOfDeaths
+        private double _NumberOfDeaths;
+        public double NumberOfDeaths
         {
             get
             {

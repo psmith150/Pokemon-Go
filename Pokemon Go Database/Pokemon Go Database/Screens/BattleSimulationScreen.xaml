@@ -42,6 +42,8 @@
                 <ComboBox Width="100" SelectedItem="{Binding Attacker.FastMove}" DisplayMemberPath="FastMove.Name" ItemsSource="{Binding Attacker.Species.FastMoves}"/>
                 <Label Content="Charge Move"/>
                 <ComboBox Width="100" SelectedItem="{Binding Attacker.ChargeMove}" DisplayMemberPath="ChargeMove.Name" ItemsSource="{Binding Attacker.Species.ChargeMoves}"/>
+                <Label Content="Dodge Charge Moves?"/>
+                <CheckBox IsChecked="{Binding DodgeChargeAttacks}"/>
             </StackPanel>
             <StackPanel Name="BattleResults" Orientation="Horizontal" HorizontalAlignment="Center">
                 <Label Content="Time Required:"/>
