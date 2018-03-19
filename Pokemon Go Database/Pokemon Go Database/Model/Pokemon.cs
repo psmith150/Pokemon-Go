@@ -207,6 +207,14 @@ namespace Pokemon_Go_Database.Model
             }
         }
         [XmlIgnore]
+        public string FullName
+        {
+            get
+            {
+                return $"{this.Name} - {this.Moveset.Name} - {this.GetAttackIV()}/{this.GetDefenseIV()}/{this.GetStaminaIV()}";
+            }
+        }
+        [XmlIgnore]
         public int ActualCP
         {
             get

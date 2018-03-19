@@ -94,7 +94,12 @@ namespace Pokemon_Go_Database.Screens
         private async Task AddNewPokemonAsync()
         {
             Pokemon newPokemon = new Pokemon();
-            IVCalculator calculator = new IVCalculator(newPokemon);
+            IVCalculator calculator = new IVCalculator(newPokemon)
+            {
+                AttackBest = false,
+                DefenseBest = false,
+                StaminaBest = false
+            };
             IVCalculatorPopupEventArgs args =  await navigationService.OpenPopup<IVCalculatorViewModel>(new IVCalculatorWrapper(calculator, true)) as IVCalculatorPopupEventArgs;
             if (args != null)
                 this.Session.MyPokemon.Add(args.NewPokemon);

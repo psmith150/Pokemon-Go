@@ -91,6 +91,7 @@ namespace Pokemon_Go_Database.Model
             {"Tyranitar", 4 },
             {"Charizard", 4 },
             {"Rayquaza", 5 },
+            {"Lugia", 5 },
             {"Mewtwo", 5 }
         };
 

@@ -124,6 +124,7 @@ namespace Pokemon_Go_Database.Screens
             Random rand = new Random();
             double averageTime = 0.0;
             double averageLives = 0.0;
+            bool errorShown = false;
             for (int i = 0; i < Constants.NumSimulations; i++)
             {
                 attackerLivesNeeded = 0;
@@ -138,7 +139,9 @@ namespace Pokemon_Go_Database.Screens
                     int index;
                     if (!Constants.RaidBosses.TryGetValue(this.Defender.Species.Species, out index))
                     {
-                        MessageBox.Show($"{Defender.Species.Species} is not a defined raid boss!", "Undefined Raid Boss", MessageBoxButton.OK);
+                        if (!errorShown)
+                            MessageBox.Show($"{Defender.Species.Species} is not a defined raid boss!", "Undefined Raid Boss", MessageBoxButton.OK);
+                        errorShown = true;
                     }
                     else
                     {
