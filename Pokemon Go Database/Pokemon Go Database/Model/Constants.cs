@@ -90,8 +90,13 @@ namespace Pokemon_Go_Database.Model
             {"Aggron", 4 },
             {"Tyranitar", 4 },
             {"Charizard", 4 },
+            {"Groudon", 5 },
+            {"Kyogre", 5 },
             {"Rayquaza", 5 },
             {"Lugia", 5 },
+            {"Ho-oh", 5 },
+            {"Latios", 5 },
+            {"Latias", 5 },
             {"Mewtwo", 5 }
         };
 

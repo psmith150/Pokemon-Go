@@ -35,7 +35,7 @@ namespace Pokemon_Go_Database.Screens
             this.GoToSpeciesCommand = new RelayCommand(() => GoToSpecies());
 
             this.AllSpecies = this.Session.Pokedex;
-            this.MyPokemon = this.Session.MyPokemon;
+            this.MyPokemon = new ListCollectionView(this.Session.MyPokemon);
         }
 
         public override void Initialize()
@@ -50,8 +50,8 @@ namespace Pokemon_Go_Database.Screens
 
         #region Public Properties
         public Pokemon SelectedPokemon { get; set; }
-        private MyObservableCollection<Pokemon> _MyPokemon;
-        public MyObservableCollection<Pokemon> MyPokemon
+        private ListCollectionView _MyPokemon;
+        public ListCollectionView MyPokemon
         {
             get
             {
@@ -60,6 +60,8 @@ namespace Pokemon_Go_Database.Screens
             private set
             {
                 this.Set(ref this._MyPokemon, value);
+                this._MyPokemon.SortDescriptions.Add(new System.ComponentModel.SortDescription("GameCP", System.ComponentModel.ListSortDirection.Descending));
+                this._MyPokemon.Filter = PokemonFilter;
             }
         }
 
@@ -82,9 +84,94 @@ namespace Pokemon_Go_Database.Screens
                 return Constants.DustCutoffs;
             }
         }
+        private bool _ComparisonFilterActive;
+        public bool ComparisonFilterActive
+        {
+            get
+            {
+                return this._ComparisonFilterActive;
+            }
+            set
+            {
+                Set(ref this._ComparisonFilterActive, value);
+                UpdateFilter();
+            }
+        }
+        private bool _FavoriteFilterActive;
+        public bool FavoriteFilterActive
+        {
+            get
+            {
+                return this._FavoriteFilterActive;
+            }
+            set
+            {
+                Set(ref this._FavoriteFilterActive, value);
+                UpdateFilter();
+            }
+        }
+        private bool _FastTMFilterActive;
+        public bool FastTMFilterActive
+        {
+            get
+            {
+                return this._FastTMFilterActive;
+            }
+            set
+            {
+                Set(ref this._FastTMFilterActive, value);
+                UpdateFilter();
+            }
+        }
+        private bool _ChargeTMFilterActive;
+        public bool ChargeTMFilterActive
+        {
+            get
+            {
+                return this._ChargeTMFilterActive;
+            }
+            set
+            {
+                Set(ref this._ChargeTMFilterActive, value);
+                UpdateFilter();
+            }
+        }
+        private bool _PowerUpFilterActive;
+        public bool PowerUpFilterActive
+        {
+            get
+            {
+                return this._PowerUpFilterActive;
+            }
+            set
+            {
+                Set(ref this._PowerUpFilterActive, value);
+                UpdateFilter();
+            }
+        }
         #endregion
 
         #region Private Methods
+        private bool PokemonFilter(object item)
+        {
+            Pokemon pokemon = item as Pokemon;
+            bool result = true;
+            if (this.ComparisonFilterActive && !pokemon.Compare)
+                result = false;
+            if (this.FavoriteFilterActive && !pokemon.IsFavorite)
+                result = false;
+            if (this.FastTMFilterActive && !pokemon.NeedsFastTM)
+                result = false;
+            if (this.ChargeTMFilterActive && !pokemon.NeedsChargeTM)
+                result = false;
+            if (this.PowerUpFilterActive && !pokemon.ShouldBePoweredUp)
+                result = false;
+            return result;
+        }
+        private void UpdateFilter()
+        {
+            this.MyPokemon.Refresh();
+        }
         private async Task CheckIVAsync()
         {
             if (this.SelectedPokemon == null)

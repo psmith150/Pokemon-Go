@@ -197,6 +197,68 @@ namespace Pokemon_Go_Database.Model
                 this.UpdateAllCalculatedProperties();
             }
         }
+
+        private bool _NeedsFastTM;
+        public bool NeedsFastTM
+        {
+            get
+            {
+                return this._NeedsFastTM;
+            }
+            set
+            {
+                Set(ref this._NeedsFastTM, value);
+            }
+        }
+        private bool _NeedsChargeTM;
+        public bool NeedsChargeTM
+        {
+            get
+            {
+                return this._NeedsChargeTM;
+            }
+            set
+            {
+                Set(ref this._NeedsChargeTM, value);
+            }
+        }
+        private bool _ShouldBePoweredUp;
+        public bool ShouldBePoweredUp
+        {
+            get
+            {
+                return this._ShouldBePoweredUp;
+            }
+            set
+            {
+                Set(ref this._ShouldBePoweredUp, value);
+            }
+        }
+        private bool _IsFavorite;
+        public bool IsFavorite
+        {
+            get
+            {
+                return this._IsFavorite;
+            }
+            set
+            {
+                Set(ref this._IsFavorite, value);
+            }
+        }
+        [XmlIgnore]
+        private bool _Compare;
+        public bool Compare
+        {
+            get
+            {
+                return this._Compare;
+            }
+            set
+            {
+                Set(ref this._Compare, value);
+            }
+        }
         #region Calculated Properties
         [XmlIgnore]
         public Moveset Moveset
