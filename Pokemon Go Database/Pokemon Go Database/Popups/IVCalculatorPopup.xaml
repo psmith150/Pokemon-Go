@@ -5,6 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Pokemon_Go_Database.Popups"
              xmlns:scm="clr-namespace:System.ComponentModel;assembly=WindowsBase"
+             xmlns:xtk="http://schemas.xceed.com/wpf/xaml/datagrid"
              mc:Ignorable="d" 
              d:DataContext="{d:DesignInstance Type=local:IVCalculatorViewModel}">
     <UserControl.Resources>
@@ -33,11 +34,11 @@
             </StackPanel>
             <StackPanel Orientation="Horizontal">
                 <Label Content="CP:"/>
-                <TextBox Text="{Binding Calculator.Pokemon.GameCP}" Width="50"/>
+                <xtk:AutoSelectTextBox Text="{Binding Calculator.Pokemon.GameCP}" Width="50" AutoSelectBehavior="OnFocus"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal">
                 <Label Content="HP:"/>
-                <TextBox Text="{Binding Calculator.Pokemon.GameHP}" Width="50"/>
+                <xtk:AutoSelectTextBox Text="{Binding Calculator.Pokemon.GameHP}" Width="50" AutoSelectBehavior="OnFocus"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal">
                 <Label Content="Dust:"/>

@@ -146,6 +146,10 @@ namespace Pokemon_Go_Database.Screens
                     else
                     {
                         defenderHP = Constants.RaidBossHP[index - 1];
+                        this.Defender.AttackIVExpression = Constants.MaxIV.ToString();
+                        this.Defender.DefenseIVExpression = Constants.MaxIV.ToString();
+                        this.Defender.StaminaIVExpression = Constants.MaxIV.ToString();
+                        this.Defender.LevelExpression = Constants.RaidBossLevels[index - 1].ToString();
                     }
                 }
                 int time = 0; //Time in msec

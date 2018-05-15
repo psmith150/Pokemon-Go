@@ -54,7 +54,11 @@ namespace Pokemon_Go_Database.Model
 
         public static readonly int[] RaidBossHP = { 600, 1800, 3000, 7500, 12500 };
 
+        public static readonly int[] RaidBossLevels = { 20, 25, 30, 40, 40 };
+
         public const int RaidTimer = 180;
+
+        public const int LegendaryRaidTimer = 300;
 
         public const int GymTimer = 100;
 

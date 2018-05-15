@@ -361,11 +361,11 @@ namespace Pokemon_Go_Database.Model
             {
                 if (this.Moveset == null)
                     return 0.0;
-                double movesetDPS = this.Moveset.GetDPS(this.GetAttack(), this.Species.Type1, this.Species.Type2);
+                double movesetDPS = this.Moveset.GetDPS(this.Species.Attack, this.Species.Type1, this.Species.Type2);
                 double maxDPS = -1.0;
                 foreach (Moveset moveset in this.Species.Movesets)
                 {
-                    maxDPS = moveset.GetDPS(this.GetAttack(), this.Species.Type1, this.Species.Type2) > maxDPS ? moveset.GetDPS(this.GetAttack(), this.Species.Type1, this.Species.Type2) : maxDPS;
+                    maxDPS = moveset.GetDPS(this.Species.Attack, this.Species.Type1, this.Species.Type2) > maxDPS ? moveset.GetDPS(this.Species.Attack, this.Species.Type1, this.Species.Type2) : maxDPS;
                 }
                 return movesetDPS / maxDPS;
             }
@@ -419,11 +419,11 @@ namespace Pokemon_Go_Database.Model
             {
                 if (this.Moveset == null)
                     return 0.0;
-                double movesetDPS = this.Moveset.GetDPS(this.GetAttack(), this.Species.Type1, this.Species.Type2, true);
+                double movesetDPS = this.Moveset.GetDPS(this.Species.Attack, this.Species.Type1, this.Species.Type2, true);
                 double maxDPS = -1.0;
                 foreach (Moveset moveset in this.Species.Movesets)
                 {
-                    maxDPS = moveset.GetDPS(this.GetAttack(), this.Species.Type1, this.Species.Type2, true) > maxDPS ? moveset.GetDPS(this.GetAttack(), this.Species.Type1, this.Species.Type2, true) : maxDPS;
+                    maxDPS = moveset.GetDPS(this.Species.Attack, this.Species.Type1, this.Species.Type2, true) > maxDPS ? moveset.GetDPS(this.Species.Attack, this.Species.Type1, this.Species.Type2, true) : maxDPS;
                 }
                 return movesetDPS / maxDPS;
             }
