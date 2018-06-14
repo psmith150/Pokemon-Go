@@ -45,5 +45,17 @@ namespace Pokemon_Go_Database.Properties {
                 this["LastFiles"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("<Species><IV%>")]
+        public string SuggestedName {
+            get {
+                return ((string)(this["SuggestedName"]));
+            }
+            set {
+                this["SuggestedName"] = value;
+            }
+        }
     }
 }

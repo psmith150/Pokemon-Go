@@ -205,7 +205,10 @@ namespace Pokemon_Go_Database.Popups
                 this.Calculator.Pokemon.LevelExpression = "1";
 
             if (!this.IsNotNewPokemon)
+            {
+                this.Calculator.Pokemon.Name = this.Calculator.GenerateName();
                 this.ClosePopup(new IVCalculatorPopupEventArgs(this.Calculator.Pokemon));
+            }
             else
                 this.ClosePopup(null);
         }

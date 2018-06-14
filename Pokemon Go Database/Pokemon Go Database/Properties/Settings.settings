@@ -8,5 +8,8 @@
     <Setting Name="LastFiles" Type="System.Collections.Specialized.StringCollection" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
+    <Setting Name="SuggestedName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">&lt;Species&gt;&lt;IV%&gt;</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

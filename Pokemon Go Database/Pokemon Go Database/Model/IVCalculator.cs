@@ -1,9 +1,11 @@
 ﻿using GalaSoft.MvvmLight;
+using Pokemon_Go_Database.Properties;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace Pokemon_Go_Database.Model
@@ -143,6 +145,34 @@ namespace Pokemon_Go_Database.Model
                 }
             }
             RaisePropertyChanged("AverageIVPercentage");
+        }
+
+        public string GenerateName()
+        {
+            string templateString = Settings.Default.SuggestedName;
+            Regex templateRegex = new Regex(@"<(.*?)>", RegexOptions.Compiled);
+            var matches = templateRegex.Matches(templateString);
+
+            if (matches?.Count > 0)
+            {
+                foreach (var match in matches.Cast<Match>())
+                {
+                    string replacementValue = "";
+                    switch (match.Groups[1].Value)
+                    {
+                        case "Species":
+                            replacementValue = this.Pokemon.Species.Species;
+                            break;
+                        case "IV%":
+                            replacementValue = string.Format("{0:0}", this.Pokemon.IVPercentage * 100.0);
+                            break;
+                        default:
+                            break;
+                    }
+                    templateString = templateString.Replace(match.Value, replacementValue);
+                }
+            }
+            return templateString;
         }
         #endregion
 
