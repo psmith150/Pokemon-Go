@@ -211,6 +211,10 @@ namespace Pokemon_Go_Database.Services
             {
                 Debug.WriteLine("Error reading xml:" + ex.Message);
             }
+            catch (Exception ex)
+            {
+                Debug.WriteLine($"Error reading xml: " + ex.Message);
+            }
             //Process the data
             List<FastMove> tempFastMoves = new List<FastMove>();
             List<ChargeMove> tempChargeMoves = new List<ChargeMove>();

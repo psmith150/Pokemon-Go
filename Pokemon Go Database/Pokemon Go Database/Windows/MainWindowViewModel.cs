@@ -60,10 +60,10 @@ namespace Pokemon_Go_Database.Windows
             this.LastFiles.CollectionChanged += ((o, e) => SaveLastFiles());
             // Set the starting page
             this.NavigationService.NavigateTo<PokemonViewModel>();
-            //TODO
+            //Try to load base data
             try
             {
-                this.Session.LoadBaseDataFromFile(Constants.BaseDataFilePath).Wait();
+                this.Session.LoadBaseDataFromFile(Constants.BaseDataFilePath);
             }
             catch (Exception)
             {
