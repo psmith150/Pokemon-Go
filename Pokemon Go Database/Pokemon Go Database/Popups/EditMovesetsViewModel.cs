@@ -1,4 +1,7 @@
 ﻿using GalaSoft.MvvmLight.Command;
+using Pokemon_Go_Database.Base.AbstractClasses;
+using Pokemon_Go_Database.Base.Enums;
+using Pokemon_Go_Database.Base.EventArgs;
 using Pokemon_Go_Database.Model;
 using Pokemon_Go_Database.Services;
 using System;
@@ -28,8 +31,9 @@ namespace Pokemon_Go_Database.Popups
         public ICommand ShowDefenseDetailsCommand { get; private set; }
         #endregion
 
-        public EditMovesetsViewModel(SessionService session) : base(session)
+        public EditMovesetsViewModel(SessionService session, MessageViewerBase messageViewer) : base(session)
         {
+            this._messageViewer = messageViewer;
             this.AllChargeMoves = this.Session.ChargeMoveList;
             this.AllFastMoves = this.Session.FastMoveList;
             this.Movesets = new ObservableCollection<MovesetDetailsWrapper>();
@@ -71,7 +75,7 @@ namespace Pokemon_Go_Database.Popups
             }
             else
             {
-                MessageBox.Show("Please select a valid Pokemon!", "Invalid Pokemon", MessageBoxButton.OK);
+                this._messageViewer.DisplayMessage("Please select a valid Pokemon!", "Invalid Pokemon", MessageViewerButton.Ok).Wait();
                 this.ClosePopup(null);
             }
             this.EditMovesetsVisible = true;
@@ -86,6 +90,7 @@ namespace Pokemon_Go_Database.Popups
         #region Private Fields
         private bool savingNeeded = false;
         private PokedexEntry _species;
+        private MessageViewerBase _messageViewer;
         #endregion
 
         #region Public Properties
@@ -378,12 +383,12 @@ namespace Pokemon_Go_Database.Popups
             }
         }
 
-        private void Exit()
+        private async void Exit()
         {
             if (this.savingNeeded)
             {
-                MessageBoxResult result = MessageBox.Show("Settings have not been saved, are you sure you want to exit?", "Discard Changes?", MessageBoxButton.YesNo);
-                if (result == MessageBoxResult.Yes)
+                MessageViewerEventArgs result = await this._messageViewer.DisplayMessage("Settings have not been saved, are you sure you want to exit?", "Discard Changes?", MessageViewerButton.OkCancel);
+                if (result.Result == MessageViewerResult.Ok)
                     this.ClosePopup(null);
             }
             else

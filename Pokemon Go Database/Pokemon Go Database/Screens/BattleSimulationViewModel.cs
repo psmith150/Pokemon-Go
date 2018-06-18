@@ -1,4 +1,6 @@
 ﻿using GalaSoft.MvvmLight.Command;
+using Pokemon_Go_Database.Base.AbstractClasses;
+using Pokemon_Go_Database.Base.Enums;
 using Pokemon_Go_Database.Model;
 using Pokemon_Go_Database.Services;
 using System;
@@ -20,9 +22,10 @@ namespace Pokemon_Go_Database.Screens
         #endregion
 
         #region Constructor
-        public BattleSimulationViewModel(NavigationService navigationService, SessionService session) : base(session)
+        public BattleSimulationViewModel(NavigationService navigationService, SessionService session, MessageViewerBase messageViewer) : base(session)
         {
             this.navigationService = navigationService;
+            this._messageViewer = messageViewer;
             this.Attacker = new Pokemon();
             this.Defender = new Pokemon();
             this.BattleResult = new BattleResult();
@@ -38,6 +41,10 @@ namespace Pokemon_Go_Database.Screens
         public override void Deinitialize()
         {
         }
+
+        #region Private Fields
+        MessageViewerBase _messageViewer;
+        #endregion
         #region Public Properties
         private Pokemon _Attacker;
         public Pokemon Attacker
@@ -140,7 +147,7 @@ namespace Pokemon_Go_Database.Screens
                     if (!Constants.RaidBosses.TryGetValue(this.Defender.Species.Species, out index))
                     {
                         if (!errorShown)
-                            MessageBox.Show($"{Defender.Species.Species} is not a defined raid boss!", "Undefined Raid Boss", MessageBoxButton.OK);
+                            this._messageViewer.DisplayMessage($"{Defender.Species.Species} is not a defined raid boss!", "Undefined Raid Boss", MessageViewerButton.Ok).Wait();
                         errorShown = true;
                     }
                     else

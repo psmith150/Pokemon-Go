@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27004.2009
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pokemon Go Database", "Pokemon Go Database\Pokemon Go Database.csproj", "{7EEB28D3-FFFE-48C1-A30B-3368128B010D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pokemon_Go_Database.Base", "Pokemon_Go_Database.Base\Pokemon_Go_Database.Base.csproj", "{C235CC80-980E-42CA-B7FD-39688A569796}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{7EEB28D3-FFFE-48C1-A30B-3368128B010D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7EEB28D3-FFFE-48C1-A30B-3368128B010D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7EEB28D3-FFFE-48C1-A30B-3368128B010D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C235CC80-980E-42CA-B7FD-39688A569796}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C235CC80-980E-42CA-B7FD-39688A569796}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C235CC80-980E-42CA-B7FD-39688A569796}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C235CC80-980E-42CA-B7FD-39688A569796}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

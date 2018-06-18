@@ -60,7 +60,6 @@
                 <MenuItem Header="Settings">
                     <MenuItem Header="Preferences" Command="{Binding OpenSettingsCommand}" />
                     <MenuItem Header="Save Pokedex and Move data." Command="{Binding SaveBaseDataCommand}"/>
-                    <MenuItem Header="Load Pokedex and Move data." Command="{Binding LoadBaseDataCommand}"/>
                 </MenuItem>
             </Menu>
         <Grid DockPanel.Dock="Top"
@@ -167,7 +166,60 @@
         <ContentPresenter Grid.Row="1" Grid.Column="1" Content="{Binding NavigationService.ActivePopupViewModel, Converter={StaticResource ViewModelToViewConverter}}" />
     </Grid>
 
-    <!-- Busy Window -->
+        <!-- Message Window -->
+        <Grid Background="Transparent" Visibility="{Binding MessageViewer.IsMessageActive, Converter={StaticResource BooleanToVisibilityConverter}}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Row="0" Grid.Column="0" Grid.RowSpan="3" Grid.ColumnSpan="3" 
+                  Style="{StaticResource OverlayGridStyle}" />
+            <Border Grid.Row="1" Grid.Column="1" BorderBrush="{DynamicResource {x:Static SystemColors.WindowFrameBrushKey}}" BorderThickness="2">
+                <Grid Background="WhiteSmoke" Width="300" Height="200">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <StackPanel Grid.Row="0" Background="WhiteSmoke" Orientation="Horizontal" HorizontalAlignment="Stretch">
+                        <Image Source="{Binding MessageViewer.Icon}" Height="16"/>
+                        <TextBlock Text="{Binding MessageViewer.Title}"/>
+                    </StackPanel>
+                    <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto" Background="White">
+                        <Grid HorizontalAlignment="Stretch">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Image Grid.Column="0" Source="{Binding MessageViewer.Icon}" Height="32" VerticalAlignment="Top" Margin="5,20,5,5"/>
+                            <TextBlock Grid.Column="1" Text="{Binding MessageViewer.ActiveMessage}" TextWrapping="Wrap" HorizontalAlignment="Stretch" TextAlignment="Left" VerticalAlignment="Stretch" Margin="15,15,5,5"/>
+                        </Grid>
+                    </ScrollViewer>
+                    <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center" Background="WhiteSmoke">
+                        <StackPanel.Resources>
+                            <Style TargetType="Button">
+                                <Setter Property="Background" Value="#FF62B4F7"/>
+                                <Setter Property="Margin" Value="5 8 5 8"/>
+                                <Setter Property="Width" Value="50"/>
+                                <Setter Property="BorderBrush" Value="LightGray"/>
+                                <Setter Property="BorderThickness" Value="1"/>
+                            </Style>
+                        </StackPanel.Resources>
+                        <Button Content="OK" Command="{Binding MessageViewer.CloseOkCommand}" Visibility="{Binding MessageViewer.UseOkButton, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+                        <Separator Width="15" Background="Transparent" Visibility="{Binding MessageViewer.UseCancelButton, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+                        <Button Content="Cancel" Command="{Binding MessageViewer.CloseCancelCommand}" Visibility="{Binding MessageViewer.UseCancelButton, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+                    </StackPanel>
+                </Grid>
+            </Border>
+        </Grid>
+
+        <!-- Busy Window -->
     <Grid Background="Transparent" Visibility="{Binding Session.IsBusy, Converter={StaticResource BooleanToVisibilityConverter}}">
         <Grid.RowDefinitions>
             <RowDefinition Height="*" />

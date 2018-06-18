@@ -14,6 +14,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Input;
+using Pokemon_Go_Database.Base.AbstractClasses;
 
 namespace Pokemon_Go_Database.Windows
 {
@@ -33,9 +34,10 @@ namespace Pokemon_Go_Database.Windows
         #endregion
 
         #region Constructor
-        public MainWindowViewModel(NavigationService navigationService, SessionService session) : base(session)
+        public MainWindowViewModel(NavigationService navigationService, SessionService session, MessageViewerBase messageViewer) : base(session)
         {
             this.NavigationService = navigationService;
+            this.MessageViewer = messageViewer;
             this.NavigateToScreenCommand = new RelayCommand<Type>((viewModel) => this.NavigateToScreen(viewModel));
             this.SaveUserDataCommand = new RelayCommand(() => this.SaveUserData());
             this.SaveUserDataAsCommand = new RelayCommand(() => this.SaveUserDataAs());
@@ -63,11 +65,13 @@ namespace Pokemon_Go_Database.Windows
             //Try to load base data
             try
             {
-                this.Session.LoadBaseDataFromFile(Constants.BaseDataFilePath);
+                Stream fileStream = this.GetType().Assembly.GetManifestResourceStream("Pokemon_Go_Database.Resources.BaseData.xml");
+                this.Session.LoadBaseDataFromFile(fileStream);
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                MessageBox.Show("Unable to load base data; please load from file using the Settings menu.");
+                this.MessageViewer.DisplayMessage("Unable to load base data; please load from file using the Settings menu.");
+                Debug.WriteLine(ex.Message);
             }
         }
         #endregion
@@ -84,6 +88,20 @@ namespace Pokemon_Go_Database.Windows
                 this.Set(ref this._NavigationService, value);
             }
         }
+
+        private MessageViewerBase _MessageViewer;
+        public MessageViewerBase MessageViewer
+        {
+            get
+            {
+                return this._MessageViewer;
+            }
+            set
+            {
+                this.Set(ref this._MessageViewer, value);
+            }
+        }
+
         private ObservableCollection<string> _lastFiles;
         public ObservableCollection<string> LastFiles
         {
@@ -161,9 +179,25 @@ namespace Pokemon_Go_Database.Windows
 
         private async void SaveBaseData()
         {
-            if (string.IsNullOrEmpty(Constants.BaseDataFilePath) == false)
+            string filePath = "";
+            try
             {
-                await this.Session.SaveBaseDataToFile(Constants.BaseDataFilePath);
+                var fileSearch = new SaveFileDialog();
+                fileSearch.InitialDirectory = Properties.Settings.Default.DefaultDirectory;
+                fileSearch.Filter = "XML File (*.xml) | *.xml";
+                fileSearch.FilterIndex = 2;
+                fileSearch.RestoreDirectory = true;
+                fileSearch.ShowDialog();
+                filePath = fileSearch.FileName.ToString();
+
+                if (string.IsNullOrEmpty(filePath) == false)
+                {
+                    await this.Session.SaveBaseDataToFile(filePath);
+                }
+            }
+            catch (IOException ex)
+            {
+                Debug.WriteLine($"Error saving to file {filePath}\n" + ex.Message);
             }
         }
 
@@ -265,7 +299,7 @@ namespace Pokemon_Go_Database.Windows
                 }
                 else
                 {
-                    MessageBox.Show("File no longer exists; removing from list.", "File not found", MessageBoxButton.OK);
+                    await this.MessageViewer.DisplayMessage("File no longer exists; removing from list.", "File Not Found", Base.Enums.MessageViewerButton.Ok, Base.Enums.MessageViewerIcon.Warning);
                     for (int i = 0; i < this.LastFiles.Count; i++)
                     {
                         if (this.LastFiles[i].Equals(filePath))

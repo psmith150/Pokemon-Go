@@ -1,4 +1,5 @@
 ﻿using Autofac;
+using Pokemon_Go_Database.Base.AbstractClasses;
 using Pokemon_Go_Database.Services;
 using Pokemon_Go_Database.Windows;
 using System;
@@ -26,6 +27,7 @@ namespace Pokemon_Go_Database.IOC
                 // Register components/services
                 builder.RegisterType<SessionService>().SingleInstance();
                 builder.RegisterType<NavigationService>().SingleInstance();
+                builder.RegisterType<MessageViewer>().As<MessageViewerBase>().SingleInstance();
 
                 // Register windows explicitly
                 builder.RegisterType<MainWindow>().SingleInstance();

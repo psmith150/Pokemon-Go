@@ -149,7 +149,7 @@ namespace Pokemon_Go_Database.Services
                 Debug.WriteLine("Error reading xml:" + ex.Message);
             }
             List<Pokemon> tempPokemon = new List<Pokemon>();
-            foreach(Pokemon pokemon in data.Pokemon)
+            foreach (Pokemon pokemon in data.Pokemon)
             {
                 try
                 {
@@ -179,7 +179,7 @@ namespace Pokemon_Go_Database.Services
                 {
                     tempPokemon.Add(pokemon);
                 }
-                catch(Exception)
+                catch (Exception)
                 {
                     string temp = pokemon.Name;
                 }
@@ -195,13 +195,37 @@ namespace Pokemon_Go_Database.Services
 
             //Retrieves the data using the serialize attributes
             BaseDataWrapper data = new BaseDataWrapper();
+            FileStream file = null;
             try
             {
-                using (FileStream file = new FileStream(filePath, FileMode.Open))
-                {
-                    XmlSerializer dataSerializer = new XmlSerializer(typeof(BaseDataWrapper));
-                    data = await Task.Run(() => dataSerializer.Deserialize(file)) as BaseDataWrapper;
-                }
+                file = new FileStream(filePath, FileMode.Open);
+            }
+            catch (IOException) //File does not exist; set everything to defaults
+            {
+                Debug.WriteLine("Error reading base data");
+            }
+            catch (InvalidOperationException ex)
+            {
+                Debug.WriteLine("Error reading xml:" + ex.Message);
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine($"Error reading xml: " + ex.Message);
+            }
+            await this.LoadBaseDataFromFile(file);
+        }
+        public async Task LoadBaseDataFromFile(Stream fileStream)
+        {
+            this.FastMoveList.Clear();
+            this.ChargeMoveList.Clear();
+            this.Pokedex.Clear();
+
+            //Retrieves the data using the serialize attributes
+            BaseDataWrapper data = new BaseDataWrapper();
+            try
+            {
+                XmlSerializer dataSerializer = new XmlSerializer(typeof(BaseDataWrapper));
+                data = await Task.Run(() => dataSerializer.Deserialize(fileStream)) as BaseDataWrapper;
             }
             catch (IOException) //File does not exist; set everything to defaults
             {

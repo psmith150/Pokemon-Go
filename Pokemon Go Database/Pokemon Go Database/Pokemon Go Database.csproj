@@ -96,6 +96,7 @@
     <Compile Include="BaseViewModel.cs" />
     <Compile Include="CustomControls\HoverButton.cs" />
     <Compile Include="IOC\IOCContainer.cs" />
+    <Compile Include="IOC\MessageViewer.cs" />
     <Compile Include="Model\BattleResult.cs" />
     <Compile Include="Model\ChargeMove.cs" />
     <Compile Include="Model\Constants.cs" />
@@ -245,6 +246,15 @@
     <Resource Include="Resources\minus_sign.png" />
     <Resource Include="Resources\plus_sign.png" />
     <Resource Include="Resources\Up_arrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Pokemon_Go_Database.Base\Pokemon_Go_Database.Base.csproj">
+      <Project>{c235cc80-980e-42ca-b7fd-39688a569796}</Project>
+      <Name>Pokemon_Go_Database.Base</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\BaseData.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
