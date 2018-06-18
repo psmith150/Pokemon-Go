@@ -10,6 +10,7 @@ using System.Windows.Input;
 using GalaSoft.MvvmLight.Command;
 using System.Diagnostics;
 using Pokemon_Go_Database.Popups;
+using System.Windows;
 
 namespace Pokemon_Go_Database.Screens
 {

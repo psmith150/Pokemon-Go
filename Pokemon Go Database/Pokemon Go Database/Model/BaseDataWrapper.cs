@@ -12,10 +12,9 @@ namespace Pokemon_Go_Database.Model
     /// </summary>
     [Serializable]
     [XmlRoot("Data")]
-    public class DataWrapper
+    public class BaseDataWrapper
     {
         public MyObservableCollection<Move> Moves { get; set; }   //Collection of all moves
         public MyObservableCollection<PokedexEntry> PokedexEntries { get; set; }   //Collection of pokedex entries
-        public MyObservableCollection<Pokemon> Pokemon { get; set; }
     }
 }

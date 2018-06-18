@@ -35,17 +35,17 @@
     </Style>
 </Window.Resources>
 <Window.InputBindings>
-    <KeyBinding Modifiers="Ctrl" Key="S" Command="{Binding SaveDataCommand}"/>
-    <KeyBinding Modifiers="Ctrl" Key="O" Command="{Binding LoadDataCommand}"/>
+    <KeyBinding Modifiers="Ctrl" Key="S" Command="{Binding SaveUserDataCommand}"/>
+    <KeyBinding Modifiers="Ctrl" Key="O" Command="{Binding LoadUserDataCommand}"/>
     <KeyBinding Modifiers="Ctrl" Key="N" Command="{Binding NewFileCommand}"/>
 </Window.InputBindings>
 <Grid Background="{StaticResource MainBackgroundColor}">
     <DockPanel>
         <Menu DockPanel.Dock="Top">
                 <MenuItem Header="_File">
-                    <MenuItem Header="_Save" Command="{Binding SaveDataCommand}"/>
-                    <MenuItem Header="SaveAs" Command="{Binding SaveDataAsCommand}"/>
-                    <MenuItem Header="_Open" Command="{Binding LoadDataCommand}"/>
+                    <MenuItem Header="_Save" Command="{Binding SaveUserDataCommand}"/>
+                    <MenuItem Header="SaveAs" Command="{Binding SaveUserDataAsCommand}"/>
+                    <MenuItem Header="_Open" Command="{Binding LoadUserDataCommand}"/>
                     <MenuItem Header="_New" Command="{Binding NewFileCommand}"/>
                     <MenuItem Header="_Recent" ItemsSource="{Binding LastFiles}">
                         <MenuItem.ItemContainerStyle>
@@ -57,8 +57,12 @@
                     </MenuItem>
                     <MenuItem Header="Import from Excel" Command="{Binding ImportExcelDataCommand}"/>
                 </MenuItem>
-                <MenuItem Header="Settings" Command="{Binding OpenSettingsCommand}"/>
-        </Menu>
+                <MenuItem Header="Settings">
+                    <MenuItem Header="Preferences" Command="{Binding OpenSettingsCommand}" />
+                    <MenuItem Header="Save Pokedex and Move data." Command="{Binding SaveBaseDataCommand}"/>
+                    <MenuItem Header="Load Pokedex and Move data." Command="{Binding LoadBaseDataCommand}"/>
+                </MenuItem>
+            </Menu>
         <Grid DockPanel.Dock="Top"
                    Height="40"
                    Background="Transparent">

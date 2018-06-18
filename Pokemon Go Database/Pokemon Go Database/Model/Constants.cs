@@ -69,6 +69,8 @@ namespace Pokemon_Go_Database.Model
         public const int DefenderFastMoveDelay = 2000;
 
         public const int NumSimulations = 100;
+
+        public static string BaseDataFilePath =  AppDomain.CurrentDomain.BaseDirectory + @"BaseData.xml";
         /// <summary>
         /// Attacker,Defender
         /// </summary>

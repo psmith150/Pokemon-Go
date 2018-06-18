@@ -164,7 +164,7 @@ namespace Pokemon_Go_Database.Model
                             replacementValue = this.Pokemon.Species.Species;
                             break;
                         case "IV%":
-                            replacementValue = string.Format("{0:0}", this.Pokemon.IVPercentage * 100.0);
+                            replacementValue = string.Format("{0:0}", this.AverageIVPercentage * 100.0);
                             break;
                         default:
                             break;

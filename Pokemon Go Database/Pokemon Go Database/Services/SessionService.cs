@@ -91,20 +91,34 @@ namespace Pokemon_Go_Database.Services
 
         #region Public Methods
         #region Saving and loading data
-        public async Task SaveDataToFile(string filePath)
+        public async Task SaveUserDataToFile(string filePath)
         {
             using (FileStream file = new FileStream(filePath, FileMode.Create))
             {
                 using (StreamWriter stream = new StreamWriter(file))
                 {
                     //Create the DataWrapper object and add the apprpriate data
-                    XmlSerializer dataSerializer = new XmlSerializer(typeof(DataWrapper));
-                    DataWrapper data = new DataWrapper();
+                    XmlSerializer dataSerializer = new XmlSerializer(typeof(UserDataWrapper));
+                    UserDataWrapper data = new UserDataWrapper();
+
+                    await Task.Run(() => dataSerializer.Serialize(stream, data)); //Saves the data using the attributes defined in each class
+                }
+            }
+        }
+
+        public async Task SaveBaseDataToFile(string filePath)
+        {
+            using (FileStream file = new FileStream(filePath, FileMode.Create))
+            {
+                using (StreamWriter stream = new StreamWriter(file))
+                {
+                    //Create the DataWrapper object and add the apprpriate data
+                    XmlSerializer dataSerializer = new XmlSerializer(typeof(BaseDataWrapper));
+                    BaseDataWrapper data = new BaseDataWrapper();
                     data.Moves = new MyObservableCollection<Move>();
                     data.Moves.InsertRange(this.FastMoveList);
                     data.Moves.InsertRange(this.ChargeMoveList);
                     data.PokedexEntries = this.Pokedex;
-                    data.Pokemon = this.MyPokemon;
 
                     await Task.Run(() => dataSerializer.Serialize(stream, data)); //Saves the data using the attributes defined in each class
                 }
@@ -114,27 +128,84 @@ namespace Pokemon_Go_Database.Services
         /// <summary>
         /// Loads data from the current filepath
         /// </summary>
-        public async Task LoadDataFromFile(string filePath)
+        public async Task LoadUserDataFromFile(string filePath)
         {
-            //Debug.WriteLine("Loading data");
-            //Clears all existing data
+            this.MyPokemon.Clear();
+            UserDataWrapper data = new UserDataWrapper();
+            try
+            {
+                using (FileStream file = new FileStream(filePath, FileMode.Open))
+                {
+                    XmlSerializer dataSerializer = new XmlSerializer(typeof(UserDataWrapper));
+                    data = await Task.Run(() => dataSerializer.Deserialize(file)) as UserDataWrapper;
+                }
+            }
+            catch (IOException) //File does not exist; set everything to defaults
+            {
+                //await CreateNewFile(Properties.Settings.Default.DefaultDirectory + "\\data_new.xml");
+            }
+            catch (InvalidOperationException ex)
+            {
+                Debug.WriteLine("Error reading xml:" + ex.Message);
+            }
+            List<Pokemon> tempPokemon = new List<Pokemon>();
+            foreach(Pokemon pokemon in data.Pokemon)
+            {
+                try
+                {
+                    pokemon.Species = this.Pokedex.Single(x => x.Species.Equals(pokemon.Species.Species));
+                }
+                catch (Exception)
+                {
+                    throw new ArgumentException("Cannot find matching species " + pokemon.Species.Species + " in Pokedex.");
+                }
+                try
+                {
+                    pokemon.FastMove = pokemon.Species.FastMoves.Single(x => x.FastMove.Name.Equals(pokemon.FastMove.FastMove.Name));
+                }
+                catch (Exception)
+                {
+                    throw new ArgumentException($"Cannot find matching fast move {pokemon.FastMove.FastMove.Name} in fast move list for {pokemon.Species.Species}");
+                }
+                try
+                {
+                    pokemon.ChargeMove = pokemon.Species.ChargeMoves.Single(x => x.ChargeMove.Name.Equals(pokemon.ChargeMove.ChargeMove.Name));
+                }
+                catch (Exception)
+                {
+                    throw new ArgumentException($"Cannot find matching charge move {pokemon.ChargeMove.ChargeMove.Name} in fast move list for {pokemon.Species.Species}");
+                }
+                try
+                {
+                    tempPokemon.Add(pokemon);
+                }
+                catch(Exception)
+                {
+                    string temp = pokemon.Name;
+                }
+            }
+            this.MyPokemon.InsertRange(tempPokemon);
+        }
+
+        public async Task LoadBaseDataFromFile(string filePath)
+        {
             this.FastMoveList.Clear();
             this.ChargeMoveList.Clear();
             this.Pokedex.Clear();
 
             //Retrieves the data using the serialize attributes
-            DataWrapper data = new DataWrapper();
+            BaseDataWrapper data = new BaseDataWrapper();
             try
             {
                 using (FileStream file = new FileStream(filePath, FileMode.Open))
                 {
-                    XmlSerializer dataSerializer = new XmlSerializer(typeof(DataWrapper));
-                    data = await Task.Run(() => dataSerializer.Deserialize(file)) as DataWrapper;
+                    XmlSerializer dataSerializer = new XmlSerializer(typeof(BaseDataWrapper));
+                    data = await Task.Run(() => dataSerializer.Deserialize(file)) as BaseDataWrapper;
                 }
             }
             catch (IOException) //File does not exist; set everything to defaults
             {
-                await CreateNewFile(Properties.Settings.Default.DefaultDirectory + "\\data_new.xml");
+                Debug.WriteLine("Error reading base data");
             }
             catch (InvalidOperationException ex)
             {
@@ -197,43 +268,6 @@ namespace Pokemon_Go_Database.Services
                 tempPokedex.Add(species);
                 this.Pokedex.Add(species);
             }
-            List<Pokemon> tempPokemon = new List<Pokemon>();
-            foreach(Pokemon pokemon in data.Pokemon)
-            {
-                try
-                {
-                    pokemon.Species = this.Pokedex.Single(x => x.Species.Equals(pokemon.Species.Species));
-                }
-                catch (Exception)
-                {
-                    throw new ArgumentException("Cannot find matching species " + pokemon.Species.Species + " in Pokedex.");
-                }
-                try
-                {
-                    pokemon.FastMove = pokemon.Species.FastMoves.Single(x => x.FastMove.Name.Equals(pokemon.FastMove.FastMove.Name));
-                }
-                catch (Exception)
-                {
-                    throw new ArgumentException($"Cannot find matching fast move {pokemon.FastMove.FastMove.Name} in fast move list for {pokemon.Species.Species}");
-                }
-                try
-                {
-                    pokemon.ChargeMove = pokemon.Species.ChargeMoves.Single(x => x.ChargeMove.Name.Equals(pokemon.ChargeMove.ChargeMove.Name));
-                }
-                catch (Exception)
-                {
-                    throw new ArgumentException($"Cannot find matching charge move {pokemon.ChargeMove.ChargeMove.Name} in fast move list for {pokemon.Species.Species}");
-                }
-                try
-                {
-                    tempPokemon.Add(pokemon);
-                }
-                catch(Exception)
-                {
-                    string temp = pokemon.Name;
-                }
-            }
-            this.MyPokemon.InsertRange(tempPokemon);
         }
 
         /// <summary>
@@ -247,10 +281,10 @@ namespace Pokemon_Go_Database.Services
                 using (StreamWriter stream = new StreamWriter(file))
                 {
                     //Create the DataWrapper object and add the apprpriate data
-                    XmlSerializer dataSerializer = new XmlSerializer(typeof(DataWrapper));
-                    DataWrapper data = new DataWrapper();
-                    data.Moves = new MyObservableCollection<Move>();
-                    data.PokedexEntries = new MyObservableCollection<PokedexEntry>();
+                    XmlSerializer dataSerializer = new XmlSerializer(typeof(UserDataWrapper));
+                    UserDataWrapper data = new UserDataWrapper();
+                    //data.Moves = new MyObservableCollection<Move>();
+                    //data.PokedexEntries = new MyObservableCollection<PokedexEntry>();
 
                     await Task.Run(() => dataSerializer.Serialize(stream, data)); //Saves the data using the attributes defined in each class
                 }
