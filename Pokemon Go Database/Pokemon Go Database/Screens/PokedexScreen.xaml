@@ -9,15 +9,10 @@
              d:DesignHeight="300" d:DesignWidth="500"
              d:DataContext="{d:DesignInstance Type=local:PokedexViewModel}">
     <UserControl.Resources>
-        <CollectionViewSource x:Key="PokedexView" Source="{Binding PokedexEntries}">
-            <CollectionViewSource.SortDescriptions>
-                <scm:SortDescription PropertyName="Number" Direction="Ascending"/>
-            </CollectionViewSource.SortDescriptions>
-        </CollectionViewSource>
         <CollectionViewSource x:Key="TypeView" Source="{Binding Types}"/>
     </UserControl.Resources>
     <Grid Background="{StaticResource MainBackgroundColor}">
-        <DataGrid Name="PokedexGrid" ItemsSource="{Binding Source={StaticResource PokedexView}}" HorizontalAlignment="Stretch" AutoGenerateColumns="False">
+        <DataGrid Name="PokedexGrid" ItemsSource="{Binding PokedexEntries}" HorizontalAlignment="Stretch" AutoGenerateColumns="False">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Number" Binding="{Binding Path=Number}" Width="Auto"/>
                 <DataGridTextColumn Header="Species" Binding="{Binding Path=Species}" Width="Auto"/>

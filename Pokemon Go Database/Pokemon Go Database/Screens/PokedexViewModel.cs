@@ -18,6 +18,7 @@ namespace Pokemon_Go_Database.Screens
     {
         #region Commands
         public ICommand ShowMovesetsCommand { get; private set; }
+        public ICommand JumpToTargetCommand { get; private set; }
         #endregion
 
         private readonly NavigationService navigationService;
@@ -26,8 +27,9 @@ namespace Pokemon_Go_Database.Screens
         {
             this.navigationService = navigationService;
 
-            this.PokedexEntries = this.Session.Pokedex;
+            this.PokedexEntries = new ListCollectionView(this.Session.Pokedex);
             this.ShowMovesetsCommand = new RelayCommand<PokedexEntry>((species) => ShowMovesets(species));
+            this.JumpToTargetCommand = new RelayCommand(() => this.JumpTo(this.JumpTargetName));
         }
 
         public override void Initialize()
@@ -41,8 +43,8 @@ namespace Pokemon_Go_Database.Screens
         }
 
         #region Public Properties
-        private MyObservableCollection<PokedexEntry> _pokedexEntries;
-        public MyObservableCollection<PokedexEntry> PokedexEntries
+        private ListCollectionView _pokedexEntries;
+        public ListCollectionView PokedexEntries
         {
             get
             {
@@ -51,6 +53,17 @@ namespace Pokemon_Go_Database.Screens
             private set
             {
                 this.Set(ref this._pokedexEntries, value);
+                this._pokedexEntries.SortDescriptions.Add(new System.ComponentModel.SortDescription("Number", System.ComponentModel.ListSortDirection.Ascending));
+            }
+        }
+
+        public string JumpTargetName;
+
+        public Array Types
+        {
+            get
+            {
+                return Enum.GetValues(typeof(Model.Type));
             }
         }
         #endregion
@@ -60,12 +73,11 @@ namespace Pokemon_Go_Database.Screens
         {
             await this.navigationService.OpenPopup<EditMovesetsViewModel>(species);
         }
-        public Array Types
+
+        private void JumpTo(string name)
         {
-            get
-            {
-                return Enum.GetValues(typeof(Model.Type));
-            }
+            PokedexEntry jumpTarget = this.Session.Pokedex.FirstOrDefault(x => x.Species.Equals(name));
+            this.PokedexEntries.MoveCurrentTo(jumpTarget);
         }
         #endregion
     }

@@ -25,6 +25,8 @@
                 <DataGridTextColumn Header="Power" Binding="{Binding Path=Power}" Width="Auto"/>
                 <DataGridTextColumn Header="Duration" Binding="{Binding Path=Time}" Width="Auto"/>
                 <DataGridTextColumn Header="Energy Gain" Binding="{Binding Path=Energy}" Width="Auto"/>
+                <DataGridTextColumn Header="DPS" Binding="{Binding Path=DPS, StringFormat=N2}" Width="Auto"/>
+                <DataGridTextColumn Header="EPS" Binding="{Binding Path=EPS, StringFormat=N2}" Width="Auto"/>
             </DataGrid.Columns>
         </DataGrid>
     </Grid>

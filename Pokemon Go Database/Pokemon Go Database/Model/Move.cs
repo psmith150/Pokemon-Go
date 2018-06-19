@@ -127,6 +127,31 @@ namespace Pokemon_Go_Database.Model
             }
         }
 
+        private int _DamageWindowStartTime;
+        public int DamageWindowStartTime
+        {
+            get
+            {
+                return this._DamageWindowStartTime;
+            }
+            set
+            {
+                Set(ref this._DamageWindowStartTime, value);
+            }
+        }
+
+        private int _DamageWindowDuration;
+        public int DamageWindowDuration
+        {
+            get
+            {
+                return this._DamageWindowDuration;
+            }
+            set
+            {
+                Set(ref this._DamageWindowDuration, value);
+            }
+        }
     }
 
     public class MoveWrapper : ObservableObject

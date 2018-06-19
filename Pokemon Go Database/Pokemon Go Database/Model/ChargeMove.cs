@@ -11,18 +11,20 @@
         {
             base.MoveType = MoveType.Charge;
             this.DamageWindowStartTime = 0;
+            this.DamageWindowDuration = 0;
+            this.DodgeFlashTime = 0;
         }
 
-        private int _DamageWindowStartTime;
-        public int DamageWindowStartTime
+        private int _DodgeFlashTime;
+        public int DodgeFlashTime
         {
             get
             {
-                return this._DamageWindowStartTime;
+                return this._DodgeFlashTime;
             }
             set
             {
-                Set(ref this._DamageWindowStartTime, value);
+                Set(ref this._DodgeFlashTime, value);
             }
         }
     }
