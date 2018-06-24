@@ -44,7 +44,7 @@ namespace Pokemon_Go_Database.Screens
 
         #region Private Fields
         private MessageViewerBase _messageViewer;
-        private enum BattleState { Idle, FastAttackInit, FastAttack, ChargeAttackInit, ChargeAttack, Dodging }
+        private enum BattleState { Idle, FastAttackInit, FastAttackWindow, ChargeAttackInit, ChargeAttackWindow, Dodging }
         #endregion
         #region Public Properties
         private Pokemon _Attacker;
@@ -183,7 +183,7 @@ namespace Pokemon_Go_Database.Screens
                         attackerBonus = 1.0;
                         if (time >= attackerNextAttackTime)
                         {
-                            if (this.DodgeChargeAttacks && defenderState == BattleState.ChargeAttack)
+                            if (this.DodgeChargeAttacks && defenderState == BattleState.ChargeAttackWindow)
                             {
                                 if (time >= dodgeWindowStartTime)
                                 {
@@ -214,16 +214,17 @@ namespace Pokemon_Go_Database.Screens
                                 attackerBonus *= Constants.StabBonus;
                             attackerBonus *= Constants.CalculateTypeBonus(Attacker.FastMove.FastMove.Type, Defender.Species.Type1, Defender.Species.Type2);
                             attackerEnergy += Attacker.FastMove.FastMove.Energy;
-                            attackerState = BattleState.FastAttack;
+                            attackerDamage = Constants.CalculateDamage(attackerPower, Attacker.GetAttack(), Defender.GetDefense(), attackerBonus);
+                            attackerState = BattleState.FastAttackWindow;
                         }
                     }
-                    if (attackerState == BattleState.FastAttack)
+                    if (attackerState == BattleState.FastAttackWindow)
                     {
-                        if (time >= attackerStartAttackTime && time < attackerStartAttackTime + Attacker.FastMove.FastMove.DamageWindowDuration)
+                        if (time >= attackerStartAttackTime && time < attackerStartAttackTime + timeInterval)
                         {
-                            attackerDamage = (int)(timeInterval / (double)Attacker.FastMove.FastMove.DamageWindowDuration * Constants.CalculateDamage(attackerPower, Attacker.GetAttack(), Defender.GetDefense(), attackerBonus));
+                            attackerDamage = Constants.CalculateDamage(attackerPower, Attacker.GetAttack(), Defender.GetDefense(), attackerBonus);
                         }
-                        if (time >= attackerNextAttackTime)
+                        if (time >= attackerStartAttackTime + Attacker.FastMove.FastMove.DamageWindowDuration)
                         {
                             attackerState = BattleState.Idle;
                         }
@@ -238,16 +239,16 @@ namespace Pokemon_Go_Database.Screens
                             if (Attacker.Species.Type1 == Attacker.ChargeMove.ChargeMove.Type || Attacker.Species.Type2 == Attacker.ChargeMove.ChargeMove.Type)
                                 attackerBonus *= Constants.StabBonus;
                             attackerBonus *= Constants.CalculateTypeBonus(Attacker.ChargeMove.ChargeMove.Type, Defender.Species.Type1, Defender.Species.Type2);
-                            attackerState = BattleState.ChargeAttack;
+                            attackerState = BattleState.ChargeAttackWindow;
                         }
                     }
-                    if (attackerState == BattleState.ChargeAttack)
+                    if (attackerState == BattleState.ChargeAttackWindow)
                     {
-                        if (time >= attackerStartAttackTime && time < attackerStartAttackTime + Attacker.ChargeMove.ChargeMove.DamageWindowDuration)
+                        if (time >= attackerStartAttackTime && time < attackerStartAttackTime + timeInterval)
                         {
-                            attackerDamage = (int)(timeInterval / (double)Attacker.ChargeMove.ChargeMove.DamageWindowDuration * Constants.CalculateDamage(attackerPower, Attacker.GetAttack(), Defender.GetDefense(), attackerBonus));
+                            attackerDamage = Constants.CalculateDamage(attackerPower, Attacker.GetAttack(), Defender.GetDefense(), attackerBonus);
                         }
-                        if (time >= attackerNextAttackTime)
+                        if (time >= attackerStartAttackTime + Attacker.ChargeMove.ChargeMove.DamageWindowDuration)
                         {
                             attackerState = BattleState.Idle;
                         }
@@ -288,16 +289,16 @@ namespace Pokemon_Go_Database.Screens
                                 defenderBonus *= Constants.StabBonus;
                             defenderBonus *= Constants.CalculateTypeBonus(Defender.FastMove.FastMove.Type, Attacker.Species.Type1, Attacker.Species.Type2);
                             defenderEnergy += Defender.FastMove.FastMove.Energy;
-                            defenderState = BattleState.FastAttack;
+                            defenderState = BattleState.FastAttackWindow;
                         }
                     }
-                    if (defenderState == BattleState.FastAttack)
+                    if (defenderState == BattleState.FastAttackWindow)
                     {
-                        if (time >= defenderStartAttackTime && time < defenderStartAttackTime + Defender.FastMove.FastMove.DamageWindowDuration)
+                        if (time >= defenderStartAttackTime && time < defenderStartAttackTime + timeInterval)
                         {
-                            defenderDamage = (int)(timeInterval / (double)Attacker.FastMove.FastMove.DamageWindowDuration * Constants.CalculateDamage(defenderPower, Defender.GetAttack(), Attacker.GetDefense(), defenderBonus));
+                            defenderDamage = Constants.CalculateDamage(defenderPower, Defender.GetAttack(), Attacker.GetDefense(), defenderBonus);
                         }
-                        if (time >= defenderNextAttackTime)
+                        if (time >= defenderStartAttackTime + Defender.FastMove.FastMove.DamageWindowDuration)
                         {
                             defenderState = BattleState.Idle;
                         }
@@ -312,16 +313,16 @@ namespace Pokemon_Go_Database.Screens
                             if (Defender.Species.Type1 == Defender.ChargeMove.ChargeMove.Type || Defender.Species.Type2 == Defender.ChargeMove.ChargeMove.Type)
                                 defenderBonus *= Constants.StabBonus;
                             defenderBonus *= Constants.CalculateTypeBonus(Defender.ChargeMove.ChargeMove.Type, Attacker.Species.Type1, Attacker.Species.Type2);
-                            defenderState = BattleState.ChargeAttack;
+                            defenderState = BattleState.ChargeAttackWindow;
                         }
                     }
-                    if (defenderState == BattleState.ChargeAttack)
+                    if (defenderState == BattleState.ChargeAttackWindow)
                     {
-                        if (time >= defenderStartAttackTime && time < defenderStartAttackTime + Defender.ChargeMove.ChargeMove.DamageWindowDuration)
+                        if (time >= defenderStartAttackTime && time < defenderStartAttackTime + timeInterval)
                         {
-                            defenderDamage = (int)(timeInterval / (double)Attacker.ChargeMove.ChargeMove.DamageWindowDuration * Constants.CalculateDamage(defenderPower, Defender.GetAttack(), Attacker.GetDefense(), defenderBonus));
+                            defenderDamage = Constants.CalculateDamage(defenderPower, Defender.GetAttack(), Attacker.GetDefense(), defenderBonus);
                         }
-                        if (time >= defenderNextAttackTime)
+                        if (time >= defenderStartAttackTime + Defender.ChargeMove.ChargeMove.DamageWindowDuration)
                         {
                             defenderState = BattleState.Idle;
                         }
