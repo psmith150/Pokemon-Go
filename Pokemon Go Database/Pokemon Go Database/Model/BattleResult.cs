@@ -43,6 +43,32 @@ namespace Pokemon_Go_Database.Model
                 Set(ref this._NumberOfDeaths, value);
             }
         }
+
+        private double _DPS;
+        public double DPS
+        {
+            get
+            {
+                return this._DPS;
+            }
+            set
+            {
+                Set(ref this._DPS, value);
+            }
+        }
+
+        private double _TDO;
+        public double TDO
+        {
+            get
+            {
+                return this._TDO;
+            }
+            set
+            {
+                Set(ref this._TDO, value);
+            }
+        }
         #endregion
     }
 }

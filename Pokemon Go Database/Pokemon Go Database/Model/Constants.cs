@@ -66,6 +66,8 @@ namespace Pokemon_Go_Database.Model
 
         public const int dodgeDurationMs = 500;
 
+        public const double dodgeDamageFactor = 0.25;
+
         public const int DefenderFastMoveDelay = 2000;
 
         public const int NumSimulations = 100;

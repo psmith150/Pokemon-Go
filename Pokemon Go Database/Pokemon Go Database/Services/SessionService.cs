@@ -100,6 +100,7 @@ namespace Pokemon_Go_Database.Services
                     //Create the DataWrapper object and add the apprpriate data
                     XmlSerializer dataSerializer = new XmlSerializer(typeof(UserDataWrapper));
                     UserDataWrapper data = new UserDataWrapper();
+                    data.Pokemon = this.MyPokemon;
 
                     await Task.Run(() => dataSerializer.Serialize(stream, data)); //Saves the data using the attributes defined in each class
                 }

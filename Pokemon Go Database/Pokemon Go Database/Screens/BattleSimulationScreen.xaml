@@ -5,6 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Pokemon_Go_Database.Screens"
              xmlns:scm="clr-namespace:System.ComponentModel;assembly=WindowsBase"
+             xmlns:xtk="http://schemas.xceed.com/wpf/xaml/datagrid"
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="1000"
              d:DataContext="{d:DesignInstance Type=local:BattleSimulationViewModel}">
@@ -40,13 +41,13 @@
                 <Label Content="Pokemon:"/>
                 <ComboBox ItemsSource="{Binding Source={StaticResource AttackerSpeciesView}}" DisplayMemberPath="Species" SelectedItem="{Binding Attacker.Species}" Width="150"/>
                 <Label Content="Level:"/>
-                <TextBox Text="{Binding Attacker.LevelExpression}" Width="30" VerticalAlignment="Center"/>
+                <xtk:AutoSelectTextBox Text="{Binding Attacker.LevelExpression}" Width="30" VerticalAlignment="Center" AutoSelectBehavior="OnFocus"/>
                 <Label Content="Attack IV"/>
-                <TextBox Text="{Binding Attacker.AttackIVExpression}" Width="30" VerticalAlignment="Center"/>
+                <xtk:AutoSelectTextBox Text="{Binding Attacker.AttackIVExpression}" Width="30" VerticalAlignment="Center" AutoSelectBehavior="OnFocus"/>
                 <Label Content="Defense IV"/>
-                <TextBox Text="{Binding Attacker.DefenseIVExpression}" Width="30" VerticalAlignment="Center"/>
+                <xtk:AutoSelectTextBox Text="{Binding Attacker.DefenseIVExpression}" Width="30" VerticalAlignment="Center" AutoSelectBehavior="OnFocus"/>
                 <Label Content="Stamina IV"/>
-                <TextBox Text="{Binding Attacker.StaminaIVExpression}" Width="30" VerticalAlignment="Center"/>
+                <xtk:AutoSelectTextBox Text="{Binding Attacker.StaminaIVExpression}" Width="30" VerticalAlignment="Center" AutoSelectBehavior="OnFocus"/>
                 <Label Content="Fast Move"/>
                 <ComboBox Width="100" SelectedItem="{Binding Attacker.FastMove}" DisplayMemberPath="FastMove.Name" ItemsSource="{Binding Attacker.Species.FastMoves}"/>
                 <Label Content="Charge Move"/>
@@ -59,6 +60,10 @@
                 <TextBlock Text="{Binding BattleResult.BattleDuration}" VerticalAlignment="Center"/>
                 <Label Content="Number of Deaths:"/>
                 <TextBlock Text="{Binding BattleResult.NumberOfDeaths}" VerticalAlignment="Center"/>
+                <Label Content="DPS:"/>
+                <TextBlock Text="{Binding BattleResult.DPS}" VerticalAlignment="Center"/>
+                <Label Content="TDO:"/>
+                <TextBlock Text="{Binding BattleResult.TDO, StringFormat=P1}" VerticalAlignment="Center"/>
             </StackPanel>
         </StackPanel>
         <StackPanel Name="DefenderWrapper" Grid.Row="1">
@@ -66,13 +71,13 @@
                 <Label Content="Pokemon:"/>
                 <ComboBox ItemsSource="{Binding Source={StaticResource DefenderSpeciesView}}" DisplayMemberPath="Species" SelectedItem="{Binding Defender.Species}" Width="150"/>
                 <Label Content="Level:"/>
-                <TextBox Text="{Binding Defender.LevelExpression}" Width="30" VerticalAlignment="Center"/>
+                <xtk:AutoSelectTextBox Text="{Binding Defender.LevelExpression}" Width="30" VerticalAlignment="Center" AutoSelectBehavior="OnFocus"/>
                 <Label Content="Attack IV"/>
-                <TextBox Text="{Binding Defender.AttackIVExpression}" Width="30" VerticalAlignment="Center"/>
+                <xtk:AutoSelectTextBox Text="{Binding Defender.AttackIVExpression}" Width="30" VerticalAlignment="Center" AutoSelectBehavior="OnFocus"/>
                 <Label Content="Defense IV"/>
-                <TextBox Text="{Binding Defender.DefenseIVExpression}" Width="30" VerticalAlignment="Center"/>
+                <xtk:AutoSelectTextBox Text="{Binding Defender.DefenseIVExpression}" Width="30" VerticalAlignment="Center" AutoSelectBehavior="OnFocus"/>
                 <Label Content="Stamina IV"/>
-                <TextBox Text="{Binding Defender.StaminaIVExpression}" Width="30" VerticalAlignment="Center"/>
+                <xtk:AutoSelectTextBox Text="{Binding Defender.StaminaIVExpression}" Width="30" VerticalAlignment="Center" AutoSelectBehavior="OnFocus"/>
                 <Label Content="Fast Move"/>
                 <ComboBox Width="100" SelectedItem="{Binding Defender.FastMove}" DisplayMemberPath="FastMove.Name" ItemsSource="{Binding Defender.Species.FastMoves}"/>
                 <Label Content="Charge Move"/>
