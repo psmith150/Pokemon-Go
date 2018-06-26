@@ -23,6 +23,7 @@ namespace Pokemon_Go_Database.Model
             this.DefenseIVExpression = "0";
             this.StaminaIVExpression = "0";
             this.LevelExpression = "1";
+            this.IVSets = new MyObservableCollection<IVSet>();
         }
 
         #region Public Properties
@@ -131,70 +132,16 @@ namespace Pokemon_Go_Database.Model
                 UpdateAllCalculatedProperties();
             }
         }
-
-        private string _AttackIVExpression;
-        public string AttackIVExpression
+        private MyObservableCollection<IVSet> _IVSets;
+        public MyObservableCollection<IVSet> IVSets
         {
             get
             {
-                return _AttackIVExpression;
+                return this._IVSets;
             }
-            set
+            private set
             {
-                Set(ref _AttackIVExpression, value);
-                RaisePropertyChanged("Attack");
-                RaisePropertyChanged("ActualCP");
-                RaisePropertyChanged("IVPercentage");
-                RaisePropertyChanged("MaxCP");
-            }
-        }
-
-        private string _DefenseIVExpression;
-        public string DefenseIVExpression
-        {
-            get
-            {
-                return _DefenseIVExpression;
-            }
-            set
-            {
-                Set(ref _DefenseIVExpression, value);
-                RaisePropertyChanged("Defense");
-                RaisePropertyChanged("ActualCP");
-                RaisePropertyChanged("IVPercentage");
-                RaisePropertyChanged("MaxCP");
-            }
-        }
-
-        private string _StaminaIVExpression;
-        public string StaminaIVExpression
-        {
-            get
-            {
-                return _StaminaIVExpression;
-            }
-            set
-            {
-                Set(ref _StaminaIVExpression, value);
-                RaisePropertyChanged("Stamina");
-                RaisePropertyChanged("ActualHP");
-                RaisePropertyChanged("ActualCP");
-                RaisePropertyChanged("IVPercentage");
-                RaisePropertyChanged("MaxCP");
-            }
-        }
-
-        private string _LevelExpression;
-        public string LevelExpression
-        {
-            get
-            {
-                return _LevelExpression;
-            }
-            set
-            {
-                Set(ref _LevelExpression, value);
-                this.UpdateAllCalculatedProperties();
+                this.Set(ref this._IVSets, value);
             }
         }
 
@@ -301,6 +248,69 @@ namespace Pokemon_Go_Database.Model
                 return this.GetCpmValue();
             }
         }
+        [XmlIgnore]
+        public string AttackIVExpression
+        {
+            get
+            {
+                return string.Join("/", this.IVSets.OrderBy(x => x.StaminaIV).ToList());
+            }
+            set
+            {
+                //TODO
+                RaisePropertyChanged("Attack");
+                RaisePropertyChanged("ActualCP");
+                RaisePropertyChanged("IVPercentage");
+                RaisePropertyChanged("MaxCP");
+            }
+        }
+        [XmlIgnore]
+        public string DefenseIVExpression
+        {
+            get
+            {
+                return string.Join("/", this.IVSets.OrderBy(x => x.DefenseIV).ToList());
+            }
+            set
+            {
+                //TODO
+                RaisePropertyChanged("Defense");
+                RaisePropertyChanged("ActualCP");
+                RaisePropertyChanged("IVPercentage");
+                RaisePropertyChanged("MaxCP");
+            }
+        }
+        [XmlIgnore]
+        public string StaminaIVExpression
+        {
+            get
+            {
+                return string.Join("/", this.IVSets.OrderBy(x => x.StaminaIV).ToList());
+            }
+            set
+            {
+                //TODO
+                RaisePropertyChanged("Stamina");
+                RaisePropertyChanged("ActualHP");
+                RaisePropertyChanged("ActualCP");
+                RaisePropertyChanged("IVPercentage");
+                RaisePropertyChanged("MaxCP");
+            }
+        }
+        [XmlIgnore]
+        public string LevelExpression
+        {
+            get
+            {
+                return string.Join("/", this.IVSets.OrderBy(x => x.Level).ToList());
+            }
+            set
+            {
+                //TODO
+                this.UpdateAllCalculatedProperties();
+            }
+        }
+
         [XmlIgnore]
         public double IVPercentage
         {

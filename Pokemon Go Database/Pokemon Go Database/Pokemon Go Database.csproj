@@ -102,6 +102,7 @@
     <Compile Include="Model\Constants.cs" />
     <Compile Include="Model\BaseDataWrapper.cs" />
     <Compile Include="Model\FastMove.cs" />
+    <Compile Include="Model\IVSet.cs" />
     <Compile Include="Model\UserDataWrapper.cs" />
     <Compile Include="Model\IVCalculator.cs" />
     <Compile Include="Model\IVCalculatorWrapper.cs" />

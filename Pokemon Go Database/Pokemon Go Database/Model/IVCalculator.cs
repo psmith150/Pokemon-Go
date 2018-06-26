@@ -28,29 +28,29 @@ namespace Pokemon_Go_Database.Model
                 this.StaminaBest = true;
             }
             this.InitIVLevels(true);
-            this.ValueCombinations = new ObservableCollection<ValueCombination>();
+            this.IVSets = new ObservableCollection<IVSet>();
         }
 
         #region Public Properties
-        private ObservableCollection<ValueCombination> _ValueCombinations;
-        public ObservableCollection<ValueCombination> ValueCombinations
+        private ObservableCollection<IVSet> _IVSets;
+        public ObservableCollection<IVSet> IVSets
         {
             get
             {
-                return this._ValueCombinations;
+                return this._IVSets;
             }
             set
             {
-                Set(ref this._ValueCombinations, value);
+                Set(ref this._IVSets, value);
             }
         }
         public double AverageIVPercentage
         {
             get
             {
-                if (this.ValueCombinations.Count <= 0)
+                if (this.IVSets.Count <= 0)
                     return 0.0;
-                return this.ValueCombinations.Select(x => x.IVPercentage).Average();
+                return this.IVSets.Select(x => x.IVPercentage).Average();
             }
         }
         private Pokemon _Pokemon;
@@ -121,7 +121,7 @@ namespace Pokemon_Go_Database.Model
             List<int> possibleAttackIVs = GetPossibleIVs(this.attackIVLevel, this.AttackBest);
             List<int> possibleDefenseIVs = GetPossibleIVs(this.defenseIVLevel, this.DefenseBest);
             List<int> possibleStaminaIVs = GetPossibleIVs(this.staminaIVLevel, this.StaminaBest);
-            this.ValueCombinations.Clear();
+            this.IVSets.Clear();
             foreach (double level in possibleLevels)
             {
                 foreach (int attackIV in possibleAttackIVs)
@@ -138,7 +138,7 @@ namespace Pokemon_Go_Database.Model
                             int hp = (int)Pokemon.GetStamina(staminaIV, level);
                             if (cp == Pokemon.GameCP && hp == Pokemon.GameHP)
                             {
-                                this.ValueCombinations.Add(new ValueCombination(attackIV, defenseIV, staminaIV, level));
+                                this.IVSets.Add(new IVSet(attackIV, defenseIV, staminaIV, level));
                             }
                         }
                     }

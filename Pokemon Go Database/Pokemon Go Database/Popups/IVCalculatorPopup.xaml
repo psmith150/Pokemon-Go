@@ -76,7 +76,7 @@
             <Label Content="Average Perfection: " VerticalAlignment="Center"/>
             <TextBlock Text="{Binding Calculator.AverageIVPercentage, StringFormat=P2, Mode=OneWay}" Width="50" VerticalAlignment="Center"/>
         </StackPanel>
-        <DataGrid Grid.Row="5" ItemsSource="{Binding Calculator.ValueCombinations}" IsReadOnly="True" GridLinesVisibility="Vertical" AutoGenerateColumns="False" HorizontalAlignment="Stretch">
+        <DataGrid Grid.Row="5" ItemsSource="{Binding Calculator.IVSets}" IsReadOnly="False" GridLinesVisibility="Vertical" AutoGenerateColumns="False" HorizontalAlignment="Stretch">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Level" Binding="{Binding Path=Level, Mode=OneWay}" Width="*"/>
                 <DataGridTextColumn Header="Attack IV" Binding="{Binding Path=AttackIV, Mode=OneWay}" Width="*"/>
@@ -109,7 +109,7 @@
                     <TextBlock Text="{Binding CPAtTargetLevel}" Width="30" TextAlignment="Left" VerticalAlignment="Center"/>
                 </StackPanel>
                 <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
-                    <Slider Value="{Binding TargetLevel}" Maximum="{Binding MaxLevel}" Minimum="{Binding MinLevel}" TickPlacement="BottomRight" IsSnapToTickEnabled="True" TickFrequency="0.5" Name="LevelValueSlider" Width="500" AutoToolTipPlacement="BottomRight" AutoToolTipPrecision="1"/>
+                    <Slider Value="{Binding SimulatedLevel}" Maximum="{Binding MaxLevel}" Minimum="{Binding MinLevel}" TickPlacement="BottomRight" IsSnapToTickEnabled="True" TickFrequency="0.5" Name="LevelValueSlider" Width="500" AutoToolTipPlacement="BottomRight" AutoToolTipPrecision="1"/>
                     <TextBox Text="{Binding ElementName=LevelValueSlider, Path=Value, UpdateSourceTrigger=PropertyChanged}" TextAlignment="Right" Width="40" />
                 </StackPanel>
             </StackPanel>

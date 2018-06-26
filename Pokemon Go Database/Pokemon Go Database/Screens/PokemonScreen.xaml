@@ -94,10 +94,10 @@
                     <DataGridTextColumn Header="Actual CP" Binding="{Binding Path=ActualCP, Mode=OneWay}" IsReadOnly="True" Width="Auto"/>
                     <DataGridTextColumn Header="Actual HP" Binding="{Binding Path=ActualHP, Mode=OneWay}" IsReadOnly="True" Width="Auto"/>
                     <DataGridComboBoxColumn Header="Stardust" ItemsSource="{Binding Source={StaticResource DustValues}}" SelectedItemBinding="{Binding Path=DustToPower}" Width="Auto"/>
-                    <DataGridTextColumn Header="Attack IV" Binding="{Binding Path=AttackIVExpression}" Width="Auto"/>
-                    <DataGridTextColumn Header="Defense IV" Binding="{Binding Path=DefenseIVExpression}" Width="Auto"/>
-                    <DataGridTextColumn Header="Stamina IV" Binding="{Binding Path=StaminaIVExpression}" Width="Auto"/>
-                    <DataGridTextColumn Header="Level" Binding="{Binding Path=LevelExpression}" Width="Auto" SortMemberPath="Level"/>
+                    <DataGridTextColumn Header="Attack IV" Binding="{Binding Path=AttackIVExpression}" Width="Auto" IsReadOnly="True"/>
+                    <DataGridTextColumn Header="Defense IV" Binding="{Binding Path=DefenseIVExpression}" Width="Auto" IsReadOnly="True"/>
+                    <DataGridTextColumn Header="Stamina IV" Binding="{Binding Path=StaminaIVExpression}" Width="Auto" IsReadOnly="True"/>
+                    <DataGridTextColumn Header="Level" Binding="{Binding Path=LevelExpression}" Width="Auto" IsReadOnly="True" SortMemberPath="Level"/>
                     <DataGridTextColumn Header="IV %" Binding="{Binding Path=IVPercentage, StringFormat=P2}" Width="Auto" IsReadOnly="True"/>
                     <DataGridCheckBoxColumn Header="Comparison" Binding="{Binding Path=Compare, UpdateSourceTrigger=PropertyChanged}" Width="Auto"/>
                     <DataGridCheckBoxColumn Header="Favorite" Binding="{Binding Path=IsFavorite, UpdateSourceTrigger=PropertyChanged}" Width="Auto"/>

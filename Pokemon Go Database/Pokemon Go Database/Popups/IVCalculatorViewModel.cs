@@ -43,7 +43,7 @@ namespace Pokemon_Go_Database.Popups
                 this._messageViewer.DisplayMessage("Invalid pokemon!", "Invalid Pokemon", MessageViewerButton.Ok);
             }
             this.MinLevel = this.Calculator.Pokemon.Level;
-            this.TargetLevel = this.Calculator.Pokemon.Level;
+            this.SimulatedLevel = this.Calculator.Pokemon.Level;
         }
 
         public override void Deinitialize()
@@ -115,19 +115,84 @@ namespace Pokemon_Go_Database.Popups
                 Set(ref this._MaxLevel, value);
             }
         }
-        private double _TargetLevel;
-        public double TargetLevel
+        private double _SimulatedLevel;
+        public double SimulatedLevel
         {
             get
             {
-                return this._TargetLevel;
+                return this._SimulatedLevel;
             }
             set
             {
-                Set(ref this._TargetLevel, value);
+                Set(ref this._SimulatedLevel, value);
                 RaisePropertyChanged("CandyRequired");
                 RaisePropertyChanged("StardustRequired");
                 RaisePropertyChanged("CPAtTargetLevel");
+            }
+        }
+
+        private string _SimulatedAttack;
+        public string SimulatedAttack
+        {
+            get
+            {
+                return this._SimulatedAttack;
+            }
+            private set
+            {
+                this.Set(ref this._SimulatedAttack, value);
+            }
+        }
+
+        private string _SimulatedDefense;
+        public string SimulatedDefense
+        {
+            get
+            {
+                return this._SimulatedDefense;
+            }
+            private set
+            {
+                this.Set(ref this._SimulatedDefense, value);
+            }
+        }
+
+        private string _SimulatedStamina;
+        public string SimulatedStamina
+        {
+            get
+            {
+                return this._SimulatedStamina;
+            }
+            private set
+            {
+                this.Set(ref this._SimulatedStamina, value);
+            }
+        }
+
+        private string _SimulatedCP;
+        public string SimulatedCP
+        {
+            get
+            {
+                return this._SimulatedCP;
+            }
+            private set
+            {
+                this.Set(ref this._SimulatedCP, value);
+            }
+        }
+
+        private string _SimulatedDPS;
+        public string SimulatedDPS
+        {
+            get
+            {
+                return this._SimulatedDPS;
+            }
+            private set
+            {
+                this.Set(ref this._SimulatedDPS, value);
             }
         }
 
@@ -153,7 +218,7 @@ namespace Pokemon_Go_Database.Popups
             {
                 if (this.Calculator == null || this.Calculator.Pokemon == null)
                     return 0;
-                return this.Calculator.Pokemon.GetCP(-1, -1, -1, this.TargetLevel);
+                return this.Calculator.Pokemon.GetCP(-1, -1, -1, this.SimulatedLevel);
             }
         }
         #endregion
@@ -184,7 +249,9 @@ namespace Pokemon_Go_Database.Popups
             List<int> defenseIVs = new List<int>();
             List<int> staminaIVs = new List<int>();
             List<double> levels = new List<double>();
-            foreach (ValueCombination combination in this.Calculator.ValueCombinations)
+            this.Calculator.Pokemon.IVSets.Clear();
+            this.Calculator.Pokemon.IVSets.InsertRange(this.Calculator.IVSets);
+            foreach (IVSet combination in this.Calculator.IVSets)
             {
                 if (!attackIVs.Contains(combination.AttackIV))
                     attackIVs.Add(combination.AttackIV);
@@ -221,7 +288,7 @@ namespace Pokemon_Go_Database.Popups
         {
             int candy = 0;
             int lookupIndex = 0;
-            for (double i = this.MinLevel; i < this.TargetLevel; i+=0.5)
+            for (double i = this.MinLevel; i < this.SimulatedLevel; i+=0.5)
             {
                 while (i >= Constants.DustLevelCutoffs[lookupIndex + 1])
                     lookupIndex++;
@@ -233,13 +300,72 @@ namespace Pokemon_Go_Database.Popups
         {
             int stardust = 0;
             int lookupIndex = 0;
-            for (double i = this.MinLevel; i < this.TargetLevel; i+=0.5)
+            for (double i = this.MinLevel; i < this.SimulatedLevel; i+=0.5)
             {
                 while (i >= Constants.DustLevelCutoffs[lookupIndex + 1])
                     lookupIndex++;
                 stardust += Constants.DustCutoffs[lookupIndex];
             }
             return stardust;
+        }
+
+        private void SimulateLevelChange()
+        {
+            int min, max;
+
+            //Attack
+            min = this.Calculator.Pokemon.IVSets.Min(x => x.AttackIV);
+            max = this.Calculator.Pokemon.IVSets.Max(x => x.AttackIV);
+            if (min != max)
+            {
+                this.SimulatedAttack = this.Calculator.Pokemon.GetAttack(min, this.SimulatedLevel).ToString() + " - " + this.Calculator.Pokemon.GetAttack(max, this.SimulatedLevel).ToString();
+            }
+            else
+            {
+                this.SimulatedAttack = this.Calculator.Pokemon.GetAttack(min, this.SimulatedLevel).ToString();
+            }
+
+            //Defense
+            min = this.Calculator.Pokemon.IVSets.Min(x => x.DefenseIV);
+            max = this.Calculator.Pokemon.IVSets.Max(x => x.DefenseIV);
+            if (min != max)
+            {
+                this.SimulatedAttack = this.Calculator.Pokemon.GetDefense(min, this.SimulatedLevel).ToString() + " - " + this.Calculator.Pokemon.GetDefense(max, this.SimulatedLevel).ToString();
+            }
+            else
+            {
+                this.SimulatedAttack = this.Calculator.Pokemon.GetDefense(min, this.SimulatedLevel).ToString();
+            }
+
+            //Stamina
+            min = this.Calculator.Pokemon.IVSets.Min(x => x.StaminaIV);
+            max = this.Calculator.Pokemon.IVSets.Max(x => x.StaminaIV);
+            if (min != max)
+            {
+                this.SimulatedAttack = this.Calculator.Pokemon.GetStamina(min, this.SimulatedLevel).ToString() + " - " + this.Calculator.Pokemon.GetStamina(max, this.SimulatedLevel).ToString();
+            }
+            else
+            {
+                this.SimulatedAttack = this.Calculator.Pokemon.GetStamina(min, this.SimulatedLevel).ToString();
+            }
+
+            //CP
+            List<int> possibleCP = new List<int>();
+            foreach (IVSet combination in this.Calculator.Pokemon.IVSets)
+            {
+                possibleCP.Add(this.Calculator.Pokemon.GetCP(combination.AttackIV, combination.StaminaIV, combination.DefenseIV, this.SimulatedLevel));
+            }
+            min = possibleCP.Min(x => x);
+            max = possibleCP.Max(x => x);
+            if (min != max)
+            {
+                this.SimulatedAttack = min.ToString() + " - " + max.ToString();
+            }
+            else
+            {
+                this.SimulatedAttack = min.ToString();
+            }
+
         }
         #endregion
     }
