@@ -58,6 +58,14 @@ namespace Pokemon_Go_Database.Screens
             set
             {
                 Set(ref this._Attacker, value);
+                if (this.Attacker.IVSets.Count <= 0)
+                    this.Attacker.IVSets.Add(new IVSet());
+                else if (this.Attacker.IVSets.Count > 1)
+                {
+                    while (this.Attacker.IVSets.Count > 1)
+                        this.Attacker.IVSets.RemoveAt(1);
+                }
+                    
             }
         }
         private Pokemon _Defender;
@@ -71,6 +79,13 @@ namespace Pokemon_Go_Database.Screens
             set
             {
                 Set(ref this._Defender, value);
+                if (this.Defender.IVSets.Count <= 0)
+                    this.Defender.IVSets.Add(new IVSet());
+                else if (this.Defender.IVSets.Count > 1)
+                {
+                    while (this.Defender.IVSets.Count > 1)
+                        this.Defender.IVSets.RemoveAt(1);
+                }
             }
         }
         private Pokemon _SelectedAttackerPokemon;
@@ -112,6 +127,19 @@ namespace Pokemon_Go_Database.Screens
             set
             {
                 Set(ref this._BattleResult, value);
+            }
+        }
+
+        private double _NextBreakpoint;
+        public double NextBreakpoint
+        {
+            get
+            {
+                return this._NextBreakpoint;
+            }
+            set
+            {
+                this.Set(ref this._NextBreakpoint, value);
             }
         }
 
@@ -379,6 +407,24 @@ namespace Pokemon_Go_Database.Screens
                 DPS = averageDPS / (double)Constants.NumSimulations,
                 TDO = averageTDO / (double)Constants.NumSimulations
             };
+
+            //Calculate next breakpoint
+            double bonus = 1.0;
+            if (Attacker.Species.Type1 == Attacker.FastMove.FastMove.Type || Attacker.Species.Type2 == Attacker.FastMove.FastMove.Type)
+                bonus *= Constants.StabBonus;
+            bonus *= Constants.CalculateTypeBonus(Attacker.FastMove.FastMove.Type, Defender.Species.Type1, Defender.Species.Type2);
+
+            int baseDamage = Constants.CalculateDamage(this.Attacker.FastMove.FastMove.Power, this.Attacker.GetAttack(), this.Defender.GetDefense(), bonus);
+            for (double i=Attacker.Level; i<=Constants.MaxLevel; i+=0.5)
+            {
+                int damage = Constants.CalculateDamage(this.Attacker.FastMove.FastMove.Power, this.Attacker.GetAttack(-1, i), this.Defender.GetDefense(), bonus);
+                if (damage > baseDamage)
+                {
+                    this.NextBreakpoint = i;
+                    return;
+                }
+            }
+            this.NextBreakpoint = 0.0;
         }
         #endregion
     }

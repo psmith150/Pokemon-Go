@@ -41,13 +41,13 @@
                 <Label Content="Pokemon:"/>
                 <ComboBox ItemsSource="{Binding Source={StaticResource AttackerSpeciesView}}" DisplayMemberPath="Species" SelectedItem="{Binding Attacker.Species}" Width="150"/>
                 <Label Content="Level:"/>
-                <xtk:AutoSelectTextBox Text="{Binding Attacker.LevelExpression}" Width="30" VerticalAlignment="Center" AutoSelectBehavior="OnFocus"/>
+                <xtk:AutoSelectTextBox Text="{Binding Attacker.IVSets[0].Level}" Width="30" VerticalAlignment="Center" AutoSelectBehavior="OnFocus"/>
                 <Label Content="Attack IV"/>
-                <xtk:AutoSelectTextBox Text="{Binding Attacker.AttackIVExpression}" Width="30" VerticalAlignment="Center" AutoSelectBehavior="OnFocus"/>
+                <xtk:AutoSelectTextBox Text="{Binding Attacker.IVSets[0].AttackIV}" Width="30" VerticalAlignment="Center" AutoSelectBehavior="OnFocus"/>
                 <Label Content="Defense IV"/>
-                <xtk:AutoSelectTextBox Text="{Binding Attacker.DefenseIVExpression}" Width="30" VerticalAlignment="Center" AutoSelectBehavior="OnFocus"/>
+                <xtk:AutoSelectTextBox Text="{Binding Attacker.IVSets[0].DefenseIV}" Width="30" VerticalAlignment="Center" AutoSelectBehavior="OnFocus"/>
                 <Label Content="Stamina IV"/>
-                <xtk:AutoSelectTextBox Text="{Binding Attacker.StaminaIVExpression}" Width="30" VerticalAlignment="Center" AutoSelectBehavior="OnFocus"/>
+                <xtk:AutoSelectTextBox Text="{Binding Attacker.IVSets[0].StaminaIV}" Width="30" VerticalAlignment="Center" AutoSelectBehavior="OnFocus"/>
                 <Label Content="Fast Move"/>
                 <ComboBox Width="100" SelectedItem="{Binding Attacker.FastMove}" DisplayMemberPath="FastMove.Name" ItemsSource="{Binding Attacker.Species.FastMoves}"/>
                 <Label Content="Charge Move"/>
@@ -65,19 +65,23 @@
                 <Label Content="TDO:"/>
                 <TextBlock Text="{Binding BattleResult.TDO, StringFormat=P1}" VerticalAlignment="Center"/>
             </StackPanel>
+            <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
+                <Label Content="Next breakpoint at level"/>
+                <TextBlock Text="{Binding NextBreakpoint}" VerticalAlignment="Center"/>
+            </StackPanel>
         </StackPanel>
         <StackPanel Name="DefenderWrapper" Grid.Row="1">
             <StackPanel Name="DefenderDisplay" Orientation="Horizontal" HorizontalAlignment="Center">
                 <Label Content="Pokemon:"/>
                 <ComboBox ItemsSource="{Binding Source={StaticResource DefenderSpeciesView}}" DisplayMemberPath="Species" SelectedItem="{Binding Defender.Species}" Width="150"/>
                 <Label Content="Level:"/>
-                <xtk:AutoSelectTextBox Text="{Binding Defender.LevelExpression}" Width="30" VerticalAlignment="Center" AutoSelectBehavior="OnFocus"/>
+                <xtk:AutoSelectTextBox Text="{Binding Defender.IVSets[0].Level}" Width="30" VerticalAlignment="Center" AutoSelectBehavior="OnFocus"/>
                 <Label Content="Attack IV"/>
-                <xtk:AutoSelectTextBox Text="{Binding Defender.AttackIVExpression}" Width="30" VerticalAlignment="Center" AutoSelectBehavior="OnFocus"/>
+                <xtk:AutoSelectTextBox Text="{Binding Defender.IVSets[0].AttackIV}" Width="30" VerticalAlignment="Center" AutoSelectBehavior="OnFocus"/>
                 <Label Content="Defense IV"/>
-                <xtk:AutoSelectTextBox Text="{Binding Defender.DefenseIVExpression}" Width="30" VerticalAlignment="Center" AutoSelectBehavior="OnFocus"/>
+                <xtk:AutoSelectTextBox Text="{Binding Defender.IVSets[0].DefenseIV}" Width="30" VerticalAlignment="Center" AutoSelectBehavior="OnFocus"/>
                 <Label Content="Stamina IV"/>
-                <xtk:AutoSelectTextBox Text="{Binding Defender.StaminaIVExpression}" Width="30" VerticalAlignment="Center" AutoSelectBehavior="OnFocus"/>
+                <xtk:AutoSelectTextBox Text="{Binding Defender.IVSets[0].StaminaIV}" Width="30" VerticalAlignment="Center" AutoSelectBehavior="OnFocus"/>
                 <Label Content="Fast Move"/>
                 <ComboBox Width="100" SelectedItem="{Binding Defender.FastMove}" DisplayMemberPath="FastMove.Name" ItemsSource="{Binding Defender.Species.FastMoves}"/>
                 <Label Content="Charge Move"/>
