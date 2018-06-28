@@ -15,7 +15,7 @@
             </CollectionViewSource.SortDescriptions>
         </CollectionViewSource>
     </UserControl.Resources>
-    <Grid Background="{StaticResource MainBackgroundColor}" Width="700" Height="300">
+    <Grid Background="{StaticResource MainBackgroundColor}" Width="700" Height="500">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
@@ -89,15 +89,31 @@
             <Expander.Style>
                 <Style TargetType="Expander">
                     <Setter Property="IsExpanded" Value="False" />
-                    <Setter Property="Header" Value="Show Power up Costs" />
+                    <Setter Property="Header" Value="Show Power Up Simulation" />
                     <Style.Triggers>
                         <DataTrigger Binding="{Binding IsExpanded,RelativeSource={RelativeSource Self}}" Value="True">
-                            <Setter Property="Header" Value="Hide Power up Costs" />
+                            <Setter Property="Header" Value="Hide Power Up Simulation" />
                         </DataTrigger>
                     </Style.Triggers>
                 </Style>
             </Expander.Style>
             <StackPanel HorizontalAlignment="Stretch" Orientation="Vertical">
+                <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
+                    <Label Content="CP:"/>
+                    <TextBlock Text="{Binding SimulatedCP}" VerticalAlignment="Center"/>
+                    <Label Content="HP:"/>
+                    <TextBlock Text="{Binding SimulatedStamina}" VerticalAlignment="Center"/>
+                    <Label Content="DPS:"/>
+                    <TextBlock Text="{Binding SimulatedDPS}" VerticalAlignment="Center"/>
+                </StackPanel>
+                <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
+                    <Label Content="Attack:"/>
+                    <TextBlock Text="{Binding SimulatedAttack}" VerticalAlignment="Center"/>
+                    <Label Content="Defense:"/>
+                    <TextBlock Text="{Binding SimulatedDefense}" VerticalAlignment="Center"/>
+                    <Label Content="Stamina:"/>
+                    <TextBlock Text="{Binding SimulatedStamina}" VerticalAlignment="Center"/>
+                </StackPanel>
                 <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
                     <Label Content="Candy Required:"/>
                     <TextBlock Text="{Binding CandyRequired}" Width="30" TextAlignment="Left" VerticalAlignment="Center"/>
@@ -105,8 +121,6 @@
                     <Label Content="Stardust Required:"/>
                     <TextBlock Text="{Binding StardustRequired}" Width="40" TextAlignment="Left" VerticalAlignment="Center"/>
                     <Separator Width="50" Background="Transparent"/>
-                    <Label Content="CP At Level:"/>
-                    <TextBlock Text="{Binding CPAtTargetLevel}" Width="30" TextAlignment="Left" VerticalAlignment="Center"/>
                 </StackPanel>
                 <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
                     <Slider Value="{Binding SimulatedLevel}" Maximum="{Binding MaxLevel}" Minimum="{Binding MinLevel}" TickPlacement="BottomRight" IsSnapToTickEnabled="True" TickFrequency="0.5" Name="LevelValueSlider" Width="500" AutoToolTipPlacement="BottomRight" AutoToolTipPrecision="1"/>

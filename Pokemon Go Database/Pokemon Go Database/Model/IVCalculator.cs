@@ -28,7 +28,10 @@ namespace Pokemon_Go_Database.Model
                 this.StaminaBest = true;
             }
             this.InitIVLevels(true);
-            this.IVSets = new ObservableCollection<IVSet>();
+            if (this.Pokemon.IVSets.Count > 0)
+                this.IVSets = this.Pokemon.IVSets;
+            else
+                this.IVSets = new ObservableCollection<IVSet>();
         }
 
         #region Public Properties

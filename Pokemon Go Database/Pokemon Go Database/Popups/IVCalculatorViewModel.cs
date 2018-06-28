@@ -29,7 +29,14 @@ namespace Pokemon_Go_Database.Popups
             this._messageViewer = messageViewer;
             this.ExitPopupCommand = new RelayCommand(() => Exit());
             this.SaveCommand = new RelayCommand(() => Save());
-            this.CalculateIVsCommand = new RelayCommand(() => this.Calculator.CalculateValues());
+            this.CalculateIVsCommand = new RelayCommand(() => {
+                this.Calculator.CalculateValues();
+                if (this.Calculator.IVSets.Count > 0)
+                {
+                    this.SimulatedLevel = this.Calculator.IVSets.Min(x => x.Level);
+                    this.MinLevel = this.Calculator.IVSets.Min(x => x.Level);
+                }
+            });
 
         }
 
@@ -125,9 +132,8 @@ namespace Pokemon_Go_Database.Popups
             set
             {
                 Set(ref this._SimulatedLevel, value);
-                RaisePropertyChanged("CandyRequired");
-                RaisePropertyChanged("StardustRequired");
-                RaisePropertyChanged("CPAtTargetLevel");
+                this.SimulateLevelChange();
+                this.RaiseSimulatedPropertiesChanged();
             }
         }
 
@@ -211,16 +217,6 @@ namespace Pokemon_Go_Database.Popups
                 return this.CalculateStardustRequired();
             }
         }
-
-        public int CPAtTargetLevel
-        {
-            get
-            {
-                if (this.Calculator == null || this.Calculator.Pokemon == null)
-                    return 0;
-                return this.Calculator.Pokemon.GetCP(-1, -1, -1, this.SimulatedLevel);
-            }
-        }
         #endregion
 
         #region Private Methods
@@ -241,39 +237,35 @@ namespace Pokemon_Go_Database.Popups
 
         private void Save()
         {
-            this.Calculator.Pokemon.AttackIVExpression = "";
-            this.Calculator.Pokemon.DefenseIVExpression = "";
-            this.Calculator.Pokemon.StaminaIVExpression = "";
-            this.Calculator.Pokemon.LevelExpression = "";
             List<int> attackIVs = new List<int>();
             List<int> defenseIVs = new List<int>();
             List<int> staminaIVs = new List<int>();
             List<double> levels = new List<double>();
             this.Calculator.Pokemon.IVSets.Clear();
             this.Calculator.Pokemon.IVSets.InsertRange(this.Calculator.IVSets);
-            foreach (IVSet combination in this.Calculator.IVSets)
-            {
-                if (!attackIVs.Contains(combination.AttackIV))
-                    attackIVs.Add(combination.AttackIV);
-                if (!defenseIVs.Contains(combination.DefenseIV))
-                    defenseIVs.Add(combination.DefenseIV);
-                if (!staminaIVs.Contains(combination.StaminaIV))
-                    staminaIVs.Add(combination.StaminaIV);
-                if (!levels.Contains(combination.Level))
-                    levels.Add(combination.Level);
-            }
-            this.Calculator.Pokemon.AttackIVExpression = string.Join("/", attackIVs.OrderBy(x => x).ToArray());
-            if (this.Calculator.Pokemon.AttackIVExpression.Equals(""))
-                this.Calculator.Pokemon.AttackIVExpression = "0";
-            this.Calculator.Pokemon.DefenseIVExpression = string.Join("/", defenseIVs.OrderBy(x => x).ToArray());
-            if (this.Calculator.Pokemon.DefenseIVExpression.Equals(""))
-                this.Calculator.Pokemon.DefenseIVExpression = "0";
-            this.Calculator.Pokemon.StaminaIVExpression = string.Join("/", staminaIVs.OrderBy(x => x).ToArray());
-            if (this.Calculator.Pokemon.StaminaIVExpression.Equals(""))
-                this.Calculator.Pokemon.StaminaIVExpression = "0";
-            this.Calculator.Pokemon.LevelExpression = string.Join("/", levels.OrderBy(x => x).ToArray());
-            if (this.Calculator.Pokemon.LevelExpression.Equals(""))
-                this.Calculator.Pokemon.LevelExpression = "1";
+            //foreach (IVSet combination in this.Calculator.IVSets)
+            //{
+            //    if (!attackIVs.Contains(combination.AttackIV))
+            //        attackIVs.Add(combination.AttackIV);
+            //    if (!defenseIVs.Contains(combination.DefenseIV))
+            //        defenseIVs.Add(combination.DefenseIV);
+            //    if (!staminaIVs.Contains(combination.StaminaIV))
+            //        staminaIVs.Add(combination.StaminaIV);
+            //    if (!levels.Contains(combination.Level))
+            //        levels.Add(combination.Level);
+            //}
+            //this.Calculator.Pokemon.AttackIVExpression = string.Join("/", attackIVs.OrderBy(x => x).ToArray());
+            //if (this.Calculator.Pokemon.AttackIVExpression.Equals(""))
+            //    this.Calculator.Pokemon.AttackIVExpression = "0";
+            //this.Calculator.Pokemon.DefenseIVExpression = string.Join("/", defenseIVs.OrderBy(x => x).ToArray());
+            //if (this.Calculator.Pokemon.DefenseIVExpression.Equals(""))
+            //    this.Calculator.Pokemon.DefenseIVExpression = "0";
+            //this.Calculator.Pokemon.StaminaIVExpression = string.Join("/", staminaIVs.OrderBy(x => x).ToArray());
+            //if (this.Calculator.Pokemon.StaminaIVExpression.Equals(""))
+            //    this.Calculator.Pokemon.StaminaIVExpression = "0";
+            //this.Calculator.Pokemon.LevelExpression = string.Join("/", levels.OrderBy(x => x).ToArray());
+            //if (this.Calculator.Pokemon.LevelExpression.Equals(""))
+            //    this.Calculator.Pokemon.LevelExpression = "1";
 
             if (!this.IsNotNewPokemon)
             {
@@ -312,17 +304,19 @@ namespace Pokemon_Go_Database.Popups
         private void SimulateLevelChange()
         {
             int min, max;
+            if (this.Calculator.Pokemon.IVSets.Count <= 0)
+                return;
 
             //Attack
             min = this.Calculator.Pokemon.IVSets.Min(x => x.AttackIV);
             max = this.Calculator.Pokemon.IVSets.Max(x => x.AttackIV);
             if (min != max)
             {
-                this.SimulatedAttack = this.Calculator.Pokemon.GetAttack(min, this.SimulatedLevel).ToString() + " - " + this.Calculator.Pokemon.GetAttack(max, this.SimulatedLevel).ToString();
+                this.SimulatedAttack = ((int)this.Calculator.Pokemon.GetAttack(min, this.SimulatedLevel)).ToString() + " - " + ((int)this.Calculator.Pokemon.GetAttack(max, this.SimulatedLevel)).ToString();
             }
             else
             {
-                this.SimulatedAttack = this.Calculator.Pokemon.GetAttack(min, this.SimulatedLevel).ToString();
+                this.SimulatedAttack = ((int)this.Calculator.Pokemon.GetAttack(min, this.SimulatedLevel)).ToString();
             }
 
             //Defense
@@ -330,11 +324,11 @@ namespace Pokemon_Go_Database.Popups
             max = this.Calculator.Pokemon.IVSets.Max(x => x.DefenseIV);
             if (min != max)
             {
-                this.SimulatedAttack = this.Calculator.Pokemon.GetDefense(min, this.SimulatedLevel).ToString() + " - " + this.Calculator.Pokemon.GetDefense(max, this.SimulatedLevel).ToString();
+                this.SimulatedDefense = ((int)this.Calculator.Pokemon.GetDefense(min, this.SimulatedLevel)).ToString() + " - " + ((int)this.Calculator.Pokemon.GetDefense(max, this.SimulatedLevel)).ToString();
             }
             else
             {
-                this.SimulatedAttack = this.Calculator.Pokemon.GetDefense(min, this.SimulatedLevel).ToString();
+                this.SimulatedDefense = ((int)this.Calculator.Pokemon.GetDefense(min, this.SimulatedLevel)).ToString();
             }
 
             //Stamina
@@ -342,11 +336,11 @@ namespace Pokemon_Go_Database.Popups
             max = this.Calculator.Pokemon.IVSets.Max(x => x.StaminaIV);
             if (min != max)
             {
-                this.SimulatedAttack = this.Calculator.Pokemon.GetStamina(min, this.SimulatedLevel).ToString() + " - " + this.Calculator.Pokemon.GetStamina(max, this.SimulatedLevel).ToString();
+                this.SimulatedStamina = ((int)this.Calculator.Pokemon.GetStamina(min, this.SimulatedLevel)).ToString() + " - " + ((int)this.Calculator.Pokemon.GetStamina(max, this.SimulatedLevel)).ToString();
             }
             else
             {
-                this.SimulatedAttack = this.Calculator.Pokemon.GetStamina(min, this.SimulatedLevel).ToString();
+                this.SimulatedStamina = ((int)this.Calculator.Pokemon.GetStamina(min, this.SimulatedLevel)).ToString();
             }
 
             //CP
@@ -359,13 +353,35 @@ namespace Pokemon_Go_Database.Popups
             max = possibleCP.Max(x => x);
             if (min != max)
             {
-                this.SimulatedAttack = min.ToString() + " - " + max.ToString();
+                this.SimulatedCP = min.ToString() + " - " + max.ToString();
             }
             else
             {
-                this.SimulatedAttack = min.ToString();
+                this.SimulatedCP = min.ToString();
             }
 
+            //DPS
+            List<double> possibleDPS = new List<double>();
+            foreach (IVSet combination in this.Calculator.Pokemon.IVSets)
+            {
+                possibleDPS.Add(this.Calculator.Pokemon.Moveset.GetDPS(this.Calculator.Pokemon.GetAttack(combination.AttackIV, this.SimulatedLevel), this.Calculator.Pokemon.Species.Type1, this.Calculator.Pokemon.Species.Type2));
+            }
+            double minDPS = possibleDPS.Min(x => x);
+            double maxDPS = possibleDPS.Max(x => x);
+            if (Math.Abs(maxDPS - minDPS) > 0.001)
+            {
+                this.SimulatedDPS = minDPS.ToString("N2") + " - " + maxDPS.ToString("N2");
+            }
+            else
+            {
+                this.SimulatedDPS = minDPS.ToString("N2");
+            }
+        }
+
+        private void RaiseSimulatedPropertiesChanged()
+        {
+            RaisePropertyChanged("CandyRequired");
+            RaisePropertyChanged("StardustRequired");
         }
         #endregion
     }

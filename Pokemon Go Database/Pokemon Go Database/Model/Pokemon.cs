@@ -142,6 +142,7 @@ namespace Pokemon_Go_Database.Model
             private set
             {
                 this.Set(ref this._IVSets, value);
+                this.IVSets.CollectionChanged += ((s, a) => this.UpdateAllCalculatedProperties());
             }
         }
 
@@ -253,7 +254,7 @@ namespace Pokemon_Go_Database.Model
         {
             get
             {
-                return string.Join("/", this.IVSets.OrderBy(x => x.StaminaIV).ToList());
+                return string.Join("/", this.IVSets.Select(x => x.AttackIV).OrderBy(x => x).ToList());
             }
             set
             {
@@ -269,7 +270,7 @@ namespace Pokemon_Go_Database.Model
         {
             get
             {
-                return string.Join("/", this.IVSets.OrderBy(x => x.DefenseIV).ToList());
+                return string.Join("/", this.IVSets.Select(x => x.DefenseIV).OrderBy(x => x).ToList());
             }
             set
             {
@@ -285,7 +286,7 @@ namespace Pokemon_Go_Database.Model
         {
             get
             {
-                return string.Join("/", this.IVSets.OrderBy(x => x.StaminaIV).ToList());
+                return string.Join("/", this.IVSets.Select(x => x.StaminaIV).OrderBy(x => x).ToList());
             }
             set
             {
@@ -302,7 +303,7 @@ namespace Pokemon_Go_Database.Model
         {
             get
             {
-                return string.Join("/", this.IVSets.OrderBy(x => x.Level).ToList());
+                return string.Join("/", this.IVSets.Select(x => x.Level).OrderBy(x => x).ToList());
             }
             set
             {
@@ -316,7 +317,9 @@ namespace Pokemon_Go_Database.Model
         {
             get
             {
-                return (GetAttackIV() + GetStaminaIV() + GetDefenseIV()) / (3.0 * Constants.MaxIV);
+                if (this.IVSets.Count <= 0)
+                    return 0.0;
+                return this.IVSets.Select(x => x.IVPercentage).Average();
             }
         }
 
@@ -507,75 +510,27 @@ namespace Pokemon_Go_Database.Model
         #region Public Methods
         public int GetAttackIV()
         {
-            List<int> values = new List<int>();
-            foreach (string value in this.AttackIVExpression.Split('/'))
-            {
-                try
-                {
-                    values.Add(Int32.Parse(value));
-                }
-                catch (Exception)
-                {
-                    Debug.WriteLine($"Error parsing attack IV expression {this.AttackIVExpression} for pokemon {this.Name}.");
-                }
-            }
-            if (values.Count <= 0)
+            if (this.IVSets.Count <= 0)
                 return 0;
-            return (int)values.Average();
+            return (int)this.IVSets.Select(x => x.AttackIV).Average();
         }
         public int GetStaminaIV()
         {
-            List<int> values = new List<int>();
-            foreach (string value in this.StaminaIVExpression.Split('/'))
-            {
-                try
-                {
-                    values.Add(Int32.Parse(value));
-                }
-                catch (Exception)
-                {
-                    Debug.WriteLine($"Error parsing stamina IV expression {this.StaminaIVExpression} for pokemon {this.Name}.");
-                }
-            }
-            if (values.Count <= 0)
+            if (this.IVSets.Count <= 0)
                 return 0;
-            return (int)values.Average();
+            return (int)this.IVSets.Select(x => x.StaminaIV).Average();
         }
         public int GetDefenseIV()
         {
-            List<int> values = new List<int>();
-            foreach (string value in this.DefenseIVExpression.Split('/'))
-            {
-                try
-                {
-                    values.Add(Int32.Parse(value));
-                }
-                catch (Exception)
-                {
-                    Debug.WriteLine($"Error parsing defense IV expression {this.DefenseIVExpression} for pokemon {this.Name}.");
-                }
-            }
-            if (values.Count <= 0)
+            if (this.IVSets.Count <= 0)
                 return 0;
-            return (int)values.Average();
+            return (int)this.IVSets.Select(x => x.DefenseIV).Average();
         }
         public double GetLevel()
         {
-            List<double> values = new List<double>();
-            foreach (string value in this.LevelExpression.Split('/'))
-            {
-                try
-                {
-                    values.Add(Double.Parse(value));
-                }
-                catch (Exception)
-                {
-                    Debug.WriteLine($"Error parsing level expression {this.LevelExpression} for pokemon {this.Name}.");
-                }
-            }
-            if (values.Count <= 0)
+            if (this.IVSets.Count <= 0)
                 return 1.0;
-            return Math.Round((values.Average() * 2.0)) / 2.0; //Used to round to the nearest 1/2
+            return Math.Round((this.IVSets.Select(x => x.Level).Average() * 2.0)) / 2.0; //Used to round to the nearest 1/2
         }
 
         public double GetAttack(int attackIV = -1, double level = -1.0)
@@ -661,10 +616,15 @@ namespace Pokemon_Go_Database.Model
             RaisePropertyChanged("ActualHP");
             RaisePropertyChanged("CPM");
             RaisePropertyChanged("Attack");
+            RaisePropertyChanged("AttackIVExpression");
             RaisePropertyChanged("Defense");
+            RaisePropertyChanged("DefenseIVExpression");
             RaisePropertyChanged("Stamina");
+            RaisePropertyChanged("StaminaIVExpression");
             RaisePropertyChanged("Level");
+            RaisePropertyChanged("LevelExpression");
             RaisePropertyChanged("MaxCP");
+            RaisePropertyChanged("IVPercentage");
 
             RaisePropertyChanged("OffenseMovesetPercentage");
             RaisePropertyChanged("OffenseDPS");
