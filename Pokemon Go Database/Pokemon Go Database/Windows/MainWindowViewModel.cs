@@ -15,6 +15,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Input;
 using Pokemon_Go_Database.Base.AbstractClasses;
+using Pokemon_Go_Database.Popups;
 
 namespace Pokemon_Go_Database.Windows
 {
@@ -136,7 +137,7 @@ namespace Pokemon_Go_Database.Windows
 
         private async void OpenSettings()
         {
-
+            await this.NavigationService.OpenPopup<SettingsViewModel>();
         }
 
         #region File Handling

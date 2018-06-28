@@ -169,6 +169,21 @@ namespace Pokemon_Go_Database.Model
                         case "IV%":
                             replacementValue = string.Format("{0:0}", this.AverageIVPercentage * 100.0);
                             break;
+                        case "AttackIV":
+                            replacementValue = this.Pokemon.AttackIVExpression;
+                            break;
+                        case "DefenseIV":
+                            replacementValue = this.Pokemon.DefenseIVExpression;
+                            break;
+                        case "StaminaIV":
+                            replacementValue = this.Pokemon.StaminaIVExpression;
+                            break;
+                        case "FastMoveType":
+                            replacementValue = this.Pokemon.FastMove.FastMove.Type.ToString();
+                            break;
+                        case "ChargeMoveType":
+                            replacementValue = this.Pokemon.ChargeMove.ChargeMove.Type.ToString();
+                            break;
                         default:
                             break;
                     }

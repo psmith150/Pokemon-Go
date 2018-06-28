@@ -116,6 +116,10 @@
     <Compile Include="Model\PokedexFastMoveWrapper.cs" />
     <Compile Include="Model\Pokemon.cs" />
     <Compile Include="Model\ValueCombination.cs" />
+    <Compile Include="Popups\SettingsPopup.xaml.cs">
+      <DependentUpon>SettingsPopup.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Popups\SettingsViewModel.cs" />
     <Compile Include="Popups\IVCalculatorPopup.xaml.cs">
       <DependentUpon>IVCalculatorPopup.xaml</DependentUpon>
     </Compile>
@@ -160,6 +164,10 @@
     <Compile Include="ValueConverters\TypeToBoolConverter.cs" />
     <Compile Include="ValueConverters\ViewModelToViewConverter.cs" />
     <Compile Include="Windows\MainWindowViewModel.cs" />
+    <Page Include="Popups\SettingsPopup.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Popups\IVCalculatorPopup.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
