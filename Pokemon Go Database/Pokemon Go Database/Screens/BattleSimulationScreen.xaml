@@ -74,22 +74,23 @@
             <StackPanel Name="DefenderDisplay" Orientation="Horizontal" HorizontalAlignment="Center">
                 <Label Content="Pokemon:"/>
                 <ComboBox ItemsSource="{Binding Source={StaticResource DefenderSpeciesView}}" DisplayMemberPath="Species" SelectedItem="{Binding Defender.Species}" Width="150"/>
+                <Label Content="Defender Type: "/>
+                <ComboBox HorizontalAlignment="Stretch" ItemsSource="{Binding DefenderTypes}" SelectedItem="{Binding DefenderType}"/>
                 <Label Content="Level:"/>
-                <xtk:AutoSelectTextBox Text="{Binding Defender.IVSets[0].Level}" Width="30" VerticalAlignment="Center" AutoSelectBehavior="OnFocus"/>
+                <xtk:AutoSelectTextBox Text="{Binding Defender.IVSets[0].Level}" Width="30" VerticalAlignment="Center" IsReadOnly="{Binding IsRaidBoss}" AutoSelectBehavior="OnFocus"/>
                 <Label Content="Attack IV"/>
-                <xtk:AutoSelectTextBox Text="{Binding Defender.IVSets[0].AttackIV}" Width="30" VerticalAlignment="Center" AutoSelectBehavior="OnFocus"/>
+                <xtk:AutoSelectTextBox Text="{Binding Defender.IVSets[0].AttackIV}" Width="30" VerticalAlignment="Center" IsReadOnly="{Binding IsRaidBoss}" AutoSelectBehavior="OnFocus"/>
                 <Label Content="Defense IV"/>
-                <xtk:AutoSelectTextBox Text="{Binding Defender.IVSets[0].DefenseIV}" Width="30" VerticalAlignment="Center" AutoSelectBehavior="OnFocus"/>
+                <xtk:AutoSelectTextBox Text="{Binding Defender.IVSets[0].DefenseIV}" Width="30" VerticalAlignment="Center" IsReadOnly="{Binding IsRaidBoss}" AutoSelectBehavior="OnFocus"/>
                 <Label Content="Stamina IV"/>
-                <xtk:AutoSelectTextBox Text="{Binding Defender.IVSets[0].StaminaIV}" Width="30" VerticalAlignment="Center" AutoSelectBehavior="OnFocus"/>
+                <xtk:AutoSelectTextBox Text="{Binding Defender.IVSets[0].StaminaIV}" Width="30" VerticalAlignment="Center" IsReadOnly="{Binding IsRaidBoss}" AutoSelectBehavior="OnFocus"/>
                 <Label Content="Fast Move"/>
                 <ComboBox Width="100" SelectedItem="{Binding Defender.FastMove}" DisplayMemberPath="FastMove.Name" ItemsSource="{Binding Defender.Species.FastMoves}"/>
                 <Label Content="Charge Move"/>
                 <ComboBox Width="100" SelectedItem="{Binding Defender.ChargeMove}" DisplayMemberPath="ChargeMove.Name" ItemsSource="{Binding Defender.Species.ChargeMoves}"/>
-                <Label Content="Raid Boss?"/>
-                <CheckBox IsChecked="{Binding IsRaidBoss}"/>
             </StackPanel>
             <Button Content="Simulate" Width="250" Command="{Binding SimulateBattleCommand}"/>
         </StackPanel>
+        <DataGrid Grid.Row="2" ItemsSource="{Binding BattleLog}" AutoGenerateColumns="True"/>
     </Grid>
 </UserControl>

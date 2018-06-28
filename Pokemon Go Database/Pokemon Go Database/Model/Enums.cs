@@ -7,4 +7,6 @@ namespace Pokemon_Go_Database.Model
     public enum CombatType { Offense, Defense };
     public enum IVLevel { Low, Medium, High, Max };
     public enum TotalIVLevel { Low, Medium, High, Max};
+
+    public enum DefenderType { [Description("Gym Defender")] GymDefender, [Description("Tier 1")] Tier1, [Description("Tier 2")] Tier2, [Description("Tier 3")] Tier3, [Description("Tier 4")] Tier4, [Description("Tier 5")] Tier5 }
 }

@@ -68,7 +68,9 @@ namespace Pokemon_Go_Database.Model
 
         public const double dodgeDamageFactor = 0.25;
 
-        public const int DefenderFastMoveDelay = 2000;
+        public const int DefenderFastMoveDelayMin = 1500;
+
+        public const int DefenderFastMoveDelayMax = 2500;
 
         public const int NumSimulations = 100;
 
@@ -98,6 +100,7 @@ namespace Pokemon_Go_Database.Model
             {"Aggron", 4 },
             {"Tyranitar", 4 },
             {"Charizard", 4 },
+            {"Golem", 4 },
             {"Groudon", 5 },
             {"Kyogre", 5 },
             {"Rayquaza", 5 },
@@ -105,6 +108,7 @@ namespace Pokemon_Go_Database.Model
             {"Ho-oh", 5 },
             {"Latios", 5 },
             {"Latias", 5 },
+            {"Regice", 5 },
             {"Mewtwo", 5 }
         };
 

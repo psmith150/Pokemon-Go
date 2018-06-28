@@ -29,6 +29,7 @@ namespace Pokemon_Go_Database.Screens
             this.Attacker = new Pokemon();
             this.Defender = new Pokemon();
             this.BattleResult = new BattleResult();
+            this.BattleLog = new List<BattleLogEntry>();
 
             this.SimulateBattleCommand = new RelayCommand(async () => await Task.Run(() => this.SimulateBattleAsync()));
         }
@@ -65,7 +66,7 @@ namespace Pokemon_Go_Database.Screens
                     while (this.Attacker.IVSets.Count > 1)
                         this.Attacker.IVSets.RemoveAt(1);
                 }
-                    
+
             }
         }
         private Pokemon _Defender;
@@ -143,16 +144,94 @@ namespace Pokemon_Go_Database.Screens
             }
         }
 
-        public bool IsRaidBoss { get; set; }
+        private List<BattleLogEntry> _BattleLog;
+        public List<BattleLogEntry> BattleLog
+        {
+            get
+            {
+                return this._BattleLog;
+            }
+            set
+            {
+                this.Set(ref this._BattleLog, value);
+            }
+        }
+        private bool _IsRaidBoss;
+        public bool IsRaidBoss
+        {
+            get
+            {
+                return this._IsRaidBoss;
+            }
+            set
+            {
+                this.Set(ref this._IsRaidBoss, value);
+            }
+        }
+
+        public Array DefenderTypes
+        {
+            get
+            {
+                return Enum.GetValues(typeof(DefenderType));
+            }
+        }
+        private DefenderType _DefenderType;
+        public DefenderType DefenderType
+        {
+            get
+            {
+                return this._DefenderType;
+            }
+            set
+            {
+                this.Set(ref this._DefenderType, value);
+                if (this.DefenderType != DefenderType.GymDefender)
+                {
+                    this.Defender.IVSets[0].AttackIV = Constants.MaxIV;
+                    this.Defender.IVSets[0].DefenseIV = Constants.MaxIV;
+                    this.Defender.IVSets[0].StaminaIV = Constants.MaxIV;
+                    int index;
+                    if (!Constants.RaidBosses.TryGetValue(this.Defender.Species.Species, out index) || (index+1) != (int)this.DefenderType)
+                    {
+                        int test1 = index + 1;
+                        int test2 = (int)this.DefenderType;
+                        this._messageViewer.DisplayMessage($"{Defender.Species.Species} is not a normal raid boss at this tier!", "Undefined Raid Boss", MessageViewerButton.Ok, MessageViewerIcon.Warning);
+                    }
+                    double level = 1.0;
+                    switch (this.DefenderType)
+                    {
+                        case DefenderType.Tier1:
+                        case DefenderType.Tier2:
+                        case DefenderType.Tier3:
+                        case DefenderType.Tier4:
+                            level = 30.0;
+                            break;
+                        case DefenderType.Tier5:
+                            level = 40.0;
+                            break;
+                        default:
+                            level = 1.0;
+                            break;
+
+                    }
+                    this.Defender.IVSets[0].Level = level;
+                    this.IsRaidBoss = true;
+                }
+                else
+                    this.IsRaidBoss = false;
+            }
+        }
         public bool DodgeChargeAttacks { get; set; }
         #endregion
 
         #region Public Methods
         public void SimulateBattleAsync()
         {
+            this.BattleLog.Clear();
             if (this.Attacker == null || this.Defender == null)
                 return;
-            const int timeInterval = 100;
+            const int timeInterval = 50;
             int attackerDamageWindowStartTime;
             int defenderDamageWindowStartTime;
             bool defenderUseChargeMove = false;
@@ -179,19 +258,10 @@ namespace Pokemon_Go_Database.Screens
                 if (IsRaidBoss)
                 {
                     int index;
-                    if (!Constants.RaidBosses.TryGetValue(this.Defender.Species.Species, out index))
+                    if (this.DefenderType != DefenderType.GymDefender)
                     {
-                        if (!errorShown)
-                            this._messageViewer.DisplayMessage($"{Defender.Species.Species} is not a defined raid boss!", "Undefined Raid Boss", MessageViewerButton.Ok).Wait();
-                        errorShown = true;
-                    }
-                    else
-                    {
+                        index = (int)DefenderType.GymDefender;
                         defenderHP = Constants.RaidBossHP[index - 1];
-                        this.Defender.AttackIVExpression = Constants.MaxIV.ToString();
-                        this.Defender.DefenseIVExpression = Constants.MaxIV.ToString();
-                        this.Defender.StaminaIVExpression = Constants.MaxIV.ToString();
-                        this.Defender.LevelExpression = Constants.RaidBossLevels[index - 1].ToString();
                     }
                 }
                 int defenderStartHP = defenderHP;
@@ -294,17 +364,18 @@ namespace Pokemon_Go_Database.Screens
                         defenderBonus = 1.0;
                         if (time >= defenderNextAttackTime)
                         {
-                            if (defenderEnergy >= Defender.ChargeMove.ChargeMove.Energy && (rand.Next(0, 10) >= 5))
+                            int randNum = rand.Next(0, 10);
+                            if (defenderEnergy >= Defender.ChargeMove.ChargeMove.Energy && (randNum >= 5))
                             {
                                 defenderState = BattleState.ChargeAttackInit;
                                 defenderStartAttackTime = time + Defender.ChargeMove.ChargeMove.DamageWindowStartTime;
                                 defenderNextAttackTime = time + Defender.ChargeMove.ChargeMove.Time;
                             }
-                            else if (defenderEnergy < Defender.ChargeMove.ChargeMove.Energy)
+                            else if (defenderEnergy < Defender.ChargeMove.ChargeMove.Energy || randNum < 5)
                             {
                                 defenderState = BattleState.FastAttackInit;
                                 defenderStartAttackTime = time + Defender.FastMove.FastMove.DamageWindowStartTime;
-                                defenderNextAttackTime = time + Defender.FastMove.FastMove.Time + Constants.DefenderFastMoveDelay;
+                                defenderNextAttackTime = time + Defender.FastMove.FastMove.Time + rand.Next(Constants.DefenderFastMoveDelayMin, Constants.DefenderFastMoveDelayMax);
                             }
                         }
                     }
@@ -378,6 +449,30 @@ namespace Pokemon_Go_Database.Screens
                     defenderEnergy = defenderEnergy > 100 ? 100 : defenderEnergy;
                     attackerEnergy = attackerEnergy > 100 ? 100 : attackerEnergy;
 
+                    if (i == 0)
+                    {
+                        string attackerAction = "None";
+                        string defenderAction = "None";
+                        bool recordAction = false;
+                        if (attackerDamage > 0)
+                        {
+                            if (attackerState == BattleState.FastAttackWindow)
+                                attackerAction = $"Attacker used {Attacker.FastMove.FastMove.Name}";
+                            else if (attackerState == BattleState.ChargeAttackWindow)
+                                attackerAction = $"Attacker used {Attacker.ChargeMove.ChargeMove.Name}";
+                            recordAction = true;
+                        }
+                        if (defenderDamage > 0)
+                        {
+                            if (defenderState == BattleState.FastAttackWindow)
+                                defenderAction = $"Defender used {Defender.FastMove.FastMove.Name}";
+                            else if (defenderState == BattleState.ChargeAttackWindow)
+                                defenderAction = $"Defender used {Defender.ChargeMove.ChargeMove.Name}";
+                            recordAction = true;
+                        }
+                        if (recordAction)
+                            this.BattleLog.Add(new BattleLogEntry(time, attackerHP, attackerEnergy, defenderHP, defenderEnergy, attackerAction, defenderAction));
+                    }
                     //if (attackerHP <= 0)
                     //{
                     //    attackerLivesNeeded++;
@@ -407,7 +502,7 @@ namespace Pokemon_Go_Database.Screens
                 DPS = averageDPS / (double)Constants.NumSimulations,
                 TDO = averageTDO / (double)Constants.NumSimulations
             };
-
+            this.RaisePropertyChanged("BattleLog");
             //Calculate next breakpoint
             double bonus = 1.0;
             if (Attacker.Species.Type1 == Attacker.FastMove.FastMove.Type || Attacker.Species.Type2 == Attacker.FastMove.FastMove.Type)
@@ -415,7 +510,7 @@ namespace Pokemon_Go_Database.Screens
             bonus *= Constants.CalculateTypeBonus(Attacker.FastMove.FastMove.Type, Defender.Species.Type1, Defender.Species.Type2);
 
             int baseDamage = Constants.CalculateDamage(this.Attacker.FastMove.FastMove.Power, this.Attacker.GetAttack(), this.Defender.GetDefense(), bonus);
-            for (double i=Attacker.Level; i<=Constants.MaxLevel; i+=0.5)
+            for (double i = Attacker.Level; i <= Constants.MaxLevel; i += 0.5)
             {
                 int damage = Constants.CalculateDamage(this.Attacker.FastMove.FastMove.Power, this.Attacker.GetAttack(-1, i), this.Defender.GetDefense(), bonus);
                 if (damage > baseDamage)

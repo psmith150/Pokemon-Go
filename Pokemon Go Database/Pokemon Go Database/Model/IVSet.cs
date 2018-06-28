@@ -4,9 +4,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Serialization;
 
 namespace Pokemon_Go_Database.Model
 {
+    [Serializable]
     public class IVSet : ObservableObject
     {
         public IVSet(int attackIV = 0, int defenseIV = 0, int staminaIV = 0, double level = 1.0)
@@ -80,6 +82,7 @@ namespace Pokemon_Go_Database.Model
             }
         }
 
+        [XmlIgnore]
         public double IVPercentage
         {
             get
