@@ -254,7 +254,7 @@ namespace Pokemon_Go_Database.Model
         {
             get
             {
-                return string.Join("/", this.IVSets.Select(x => x.AttackIV).OrderBy(x => x).ToList());
+                return string.Join("/", this.IVSets.Select(x => x.AttackIV).Distinct().OrderBy(x => x).ToList());
             }
             set
             {
@@ -270,7 +270,7 @@ namespace Pokemon_Go_Database.Model
         {
             get
             {
-                return string.Join("/", this.IVSets.Select(x => x.DefenseIV).OrderBy(x => x).ToList());
+                return string.Join("/", this.IVSets.Select(x => x.DefenseIV).Distinct().OrderBy(x => x).ToList());
             }
             set
             {
@@ -286,7 +286,7 @@ namespace Pokemon_Go_Database.Model
         {
             get
             {
-                return string.Join("/", this.IVSets.Select(x => x.StaminaIV).OrderBy(x => x).ToList());
+                return string.Join("/", this.IVSets.Select(x => x.StaminaIV).Distinct().OrderBy(x => x).ToList());
             }
             set
             {
@@ -303,7 +303,7 @@ namespace Pokemon_Go_Database.Model
         {
             get
             {
-                return string.Join("/", this.IVSets.Select(x => x.Level).OrderBy(x => x).ToList());
+                return string.Join("/", this.IVSets.Select(x => x.Level).Distinct().OrderBy(x => x).ToList());
             }
             set
             {
@@ -573,19 +573,31 @@ namespace Pokemon_Go_Database.Model
         {
             if (attackIV == -1)
             {
-                attackIV = this.GetAttackIV();
+                if (this.IVSets.Count > 0)
+                    attackIV = this.IVSets[0].AttackIV;
+                else
+                    attackIV = 0;
             }
             if (defenseIV == -1)
             {
-                defenseIV = this.GetDefenseIV();
+                if (this.IVSets.Count > 0)
+                    defenseIV = this.IVSets[0].DefenseIV;
+                else
+                    defenseIV = 0;
             }
             if (staminaIV == -1)
             {
-                staminaIV = this.GetStaminaIV();
+                if (this.IVSets.Count > 0)
+                    staminaIV = this.IVSets[0].StaminaIV;
+                else
+                    staminaIV = 0;
             }
             if (level <= 0.0)
             {
-                level = this.GetLevel();
+                if (this.IVSets.Count > 0)
+                    level = this.IVSets[0].Level;
+                else
+                    level = 1.0;
             }
             return (int)Math.Truncate((this.GetAttack(attackIV, level) * Math.Pow(this.GetStamina(staminaIV, level), 0.5) * Math.Pow(this.GetDefense(defenseIV, level), 0.5)) / 10.0);
 
