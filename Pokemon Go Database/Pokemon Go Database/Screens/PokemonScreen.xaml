@@ -89,10 +89,8 @@
                             </Style>
                         </DataGridComboBoxColumn.EditingElementStyle>
                     </DataGridComboBoxColumn>
-                    <DataGridTextColumn Header="Game CP" Binding="{Binding Path=GameCP}" Width="Auto"/>
-                    <DataGridTextColumn Header="Game HP" Binding="{Binding Path=GameHP}" Width="Auto"/>
-                    <DataGridTextColumn Header="Actual CP" Binding="{Binding Path=ActualCP, Mode=OneWay}" IsReadOnly="True" Width="Auto"/>
-                    <DataGridTextColumn Header="Actual HP" Binding="{Binding Path=ActualHP, Mode=OneWay}" IsReadOnly="True" Width="Auto"/>
+                    <DataGridTextColumn Header="CP" Binding="{Binding Path=ActualCP, Mode=OneWay}" IsReadOnly="True" Width="Auto"/>
+                    <DataGridTextColumn Header="HP" Binding="{Binding Path=ActualHP, Mode=OneWay}" IsReadOnly="True" Width="Auto"/>
                     <DataGridComboBoxColumn Header="Stardust" ItemsSource="{Binding Source={StaticResource DustValues}}" SelectedItemBinding="{Binding Path=DustToPower}" Width="Auto"/>
                     <DataGridTextColumn Header="Attack IV" Binding="{Binding Path=AttackIVExpression}" Width="Auto" IsReadOnly="True"/>
                     <DataGridTextColumn Header="Defense IV" Binding="{Binding Path=DefenseIVExpression}" Width="Auto" IsReadOnly="True"/>

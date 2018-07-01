@@ -60,7 +60,7 @@ namespace Pokemon_Go_Database.Screens
             private set
             {
                 this.Set(ref this._MyPokemon, value);
-                this._MyPokemon.SortDescriptions.Add(new System.ComponentModel.SortDescription("GameCP", System.ComponentModel.ListSortDirection.Descending));
+                this._MyPokemon.SortDescriptions.Add(new System.ComponentModel.SortDescription("ActualCP", System.ComponentModel.ListSortDirection.Descending));
                 this._MyPokemon.Filter = PokemonFilter;
             }
         }

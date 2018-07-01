@@ -227,6 +227,10 @@ namespace Pokemon_Go_Database.Windows
             {
                 Debug.WriteLine($"Error loading from file {this.currentFilePath}\n" + ex.Message);
             }
+            catch (ArgumentException ex)
+            {
+                await this._MessageViewer.DisplayMessage($"Error parsing data: {ex.Message}", "Error", Base.Enums.MessageViewerButton.Ok, Base.Enums.MessageViewerIcon.Error);
+            }
         }
 
         private async void LoadBaseData()

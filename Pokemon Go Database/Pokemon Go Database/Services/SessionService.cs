@@ -166,7 +166,10 @@ namespace Pokemon_Go_Database.Services
                 }
                 catch (Exception)
                 {
-                    throw new ArgumentException($"Cannot find matching fast move {pokemon.FastMove.FastMove.Name} in fast move list for {pokemon.Species.Species}");
+                    if (pokemon.FastMove != null)
+                        throw new ArgumentException($"Cannot find matching fast move {pokemon.FastMove.FastMove.Name} in fast move list for {pokemon.Species.Species}");
+                    else
+                        throw new ArgumentException($"Fast move not defined for {pokemon.Name}");
                 }
                 try
                 {
@@ -174,7 +177,10 @@ namespace Pokemon_Go_Database.Services
                 }
                 catch (Exception)
                 {
-                    throw new ArgumentException($"Cannot find matching charge move {pokemon.ChargeMove.ChargeMove.Name} in fast move list for {pokemon.Species.Species}");
+                    if (pokemon.ChargeMove != null)
+                        throw new ArgumentException($"Cannot find matching charge move {pokemon.ChargeMove.ChargeMove.Name} in fast move list for {pokemon.Species.Species}");
+                    else
+                        throw new ArgumentException($"Cannot find matching fast move {pokemon.ChargeMove.ChargeMove.Name} in fast move list for {pokemon.Name}");
                 }
                 try
                 {
