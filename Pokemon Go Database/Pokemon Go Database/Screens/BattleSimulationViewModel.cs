@@ -192,10 +192,8 @@ namespace Pokemon_Go_Database.Screens
                     this.Defender.IVSets[0].DefenseIV = Constants.MaxIV;
                     this.Defender.IVSets[0].StaminaIV = Constants.MaxIV;
                     int index;
-                    if (!Constants.RaidBosses.TryGetValue(this.Defender.Species.Species, out index) || (index+1) != (int)this.DefenderType)
+                    if (!Constants.RaidBosses.TryGetValue(this.Defender.Species.Species, out index) || index != (int)this.DefenderType)
                     {
-                        int test1 = index + 1;
-                        int test2 = (int)this.DefenderType;
                         this._messageViewer.DisplayMessage($"{Defender.Species.Species} is not a normal raid boss at this tier!", "Undefined Raid Boss", MessageViewerButton.Ok, MessageViewerIcon.Warning);
                     }
                     double level = 1.0;
@@ -229,8 +227,11 @@ namespace Pokemon_Go_Database.Screens
         public void SimulateBattleAsync()
         {
             this.BattleLog.Clear();
-            if (this.Attacker == null || this.Defender == null)
+            if (this.Attacker == null || this.Defender == null || this.Attacker.FastMove == null || this.Attacker.ChargeMove == null || this.Defender.FastMove == null || this.Defender.ChargeMove == null)
+            {
+                this._messageViewer.DisplayMessage("Pokemon not fully specified", "Invalid Data", MessageViewerButton.Ok, MessageViewerIcon.Warning).Wait();
                 return;
+            }
             const int timeInterval = 50;
             int attackerDamageWindowStartTime;
             int defenderDamageWindowStartTime;
@@ -260,7 +261,7 @@ namespace Pokemon_Go_Database.Screens
                     int index;
                     if (this.DefenderType != DefenderType.GymDefender)
                     {
-                        index = (int)DefenderType.GymDefender;
+                        index = (int)this.DefenderType;
                         defenderHP = Constants.RaidBossHP[index - 1];
                     }
                 }

@@ -612,10 +612,8 @@ namespace Pokemon_Go_Database.Model
             copy.HasBeenPowered = this.HasBeenPowered;
             copy.FastMove = this.FastMove;
             copy.ChargeMove = this.ChargeMove;
-            copy.AttackIVExpression = this.AttackIVExpression;
-            copy.DefenseIVExpression = this.DefenseIVExpression;
-            copy.StaminaIVExpression = this.StaminaIVExpression;
-            copy.LevelExpression = this.LevelExpression;
+            copy.IVSets = new MyObservableCollection<IVSet>();
+            copy.IVSets.InsertRange(this.IVSets);
 
             return copy;
         }
