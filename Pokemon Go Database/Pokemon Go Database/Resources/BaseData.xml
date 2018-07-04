@@ -1951,6 +1951,17 @@
       <DamageWindowDuration>500</DamageWindowDuration>
       <DodgeFlashTime>0</DodgeFlashTime>
     </Move>
+    <Move xsi:type="ChargeMove">
+      <Name>Hydro Cannon</Name>
+      <Power>90</Power>
+      <Time>1900</Time>
+      <Energy>50</Energy>
+      <Type>Water</Type>
+      <MoveType>Charge</MoveType>
+      <DamageWindowStartTime>500</DamageWindowStartTime>
+      <DamageWindowDuration>1100</DamageWindowDuration>
+      <DodgeFlashTime>0</DodgeFlashTime>
+    </Move>
   </Moves>
   <PokedexEntries>
     <PokedexEntry>
@@ -2704,6 +2715,20 @@
             <DodgeFlashTime>0</DodgeFlashTime>
           </ChargeMove>
           <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Hydro Cannon</Name>
+            <Power>90</Power>
+            <Time>1900</Time>
+            <Energy>50</Energy>
+            <Type>Water</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>500</DamageWindowStartTime>
+            <DamageWindowDuration>1100</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+          </ChargeMove>
+          <IsLegacy>true</IsLegacy>
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>171</Attack>
