@@ -221,7 +221,7 @@ namespace Pokemon_Go_Database.Model
         {
             get
             {
-                return $"{this.Name} - {this.Moveset.Name} - {this.GetAttackIV()}/{this.GetDefenseIV()}/{this.GetStaminaIV()}";
+                return $"{this.Name} - {this.Moveset.Name} - {this.ActualCP.ToString()} - L.{this.GetLevel()} {this.GetAttackIV()}/{this.GetDefenseIV()}/{this.GetStaminaIV()}";
             }
         }
         [XmlIgnore]

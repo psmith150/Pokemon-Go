@@ -30,6 +30,8 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <StackPanel Name="AttackerWrapper" Grid.Row="0">
@@ -91,6 +93,42 @@
             </StackPanel>
             <Button Content="Simulate" Width="250" Command="{Binding SimulateBattleCommand}"/>
         </StackPanel>
-        <DataGrid Grid.Row="2" ItemsSource="{Binding BattleLog}" AutoGenerateColumns="True"/>
+        <Expander Grid.Row="2">
+            <Expander.Style>
+                <Style TargetType="Expander">
+                    <Setter Property="IsExpanded" Value="False" />
+                    <Setter Property="Header" Value="Show Battle Log" />
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding IsExpanded,RelativeSource={RelativeSource Self}}" Value="True">
+                            <Setter Property="Header" Value="Hide Battle Log" />
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </Expander.Style>
+            <DataGrid ItemsSource="{Binding BattleLog}" AutoGenerateColumns="True"/>
+        </Expander>
+        <StackPanel Grid.Row="3" HorizontalAlignment="Center" Orientation="Horizontal">
+            <Button Content="Simulate All Pokemon" Width="250" Command="{Binding SimulateAllPokemonCommand}"/>
+        </StackPanel>
+        <Expander Grid.Row="4">
+            <Expander.Style>
+                <Style TargetType="Expander">
+                    <Setter Property="IsExpanded" Value="False" />
+                    <Setter Property="Header" Value="Show Results" />
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding IsExpanded,RelativeSource={RelativeSource Self}}" Value="True">
+                            <Setter Property="Header" Value="Hide Results" />
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </Expander.Style>
+            <DataGrid ItemsSource="{Binding AllPokemonResults}" AutoGenerateColumns="False">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Pokemon" Binding="{Binding Path=Name}" Width="6*"/>
+                    <DataGridTextColumn Header="DPS" Binding="{Binding Path=DPS}" Width="2*"/>
+                    <DataGridTextColumn Header="TDO" Binding="{Binding Path=TDO}" Width="2*"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </Expander>
     </Grid>
 </UserControl>

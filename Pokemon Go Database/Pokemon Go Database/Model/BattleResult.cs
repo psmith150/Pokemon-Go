@@ -1,6 +1,7 @@
 ﻿using GalaSoft.MvvmLight;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,6 +15,11 @@ namespace Pokemon_Go_Database.Model
         {
             this.BattleDuration = 0.0;
             this.NumberOfDeaths = 0.0;
+            this.DPS = 0.0;
+            this.TDO = 0.0;
+            this.Name = "New Pokemon";
+            this.BattleLog = new List<BattleLogEntry>();
+            this.NextBreakpoint = 0.0;
         }
         #endregion
 
@@ -67,6 +73,45 @@ namespace Pokemon_Go_Database.Model
             set
             {
                 Set(ref this._TDO, value);
+            }
+        }
+
+        private List<BattleLogEntry> _BattleLog;
+        public List<BattleLogEntry> BattleLog
+        {
+            get
+            {
+                return this._BattleLog;
+            }
+            set
+            {
+                this.Set(ref this._BattleLog, value);
+            }
+        }
+
+        private string _Name;
+        public string Name
+        {
+            get
+            {
+                return this._Name;
+            }
+            set
+            {
+                this.Set(ref this._Name, value);
+            }
+        }
+
+        private double _NextBreakpoint;
+        public double NextBreakpoint
+        {
+            get
+            {
+                return this._NextBreakpoint;
+            }
+            set
+            {
+                this.Set(ref this._NextBreakpoint, value);
             }
         }
         #endregion
