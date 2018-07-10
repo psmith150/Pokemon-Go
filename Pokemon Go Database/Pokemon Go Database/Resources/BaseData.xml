@@ -1237,6 +1237,17 @@
       <DodgeFlashTime>0</DodgeFlashTime>
     </Move>
     <Move xsi:type="ChargeMove">
+      <Name>Hydro Cannon</Name>
+      <Power>90</Power>
+      <Time>1900</Time>
+      <Energy>50</Energy>
+      <Type>Water</Type>
+      <MoveType>Charge</MoveType>
+      <DamageWindowStartTime>500</DamageWindowStartTime>
+      <DamageWindowDuration>1100</DamageWindowDuration>
+      <DodgeFlashTime>0</DodgeFlashTime>
+    </Move>
+    <Move xsi:type="ChargeMove">
       <Name>Hydro Pump</Name>
       <Power>130</Power>
       <Time>3300</Time>
@@ -1949,17 +1960,6 @@
       <MoveType>Charge</MoveType>
       <DamageWindowStartTime>3000</DamageWindowStartTime>
       <DamageWindowDuration>500</DamageWindowDuration>
-      <DodgeFlashTime>0</DodgeFlashTime>
-    </Move>
-    <Move xsi:type="ChargeMove">
-      <Name>Hydro Cannon</Name>
-      <Power>90</Power>
-      <Time>1900</Time>
-      <Energy>50</Energy>
-      <Type>Water</Type>
-      <MoveType>Charge</MoveType>
-      <DamageWindowStartTime>500</DamageWindowStartTime>
-      <DamageWindowDuration>1100</DamageWindowDuration>
       <DodgeFlashTime>0</DodgeFlashTime>
     </Move>
   </Moves>
@@ -12715,6 +12715,19 @@
           </FastMove>
           <IsLegacy>false</IsLegacy>
         </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Ice Shard</Name>
+            <Power>12</Power>
+            <Time>1200</Time>
+            <Energy>12</Energy>
+            <Type>Ice</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>600</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>true</IsLegacy>
+        </PokedexFastMoveWrapper>
       </FastMoves>
       <ChargeMoves>
         <PokedexChargeMoveWrapper>
@@ -12729,7 +12742,7 @@
             <DamageWindowDuration>1500</DamageWindowDuration>
             <DodgeFlashTime>0</DodgeFlashTime>
           </ChargeMove>
-          <IsLegacy>false</IsLegacy>
+          <IsLegacy>true</IsLegacy>
         </PokedexChargeMoveWrapper>
         <PokedexChargeMoveWrapper>
           <ChargeMove>
@@ -12758,6 +12771,34 @@
             <DodgeFlashTime>0</DodgeFlashTime>
           </ChargeMove>
           <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Surf</Name>
+            <Power>65</Power>
+            <Time>1700</Time>
+            <Energy>50</Energy>
+            <Type>Water</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>1400</DamageWindowStartTime>
+            <DamageWindowDuration>200</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Dragon Pulse</Name>
+            <Power>90</Power>
+            <Time>3600</Time>
+            <Energy>33</Energy>
+            <Type>Dragon</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>2150</DamageWindowStartTime>
+            <DamageWindowDuration>1150</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+          </ChargeMove>
+          <IsLegacy>true</IsLegacy>
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>165</Attack>
