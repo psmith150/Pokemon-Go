@@ -76,7 +76,7 @@
             <Label Content="Average Perfection: " VerticalAlignment="Center"/>
             <TextBlock Text="{Binding Calculator.AverageIVPercentage, StringFormat=P2, Mode=OneWay}" Width="50" VerticalAlignment="Center"/>
         </StackPanel>
-        <DataGrid Grid.Row="5" ItemsSource="{Binding Calculator.IVSets}" IsReadOnly="False" GridLinesVisibility="Vertical" AutoGenerateColumns="False" HorizontalAlignment="Stretch">
+        <DataGrid Grid.Row="5" ItemsSource="{Binding Calculator.IVSets}" IsReadOnly="True" GridLinesVisibility="Vertical" AutoGenerateColumns="False" HorizontalAlignment="Stretch">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Level" Binding="{Binding Path=Level}" Width="*"/>
                 <DataGridTextColumn Header="Attack IV" Binding="{Binding Path=AttackIV}" Width="*"/>
