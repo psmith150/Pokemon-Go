@@ -70,24 +70,28 @@
                     <!--<Image Source="/Images/DMC Wheel Transparent Background.ico" x:Key="ButtonImage"/>-->
                     <Style TargetType="customControls:HoverButton" BasedOn="{StaticResource {x:Type customControls:HoverButton}}">
                         <Setter Property="Background">
-                            <Setter.Value>
-                                <RadialGradientBrush>
-                                    <GradientStop Color="#D8ADE8E3" Offset="0"/>
-                                    <GradientStop Color="#B2D2F7E7" Offset="0.987"/>
-                                </RadialGradientBrush>
-                            </Setter.Value>
-                        </Setter>
+                                <Setter.Value>
+                                    <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                                        <GradientStop Color="#B2F72424" Offset="0.0"/>
+                                        <GradientStop Color="#B2FFFFFF" Offset="1.0"/>
+                                        <GradientStop Color="#B2F72424" Offset="0.45"/>
+                                        <GradientStop Color="#B2FFFFFF" Offset="0.55"/>
+                                    </LinearGradientBrush>
+                                </Setter.Value>
+                            </Setter>
                         <Setter Property="HoverBackgroundBrush" Value="LightBlue"/>
                         <Setter Property="DisabledBackgroundBrush">
                             <Setter.Value>
-                                <RadialGradientBrush>
-                                    <GradientStop Color="#FF64B9B2" Offset="0.01"/>
-                                    <GradientStop Color="#FF5EA687" Offset="0.987"/>
-                                </RadialGradientBrush>
+                                    <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                                        <GradientStop Color="#FFF72424" Offset="0.0"/>
+                                        <GradientStop Color="#FFFFADAD" Offset="1.0"/>
+                                        <GradientStop Color="#B2F72424" Offset="0.45"/>
+                                        <GradientStop Color="#FFFFADAD" Offset="0.55"/>
+                                    </LinearGradientBrush>
                             </Setter.Value>
                         </Setter>
-                        <Setter Property="DisabledForegroundBrush" Value="White" />
-                        <Setter Property="Margin" Value="1 0 1 0"/>
+                            <Setter Property="DisabledForegroundBrush" Value="White" />
+                            <Setter Property="Margin" Value="1 0 1 0"/>
                         <Setter Property="Width" Value="130"/>
                     </Style>
                 </UniformGrid.Resources>

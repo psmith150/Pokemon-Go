@@ -1,4 +1,6 @@
-﻿using System;
+﻿using GalaSoft.MvvmLight.Messaging;
+using Pokemon_Go_Database.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -24,6 +26,12 @@ namespace Pokemon_Go_Database.Screens
         {
             this.DataContext = viewModel;
             InitializeComponent();
+            Messenger.Default.Register<PokemonMessage>(this, HandlePokemonMessage);
+        }
+        private void HandlePokemonMessage(PokemonMessage msg)
+        {
+            this.PokemonGrid.SelectedItem = msg.Pokemon;
+            this.PokemonGrid.ScrollIntoView(msg.Pokemon);
         }
     }
 }

@@ -74,6 +74,8 @@ namespace Pokemon_Go_Database.Model
 
         public const int NumSimulations = 100;
 
+        public const double LuckyStardustMultiplier = 0.5;
+
         public static string BaseDataFilePath =  AppDomain.CurrentDomain.BaseDirectory + @"BaseData.xml";
         /// <summary>
         /// Attacker,Defender

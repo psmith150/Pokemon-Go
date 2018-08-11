@@ -194,6 +194,18 @@ namespace Pokemon_Go_Database.Model
                 Set(ref this._IsFavorite, value);
             }
         }
+        private bool _IsLucky;
+        public bool IsLucky
+        {
+            get
+            {
+                return this._IsLucky;
+            }
+            set
+            {
+                Set(ref this._IsLucky, value);
+            }
+        }
         [XmlIgnore]
         private bool _Compare;
         public bool Compare

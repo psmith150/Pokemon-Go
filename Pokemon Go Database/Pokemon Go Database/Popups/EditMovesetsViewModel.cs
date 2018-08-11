@@ -357,6 +357,7 @@ namespace Pokemon_Go_Database.Popups
                     }
                 }
             }
+            this.SetSavingNeeded();
         }
 
         private void FastMoves_CollectionChanged(object sender, System.Collections.Specialized.NotifyCollectionChangedEventArgs e)
@@ -381,6 +382,7 @@ namespace Pokemon_Go_Database.Popups
                     }
                 }
             }
+            this.SetSavingNeeded();
         }
 
         private async void Exit()
@@ -430,6 +432,11 @@ namespace Pokemon_Go_Database.Popups
                     Species.ChargeMoves.Add(chargeMove);
             }
             this.ClosePopup(null);
+        }
+
+        private void SetSavingNeeded()
+        {
+            this.savingNeeded = true;
         }
         #endregion
     }

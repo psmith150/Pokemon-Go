@@ -11,6 +11,7 @@ using GalaSoft.MvvmLight.Command;
 using System.Diagnostics;
 using Pokemon_Go_Database.Popups;
 using System.Collections.ObjectModel;
+using GalaSoft.MvvmLight.Messaging;
 
 namespace Pokemon_Go_Database.Screens
 {
@@ -189,7 +190,10 @@ namespace Pokemon_Go_Database.Screens
             };
             IVCalculatorPopupEventArgs args =  await navigationService.OpenPopup<IVCalculatorViewModel>(new IVCalculatorWrapper(calculator, true)) as IVCalculatorPopupEventArgs;
             if (args != null)
+            {
                 this.Session.MyPokemon.Add(args.NewPokemon);
+                Messenger.Default.Send(new PokemonMessage(args.NewPokemon));
+            }
         }
         private async Task ShowMovesetsAsync()
         {

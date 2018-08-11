@@ -49,8 +49,11 @@ namespace Pokemon_Go_Database.Popups
             {
                 this._messageViewer.DisplayMessage("Invalid pokemon!", "Invalid Pokemon", MessageViewerButton.Ok);
             }
+            this._originalFastMove = this.Calculator.Pokemon.FastMove;
+            this._originalChargeMove = this.Calculator.Pokemon.ChargeMove;
             this.MinLevel = this.Calculator.Pokemon.Level;
             this.SimulatedLevel = this.Calculator.Pokemon.Level;
+            this.Calculator.Pokemon.PropertyChanged += ((o, a) => { this.savingNeeded = true; });
         }
 
         public override void Deinitialize()
@@ -61,6 +64,8 @@ namespace Pokemon_Go_Database.Popups
         #region Private Fields
         private bool savingNeeded = false;
         private MessageViewerBase _messageViewer;
+        private PokedexFastMoveWrapper _originalFastMove;
+        private PokedexChargeMoveWrapper _originalChargeMove;
         #endregion
 
         #region Public Properties
@@ -227,10 +232,16 @@ namespace Pokemon_Go_Database.Popups
             {
                 MessageViewerEventArgs result = await this._messageViewer.DisplayMessage("Settings have not been saved, are you sure you want to exit?", "Discard Changes?", MessageViewerButton.OkCancel);
                 if (result.Result == MessageViewerResult.Ok)
+                {
+                    this.Calculator.Pokemon.FastMove = this._originalFastMove;
+                    this.Calculator.Pokemon.ChargeMove = this._originalChargeMove;
                     this.ClosePopup(null);
+                }
             }
             else
             {
+                this.Calculator.Pokemon.FastMove = this._originalFastMove;
+                this.Calculator.Pokemon.ChargeMove = this._originalChargeMove;
                 this.ClosePopup(null);
             }
         }
@@ -298,6 +309,8 @@ namespace Pokemon_Go_Database.Popups
                     lookupIndex++;
                 stardust += Constants.DustCutoffs[lookupIndex];
             }
+            if (this.Calculator.Pokemon.IsLucky)
+                stardust = (int)Math.Round(stardust * Constants.LuckyStardustMultiplier);
             return stardust;
         }
 

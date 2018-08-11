@@ -256,8 +256,11 @@ namespace Pokemon_Go_Database.Model
         private List<double> GetPossibleLevels()
         {
             List<double> values = new List<double>();
-            double endIndex = (this.Pokemon.DustToPower == Constants.DustCutoffs.Max()) ? Constants.DustLevelCutoffs.Max() + 0.5 : Constants.DustLevelCutoffs[Array.IndexOf(Constants.DustCutoffs, this.Pokemon.DustToPower) + 1];
-            double startIndex = Constants.DustLevelCutoffs[Array.IndexOf(Constants.DustCutoffs, this.Pokemon.DustToPower)];
+            int dustToPower = this.Pokemon.DustToPower;
+            if (this.Pokemon.IsLucky)
+                dustToPower = (int)Math.Floor((double)dustToPower / Constants.LuckyStardustMultiplier);
+            double endIndex = (dustToPower == Constants.DustCutoffs.Max()) ? Constants.DustLevelCutoffs.Max() + 0.5 : Constants.DustLevelCutoffs[Array.IndexOf(Constants.DustCutoffs, dustToPower) + 1];
+            double startIndex = Constants.DustLevelCutoffs[Array.IndexOf(Constants.DustCutoffs, dustToPower)];
             for (double i = startIndex; i < endIndex; i += 0.5)
             {
                 if (!this.Pokemon.HasBeenPowered && (int)(i * 2) % 2 == 1)

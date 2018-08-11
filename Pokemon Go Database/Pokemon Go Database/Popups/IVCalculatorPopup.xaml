@@ -25,6 +25,7 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
         <TextBlock Grid.Row="0" Text="{Binding Calculator.Pokemon.Species.Species, StringFormat={}{0}}" HorizontalAlignment="Center" FontSize="{StaticResource LargeFontSize}"/>
         <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center">
@@ -85,7 +86,13 @@
                 <DataGridTextColumn Header="IV %" Binding="{Binding Path=IVPercentage, StringFormat=P2 ,Mode=OneWay}" Width="*"/>
             </DataGrid.Columns>
         </DataGrid>
-        <Expander Grid.Row="6">
+        <StackPanel Grid.Row="6" HorizontalAlignment="Center" Orientation="Horizontal">
+            <Label Content="Fast Move:"/>
+            <ComboBox Width="100" ItemsSource="{Binding Calculator.Pokemon.Species.FastMoves}" SelectedItem="{Binding Calculator.Pokemon.FastMove}" DisplayMemberPath="FastMove.Name"/>
+            <Label Content="Charge Move:" Margin="25 0 0 0"/>
+            <ComboBox Width="100" ItemsSource="{Binding Calculator.Pokemon.Species.ChargeMoves}" SelectedItem="{Binding Calculator.Pokemon.ChargeMove}" DisplayMemberPath="ChargeMove.Name"/>
+        </StackPanel>
+        <Expander Grid.Row="7">
             <Expander.Style>
                 <Style TargetType="Expander">
                     <Setter Property="IsExpanded" Value="False" />
@@ -128,7 +135,7 @@
                 </StackPanel>
             </StackPanel>
         </Expander>
-        <StackPanel Grid.Row="7" Orientation="Horizontal" HorizontalAlignment="Center">
+        <StackPanel Grid.Row="8" Orientation="Horizontal" HorizontalAlignment="Center">
             <Button Content="Close" Command="{Binding ExitPopupCommand}" Width="50"/>
             <Separator Width="25" Background="Transparent"/>
             <Button Content="Save" Command="{Binding SaveCommand}" Width="50"/>
