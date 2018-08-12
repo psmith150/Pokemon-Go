@@ -65,6 +65,7 @@ namespace Pokemon_Go_Database.Popups
             this.FastMoves.Clear();
             this.ChargeMoves.Clear();
             this.Species = param as PokedexEntry;
+            this.savingNeeded = false;
 
             if (this.Species != null)
             {
@@ -81,10 +82,14 @@ namespace Pokemon_Go_Database.Popups
             this.EditMovesetsVisible = true;
             this.OffenseDetailsVisible = false;
             this.DefenseDetailsVisible = false;
+            this.FastMoves.CollectionChanged += this.MoveCollectionChanged;
+            this.ChargeMoves.CollectionChanged += this.MoveCollectionChanged;
         }
 
         public override void Deinitialize()
         {
+            this.FastMoves.CollectionChanged -= this.MoveCollectionChanged;
+            this.ChargeMoves.CollectionChanged -= this.MoveCollectionChanged;
         }
 
         #region Private Fields
@@ -357,7 +362,6 @@ namespace Pokemon_Go_Database.Popups
                     }
                 }
             }
-            this.SetSavingNeeded();
         }
 
         private void FastMoves_CollectionChanged(object sender, System.Collections.Specialized.NotifyCollectionChangedEventArgs e)
@@ -382,7 +386,6 @@ namespace Pokemon_Go_Database.Popups
                     }
                 }
             }
-            this.SetSavingNeeded();
         }
 
         private async void Exit()
@@ -432,6 +435,11 @@ namespace Pokemon_Go_Database.Popups
                     Species.ChargeMoves.Add(chargeMove);
             }
             this.ClosePopup(null);
+        }
+
+        private void MoveCollectionChanged(object sender, System.Collections.Specialized.NotifyCollectionChangedEventArgs e)
+        {
+            this.SetSavingNeeded();
         }
 
         private void SetSavingNeeded()

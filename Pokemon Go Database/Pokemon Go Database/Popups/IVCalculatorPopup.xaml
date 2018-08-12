@@ -15,7 +15,7 @@
             </CollectionViewSource.SortDescriptions>
         </CollectionViewSource>
     </UserControl.Resources>
-    <Grid Background="{StaticResource MainBackgroundColor}" Width="700" Height="500">
+    <Grid Background="{StaticResource MainBackgroundColor}" Width="750" Height="500">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
@@ -43,7 +43,7 @@
             </StackPanel>
             <StackPanel Orientation="Horizontal">
                 <Label Content="Lucky?:"/>
-                <CheckBox IsChecked="{Binding Calculator.Pokemon.IsLucky}"/>
+                <CheckBox IsChecked="{Binding Calculator.Pokemon.IsLucky}" VerticalAlignment="Center"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal">
                 <Label Content="Dust:"/>
@@ -51,21 +51,21 @@
             </StackPanel>
             <StackPanel Orientation="Horizontal">
                 <Label Content="Has Been Powered Up:"/>
-                <CheckBox IsChecked="{Binding Calculator.Pokemon.HasBeenPowered}"/>
+                <CheckBox IsChecked="{Binding Calculator.Pokemon.HasBeenPowered}" VerticalAlignment="Center"/>
             </StackPanel>
         </StackPanel>
         <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center">
             <StackPanel Orientation="Horizontal">
                 <Label Content="Attack is Best IV:"/>
-                <CheckBox IsChecked="{Binding Calculator.AttackBest}"/>
+                <CheckBox IsChecked="{Binding Calculator.AttackBest}" VerticalAlignment="Center"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal">
                 <Label Content="Defense is Best IV:"/>
-                <CheckBox IsChecked="{Binding Calculator.DefenseBest}"/>
+                <CheckBox IsChecked="{Binding Calculator.DefenseBest}" VerticalAlignment="Center"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal">
                 <Label Content="Stamina is Best IV:"/>
-                <CheckBox IsChecked="{Binding Calculator.StaminaBest}"/>
+                <CheckBox IsChecked="{Binding Calculator.StaminaBest}" VerticalAlignment="Center"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal">
                 <Label Content="Best IV Level:"/>
@@ -76,12 +76,12 @@
                 <ComboBox ItemsSource="{Binding TotalIVLevels}" SelectedItem="{Binding Calculator.TotalIVLevel}" Width="75"/>
             </StackPanel>
         </StackPanel>
-        <Button Grid.Row="3" Content="Calculate IVs" Command="{Binding CalculateIVsCommand}"/>
+        <Button Grid.Row="3" Content="Calculate IVs" Command="{Binding CalculateIVsCommand}" Width="150" HorizontalAlignment="Center"/>
         <StackPanel Grid.Row="4" HorizontalAlignment="Center" Orientation="Horizontal">
             <Label Content="Average Perfection: " VerticalAlignment="Center"/>
             <TextBlock Text="{Binding Calculator.AverageIVPercentage, StringFormat=P2, Mode=OneWay}" Width="50" VerticalAlignment="Center"/>
         </StackPanel>
-        <DataGrid Grid.Row="5" ItemsSource="{Binding Calculator.IVSets}" IsReadOnly="True" GridLinesVisibility="Vertical" AutoGenerateColumns="False" HorizontalAlignment="Stretch">
+        <DataGrid Grid.Row="5" ItemsSource="{Binding Calculator.IVSets}" CanUserAddRows="False" CanUserDeleteRows="False" GridLinesVisibility="Vertical" AutoGenerateColumns="False" HorizontalAlignment="Stretch">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Level" Binding="{Binding Path=Level}" Width="*"/>
                 <DataGridTextColumn Header="Attack IV" Binding="{Binding Path=AttackIV}" Width="*"/>

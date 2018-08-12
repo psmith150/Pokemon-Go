@@ -267,6 +267,8 @@ namespace Pokemon_Go_Database.Popups
             List<double> levels = new List<double>();
             this.Calculator.Pokemon.IVSets.Clear();
             this.Calculator.Pokemon.IVSets.InsertRange(this.Calculator.IVSets);
+            this.Calculator.Pokemon.GameCP = this.Calculator.Pokemon.ActualCP;
+            this.Calculator.Pokemon.GameHP = this.Calculator.Pokemon.ActualHP;
             //foreach (IVSet combination in this.Calculator.IVSets)
             //{
             //    if (!attackIVs.Contains(combination.AttackIV))
