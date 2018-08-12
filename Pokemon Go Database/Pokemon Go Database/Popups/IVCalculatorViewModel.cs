@@ -45,6 +45,7 @@ namespace Pokemon_Go_Database.Popups
             IVCalculatorWrapper wrapper = param as IVCalculatorWrapper;
             this.Calculator = wrapper.Calculator;
             this.IsNotNewPokemon = !wrapper.IsNewPokemon;
+            this.savingNeeded = false;
             if (Calculator == null)
             {
                 this._messageViewer.DisplayMessage("Invalid pokemon!", "Invalid Pokemon", MessageViewerButton.Ok);
@@ -53,7 +54,8 @@ namespace Pokemon_Go_Database.Popups
             this._originalChargeMove = this.Calculator.Pokemon.ChargeMove;
             this.MinLevel = this.Calculator.Pokemon.Level;
             this.SimulatedLevel = this.Calculator.Pokemon.Level;
-            this.Calculator.Pokemon.PropertyChanged += ((o, a) => { this.savingNeeded = true; });
+            this.Calculator.Pokemon.PropertyChanged += ((o, a) => { this.savingNeeded = true; if (a.PropertyName.Equals("IsLucky")){ this.RaisePropertyChanged("DustValues"); } });
+            this.RaisePropertyChanged("DustValues");
         }
 
         public override void Deinitialize()
@@ -100,7 +102,18 @@ namespace Pokemon_Go_Database.Popups
         {
             get
             {
-                return Constants.DustCutoffs;
+                if (this.Calculator.Pokemon.IsLucky)
+                {
+                    int[] dustCutoffs = new int[Constants.DustCutoffs.Length];
+                    Array.Copy(Constants.DustCutoffs, dustCutoffs, Constants.DustCutoffs.Length);
+                    for (int i = 0; i < dustCutoffs.Length; i++)
+                        dustCutoffs[i] = (int)Math.Floor(dustCutoffs[i] * Constants.LuckyStardustMultiplier);
+                    return dustCutoffs;
+                }
+                else
+                {
+                    return Constants.DustCutoffs;
+                }
             }
         }
         private double _MinLevel = 1.0;

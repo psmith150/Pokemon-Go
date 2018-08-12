@@ -42,6 +42,10 @@
                 <xtk:AutoSelectTextBox Text="{Binding Calculator.Pokemon.GameHP}" Width="50" AutoSelectBehavior="OnFocus"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal">
+                <Label Content="Lucky?:"/>
+                <CheckBox IsChecked="{Binding Calculator.Pokemon.IsLucky}"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
                 <Label Content="Dust:"/>
                 <ComboBox ItemsSource="{Binding DustValues}" SelectedItem="{Binding Calculator.Pokemon.DustToPower}" Width="100"/>
             </StackPanel>

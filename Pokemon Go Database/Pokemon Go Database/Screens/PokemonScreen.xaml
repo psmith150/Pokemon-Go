@@ -96,6 +96,7 @@
                     <DataGridTextColumn Header="Stamina IV" Binding="{Binding Path=StaminaIVExpression}" Width="Auto" IsReadOnly="True"/>
                     <DataGridTextColumn Header="Level" Binding="{Binding Path=LevelExpression}" Width="Auto" IsReadOnly="True" SortMemberPath="Level"/>
                     <DataGridTextColumn Header="IV %" Binding="{Binding Path=IVPercentage, StringFormat=P2}" Width="Auto" IsReadOnly="True"/>
+                    <DataGridCheckBoxColumn Header="Lucky?" Binding="{Binding Path=IsLucky, UpdateSourceTrigger=PropertyChanged}" Width="Auto"/>
                     <DataGridCheckBoxColumn Header="Comparison" Binding="{Binding Path=Compare, UpdateSourceTrigger=PropertyChanged}" Width="Auto"/>
                     <DataGridCheckBoxColumn Header="Favorite" Binding="{Binding Path=IsFavorite, UpdateSourceTrigger=PropertyChanged}" Width="Auto"/>
                     <DataGridCheckBoxColumn Header="Fast TM?" Binding="{Binding Path=NeedsFastTM, UpdateSourceTrigger=PropertyChanged}" Width="Auto"/>
