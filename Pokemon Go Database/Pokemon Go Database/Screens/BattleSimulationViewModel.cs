@@ -32,8 +32,10 @@ namespace Pokemon_Go_Database.Screens
             this.Defender = new Pokemon();
             this.BattleResult = new BattleResult();
             this.BattleLog = new ObservableCollection<BattleLogEntry>();
+            this.AllPokemonResults = new MyObservableCollection<BattleResult>();
 
             this.SimulateBattleCommand = new RelayCommand(() => this.SimulateSingleBattle());
+            this.SimulateAllPokemonCommand = new RelayCommand(() => this.SimulateAllPokemon());
         }
         #endregion
 
@@ -252,6 +254,7 @@ namespace Pokemon_Go_Database.Screens
             List<BattleResult> results = new List<BattleResult>();
             foreach (Pokemon pokemon in this.Session.MyPokemon)
             {
+                Debug.WriteLine($"Simulating {pokemon.Name}");
                 results.Add(await Task.Run(() => this.SimulateBattleAsync(pokemon, this.Defender, this.DefenderType)));
             }
             this.AllPokemonResults.Clear();

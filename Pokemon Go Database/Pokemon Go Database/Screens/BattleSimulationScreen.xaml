@@ -125,8 +125,8 @@
             <DataGrid ItemsSource="{Binding AllPokemonResults}" AutoGenerateColumns="False">
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="Pokemon" Binding="{Binding Path=Name}" Width="6*"/>
-                    <DataGridTextColumn Header="DPS" Binding="{Binding Path=DPS}" Width="2*"/>
-                    <DataGridTextColumn Header="TDO" Binding="{Binding Path=TDO}" Width="2*"/>
+                    <DataGridTextColumn Header="DPS" Binding="{Binding Path=DPS, StringFormat=N2}" Width="2*"/>
+                    <DataGridTextColumn Header="TDO" Binding="{Binding Path=TDO, StringFormat=P2}" Width="2*"/>
                 </DataGrid.Columns>
             </DataGrid>
         </Expander>
