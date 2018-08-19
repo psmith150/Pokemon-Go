@@ -243,7 +243,15 @@ namespace Pokemon_Go_Database.Screens
         #region Private Methods
         private async void SimulateSingleBattle()
         {
-            BattleResult result = await Task.Run(() => this.SimulateBattleAsync(this.Attacker, this.Defender, this.DefenderType));
+            BattleResult result = new BattleResult(); ;
+            try
+            {
+                result = await Task.Run(() => this.SimulateBattleAsync(this.Attacker, this.Defender, this.DefenderType));
+            }
+            catch (Exception ex)
+            {
+                await this._messageViewer.DisplayMessage($"Error when simulating battle: {ex.Message}", "Simulation Error", MessageViewerButton.Ok, MessageViewerIcon.Error);
+            }
             this.BattleResult = result;
             this.NextBreakpoint = result.NextBreakpoint;
             this.BattleLog = new ObservableCollection<BattleLogEntry>(result.BattleLog);
@@ -254,8 +262,14 @@ namespace Pokemon_Go_Database.Screens
             List<BattleResult> results = new List<BattleResult>();
             foreach (Pokemon pokemon in this.Session.MyPokemon)
             {
-                Debug.WriteLine($"Simulating {pokemon.Name}");
-                results.Add(await Task.Run(() => this.SimulateBattleAsync(pokemon, this.Defender, this.DefenderType)));
+                try
+                {
+                    results.Add(await Task.Run(() => this.SimulateBattleAsync(pokemon, this.Defender, this.DefenderType)));
+                }
+                catch (Exception ex)
+                {
+                    await this._messageViewer.DisplayMessage($"Error when simulating battle: {ex.Message}", "Simulation Error", MessageViewerButton.Ok, MessageViewerIcon.Error);
+                }
             }
             this.AllPokemonResults.Clear();
             this.AllPokemonResults.InsertRange(results);
@@ -266,7 +280,8 @@ namespace Pokemon_Go_Database.Screens
             result.Name = attacker.FullName;
             if (attacker == null || defender == null || attacker.FastMove == null || attacker.ChargeMove == null || defender.FastMove == null || defender.ChargeMove == null)
             {
-                this._messageViewer.DisplayMessage("Pokemon not fully specified", "Invalid Data", MessageViewerButton.Ok, MessageViewerIcon.Warning).Wait();
+                throw new ArgumentException("Pokemon not fully specified");
+                this._messageViewer.DisplayMessage("Pokemon not fully specified", "Invalid Data", MessageViewerButton.Ok, MessageViewerIcon.Warning);
                 return result;
             }
             const int timeInterval = 50;
