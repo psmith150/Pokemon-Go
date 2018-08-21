@@ -27332,9 +27332,9 @@
           <IsLegacy>false</IsLegacy>
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
-      <Attack>319</Attack>
-      <Defense>201</Defense>
-      <Stamina>300</Stamina>
+      <Attack>290</Attack>
+      <Defense>183</Defense>
+      <Stamina>273</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>290</Number>
