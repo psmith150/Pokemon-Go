@@ -308,7 +308,7 @@ namespace Pokemon_Go_Database.Popups
             int lookupIndex = 0;
             for (double i = this.MinLevel; i < this.SimulatedLevel; i+=0.5)
             {
-                while (i >= Constants.DustLevelCutoffs[lookupIndex + 1])
+                while (i >= Constants.DustLevelCutoffs[lookupIndex+1])
                     lookupIndex++;
                 candy += Constants.CandyCutoffs[lookupIndex];
             }
@@ -320,7 +320,7 @@ namespace Pokemon_Go_Database.Popups
             int lookupIndex = 0;
             for (double i = this.MinLevel; i < this.SimulatedLevel; i+=0.5)
             {
-                while (i >= Constants.DustLevelCutoffs[lookupIndex + 1])
+                while (i >= Constants.DustLevelCutoffs[lookupIndex+1])
                     lookupIndex++;
                 stardust += Constants.DustCutoffs[lookupIndex];
             }
