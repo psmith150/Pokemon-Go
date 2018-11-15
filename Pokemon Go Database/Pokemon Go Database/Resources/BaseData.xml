@@ -1579,7 +1579,7 @@
     </Move>
     <Move xsi:type="ChargeMove">
       <Name>Psycho Boost</Name>
-      <Power>100</Power>
+      <Power>70</Power>
       <Time>4000</Time>
       <Energy>50</Energy>
       <Type>Psychic</Type>
@@ -2053,8 +2053,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>118</Attack>
-      <Defense>118</Defense>
-      <Stamina>90</Stamina>
+      <Defense>111</Defense>
+      <Stamina>128</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>2</Number>
@@ -2134,8 +2134,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>151</Attack>
-      <Defense>151</Defense>
-      <Stamina>120</Stamina>
+      <Defense>143</Defense>
+      <Stamina>155</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>3</Number>
@@ -2229,8 +2229,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>198</Attack>
-      <Defense>198</Defense>
-      <Stamina>160</Stamina>
+      <Defense>189</Defense>
+      <Stamina>190</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>4</Number>
@@ -2310,8 +2310,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>116</Attack>
-      <Defense>96</Defense>
-      <Stamina>78</Stamina>
+      <Defense>93</Defense>
+      <Stamina>118</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>5</Number>
@@ -2404,8 +2404,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>158</Attack>
-      <Defense>129</Defense>
-      <Stamina>116</Stamina>
+      <Defense>126</Defense>
+      <Stamina>151</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>6</Number>
@@ -2539,8 +2539,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>223</Attack>
-      <Defense>176</Defense>
-      <Stamina>156</Stamina>
+      <Defense>173</Defense>
+      <Stamina>186</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>7</Number>
@@ -2620,8 +2620,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>94</Attack>
-      <Defense>122</Defense>
-      <Stamina>88</Stamina>
+      <Defense>121</Defense>
+      <Stamina>127</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>8</Number>
@@ -2702,7 +2702,7 @@
       </ChargeMoves>
       <Attack>126</Attack>
       <Defense>155</Defense>
-      <Stamina>118</Stamina>
+      <Stamina>153</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>9</Number>
@@ -2796,8 +2796,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>171</Attack>
-      <Defense>210</Defense>
-      <Stamina>158</Stamina>
+      <Defense>207</Defense>
+      <Stamina>188</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>10</Number>
@@ -2849,8 +2849,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>55</Attack>
-      <Defense>62</Defense>
-      <Stamina>90</Stamina>
+      <Defense>55</Defense>
+      <Stamina>128</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>11</Number>
@@ -2902,8 +2902,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>45</Attack>
-      <Defense>64</Defense>
-      <Stamina>100</Stamina>
+      <Defense>80</Defense>
+      <Stamina>137</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>12</Number>
@@ -2996,8 +2996,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>167</Attack>
-      <Defense>151</Defense>
-      <Stamina>120</Stamina>
+      <Defense>137</Defense>
+      <Stamina>155</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>13</Number>
@@ -3049,8 +3049,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>63</Attack>
-      <Defense>55</Defense>
-      <Stamina>80</Stamina>
+      <Defense>50</Defense>
+      <Stamina>120</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>14</Number>
@@ -3102,8 +3102,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>46</Attack>
-      <Defense>86</Defense>
-      <Stamina>90</Stamina>
+      <Defense>75</Defense>
+      <Stamina>128</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>15</Number>
@@ -3196,8 +3196,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>169</Attack>
-      <Defense>150</Defense>
-      <Stamina>130</Stamina>
+      <Defense>130</Defense>
+      <Stamina>163</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>16</Number>
@@ -3277,8 +3277,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>85</Attack>
-      <Defense>76</Defense>
-      <Stamina>80</Stamina>
+      <Defense>73</Defense>
+      <Stamina>120</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>17</Number>
@@ -3358,8 +3358,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>117</Attack>
-      <Defense>108</Defense>
-      <Stamina>126</Stamina>
+      <Defense>105</Defense>
+      <Stamina>160</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>18</Number>
@@ -3466,8 +3466,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>166</Attack>
-      <Defense>157</Defense>
-      <Stamina>166</Stamina>
+      <Defense>154</Defense>
+      <Stamina>195</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>19</Number>
@@ -3548,7 +3548,7 @@
       </ChargeMoves>
       <Attack>103</Attack>
       <Defense>70</Defense>
-      <Stamina>60</Stamina>
+      <Stamina>102</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>20</Number>
@@ -3628,8 +3628,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>161</Attack>
-      <Defense>144</Defense>
-      <Stamina>110</Stamina>
+      <Defense>139</Defense>
+      <Stamina>146</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>21</Number>
@@ -3723,8 +3723,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>112</Attack>
-      <Defense>61</Defense>
-      <Stamina>80</Stamina>
+      <Defense>60</Defense>
+      <Stamina>120</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>22</Number>
@@ -3818,8 +3818,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>182</Attack>
-      <Defense>135</Defense>
-      <Stamina>130</Stamina>
+      <Defense>133</Defense>
+      <Stamina>163</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>23</Number>
@@ -3913,8 +3913,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>110</Attack>
-      <Defense>102</Defense>
-      <Stamina>70</Stamina>
+      <Defense>97</Defense>
+      <Stamina>111</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>24</Number>
@@ -3994,8 +3994,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>167</Attack>
-      <Defense>158</Defense>
-      <Stamina>120</Stamina>
+      <Defense>153</Defense>
+      <Stamina>155</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>25</Number>
@@ -4089,8 +4089,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>112</Attack>
-      <Defense>101</Defense>
-      <Stamina>70</Stamina>
+      <Defense>96</Defense>
+      <Stamina>111</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>26</Number>
@@ -4197,8 +4197,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>193</Attack>
-      <Defense>165</Defense>
-      <Stamina>120</Stamina>
+      <Defense>151</Defense>
+      <Stamina>155</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>27</Number>
@@ -4292,8 +4292,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>126</Attack>
-      <Defense>145</Defense>
-      <Stamina>100</Stamina>
+      <Defense>120</Defense>
+      <Stamina>137</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>28</Number>
@@ -4373,8 +4373,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>182</Attack>
-      <Defense>202</Defense>
-      <Stamina>150</Stamina>
+      <Defense>175</Defense>
+      <Stamina>181</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>29</Number>
@@ -4454,8 +4454,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>86</Attack>
-      <Defense>94</Defense>
-      <Stamina>110</Stamina>
+      <Defense>89</Defense>
+      <Stamina>146</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>30</Number>
@@ -4535,8 +4535,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>117</Attack>
-      <Defense>126</Defense>
-      <Stamina>140</Stamina>
+      <Defense>120</Defense>
+      <Stamina>172</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>31</Number>
@@ -4616,8 +4616,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>180</Attack>
-      <Defense>174</Defense>
-      <Stamina>180</Stamina>
+      <Defense>173</Defense>
+      <Stamina>207</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>32</Number>
@@ -4698,7 +4698,7 @@
       </ChargeMoves>
       <Attack>105</Attack>
       <Defense>76</Defense>
-      <Stamina>92</Stamina>
+      <Stamina>130</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>33</Number>
@@ -4778,8 +4778,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>137</Attack>
-      <Defense>112</Defense>
-      <Stamina>122</Stamina>
+      <Defense>111</Defense>
+      <Stamina>156</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>34</Number>
@@ -4872,8 +4872,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>204</Attack>
-      <Defense>157</Defense>
-      <Stamina>162</Stamina>
+      <Defense>156</Defense>
+      <Stamina>191</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>35</Number>
@@ -4953,8 +4953,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>107</Attack>
-      <Defense>116</Defense>
-      <Stamina>140</Stamina>
+      <Defense>108</Defense>
+      <Stamina>172</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>36</Number>
@@ -5047,8 +5047,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>178</Attack>
-      <Defense>171</Defense>
-      <Stamina>190</Stamina>
+      <Defense>162</Defense>
+      <Stamina>216</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>37</Number>
@@ -5128,8 +5128,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>96</Attack>
-      <Defense>122</Defense>
-      <Stamina>76</Stamina>
+      <Defense>109</Defense>
+      <Stamina>116</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>38</Number>
@@ -5250,8 +5250,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>169</Attack>
-      <Defense>204</Defense>
-      <Stamina>146</Stamina>
+      <Defense>190</Defense>
+      <Stamina>177</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>39</Number>
@@ -5331,8 +5331,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>80</Attack>
-      <Defense>44</Defense>
-      <Stamina>230</Stamina>
+      <Defense>41</Defense>
+      <Stamina>251</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>40</Number>
@@ -5412,8 +5412,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>156</Attack>
-      <Defense>93</Defense>
-      <Stamina>280</Stamina>
+      <Defense>90</Defense>
+      <Stamina>295</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>41</Number>
@@ -5507,8 +5507,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>83</Attack>
-      <Defense>76</Defense>
-      <Stamina>80</Stamina>
+      <Defense>73</Defense>
+      <Stamina>120</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>42</Number>
@@ -5602,8 +5602,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>161</Attack>
-      <Defense>153</Defense>
-      <Stamina>150</Stamina>
+      <Defense>150</Defense>
+      <Stamina>181</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>43</Number>
@@ -5683,8 +5683,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>131</Attack>
-      <Defense>116</Defense>
-      <Stamina>90</Stamina>
+      <Defense>112</Defense>
+      <Stamina>128</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>44</Number>
@@ -5764,8 +5764,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>153</Attack>
-      <Defense>139</Defense>
-      <Stamina>120</Stamina>
+      <Defense>136</Defense>
+      <Stamina>155</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>45</Number>
@@ -5845,8 +5845,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>202</Attack>
-      <Defense>170</Defense>
-      <Stamina>150</Stamina>
+      <Defense>167</Defense>
+      <Stamina>181</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>46</Number>
@@ -5927,7 +5927,7 @@
       </ChargeMoves>
       <Attack>121</Attack>
       <Defense>99</Defense>
-      <Stamina>70</Stamina>
+      <Stamina>111</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>47</Number>
@@ -6021,7 +6021,7 @@
       </ChargeMoves>
       <Attack>165</Attack>
       <Defense>146</Defense>
-      <Stamina>120</Stamina>
+      <Stamina>155</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>48</Number>
@@ -6101,8 +6101,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>100</Attack>
-      <Defense>102</Defense>
-      <Stamina>120</Stamina>
+      <Defense>100</Defense>
+      <Stamina>155</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>49</Number>
@@ -6209,8 +6209,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>179</Attack>
-      <Defense>150</Defense>
-      <Stamina>140</Stamina>
+      <Defense>143</Defense>
+      <Stamina>172</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>50</Number>
@@ -6303,8 +6303,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>109</Attack>
-      <Defense>88</Defense>
-      <Stamina>20</Stamina>
+      <Defense>78</Defense>
+      <Stamina>67</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>51</Number>
@@ -6397,8 +6397,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>167</Attack>
-      <Defense>147</Defense>
-      <Stamina>70</Stamina>
+      <Defense>134</Defense>
+      <Stamina>111</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>52</Number>
@@ -6492,8 +6492,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>92</Attack>
-      <Defense>81</Defense>
-      <Stamina>80</Stamina>
+      <Defense>78</Defense>
+      <Stamina>120</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>53</Number>
@@ -6587,8 +6587,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>150</Attack>
-      <Defense>139</Defense>
-      <Stamina>130</Stamina>
+      <Defense>136</Defense>
+      <Stamina>163</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>54</Number>
@@ -6668,8 +6668,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>122</Attack>
-      <Defense>96</Defense>
-      <Stamina>100</Stamina>
+      <Defense>95</Defense>
+      <Stamina>137</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>55</Number>
@@ -6749,8 +6749,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>191</Attack>
-      <Defense>163</Defense>
-      <Stamina>160</Stamina>
+      <Defense>162</Defense>
+      <Stamina>190</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>56</Number>
@@ -6830,8 +6830,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>148</Attack>
-      <Defense>87</Defense>
-      <Stamina>80</Stamina>
+      <Defense>82</Defense>
+      <Stamina>120</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>57</Number>
@@ -6938,8 +6938,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>207</Attack>
-      <Defense>144</Defense>
-      <Stamina>130</Stamina>
+      <Defense>138</Defense>
+      <Stamina>163</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>58</Number>
@@ -7019,8 +7019,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>136</Attack>
-      <Defense>96</Defense>
-      <Stamina>110</Stamina>
+      <Defense>93</Defense>
+      <Stamina>146</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>59</Number>
@@ -7142,7 +7142,7 @@
       </ChargeMoves>
       <Attack>227</Attack>
       <Defense>166</Defense>
-      <Stamina>180</Stamina>
+      <Stamina>207</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>60</Number>
@@ -7223,7 +7223,7 @@
       </ChargeMoves>
       <Attack>101</Attack>
       <Defense>82</Defense>
-      <Stamina>80</Stamina>
+      <Stamina>120</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>61</Number>
@@ -7317,8 +7317,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>130</Attack>
-      <Defense>130</Defense>
-      <Stamina>130</Stamina>
+      <Defense>123</Defense>
+      <Stamina>163</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>62</Number>
@@ -7425,8 +7425,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>182</Attack>
-      <Defense>187</Defense>
-      <Stamina>180</Stamina>
+      <Defense>184</Defense>
+      <Stamina>207</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>63</Number>
@@ -7506,8 +7506,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>195</Attack>
-      <Defense>103</Defense>
-      <Stamina>50</Stamina>
+      <Defense>82</Defense>
+      <Stamina>93</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>64</Number>
@@ -7587,8 +7587,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>232</Attack>
-      <Defense>138</Defense>
-      <Stamina>80</Stamina>
+      <Defense>117</Defense>
+      <Stamina>120</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>65</Number>
@@ -7696,8 +7696,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>271</Attack>
-      <Defense>194</Defense>
-      <Stamina>110</Stamina>
+      <Defense>167</Defense>
+      <Stamina>146</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>66</Number>
@@ -7790,8 +7790,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>137</Attack>
-      <Defense>88</Defense>
-      <Stamina>140</Stamina>
+      <Defense>82</Defense>
+      <Stamina>172</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>67</Number>
@@ -7885,8 +7885,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>177</Attack>
-      <Defense>130</Defense>
-      <Stamina>160</Stamina>
+      <Defense>125</Defense>
+      <Stamina>190</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>68</Number>
@@ -8021,8 +8021,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>234</Attack>
-      <Defense>162</Defense>
-      <Stamina>180</Stamina>
+      <Defense>159</Defense>
+      <Stamina>207</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>69</Number>
@@ -8102,8 +8102,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>139</Attack>
-      <Defense>64</Defense>
-      <Stamina>100</Stamina>
+      <Defense>61</Defense>
+      <Stamina>137</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>70</Number>
@@ -8196,8 +8196,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>172</Attack>
-      <Defense>95</Defense>
-      <Stamina>130</Stamina>
+      <Defense>92</Defense>
+      <Stamina>163</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>71</Number>
@@ -8277,8 +8277,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>207</Attack>
-      <Defense>138</Defense>
-      <Stamina>160</Stamina>
+      <Defense>135</Defense>
+      <Stamina>190</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>72</Number>
@@ -8358,8 +8358,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>97</Attack>
-      <Defense>182</Defense>
-      <Stamina>80</Stamina>
+      <Defense>149</Defense>
+      <Stamina>120</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>73</Number>
@@ -8439,8 +8439,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>166</Attack>
-      <Defense>237</Defense>
-      <Stamina>160</Stamina>
+      <Defense>209</Defense>
+      <Stamina>190</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>74</Number>
@@ -8520,8 +8520,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>132</Attack>
-      <Defense>163</Defense>
-      <Stamina>80</Stamina>
+      <Defense>132</Defense>
+      <Stamina>120</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>75</Number>
@@ -8614,8 +8614,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>164</Attack>
-      <Defense>196</Defense>
-      <Stamina>110</Stamina>
+      <Defense>164</Defense>
+      <Stamina>146</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>76</Number>
@@ -8722,8 +8722,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>211</Attack>
-      <Defense>229</Defense>
-      <Stamina>160</Stamina>
+      <Defense>198</Defense>
+      <Stamina>190</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>77</Number>
@@ -8817,8 +8817,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>170</Attack>
-      <Defense>132</Defense>
-      <Stamina>100</Stamina>
+      <Defense>127</Defense>
+      <Stamina>137</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>78</Number>
@@ -8911,8 +8911,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>207</Attack>
-      <Defense>167</Defense>
-      <Stamina>130</Stamina>
+      <Defense>162</Defense>
+      <Stamina>163</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>79</Number>
@@ -8992,8 +8992,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>109</Attack>
-      <Defense>109</Defense>
-      <Stamina>180</Stamina>
+      <Defense>98</Defense>
+      <Stamina>207</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>80</Number>
@@ -9073,8 +9073,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>177</Attack>
-      <Defense>194</Defense>
-      <Stamina>190</Stamina>
+      <Defense>180</Defense>
+      <Stamina>216</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>81</Number>
@@ -9154,8 +9154,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>165</Attack>
-      <Defense>128</Defense>
-      <Stamina>50</Stamina>
+      <Defense>121</Defense>
+      <Stamina>93</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>82</Number>
@@ -9262,8 +9262,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>223</Attack>
-      <Defense>182</Defense>
-      <Stamina>100</Stamina>
+      <Defense>169</Defense>
+      <Stamina>137</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>83</Number>
@@ -9356,8 +9356,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>124</Attack>
-      <Defense>118</Defense>
-      <Stamina>104</Stamina>
+      <Defense>115</Defense>
+      <Stamina>141</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>84</Number>
@@ -9451,8 +9451,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>158</Attack>
-      <Defense>88</Defense>
-      <Stamina>70</Stamina>
+      <Defense>83</Defense>
+      <Stamina>111</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>85</Number>
@@ -9546,8 +9546,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>218</Attack>
-      <Defense>145</Defense>
-      <Stamina>120</Stamina>
+      <Defense>140</Defense>
+      <Stamina>155</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>86</Number>
@@ -9654,8 +9654,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>85</Attack>
-      <Defense>128</Defense>
-      <Stamina>130</Stamina>
+      <Defense>121</Defense>
+      <Stamina>163</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>87</Number>
@@ -9776,8 +9776,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>139</Attack>
-      <Defense>184</Defense>
-      <Stamina>180</Stamina>
+      <Defense>177</Defense>
+      <Stamina>207</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>88</Number>
@@ -9871,7 +9871,7 @@
       </ChargeMoves>
       <Attack>135</Attack>
       <Defense>90</Defense>
-      <Stamina>160</Stamina>
+      <Stamina>190</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>89</Number>
@@ -9977,8 +9977,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>190</Attack>
-      <Defense>184</Defense>
-      <Stamina>210</Stamina>
+      <Defense>172</Defense>
+      <Stamina>233</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>90</Number>
@@ -10058,8 +10058,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>116</Attack>
-      <Defense>168</Defense>
-      <Stamina>60</Stamina>
+      <Defense>134</Defense>
+      <Stamina>102</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>91</Number>
@@ -10167,8 +10167,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>186</Attack>
-      <Defense>323</Defense>
-      <Stamina>100</Stamina>
+      <Defense>256</Defense>
+      <Stamina>137</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>92</Number>
@@ -10275,8 +10275,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>186</Attack>
-      <Defense>70</Defense>
-      <Stamina>60</Stamina>
+      <Defense>67</Defense>
+      <Stamina>102</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>93</Number>
@@ -10383,8 +10383,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>223</Attack>
-      <Defense>112</Defense>
-      <Stamina>90</Stamina>
+      <Defense>107</Defense>
+      <Stamina>128</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>94</Number>
@@ -10532,8 +10532,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>261</Attack>
-      <Defense>156</Defense>
-      <Stamina>120</Stamina>
+      <Defense>149</Defense>
+      <Stamina>155</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>95</Number>
@@ -10641,8 +10641,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>85</Attack>
-      <Defense>288</Defense>
-      <Stamina>70</Stamina>
+      <Defense>232</Defense>
+      <Stamina>111</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>96</Number>
@@ -10722,8 +10722,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>89</Attack>
-      <Defense>158</Defense>
-      <Stamina>120</Stamina>
+      <Defense>136</Defense>
+      <Stamina>155</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>97</Number>
@@ -10803,8 +10803,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>144</Attack>
-      <Defense>215</Defense>
-      <Stamina>170</Stamina>
+      <Defense>193</Defense>
+      <Stamina>198</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>98</Number>
@@ -10884,8 +10884,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>181</Attack>
-      <Defense>156</Defense>
-      <Stamina>60</Stamina>
+      <Defense>124</Defense>
+      <Stamina>102</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>99</Number>
@@ -10978,8 +10978,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>240</Attack>
-      <Defense>214</Defense>
-      <Stamina>110</Stamina>
+      <Defense>181</Defense>
+      <Stamina>146</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>100</Number>
@@ -11073,8 +11073,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>109</Attack>
-      <Defense>114</Defense>
-      <Stamina>80</Stamina>
+      <Defense>111</Defense>
+      <Stamina>120</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>101</Number>
@@ -11167,8 +11167,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>173</Attack>
-      <Defense>179</Defense>
-      <Stamina>120</Stamina>
+      <Defense>173</Defense>
+      <Stamina>155</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>102</Number>
@@ -11248,8 +11248,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>107</Attack>
-      <Defense>140</Defense>
-      <Stamina>120</Stamina>
+      <Defense>125</Defense>
+      <Stamina>155</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>103</Number>
@@ -11355,8 +11355,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>233</Attack>
-      <Defense>158</Defense>
-      <Stamina>190</Stamina>
+      <Defense>149</Defense>
+      <Stamina>216</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>104</Number>
@@ -11436,8 +11436,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>90</Attack>
-      <Defense>165</Defense>
-      <Stamina>100</Stamina>
+      <Defense>144</Defense>
+      <Stamina>137</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>105</Number>
@@ -11517,8 +11517,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>144</Attack>
-      <Defense>200</Defense>
-      <Stamina>120</Stamina>
+      <Defense>186</Defense>
+      <Stamina>155</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>106</Number>
@@ -11626,8 +11626,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>224</Attack>
-      <Defense>211</Defense>
-      <Stamina>100</Stamina>
+      <Defense>181</Defense>
+      <Stamina>137</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>107</Number>
@@ -11748,8 +11748,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>193</Attack>
-      <Defense>212</Defense>
-      <Stamina>100</Stamina>
+      <Defense>197</Defense>
+      <Stamina>137</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>108</Number>
@@ -11830,7 +11830,7 @@
       </ChargeMoves>
       <Attack>108</Attack>
       <Defense>137</Defense>
-      <Stamina>180</Stamina>
+      <Stamina>207</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>109</Number>
@@ -11923,8 +11923,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>119</Attack>
-      <Defense>164</Defense>
-      <Stamina>80</Stamina>
+      <Defense>141</Defense>
+      <Stamina>120</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>110</Number>
@@ -12017,8 +12017,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>174</Attack>
-      <Defense>221</Defense>
-      <Stamina>130</Stamina>
+      <Defense>197</Defense>
+      <Stamina>163</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>111</Number>
@@ -12098,8 +12098,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>140</Attack>
-      <Defense>157</Defense>
-      <Stamina>160</Stamina>
+      <Defense>127</Defense>
+      <Stamina>190</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>112</Number>
@@ -12193,8 +12193,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>222</Attack>
-      <Defense>206</Defense>
-      <Stamina>210</Stamina>
+      <Defense>171</Defense>
+      <Stamina>233</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>113</Number>
@@ -12288,8 +12288,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>60</Attack>
-      <Defense>176</Defense>
-      <Stamina>500</Stamina>
+      <Defense>128</Defense>
+      <Stamina>487</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>114</Number>
@@ -12383,8 +12383,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>183</Attack>
-      <Defense>205</Defense>
-      <Stamina>130</Stamina>
+      <Defense>169</Defense>
+      <Stamina>163</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>115</Number>
@@ -12465,7 +12465,7 @@
       </ChargeMoves>
       <Attack>181</Attack>
       <Defense>165</Defense>
-      <Stamina>210</Stamina>
+      <Stamina>233</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>116</Number>
@@ -12545,8 +12545,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>129</Attack>
-      <Defense>125</Defense>
-      <Stamina>60</Stamina>
+      <Defense>103</Defense>
+      <Stamina>102</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>117</Number>
@@ -12640,8 +12640,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>187</Attack>
-      <Defense>182</Defense>
-      <Stamina>110</Stamina>
+      <Defense>156</Defense>
+      <Stamina>146</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>118</Number>
@@ -12721,8 +12721,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>123</Attack>
-      <Defense>115</Defense>
-      <Stamina>90</Stamina>
+      <Defense>110</Defense>
+      <Stamina>128</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>119</Number>
@@ -12843,8 +12843,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>175</Attack>
-      <Defense>154</Defense>
-      <Stamina>160</Stamina>
+      <Defense>147</Defense>
+      <Stamina>190</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>120</Number>
@@ -12938,7 +12938,7 @@
       </ChargeMoves>
       <Attack>137</Attack>
       <Defense>112</Defense>
-      <Stamina>60</Stamina>
+      <Stamina>102</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>121</Number>
@@ -13059,7 +13059,7 @@
       </ChargeMoves>
       <Attack>210</Attack>
       <Defense>184</Defense>
-      <Stamina>120</Stamina>
+      <Stamina>155</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>122</Number>
@@ -13139,8 +13139,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>192</Attack>
-      <Defense>233</Defense>
-      <Stamina>80</Stamina>
+      <Defense>205</Defense>
+      <Stamina>120</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>123</Number>
@@ -13248,7 +13248,7 @@
       </ChargeMoves>
       <Attack>218</Attack>
       <Defense>170</Defense>
-      <Stamina>140</Stamina>
+      <Stamina>172</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>124</Number>
@@ -13328,8 +13328,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>223</Attack>
-      <Defense>182</Defense>
-      <Stamina>130</Stamina>
+      <Defense>151</Defense>
+      <Stamina>163</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>125</Number>
@@ -13409,8 +13409,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>198</Attack>
-      <Defense>173</Defense>
-      <Stamina>130</Stamina>
+      <Defense>158</Defense>
+      <Stamina>163</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>126</Number>
@@ -13490,8 +13490,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>206</Attack>
-      <Defense>169</Defense>
-      <Stamina>130</Stamina>
+      <Defense>154</Defense>
+      <Stamina>163</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>127</Number>
@@ -13598,8 +13598,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>238</Attack>
-      <Defense>197</Defense>
-      <Stamina>130</Stamina>
+      <Defense>182</Defense>
+      <Stamina>163</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>128</Number>
@@ -13679,8 +13679,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>198</Attack>
-      <Defense>197</Defense>
-      <Stamina>150</Stamina>
+      <Defense>183</Defense>
+      <Stamina>181</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>129</Number>
@@ -13719,8 +13719,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>29</Attack>
-      <Defense>102</Defense>
-      <Stamina>40</Stamina>
+      <Defense>85</Defense>
+      <Stamina>85</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>130</Number>
@@ -13854,8 +13854,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>237</Attack>
-      <Defense>197</Defense>
-      <Stamina>190</Stamina>
+      <Defense>186</Defense>
+      <Stamina>216</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>131</Number>
@@ -13976,8 +13976,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>165</Attack>
-      <Defense>180</Defense>
-      <Stamina>260</Stamina>
+      <Defense>174</Defense>
+      <Stamina>277</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>132</Number>
@@ -14017,7 +14017,7 @@
       </ChargeMoves>
       <Attack>91</Attack>
       <Defense>91</Defense>
-      <Stamina>96</Stamina>
+      <Stamina>134</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>133</Number>
@@ -14097,8 +14097,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>104</Attack>
-      <Defense>121</Defense>
-      <Stamina>110</Stamina>
+      <Defense>114</Defense>
+      <Stamina>146</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>134</Number>
@@ -14165,8 +14165,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>205</Attack>
-      <Defense>177</Defense>
-      <Stamina>260</Stamina>
+      <Defense>161</Defense>
+      <Stamina>277</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>135</Number>
@@ -14246,8 +14246,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>232</Attack>
-      <Defense>201</Defense>
-      <Stamina>130</Stamina>
+      <Defense>182</Defense>
+      <Stamina>163</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>136</Number>
@@ -14341,8 +14341,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>246</Attack>
-      <Defense>204</Defense>
-      <Stamina>130</Stamina>
+      <Defense>179</Defense>
+      <Stamina>163</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>137</Number>
@@ -14503,8 +14503,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>153</Attack>
-      <Defense>139</Defense>
-      <Stamina>130</Stamina>
+      <Defense>136</Defense>
+      <Stamina>163</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>138</Number>
@@ -14612,8 +14612,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>155</Attack>
-      <Defense>174</Defense>
-      <Stamina>70</Stamina>
+      <Defense>153</Defense>
+      <Stamina>111</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>139</Number>
@@ -14720,8 +14720,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>207</Attack>
-      <Defense>227</Defense>
-      <Stamina>140</Stamina>
+      <Defense>201</Defense>
+      <Stamina>172</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>140</Number>
@@ -14801,8 +14801,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>148</Attack>
-      <Defense>162</Defense>
-      <Stamina>60</Stamina>
+      <Defense>140</Defense>
+      <Stamina>102</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>141</Number>
@@ -14882,8 +14882,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>220</Attack>
-      <Defense>203</Defense>
-      <Stamina>120</Stamina>
+      <Defense>186</Defense>
+      <Stamina>155</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>142</Number>
@@ -14963,8 +14963,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>221</Attack>
-      <Defense>164</Defense>
-      <Stamina>160</Stamina>
+      <Defense>159</Defense>
+      <Stamina>190</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>143</Number>
@@ -15058,8 +15058,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>190</Attack>
-      <Defense>190</Defense>
-      <Stamina>320</Stamina>
+      <Defense>169</Defense>
+      <Stamina>330</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>144</Number>
@@ -15140,8 +15140,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>192</Attack>
-      <Defense>249</Defense>
-      <Stamina>180</Stamina>
+      <Defense>236</Defense>
+      <Stamina>207</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>145</Number>
@@ -15235,8 +15235,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>253</Attack>
-      <Defense>188</Defense>
-      <Stamina>180</Stamina>
+      <Defense>185</Defense>
+      <Stamina>207</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>146</Number>
@@ -15344,8 +15344,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>251</Attack>
-      <Defense>184</Defense>
-      <Stamina>180</Stamina>
+      <Defense>181</Defense>
+      <Stamina>207</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>147</Number>
@@ -15425,8 +15425,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>119</Attack>
-      <Defense>94</Defense>
-      <Stamina>82</Stamina>
+      <Defense>91</Defense>
+      <Stamina>121</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>148</Number>
@@ -15506,8 +15506,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>163</Attack>
-      <Defense>138</Defense>
-      <Stamina>122</Stamina>
+      <Defense>135</Defense>
+      <Stamina>156</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>149</Number>
@@ -15642,8 +15642,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>263</Attack>
-      <Defense>201</Defense>
-      <Stamina>182</Stamina>
+      <Defense>198</Defense>
+      <Stamina>209</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>150</Number>
@@ -15780,7 +15780,7 @@
       </ChargeMoves>
       <Attack>300</Attack>
       <Defense>182</Defense>
-      <Stamina>193</Stamina>
+      <Stamina>214</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>151</Number>
@@ -16339,7 +16339,7 @@
       </ChargeMoves>
       <Attack>210</Attack>
       <Defense>210</Defense>
-      <Stamina>200</Stamina>
+      <Stamina>225</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>152</Number>
@@ -16420,7 +16420,7 @@
       </ChargeMoves>
       <Attack>92</Attack>
       <Defense>122</Defense>
-      <Stamina>90</Stamina>
+      <Stamina>128</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>153</Number>
@@ -16501,7 +16501,7 @@
       </ChargeMoves>
       <Attack>122</Attack>
       <Defense>155</Defense>
-      <Stamina>120</Stamina>
+      <Stamina>155</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>154</Number>
@@ -16596,7 +16596,7 @@
       </ChargeMoves>
       <Attack>168</Attack>
       <Defense>202</Defense>
-      <Stamina>160</Stamina>
+      <Stamina>190</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>155</Number>
@@ -16676,8 +16676,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>116</Attack>
-      <Defense>96</Defense>
-      <Stamina>78</Stamina>
+      <Defense>93</Defense>
+      <Stamina>118</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>156</Number>
@@ -16757,8 +16757,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>158</Attack>
-      <Defense>129</Defense>
-      <Stamina>116</Stamina>
+      <Defense>126</Defense>
+      <Stamina>151</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>157</Number>
@@ -16852,8 +16852,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>223</Attack>
-      <Defense>176</Defense>
-      <Stamina>156</Stamina>
+      <Defense>173</Defense>
+      <Stamina>186</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>158</Number>
@@ -16933,8 +16933,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>117</Attack>
-      <Defense>116</Defense>
-      <Stamina>100</Stamina>
+      <Defense>109</Defense>
+      <Stamina>137</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>159</Number>
@@ -17014,8 +17014,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>150</Attack>
-      <Defense>151</Defense>
-      <Stamina>130</Stamina>
+      <Defense>142</Defense>
+      <Stamina>163</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>160</Number>
@@ -17108,8 +17108,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>205</Attack>
-      <Defense>197</Defense>
-      <Stamina>170</Stamina>
+      <Defense>188</Defense>
+      <Stamina>198</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>161</Number>
@@ -17189,8 +17189,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>79</Attack>
-      <Defense>77</Defense>
-      <Stamina>70</Stamina>
+      <Defense>73</Defense>
+      <Stamina>111</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>162</Number>
@@ -17270,8 +17270,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>148</Attack>
-      <Defense>130</Defense>
-      <Stamina>170</Stamina>
+      <Defense>125</Defense>
+      <Stamina>198</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>163</Number>
@@ -17351,8 +17351,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>67</Attack>
-      <Defense>101</Defense>
-      <Stamina>120</Stamina>
+      <Defense>88</Defense>
+      <Stamina>155</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>164</Number>
@@ -17432,8 +17432,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>145</Attack>
-      <Defense>179</Defense>
-      <Stamina>200</Stamina>
+      <Defense>156</Defense>
+      <Stamina>225</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>165</Number>
@@ -17513,8 +17513,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>72</Attack>
-      <Defense>142</Defense>
-      <Stamina>80</Stamina>
+      <Defense>118</Defense>
+      <Stamina>120</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>166</Number>
@@ -17594,8 +17594,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>107</Attack>
-      <Defense>209</Defense>
-      <Stamina>110</Stamina>
+      <Defense>179</Defense>
+      <Stamina>146</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>167</Number>
@@ -17676,7 +17676,7 @@
       </ChargeMoves>
       <Attack>105</Attack>
       <Defense>73</Defense>
-      <Stamina>80</Stamina>
+      <Stamina>120</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>168</Number>
@@ -17756,8 +17756,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>161</Attack>
-      <Defense>128</Defense>
-      <Stamina>140</Stamina>
+      <Defense>124</Defense>
+      <Stamina>172</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>169</Number>
@@ -17838,7 +17838,7 @@
       </ChargeMoves>
       <Attack>194</Attack>
       <Defense>178</Defense>
-      <Stamina>170</Stamina>
+      <Stamina>198</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>170</Number>
@@ -17918,8 +17918,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>106</Attack>
-      <Defense>106</Defense>
-      <Stamina>150</Stamina>
+      <Defense>97</Defense>
+      <Stamina>181</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>171</Number>
@@ -17999,8 +17999,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>146</Attack>
-      <Defense>146</Defense>
-      <Stamina>250</Stamina>
+      <Defense>137</Defense>
+      <Stamina>168</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>172</Number>
@@ -18080,8 +18080,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>77</Attack>
-      <Defense>63</Defense>
-      <Stamina>40</Stamina>
+      <Defense>53</Defense>
+      <Stamina>85</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>173</Number>
@@ -18189,8 +18189,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>75</Attack>
-      <Defense>91</Defense>
-      <Stamina>100</Stamina>
+      <Defense>79</Defense>
+      <Stamina>137</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>174</Number>
@@ -18270,8 +18270,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>69</Attack>
-      <Defense>34</Defense>
-      <Stamina>180</Stamina>
+      <Defense>32</Defense>
+      <Stamina>207</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>175</Number>
@@ -18365,7 +18365,7 @@
       </ChargeMoves>
       <Attack>67</Attack>
       <Defense>116</Defense>
-      <Stamina>70</Stamina>
+      <Stamina>111</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>176</Number>
@@ -18471,8 +18471,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>139</Attack>
-      <Defense>191</Defense>
-      <Stamina>110</Stamina>
+      <Defense>181</Defense>
+      <Stamina>146</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>177</Number>
@@ -18553,7 +18553,7 @@
       </ChargeMoves>
       <Attack>134</Attack>
       <Defense>89</Defense>
-      <Stamina>80</Stamina>
+      <Stamina>120</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>178</Number>
@@ -18634,7 +18634,7 @@
       </ChargeMoves>
       <Attack>192</Attack>
       <Defense>146</Defense>
-      <Stamina>130</Stamina>
+      <Stamina>163</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>179</Number>
@@ -18714,8 +18714,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>114</Attack>
-      <Defense>82</Defense>
-      <Stamina>110</Stamina>
+      <Defense>79</Defense>
+      <Stamina>146</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>180</Number>
@@ -18795,8 +18795,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>145</Attack>
-      <Defense>112</Defense>
-      <Stamina>140</Stamina>
+      <Defense>109</Defense>
+      <Stamina>172</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>181</Number>
@@ -18876,8 +18876,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>211</Attack>
-      <Defense>172</Defense>
-      <Stamina>180</Stamina>
+      <Defense>169</Defense>
+      <Stamina>207</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>182</Number>
@@ -18957,8 +18957,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>169</Attack>
-      <Defense>189</Defense>
-      <Stamina>150</Stamina>
+      <Defense>186</Defense>
+      <Stamina>181</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>183</Number>
@@ -19039,7 +19039,7 @@
       </ChargeMoves>
       <Attack>37</Attack>
       <Defense>93</Defense>
-      <Stamina>140</Stamina>
+      <Stamina>172</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>184</Number>
@@ -19120,7 +19120,7 @@
       </ChargeMoves>
       <Attack>112</Attack>
       <Defense>152</Defense>
-      <Stamina>200</Stamina>
+      <Stamina>225</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>185</Number>
@@ -19200,8 +19200,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>167</Attack>
-      <Defense>198</Defense>
-      <Stamina>140</Stamina>
+      <Defense>176</Defense>
+      <Stamina>172</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>186</Number>
@@ -19295,8 +19295,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>174</Attack>
-      <Defense>192</Defense>
-      <Stamina>180</Stamina>
+      <Defense>179</Defense>
+      <Stamina>207</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>187</Number>
@@ -19376,8 +19376,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>67</Attack>
-      <Defense>101</Defense>
-      <Stamina>70</Stamina>
+      <Defense>94</Defense>
+      <Stamina>111</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>188</Number>
@@ -19457,8 +19457,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>91</Attack>
-      <Defense>127</Defense>
-      <Stamina>110</Stamina>
+      <Defense>120</Defense>
+      <Stamina>146</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>189</Number>
@@ -19538,8 +19538,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>118</Attack>
-      <Defense>197</Defense>
-      <Stamina>150</Stamina>
+      <Defense>183</Defense>
+      <Stamina>181</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>190</Number>
@@ -19620,7 +19620,7 @@
       </ChargeMoves>
       <Attack>136</Attack>
       <Defense>112</Defense>
-      <Stamina>110</Stamina>
+      <Stamina>146</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>191</Number>
@@ -19701,7 +19701,7 @@
       </ChargeMoves>
       <Attack>55</Attack>
       <Defense>55</Defense>
-      <Stamina>60</Stamina>
+      <Stamina>102</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>192</Number>
@@ -19781,8 +19781,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>185</Attack>
-      <Defense>148</Defense>
-      <Stamina>150</Stamina>
+      <Defense>135</Defense>
+      <Stamina>181</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>193</Number>
@@ -19863,7 +19863,7 @@
       </ChargeMoves>
       <Attack>154</Attack>
       <Defense>94</Defense>
-      <Stamina>130</Stamina>
+      <Stamina>163</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>194</Number>
@@ -19943,8 +19943,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>75</Attack>
-      <Defense>75</Defense>
-      <Stamina>110</Stamina>
+      <Defense>66</Defense>
+      <Stamina>146</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>195</Number>
@@ -20024,8 +20024,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>152</Attack>
-      <Defense>152</Defense>
-      <Stamina>190</Stamina>
+      <Defense>143</Defense>
+      <Stamina>216</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>196</Number>
@@ -20105,8 +20105,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>261</Attack>
-      <Defense>194</Defense>
-      <Stamina>130</Stamina>
+      <Defense>175</Defense>
+      <Stamina>163</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>197</Number>
@@ -20172,8 +20172,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>126</Attack>
-      <Defense>250</Defense>
-      <Stamina>190</Stamina>
+      <Defense>240</Defense>
+      <Stamina>216</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>198</Number>
@@ -20254,7 +20254,7 @@
       </ChargeMoves>
       <Attack>175</Attack>
       <Defense>87</Defense>
-      <Stamina>120</Stamina>
+      <Stamina>155</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>199</Number>
@@ -20334,8 +20334,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>177</Attack>
-      <Defense>194</Defense>
-      <Stamina>190</Stamina>
+      <Defense>180</Defense>
+      <Stamina>216</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>200</Number>
@@ -20415,8 +20415,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>167</Attack>
-      <Defense>167</Defense>
-      <Stamina>120</Stamina>
+      <Defense>154</Defense>
+      <Stamina>155</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>201</Number>
@@ -20456,7 +20456,7 @@
       </ChargeMoves>
       <Attack>136</Attack>
       <Defense>91</Defense>
-      <Stamina>96</Stamina>
+      <Stamina>134</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>202</Number>
@@ -20509,7 +20509,7 @@
       </ChargeMoves>
       <Attack>60</Attack>
       <Defense>106</Defense>
-      <Stamina>380</Stamina>
+      <Stamina>382</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>203</Number>
@@ -20590,7 +20590,7 @@
       </ChargeMoves>
       <Attack>182</Attack>
       <Defense>133</Defense>
-      <Stamina>140</Stamina>
+      <Stamina>172</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>204</Number>
@@ -20670,8 +20670,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>108</Attack>
-      <Defense>146</Defense>
-      <Stamina>100</Stamina>
+      <Defense>122</Defense>
+      <Stamina>137</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>205</Number>
@@ -20751,8 +20751,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>161</Attack>
-      <Defense>242</Defense>
-      <Stamina>150</Stamina>
+      <Defense>205</Defense>
+      <Stamina>181</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>206</Number>
@@ -20832,8 +20832,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>131</Attack>
-      <Defense>131</Defense>
-      <Stamina>200</Stamina>
+      <Defense>128</Defense>
+      <Stamina>225</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>207</Number>
@@ -20913,8 +20913,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>143</Attack>
-      <Defense>204</Defense>
-      <Stamina>130</Stamina>
+      <Defense>184</Defense>
+      <Stamina>163</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>208</Number>
@@ -20994,8 +20994,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>148</Attack>
-      <Defense>333</Defense>
-      <Stamina>150</Stamina>
+      <Defense>272</Defense>
+      <Stamina>181</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>209</Number>
@@ -21075,8 +21075,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>137</Attack>
-      <Defense>89</Defense>
-      <Stamina>120</Stamina>
+      <Defense>85</Defense>
+      <Stamina>155</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>210</Number>
@@ -21156,8 +21156,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>212</Attack>
-      <Defense>137</Defense>
-      <Stamina>180</Stamina>
+      <Defense>131</Defense>
+      <Stamina>207</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>211</Number>
@@ -21237,8 +21237,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>184</Attack>
-      <Defense>148</Defense>
-      <Stamina>130</Stamina>
+      <Defense>138</Defense>
+      <Stamina>163</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>212</Number>
@@ -21318,8 +21318,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>236</Attack>
-      <Defense>191</Defense>
-      <Stamina>140</Stamina>
+      <Defense>181</Defense>
+      <Stamina>172</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>213</Number>
@@ -21400,7 +21400,7 @@
       </ChargeMoves>
       <Attack>17</Attack>
       <Defense>396</Defense>
-      <Stamina>40</Stamina>
+      <Stamina>85</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>214</Number>
@@ -21480,8 +21480,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>234</Attack>
-      <Defense>189</Defense>
-      <Stamina>160</Stamina>
+      <Defense>179</Defense>
+      <Stamina>190</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>215</Number>
@@ -21561,8 +21561,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>189</Attack>
-      <Defense>157</Defense>
-      <Stamina>110</Stamina>
+      <Defense>146</Defense>
+      <Stamina>146</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>216</Number>
@@ -21643,7 +21643,7 @@
       </ChargeMoves>
       <Attack>142</Attack>
       <Defense>93</Defense>
-      <Stamina>120</Stamina>
+      <Stamina>155</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>217</Number>
@@ -21724,7 +21724,7 @@
       </ChargeMoves>
       <Attack>236</Attack>
       <Defense>144</Defense>
-      <Stamina>180</Stamina>
+      <Stamina>207</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>218</Number>
@@ -21805,7 +21805,7 @@
       </ChargeMoves>
       <Attack>118</Attack>
       <Defense>71</Defense>
-      <Stamina>80</Stamina>
+      <Stamina>120</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>219</Number>
@@ -21885,8 +21885,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>139</Attack>
-      <Defense>209</Defense>
-      <Stamina>100</Stamina>
+      <Defense>191</Defense>
+      <Stamina>137</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>220</Number>
@@ -21966,8 +21966,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>90</Attack>
-      <Defense>74</Defense>
-      <Stamina>100</Stamina>
+      <Defense>63</Defense>
+      <Stamina>137</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>221</Number>
@@ -22047,8 +22047,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>181</Attack>
-      <Defense>147</Defense>
-      <Stamina>200</Stamina>
+      <Defense>138</Defense>
+      <Stamina>225</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>222</Number>
@@ -22129,7 +22129,7 @@
       </ChargeMoves>
       <Attack>118</Attack>
       <Defense>156</Defense>
-      <Stamina>110</Stamina>
+      <Stamina>146</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>223</Number>
@@ -22210,7 +22210,7 @@
       </ChargeMoves>
       <Attack>127</Attack>
       <Defense>69</Defense>
-      <Stamina>70</Stamina>
+      <Stamina>111</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>224</Number>
@@ -22291,7 +22291,7 @@
       </ChargeMoves>
       <Attack>197</Attack>
       <Defense>141</Defense>
-      <Stamina>150</Stamina>
+      <Stamina>181</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>225</Number>
@@ -22385,7 +22385,7 @@
       </ChargeMoves>
       <Attack>128</Attack>
       <Defense>90</Defense>
-      <Stamina>90</Stamina>
+      <Stamina>128</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>226</Number>
@@ -22465,8 +22465,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>148</Attack>
-      <Defense>260</Defense>
-      <Stamina>130</Stamina>
+      <Defense>226</Defense>
+      <Stamina>163</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>227</Number>
@@ -22546,8 +22546,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>148</Attack>
-      <Defense>260</Defense>
-      <Stamina>130</Stamina>
+      <Defense>226</Defense>
+      <Stamina>163</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>228</Number>
@@ -22627,8 +22627,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>152</Attack>
-      <Defense>93</Defense>
-      <Stamina>90</Stamina>
+      <Defense>83</Defense>
+      <Stamina>128</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>229</Number>
@@ -22708,8 +22708,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>224</Attack>
-      <Defense>159</Defense>
-      <Stamina>150</Stamina>
+      <Defense>144</Defense>
+      <Stamina>181</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>230</Number>
@@ -22803,7 +22803,7 @@
       </ChargeMoves>
       <Attack>194</Attack>
       <Defense>194</Defense>
-      <Stamina>150</Stamina>
+      <Stamina>181</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>231</Number>
@@ -22883,8 +22883,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>107</Attack>
-      <Defense>107</Defense>
-      <Stamina>180</Stamina>
+      <Defense>98</Defense>
+      <Stamina>207</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>232</Number>
@@ -22964,8 +22964,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>214</Attack>
-      <Defense>214</Defense>
-      <Stamina>180</Stamina>
+      <Defense>185</Defense>
+      <Stamina>207</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>233</Number>
@@ -23045,8 +23045,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>198</Attack>
-      <Defense>183</Defense>
-      <Stamina>170</Stamina>
+      <Defense>180</Defense>
+      <Stamina>198</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>234</Number>
@@ -23126,8 +23126,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>192</Attack>
-      <Defense>132</Defense>
-      <Stamina>146</Stamina>
+      <Defense>131</Defense>
+      <Stamina>177</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>235</Number>
@@ -23166,8 +23166,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>40</Attack>
-      <Defense>88</Defense>
-      <Stamina>110</Stamina>
+      <Defense>83</Defense>
+      <Stamina>146</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>236</Number>
@@ -23248,7 +23248,7 @@
       </ChargeMoves>
       <Attack>64</Attack>
       <Defense>64</Defense>
-      <Stamina>70</Stamina>
+      <Stamina>111</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>237</Number>
@@ -23328,8 +23328,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>173</Attack>
-      <Defense>214</Defense>
-      <Stamina>100</Stamina>
+      <Defense>207</Defense>
+      <Stamina>137</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>238</Number>
@@ -23422,8 +23422,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>153</Attack>
-      <Defense>116</Defense>
-      <Stamina>90</Stamina>
+      <Defense>91</Defense>
+      <Stamina>128</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>239</Number>
@@ -23517,8 +23517,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>135</Attack>
-      <Defense>110</Defense>
-      <Stamina>90</Stamina>
+      <Defense>101</Defense>
+      <Stamina>128</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>240</Number>
@@ -23612,8 +23612,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>151</Attack>
-      <Defense>108</Defense>
-      <Stamina>90</Stamina>
+      <Defense>99</Defense>
+      <Stamina>128</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>241</Number>
@@ -23693,8 +23693,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>157</Attack>
-      <Defense>211</Defense>
-      <Stamina>190</Stamina>
+      <Defense>193</Defense>
+      <Stamina>216</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>242</Number>
@@ -23774,8 +23774,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>129</Attack>
-      <Defense>229</Defense>
-      <Stamina>510</Stamina>
+      <Defense>169</Defense>
+      <Stamina>496</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>243</Number>
@@ -23855,8 +23855,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>241</Attack>
-      <Defense>210</Defense>
-      <Stamina>180</Stamina>
+      <Defense>195</Defense>
+      <Stamina>207</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>244</Number>
@@ -23936,8 +23936,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>235</Attack>
-      <Defense>176</Defense>
-      <Stamina>230</Stamina>
+      <Defense>171</Defense>
+      <Stamina>251</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>245</Number>
@@ -24031,7 +24031,7 @@
       </ChargeMoves>
       <Attack>180</Attack>
       <Defense>235</Defense>
-      <Stamina>200</Stamina>
+      <Stamina>225</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>246</Number>
@@ -24112,7 +24112,7 @@
       </ChargeMoves>
       <Attack>115</Attack>
       <Defense>93</Defense>
-      <Stamina>100</Stamina>
+      <Stamina>137</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>247</Number>
@@ -24193,7 +24193,7 @@
       </ChargeMoves>
       <Attack>155</Attack>
       <Defense>133</Defense>
-      <Stamina>140</Stamina>
+      <Stamina>172</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>248</Number>
@@ -24286,8 +24286,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>251</Attack>
-      <Defense>212</Defense>
-      <Stamina>200</Stamina>
+      <Defense>207</Defense>
+      <Stamina>225</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>249</Number>
@@ -24367,8 +24367,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>193</Attack>
-      <Defense>323</Defense>
-      <Stamina>212</Stamina>
+      <Defense>310</Defense>
+      <Stamina>235</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>250</Number>
@@ -24448,8 +24448,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>239</Attack>
-      <Defense>274</Defense>
-      <Stamina>193</Stamina>
+      <Defense>244</Defense>
+      <Stamina>214</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>251</Number>
@@ -24530,7 +24530,7 @@
       </ChargeMoves>
       <Attack>210</Attack>
       <Defense>210</Defense>
-      <Stamina>200</Stamina>
+      <Stamina>225</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>252</Number>
@@ -24610,8 +24610,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>124</Attack>
-      <Defense>104</Defense>
-      <Stamina>80</Stamina>
+      <Defense>94</Defense>
+      <Stamina>120</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>253</Number>
@@ -24691,8 +24691,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>172</Attack>
-      <Defense>130</Defense>
-      <Stamina>100</Stamina>
+      <Defense>120</Defense>
+      <Stamina>137</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>254</Number>
@@ -24772,8 +24772,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>223</Attack>
-      <Defense>180</Defense>
-      <Stamina>140</Stamina>
+      <Defense>169</Defense>
+      <Stamina>172</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>255</Number>
@@ -24853,8 +24853,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>130</Attack>
-      <Defense>92</Defense>
-      <Stamina>90</Stamina>
+      <Defense>87</Defense>
+      <Stamina>128</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>256</Number>
@@ -24935,7 +24935,7 @@
       </ChargeMoves>
       <Attack>163</Attack>
       <Defense>115</Defense>
-      <Stamina>120</Stamina>
+      <Stamina>155</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>257</Number>
@@ -25030,7 +25030,7 @@
       </ChargeMoves>
       <Attack>240</Attack>
       <Defense>141</Defense>
-      <Stamina>160</Stamina>
+      <Stamina>190</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>258</Number>
@@ -25111,7 +25111,7 @@
       </ChargeMoves>
       <Attack>126</Attack>
       <Defense>93</Defense>
-      <Stamina>100</Stamina>
+      <Stamina>137</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>259</Number>
@@ -25192,7 +25192,7 @@
       </ChargeMoves>
       <Attack>156</Attack>
       <Defense>133</Defense>
-      <Stamina>140</Stamina>
+      <Stamina>172</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>260</Number>
@@ -25273,7 +25273,7 @@
       </ChargeMoves>
       <Attack>208</Attack>
       <Defense>175</Defense>
-      <Stamina>200</Stamina>
+      <Stamina>225</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>261</Number>
@@ -25353,8 +25353,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>96</Attack>
-      <Defense>63</Defense>
-      <Stamina>70</Stamina>
+      <Defense>61</Defense>
+      <Stamina>111</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>262</Number>
@@ -25434,8 +25434,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>171</Attack>
-      <Defense>137</Defense>
-      <Stamina>140</Stamina>
+      <Defense>132</Defense>
+      <Stamina>172</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>263</Number>
@@ -25516,7 +25516,7 @@
       </ChargeMoves>
       <Attack>58</Attack>
       <Defense>80</Defense>
-      <Stamina>76</Stamina>
+      <Stamina>116</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>264</Number>
@@ -25597,7 +25597,7 @@
       </ChargeMoves>
       <Attack>142</Attack>
       <Defense>128</Defense>
-      <Stamina>156</Stamina>
+      <Stamina>186</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>265</Number>
@@ -25649,8 +25649,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>75</Attack>
-      <Defense>61</Defense>
-      <Stamina>90</Stamina>
+      <Defense>59</Defense>
+      <Stamina>128</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>266</Number>
@@ -25702,8 +25702,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>60</Attack>
-      <Defense>91</Defense>
-      <Stamina>100</Stamina>
+      <Defense>77</Defense>
+      <Stamina>137</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>267</Number>
@@ -25784,7 +25784,7 @@
       </ChargeMoves>
       <Attack>189</Attack>
       <Defense>98</Defense>
-      <Stamina>120</Stamina>
+      <Stamina>155</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>268</Number>
@@ -25836,8 +25836,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>60</Attack>
-      <Defense>91</Defense>
-      <Stamina>100</Stamina>
+      <Defense>77</Defense>
+      <Stamina>137</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>269</Number>
@@ -25917,8 +25917,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>98</Attack>
-      <Defense>172</Defense>
-      <Stamina>120</Stamina>
+      <Defense>162</Defense>
+      <Stamina>155</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>270</Number>
@@ -25984,8 +25984,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>71</Attack>
-      <Defense>86</Defense>
-      <Stamina>80</Stamina>
+      <Defense>77</Defense>
+      <Stamina>120</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>271</Number>
@@ -26065,8 +26065,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>112</Attack>
-      <Defense>128</Defense>
-      <Stamina>120</Stamina>
+      <Defense>119</Defense>
+      <Stamina>155</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>272</Number>
@@ -26146,8 +26146,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>173</Attack>
-      <Defense>191</Defense>
-      <Stamina>160</Stamina>
+      <Defense>176</Defense>
+      <Stamina>190</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>273</Number>
@@ -26227,8 +26227,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>71</Attack>
-      <Defense>86</Defense>
-      <Stamina>80</Stamina>
+      <Defense>77</Defense>
+      <Stamina>120</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>274</Number>
@@ -26309,7 +26309,7 @@
       </ChargeMoves>
       <Attack>134</Attack>
       <Defense>78</Defense>
-      <Stamina>140</Stamina>
+      <Stamina>172</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>275</Number>
@@ -26390,7 +26390,7 @@
       </ChargeMoves>
       <Attack>200</Attack>
       <Defense>121</Defense>
-      <Stamina>180</Stamina>
+      <Stamina>207</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>276</Number>
@@ -26443,7 +26443,7 @@
       </ChargeMoves>
       <Attack>106</Attack>
       <Defense>61</Defense>
-      <Stamina>80</Stamina>
+      <Stamina>120</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>277</Number>
@@ -26523,8 +26523,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>185</Attack>
-      <Defense>130</Defense>
-      <Stamina>120</Stamina>
+      <Defense>124</Defense>
+      <Stamina>155</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>278</Number>
@@ -26605,7 +26605,7 @@
       </ChargeMoves>
       <Attack>106</Attack>
       <Defense>61</Defense>
-      <Stamina>80</Stamina>
+      <Stamina>120</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>279</Number>
@@ -26685,8 +26685,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>175</Attack>
-      <Defense>189</Defense>
-      <Stamina>120</Stamina>
+      <Defense>174</Defense>
+      <Stamina>155</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>280</Number>
@@ -26766,8 +26766,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>79</Attack>
-      <Defense>63</Defense>
-      <Stamina>56</Stamina>
+      <Defense>59</Defense>
+      <Stamina>99</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>281</Number>
@@ -26847,8 +26847,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>117</Attack>
-      <Defense>100</Defense>
-      <Stamina>76</Stamina>
+      <Defense>90</Defense>
+      <Stamina>116</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>282</Number>
@@ -26928,8 +26928,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>237</Attack>
-      <Defense>220</Defense>
-      <Stamina>136</Stamina>
+      <Defense>195</Defense>
+      <Stamina>169</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>283</Number>
@@ -27009,8 +27009,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>93</Attack>
-      <Defense>97</Defense>
-      <Stamina>80</Stamina>
+      <Defense>87</Defense>
+      <Stamina>120</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>284</Number>
@@ -27090,8 +27090,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>192</Attack>
-      <Defense>161</Defense>
-      <Stamina>140</Stamina>
+      <Defense>150</Defense>
+      <Stamina>172</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>285</Number>
@@ -27172,7 +27172,7 @@
       </ChargeMoves>
       <Attack>74</Attack>
       <Defense>110</Defense>
-      <Stamina>120</Stamina>
+      <Stamina>155</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>286</Number>
@@ -27252,8 +27252,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>241</Attack>
-      <Defense>153</Defense>
-      <Stamina>120</Stamina>
+      <Defense>144</Defense>
+      <Stamina>155</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>287</Number>
@@ -27320,8 +27320,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>104</Attack>
-      <Defense>104</Defense>
-      <Stamina>120</Stamina>
+      <Defense>92</Defense>
+      <Stamina>155</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>288</Number>
@@ -27401,8 +27401,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>159</Attack>
-      <Defense>159</Defense>
-      <Stamina>160</Stamina>
+      <Defense>145</Defense>
+      <Stamina>190</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>289</Number>
@@ -27469,8 +27469,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>290</Attack>
-      <Defense>183</Defense>
-      <Stamina>273</Stamina>
+      <Defense>166</Defense>
+      <Stamina>284</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>290</Number>
@@ -27550,8 +27550,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>80</Attack>
-      <Defense>153</Defense>
-      <Stamina>62</Stamina>
+      <Defense>126</Defense>
+      <Stamina>104</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>291</Number>
@@ -27631,8 +27631,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>196</Attack>
-      <Defense>114</Defense>
-      <Stamina>122</Stamina>
+      <Defense>112</Defense>
+      <Stamina>156</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>292</Number>
@@ -27712,8 +27712,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>153</Attack>
-      <Defense>80</Defense>
-      <Stamina>2</Stamina>
+      <Defense>73</Defense>
+      <Stamina>51</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>293</Number>
@@ -27794,7 +27794,7 @@
       </ChargeMoves>
       <Attack>92</Attack>
       <Defense>42</Defense>
-      <Stamina>128</Stamina>
+      <Stamina>162</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>294</Number>
@@ -27889,7 +27889,7 @@
       </ChargeMoves>
       <Attack>134</Attack>
       <Defense>81</Defense>
-      <Stamina>168</Stamina>
+      <Stamina>197</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>295</Number>
@@ -27969,8 +27969,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>179</Attack>
-      <Defense>142</Defense>
-      <Stamina>208</Stamina>
+      <Defense>137</Defense>
+      <Stamina>232</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>296</Number>
@@ -28051,7 +28051,7 @@
       </ChargeMoves>
       <Attack>99</Attack>
       <Defense>54</Defense>
-      <Stamina>144</Stamina>
+      <Stamina>176</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>297</Number>
@@ -28132,7 +28132,7 @@
       </ChargeMoves>
       <Attack>209</Attack>
       <Defense>114</Defense>
-      <Stamina>288</Stamina>
+      <Stamina>302</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>298</Number>
@@ -28213,7 +28213,7 @@
       </ChargeMoves>
       <Attack>36</Attack>
       <Defense>71</Defense>
-      <Stamina>100</Stamina>
+      <Stamina>137</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>299</Number>
@@ -28293,8 +28293,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>82</Attack>
-      <Defense>236</Defense>
-      <Stamina>60</Stamina>
+      <Defense>215</Defense>
+      <Stamina>102</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>300</Number>
@@ -28374,8 +28374,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>84</Attack>
-      <Defense>84</Defense>
-      <Stamina>100</Stamina>
+      <Defense>79</Defense>
+      <Stamina>137</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>301</Number>
@@ -28455,8 +28455,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>132</Attack>
-      <Defense>132</Defense>
-      <Stamina>140</Stamina>
+      <Defense>127</Defense>
+      <Stamina>172</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>302</Number>
@@ -28536,8 +28536,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>141</Attack>
-      <Defense>141</Defense>
-      <Stamina>100</Stamina>
+      <Defense>136</Defense>
+      <Stamina>137</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>303</Number>
@@ -28617,8 +28617,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>155</Attack>
-      <Defense>155</Defense>
-      <Stamina>100</Stamina>
+      <Defense>141</Defense>
+      <Stamina>137</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>304</Number>
@@ -28698,8 +28698,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>121</Attack>
-      <Defense>168</Defense>
-      <Stamina>100</Stamina>
+      <Defense>141</Defense>
+      <Stamina>137</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>305</Number>
@@ -28779,8 +28779,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>158</Attack>
-      <Defense>240</Defense>
-      <Stamina>120</Stamina>
+      <Defense>198</Defense>
+      <Stamina>155</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>306</Number>
@@ -28860,8 +28860,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>198</Attack>
-      <Defense>314</Defense>
-      <Stamina>140</Stamina>
+      <Defense>257</Defense>
+      <Stamina>172</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>307</Number>
@@ -28942,7 +28942,7 @@
       </ChargeMoves>
       <Attack>78</Attack>
       <Defense>107</Defense>
-      <Stamina>60</Stamina>
+      <Stamina>102</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>308</Number>
@@ -29023,7 +29023,7 @@
       </ChargeMoves>
       <Attack>121</Attack>
       <Defense>152</Defense>
-      <Stamina>120</Stamina>
+      <Stamina>155</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>309</Number>
@@ -29104,7 +29104,7 @@
       </ChargeMoves>
       <Attack>123</Attack>
       <Defense>78</Defense>
-      <Stamina>80</Stamina>
+      <Stamina>120</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>310</Number>
@@ -29185,7 +29185,7 @@
       </ChargeMoves>
       <Attack>215</Attack>
       <Defense>127</Defense>
-      <Stamina>140</Stamina>
+      <Stamina>172</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>311</Number>
@@ -29265,8 +29265,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>167</Attack>
-      <Defense>147</Defense>
-      <Stamina>120</Stamina>
+      <Defense>129</Defense>
+      <Stamina>155</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>312</Number>
@@ -29346,8 +29346,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>147</Attack>
-      <Defense>167</Defense>
-      <Stamina>120</Stamina>
+      <Defense>150</Defense>
+      <Stamina>155</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>313</Number>
@@ -29427,8 +29427,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>143</Attack>
-      <Defense>171</Defense>
-      <Stamina>130</Stamina>
+      <Defense>166</Defense>
+      <Stamina>163</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>314</Number>
@@ -29508,8 +29508,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>143</Attack>
-      <Defense>171</Defense>
-      <Stamina>130</Stamina>
+      <Defense>166</Defense>
+      <Stamina>163</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>315</Number>
@@ -29589,8 +29589,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>186</Attack>
-      <Defense>148</Defense>
-      <Stamina>100</Stamina>
+      <Defense>131</Defense>
+      <Stamina>137</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>316</Number>
@@ -29671,7 +29671,7 @@
       </ChargeMoves>
       <Attack>80</Attack>
       <Defense>99</Defense>
-      <Stamina>140</Stamina>
+      <Stamina>172</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>317</Number>
@@ -29752,7 +29752,7 @@
       </ChargeMoves>
       <Attack>140</Attack>
       <Defense>159</Defense>
-      <Stamina>200</Stamina>
+      <Stamina>225</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>318</Number>
@@ -29833,7 +29833,7 @@
       </ChargeMoves>
       <Attack>171</Attack>
       <Defense>39</Defense>
-      <Stamina>90</Stamina>
+      <Stamina>128</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>319</Number>
@@ -29914,7 +29914,7 @@
       </ChargeMoves>
       <Attack>243</Attack>
       <Defense>83</Defense>
-      <Stamina>140</Stamina>
+      <Stamina>172</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>320</Number>
@@ -29995,7 +29995,7 @@
       </ChargeMoves>
       <Attack>136</Attack>
       <Defense>68</Defense>
-      <Stamina>260</Stamina>
+      <Stamina>277</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>321</Number>
@@ -30076,7 +30076,7 @@
       </ChargeMoves>
       <Attack>175</Attack>
       <Defense>87</Defense>
-      <Stamina>340</Stamina>
+      <Stamina>347</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>322</Number>
@@ -30156,8 +30156,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>119</Attack>
-      <Defense>82</Defense>
-      <Stamina>120</Stamina>
+      <Defense>79</Defense>
+      <Stamina>155</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>323</Number>
@@ -30237,8 +30237,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>194</Attack>
-      <Defense>139</Defense>
-      <Stamina>140</Stamina>
+      <Defense>136</Defense>
+      <Stamina>172</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>324</Number>
@@ -30318,8 +30318,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>151</Attack>
-      <Defense>234</Defense>
-      <Stamina>140</Stamina>
+      <Defense>203</Defense>
+      <Stamina>172</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>325</Number>
@@ -30399,8 +30399,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>125</Attack>
-      <Defense>145</Defense>
-      <Stamina>120</Stamina>
+      <Defense>122</Defense>
+      <Stamina>155</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>326</Number>
@@ -30480,8 +30480,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>171</Attack>
-      <Defense>211</Defense>
-      <Stamina>160</Stamina>
+      <Defense>188</Defense>
+      <Stamina>190</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>327</Number>
@@ -30562,7 +30562,7 @@
       </ChargeMoves>
       <Attack>116</Attack>
       <Defense>116</Defense>
-      <Stamina>120</Stamina>
+      <Stamina>155</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>328</Number>
@@ -30643,7 +30643,7 @@
       </ChargeMoves>
       <Attack>162</Attack>
       <Defense>78</Defense>
-      <Stamina>90</Stamina>
+      <Stamina>128</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>329</Number>
@@ -30724,7 +30724,7 @@
       </ChargeMoves>
       <Attack>134</Attack>
       <Defense>99</Defense>
-      <Stamina>100</Stamina>
+      <Stamina>137</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>330</Number>
@@ -30805,7 +30805,7 @@
       </ChargeMoves>
       <Attack>205</Attack>
       <Defense>168</Defense>
-      <Stamina>160</Stamina>
+      <Stamina>190</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>331</Number>
@@ -30886,7 +30886,7 @@
       </ChargeMoves>
       <Attack>156</Attack>
       <Defense>74</Defense>
-      <Stamina>100</Stamina>
+      <Stamina>137</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>332</Number>
@@ -30967,7 +30967,7 @@
       </ChargeMoves>
       <Attack>221</Attack>
       <Defense>115</Defense>
-      <Stamina>140</Stamina>
+      <Stamina>172</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>333</Number>
@@ -31047,8 +31047,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>76</Attack>
-      <Defense>139</Defense>
-      <Stamina>90</Stamina>
+      <Defense>132</Defense>
+      <Stamina>128</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>334</Number>
@@ -31128,8 +31128,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>141</Attack>
-      <Defense>208</Defense>
-      <Stamina>150</Stamina>
+      <Defense>201</Defense>
+      <Stamina>181</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>335</Number>
@@ -31210,7 +31210,7 @@
       </ChargeMoves>
       <Attack>222</Attack>
       <Defense>124</Defense>
-      <Stamina>146</Stamina>
+      <Stamina>177</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>336</Number>
@@ -31291,7 +31291,7 @@
       </ChargeMoves>
       <Attack>196</Attack>
       <Defense>118</Defense>
-      <Stamina>146</Stamina>
+      <Stamina>177</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>337</Number>
@@ -31371,8 +31371,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>178</Attack>
-      <Defense>163</Defense>
-      <Stamina>180</Stamina>
+      <Defense>153</Defense>
+      <Stamina>207</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>338</Number>
@@ -31452,8 +31452,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>178</Attack>
-      <Defense>163</Defense>
-      <Stamina>180</Stamina>
+      <Defense>153</Defense>
+      <Stamina>207</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>339</Number>
@@ -31533,8 +31533,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>93</Attack>
-      <Defense>83</Defense>
-      <Stamina>100</Stamina>
+      <Defense>82</Defense>
+      <Stamina>137</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>340</Number>
@@ -31614,8 +31614,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>151</Attack>
-      <Defense>142</Defense>
-      <Stamina>220</Stamina>
+      <Defense>141</Defense>
+      <Stamina>242</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>341</Number>
@@ -31695,8 +31695,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>141</Attack>
-      <Defense>113</Defense>
-      <Stamina>86</Stamina>
+      <Defense>99</Defense>
+      <Stamina>125</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>342</Number>
@@ -31776,8 +31776,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>224</Attack>
-      <Defense>156</Defense>
-      <Stamina>126</Stamina>
+      <Defense>142</Defense>
+      <Stamina>160</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>343</Number>
@@ -31857,8 +31857,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>77</Attack>
-      <Defense>131</Defense>
-      <Stamina>80</Stamina>
+      <Defense>124</Defense>
+      <Stamina>120</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>344</Number>
@@ -31938,8 +31938,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>140</Attack>
-      <Defense>236</Defense>
-      <Stamina>120</Stamina>
+      <Defense>229</Defense>
+      <Stamina>155</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>345</Number>
@@ -32019,8 +32019,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>105</Attack>
-      <Defense>154</Defense>
-      <Stamina>132</Stamina>
+      <Defense>150</Defense>
+      <Stamina>165</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>346</Number>
@@ -32100,8 +32100,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>152</Attack>
-      <Defense>198</Defense>
-      <Stamina>172</Stamina>
+      <Defense>194</Defense>
+      <Stamina>200</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>347</Number>
@@ -32182,7 +32182,7 @@
       </ChargeMoves>
       <Attack>176</Attack>
       <Defense>100</Defense>
-      <Stamina>90</Stamina>
+      <Stamina>128</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>348</Number>
@@ -32262,8 +32262,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>222</Attack>
-      <Defense>183</Defense>
-      <Stamina>150</Stamina>
+      <Defense>174</Defense>
+      <Stamina>181</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>349</Number>
@@ -32315,8 +32315,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>29</Attack>
-      <Defense>102</Defense>
-      <Stamina>40</Stamina>
+      <Defense>85</Defense>
+      <Stamina>85</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>350</Number>
@@ -32409,8 +32409,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>192</Attack>
-      <Defense>242</Defense>
-      <Stamina>190</Stamina>
+      <Defense>219</Defense>
+      <Stamina>216</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>351</Number>
@@ -32545,7 +32545,7 @@
       </ChargeMoves>
       <Attack>139</Attack>
       <Defense>139</Defense>
-      <Stamina>140</Stamina>
+      <Stamina>172</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>352</Number>
@@ -32667,8 +32667,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>161</Attack>
-      <Defense>212</Defense>
-      <Stamina>120</Stamina>
+      <Defense>189</Defense>
+      <Stamina>155</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>353</Number>
@@ -32748,8 +32748,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>138</Attack>
-      <Defense>66</Defense>
-      <Stamina>88</Stamina>
+      <Defense>65</Defense>
+      <Stamina>127</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>354</Number>
@@ -32829,8 +32829,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>218</Attack>
-      <Defense>127</Defense>
-      <Stamina>128</Stamina>
+      <Defense>126</Defense>
+      <Stamina>162</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>355</Number>
@@ -32911,7 +32911,7 @@
       </ChargeMoves>
       <Attack>70</Attack>
       <Defense>162</Defense>
-      <Stamina>40</Stamina>
+      <Stamina>85</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>356</Number>
@@ -32992,7 +32992,7 @@
       </ChargeMoves>
       <Attack>124</Attack>
       <Defense>234</Defense>
-      <Stamina>80</Stamina>
+      <Stamina>120</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>357</Number>
@@ -33072,8 +33072,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>136</Attack>
-      <Defense>165</Defense>
-      <Stamina>198</Stamina>
+      <Defense>163</Defense>
+      <Stamina>223</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>358</Number>
@@ -33153,8 +33153,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>175</Attack>
-      <Defense>174</Defense>
-      <Stamina>150</Stamina>
+      <Defense>170</Defense>
+      <Stamina>181</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>359</Number>
@@ -33235,7 +33235,7 @@
       </ChargeMoves>
       <Attack>246</Attack>
       <Defense>120</Defense>
-      <Stamina>130</Stamina>
+      <Stamina>163</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>360</Number>
@@ -33288,7 +33288,7 @@
       </ChargeMoves>
       <Attack>41</Attack>
       <Defense>86</Defense>
-      <Stamina>190</Stamina>
+      <Stamina>216</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>361</Number>
@@ -33369,7 +33369,7 @@
       </ChargeMoves>
       <Attack>95</Attack>
       <Defense>95</Defense>
-      <Stamina>100</Stamina>
+      <Stamina>137</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>362</Number>
@@ -33450,7 +33450,7 @@
       </ChargeMoves>
       <Attack>162</Attack>
       <Defense>162</Defense>
-      <Stamina>160</Stamina>
+      <Stamina>190</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>363</Number>
@@ -33531,7 +33531,7 @@
       </ChargeMoves>
       <Attack>95</Attack>
       <Defense>90</Defense>
-      <Stamina>140</Stamina>
+      <Stamina>172</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>364</Number>
@@ -33612,7 +33612,7 @@
       </ChargeMoves>
       <Attack>137</Attack>
       <Defense>132</Defense>
-      <Stamina>180</Stamina>
+      <Stamina>207</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>365</Number>
@@ -33693,7 +33693,7 @@
       </ChargeMoves>
       <Attack>182</Attack>
       <Defense>176</Defense>
-      <Stamina>220</Stamina>
+      <Stamina>242</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>366</Number>
@@ -33760,8 +33760,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>133</Attack>
-      <Defense>149</Defense>
-      <Stamina>70</Stamina>
+      <Defense>135</Defense>
+      <Stamina>111</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>367</Number>
@@ -33841,8 +33841,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>197</Attack>
-      <Defense>194</Defense>
-      <Stamina>110</Stamina>
+      <Defense>179</Defense>
+      <Stamina>146</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>368</Number>
@@ -33922,8 +33922,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>211</Attack>
-      <Defense>194</Defense>
-      <Stamina>110</Stamina>
+      <Defense>179</Defense>
+      <Stamina>146</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>369</Number>
@@ -34003,8 +34003,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>162</Attack>
-      <Defense>234</Defense>
-      <Stamina>200</Stamina>
+      <Defense>203</Defense>
+      <Stamina>225</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>370</Number>
@@ -34084,8 +34084,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>81</Attack>
-      <Defense>134</Defense>
-      <Stamina>86</Stamina>
+      <Defense>128</Defense>
+      <Stamina>125</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>371</Number>
@@ -34165,8 +34165,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>134</Attack>
-      <Defense>107</Defense>
-      <Stamina>90</Stamina>
+      <Defense>93</Defense>
+      <Stamina>128</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>372</Number>
@@ -34246,8 +34246,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>172</Attack>
-      <Defense>179</Defense>
-      <Stamina>130</Stamina>
+      <Defense>155</Defense>
+      <Stamina>163</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>373</Number>
@@ -34328,7 +34328,7 @@
       </ChargeMoves>
       <Attack>277</Attack>
       <Defense>168</Defense>
-      <Stamina>190</Stamina>
+      <Stamina>216</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>374</Number>
@@ -34367,8 +34367,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>96</Attack>
-      <Defense>141</Defense>
-      <Stamina>80</Stamina>
+      <Defense>132</Defense>
+      <Stamina>120</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>375</Number>
@@ -34448,8 +34448,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>138</Attack>
-      <Defense>185</Defense>
-      <Stamina>120</Stamina>
+      <Defense>176</Defense>
+      <Stamina>255</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>376</Number>
@@ -34543,8 +34543,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>257</Attack>
-      <Defense>247</Defense>
-      <Stamina>160</Stamina>
+      <Defense>228</Defense>
+      <Stamina>190</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>377</Number>
@@ -34624,8 +34624,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>179</Attack>
-      <Defense>356</Defense>
-      <Stamina>160</Stamina>
+      <Defense>309</Defense>
+      <Stamina>190</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>378</Number>
@@ -34705,8 +34705,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>179</Attack>
-      <Defense>356</Defense>
-      <Stamina>160</Stamina>
+      <Defense>309</Defense>
+      <Stamina>190</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>379</Number>
@@ -34787,7 +34787,7 @@
       </ChargeMoves>
       <Attack>143</Attack>
       <Defense>285</Defense>
-      <Stamina>160</Stamina>
+      <Stamina>190</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>380</Number>
@@ -34867,8 +34867,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>228</Attack>
-      <Defense>268</Defense>
-      <Stamina>160</Stamina>
+      <Defense>246</Defense>
+      <Stamina>190</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>381</Number>
@@ -34948,8 +34948,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>268</Attack>
-      <Defense>228</Defense>
-      <Stamina>160</Stamina>
+      <Defense>212</Defense>
+      <Stamina>190</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>382</Number>
@@ -35029,8 +35029,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>270</Attack>
-      <Defense>251</Defense>
-      <Stamina>182</Stamina>
+      <Defense>228</Defense>
+      <Stamina>205</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>383</Number>
@@ -35110,8 +35110,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>270</Attack>
-      <Defense>251</Defense>
-      <Stamina>182</Stamina>
+      <Defense>228</Defense>
+      <Stamina>205</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>384</Number>
@@ -35192,7 +35192,7 @@
       </ChargeMoves>
       <Attack>284</Attack>
       <Defense>170</Defense>
-      <Stamina>191</Stamina>
+      <Stamina>213</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>385</Number>
@@ -35273,23 +35273,23 @@
       </ChargeMoves>
       <Attack>210</Attack>
       <Defense>210</Defense>
-      <Stamina>200</Stamina>
+      <Stamina>225</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>386</Number>
-      <Species>Deoxys</Species>
+      <Species>Deoxys - Normal</Species>
       <Type1>Psychic</Type1>
       <Type2>None</Type2>
       <FastMoves>
         <PokedexFastMoveWrapper>
           <FastMove>
-            <Name>Counter</Name>
-            <Power>12</Power>
-            <Time>900</Time>
-            <Energy>8</Energy>
-            <Type>Fighting</Type>
+            <Name>Charge Beam</Name>
+            <Power>8</Power>
+            <Time>1100</Time>
+            <Energy>15</Energy>
+            <Type>Electric</Type>
             <MoveType>Fast</MoveType>
-            <DamageWindowStartTime>700</DamageWindowStartTime>
+            <DamageWindowStartTime>850</DamageWindowStartTime>
             <DamageWindowDuration>200</DamageWindowDuration>
           </FastMove>
           <IsLegacy>false</IsLegacy>
@@ -35311,13 +35311,27 @@
       <ChargeMoves>
         <PokedexChargeMoveWrapper>
           <ChargeMove>
-            <Name>Zap Cannon</Name>
-            <Power>140</Power>
-            <Time>3700</Time>
+            <Name>Hyper Beam</Name>
+            <Power>150</Power>
+            <Time>3800</Time>
             <Energy>100</Energy>
+            <Type>Normal</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>2200</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Thunderbolt</Name>
+            <Power>80</Power>
+            <Time>2500</Time>
+            <Energy>50</Energy>
             <Type>Electric</Type>
             <MoveType>Charge</MoveType>
-            <DamageWindowStartTime>3000</DamageWindowStartTime>
+            <DamageWindowStartTime>1800</DamageWindowStartTime>
             <DamageWindowDuration>500</DamageWindowDuration>
             <DodgeFlashTime>0</DodgeFlashTime>
           </ChargeMove>
@@ -35325,22 +35339,8 @@
         </PokedexChargeMoveWrapper>
         <PokedexChargeMoveWrapper>
           <ChargeMove>
-            <Name>Swift</Name>
-            <Power>60</Power>
-            <Time>2800</Time>
-            <Energy>50</Energy>
-            <Type>Normal</Type>
-            <MoveType>Charge</MoveType>
-            <DamageWindowStartTime>2000</DamageWindowStartTime>
-            <DamageWindowDuration>600</DamageWindowDuration>
-            <DodgeFlashTime>0</DodgeFlashTime>
-          </ChargeMove>
-          <IsLegacy>false</IsLegacy>
-        </PokedexChargeMoveWrapper>
-        <PokedexChargeMoveWrapper>
-          <ChargeMove>
             <Name>Psycho Boost</Name>
-            <Power>100</Power>
+            <Power>70</Power>
             <Time>4000</Time>
             <Energy>50</Energy>
             <Type>Psychic</Type>
@@ -35354,7 +35354,7 @@
       </ChargeMoves>
       <Attack>345</Attack>
       <Defense>115</Defense>
-      <Stamina>100</Stamina>
+      <Stamina>137</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>351</Number>
@@ -35421,7 +35421,7 @@
       </ChargeMoves>
       <Attack>139</Attack>
       <Defense>139</Defense>
-      <Stamina>140</Stamina>
+      <Stamina>172</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>351</Number>
@@ -35488,7 +35488,7 @@
       </ChargeMoves>
       <Attack>139</Attack>
       <Defense>139</Defense>
-      <Stamina>140</Stamina>
+      <Stamina>172</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>351</Number>
@@ -35555,7 +35555,7 @@
       </ChargeMoves>
       <Attack>139</Attack>
       <Defense>139</Defense>
-      <Stamina>140</Stamina>
+      <Stamina>172</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>103</Number>
@@ -35635,8 +35635,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>230</Attack>
-      <Defense>158</Defense>
-      <Stamina>190</Stamina>
+      <Defense>153</Defense>
+      <Stamina>216</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>19</Number>
@@ -35717,7 +35717,7 @@
       </ChargeMoves>
       <Attack>103</Attack>
       <Defense>70</Defense>
-      <Stamina>60</Stamina>
+      <Stamina>102</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>20</Number>
@@ -35797,8 +35797,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>135</Attack>
-      <Defense>159</Defense>
-      <Stamina>150</Stamina>
+      <Defense>154</Defense>
+      <Stamina>181</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>26</Number>
@@ -35878,8 +35878,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>201</Attack>
-      <Defense>172</Defense>
-      <Stamina>120</Stamina>
+      <Defense>154</Defense>
+      <Stamina>155</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>27</Number>
@@ -35959,8 +35959,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>125</Attack>
-      <Defense>154</Defense>
-      <Stamina>100</Stamina>
+      <Defense>129</Defense>
+      <Stamina>137</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>28</Number>
@@ -36040,8 +36040,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>177</Attack>
-      <Defense>221</Defense>
-      <Stamina>150</Stamina>
+      <Defense>195</Defense>
+      <Stamina>181</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>37</Number>
@@ -36121,8 +36121,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>96</Attack>
-      <Defense>122</Defense>
-      <Stamina>76</Stamina>
+      <Defense>109</Defense>
+      <Stamina>116</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>38</Number>
@@ -36202,8 +36202,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>170</Attack>
-      <Defense>207</Defense>
-      <Stamina>146</Stamina>
+      <Defense>193</Defense>
+      <Stamina>177</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>50</Number>
@@ -36283,8 +36283,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>109</Attack>
-      <Defense>89</Defense>
-      <Stamina>20</Stamina>
+      <Defense>82</Defense>
+      <Stamina>67</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>51</Number>
@@ -36364,8 +36364,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>201</Attack>
-      <Defense>148</Defense>
-      <Stamina>70</Stamina>
+      <Defense>145</Defense>
+      <Stamina>111</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>52</Number>
@@ -36445,8 +36445,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>99</Attack>
-      <Defense>81</Defense>
-      <Stamina>80</Stamina>
+      <Defense>78</Defense>
+      <Stamina>120</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>53</Number>
@@ -36526,8 +36526,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>158</Attack>
-      <Defense>139</Defense>
-      <Stamina>130</Stamina>
+      <Defense>136</Defense>
+      <Stamina>163</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>74</Number>
@@ -36607,8 +36607,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>132</Attack>
-      <Defense>163</Defense>
-      <Stamina>80</Stamina>
+      <Defense>132</Defense>
+      <Stamina>120</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>75</Number>
@@ -36688,8 +36688,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>164</Attack>
-      <Defense>196</Defense>
-      <Stamina>110</Stamina>
+      <Defense>164</Defense>
+      <Stamina>146</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>76</Number>
@@ -36769,8 +36769,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>211</Attack>
-      <Defense>229</Defense>
-      <Stamina>160</Stamina>
+      <Defense>198</Defense>
+      <Stamina>190</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>88</Number>
@@ -36851,7 +36851,7 @@
       </ChargeMoves>
       <Attack>135</Attack>
       <Defense>90</Defense>
-      <Stamina>160</Stamina>
+      <Stamina>190</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>89</Number>
@@ -36931,8 +36931,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>190</Attack>
-      <Defense>184</Defense>
-      <Stamina>210</Stamina>
+      <Defense>172</Defense>
+      <Stamina>233</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>105</Number>
@@ -37012,8 +37012,8 @@
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>144</Attack>
-      <Defense>200</Defense>
-      <Stamina>120</Stamina>
+      <Defense>186</Defense>
+      <Stamina>155</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>387</Number>
@@ -45556,6 +45556,385 @@
       <Attack>238</Attack>
       <Defense>238</Defense>
       <Stamina>237</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>386</Number>
+      <Species>Deoxys - Attack</Species>
+      <Type1>Psychic</Type1>
+      <Type2>None</Type2>
+      <FastMoves>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Zen Headbutt</Name>
+            <Power>12</Power>
+            <Time>1100</Time>
+            <Energy>10</Energy>
+            <Type>Psychic</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>850</DamageWindowStartTime>
+            <DamageWindowDuration>200</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Poison Jab</Name>
+            <Power>10</Power>
+            <Time>800</Time>
+            <Energy>7</Energy>
+            <Type>Poison</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>200</DamageWindowStartTime>
+            <DamageWindowDuration>600</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+      </FastMoves>
+      <ChargeMoves>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Psycho Boost</Name>
+            <Power>70</Power>
+            <Time>4000</Time>
+            <Energy>50</Energy>
+            <Type>Psychic</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>3500</DamageWindowStartTime>
+            <DamageWindowDuration>500</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Zap Cannon</Name>
+            <Power>140</Power>
+            <Time>3700</Time>
+            <Energy>100</Energy>
+            <Type>Electric</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>3000</DamageWindowStartTime>
+            <DamageWindowDuration>500</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Dark Pulse</Name>
+            <Power>80</Power>
+            <Time>3000</Time>
+            <Energy>50</Energy>
+            <Type>Dark</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>1400</DamageWindowStartTime>
+            <DamageWindowDuration>900</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
+      </ChargeMoves>
+      <Attack>414</Attack>
+      <Defense>46</Defense>
+      <Stamina>137</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>386</Number>
+      <Species>Deoxys - Defense</Species>
+      <Type1>Psychic</Type1>
+      <Type2>None</Type2>
+      <FastMoves>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Zen Headbutt</Name>
+            <Power>12</Power>
+            <Time>1100</Time>
+            <Energy>10</Energy>
+            <Type>Psychic</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>850</DamageWindowStartTime>
+            <DamageWindowDuration>200</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Counter</Name>
+            <Power>12</Power>
+            <Time>900</Time>
+            <Energy>8</Energy>
+            <Type>Fighting</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>700</DamageWindowStartTime>
+            <DamageWindowDuration>200</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+      </FastMoves>
+      <ChargeMoves>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Psycho Boost</Name>
+            <Power>70</Power>
+            <Time>4000</Time>
+            <Energy>50</Energy>
+            <Type>Psychic</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>3500</DamageWindowStartTime>
+            <DamageWindowDuration>500</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Zap Cannon</Name>
+            <Power>140</Power>
+            <Time>3700</Time>
+            <Energy>100</Energy>
+            <Type>Electric</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>3000</DamageWindowStartTime>
+            <DamageWindowDuration>500</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Rock Slide</Name>
+            <Power>80</Power>
+            <Time>2700</Time>
+            <Energy>50</Energy>
+            <Type>Rock</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>1500</DamageWindowStartTime>
+            <DamageWindowDuration>1100</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
+      </ChargeMoves>
+      <Attack>144</Attack>
+      <Defense>330</Defense>
+      <Stamina>137</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>386</Number>
+      <Species>Deoxys - Speed</Species>
+      <Type1>Psychic</Type1>
+      <Type2>None</Type2>
+      <FastMoves>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Zen Headbutt</Name>
+            <Power>12</Power>
+            <Time>1100</Time>
+            <Energy>10</Energy>
+            <Type>Psychic</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>850</DamageWindowStartTime>
+            <DamageWindowDuration>200</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Charge Beam</Name>
+            <Power>8</Power>
+            <Time>1100</Time>
+            <Energy>15</Energy>
+            <Type>Electric</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>850</DamageWindowStartTime>
+            <DamageWindowDuration>200</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+      </FastMoves>
+      <ChargeMoves>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Psycho Boost</Name>
+            <Power>70</Power>
+            <Time>4000</Time>
+            <Energy>50</Energy>
+            <Type>Psychic</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>3500</DamageWindowStartTime>
+            <DamageWindowDuration>500</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Zap Cannon</Name>
+            <Power>140</Power>
+            <Time>3700</Time>
+            <Energy>100</Energy>
+            <Type>Electric</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>3000</DamageWindowStartTime>
+            <DamageWindowDuration>500</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Swift</Name>
+            <Power>60</Power>
+            <Time>2800</Time>
+            <Energy>50</Energy>
+            <Type>Normal</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>2000</DamageWindowStartTime>
+            <DamageWindowDuration>600</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
+      </ChargeMoves>
+      <Attack>230</Attack>
+      <Defense>218</Defense>
+      <Stamina>137</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>808</Number>
+      <Species>Meltan</Species>
+      <Type1>Steel</Type1>
+      <Type2>None</Type2>
+      <FastMoves>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Thunder Shock</Name>
+            <Power>5</Power>
+            <Time>600</Time>
+            <Energy>8</Energy>
+            <Type>Electric</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>300</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+      </FastMoves>
+      <ChargeMoves>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Flash Cannon</Name>
+            <Power>100</Power>
+            <Time>2700</Time>
+            <Energy>100</Energy>
+            <Type>Steel</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>1600</DamageWindowStartTime>
+            <DamageWindowDuration>900</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Thunderbolt</Name>
+            <Power>80</Power>
+            <Time>2500</Time>
+            <Energy>50</Energy>
+            <Type>Electric</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>1800</DamageWindowStartTime>
+            <DamageWindowDuration>500</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
+      </ChargeMoves>
+      <Attack>112</Attack>
+      <Defense>113</Defense>
+      <Stamina>130</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>809</Number>
+      <Species>Melmetal</Species>
+      <Type1>Steel</Type1>
+      <Type2>None</Type2>
+      <FastMoves>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Thunder Shock</Name>
+            <Power>5</Power>
+            <Time>600</Time>
+            <Energy>8</Energy>
+            <Type>Electric</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>300</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+      </FastMoves>
+      <ChargeMoves>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Flash Cannon</Name>
+            <Power>100</Power>
+            <Time>2700</Time>
+            <Energy>100</Energy>
+            <Type>Steel</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>1600</DamageWindowStartTime>
+            <DamageWindowDuration>900</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Thunderbolt</Name>
+            <Power>80</Power>
+            <Time>2500</Time>
+            <Energy>50</Energy>
+            <Type>Electric</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>1800</DamageWindowStartTime>
+            <DamageWindowDuration>500</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Hyper Beam</Name>
+            <Power>150</Power>
+            <Time>3800</Time>
+            <Energy>100</Energy>
+            <Type>Normal</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>2200</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Rock Slide</Name>
+            <Power>80</Power>
+            <Time>2700</Time>
+            <Energy>50</Energy>
+            <Type>Rock</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>1500</DamageWindowStartTime>
+            <DamageWindowDuration>1100</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
+      </ChargeMoves>
+      <Attack>231</Attack>
+      <Defense>213</Defense>
+      <Stamina>264</Stamina>
     </PokedexEntry>
   </PokedexEntries>
 </Data>
