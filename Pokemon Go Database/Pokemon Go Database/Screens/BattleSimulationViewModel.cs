@@ -385,7 +385,6 @@ namespace Pokemon_Go_Database.Screens
                         if (time >= attackerStartAttackTime)
                         {
                             attackerPower = attacker.ChargeMove.ChargeMove.Power;
-                            attackerNextAttackTime = time + attacker.ChargeMove.ChargeMove.Time;
                             attackerEnergy -= attacker.ChargeMove.ChargeMove.Energy;
                             if (attacker.Species.Type1 == attacker.ChargeMove.ChargeMove.Type || attacker.Species.Type2 == attacker.ChargeMove.ChargeMove.Type)
                                 attackerBonus *= Constants.StabBonus;
@@ -422,7 +421,7 @@ namespace Pokemon_Go_Database.Screens
                             {
                                 defenderState = BattleState.ChargeAttackInit;
                                 defenderStartAttackTime = time + defender.ChargeMove.ChargeMove.DamageWindowStartTime;
-                                defenderNextAttackTime = time + defender.ChargeMove.ChargeMove.Time;
+                                defenderNextAttackTime = time + defender.ChargeMove.ChargeMove.Time + rand.Next(Constants.DefenderFastMoveDelayMin, Constants.DefenderFastMoveDelayMax); ;
                             }
                             else if (defenderEnergy < defender.ChargeMove.ChargeMove.Energy || randNum < 5)
                             {
