@@ -459,7 +459,6 @@ namespace Pokemon_Go_Database.Screens
                         if (time >= defenderStartAttackTime)
                         {
                             defenderPower = defender.ChargeMove.ChargeMove.Power;
-                            defenderNextAttackTime = time + defender.ChargeMove.ChargeMove.Time;
                             defenderEnergy -= defender.ChargeMove.ChargeMove.Energy;
                             if (defender.Species.Type1 == defender.ChargeMove.ChargeMove.Type || defender.Species.Type2 == defender.ChargeMove.ChargeMove.Type)
                                 defenderBonus *= Constants.StabBonus;
