@@ -27,13 +27,13 @@ namespace Pokemon_Go_Database.Model
 
         public const double WeatherBonus = 1.2;
 
-        public const double TypeAdvantageBonus = 1.40;
+        public const double TypeAdvantageBonus = 1.60;
 
-        public const double TypeAdvantageDoubleBonus = 1.96;
+        public const double TypeAdvantageDoubleBonus = 2.56;
 
-        public const double TypeDisadvantageBonus = 0.714;
+        public const double TypeDisadvantageBonus = .625;
 
-        public const double TypeDisadvantageDoubleBonus = 0.51;
+        public const double TypeDisadvantageDoubleBonus = 0.39;
 
         public const double TestDefense = 100.0;
 
