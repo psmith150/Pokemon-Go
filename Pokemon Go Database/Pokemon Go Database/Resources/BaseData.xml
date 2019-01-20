@@ -18000,7 +18000,7 @@
       </ChargeMoves>
       <Attack>146</Attack>
       <Defense>137</Defense>
-      <Stamina>168</Stamina>
+      <Stamina>268</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>172</Number>
@@ -27249,6 +27249,20 @@
             <DodgeFlashTime>0</DodgeFlashTime>
           </ChargeMove>
           <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Grass Knot</Name>
+            <Power>90</Power>
+            <Time>2600</Time>
+            <Energy>50</Energy>
+            <Type>Grass</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>1700</DamageWindowStartTime>
+            <DamageWindowDuration>900</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+          </ChargeMove>
+          <IsLegacy>true</IsLegacy>
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>241</Attack>
