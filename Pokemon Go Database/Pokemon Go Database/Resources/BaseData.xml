@@ -3948,6 +3948,19 @@
           </FastMove>
           <IsLegacy>false</IsLegacy>
         </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Dragon Tail</Name>
+            <Power>15</Power>
+            <Time>1100</Time>
+            <Energy>9</Energy>
+            <Type>Dragon</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>850</DamageWindowStartTime>
+            <DamageWindowDuration>200</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
       </FastMoves>
       <ChargeMoves>
         <PokedexChargeMoveWrapper>
@@ -5045,6 +5058,20 @@
           </ChargeMove>
           <IsLegacy>false</IsLegacy>
         </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Meteor Mash</Name>
+            <Power>100</Power>
+            <Time>2600</Time>
+            <Energy>50</Energy>
+            <Type>Steel</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>2300</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>178</Attack>
       <Defense>162</Defense>
@@ -5248,6 +5275,20 @@
           </ChargeMove>
           <IsLegacy>true</IsLegacy>
         </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Psyshock</Name>
+            <Power>65</Power>
+            <Time>2700</Time>
+            <Energy>33</Energy>
+            <Type>Psychic</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>2000</DamageWindowStartTime>
+            <DamageWindowDuration>600</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>169</Attack>
       <Defense>190</Defense>
@@ -5406,6 +5447,20 @@
             <MoveType>Charge</MoveType>
             <DamageWindowStartTime>1700</DamageWindowStartTime>
             <DamageWindowDuration>1400</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Ice Beam</Name>
+            <Power>90</Power>
+            <Time>3300</Time>
+            <Energy>50</Energy>
+            <Type>Ice</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>1500</DamageWindowStartTime>
+            <DamageWindowDuration>1500</DamageWindowDuration>
             <DodgeFlashTime>0</DodgeFlashTime>
           </ChargeMove>
           <IsLegacy>false</IsLegacy>
@@ -7694,6 +7749,20 @@
           </ChargeMove>
           <IsLegacy>true</IsLegacy>
         </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Fire Punch</Name>
+            <Power>55</Power>
+            <Time>2200</Time>
+            <Energy>33</Energy>
+            <Type>Fire</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>1500</DamageWindowStartTime>
+            <DamageWindowDuration>400</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>271</Attack>
       <Defense>167</Defense>
@@ -8018,6 +8087,20 @@
             <DodgeFlashTime>0</DodgeFlashTime>
           </ChargeMove>
           <IsLegacy>true</IsLegacy>
+        </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Rock Slide</Name>
+            <Power>80</Power>
+            <Time>2700</Time>
+            <Energy>50</Energy>
+            <Type>Rock</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>1500</DamageWindowStartTime>
+            <DamageWindowDuration>1100</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>234</Attack>
@@ -9971,6 +10054,20 @@
             <MoveType>Charge</MoveType>
             <DamageWindowStartTime>1400</DamageWindowStartTime>
             <DamageWindowDuration>900</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Thunder Punch</Name>
+            <Power>45</Power>
+            <Time>1800</Time>
+            <Energy>33</Energy>
+            <Type>Electric</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>1550</DamageWindowStartTime>
+            <DamageWindowDuration>1700</DamageWindowDuration>
             <DodgeFlashTime>0</DodgeFlashTime>
           </ChargeMove>
           <IsLegacy>false</IsLegacy>
@@ -12015,6 +12112,20 @@
           </ChargeMove>
           <IsLegacy>false</IsLegacy>
         </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Thunderbolt</Name>
+            <Power>80</Power>
+            <Time>2500</Time>
+            <Energy>50</Energy>
+            <Type>Electric</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>1800</DamageWindowStartTime>
+            <DamageWindowDuration>500</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>174</Attack>
       <Defense>197</Defense>
@@ -13056,6 +13167,34 @@
           </ChargeMove>
           <IsLegacy>true</IsLegacy>
         </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Thunder</Name>
+            <Power>100</Power>
+            <Time>2400</Time>
+            <Energy>100</Energy>
+            <Type>Electric</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>1200</DamageWindowStartTime>
+            <DamageWindowDuration>1000</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Ice Beam</Name>
+            <Power>90</Power>
+            <Time>3300</Time>
+            <Energy>50</Energy>
+            <Type>Ice</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>1500</DamageWindowStartTime>
+            <DamageWindowDuration>1500</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>210</Attack>
       <Defense>184</Defense>
@@ -13322,6 +13461,20 @@
             <MoveType>Charge</MoveType>
             <DamageWindowStartTime>1000</DamageWindowStartTime>
             <DamageWindowDuration>300</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Focus Blast</Name>
+            <Power>140</Power>
+            <Time>3500</Time>
+            <Energy>100</Energy>
+            <Type>Fighting</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>3000</DamageWindowStartTime>
+            <DamageWindowDuration>500</DamageWindowDuration>
             <DodgeFlashTime>0</DodgeFlashTime>
           </ChargeMove>
           <IsLegacy>false</IsLegacy>
@@ -14836,6 +14989,19 @@
           </FastMove>
           <IsLegacy>false</IsLegacy>
         </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Waterfall</Name>
+            <Power>16</Power>
+            <Time>1200</Time>
+            <Energy>8</Energy>
+            <Type>Water</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>950</DamageWindowStartTime>
+            <DamageWindowDuration>150</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
       </FastMoves>
       <ChargeMoves>
         <PokedexChargeMoveWrapper>
@@ -14961,6 +15127,20 @@
           </ChargeMove>
           <IsLegacy>false</IsLegacy>
         </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Rock Slide</Name>
+            <Power>80</Power>
+            <Time>2700</Time>
+            <Energy>50</Energy>
+            <Type>Rock</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>1500</DamageWindowStartTime>
+            <DamageWindowDuration>1100</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>221</Attack>
       <Defense>159</Defense>
@@ -15055,6 +15235,20 @@
             <DodgeFlashTime>0</DodgeFlashTime>
           </ChargeMove>
           <IsLegacy>true</IsLegacy>
+        </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Outrage</Name>
+            <Power>110</Power>
+            <Time>3900</Time>
+            <Energy>50</Energy>
+            <Type>Dragon</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>1400</DamageWindowStartTime>
+            <DamageWindowDuration>1200</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>190</Attack>
@@ -18874,6 +19068,20 @@
           </ChargeMove>
           <IsLegacy>false</IsLegacy>
         </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Power Gem</Name>
+            <Power>80</Power>
+            <Time>2900</Time>
+            <Energy>50</Energy>
+            <Type>Rock</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>1950</DamageWindowStartTime>
+            <DamageWindowDuration>750</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>211</Attack>
       <Defense>169</Defense>
@@ -21677,6 +21885,19 @@
           </FastMove>
           <IsLegacy>false</IsLegacy>
         </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Shadow Claw</Name>
+            <Power>9</Power>
+            <Time>700</Time>
+            <Energy>6</Energy>
+            <Type>Ghost</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>250</DamageWindowStartTime>
+            <DamageWindowDuration>250</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
       </FastMoves>
       <ChargeMoves>
         <PokedexChargeMoveWrapper>
@@ -22419,6 +22640,19 @@
           </FastMove>
           <IsLegacy>false</IsLegacy>
         </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Bullet Seed</Name>
+            <Power>8</Power>
+            <Time>1100</Time>
+            <Energy>14</Energy>
+            <Type>Grass</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>850</DamageWindowStartTime>
+            <DamageWindowDuration>200</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
       </FastMoves>
       <ChargeMoves>
         <PokedexChargeMoveWrapper>
@@ -22706,6 +22940,20 @@
           </ChargeMove>
           <IsLegacy>false</IsLegacy>
         </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Flamethrower</Name>
+            <Power>60</Power>
+            <Time>2200</Time>
+            <Energy>50</Energy>
+            <Type>Fire</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>1500</DamageWindowStartTime>
+            <DamageWindowDuration>200</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>224</Attack>
       <Defense>144</Defense>
@@ -22914,6 +23162,19 @@
             <Type>Normal</Type>
             <MoveType>Fast</MoveType>
             <DamageWindowStartTime>300</DamageWindowStartTime>
+            <DamageWindowDuration>200</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Mud Slap</Name>
+            <Power>15</Power>
+            <Time>1400</Time>
+            <Energy>12</Energy>
+            <Type>Ground</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1150</DamageWindowStartTime>
             <DamageWindowDuration>200</DamageWindowDuration>
           </FastMove>
           <IsLegacy>false</IsLegacy>
@@ -23691,6 +23952,34 @@
           </ChargeMove>
           <IsLegacy>false</IsLegacy>
         </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Thunderbolt</Name>
+            <Power>80</Power>
+            <Time>2500</Time>
+            <Energy>50</Energy>
+            <Type>Electric</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>1800</DamageWindowStartTime>
+            <DamageWindowDuration>500</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Ice Beam</Name>
+            <Power>90</Power>
+            <Time>3300</Time>
+            <Energy>50</Energy>
+            <Type>Ice</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>1500</DamageWindowStartTime>
+            <DamageWindowDuration>1500</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>157</Attack>
       <Defense>193</Defense>
@@ -23853,6 +24142,20 @@
           </ChargeMove>
           <IsLegacy>false</IsLegacy>
         </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Shadow Ball</Name>
+            <Power>100</Power>
+            <Time>3000</Time>
+            <Energy>50</Energy>
+            <Type>Ghost</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>2400</DamageWindowStartTime>
+            <DamageWindowDuration>400</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>241</Attack>
       <Defense>195</Defense>
@@ -23930,6 +24233,20 @@
             <MoveType>Charge</MoveType>
             <DamageWindowStartTime>1500</DamageWindowStartTime>
             <DamageWindowDuration>200</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Iron Head</Name>
+            <Power>60</Power>
+            <Time>1900</Time>
+            <Energy>50</Energy>
+            <Type>Steel</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>1300</DamageWindowStartTime>
+            <DamageWindowDuration>400</DamageWindowDuration>
             <DodgeFlashTime>0</DodgeFlashTime>
           </ChargeMove>
           <IsLegacy>false</IsLegacy>
@@ -24024,6 +24341,20 @@
             <MoveType>Charge</MoveType>
             <DamageWindowStartTime>2200</DamageWindowStartTime>
             <DamageWindowDuration>700</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Ice Beam</Name>
+            <Power>90</Power>
+            <Time>3300</Time>
+            <Energy>50</Energy>
+            <Type>Ice</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>1500</DamageWindowStartTime>
+            <DamageWindowDuration>1500</DamageWindowDuration>
             <DodgeFlashTime>0</DodgeFlashTime>
           </ChargeMove>
           <IsLegacy>false</IsLegacy>
@@ -24399,6 +24730,19 @@
             <MoveType>Fast</MoveType>
             <DamageWindowStartTime>850</DamageWindowStartTime>
             <DamageWindowDuration>200</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Normal</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
           </FastMove>
           <IsLegacy>false</IsLegacy>
         </PokedexFastMoveWrapper>
@@ -26140,6 +26484,20 @@
             <MoveType>Charge</MoveType>
             <DamageWindowStartTime>1500</DamageWindowStartTime>
             <DamageWindowDuration>1400</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Ice Beam</Name>
+            <Power>90</Power>
+            <Time>3300</Time>
+            <Energy>50</Energy>
+            <Type>Ice</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>1500</DamageWindowStartTime>
+            <DamageWindowDuration>1500</DamageWindowDuration>
             <DodgeFlashTime>0</DodgeFlashTime>
           </ChargeMove>
           <IsLegacy>false</IsLegacy>
@@ -34295,6 +34653,19 @@
           </FastMove>
           <IsLegacy>false</IsLegacy>
         </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Bite</Name>
+            <Power>6</Power>
+            <Time>500</Time>
+            <Energy>4</Energy>
+            <Type>Dark</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>300</DamageWindowStartTime>
+            <DamageWindowDuration>200</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
       </FastMoves>
       <ChargeMoves>
         <PokedexChargeMoveWrapper>
@@ -36214,6 +36585,20 @@
           </ChargeMove>
           <IsLegacy>false</IsLegacy>
         </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Psyshock</Name>
+            <Power>65</Power>
+            <Time>2700</Time>
+            <Energy>33</Energy>
+            <Type>Psychic</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>2000</DamageWindowStartTime>
+            <DamageWindowDuration>600</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>170</Attack>
       <Defense>193</Defense>
@@ -36896,6 +37281,19 @@
             <MoveType>Fast</MoveType>
             <DamageWindowStartTime>200</DamageWindowStartTime>
             <DamageWindowDuration>600</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Snarl</Name>
+            <Power>12</Power>
+            <Time>1100</Time>
+            <Energy>12</Energy>
+            <Type>Dark</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>850</DamageWindowStartTime>
+            <DamageWindowDuration>200</DamageWindowDuration>
           </FastMove>
           <IsLegacy>false</IsLegacy>
         </PokedexFastMoveWrapper>
@@ -38477,6 +38875,19 @@
           </FastMove>
           <IsLegacy>false</IsLegacy>
         </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Normal</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
       </FastMoves>
       <ChargeMoves>
         <PokedexChargeMoveWrapper>
@@ -38665,6 +39076,20 @@
             <MoveType>Charge</MoveType>
             <DamageWindowStartTime>2100</DamageWindowStartTime>
             <DamageWindowDuration>1200</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Grass Knot</Name>
+            <Power>90</Power>
+            <Time>2600</Time>
+            <Energy>50</Energy>
+            <Type>Grass</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>1700</DamageWindowStartTime>
+            <DamageWindowDuration>900</DamageWindowDuration>
             <DodgeFlashTime>0</DodgeFlashTime>
           </ChargeMove>
           <IsLegacy>false</IsLegacy>
@@ -40408,6 +40833,20 @@
           </ChargeMove>
           <IsLegacy>false</IsLegacy>
         </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Sky Attack</Name>
+            <Power>80</Power>
+            <Time>2000</Time>
+            <Energy>50</Energy>
+            <Type>Flying</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>1500</DamageWindowStartTime>
+            <DamageWindowDuration>200</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>243</Attack>
       <Defense>103</Defense>
@@ -42106,6 +42545,19 @@
           </FastMove>
           <IsLegacy>false</IsLegacy>
         </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Bite</Name>
+            <Power>6</Power>
+            <Time>500</Time>
+            <Energy>4</Energy>
+            <Type>Dark</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>300</DamageWindowStartTime>
+            <DamageWindowDuration>200</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
       </FastMoves>
       <ChargeMoves>
         <PokedexChargeMoveWrapper>
@@ -43352,6 +43804,20 @@
           </ChargeMove>
           <IsLegacy>false</IsLegacy>
         </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Psychic</Name>
+            <Power>100</Power>
+            <Time>2800</Time>
+            <Energy>100</Energy>
+            <Type>Psychic</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>1300</DamageWindowStartTime>
+            <DamageWindowDuration>1300</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>247</Attack>
       <Defense>172</Defense>
@@ -43429,6 +43895,20 @@
             <MoveType>Charge</MoveType>
             <DamageWindowStartTime>1900</DamageWindowStartTime>
             <DamageWindowDuration>300</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Flamethrower</Name>
+            <Power>60</Power>
+            <Time>2200</Time>
+            <Energy>50</Energy>
+            <Type>Fire</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>1500</DamageWindowStartTime>
+            <DamageWindowDuration>200</DamageWindowDuration>
             <DodgeFlashTime>0</DodgeFlashTime>
           </ChargeMove>
           <IsLegacy>false</IsLegacy>
@@ -43915,6 +44395,20 @@
             <MoveType>Charge</MoveType>
             <DamageWindowStartTime>3000</DamageWindowStartTime>
             <DamageWindowDuration>500</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Blizzard</Name>
+            <Power>130</Power>
+            <Time>3100</Time>
+            <Energy>100</Energy>
+            <Type>Ice</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>1500</DamageWindowStartTime>
+            <DamageWindowDuration>1400</DamageWindowDuration>
             <DodgeFlashTime>0</DodgeFlashTime>
           </ChargeMove>
           <IsLegacy>false</IsLegacy>
@@ -45728,6 +46222,20 @@
           </ChargeMove>
           <IsLegacy>false</IsLegacy>
         </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Thunderbolt</Name>
+            <Power>80</Power>
+            <Time>2500</Time>
+            <Energy>50</Energy>
+            <Type>Electric</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>1800</DamageWindowStartTime>
+            <DamageWindowDuration>500</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>144</Attack>
       <Defense>330</Defense>
@@ -45805,6 +46313,20 @@
             <MoveType>Charge</MoveType>
             <DamageWindowStartTime>2000</DamageWindowStartTime>
             <DamageWindowDuration>600</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Thunderbolt</Name>
+            <Power>80</Power>
+            <Time>2500</Time>
+            <Energy>50</Energy>
+            <Type>Electric</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>1800</DamageWindowStartTime>
+            <DamageWindowDuration>500</DamageWindowDuration>
             <DodgeFlashTime>0</DodgeFlashTime>
           </ChargeMove>
           <IsLegacy>false</IsLegacy>
