@@ -269,6 +269,15 @@ namespace Pokemon_Go_Database.Popups
             this.Calculator.Pokemon.IVSets.InsertRange(this.Calculator.IVSets);
             this.Calculator.Pokemon.GameCP = this.Calculator.Pokemon.ActualCP;
             this.Calculator.Pokemon.GameHP = this.Calculator.Pokemon.ActualHP;
+            int actualDust = 0;
+            for (int i= 0; i < Constants.DustLevelCutoffs.Length; i++)
+            {
+                if (Constants.DustLevelCutoffs[i] <= this.Calculator.Pokemon.Level)
+                    actualDust = Constants.DustCutoffs[i];
+                else
+                    break;
+            }
+            this.Calculator.Pokemon.DustToPower = actualDust;
             //foreach (IVSet combination in this.Calculator.IVSets)
             //{
             //    if (!attackIVs.Contains(combination.AttackIV))
