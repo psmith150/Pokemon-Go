@@ -52,7 +52,7 @@ namespace Pokemon_Go_Database.Model
         public static readonly int[] DustCutoffs = { 200, 400, 600, 800, 1000, 1300, 1600, 1900, 2200, 2500, 3000, 3500, 4000, 4000, 4500, 5000, 6000, 7000, 8000, 9000, 10000, 11000 };
         public static readonly int[] CandyCutoffs = { 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 3, 3, 3, 4, 4, 4, 6, 8, 10, 12, 15, 16 };
 
-        public static readonly int[] RaidBossHP = { 600, 1800, 3000, 7500, 12500 };
+        public static readonly int[] RaidBossHP = { 600, 1800, 3600, 9000, 15000 };
 
         public static readonly int[] RaidBossLevels = { 20, 25, 30, 40, 40 };
 
