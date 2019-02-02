@@ -625,7 +625,8 @@ namespace Pokemon_Go_Database.Model
             copy.FastMove = this.FastMove;
             copy.ChargeMove = this.ChargeMove;
             copy.IVSets = new MyObservableCollection<IVSet>();
-            copy.IVSets.InsertRange(this.IVSets);
+            foreach (IVSet set in this.IVSets)
+                copy.IVSets.Add(set.Copy());
 
             return copy;
         }

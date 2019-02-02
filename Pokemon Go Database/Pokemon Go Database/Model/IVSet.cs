@@ -91,5 +91,12 @@ namespace Pokemon_Go_Database.Model
             }
         }
         #endregion
+        #region Public Methods
+        public IVSet Copy()
+        {
+            IVSet copy = new IVSet(this.AttackIV, this.DefenseIV, this.StaminaIV, this.Level);
+            return copy;
+        }
+        #endregion
     }
 }
