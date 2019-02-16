@@ -44318,6 +44318,20 @@
           </ChargeMove>
           <IsLegacy>false</IsLegacy>
         </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Ancient Power</Name>
+            <Power>70</Power>
+            <Time>3500</Time>
+            <Energy>33</Energy>
+            <Type>Rock</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>2850</DamageWindowStartTime>
+            <DamageWindowDuration>250</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+          </ChargeMove>
+          <IsLegacy>true</IsLegacy>
+        </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>247</Attack>
       <Defense>146</Defense>
