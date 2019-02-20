@@ -259,7 +259,7 @@ namespace Pokemon_Go_Database.Model
             int dustToPower = this.Pokemon.DustToPower;
             if (this.Pokemon.IsLucky)
                 dustToPower = (int)Math.Floor((double)dustToPower / Constants.LuckyStardustMultiplier);
-            double endIndex = (dustToPower == Constants.DustCutoffs.Max()) ? Constants.DustLevelCutoffs.Max() + 0.5 : Constants.DustLevelCutoffs[Array.IndexOf(Constants.DustCutoffs, dustToPower) + 1];
+            double endIndex = (dustToPower == Constants.DustCutoffs.Max()) ? Constants.DustLevelCutoffs.Max() + 0.5 : Constants.DustLevelCutoffs[Array.LastIndexOf(Constants.DustCutoffs, dustToPower) + 1];
             double startIndex = Constants.DustLevelCutoffs[Array.IndexOf(Constants.DustCutoffs, dustToPower)];
             for (double i = startIndex; i < endIndex; i += 0.5)
             {
