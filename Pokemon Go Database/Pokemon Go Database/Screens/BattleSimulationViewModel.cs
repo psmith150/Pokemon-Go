@@ -259,6 +259,12 @@ namespace Pokemon_Go_Database.Screens
 
         private async void SimulateAllPokemon()
         {
+            if (this.Defender == null || this.Defender.FastMove == null || this.Defender.ChargeMove == null)
+            {
+                await this._messageViewer.DisplayMessage("Pokemon not fully specified", "Invalid Data", MessageViewerButton.Ok, MessageViewerIcon.Warning);
+                this.AllPokemonResults.Clear();
+                return;
+            }
             List<BattleResult> results = new List<BattleResult>();
             foreach (Pokemon pokemon in this.Session.MyPokemon)
             {

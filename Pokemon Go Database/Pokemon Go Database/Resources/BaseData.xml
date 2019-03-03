@@ -35238,14 +35238,14 @@
         </PokedexChargeMoveWrapper>
         <PokedexChargeMoveWrapper>
           <ChargeMove>
-            <Name>Dragon Claw</Name>
-            <Power>50</Power>
-            <Time>1700</Time>
-            <Energy>33</Energy>
+            <Name>Outrage</Name>
+            <Power>110</Power>
+            <Time>3900</Time>
+            <Energy>50</Energy>
             <Type>Dragon</Type>
             <MoveType>Charge</MoveType>
-            <DamageWindowStartTime>1100</DamageWindowStartTime>
-            <DamageWindowDuration>200</DamageWindowDuration>
+            <DamageWindowStartTime>1400</DamageWindowStartTime>
+            <DamageWindowDuration>1200</DamageWindowDuration>
             <DodgeFlashTime>0</DodgeFlashTime>
           </ChargeMove>
           <IsLegacy>false</IsLegacy>
@@ -45159,7 +45159,7 @@
       </ChargeMoves>
       <Attack>275</Attack>
       <Defense>211</Defense>
-      <Stamina>204</Stamina>
+      <Stamina>205</Stamina>
     </PokedexEntry>
     <PokedexEntry>
       <Number>484</Number>
