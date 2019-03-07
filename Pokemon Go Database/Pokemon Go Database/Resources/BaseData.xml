@@ -1545,6 +1545,17 @@
       <DodgeFlashTime>0</DodgeFlashTime>
     </Move>
     <Move xsi:type="ChargeMove">
+      <Name>Power-Up Punch</Name>
+      <Power>50</Power>
+      <Time>2000</Time>
+      <Energy>33</Energy>
+      <Type>Fighting</Type>
+      <MoveType>Charge</MoveType>
+      <DamageWindowStartTime>1700</DamageWindowStartTime>
+      <DamageWindowDuration>300</DamageWindowDuration>
+      <DodgeFlashTime>0</DodgeFlashTime>
+    </Move>
+    <Move xsi:type="ChargeMove">
       <Name>Precipice Blades</Name>
       <Power>130</Power>
       <Time>1700</Time>
@@ -7478,6 +7489,20 @@
           </ChargeMove>
           <IsLegacy>true</IsLegacy>
         </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Power-Up Punch</Name>
+            <Power>50</Power>
+            <Time>2000</Time>
+            <Energy>33</Energy>
+            <Type>Fighting</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>1700</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>182</Attack>
       <Defense>184</Defense>
@@ -11843,6 +11868,20 @@
           </ChargeMove>
           <IsLegacy>true</IsLegacy>
         </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Power-Up Punch</Name>
+            <Power>50</Power>
+            <Time>2000</Time>
+            <Energy>33</Energy>
+            <Type>Fighting</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>1700</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>193</Attack>
       <Defense>197</Defense>
@@ -12569,6 +12608,20 @@
             <MoveType>Charge</MoveType>
             <DamageWindowStartTime>1300</DamageWindowStartTime>
             <DamageWindowDuration>1700</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Power-Up Punch</Name>
+            <Power>50</Power>
+            <Time>2000</Time>
+            <Energy>33</Energy>
+            <Type>Fighting</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>1700</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
             <DodgeFlashTime>0</DodgeFlashTime>
           </ChargeMove>
           <IsLegacy>false</IsLegacy>
@@ -29392,6 +29445,20 @@
           </ChargeMove>
           <IsLegacy>false</IsLegacy>
         </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Power-Up Punch</Name>
+            <Power>50</Power>
+            <Time>2000</Time>
+            <Energy>33</Energy>
+            <Type>Fighting</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>1700</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>121</Attack>
       <Defense>152</Defense>
@@ -42261,6 +42328,20 @@
             <MoveType>Charge</MoveType>
             <DamageWindowStartTime>1000</DamageWindowStartTime>
             <DamageWindowDuration>1300</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Power-Up Punch</Name>
+            <Power>50</Power>
+            <Time>2000</Time>
+            <Energy>33</Energy>
+            <Type>Fighting</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>1700</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
             <DodgeFlashTime>0</DodgeFlashTime>
           </ChargeMove>
           <IsLegacy>false</IsLegacy>
