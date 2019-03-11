@@ -6,6 +6,7 @@
              xmlns:local="clr-namespace:Pokemon_Go_Database.Screens"
              xmlns:scm="clr-namespace:System.ComponentModel;assembly=WindowsBase"
              xmlns:xtk="http://schemas.xceed.com/wpf/xaml/datagrid"
+             xmlns:converters="clr-namespace:Pokemon_Go_Database.ValueConverters"
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="1000"
              d:DataContext="{d:DesignInstance Type=local:BattleSimulationViewModel}">
@@ -25,6 +26,8 @@
                 <scm:SortDescription PropertyName="Name" Direction="Ascending"/>
             </CollectionViewSource.SortDescriptions>
         </CollectionViewSource>
+        <CollectionViewSource x:Key="WeatherView" Source="{Binding WeatherOptions}"/>
+        <converters:EnumToStringConverter x:Key="EnumToStringConverter"/>
     </UserControl.Resources>
     <Grid Background="{StaticResource MainBackgroundColor}">
         <Grid.RowDefinitions>
@@ -54,8 +57,6 @@
                 <ComboBox Width="100" SelectedItem="{Binding Attacker.FastMove}" DisplayMemberPath="FastMove.Name" ItemsSource="{Binding Attacker.Species.FastMoves}"/>
                 <Label Content="Charge Move"/>
                 <ComboBox Width="100" SelectedItem="{Binding Attacker.ChargeMove}" DisplayMemberPath="ChargeMove.Name" ItemsSource="{Binding Attacker.Species.ChargeMoves}"/>
-                <Label Content="Dodge Charge Moves?"/>
-                <CheckBox IsChecked="{Binding DodgeChargeAttacks}"/>
             </StackPanel>
             <StackPanel Name="BattleResults" Orientation="Horizontal" HorizontalAlignment="Center">
                 <Label Content="Time Required:"/>
@@ -90,6 +91,16 @@
                 <ComboBox Width="100" SelectedItem="{Binding Defender.FastMove}" DisplayMemberPath="FastMove.Name" ItemsSource="{Binding Defender.Species.FastMoves}"/>
                 <Label Content="Charge Move"/>
                 <ComboBox Width="100" SelectedItem="{Binding Defender.ChargeMove}" DisplayMemberPath="ChargeMove.Name" ItemsSource="{Binding Defender.Species.ChargeMoves}"/>
+                <Label Content="Weather"/>
+                <ComboBox SelectedItem="{Binding SelectedWeather}" ItemsSource="{Binding Source={StaticResource WeatherView}}" Width="150">
+                    <ComboBox.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding Path=., Converter={StaticResource EnumToStringConverter}}" />
+                        </DataTemplate>
+                    </ComboBox.ItemTemplate>
+                </ComboBox>
+                <Label Content="Dodge Charge Moves?"/>
+                <CheckBox IsChecked="{Binding DodgeChargeAttacks}"/>
             </StackPanel>
             <Button Content="Simulate" Width="250" Command="{Binding SimulateBattleCommand}"/>
         </StackPanel>

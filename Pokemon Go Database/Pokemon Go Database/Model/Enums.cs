@@ -1,12 +1,73 @@
 ﻿using System.ComponentModel;
-
+using System.ComponentModel.DataAnnotations;
 namespace Pokemon_Go_Database.Model
 {
-    public enum Type {[Description("None")] None, [Description("Normal")] Normal, [Description("Fighting")] Fighting, [Description("Flying")] Flying, [Description("Poison")] Poison, [Description("Ground")] Ground, [Description("Rock")] Rock, [Description("Bug")] Bug, [Description("Ghost")] Ghost, [Description("Steel")] Steel, [Description("Fire")] Fire, [Description("Water")] Water, [Description("Grass")] Grass, [Description("Electric")] Electric, [Description("Psychic")] Psychic, [Description("Ice")] Ice, [Description("Dragon")] Dragon, [Description("Dark")] Dark, [Description("Fairy")] Fairy };
-    public enum MoveType { Fast, Charge };
-    public enum CombatType { Offense, Defense };
-    public enum IVLevel { Low, Medium, High, Max };
-    public enum TotalIVLevel { Low, Medium, High, Max};
+    public enum Type
+    {
+        [Display(Description = "None")] None,
+        [Display(Description = "Normal")] Normal,
+        [Display(Description = "Fighting")] Fighting,
+        [Display(Description = "Flying")] Flying,
+        [Display(Description = "Poison")] Poison,
+        [Display(Description = "Ground")] Ground,
+        [Display(Description = "Rock")] Rock,
+        [Display(Description = "Bug")] Bug,
+        [Display(Description = "Ghost")] Ghost,
+        [Display(Description = "Steel")] Steel,
+        [Display(Description = "Fire")] Fire,
+        [Display(Description = "Water")] Water,
+        [Display(Description = "Grass")] Grass,
+        [Display(Description = "Electric")] Electric,
+        [Display(Description = "Psychic")] Psychic,
+        [Display(Description = "Ice")] Ice,
+        [Display(Description = "Dragon")] Dragon,
+        [Display(Description = "Dark")] Dark,
+        [Display(Description = "Fairy")] Fairy
+    };
+    public enum MoveType
+    {
+        [Display(Description = "Fast Move")] Fast,
+        [Display(Description = "Charge Move")] Charge
+    };
+    public enum CombatType
+    {
+        [Display(Description = "Offense")] Offense,
+        [Display(Description = "Defense")] Defense
+    };
+    public enum IVLevel
+    {
+        [Display(Description = "Low (0-7)")] Low,
+        [Display(Description = "Medium (8-12)")] Medium,
+        [Display(Description = "High (13-14)")] High,
+        [Display(Description = "Max (15)")] Max
+    };
+    public enum TotalIVLevel
+    {
+        [Display(Description = "Below Average")] Low,
+        [Display(Description = "Above Average")] Medium,
+        [Display(Description = "Great")] High,
+        [Display(Description = "Excellent")] Max
+    };
 
-    public enum DefenderType { [Description("Gym Defender")] GymDefender, [Description("Tier 1")] Tier1, [Description("Tier 2")] Tier2, [Description("Tier 3")] Tier3, [Description("Tier 4")] Tier4, [Description("Tier 5")] Tier5 }
+    public enum DefenderType
+    {
+        [Display(Description = "Gym Defender")] GymDefender,
+        [Display(Description = "Tier 1")] Tier1,
+        [Display(Description = "Tier 2")] Tier2,
+        [Display(Description = "Tier 3")] Tier3,
+        [Display(Description = "Tier 4")] Tier4,
+        [Display(Description = "Tier 5")] Tier5
+    };
+
+    public enum Weather
+    {
+        [Display(Description = "Extreme")] Extreme,
+        [Display(Description = "Sunny/Clear")] SunnyClear,
+        [Display(Description = "Rain")] Rain,
+        [Display(Description = "Wind")] Wind,
+        [Display(Description = "Snow")] Snow,
+        [Display(Description = "Fog")] Fog,
+        [Display(Description = "Cloudy")] Cloudy,
+        [Display(Description = "Partly Cloudy")] PartlyCloudy
+    };
 }

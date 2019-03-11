@@ -6,6 +6,7 @@
              xmlns:local="clr-namespace:Pokemon_Go_Database.Popups"
              xmlns:scm="clr-namespace:System.ComponentModel;assembly=WindowsBase"
              xmlns:xtk="http://schemas.xceed.com/wpf/xaml/datagrid"
+             xmlns:converters="clr-namespace:Pokemon_Go_Database.ValueConverters"
              mc:Ignorable="d" 
              d:DataContext="{d:DesignInstance Type=local:IVCalculatorViewModel}">
     <UserControl.Resources>
@@ -14,6 +15,7 @@
                 <scm:SortDescription PropertyName="Species" Direction="Ascending"/>
             </CollectionViewSource.SortDescriptions>
         </CollectionViewSource>
+        <converters:EnumToStringConverter x:Key="EnumToStringConverter"/>
     </UserControl.Resources>
     <Grid Background="{StaticResource MainBackgroundColor}" Width="750" Height="500">
         <Grid.RowDefinitions>
@@ -69,11 +71,23 @@
             </StackPanel>
             <StackPanel Orientation="Horizontal">
                 <Label Content="Best IV Level:"/>
-                <ComboBox ItemsSource="{Binding IVLevels}" SelectedItem="{Binding Calculator.BestIVLevel}" Width="75"/>
+                <ComboBox SelectedItem="{Binding Calculator.BestIVLevel}" ItemsSource="{Binding IVLevels}" Width="75">
+                    <ComboBox.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding Path=., Converter={StaticResource EnumToStringConverter}}" />
+                        </DataTemplate>
+                    </ComboBox.ItemTemplate>
+                </ComboBox>
             </StackPanel>
             <StackPanel Orientation="Horizontal">
                 <Label Content="Overall IV Level:"/>
-                <ComboBox ItemsSource="{Binding TotalIVLevels}" SelectedItem="{Binding Calculator.TotalIVLevel}" Width="75"/>
+                <ComboBox ItemsSource="{Binding TotalIVLevels}" SelectedItem="{Binding Calculator.TotalIVLevel}" Width="75">
+                    <ComboBox.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding Path=., Converter={StaticResource EnumToStringConverter}}" />
+                        </DataTemplate>
+                    </ComboBox.ItemTemplate>
+                </ComboBox>
             </StackPanel>
         </StackPanel>
         <Button Grid.Row="3" Content="Calculate IVs" Command="{Binding CalculateIVsCommand}" Width="150" HorizontalAlignment="Center"/>

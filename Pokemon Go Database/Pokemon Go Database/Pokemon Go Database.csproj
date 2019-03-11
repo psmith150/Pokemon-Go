@@ -59,6 +59,7 @@
       <HintPath>..\packages\SpreadsheetLight.3.4.9\lib\SpreadsheetLight.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.IO.Compression.FileSystem" />
@@ -160,8 +161,7 @@
     <Compile Include="Services\NavigationService.cs" />
     <Compile Include="Services\SessionService.cs" />
     <Compile Include="ValueConverters\DPSValueToBrushConverter.cs" />
-    <Compile Include="ValueConverters\TotalIVEnumToNameConverter.cs" />
-    <Compile Include="ValueConverters\IVEnumToNameConverter.cs" />
+    <Compile Include="ValueConverters\EnumToStringConverter.cs" />
     <Compile Include="ValueConverters\TypeToBoolConverter.cs" />
     <Compile Include="ValueConverters\ViewModelToViewConverter.cs" />
     <Compile Include="Windows\MainWindowViewModel.cs" />

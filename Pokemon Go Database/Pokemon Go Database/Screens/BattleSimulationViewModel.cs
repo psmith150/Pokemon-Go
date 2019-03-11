@@ -196,10 +196,6 @@ namespace Pokemon_Go_Database.Screens
                     this.Defender.IVSets[0].DefenseIV = Constants.MaxIV;
                     this.Defender.IVSets[0].StaminaIV = Constants.MaxIV;
                     int index;
-                    if (!Constants.RaidBosses.TryGetValue(this.Defender.Species.Species, out index) || index != (int)this.DefenderType)
-                    {
-                        this._messageViewer.DisplayMessage($"{Defender.Species.Species} is not a normal raid boss at this tier!", "Undefined Raid Boss", MessageViewerButton.Ok, MessageViewerIcon.Warning);
-                    }
                     double level = 1.0;
                     switch (this.DefenderType)
                     {
@@ -236,6 +232,25 @@ namespace Pokemon_Go_Database.Screens
             set
             {
                 this.Set(ref this._AllPokemonResults, value);
+            }
+        }
+        public Array WeatherOptions
+        {
+            get
+            {
+                return Enum.GetValues(typeof(Weather));
+            }
+        }
+        private Weather _SelectedWeather;
+        public Weather SelectedWeather
+        {
+            get
+            {
+                return this._SelectedWeather;
+            }
+            set
+            {
+                this.Set(ref this._SelectedWeather, value);
             }
         }
         #endregion
@@ -369,6 +384,7 @@ namespace Pokemon_Go_Database.Screens
                             attackerPower = attacker.FastMove.FastMove.Power;
                             if (attacker.Species.Type1 == attacker.FastMove.FastMove.Type || attacker.Species.Type2 == attacker.FastMove.FastMove.Type)
                                 attackerBonus *= Constants.StabBonus;
+                            attackerBonus *= Constants.CalculateWeatherBonus(attacker.FastMove.FastMove.Type, this.SelectedWeather);
                             attackerBonus *= Constants.CalculateTypeBonus(attacker.FastMove.FastMove.Type, defender.Species.Type1, defender.Species.Type2);
                             attackerEnergy += attacker.FastMove.FastMove.Energy;
                             attackerDamage = Constants.CalculateDamage(attackerPower, attacker.GetAttack(), defender.GetDefense(), attackerBonus);
@@ -394,6 +410,7 @@ namespace Pokemon_Go_Database.Screens
                             attackerEnergy -= attacker.ChargeMove.ChargeMove.Energy;
                             if (attacker.Species.Type1 == attacker.ChargeMove.ChargeMove.Type || attacker.Species.Type2 == attacker.ChargeMove.ChargeMove.Type)
                                 attackerBonus *= Constants.StabBonus;
+                            attackerBonus *= Constants.CalculateWeatherBonus(attacker.ChargeMove.ChargeMove.Type, this.SelectedWeather);
                             attackerBonus *= Constants.CalculateTypeBonus(attacker.ChargeMove.ChargeMove.Type, defender.Species.Type1, defender.Species.Type2);
                             attackerState = BattleState.ChargeAttackWindow;
                         }
@@ -444,6 +461,7 @@ namespace Pokemon_Go_Database.Screens
                             defenderPower = defender.FastMove.FastMove.Power;
                             if (defender.Species.Type1 == defender.FastMove.FastMove.Type || defender.Species.Type2 == defender.FastMove.FastMove.Type)
                                 defenderBonus *= Constants.StabBonus;
+                            defenderBonus *= Constants.CalculateWeatherBonus(defender.FastMove.FastMove.Type, this.SelectedWeather);
                             defenderBonus *= Constants.CalculateTypeBonus(defender.FastMove.FastMove.Type, attacker.Species.Type1, attacker.Species.Type2);
                             defenderEnergy += defender.FastMove.FastMove.Energy;
                             defenderState = BattleState.FastAttackWindow;
@@ -468,6 +486,7 @@ namespace Pokemon_Go_Database.Screens
                             defenderEnergy -= defender.ChargeMove.ChargeMove.Energy;
                             if (defender.Species.Type1 == defender.ChargeMove.ChargeMove.Type || defender.Species.Type2 == defender.ChargeMove.ChargeMove.Type)
                                 defenderBonus *= Constants.StabBonus;
+                            defenderBonus *= Constants.CalculateWeatherBonus(defender.ChargeMove.ChargeMove.Type, this.SelectedWeather);
                             defenderBonus *= Constants.CalculateTypeBonus(defender.ChargeMove.ChargeMove.Type, attacker.Species.Type1, attacker.Species.Type2);
                             defenderState = BattleState.ChargeAttackWindow;
                         }

@@ -60,7 +60,7 @@ namespace Pokemon_Go_Database.Popups
 
         public override void Deinitialize()
         {
-            this.Calculator = null;
+            //this.Calculator = null;
         }
 
         #region Private Fields

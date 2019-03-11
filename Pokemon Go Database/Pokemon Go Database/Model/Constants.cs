@@ -82,38 +82,6 @@ namespace Pokemon_Go_Database.Model
         /// </summary>
         public static readonly double[,] TypeChart;
 
-        public static readonly Dictionary<string, int> RaidBosses = new Dictionary<string, int>
-        {
-            {"Snorunt", 1 },
-            {"Swablu", 1 },
-            {"Wailmer", 1 },
-            {"Magikarp", 1 },
-            {"Mawile", 2 },
-            {"Sableye",2 },
-            {"Exeggutor", 2 },
-            {"Slowbro", 2 },
-            {"Claydol", 3 },
-            {"Aerodactyl", 3 },
-            {"Scyther", 3 },
-            {"Starmie", 3 },
-            {"Machamp", 3 },
-            {"Alakazam", 3 },
-            {"Absol", 4 },
-            {"Aggron", 4 },
-            {"Tyranitar", 4 },
-            {"Charizard", 4 },
-            {"Golem", 4 },
-            {"Groudon", 5 },
-            {"Kyogre", 5 },
-            {"Rayquaza", 5 },
-            {"Lugia", 5 },
-            {"Ho-oh", 5 },
-            {"Latios", 5 },
-            {"Latias", 5 },
-            {"Regice", 5 },
-            {"Mewtwo", 5 }
-        };
-
         static Constants()
         {
             double[] values = new double[79];
@@ -305,6 +273,44 @@ namespace Pokemon_Go_Database.Model
         public static double CalculateTypeBonus(Type moveType, Type pokemonType1, Type pokemonType2)
         {
             return TypeChart[(int)moveType, (int)pokemonType1] * TypeChart[(int)moveType, (int)pokemonType2];
+        }
+        public static double CalculateWeatherBonus(Type moveType, Weather weather)
+        {
+            double bonus = 1.0;
+            switch (weather)
+            {
+                case Weather.SunnyClear:
+                    if (moveType == Type.Grass || moveType == Type.Ground || moveType == Type.Fire)
+                        bonus = WeatherBonus;
+                    break;
+                case Weather.Rain:
+                    if (moveType == Type.Water || moveType == Type.Electric || moveType == Type.Bug)
+                        bonus = WeatherBonus;
+                    break;
+                case Weather.Wind:
+                    if (moveType == Type.Dragon || moveType == Type.Flying || moveType == Type.Psychic)
+                        bonus = WeatherBonus;
+                    break;
+                case Weather.Snow:
+                    if (moveType == Type.Ice || moveType == Type.Steel)
+                        bonus = WeatherBonus;
+                    break;
+                case Weather.Fog:
+                    if (moveType == Type.Dark || moveType == Type.Ghost)
+                        bonus = WeatherBonus;
+                    break;
+                case Weather.Cloudy:
+                    if (moveType == Type.Fairy || moveType == Type.Fighting || moveType == Type.Poison)
+                        bonus = WeatherBonus;
+                    break;
+                case Weather.PartlyCloudy:
+                    if (moveType == Type.Normal || moveType == Type.Rock)
+                        bonus = WeatherBonus;
+                    break;
+                default:
+                    break;
+            }
+            return bonus;
         }
     }
 }
