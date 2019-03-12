@@ -23,6 +23,7 @@ namespace Pokemon_Go_Database.Model
             this.DefenseIVExpression = "0";
             this.StaminaIVExpression = "0";
             this.LevelExpression = "1";
+            this.DustToPower = Constants.DustCutoffs[0];
             this.IVSets = new MyObservableCollection<IVSet>();
         }
 
