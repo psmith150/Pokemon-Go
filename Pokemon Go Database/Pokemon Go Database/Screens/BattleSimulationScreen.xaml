@@ -7,6 +7,7 @@
              xmlns:scm="clr-namespace:System.ComponentModel;assembly=WindowsBase"
              xmlns:xtk="http://schemas.xceed.com/wpf/xaml/datagrid"
              xmlns:converters="clr-namespace:Pokemon_Go_Database.ValueConverters"
+             xmlns:customControls="clr-namespace:Pokemon_Go_Database.CustomControls"
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="1000"
              d:DataContext="{d:DesignInstance Type=local:BattleSimulationViewModel}">
@@ -44,22 +45,7 @@
                 <Label Content="Select from existing Pokemon"/>
                 <ComboBox ItemsSource="{Binding Source={StaticResource MyPokemonView}}" SelectedItem="{Binding SelectedAttackerPokemon}" DisplayMemberPath="FullName" Width="400"/>
             </StackPanel>
-            <StackPanel Name="Attacker" Orientation="Horizontal" HorizontalAlignment="Center">
-                <Label Content="Pokemon:"/>
-                <ComboBox ItemsSource="{Binding Source={StaticResource AttackerSpeciesView}}" DisplayMemberPath="Species" SelectedItem="{Binding Attacker.Species}" Width="150"/>
-                <Label Content="Level:"/>
-                <xtk:AutoSelectTextBox Text="{Binding Attacker.IVSets[0].Level}" Width="30" VerticalAlignment="Center" AutoSelectBehavior="OnFocus"/>
-                <Label Content="Attack IV"/>
-                <xtk:AutoSelectTextBox Text="{Binding Attacker.IVSets[0].AttackIV}" Width="30" VerticalAlignment="Center" AutoSelectBehavior="OnFocus"/>
-                <Label Content="Defense IV"/>
-                <xtk:AutoSelectTextBox Text="{Binding Attacker.IVSets[0].DefenseIV}" Width="30" VerticalAlignment="Center" AutoSelectBehavior="OnFocus"/>
-                <Label Content="Stamina IV"/>
-                <xtk:AutoSelectTextBox Text="{Binding Attacker.IVSets[0].StaminaIV}" Width="30" VerticalAlignment="Center" AutoSelectBehavior="OnFocus"/>
-                <Label Content="Fast Move"/>
-                <ComboBox Width="100" SelectedItem="{Binding Attacker.FastMove}" DisplayMemberPath="FastMove.Name" ItemsSource="{Binding Attacker.Species.FastMoves}"/>
-                <Label Content="Charge Move"/>
-                <ComboBox Width="100" SelectedItem="{Binding Attacker.ChargeMove}" DisplayMemberPath="ChargeMove.Name" ItemsSource="{Binding Attacker.Species.ChargeMoves}"/>
-            </StackPanel>
+            <customControls:PokemonSimulationViewer Pokemon="{Binding Attacker}" SpeciesView="{Binding Source={StaticResource AttackerSpeciesView}}" Margin="2"/>
             <StackPanel Name="BattleResults" Orientation="Horizontal" HorizontalAlignment="Center">
                 <Label Content="Time Required:"/>
                 <TextBlock Text="{Binding BattleResult.BattleDuration}" VerticalAlignment="Center"/>
@@ -77,28 +63,15 @@
         </StackPanel>
         <StackPanel Name="DefenderWrapper" Grid.Row="1" Margin="2">
             <StackPanel Name="DefenderDisplay" Orientation="Horizontal" HorizontalAlignment="Center">
-                <Label Content="Pokemon:"/>
-                <ComboBox ItemsSource="{Binding Source={StaticResource DefenderSpeciesView}}" DisplayMemberPath="Species" SelectedItem="{Binding Defender.Species}" Width="150"/>
                 <Label Content="Defender Type: "/>
-                <ComboBox HorizontalAlignment="Stretch" ItemsSource="{Binding DefenderTypes}" SelectedItem="{Binding DefenderType}">
+                <ComboBox ItemsSource="{Binding DefenderTypes}" SelectedItem="{Binding DefenderType}" Width="150">
                     <ComboBox.ItemTemplate>
                         <DataTemplate>
                             <TextBlock Text="{Binding Path=., Converter={StaticResource EnumToStringConverter}}" />
                         </DataTemplate>
                     </ComboBox.ItemTemplate>
                 </ComboBox>
-                <Label Content="Level:"/>
-                <xtk:AutoSelectTextBox Text="{Binding Defender.IVSets[0].Level}" Width="30" VerticalAlignment="Center" IsReadOnly="{Binding IsRaidBoss}" AutoSelectBehavior="OnFocus"/>
-                <Label Content="Attack IV"/>
-                <xtk:AutoSelectTextBox Text="{Binding Defender.IVSets[0].AttackIV}" Width="30" VerticalAlignment="Center" IsReadOnly="{Binding IsRaidBoss}" AutoSelectBehavior="OnFocus"/>
-                <Label Content="Defense IV"/>
-                <xtk:AutoSelectTextBox Text="{Binding Defender.IVSets[0].DefenseIV}" Width="30" VerticalAlignment="Center" IsReadOnly="{Binding IsRaidBoss}" AutoSelectBehavior="OnFocus"/>
-                <Label Content="Stamina IV"/>
-                <xtk:AutoSelectTextBox Text="{Binding Defender.IVSets[0].StaminaIV}" Width="30" VerticalAlignment="Center" IsReadOnly="{Binding IsRaidBoss}" AutoSelectBehavior="OnFocus"/>
-                <Label Content="Fast Move"/>
-                <ComboBox Width="100" SelectedItem="{Binding Defender.FastMove}" DisplayMemberPath="FastMove.Name" ItemsSource="{Binding Defender.Species.FastMoves}"/>
-                <Label Content="Charge Move"/>
-                <ComboBox Width="100" SelectedItem="{Binding Defender.ChargeMove}" DisplayMemberPath="ChargeMove.Name" ItemsSource="{Binding Defender.Species.ChargeMoves}"/>
+                <customControls:PokemonSimulationViewer Pokemon="{Binding Defender}" SpeciesView="{Binding Source={StaticResource DefenderSpeciesView}}" Margin="2"/>
             </StackPanel>
             <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center" Margin="2">
                 <Label Content="Weather"/>

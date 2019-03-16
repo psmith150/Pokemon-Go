@@ -40,9 +40,9 @@ namespace Pokemon_Go_Database.CustomControls
         #region Dependency Properties
         // Using a DependencyProperty as the backing store for ValuesDataSource.  This enables animation, styling, binding, etc...
         public static readonly DependencyProperty SpeciesViewProperty =
-            DependencyProperty.Register("SpeciesViewProperty", typeof(ListCollectionView), typeof(PokemonSimulationViewer));
+            DependencyProperty.Register("SpeciesView", typeof(ListCollectionView), typeof(PokemonSimulationViewer));
         public static readonly DependencyProperty PokemonProperty =
-            DependencyProperty.Register("PokemonProperty", typeof(Pokemon), typeof(PokemonSimulationViewer));
+            DependencyProperty.Register("Pokemon", typeof(Pokemon), typeof(PokemonSimulationViewer));
         #endregion
     }
 }

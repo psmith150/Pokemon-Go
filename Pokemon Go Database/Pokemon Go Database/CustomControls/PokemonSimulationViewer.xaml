@@ -7,23 +7,24 @@
              xmlns:xtk="http://schemas.xceed.com/wpf/xaml/datagrid"
              xmlns:converters="clr-namespace:Pokemon_Go_Database.ValueConverters"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
-    <Grid>
+             d:DesignHeight="450" d:DesignWidth="800"
+             x:Name="PokemonViewer">
+    <Grid x:Name="LayoutRoot">
         <StackPanel Name="Attacker" Orientation="Horizontal" HorizontalAlignment="Center">
             <Label Content="Pokemon:"/>
-            <ComboBox ItemsSource="{Binding SpeciesView}" DisplayMemberPath="Species" SelectedItem="{Binding Pokemon.Species}" Width="150"/>
+            <ComboBox ItemsSource="{Binding Path=SpeciesView, ElementName=PokemonViewer}" DisplayMemberPath="Species" SelectedItem="{Binding Pokemon.Species, ElementName=PokemonViewer}" Width="150"/>
             <Label Content="Level:"/>
-            <xtk:AutoSelectTextBox Text="{Binding Pokemon.IVSets[0].Level}" Width="30" VerticalAlignment="Center" AutoSelectBehavior="OnFocus"/>
+            <xtk:AutoSelectTextBox Text="{Binding Pokemon.IVSets[0].Level, ElementName=PokemonViewer}" Width="30" VerticalAlignment="Center" AutoSelectBehavior="OnFocus"/>
             <Label Content="Attack IV"/>
-            <xtk:AutoSelectTextBox Text="{Binding Pokemon.IVSets[0].AttackIV}" Width="30" VerticalAlignment="Center" AutoSelectBehavior="OnFocus"/>
+            <xtk:AutoSelectTextBox Text="{Binding Pokemon.IVSets[0].AttackIV, ElementName=PokemonViewer}" Width="30" VerticalAlignment="Center" AutoSelectBehavior="OnFocus"/>
             <Label Content="Defense IV"/>
-            <xtk:AutoSelectTextBox Text="{Binding Pokemon.IVSets[0].DefenseIV}" Width="30" VerticalAlignment="Center" AutoSelectBehavior="OnFocus"/>
+            <xtk:AutoSelectTextBox Text="{Binding Pokemon.IVSets[0].DefenseIV, ElementName=PokemonViewer}" Width="30" VerticalAlignment="Center" AutoSelectBehavior="OnFocus"/>
             <Label Content="Stamina IV"/>
-            <xtk:AutoSelectTextBox Text="{Binding Pokemon.IVSets[0].StaminaIV}" Width="30" VerticalAlignment="Center" AutoSelectBehavior="OnFocus"/>
+            <xtk:AutoSelectTextBox Text="{Binding Pokemon.IVSets[0].StaminaIV, ElementName=PokemonViewer}" Width="30" VerticalAlignment="Center" AutoSelectBehavior="OnFocus"/>
             <Label Content="Fast Move"/>
-            <ComboBox Width="100" SelectedItem="{Binding Pokemon.FastMove}" DisplayMemberPath="FastMove.Name" ItemsSource="{Binding Pokemon.Species.FastMoves}"/>
+            <ComboBox Width="100" SelectedItem="{Binding Pokemon.FastMove, ElementName=PokemonViewer}" DisplayMemberPath="FastMove.Name" ItemsSource="{Binding Pokemon.Species.FastMoves, ElementName=PokemonViewer}"/>
             <Label Content="Charge Move"/>
-            <ComboBox Width="100" SelectedItem="{Binding Pokemon.ChargeMove}" DisplayMemberPath="ChargeMove.Name" ItemsSource="{Binding Pokemon.Species.ChargeMoves}"/>
+            <ComboBox Width="100" SelectedItem="{Binding Pokemon.ChargeMove, ElementName=PokemonViewer}" DisplayMemberPath="ChargeMove.Name" ItemsSource="{Binding Pokemon.Species.ChargeMoves, ElementName=PokemonViewer}"/>
         </StackPanel>
     </Grid>
 </UserControl>
