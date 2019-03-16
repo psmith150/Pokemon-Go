@@ -253,6 +253,27 @@ namespace Pokemon_Go_Database.Screens
                 this.Set(ref this._SelectedWeather, value);
             }
         }
+
+        public Array FriendshipOptions
+        {
+            get
+            {
+                return Enum.GetValues(typeof(Friendship));
+            }
+        }
+
+        private Friendship _SelectedFriendship;
+        public Friendship SelectedFriendship
+        {
+            get
+            {
+                return this._SelectedFriendship;
+            }
+            set
+            {
+                this.Set(ref this._SelectedFriendship, value);
+            }
+        }
         #endregion
 
         #region Private Methods
@@ -386,6 +407,7 @@ namespace Pokemon_Go_Database.Screens
                                 attackerBonus *= Constants.StabBonus;
                             attackerBonus *= Constants.CalculateWeatherBonus(attacker.FastMove.FastMove.Type, this.SelectedWeather);
                             attackerBonus *= Constants.CalculateTypeBonus(attacker.FastMove.FastMove.Type, defender.Species.Type1, defender.Species.Type2);
+                            attackerBonus *= Constants.CalculateFriendshipBonus(this.SelectedFriendship);
                             attackerEnergy += attacker.FastMove.FastMove.Energy;
                             attackerDamage = Constants.CalculateDamage(attackerPower, attacker.GetAttack(), defender.GetDefense(), attackerBonus);
                             attackerState = BattleState.FastAttackWindow;
@@ -412,6 +434,7 @@ namespace Pokemon_Go_Database.Screens
                                 attackerBonus *= Constants.StabBonus;
                             attackerBonus *= Constants.CalculateWeatherBonus(attacker.ChargeMove.ChargeMove.Type, this.SelectedWeather);
                             attackerBonus *= Constants.CalculateTypeBonus(attacker.ChargeMove.ChargeMove.Type, defender.Species.Type1, defender.Species.Type2);
+                            attackerBonus *= Constants.CalculateFriendshipBonus(this.SelectedFriendship);
                             attackerState = BattleState.ChargeAttackWindow;
                         }
                     }

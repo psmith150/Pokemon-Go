@@ -27,10 +27,12 @@
             </CollectionViewSource.SortDescriptions>
         </CollectionViewSource>
         <CollectionViewSource x:Key="WeatherView" Source="{Binding WeatherOptions}"/>
+        <CollectionViewSource x:Key="FriendshipView" Source="{Binding FriendshipOptions}"/>
         <converters:EnumToStringConverter x:Key="EnumToStringConverter"/>
     </UserControl.Resources>
     <Grid Background="{StaticResource MainBackgroundColor}">
         <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
@@ -64,21 +66,27 @@
                 <Label Content="Number of Deaths:"/>
                 <TextBlock Text="{Binding BattleResult.NumberOfDeaths}" VerticalAlignment="Center"/>
                 <Label Content="DPS:"/>
-                <TextBlock Text="{Binding BattleResult.DPS}" VerticalAlignment="Center"/>
+                <TextBlock Text="{Binding BattleResult.DPS, StringFormat=N2}" VerticalAlignment="Center"/>
                 <Label Content="TDO:"/>
-                <TextBlock Text="{Binding BattleResult.TDO, StringFormat=P1}" VerticalAlignment="Center"/>
+                <TextBlock Text="{Binding BattleResult.TDO, StringFormat=P2}" VerticalAlignment="Center"/>
             </StackPanel>
             <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
                 <Label Content="Next breakpoint at level"/>
                 <TextBlock Text="{Binding NextBreakpoint}" VerticalAlignment="Center"/>
             </StackPanel>
         </StackPanel>
-        <StackPanel Name="DefenderWrapper" Grid.Row="1">
+        <StackPanel Name="DefenderWrapper" Grid.Row="1" Margin="2">
             <StackPanel Name="DefenderDisplay" Orientation="Horizontal" HorizontalAlignment="Center">
                 <Label Content="Pokemon:"/>
                 <ComboBox ItemsSource="{Binding Source={StaticResource DefenderSpeciesView}}" DisplayMemberPath="Species" SelectedItem="{Binding Defender.Species}" Width="150"/>
                 <Label Content="Defender Type: "/>
-                <ComboBox HorizontalAlignment="Stretch" ItemsSource="{Binding DefenderTypes}" SelectedItem="{Binding DefenderType}"/>
+                <ComboBox HorizontalAlignment="Stretch" ItemsSource="{Binding DefenderTypes}" SelectedItem="{Binding DefenderType}">
+                    <ComboBox.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding Path=., Converter={StaticResource EnumToStringConverter}}" />
+                        </DataTemplate>
+                    </ComboBox.ItemTemplate>
+                </ComboBox>
                 <Label Content="Level:"/>
                 <xtk:AutoSelectTextBox Text="{Binding Defender.IVSets[0].Level}" Width="30" VerticalAlignment="Center" IsReadOnly="{Binding IsRaidBoss}" AutoSelectBehavior="OnFocus"/>
                 <Label Content="Attack IV"/>
@@ -91,8 +99,18 @@
                 <ComboBox Width="100" SelectedItem="{Binding Defender.FastMove}" DisplayMemberPath="FastMove.Name" ItemsSource="{Binding Defender.Species.FastMoves}"/>
                 <Label Content="Charge Move"/>
                 <ComboBox Width="100" SelectedItem="{Binding Defender.ChargeMove}" DisplayMemberPath="ChargeMove.Name" ItemsSource="{Binding Defender.Species.ChargeMoves}"/>
+            </StackPanel>
+            <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center" Margin="2">
                 <Label Content="Weather"/>
                 <ComboBox SelectedItem="{Binding SelectedWeather}" ItemsSource="{Binding Source={StaticResource WeatherView}}" Width="150">
+                    <ComboBox.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding Path=., Converter={StaticResource EnumToStringConverter}}" />
+                        </DataTemplate>
+                    </ComboBox.ItemTemplate>
+                </ComboBox>
+                <Label Content="Friendship"/>
+                <ComboBox SelectedItem="{Binding SelectedFriendship}" ItemsSource="{Binding Source={StaticResource FriendshipView}}" Width="150">
                     <ComboBox.ItemTemplate>
                         <DataTemplate>
                             <TextBlock Text="{Binding Path=., Converter={StaticResource EnumToStringConverter}}" />
@@ -102,9 +120,9 @@
                 <Label Content="Dodge Charge Moves?"/>
                 <CheckBox IsChecked="{Binding DodgeChargeAttacks}"/>
             </StackPanel>
-            <Button Content="Simulate" Width="250" Command="{Binding SimulateBattleCommand}"/>
+            <Button Content="Simulate" Width="250" Command="{Binding SimulateBattleCommand}" Margin="2"/>
         </StackPanel>
-        <Expander Grid.Row="2">
+        <Expander Grid.Row="3">
             <Expander.Style>
                 <Style TargetType="Expander">
                     <Setter Property="IsExpanded" Value="False" />
@@ -118,10 +136,10 @@
             </Expander.Style>
             <DataGrid ItemsSource="{Binding BattleLog}" AutoGenerateColumns="True"/>
         </Expander>
-        <StackPanel Grid.Row="3" HorizontalAlignment="Center" Orientation="Horizontal">
+        <StackPanel Grid.Row="4" HorizontalAlignment="Center" Orientation="Horizontal">
             <Button Content="Simulate All Pokemon" Width="250" Command="{Binding SimulateAllPokemonCommand}"/>
         </StackPanel>
-        <Expander Grid.Row="4">
+        <Expander Grid.Row="5">
             <Expander.Style>
                 <Style TargetType="Expander">
                     <Setter Property="IsExpanded" Value="False" />
@@ -135,9 +153,10 @@
             </Expander.Style>
             <DataGrid ItemsSource="{Binding AllPokemonResults}" AutoGenerateColumns="False">
                 <DataGrid.Columns>
-                    <DataGridTextColumn Header="Pokemon" Binding="{Binding Path=Name}" Width="6*"/>
-                    <DataGridTextColumn Header="DPS" Binding="{Binding Path=DPS, StringFormat=N2}" Width="2*"/>
-                    <DataGridTextColumn Header="TDO" Binding="{Binding Path=TDO, StringFormat=P2}" Width="2*"/>
+                    <DataGridTextColumn Header="Pokemon" Binding="{Binding Path=Name}" Width="70*"/>
+                    <DataGridTextColumn Header="DPS" Binding="{Binding Path=DPS, StringFormat=N2}" Width="10*"/>
+                    <DataGridTextColumn Header="TDO" Binding="{Binding Path=TDO, StringFormat=P2}" Width="10*"/>
+                    <DataGridTextColumn Header="Time" Binding="{Binding Path=BattleDuration, StringFormat=N1}" Width="10*"/>
                 </DataGrid.Columns>
             </DataGrid>
         </Expander>

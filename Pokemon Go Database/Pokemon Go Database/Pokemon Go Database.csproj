@@ -96,6 +96,9 @@
     </ApplicationDefinition>
     <Compile Include="BaseViewModel.cs" />
     <Compile Include="CustomControls\HoverButton.cs" />
+    <Compile Include="CustomControls\PokemonSimulationViewer.xaml.cs">
+      <DependentUpon>PokemonSimulationViewer.xaml</DependentUpon>
+    </Compile>
     <Compile Include="IOC\IOCContainer.cs" />
     <Compile Include="IOC\MessageViewer.cs" />
     <Compile Include="Model\BattleLogEntry.cs" />
@@ -165,6 +168,10 @@
     <Compile Include="ValueConverters\TypeToBoolConverter.cs" />
     <Compile Include="ValueConverters\ViewModelToViewConverter.cs" />
     <Compile Include="Windows\MainWindowViewModel.cs" />
+    <Page Include="CustomControls\PokemonSimulationViewer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Popups\SettingsPopup.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

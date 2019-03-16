@@ -70,4 +70,13 @@ namespace Pokemon_Go_Database.Model
         [Display(Description = "Cloudy")] Cloudy,
         [Display(Description = "Partly Cloudy")] PartlyCloudy
     };
+
+    public enum Friendship
+    {
+        [Display(Description = "None")] None,
+        [Display(Description = "Good Friends")] Good,
+        [Display(Description = "Great Friends")] Great,
+        [Display(Description = "Ultra Friends")] Ultra,
+        [Display(Description = "Best Friends")] Best
+    }
 }

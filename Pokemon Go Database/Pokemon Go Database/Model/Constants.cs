@@ -76,6 +76,14 @@ namespace Pokemon_Go_Database.Model
 
         public const double LuckyStardustMultiplier = 0.5;
 
+        public const double GoodFriendBonus = 1.03;
+
+        public const double GreatFriendBonus = 1.05;
+
+        public const double UltraFriendBonus = 1.07;
+
+        public const double BestFriendBonus = 1.1;
+
         public static string BaseDataFilePath =  AppDomain.CurrentDomain.BaseDirectory + @"BaseData.xml";
         /// <summary>
         /// Attacker,Defender
@@ -310,6 +318,32 @@ namespace Pokemon_Go_Database.Model
                 default:
                     break;
             }
+            return bonus;
+        }
+        public static double CalculateFriendshipBonus(Friendship friendship)
+        {
+            double bonus = 1.0;
+
+            switch (friendship)
+            {
+                case Friendship.Good:
+                    bonus = GoodFriendBonus;
+                    break;
+                case Friendship.Great:
+                    bonus = GreatFriendBonus;
+                    break;
+                case Friendship.Ultra:
+                    bonus = UltraFriendBonus;
+                    break;
+                case Friendship.Best:
+                    bonus = BestFriendBonus;
+                    break;
+                case Friendship.None:
+                default:
+                    bonus = 1.0;
+                    break;
+            }
+
             return bonus;
         }
     }
