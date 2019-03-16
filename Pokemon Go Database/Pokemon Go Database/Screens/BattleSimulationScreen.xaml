@@ -48,7 +48,7 @@
             <customControls:PokemonSimulationViewer Pokemon="{Binding Attacker}" SpeciesView="{Binding Source={StaticResource AttackerSpeciesView}}" Margin="2"/>
             <StackPanel Name="BattleResults" Orientation="Horizontal" HorizontalAlignment="Center">
                 <Label Content="Time Required:"/>
-                <TextBlock Text="{Binding BattleResult.BattleDuration}" VerticalAlignment="Center"/>
+                <TextBlock Text="{Binding BattleResult.BattleDuration, StringFormat={}{0:N1} sec}" VerticalAlignment="Center"/>
                 <Label Content="Number of Deaths:"/>
                 <TextBlock Text="{Binding BattleResult.NumberOfDeaths}" VerticalAlignment="Center"/>
                 <Label Content="DPS:"/>
@@ -58,7 +58,7 @@
             </StackPanel>
             <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
                 <Label Content="Next breakpoint at level"/>
-                <TextBlock Text="{Binding NextBreakpoint}" VerticalAlignment="Center"/>
+                <TextBlock Text="{Binding BattleResult.NextBreakpoint}" VerticalAlignment="Center"/>
             </StackPanel>
         </StackPanel>
         <StackPanel Name="DefenderWrapper" Grid.Row="1" Margin="2">
@@ -126,10 +126,11 @@
             </Expander.Style>
             <DataGrid ItemsSource="{Binding AllPokemonResults}" AutoGenerateColumns="False">
                 <DataGrid.Columns>
-                    <DataGridTextColumn Header="Pokemon" Binding="{Binding Path=Name}" Width="70*"/>
+                    <DataGridTextColumn Header="Pokemon" Binding="{Binding Path=Name}" Width="60*"/>
                     <DataGridTextColumn Header="DPS" Binding="{Binding Path=DPS, StringFormat=N2}" Width="10*"/>
                     <DataGridTextColumn Header="TDO" Binding="{Binding Path=TDO, StringFormat=P2}" Width="10*"/>
                     <DataGridTextColumn Header="Time" Binding="{Binding Path=BattleDuration, StringFormat=N1}" Width="10*"/>
+                    <DataGridTextColumn Header="Breakpoint" Binding="{Binding Path=NextBreakpoint, StringFormat=N1}" Width="10*"/>
                 </DataGrid.Columns>
             </DataGrid>
         </Expander>

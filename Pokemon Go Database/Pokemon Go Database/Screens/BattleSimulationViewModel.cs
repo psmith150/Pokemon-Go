@@ -135,19 +135,6 @@ namespace Pokemon_Go_Database.Screens
             }
         }
 
-        private double _NextBreakpoint;
-        public double NextBreakpoint
-        {
-            get
-            {
-                return this._NextBreakpoint;
-            }
-            set
-            {
-                this.Set(ref this._NextBreakpoint, value);
-            }
-        }
-
         private ObservableCollection<BattleLogEntry> _BattleLog;
         public ObservableCollection<BattleLogEntry> BattleLog
         {
@@ -289,7 +276,6 @@ namespace Pokemon_Go_Database.Screens
                 await this._messageViewer.DisplayMessage($"Error when simulating battle: {ex.Message}", "Simulation Error", MessageViewerButton.Ok, MessageViewerIcon.Error);
             }
             this.BattleResult = result;
-            this.NextBreakpoint = result.NextBreakpoint;
             this.BattleLog = new ObservableCollection<BattleLogEntry>(result.BattleLog);
         }
 
@@ -604,6 +590,8 @@ namespace Pokemon_Go_Database.Screens
             if (attacker.Species.Type1 == attacker.FastMove.FastMove.Type || attacker.Species.Type2 == attacker.FastMove.FastMove.Type)
                 bonus *= Constants.StabBonus;
             bonus *= Constants.CalculateTypeBonus(attacker.FastMove.FastMove.Type, defender.Species.Type1, defender.Species.Type2);
+            bonus *= Constants.CalculateWeatherBonus(attacker.FastMove.FastMove.Type, this.SelectedWeather);
+            bonus *= Constants.CalculateFriendshipBonus(this.SelectedFriendship);
 
             int baseDamage = Constants.CalculateDamage(attacker.FastMove.FastMove.Power, attacker.GetAttack(), defender.GetDefense(), bonus);
             for (double i = attacker.Level; i <= Constants.MaxLevel; i += 0.5)
