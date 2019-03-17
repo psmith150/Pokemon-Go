@@ -12,6 +12,7 @@ using System.Diagnostics;
 using Pokemon_Go_Database.Popups;
 using System.Collections.ObjectModel;
 using GalaSoft.MvvmLight.Messaging;
+using Pokemon_Go_Database.Base.AbstractClasses;
 
 namespace Pokemon_Go_Database.Screens
 {
@@ -19,19 +20,25 @@ namespace Pokemon_Go_Database.Screens
     {
         #region Commands
         public ICommand CheckIVCommand { get; private set; }
-        public ICommand AddNewPokemonCommand { get; private set; }
+        public ICommand AddPokemonCommand { get; private set; }
+        public ICommand DeletePokemonCommand { get; private set; }
+        public ICommand CopyPokemonCommand { get; private set; }
         public ICommand ShowMovesetsCommand { get; private set; }
         public ICommand GoToSpeciesCommand { get; private set; }
         #endregion
 
         private readonly NavigationService navigationService;
+        private MessageViewerBase _messageViewer;
 
-        public PokemonViewModel(NavigationService navigationService, SessionService session) : base(session)
+        public PokemonViewModel(NavigationService navigationService, SessionService session, MessageViewerBase messageViewer) : base(session)
         {
             this.navigationService = navigationService;
+            this._messageViewer = messageViewer;
 
             this.CheckIVCommand = new RelayCommand(async () => await CheckIVAsync());
-            this.AddNewPokemonCommand = new RelayCommand(async () => await AddNewPokemonAsync());
+            this.AddPokemonCommand = new RelayCommand(async () => await AddPokemonAsync());
+            this.DeletePokemonCommand = new RelayCommand(async () => await DeletePokemonAsync());
+            this.CopyPokemonCommand = new RelayCommand(async () => await CopyPokemonAsync());
             this.ShowMovesetsCommand = new RelayCommand(async () => await ShowMovesetsAsync());
             this.GoToSpeciesCommand = new RelayCommand(() => GoToSpecies());
 
@@ -179,7 +186,7 @@ namespace Pokemon_Go_Database.Screens
                 return;
             await navigationService.OpenPopup<IVCalculatorViewModel>(new IVCalculatorWrapper(new IVCalculator(this.SelectedPokemon)));
         }
-        private async Task AddNewPokemonAsync()
+        private async Task AddPokemonAsync()
         {
             Pokemon newPokemon = new Pokemon();
             IVCalculator calculator = new IVCalculator(newPokemon)
@@ -194,6 +201,24 @@ namespace Pokemon_Go_Database.Screens
                 this.Session.MyPokemon.Add(args.NewPokemon);
                 Messenger.Default.Send(new PokemonMessage(args.NewPokemon));
             }
+        }
+        private async Task DeletePokemonAsync()
+        {
+            if (this.SelectedPokemon == null || !this.Session.MyPokemon.Contains(this.SelectedPokemon))
+            {
+                await this._messageViewer.DisplayMessage("Select a valid Pokemon.", "Invalid Pokemon", Base.Enums.MessageViewerButton.Ok, Base.Enums.MessageViewerIcon.Error);
+                return;
+            }
+            this.Session.MyPokemon.Remove(this.SelectedPokemon);
+        }
+        private async Task CopyPokemonAsync()
+        {
+            if (this.SelectedPokemon == null || !this.Session.MyPokemon.Contains(this.SelectedPokemon))
+            {
+                await this._messageViewer.DisplayMessage("Select a valid Pokemon.", "Invalid Pokemon", Base.Enums.MessageViewerButton.Ok, Base.Enums.MessageViewerIcon.Error);
+                return;
+            }
+            this.Session.MyPokemon.Add(this.SelectedPokemon.Copy());
         }
         private async Task ShowMovesetsAsync()
         {

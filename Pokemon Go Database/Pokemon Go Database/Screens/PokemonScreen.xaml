@@ -47,14 +47,18 @@
                 <ToggleButton Content="Needs Charge TM" IsChecked="{Binding ChargeTMFilterActive}" VerticalAlignment="Center"  Margin="5,0,5,0"/>
                 <ToggleButton Content="Needs Power Up" IsChecked="{Binding PowerUpFilterActive}" VerticalAlignment="Center"  Margin="5,0,5,0"/>
             </StackPanel>
+            <StackPanel DockPanel.Dock="Left" Orientation="Vertical" VerticalAlignment="Top" Width="Auto">
+                <Button Command="{Binding AddPokemonCommand}" Style="{StaticResource AddButtonStyle}"/>
+                <Button Command="{Binding DeletePokemonCommand}" Style="{StaticResource RemoveButtonStyle}" Width="50" Height="50"  Margin="5,10,5,10"/>
+                <Button Command="{Binding CopyPokemonCommand}" Style="{StaticResource DuplicateButtonStyle}" Width="50" Height="50"  Margin="5,10,5,10"/>
+                <Button Command="{Binding CheckIVCommand}" Style="{StaticResource DetailsButtonStyle}" Width="50" Height="50"  Margin="5,10,5,10"/>
+            </StackPanel>
             <DataGrid Name="PokemonGrid" ItemsSource="{Binding MyPokemon}" HorizontalAlignment="Stretch" AutoGenerateColumns="False" 
-                  SelectedItem="{Binding SelectedPokemon}" FrozenColumnCount="3">
+                  SelectedItem="{Binding SelectedPokemon}" FrozenColumnCount="3" CanUserAddRows="False" CanUserDeleteRows="False">
                 <DataGrid.ContextMenu>
                     <ContextMenu>
-                        <MenuItem Header="Check IVs" Command="{Binding CheckIVCommand}"/>
                         <MenuItem Header="View Movesets" Command="{Binding ShowMovesetsCommand}"/>
                         <!--TODO: <MenuItem Header="Go To Pokedex" Command="{Binding GoToSpeciesCommand}"/>-->
-                        <MenuItem Header="Add New Pokemon" Command="{Binding AddNewPokemonCommand}"/>
                     </ContextMenu>
                 </DataGrid.ContextMenu>
                 <DataGrid.Columns>

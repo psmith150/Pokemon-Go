@@ -184,6 +184,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Resources\LightStyle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Resources\StyleDictionary.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -258,11 +262,11 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\Down_arrow.png" />
-    <Resource Include="Resources\Filter.png" />
-    <Resource Include="Resources\minus_sign.png" />
-    <Resource Include="Resources\plus_sign.png" />
-    <Resource Include="Resources\Up_arrow.png" />
+    <Resource Include="Images\Down_arrow.png" />
+    <Resource Include="Images\Filter.png" />
+    <Resource Include="Images\minus_sign.png" />
+    <Resource Include="Images\plus_sign.png" />
+    <Resource Include="Images\Up_arrow.png" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Pokemon_Go_Database.Base\Pokemon_Go_Database.Base.csproj">
@@ -273,7 +277,11 @@
   <ItemGroup>
     <EmbeddedResource Include="Resources\BaseData.xml" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Images\Add_15xMD_white.png" />
+    <Resource Include="Images\Copy_50x.png" />
+    <Resource Include="Images\Remove_15xMD.png" />
+  </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\StatusCriticalError_16x.png" />
   </ItemGroup>
@@ -282,6 +290,12 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\StatusWarning_16x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Search_16xMD.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Search_50x.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -56,6 +56,14 @@
                 <Label Content="TDO:"/>
                 <TextBlock Text="{Binding BattleResult.TDO, StringFormat=P2}" VerticalAlignment="Center"/>
             </StackPanel>
+            <StackPanel Name="CumulativeBattleResults" Orientation="Horizontal" HorizontalAlignment="Center">
+                <Label Content="Total Time Required:"/>
+                <TextBlock Text="{Binding BattleResult.CumulativeDuration, StringFormat={}{0:N1} sec}" VerticalAlignment="Center"/>
+                <Label Content="Total DPS:"/>
+                <TextBlock Text="{Binding BattleResult.CumulativeDPS, StringFormat=N2}" VerticalAlignment="Center"/>
+                <Label Content="Total TDO:"/>
+                <TextBlock Text="{Binding BattleResult.CumulativeTDO, StringFormat=P2}" VerticalAlignment="Center"/>
+            </StackPanel>
             <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
                 <Label Content="Next breakpoint at level"/>
                 <TextBlock Text="{Binding BattleResult.NextBreakpoint}" VerticalAlignment="Center"/>

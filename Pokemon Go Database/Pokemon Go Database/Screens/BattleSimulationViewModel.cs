@@ -269,7 +269,9 @@ namespace Pokemon_Go_Database.Screens
             BattleResult result = new BattleResult(); ;
             try
             {
-                result = await Task.Run(() => this.SimulateBattleAsync(this.Attacker, this.Defender, this.DefenderType));
+                List<Pokemon> attackers = new List<Pokemon>();
+                attackers.Add(this.Attacker);
+                result = (await Task.Run(() => this.SimulateBattleAsync(attackers, this.Defender, this.DefenderType)))[0];
             }
             catch (Exception ex)
             {
@@ -292,7 +294,10 @@ namespace Pokemon_Go_Database.Screens
             {
                 try
                 {
-                    results.Add(await Task.Run(() => this.SimulateBattleAsync(pokemon, this.Defender, this.DefenderType)));
+                    List<Pokemon> attackers = new List<Pokemon>();
+                    attackers.Add(pokemon);
+                    BattleResult result = (await Task.Run(() => this.SimulateBattleAsync(attackers, this.Defender, this.DefenderType)))[0];
+                    results.Add(result);
                 }
                 catch (Exception ex)
                 {
@@ -302,15 +307,18 @@ namespace Pokemon_Go_Database.Screens
             this.AllPokemonResults.Clear();
             this.AllPokemonResults.InsertRange(results);
         }
-        private BattleResult SimulateBattleAsync(Pokemon attacker, Pokemon defender, DefenderType defenderType)
+        private List<BattleResult> SimulateBattleAsync(List<Pokemon> attackers, Pokemon defender, DefenderType defenderType)
         {
-            BattleResult result = new BattleResult();
-            result.Name = attacker.FullName;
-            if (attacker == null || defender == null || attacker.FastMove == null || attacker.ChargeMove == null || defender.FastMove == null || defender.ChargeMove == null)
+            List<BattleResult> results = new List<BattleResult>();
+            foreach (Pokemon attacker in attackers)
             {
-                throw new ArgumentException("Pokemon not fully specified");
-                this._messageViewer.DisplayMessage("Pokemon not fully specified", "Invalid Data", MessageViewerButton.Ok, MessageViewerIcon.Warning);
-                return result;
+                BattleResult result = new BattleResult();
+                result.Name = attacker.FullName;
+                results.Add(result);
+                if (attacker == null || defender == null || attacker.FastMove == null || attacker.ChargeMove == null || defender.FastMove == null || defender.ChargeMove == null)
+                {
+                    throw new ArgumentException("Pokemon not fully specified");
+                }
             }
             const int timeInterval = 50;
             int attackerDamageWindowStartTime;
@@ -318,13 +326,12 @@ namespace Pokemon_Go_Database.Screens
             bool defenderUseChargeMove = false;
             int attackerLivesNeeded = 0;
             Random rand = new Random();
-            double averageTime = 0.0;
-            double averageLives = 0.0;
-            double averageDPS = 0.0;
-            double averageTDO = 0.0;
             bool errorShown = false;
             for (int i = 0; i < Constants.NumSimulations; i++)
             {
+                int attackerIndex = 0;
+                Pokemon attacker = attackers[attackerIndex];
+                BattleResult result = results[attackerIndex];
                 attackerLivesNeeded = 0;
                 int attackerHP = attacker.ActualHP;
                 int defenderHP = defender.ActualHP * 2;
@@ -345,14 +352,16 @@ namespace Pokemon_Go_Database.Screens
                         defenderHP = Constants.RaidBossHP[index - 1];
                     }
                 }
+                int defenderTotalHP = defenderHP;
                 int defenderStartHP = defenderHP;
+                int startTime = 0;
                 int time = 0; //Time in msec
                 double timeRemaining;
                 BattleState attackerState = BattleState.Idle;
                 BattleState defenderState = BattleState.Idle;
                 int attackerPower = 0, defenderPower = 0;
                 double attackerBonus = 1.0, defenderBonus = 1.0;
-                while (attackerHP > 0 && time < 1000000)
+                while (attackerIndex < attackers.Count && time < 1000000)
                 {
                     int attackerDamage = 0, defenderDamage = 0;
                     double currentDPS = 0.0, currentTDO = 0.0;
@@ -558,15 +567,37 @@ namespace Pokemon_Go_Database.Screens
                         if (recordAction)
                             result.BattleLog.Add(new BattleLogEntry(time, attackerHP, attackerEnergy, defenderHP, defenderEnergy, attackerAction, defenderAction));
                     }
-                    //if (attackerHP <= 0)
-                    //{
-                    //    attackerLivesNeeded++;
-                    //    attackerHP = Attacker.ActualHP;
-                    //    attackerEnergy = 0;
-                    //    attackerNextAttackTime = time + Constants.PokemonSwitchDelayMs;
-                    //}
+                    if (attackerHP <= 0)
+                    {
+                        result.DPS += (double)(defenderStartHP - defenderHP) / ((double)(time - timeInterval - startTime) / 1000.0);
+                        result.TDO += (double)(defenderStartHP - defenderHP) / (double)defenderTotalHP;
+                        result.BattleDuration += (time - timeInterval - startTime) / 1000.0;
+                        result.NumberOfDeaths += attackerLivesNeeded;
+
+                        result.CumulativeDPS += (double)(defenderTotalHP - defenderHP) / ((double)(time - timeInterval) / 1000.0);
+                        result.CumulativeTDO += (double)(defenderTotalHP - defenderHP) / (double)defenderTotalHP;
+                        result.CumulativeDuration += (time - timeInterval) / 1000.0;
+
+                        attackerIndex++;
+                        if (attackerIndex >= attackers.Count)
+                            break;
+                        attacker = attackers[attackerIndex];
+                        attackerHP = attacker.ActualHP;
+                        attackerEnergy = 0;
+                        attackerNextAttackTime = time + Constants.PokemonSwitchDelayMs;
+                        attackerState = BattleState.Idle;
+                        defenderStartHP = defenderHP;
+                        result = results[attackerIndex];
+                    }
                     if (defenderHP <= 0)
                     {
+                        result.DPS += (double)(defenderStartHP - defenderHP) / ((double)(time - timeInterval) / 1000.0);
+                        result.TDO += (double)(defenderStartHP - defenderHP) / (double)defenderTotalHP;
+                        result.BattleDuration += (time - timeInterval - startTime) / 1000.0;
+
+                        result.CumulativeDPS += (double)(defenderTotalHP - defenderHP) / ((double)(time - timeInterval) / 1000.0);
+                        result.CumulativeTDO += (double)(defenderTotalHP - defenderHP) / (double)defenderTotalHP;
+                        result.CumulativeDuration += (time - timeInterval) / 1000.0;
                         break;
                     }
                     time += timeInterval;
@@ -575,35 +606,39 @@ namespace Pokemon_Go_Database.Screens
                     else
                         timeRemaining = Constants.GymTimer - time / 1000.0;
                 }
-                averageDPS += (double)(defenderStartHP - defenderHP) / ((double)(time - timeInterval) / 1000.0);
-                averageTDO += (double)(defenderStartHP - defenderHP) / (double)defenderStartHP;
-                averageTime += (time - timeInterval) / 1000.0;
-                averageLives += attackerLivesNeeded;
             }
-
-            result.BattleDuration = averageTime / (double)Constants.NumSimulations;
-            result.NumberOfDeaths = averageLives / (double)Constants.NumSimulations;
-            result.DPS = averageDPS / (double)Constants.NumSimulations;
-            result.TDO = averageTDO / (double)Constants.NumSimulations;
-            //Calculate next breakpoint
-            double bonus = 1.0;
-            if (attacker.Species.Type1 == attacker.FastMove.FastMove.Type || attacker.Species.Type2 == attacker.FastMove.FastMove.Type)
-                bonus *= Constants.StabBonus;
-            bonus *= Constants.CalculateTypeBonus(attacker.FastMove.FastMove.Type, defender.Species.Type1, defender.Species.Type2);
-            bonus *= Constants.CalculateWeatherBonus(attacker.FastMove.FastMove.Type, this.SelectedWeather);
-            bonus *= Constants.CalculateFriendshipBonus(this.SelectedFriendship);
-
-            int baseDamage = Constants.CalculateDamage(attacker.FastMove.FastMove.Power, attacker.GetAttack(), defender.GetDefense(), bonus);
-            for (double i = attacker.Level; i <= Constants.MaxLevel; i += 0.5)
+            int resultIndex = 0;
+            foreach (BattleResult result in results)
             {
-                int damage = Constants.CalculateDamage(attacker.FastMove.FastMove.Power, attacker.GetAttack(-1, i), defender.GetDefense(), bonus);
-                if (damage > baseDamage)
+                result.BattleDuration = result.BattleDuration / (double)Constants.NumSimulations;
+                result.NumberOfDeaths = result.NumberOfDeaths / (double)Constants.NumSimulations;
+                result.DPS = result.DPS / (double)Constants.NumSimulations;
+                result.TDO = result.TDO / (double)Constants.NumSimulations;
+                result.CumulativeDuration = result.CumulativeDuration / (double)Constants.NumSimulations;
+                result.CumulativeDPS = result.CumulativeDPS / (double)Constants.NumSimulations;
+                result.CumulativeTDO = result.CumulativeTDO / (double)Constants.NumSimulations;
+
+                //Calculate next breakpoint
+                Pokemon attacker = attackers[resultIndex];
+                double bonus = 1.0;
+                if (attacker.Species.Type1 == attacker.FastMove.FastMove.Type || attacker.Species.Type2 == attacker.FastMove.FastMove.Type)
+                    bonus *= Constants.StabBonus;
+                bonus *= Constants.CalculateTypeBonus(attacker.FastMove.FastMove.Type, defender.Species.Type1, defender.Species.Type2);
+                bonus *= Constants.CalculateWeatherBonus(attacker.FastMove.FastMove.Type, this.SelectedWeather);
+                bonus *= Constants.CalculateFriendshipBonus(this.SelectedFriendship);
+
+                int baseDamage = Constants.CalculateDamage(attacker.FastMove.FastMove.Power, attacker.GetAttack(), defender.GetDefense(), bonus);
+                for (double i = attacker.Level; i <= Constants.MaxLevel; i += 0.5)
                 {
-                    result.NextBreakpoint = i;
-                    break;
+                    int damage = Constants.CalculateDamage(attacker.FastMove.FastMove.Power, attacker.GetAttack(-1, i), defender.GetDefense(), bonus);
+                    if (damage > baseDamage)
+                    {
+                        result.NextBreakpoint = i;
+                        break;
+                    }
                 }
             }
-            return result;
+            return results;
         }
         #endregion
     }
