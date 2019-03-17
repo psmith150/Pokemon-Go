@@ -21,6 +21,8 @@ namespace Pokemon_Go_Database.Screens
         #region Commands
         public ICommand SimulateBattleCommand { get; private set; }
         public ICommand SimulateAllPokemonCommand { get; private set; }
+        public ICommand IncrementPartySizeCommand { get; private set; }
+        public ICommand DecrementPartySizeCommand { get; private set; }
         #endregion
 
         #region Constructor
@@ -28,7 +30,7 @@ namespace Pokemon_Go_Database.Screens
         {
             this.navigationService = navigationService;
             this._messageViewer = messageViewer;
-            this.Attacker = new Pokemon();
+            this.Attackers = new ObservableCollection<Pokemon>();
             this.Defender = new Pokemon();
             this.BattleResult = new BattleResult();
             this.BattleLog = new ObservableCollection<BattleLogEntry>();
@@ -36,6 +38,14 @@ namespace Pokemon_Go_Database.Screens
 
             this.SimulateBattleCommand = new RelayCommand(() => this.SimulateSingleBattle());
             this.SimulateAllPokemonCommand = new RelayCommand(() => this.SimulateAllPokemon());
+            this.IncrementPartySizeCommand = new RelayCommand(() => this.IncrementPartySize());
+            this.DecrementPartySizeCommand = new RelayCommand(() => this.DecrementPartySize());
+
+            this._partySize = 1;
+            Pokemon newPokemon = new Pokemon();
+            newPokemon.IVSets.Add(new IVSet());
+            this.Attackers.Add(newPokemon);
+            this.UpdatePartyVisibility();
         }
         #endregion
 
@@ -50,27 +60,21 @@ namespace Pokemon_Go_Database.Screens
         #region Private Fields
         private MessageViewerBase _messageViewer;
         private enum BattleState { Idle, FastAttackInit, FastAttackWindow, ChargeAttackInit, ChargeAttackWindow, Dodging }
+        private int _partySize;
+        private const int MAX_PARTY_SIZE = 6;
         #endregion
         #region Public Properties
-        private Pokemon _Attacker;
-        public Pokemon Attacker
+        private ObservableCollection<Pokemon> _Attackers;
+        public ObservableCollection<Pokemon> Attackers
         {
             get
             {
-                return _Attacker;
+                return _Attackers;
             }
 
-            set
+            private set
             {
-                Set(ref this._Attacker, value);
-                if (this.Attacker.IVSets.Count <= 0)
-                    this.Attacker.IVSets.Add(new IVSet());
-                else if (this.Attacker.IVSets.Count > 1)
-                {
-                    while (this.Attacker.IVSets.Count > 1)
-                        this.Attacker.IVSets.RemoveAt(1);
-                }
-
+                this.Set(ref this._Attackers, value);
             }
         }
         private Pokemon _Defender;
@@ -103,8 +107,8 @@ namespace Pokemon_Go_Database.Screens
             set
             {
                 Set(ref this._SelectedAttackerPokemon, value);
-                if (this.SelectedAttackerPokemon != null)
-                    this.Attacker = this.SelectedAttackerPokemon.Copy();
+                //if (this.SelectedAttackerPokemon != null)
+                //    this.Attacker = this.SelectedAttackerPokemon.Copy();
             }
         }
         private Pokemon _SelectedDefenderPokemon;
@@ -261,16 +265,93 @@ namespace Pokemon_Go_Database.Screens
                 this.Set(ref this._SelectedFriendship, value);
             }
         }
+        #region Party Visbility
+        private bool _IncrementPartyButtonVisible;
+        public bool IncrementPartyButtonVisible
+        {
+            get
+            {
+                return this._IncrementPartyButtonVisible;
+            }
+            set
+            {
+                this.Set(ref this._IncrementPartyButtonVisible, value);
+            }
+        }
+        private bool _DecrementPartyButtonVisible;
+        public bool DecrementPartyButtonVisible
+        {
+            get
+            {
+                return this._DecrementPartyButtonVisible;
+            }
+            set
+            {
+                this.Set(ref this._DecrementPartyButtonVisible, value);
+            }
+        }
+        #endregion
         #endregion
 
         #region Private Methods
+        private void UpdatePartyVisibility()
+        {
+            //Set increment/decrement button visbility
+            if (this._partySize <= 1)
+                this.DecrementPartyButtonVisible = false;
+            else
+                this.DecrementPartyButtonVisible = true;
+            if (this._partySize >= MAX_PARTY_SIZE)
+                this.IncrementPartyButtonVisible = false;
+            else
+                this.IncrementPartyButtonVisible = true;
+            //Limit the party size
+            if (this._partySize < 1)
+            {
+                this._partySize = 1;
+                this.UpdatePartyVisibility();
+            }
+            if (this._partySize > MAX_PARTY_SIZE)
+            {
+                this._partySize = MAX_PARTY_SIZE;
+                this.UpdatePartyVisibility();
+            }
+        }
+        private void IncrementPartySize()
+        {
+            if (this._partySize >= MAX_PARTY_SIZE)
+            {
+                this._partySize = MAX_PARTY_SIZE;
+            }
+            else
+            {
+                this._partySize += 1;
+                Pokemon newPokemon = new Pokemon();
+                newPokemon.IVSets.Add(new IVSet());
+                this.Attackers.Add(newPokemon);
+            }
+            this.UpdatePartyVisibility();
+        }
+        private void DecrementPartySize()
+        {
+            if (this._partySize <= 1)
+            {
+                this._partySize = 1;
+            }
+            else
+            {
+                this._partySize -= 1;
+                this.Attackers.RemoveAt(this.Attackers.Count - 1);
+            }
+            this.UpdatePartyVisibility();
+        }
         private async void SimulateSingleBattle()
         {
             BattleResult result = new BattleResult(); ;
             try
             {
                 List<Pokemon> attackers = new List<Pokemon>();
-                attackers.Add(this.Attacker);
+                attackers.Add(this.Attackers[0]);
                 result = (await Task.Run(() => this.SimulateBattleAsync(attackers, this.Defender, this.DefenderType)))[0];
             }
             catch (Exception ex)

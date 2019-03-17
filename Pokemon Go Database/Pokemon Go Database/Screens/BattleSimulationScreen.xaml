@@ -30,6 +30,7 @@
         <CollectionViewSource x:Key="WeatherView" Source="{Binding WeatherOptions}"/>
         <CollectionViewSource x:Key="FriendshipView" Source="{Binding FriendshipOptions}"/>
         <converters:EnumToStringConverter x:Key="EnumToStringConverter"/>
+        <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter"/>
     </UserControl.Resources>
     <Grid Background="{StaticResource MainBackgroundColor}">
         <Grid.RowDefinitions>
@@ -45,7 +46,17 @@
                 <Label Content="Select from existing Pokemon"/>
                 <ComboBox ItemsSource="{Binding Source={StaticResource MyPokemonView}}" SelectedItem="{Binding SelectedAttackerPokemon}" DisplayMemberPath="FullName" Width="400"/>
             </StackPanel>
-            <customControls:PokemonSimulationViewer Pokemon="{Binding Attacker}" SpeciesView="{Binding Source={StaticResource AttackerSpeciesView}}" Margin="2"/>
+            <ItemsControl ItemsSource="{Binding Attackers}">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <customControls:PokemonSimulationViewer Pokemon="{Binding Path=.}" SpeciesView="{Binding Source={StaticResource AttackerSpeciesView}}" Margin="2"/>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button Content="Add Pokemon" Command="{Binding IncrementPartySizeCommand}" Width="100" Margin="2" Visibility="{Binding IncrementPartyButtonVisible, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+                <Button Content="Remove Pokemon" Command="{Binding DecrementPartySizeCommand}" Width="100" Margin="2" Visibility="{Binding DecrementPartyButtonVisible, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+            </StackPanel>
             <StackPanel Name="BattleResults" Orientation="Horizontal" HorizontalAlignment="Center">
                 <Label Content="Time Required:"/>
                 <TextBlock Text="{Binding BattleResult.BattleDuration, StringFormat={}{0:N1} sec}" VerticalAlignment="Center"/>
