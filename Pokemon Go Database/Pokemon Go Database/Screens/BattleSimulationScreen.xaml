@@ -8,6 +8,7 @@
              xmlns:xtk="http://schemas.xceed.com/wpf/xaml/datagrid"
              xmlns:converters="clr-namespace:Pokemon_Go_Database.ValueConverters"
              xmlns:customControls="clr-namespace:Pokemon_Go_Database.CustomControls"
+             xmlns:c="clr-namespace:Pokemon_Go_Database.Model"
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="1000"
              d:DataContext="{d:DesignInstance Type=local:BattleSimulationViewModel}">
@@ -32,126 +33,113 @@
         <converters:EnumToStringConverter x:Key="EnumToStringConverter"/>
         <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter"/>
     </UserControl.Resources>
-    <Grid Background="{StaticResource MainBackgroundColor}">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>
-        <StackPanel Name="AttackerWrapper" Grid.Row="0">
-            <StackPanel Orientation="Horizontal">
-                <Label Content="Select from existing Pokemon"/>
-                <ComboBox ItemsSource="{Binding Source={StaticResource MyPokemonView}}" SelectedItem="{Binding SelectedAttackerPokemon}" DisplayMemberPath="FullName" Width="400"/>
-            </StackPanel>
-            <ItemsControl ItemsSource="{Binding Attackers}">
-                <ItemsControl.ItemTemplate>
-                    <DataTemplate>
-                        <customControls:PokemonSimulationViewer Pokemon="{Binding Path=.}" SpeciesView="{Binding Source={StaticResource AttackerSpeciesView}}" Margin="2"/>
-                    </DataTemplate>
-                </ItemsControl.ItemTemplate>
-            </ItemsControl>
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                <Button Content="Add Pokemon" Command="{Binding IncrementPartySizeCommand}" Width="100" Margin="2" Visibility="{Binding IncrementPartyButtonVisible, Converter={StaticResource BooleanToVisibilityConverter}}"/>
-                <Button Content="Remove Pokemon" Command="{Binding DecrementPartySizeCommand}" Width="100" Margin="2" Visibility="{Binding DecrementPartyButtonVisible, Converter={StaticResource BooleanToVisibilityConverter}}"/>
-            </StackPanel>
-            <StackPanel Name="BattleResults" Orientation="Horizontal" HorizontalAlignment="Center">
-                <Label Content="Time Required:"/>
-                <TextBlock Text="{Binding BattleResult.BattleDuration, StringFormat={}{0:N1} sec}" VerticalAlignment="Center"/>
-                <Label Content="Number of Deaths:"/>
-                <TextBlock Text="{Binding BattleResult.NumberOfDeaths}" VerticalAlignment="Center"/>
-                <Label Content="DPS:"/>
-                <TextBlock Text="{Binding BattleResult.DPS, StringFormat=N2}" VerticalAlignment="Center"/>
-                <Label Content="TDO:"/>
-                <TextBlock Text="{Binding BattleResult.TDO, StringFormat=P2}" VerticalAlignment="Center"/>
-            </StackPanel>
-            <StackPanel Name="CumulativeBattleResults" Orientation="Horizontal" HorizontalAlignment="Center">
-                <Label Content="Total Time Required:"/>
-                <TextBlock Text="{Binding BattleResult.CumulativeDuration, StringFormat={}{0:N1} sec}" VerticalAlignment="Center"/>
-                <Label Content="Total DPS:"/>
-                <TextBlock Text="{Binding BattleResult.CumulativeDPS, StringFormat=N2}" VerticalAlignment="Center"/>
-                <Label Content="Total TDO:"/>
-                <TextBlock Text="{Binding BattleResult.CumulativeTDO, StringFormat=P2}" VerticalAlignment="Center"/>
-            </StackPanel>
-            <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
-                <Label Content="Next breakpoint at level"/>
-                <TextBlock Text="{Binding BattleResult.NextBreakpoint}" VerticalAlignment="Center"/>
-            </StackPanel>
-        </StackPanel>
-        <StackPanel Name="DefenderWrapper" Grid.Row="1" Margin="2">
-            <StackPanel Name="DefenderDisplay" Orientation="Horizontal" HorizontalAlignment="Center">
-                <Label Content="Defender Type: "/>
-                <ComboBox ItemsSource="{Binding DefenderTypes}" SelectedItem="{Binding DefenderType}" Width="150">
-                    <ComboBox.ItemTemplate>
+    <ScrollViewer>
+        <Grid Background="{StaticResource MainBackgroundColor}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <StackPanel Name="AttackerWrapper" Grid.Row="0">
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="Select from existing Pokemon"/>
+                    <ComboBox ItemsSource="{Binding Source={StaticResource MyPokemonView}}" SelectedItem="{Binding SelectedAttackerPokemon}" DisplayMemberPath="FullName" Width="400"/>
+                </StackPanel>
+                <ItemsControl ItemsSource="{Binding Attackers}">
+                    <ItemsControl.ItemTemplate>
                         <DataTemplate>
-                            <TextBlock Text="{Binding Path=., Converter={StaticResource EnumToStringConverter}}" />
+                            <StackPanel Orientation="Vertical">
+                                <customControls:PokemonSimulationViewer Pokemon="{Binding Path=Attacker}" SpeciesView="{Binding Source={StaticResource AttackerSpeciesView}}" Margin="2"/>
+                                <customControls:BattleResultViewer Result="{Binding Path=BattleResult}" Margin="2"/>
+                            </StackPanel>
                         </DataTemplate>
-                    </ComboBox.ItemTemplate>
-                </ComboBox>
-                <customControls:PokemonSimulationViewer Pokemon="{Binding Defender}" SpeciesView="{Binding Source={StaticResource DefenderSpeciesView}}" Margin="2"/>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                    <Button Content="Add Pokemon" Command="{Binding IncrementPartySizeCommand}" Width="100" Margin="2" Visibility="{Binding IncrementPartyButtonVisible, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+                    <Button Content="Remove Pokemon" Command="{Binding DecrementPartySizeCommand}" Width="100" Margin="2" Visibility="{Binding DecrementPartyButtonVisible, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+                </StackPanel>
+                <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
+                    <Label Content="Next breakpoint at level"/>
+                    <TextBlock Text="{Binding BattleResult.NextBreakpoint}" VerticalAlignment="Center"/>
+                </StackPanel>
             </StackPanel>
-            <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center" Margin="2">
-                <Label Content="Weather"/>
-                <ComboBox SelectedItem="{Binding SelectedWeather}" ItemsSource="{Binding Source={StaticResource WeatherView}}" Width="150">
-                    <ComboBox.ItemTemplate>
-                        <DataTemplate>
-                            <TextBlock Text="{Binding Path=., Converter={StaticResource EnumToStringConverter}}" />
-                        </DataTemplate>
-                    </ComboBox.ItemTemplate>
-                </ComboBox>
-                <Label Content="Friendship"/>
-                <ComboBox SelectedItem="{Binding SelectedFriendship}" ItemsSource="{Binding Source={StaticResource FriendshipView}}" Width="150">
-                    <ComboBox.ItemTemplate>
-                        <DataTemplate>
-                            <TextBlock Text="{Binding Path=., Converter={StaticResource EnumToStringConverter}}" />
-                        </DataTemplate>
-                    </ComboBox.ItemTemplate>
-                </ComboBox>
-                <Label Content="Dodge Charge Moves?"/>
-                <CheckBox IsChecked="{Binding DodgeChargeAttacks}"/>
+            <StackPanel Name="DefenderWrapper" Grid.Row="1" Margin="2">
+                <StackPanel Name="DefenderDisplay" Orientation="Horizontal" HorizontalAlignment="Center">
+                    <Label Content="Defender Type: "/>
+                    <ComboBox ItemsSource="{Binding DefenderTypes}" SelectedItem="{Binding DefenderType}" Width="150">
+                        <ComboBox.ItemTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding Path=., Converter={StaticResource EnumToStringConverter}}" />
+                            </DataTemplate>
+                        </ComboBox.ItemTemplate>
+                    </ComboBox>
+                    <customControls:PokemonSimulationViewer Pokemon="{Binding Defender}" SpeciesView="{Binding Source={StaticResource DefenderSpeciesView}}" Margin="2"/>
+                </StackPanel>
+                <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center" Margin="2">
+                    <Label Content="Weather"/>
+                    <ComboBox SelectedItem="{Binding SelectedWeather}" ItemsSource="{Binding Source={StaticResource WeatherView}}" Width="150">
+                        <ComboBox.ItemTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding Path=., Converter={StaticResource EnumToStringConverter}}" />
+                            </DataTemplate>
+                        </ComboBox.ItemTemplate>
+                    </ComboBox>
+                    <Label Content="Friendship"/>
+                    <ComboBox SelectedItem="{Binding SelectedFriendship}" ItemsSource="{Binding Source={StaticResource FriendshipView}}" Width="150">
+                        <ComboBox.ItemTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding Path=., Converter={StaticResource EnumToStringConverter}}" />
+                            </DataTemplate>
+                        </ComboBox.ItemTemplate>
+                    </ComboBox>
+                    <Label Content="Dodge Charge Moves?"/>
+                    <CheckBox IsChecked="{Binding DodgeChargeAttacks}"/>
+                </StackPanel>
+                <Button Content="Simulate" Width="250" Command="{Binding SimulateBattleCommand}" Margin="2"/>
             </StackPanel>
-            <Button Content="Simulate" Width="250" Command="{Binding SimulateBattleCommand}" Margin="2"/>
-        </StackPanel>
-        <Expander Grid.Row="3">
-            <Expander.Style>
-                <Style TargetType="Expander">
-                    <Setter Property="IsExpanded" Value="False" />
-                    <Setter Property="Header" Value="Show Battle Log" />
-                    <Style.Triggers>
-                        <DataTrigger Binding="{Binding IsExpanded,RelativeSource={RelativeSource Self}}" Value="True">
-                            <Setter Property="Header" Value="Hide Battle Log" />
-                        </DataTrigger>
-                    </Style.Triggers>
-                </Style>
-            </Expander.Style>
-            <DataGrid ItemsSource="{Binding BattleLog}" AutoGenerateColumns="True"/>
-        </Expander>
-        <StackPanel Grid.Row="4" HorizontalAlignment="Center" Orientation="Horizontal">
-            <Button Content="Simulate All Pokemon" Width="250" Command="{Binding SimulateAllPokemonCommand}"/>
-        </StackPanel>
-        <Expander Grid.Row="5">
-            <Expander.Style>
-                <Style TargetType="Expander">
-                    <Setter Property="IsExpanded" Value="False" />
-                    <Setter Property="Header" Value="Show Results" />
-                    <Style.Triggers>
-                        <DataTrigger Binding="{Binding IsExpanded,RelativeSource={RelativeSource Self}}" Value="True">
-                            <Setter Property="Header" Value="Hide Results" />
-                        </DataTrigger>
-                    </Style.Triggers>
-                </Style>
-            </Expander.Style>
-            <DataGrid ItemsSource="{Binding AllPokemonResults}" AutoGenerateColumns="False">
-                <DataGrid.Columns>
-                    <DataGridTextColumn Header="Pokemon" Binding="{Binding Path=Name}" Width="60*"/>
-                    <DataGridTextColumn Header="DPS" Binding="{Binding Path=DPS, StringFormat=N2}" Width="10*"/>
-                    <DataGridTextColumn Header="TDO" Binding="{Binding Path=TDO, StringFormat=P2}" Width="10*"/>
-                    <DataGridTextColumn Header="Time" Binding="{Binding Path=BattleDuration, StringFormat=N1}" Width="10*"/>
-                    <DataGridTextColumn Header="Breakpoint" Binding="{Binding Path=NextBreakpoint, StringFormat=N1}" Width="10*"/>
-                </DataGrid.Columns>
-            </DataGrid>
-        </Expander>
-    </Grid>
+            <Expander Grid.Row="3">
+                <Expander.Style>
+                    <Style TargetType="Expander">
+                        <Setter Property="IsExpanded" Value="False" />
+                        <Setter Property="Header" Value="Show Battle Log" />
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding IsExpanded,RelativeSource={RelativeSource Self}}" Value="True">
+                                <Setter Property="Header" Value="Hide Battle Log" />
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </Expander.Style>
+                <DataGrid ItemsSource="{Binding BattleLog}" AutoGenerateColumns="True"/>
+            </Expander>
+            <StackPanel Grid.Row="4" HorizontalAlignment="Center" Orientation="Horizontal">
+                <Button Content="Simulate All Pokemon" Width="250" Command="{Binding SimulateAllPokemonCommand}"/>
+            </StackPanel>
+            <Expander Grid.Row="5">
+                <Expander.Style>
+                    <Style TargetType="Expander">
+                        <Setter Property="IsExpanded" Value="False" />
+                        <Setter Property="Header" Value="Show Results" />
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding IsExpanded,RelativeSource={RelativeSource Self}}" Value="True">
+                                <Setter Property="Header" Value="Hide Results" />
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </Expander.Style>
+                <DataGrid ItemsSource="{Binding AllPokemonResults}" AutoGenerateColumns="False">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Pokemon" Binding="{Binding Path=Name}" Width="60*"/>
+                        <DataGridTextColumn Header="DPS" Binding="{Binding Path=DPS, StringFormat=N2}" Width="10*"/>
+                        <DataGridTextColumn Header="TDO" Binding="{Binding Path=TDO, StringFormat=P2}" Width="10*"/>
+                        <DataGridTextColumn Header="Time" Binding="{Binding Path=BattleDuration, StringFormat=N1}" Width="10*"/>
+                        <DataGridTextColumn Header="Breakpoint" Binding="{Binding Path=NextBreakpoint, StringFormat=N1}" Width="10*"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </Expander>
+        </Grid>
+    </ScrollViewer>
 </UserControl>

@@ -30,9 +30,8 @@ namespace Pokemon_Go_Database.Screens
         {
             this.navigationService = navigationService;
             this._messageViewer = messageViewer;
-            this.Attackers = new ObservableCollection<Pokemon>();
+            this.Attackers = new ObservableCollection<AttackerSimulationWrapper>();
             this.Defender = new Pokemon();
-            this.BattleResult = new BattleResult();
             this.BattleLog = new ObservableCollection<BattleLogEntry>();
             this.AllPokemonResults = new MyObservableCollection<BattleResult>();
 
@@ -44,7 +43,7 @@ namespace Pokemon_Go_Database.Screens
             this._partySize = 1;
             Pokemon newPokemon = new Pokemon();
             newPokemon.IVSets.Add(new IVSet());
-            this.Attackers.Add(newPokemon);
+            this.Attackers.Add(new AttackerSimulationWrapper(newPokemon, new BattleResult()));
             this.UpdatePartyVisibility();
         }
         #endregion
@@ -64,8 +63,8 @@ namespace Pokemon_Go_Database.Screens
         private const int MAX_PARTY_SIZE = 6;
         #endregion
         #region Public Properties
-        private ObservableCollection<Pokemon> _Attackers;
-        public ObservableCollection<Pokemon> Attackers
+        private ObservableCollection<AttackerSimulationWrapper> _Attackers;
+        public ObservableCollection<AttackerSimulationWrapper> Attackers
         {
             get
             {
@@ -125,20 +124,6 @@ namespace Pokemon_Go_Database.Screens
                     this.Defender = this.SelectedDefenderPokemon.Copy();
             }
         }
-
-        private BattleResult _BattleResult;
-        public BattleResult BattleResult
-        {
-            get
-            {
-                return this._BattleResult;
-            }
-            set
-            {
-                Set(ref this._BattleResult, value);
-            }
-        }
-
         private ObservableCollection<BattleLogEntry> _BattleLog;
         public ObservableCollection<BattleLogEntry> BattleLog
         {
@@ -328,7 +313,7 @@ namespace Pokemon_Go_Database.Screens
                 this._partySize += 1;
                 Pokemon newPokemon = new Pokemon();
                 newPokemon.IVSets.Add(new IVSet());
-                this.Attackers.Add(newPokemon);
+                this.Attackers.Add(new AttackerSimulationWrapper(newPokemon, new BattleResult()));
             }
             this.UpdatePartyVisibility();
         }
@@ -347,19 +332,17 @@ namespace Pokemon_Go_Database.Screens
         }
         private async void SimulateSingleBattle()
         {
-            BattleResult result = new BattleResult(); ;
+            List<BattleResult> results = new List<BattleResult>();
             try
             {
-                List<Pokemon> attackers = new List<Pokemon>();
-                attackers.Add(this.Attackers[0]);
-                result = (await Task.Run(() => this.SimulateBattleAsync(attackers, this.Defender, this.DefenderType)))[0];
+                List<AttackerSimulationWrapper> attackers = this.Attackers.ToList();
+                await Task.Run(() => this.SimulateBattleAsync(attackers, this.Defender, this.DefenderType));
             }
             catch (Exception ex)
             {
                 await this._messageViewer.DisplayMessage($"Error when simulating battle: {ex.Message}", "Simulation Error", MessageViewerButton.Ok, MessageViewerIcon.Error);
             }
-            this.BattleResult = result;
-            this.BattleLog = new ObservableCollection<BattleLogEntry>(result.BattleLog);
+            this.BattleLog = new ObservableCollection<BattleLogEntry>(results[0].BattleLog);
         }
 
         private async void SimulateAllPokemon()
@@ -373,12 +356,12 @@ namespace Pokemon_Go_Database.Screens
             List<BattleResult> results = new List<BattleResult>();
             foreach (Pokemon pokemon in this.Session.MyPokemon)
             {
+                List<AttackerSimulationWrapper> attackers = new List<AttackerSimulationWrapper>();
+                attackers.Add(new AttackerSimulationWrapper(pokemon, new BattleResult()));
                 try
                 {
-                    List<Pokemon> attackers = new List<Pokemon>();
-                    attackers.Add(pokemon);
-                    BattleResult result = (await Task.Run(() => this.SimulateBattleAsync(attackers, this.Defender, this.DefenderType)))[0];
-                    results.Add(result);
+                    await Task.Run(() => this.SimulateBattleAsync(attackers, this.Defender, this.DefenderType));
+                    results.Add(attackers[0].BattleResult);
                 }
                 catch (Exception ex)
                 {
@@ -388,339 +371,339 @@ namespace Pokemon_Go_Database.Screens
             this.AllPokemonResults.Clear();
             this.AllPokemonResults.InsertRange(results);
         }
-        private List<BattleResult> SimulateBattleAsync(List<Pokemon> attackers, Pokemon defender, DefenderType defenderType)
+    private void SimulateBattleAsync(List<AttackerSimulationWrapper> attackers, Pokemon defender, DefenderType defenderType)
+    {
+        foreach (AttackerSimulationWrapper wrapper in attackers)
         {
-            List<BattleResult> results = new List<BattleResult>();
-            foreach (Pokemon attacker in attackers)
+            Pokemon attacker = wrapper.Attacker;
+            BattleResult result = wrapper.BattleResult;
+            result.Name = attacker.FullName;
+            if (attacker == null || defender == null || attacker.FastMove == null || attacker.ChargeMove == null || defender.FastMove == null || defender.ChargeMove == null)
             {
-                BattleResult result = new BattleResult();
-                result.Name = attacker.FullName;
-                results.Add(result);
-                if (attacker == null || defender == null || attacker.FastMove == null || attacker.ChargeMove == null || defender.FastMove == null || defender.ChargeMove == null)
+                throw new ArgumentException("Pokemon not fully specified");
+            }
+        }
+        const int timeInterval = 50;
+        int attackerDamageWindowStartTime;
+        int defenderDamageWindowStartTime;
+        bool defenderUseChargeMove = false;
+        int attackerLivesNeeded = 0;
+        Random rand = new Random();
+        bool errorShown = false;
+        for (int i = 0; i < Constants.NumSimulations; i++)
+        {
+            int attackerIndex = 0;
+            Pokemon attacker = attackers[attackerIndex].Attacker;
+            BattleResult result = attackers[attackerIndex].BattleResult;
+            attackerLivesNeeded = 0;
+            int attackerHP = attacker.ActualHP;
+            int defenderHP = defender.ActualHP * 2;
+            int attackerEnergy = 0;
+            int defenderEnergy = 0;
+            int attackerNextAttackTime = 700;
+            int defenderNextAttackTime = 1600;
+            int attackerStartAttackTime = 0;
+            int defenderStartAttackTime = 0;
+            int dodgeWindowStartTime = 0;
+            int dodgeEndTime = 0;
+            if (IsRaidBoss)
+            {
+                int index;
+                if (defenderType != DefenderType.GymDefender)
                 {
-                    throw new ArgumentException("Pokemon not fully specified");
+                    index = (int)defenderType;
+                    defenderHP = Constants.RaidBossHP[index - 1];
                 }
             }
-            const int timeInterval = 50;
-            int attackerDamageWindowStartTime;
-            int defenderDamageWindowStartTime;
-            bool defenderUseChargeMove = false;
-            int attackerLivesNeeded = 0;
-            Random rand = new Random();
-            bool errorShown = false;
-            for (int i = 0; i < Constants.NumSimulations; i++)
+            int defenderTotalHP = defenderHP;
+            int defenderStartHP = defenderHP;
+            int startTime = 0;
+            int time = 0; //Time in msec
+            double timeRemaining;
+            BattleState attackerState = BattleState.Idle;
+            BattleState defenderState = BattleState.Idle;
+            int attackerPower = 0, defenderPower = 0;
+            double attackerBonus = 1.0, defenderBonus = 1.0;
+            while (attackerIndex < attackers.Count && time < 1000000)
             {
-                int attackerIndex = 0;
-                Pokemon attacker = attackers[attackerIndex];
-                BattleResult result = results[attackerIndex];
-                attackerLivesNeeded = 0;
-                int attackerHP = attacker.ActualHP;
-                int defenderHP = defender.ActualHP * 2;
-                int attackerEnergy = 0;
-                int defenderEnergy = 0;
-                int attackerNextAttackTime = 700;
-                int defenderNextAttackTime = 1600;
-                int attackerStartAttackTime = 0;
-                int defenderStartAttackTime = 0;
-                int dodgeWindowStartTime = 0;
-                int dodgeEndTime = 0;
-                if (IsRaidBoss)
+                int attackerDamage = 0, defenderDamage = 0;
+                double currentDPS = 0.0, currentTDO = 0.0;
+                if (attackerState == BattleState.Idle)
                 {
-                    int index;
-                    if (defenderType != DefenderType.GymDefender)
+                    attackerPower = 0;
+                    attackerBonus = 1.0;
+                    if (time >= attackerNextAttackTime)
                     {
-                        index = (int)defenderType;
-                        defenderHP = Constants.RaidBossHP[index - 1];
+                        if (this.DodgeChargeAttacks && defenderState == BattleState.ChargeAttackWindow)
+                        {
+                            if (time >= dodgeWindowStartTime)
+                            {
+                                dodgeEndTime = time + Constants.dodgeDurationMs;
+                                attackerState = BattleState.Dodging;
+                            }
+                        }
+                        else if (attackerEnergy >= attacker.ChargeMove.ChargeMove.Energy)
+                        {
+                            attackerState = BattleState.ChargeAttackInit;
+                            attackerStartAttackTime = time + attacker.ChargeMove.ChargeMove.DamageWindowStartTime;
+                            attackerNextAttackTime = time + attacker.ChargeMove.ChargeMove.Time;
+                        }
+                        else if (attackerEnergy < attacker.ChargeMove.ChargeMove.Energy)
+                        {
+                            attackerState = BattleState.FastAttackInit;
+                            attackerStartAttackTime = time + attacker.FastMove.FastMove.DamageWindowStartTime;
+                            attackerNextAttackTime = time + attacker.FastMove.FastMove.Time;
+                        }
                     }
                 }
-                int defenderTotalHP = defenderHP;
-                int defenderStartHP = defenderHP;
-                int startTime = 0;
-                int time = 0; //Time in msec
-                double timeRemaining;
-                BattleState attackerState = BattleState.Idle;
-                BattleState defenderState = BattleState.Idle;
-                int attackerPower = 0, defenderPower = 0;
-                double attackerBonus = 1.0, defenderBonus = 1.0;
-                while (attackerIndex < attackers.Count && time < 1000000)
+                if (attackerState == BattleState.FastAttackInit)
                 {
-                    int attackerDamage = 0, defenderDamage = 0;
-                    double currentDPS = 0.0, currentTDO = 0.0;
-                    if (attackerState == BattleState.Idle)
+                    if (time >= attackerStartAttackTime)
                     {
-                        attackerPower = 0;
-                        attackerBonus = 1.0;
-                        if (time >= attackerNextAttackTime)
-                        {
-                            if (this.DodgeChargeAttacks && defenderState == BattleState.ChargeAttackWindow)
-                            {
-                                if (time >= dodgeWindowStartTime)
-                                {
-                                    dodgeEndTime = time + Constants.dodgeDurationMs;
-                                    attackerState = BattleState.Dodging;
-                                }
-                            }
-                            else if (attackerEnergy >= attacker.ChargeMove.ChargeMove.Energy)
-                            {
-                                attackerState = BattleState.ChargeAttackInit;
-                                attackerStartAttackTime = time + attacker.ChargeMove.ChargeMove.DamageWindowStartTime;
-                                attackerNextAttackTime = time + attacker.ChargeMove.ChargeMove.Time;
-                            }
-                            else if (attackerEnergy < attacker.ChargeMove.ChargeMove.Energy)
-                            {
-                                attackerState = BattleState.FastAttackInit;
-                                attackerStartAttackTime = time + attacker.FastMove.FastMove.DamageWindowStartTime;
-                                attackerNextAttackTime = time + attacker.FastMove.FastMove.Time;
-                            }
-                        }
+                        attackerPower = attacker.FastMove.FastMove.Power;
+                        if (attacker.Species.Type1 == attacker.FastMove.FastMove.Type || attacker.Species.Type2 == attacker.FastMove.FastMove.Type)
+                            attackerBonus *= Constants.StabBonus;
+                        attackerBonus *= Constants.CalculateWeatherBonus(attacker.FastMove.FastMove.Type, this.SelectedWeather);
+                        attackerBonus *= Constants.CalculateTypeBonus(attacker.FastMove.FastMove.Type, defender.Species.Type1, defender.Species.Type2);
+                        attackerBonus *= Constants.CalculateFriendshipBonus(this.SelectedFriendship);
+                        attackerEnergy += attacker.FastMove.FastMove.Energy;
+                        attackerDamage = Constants.CalculateDamage(attackerPower, attacker.GetAttack(), defender.GetDefense(), attackerBonus);
+                        attackerState = BattleState.FastAttackWindow;
                     }
-                    if (attackerState == BattleState.FastAttackInit)
+                }
+                if (attackerState == BattleState.FastAttackWindow)
+                {
+                    if (time >= attackerStartAttackTime && time < attackerStartAttackTime + timeInterval)
                     {
-                        if (time >= attackerStartAttackTime)
-                        {
-                            attackerPower = attacker.FastMove.FastMove.Power;
-                            if (attacker.Species.Type1 == attacker.FastMove.FastMove.Type || attacker.Species.Type2 == attacker.FastMove.FastMove.Type)
-                                attackerBonus *= Constants.StabBonus;
-                            attackerBonus *= Constants.CalculateWeatherBonus(attacker.FastMove.FastMove.Type, this.SelectedWeather);
-                            attackerBonus *= Constants.CalculateTypeBonus(attacker.FastMove.FastMove.Type, defender.Species.Type1, defender.Species.Type2);
-                            attackerBonus *= Constants.CalculateFriendshipBonus(this.SelectedFriendship);
-                            attackerEnergy += attacker.FastMove.FastMove.Energy;
-                            attackerDamage = Constants.CalculateDamage(attackerPower, attacker.GetAttack(), defender.GetDefense(), attackerBonus);
-                            attackerState = BattleState.FastAttackWindow;
-                        }
+                        attackerDamage = Constants.CalculateDamage(attackerPower, attacker.GetAttack(), defender.GetDefense(), attackerBonus);
                     }
-                    if (attackerState == BattleState.FastAttackWindow)
+                    if (time >= attackerStartAttackTime + attacker.FastMove.FastMove.DamageWindowDuration)
                     {
-                        if (time >= attackerStartAttackTime && time < attackerStartAttackTime + timeInterval)
-                        {
-                            attackerDamage = Constants.CalculateDamage(attackerPower, attacker.GetAttack(), defender.GetDefense(), attackerBonus);
-                        }
-                        if (time >= attackerStartAttackTime + attacker.FastMove.FastMove.DamageWindowDuration)
-                        {
-                            attackerState = BattleState.Idle;
-                        }
+                        attackerState = BattleState.Idle;
                     }
-                    if (attackerState == BattleState.ChargeAttackInit)
+                }
+                if (attackerState == BattleState.ChargeAttackInit)
+                {
+                    if (time >= attackerStartAttackTime)
                     {
-                        if (time >= attackerStartAttackTime)
-                        {
-                            attackerPower = attacker.ChargeMove.ChargeMove.Power;
-                            attackerEnergy -= attacker.ChargeMove.ChargeMove.Energy;
-                            if (attacker.Species.Type1 == attacker.ChargeMove.ChargeMove.Type || attacker.Species.Type2 == attacker.ChargeMove.ChargeMove.Type)
-                                attackerBonus *= Constants.StabBonus;
-                            attackerBonus *= Constants.CalculateWeatherBonus(attacker.ChargeMove.ChargeMove.Type, this.SelectedWeather);
-                            attackerBonus *= Constants.CalculateTypeBonus(attacker.ChargeMove.ChargeMove.Type, defender.Species.Type1, defender.Species.Type2);
-                            attackerBonus *= Constants.CalculateFriendshipBonus(this.SelectedFriendship);
-                            attackerState = BattleState.ChargeAttackWindow;
-                        }
+                        attackerPower = attacker.ChargeMove.ChargeMove.Power;
+                        attackerEnergy -= attacker.ChargeMove.ChargeMove.Energy;
+                        if (attacker.Species.Type1 == attacker.ChargeMove.ChargeMove.Type || attacker.Species.Type2 == attacker.ChargeMove.ChargeMove.Type)
+                            attackerBonus *= Constants.StabBonus;
+                        attackerBonus *= Constants.CalculateWeatherBonus(attacker.ChargeMove.ChargeMove.Type, this.SelectedWeather);
+                        attackerBonus *= Constants.CalculateTypeBonus(attacker.ChargeMove.ChargeMove.Type, defender.Species.Type1, defender.Species.Type2);
+                        attackerBonus *= Constants.CalculateFriendshipBonus(this.SelectedFriendship);
+                        attackerState = BattleState.ChargeAttackWindow;
                     }
-                    if (attackerState == BattleState.ChargeAttackWindow)
+                }
+                if (attackerState == BattleState.ChargeAttackWindow)
+                {
+                    if (time >= attackerStartAttackTime && time < attackerStartAttackTime + timeInterval)
                     {
-                        if (time >= attackerStartAttackTime && time < attackerStartAttackTime + timeInterval)
-                        {
-                            attackerDamage = Constants.CalculateDamage(attackerPower, attacker.GetAttack(), defender.GetDefense(), attackerBonus);
-                        }
-                        if (time >= attackerStartAttackTime + attacker.ChargeMove.ChargeMove.DamageWindowDuration)
-                        {
-                            attackerState = BattleState.Idle;
-                        }
+                        attackerDamage = Constants.CalculateDamage(attackerPower, attacker.GetAttack(), defender.GetDefense(), attackerBonus);
                     }
-                    if (attackerState == BattleState.Dodging)
+                    if (time >= attackerStartAttackTime + attacker.ChargeMove.ChargeMove.DamageWindowDuration)
                     {
-                        if (time >= dodgeEndTime)
-                            attackerState = BattleState.Idle;
+                        attackerState = BattleState.Idle;
                     }
+                }
+                if (attackerState == BattleState.Dodging)
+                {
+                    if (time >= dodgeEndTime)
+                        attackerState = BattleState.Idle;
+                }
 
-                    //Defender logic
-                    if (defenderState == BattleState.Idle)
+                //Defender logic
+                if (defenderState == BattleState.Idle)
+                {
+                    defenderPower = 0;
+                    defenderBonus = 1.0;
+                    if (time >= defenderNextAttackTime)
                     {
-                        defenderPower = 0;
-                        defenderBonus = 1.0;
-                        if (time >= defenderNextAttackTime)
+                        int randNum = rand.Next(0, 10);
+                        if (defenderEnergy >= defender.ChargeMove.ChargeMove.Energy && (randNum >= 5))
                         {
-                            int randNum = rand.Next(0, 10);
-                            if (defenderEnergy >= defender.ChargeMove.ChargeMove.Energy && (randNum >= 5))
-                            {
-                                defenderState = BattleState.ChargeAttackInit;
-                                defenderStartAttackTime = time + defender.ChargeMove.ChargeMove.DamageWindowStartTime;
-                                defenderNextAttackTime = time + defender.ChargeMove.ChargeMove.Time + rand.Next(Constants.DefenderFastMoveDelayMin, Constants.DefenderFastMoveDelayMax); ;
-                            }
-                            else if (defenderEnergy < defender.ChargeMove.ChargeMove.Energy || randNum < 5)
-                            {
-                                defenderState = BattleState.FastAttackInit;
-                                defenderStartAttackTime = time + defender.FastMove.FastMove.DamageWindowStartTime;
-                                defenderNextAttackTime = time + defender.FastMove.FastMove.Time + rand.Next(Constants.DefenderFastMoveDelayMin, Constants.DefenderFastMoveDelayMax);
-                            }
+                            defenderState = BattleState.ChargeAttackInit;
+                            defenderStartAttackTime = time + defender.ChargeMove.ChargeMove.DamageWindowStartTime;
+                            defenderNextAttackTime = time + defender.ChargeMove.ChargeMove.Time + rand.Next(Constants.DefenderFastMoveDelayMin, Constants.DefenderFastMoveDelayMax); ;
+                        }
+                        else if (defenderEnergy < defender.ChargeMove.ChargeMove.Energy || randNum < 5)
+                        {
+                            defenderState = BattleState.FastAttackInit;
+                            defenderStartAttackTime = time + defender.FastMove.FastMove.DamageWindowStartTime;
+                            defenderNextAttackTime = time + defender.FastMove.FastMove.Time + rand.Next(Constants.DefenderFastMoveDelayMin, Constants.DefenderFastMoveDelayMax);
                         }
                     }
-                    if (defenderState == BattleState.FastAttackInit)
+                }
+                if (defenderState == BattleState.FastAttackInit)
+                {
+                    if (time >= defenderStartAttackTime)
                     {
-                        if (time >= defenderStartAttackTime)
-                        {
-                            defenderPower = defender.FastMove.FastMove.Power;
-                            if (defender.Species.Type1 == defender.FastMove.FastMove.Type || defender.Species.Type2 == defender.FastMove.FastMove.Type)
-                                defenderBonus *= Constants.StabBonus;
-                            defenderBonus *= Constants.CalculateWeatherBonus(defender.FastMove.FastMove.Type, this.SelectedWeather);
-                            defenderBonus *= Constants.CalculateTypeBonus(defender.FastMove.FastMove.Type, attacker.Species.Type1, attacker.Species.Type2);
-                            defenderEnergy += defender.FastMove.FastMove.Energy;
-                            defenderState = BattleState.FastAttackWindow;
-                        }
+                        defenderPower = defender.FastMove.FastMove.Power;
+                        if (defender.Species.Type1 == defender.FastMove.FastMove.Type || defender.Species.Type2 == defender.FastMove.FastMove.Type)
+                            defenderBonus *= Constants.StabBonus;
+                        defenderBonus *= Constants.CalculateWeatherBonus(defender.FastMove.FastMove.Type, this.SelectedWeather);
+                        defenderBonus *= Constants.CalculateTypeBonus(defender.FastMove.FastMove.Type, attacker.Species.Type1, attacker.Species.Type2);
+                        defenderEnergy += defender.FastMove.FastMove.Energy;
+                        defenderState = BattleState.FastAttackWindow;
                     }
-                    if (defenderState == BattleState.FastAttackWindow)
+                }
+                if (defenderState == BattleState.FastAttackWindow)
+                {
+                    if (time >= defenderStartAttackTime && time < defenderStartAttackTime + timeInterval)
                     {
-                        if (time >= defenderStartAttackTime && time < defenderStartAttackTime + timeInterval)
-                        {
-                            defenderDamage = Constants.CalculateDamage(defenderPower, defender.GetAttack(), attacker.GetDefense(), defenderBonus);
-                        }
-                        if (time >= defenderStartAttackTime + defender.FastMove.FastMove.DamageWindowDuration)
-                        {
-                            defenderState = BattleState.Idle;
-                        }
+                        defenderDamage = Constants.CalculateDamage(defenderPower, defender.GetAttack(), attacker.GetDefense(), defenderBonus);
                     }
-                    if (defenderState == BattleState.ChargeAttackInit)
-                    {
-                        if (time >= defenderStartAttackTime)
-                        {
-                            defenderPower = defender.ChargeMove.ChargeMove.Power;
-                            defenderEnergy -= defender.ChargeMove.ChargeMove.Energy;
-                            if (defender.Species.Type1 == defender.ChargeMove.ChargeMove.Type || defender.Species.Type2 == defender.ChargeMove.ChargeMove.Type)
-                                defenderBonus *= Constants.StabBonus;
-                            defenderBonus *= Constants.CalculateWeatherBonus(defender.ChargeMove.ChargeMove.Type, this.SelectedWeather);
-                            defenderBonus *= Constants.CalculateTypeBonus(defender.ChargeMove.ChargeMove.Type, attacker.Species.Type1, attacker.Species.Type2);
-                            defenderState = BattleState.ChargeAttackWindow;
-                        }
-                    }
-                    if (defenderState == BattleState.ChargeAttackWindow)
-                    {
-                        if (time >= defenderStartAttackTime && time < defenderStartAttackTime + timeInterval)
-                        {
-                            defenderDamage = Constants.CalculateDamage(defenderPower, defender.GetAttack(), attacker.GetDefense(), defenderBonus);
-                        }
-                        if (time >= defenderStartAttackTime + defender.ChargeMove.ChargeMove.DamageWindowDuration)
-                        {
-                            defenderState = BattleState.Idle;
-                        }
-                    }
-                    if (defenderState == BattleState.Dodging)
+                    if (time >= defenderStartAttackTime + defender.FastMove.FastMove.DamageWindowDuration)
                     {
                         defenderState = BattleState.Idle;
                     }
+                }
+                if (defenderState == BattleState.ChargeAttackInit)
+                {
+                    if (time >= defenderStartAttackTime)
+                    {
+                        defenderPower = defender.ChargeMove.ChargeMove.Power;
+                        defenderEnergy -= defender.ChargeMove.ChargeMove.Energy;
+                        if (defender.Species.Type1 == defender.ChargeMove.ChargeMove.Type || defender.Species.Type2 == defender.ChargeMove.ChargeMove.Type)
+                            defenderBonus *= Constants.StabBonus;
+                        defenderBonus *= Constants.CalculateWeatherBonus(defender.ChargeMove.ChargeMove.Type, this.SelectedWeather);
+                        defenderBonus *= Constants.CalculateTypeBonus(defender.ChargeMove.ChargeMove.Type, attacker.Species.Type1, attacker.Species.Type2);
+                        defenderState = BattleState.ChargeAttackWindow;
+                    }
+                }
+                if (defenderState == BattleState.ChargeAttackWindow)
+                {
+                    if (time >= defenderStartAttackTime && time < defenderStartAttackTime + timeInterval)
+                    {
+                        defenderDamage = Constants.CalculateDamage(defenderPower, defender.GetAttack(), attacker.GetDefense(), defenderBonus);
+                    }
+                    if (time >= defenderStartAttackTime + defender.ChargeMove.ChargeMove.DamageWindowDuration)
+                    {
+                        defenderState = BattleState.Idle;
+                    }
+                }
+                if (defenderState == BattleState.Dodging)
+                {
+                    defenderState = BattleState.Idle;
+                }
 
-                    //Damage and energy exchange
-                    if (attackerState == BattleState.Dodging)
-                        defenderDamage = (int)(Constants.dodgeDamageFactor * (double)defenderDamage);
+                //Damage and energy exchange
+                if (attackerState == BattleState.Dodging)
+                    defenderDamage = (int)(Constants.dodgeDamageFactor * (double)defenderDamage);
+                if (attackerDamage > 0)
+                {
+                    defenderHP -= attackerDamage;
+                    defenderEnergy += (int)Math.Ceiling(attackerDamage / 2.0);
+                }
+                if (defenderDamage > 0)
+                {
+                    attackerHP -= defenderDamage;
+                    attackerEnergy += (int)Math.Ceiling(defenderDamage / 2.0);
+                }
+
+                //Limit energy to 100
+                defenderEnergy = defenderEnergy > 100 ? 100 : defenderEnergy;
+                attackerEnergy = attackerEnergy > 100 ? 100 : attackerEnergy;
+
+                if (i == 0)
+                {
+                    string attackerAction = "None";
+                    string defenderAction = "None";
+                    bool recordAction = false;
                     if (attackerDamage > 0)
                     {
-                        defenderHP -= attackerDamage;
-                        defenderEnergy += (int)Math.Ceiling(attackerDamage / 2.0);
+                        if (attackerState == BattleState.FastAttackWindow)
+                            attackerAction = $"Attacker used {attacker.FastMove.FastMove.Name}";
+                        else if (attackerState == BattleState.ChargeAttackWindow)
+                            attackerAction = $"Attacker used {attacker.ChargeMove.ChargeMove.Name}";
+                        recordAction = true;
                     }
                     if (defenderDamage > 0)
                     {
-                        attackerHP -= defenderDamage;
-                        attackerEnergy += (int)Math.Ceiling(defenderDamage / 2.0);
+                        if (defenderState == BattleState.FastAttackWindow)
+                            defenderAction = $"Defender used {defender.FastMove.FastMove.Name}";
+                        else if (defenderState == BattleState.ChargeAttackWindow)
+                            defenderAction = $"Defender used {defender.ChargeMove.ChargeMove.Name}";
+                        recordAction = true;
                     }
-
-                    //Limit energy to 100
-                    defenderEnergy = defenderEnergy > 100 ? 100 : defenderEnergy;
-                    attackerEnergy = attackerEnergy > 100 ? 100 : attackerEnergy;
-
-                    if (i == 0)
-                    {
-                        string attackerAction = "None";
-                        string defenderAction = "None";
-                        bool recordAction = false;
-                        if (attackerDamage > 0)
-                        {
-                            if (attackerState == BattleState.FastAttackWindow)
-                                attackerAction = $"Attacker used {attacker.FastMove.FastMove.Name}";
-                            else if (attackerState == BattleState.ChargeAttackWindow)
-                                attackerAction = $"Attacker used {attacker.ChargeMove.ChargeMove.Name}";
-                            recordAction = true;
-                        }
-                        if (defenderDamage > 0)
-                        {
-                            if (defenderState == BattleState.FastAttackWindow)
-                                defenderAction = $"Defender used {defender.FastMove.FastMove.Name}";
-                            else if (defenderState == BattleState.ChargeAttackWindow)
-                                defenderAction = $"Defender used {defender.ChargeMove.ChargeMove.Name}";
-                            recordAction = true;
-                        }
-                        if (recordAction)
-                            result.BattleLog.Add(new BattleLogEntry(time, attackerHP, attackerEnergy, defenderHP, defenderEnergy, attackerAction, defenderAction));
-                    }
-                    if (attackerHP <= 0)
-                    {
-                        result.DPS += (double)(defenderStartHP - defenderHP) / ((double)(time - timeInterval - startTime) / 1000.0);
-                        result.TDO += (double)(defenderStartHP - defenderHP) / (double)defenderTotalHP;
-                        result.BattleDuration += (time - timeInterval - startTime) / 1000.0;
-                        result.NumberOfDeaths += attackerLivesNeeded;
-
-                        result.CumulativeDPS += (double)(defenderTotalHP - defenderHP) / ((double)(time - timeInterval) / 1000.0);
-                        result.CumulativeTDO += (double)(defenderTotalHP - defenderHP) / (double)defenderTotalHP;
-                        result.CumulativeDuration += (time - timeInterval) / 1000.0;
-
-                        attackerIndex++;
-                        if (attackerIndex >= attackers.Count)
-                            break;
-                        attacker = attackers[attackerIndex];
-                        attackerHP = attacker.ActualHP;
-                        attackerEnergy = 0;
-                        attackerNextAttackTime = time + Constants.PokemonSwitchDelayMs;
-                        attackerState = BattleState.Idle;
-                        defenderStartHP = defenderHP;
-                        result = results[attackerIndex];
-                    }
-                    if (defenderHP <= 0)
-                    {
-                        result.DPS += (double)(defenderStartHP - defenderHP) / ((double)(time - timeInterval) / 1000.0);
-                        result.TDO += (double)(defenderStartHP - defenderHP) / (double)defenderTotalHP;
-                        result.BattleDuration += (time - timeInterval - startTime) / 1000.0;
-
-                        result.CumulativeDPS += (double)(defenderTotalHP - defenderHP) / ((double)(time - timeInterval) / 1000.0);
-                        result.CumulativeTDO += (double)(defenderTotalHP - defenderHP) / (double)defenderTotalHP;
-                        result.CumulativeDuration += (time - timeInterval) / 1000.0;
-                        break;
-                    }
-                    time += timeInterval;
-                    if (this.IsRaidBoss)
-                        timeRemaining = Constants.RaidTimer - time / 1000.0;
-                    else
-                        timeRemaining = Constants.GymTimer - time / 1000.0;
+                    if (recordAction)
+                        result.BattleLog.Add(new BattleLogEntry(time, attackerHP, attackerEnergy, defenderHP, defenderEnergy, attackerAction, defenderAction));
                 }
-            }
-            int resultIndex = 0;
-            foreach (BattleResult result in results)
-            {
-                result.BattleDuration = result.BattleDuration / (double)Constants.NumSimulations;
-                result.NumberOfDeaths = result.NumberOfDeaths / (double)Constants.NumSimulations;
-                result.DPS = result.DPS / (double)Constants.NumSimulations;
-                result.TDO = result.TDO / (double)Constants.NumSimulations;
-                result.CumulativeDuration = result.CumulativeDuration / (double)Constants.NumSimulations;
-                result.CumulativeDPS = result.CumulativeDPS / (double)Constants.NumSimulations;
-                result.CumulativeTDO = result.CumulativeTDO / (double)Constants.NumSimulations;
-
-                //Calculate next breakpoint
-                Pokemon attacker = attackers[resultIndex];
-                double bonus = 1.0;
-                if (attacker.Species.Type1 == attacker.FastMove.FastMove.Type || attacker.Species.Type2 == attacker.FastMove.FastMove.Type)
-                    bonus *= Constants.StabBonus;
-                bonus *= Constants.CalculateTypeBonus(attacker.FastMove.FastMove.Type, defender.Species.Type1, defender.Species.Type2);
-                bonus *= Constants.CalculateWeatherBonus(attacker.FastMove.FastMove.Type, this.SelectedWeather);
-                bonus *= Constants.CalculateFriendshipBonus(this.SelectedFriendship);
-
-                int baseDamage = Constants.CalculateDamage(attacker.FastMove.FastMove.Power, attacker.GetAttack(), defender.GetDefense(), bonus);
-                for (double i = attacker.Level; i <= Constants.MaxLevel; i += 0.5)
+                if (attackerHP <= 0)
                 {
-                    int damage = Constants.CalculateDamage(attacker.FastMove.FastMove.Power, attacker.GetAttack(-1, i), defender.GetDefense(), bonus);
-                    if (damage > baseDamage)
-                    {
-                        result.NextBreakpoint = i;
+                    result.DPS += (double)(defenderStartHP - defenderHP) / ((double)(time - timeInterval - startTime) / 1000.0);
+                    result.TDO += (double)(defenderStartHP - defenderHP) / (double)defenderTotalHP;
+                    result.BattleDuration += (time - timeInterval - startTime) / 1000.0;
+                    result.NumberOfDeaths += attackerLivesNeeded;
+
+                    result.CumulativeDPS += (double)(defenderTotalHP - defenderHP) / ((double)(time - timeInterval) / 1000.0);
+                    result.CumulativeTDO += (double)(defenderTotalHP - defenderHP) / (double)defenderTotalHP;
+                    result.CumulativeDuration += (time - timeInterval) / 1000.0;
+
+                    attackerIndex++;
+                    if (attackerIndex >= attackers.Count)
                         break;
-                    }
+                    attacker = attackers[attackerIndex].Attacker;
+                    attackerHP = attacker.ActualHP;
+                    attackerEnergy = 0;
+                    attackerNextAttackTime = time + Constants.PokemonSwitchDelayMs;
+                    attackerState = BattleState.Idle;
+                    defenderStartHP = defenderHP;
+                    startTime = time - timeInterval;
+                    result = attackers[attackerIndex].BattleResult;
+                }
+                if (defenderHP <= 0)
+                {
+                    result.DPS += (double)(defenderStartHP - defenderHP) / ((double)(time - timeInterval) / 1000.0);
+                    result.TDO += (double)(defenderStartHP - 0) / (double)defenderTotalHP;
+                    result.BattleDuration += (time - timeInterval - startTime) / 1000.0;
+
+                    result.CumulativeDPS += (double)(defenderTotalHP - defenderHP) / ((double)(time - timeInterval) / 1000.0);
+                    result.CumulativeTDO += (double)(defenderTotalHP - 0) / (double)defenderTotalHP;
+                    result.CumulativeDuration += (time - timeInterval) / 1000.0;
+                    break;
+                }
+                time += timeInterval;
+                if (this.IsRaidBoss)
+                    timeRemaining = Constants.RaidTimer - time / 1000.0;
+                else
+                    timeRemaining = Constants.GymTimer - time / 1000.0;
+            }
+        }
+        int resultIndex = 0;
+        foreach (AttackerSimulationWrapper wrapper in attackers)
+        {
+            BattleResult result = wrapper.BattleResult;
+            result.BattleDuration = result.BattleDuration / (double)Constants.NumSimulations;
+            result.NumberOfDeaths = result.NumberOfDeaths / (double)Constants.NumSimulations;
+            result.DPS = result.DPS / (double)Constants.NumSimulations;
+            result.TDO = result.TDO / (double)Constants.NumSimulations;
+            result.CumulativeDuration = result.CumulativeDuration / (double)Constants.NumSimulations;
+            result.CumulativeDPS = result.CumulativeDPS / (double)Constants.NumSimulations;
+            result.CumulativeTDO = result.CumulativeTDO / (double)Constants.NumSimulations;
+
+            //Calculate next breakpoint
+            Pokemon attacker = wrapper.Attacker;
+            double bonus = 1.0;
+            if (attacker.Species.Type1 == attacker.FastMove.FastMove.Type || attacker.Species.Type2 == attacker.FastMove.FastMove.Type)
+                bonus *= Constants.StabBonus;
+            bonus *= Constants.CalculateTypeBonus(attacker.FastMove.FastMove.Type, defender.Species.Type1, defender.Species.Type2);
+            bonus *= Constants.CalculateWeatherBonus(attacker.FastMove.FastMove.Type, this.SelectedWeather);
+            bonus *= Constants.CalculateFriendshipBonus(this.SelectedFriendship);
+
+            int baseDamage = Constants.CalculateDamage(attacker.FastMove.FastMove.Power, attacker.GetAttack(), defender.GetDefense(), bonus);
+            for (double i = attacker.Level; i <= Constants.MaxLevel; i += 0.5)
+            {
+                int damage = Constants.CalculateDamage(attacker.FastMove.FastMove.Power, attacker.GetAttack(-1, i), defender.GetDefense(), bonus);
+                if (damage > baseDamage)
+                {
+                    result.NextBreakpoint = i;
+                    break;
                 }
             }
-            return results;
         }
-        #endregion
     }
+    #endregion
+}
 }

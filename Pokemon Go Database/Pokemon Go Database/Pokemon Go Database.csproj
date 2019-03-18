@@ -96,11 +96,15 @@
     </ApplicationDefinition>
     <Compile Include="BaseViewModel.cs" />
     <Compile Include="CustomControls\HoverButton.cs" />
+    <Compile Include="CustomControls\BattleResultViewer.xaml.cs">
+      <DependentUpon>BattleResultViewer.xaml</DependentUpon>
+    </Compile>
     <Compile Include="CustomControls\PokemonSimulationViewer.xaml.cs">
       <DependentUpon>PokemonSimulationViewer.xaml</DependentUpon>
     </Compile>
     <Compile Include="IOC\IOCContainer.cs" />
     <Compile Include="IOC\MessageViewer.cs" />
+    <Compile Include="Model\AttackerSimulationWrapper.cs" />
     <Compile Include="Model\BattleLogEntry.cs" />
     <Compile Include="Model\BattleResult.cs" />
     <Compile Include="Model\ChargeMove.cs" />
@@ -168,6 +172,10 @@
     <Compile Include="ValueConverters\TypeToBoolConverter.cs" />
     <Compile Include="ValueConverters\ViewModelToViewConverter.cs" />
     <Compile Include="Windows\MainWindowViewModel.cs" />
+    <Page Include="CustomControls\BattleResultViewer.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="CustomControls\PokemonSimulationViewer.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
