@@ -79,16 +79,16 @@
                         </Button.CommandParameter>
                     </Button>
                 </StackPanel>
-                <!--<ItemsControl ItemsSource="{Binding Attackers}">
+                <ItemsControl ItemsSource="{Binding Attackers}">
                     <ItemsControl.ItemTemplate>
                         <DataTemplate>
                             <StackPanel Orientation="Vertical">
-                                <customControls:PokemonSimulationViewer Pokemon="{Binding Path=Attacker}" SpeciesView="{Binding Source={StaticResource AttackerSpeciesView}}" Margin="2"/>
+                                <customControls:PokemonSimulationViewer Pokemon="{Binding Path=Attacker}" SpeciesList="{Binding RelativeSource={RelativeSource AncestorType=UserControl}, Path=DataContext.Session.Pokedex}" Margin="2"/>
                                 <customControls:BattleResultViewer Result="{Binding Path=BattleResult}" Margin="2"/>
                             </StackPanel>
                         </DataTemplate>
                     </ItemsControl.ItemTemplate>
-                </ItemsControl>-->
+                </ItemsControl>
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                     <Button Content="Add Pokemon" Command="{Binding IncrementPartySizeCommand}" Width="100" Margin="2" Visibility="{Binding IncrementPartyButtonVisible, Converter={StaticResource BooleanToVisibilityConverter}}"/>
                     <Button Content="Remove Pokemon" Command="{Binding DecrementPartySizeCommand}" Width="100" Margin="2" Visibility="{Binding DecrementPartyButtonVisible, Converter={StaticResource BooleanToVisibilityConverter}}"/>
@@ -104,7 +104,7 @@
                             </DataTemplate>
                         </ComboBox.ItemTemplate>
                     </ComboBox>
-                    <customControls:PokemonSimulationViewer Pokemon="{Binding Defender}" SpeciesView="{Binding Source={StaticResource DefenderSpeciesView}}" Margin="2"/>
+                    <customControls:PokemonSimulationViewer Pokemon="{Binding Defender}" SpeciesList="{Binding RelativeSource={RelativeSource AncestorType=UserControl}, Path=DataContext.Session.Pokedex}" Margin="2"/>
                 </StackPanel>
                 <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center" Margin="2">
                     <Label Content="Weather"/>

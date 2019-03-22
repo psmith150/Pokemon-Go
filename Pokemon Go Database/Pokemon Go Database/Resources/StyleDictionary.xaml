@@ -233,7 +233,7 @@
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
                     <Border x:Name="border" BorderBrush="DarkGray" BorderThickness="1" Background="Transparent">
-                        <Image Source="/Resources/plus_sign.png" Height="15" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        <Image Source="/Images/plus_sign.png" Height="15" VerticalAlignment="Center" HorizontalAlignment="Center"/>
                     </Border>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
@@ -252,7 +252,7 @@
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
                     <Border x:Name="border" BorderBrush="DarkGray" BorderThickness="1" Background="Transparent">
-                        <Image Source="/Resources/minus_sign.png" Height="15" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        <Image Source="/Images/minus_sign.png" Height="15" VerticalAlignment="Center" HorizontalAlignment="Center"/>
                     </Border>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
@@ -271,7 +271,7 @@
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
                     <Border x:Name="border" BorderBrush="DarkGray" BorderThickness="1" Background="Transparent">
-                        <Image Source="/Resources/Up_arrow.png" Height="15" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        <Image Source="/Images/Up_arrow.png" Height="15" VerticalAlignment="Center" HorizontalAlignment="Center"/>
                     </Border>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
@@ -290,7 +290,7 @@
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
                     <Border x:Name="border" BorderBrush="DarkGray" BorderThickness="1" Background="Transparent">
-                        <Image Source="/Resources/Down_arrow.png" Height="15" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        <Image Source="/Images/Down_arrow.png" Height="15" VerticalAlignment="Center" HorizontalAlignment="Center"/>
                     </Border>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">

@@ -31,16 +31,16 @@ namespace Pokemon_Go_Database.CustomControls
             get { return (Pokemon)GetValue(PokemonProperty); }
             set { SetValue(PokemonProperty, value); }
         }
-        public ListCollectionView SpeciesView
+        public MyObservableCollection<PokedexEntry> SpeciesList
         {
-            get { return (ListCollectionView)GetValue(SpeciesViewProperty); }
-            set { SetValue(SpeciesViewProperty, value); }
+            get { return (MyObservableCollection<PokedexEntry>)GetValue(SpeciesListProperty); }
+            set { SetValue(SpeciesListProperty, value); }
         }
         #endregion
         #region Dependency Properties
         // Using a DependencyProperty as the backing store for ValuesDataSource.  This enables animation, styling, binding, etc...
-        public static readonly DependencyProperty SpeciesViewProperty =
-            DependencyProperty.Register("SpeciesView", typeof(ListCollectionView), typeof(PokemonSimulationViewer));
+        public static readonly DependencyProperty SpeciesListProperty =
+            DependencyProperty.Register("SpeciesList", typeof(MyObservableCollection<PokedexEntry>), typeof(PokemonSimulationViewer));
         public static readonly DependencyProperty PokemonProperty =
             DependencyProperty.Register("Pokemon", typeof(Pokemon), typeof(PokemonSimulationViewer));
         #endregion

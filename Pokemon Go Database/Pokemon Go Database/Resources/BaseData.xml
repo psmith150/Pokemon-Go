@@ -222,11 +222,171 @@
       <DamageWindowDuration>200</DamageWindowDuration>
     </Move>
     <Move xsi:type="FastMove">
-      <Name>Hidden Power</Name>
+      <Name>Hidden Power - Bug</Name>
+      <Power>15</Power>
+      <Time>1500</Time>
+      <Energy>15</Energy>
+      <Type>Bug</Type>
+      <MoveType>Fast</MoveType>
+      <DamageWindowStartTime>1100</DamageWindowStartTime>
+      <DamageWindowDuration>300</DamageWindowDuration>
+    </Move>
+    <Move xsi:type="FastMove">
+      <Name>Hidden Power - Dark</Name>
+      <Power>15</Power>
+      <Time>1500</Time>
+      <Energy>15</Energy>
+      <Type>Dark</Type>
+      <MoveType>Fast</MoveType>
+      <DamageWindowStartTime>1100</DamageWindowStartTime>
+      <DamageWindowDuration>300</DamageWindowDuration>
+    </Move>
+    <Move xsi:type="FastMove">
+      <Name>HIdden Power - Dragon</Name>
+      <Power>15</Power>
+      <Time>1500</Time>
+      <Energy>15</Energy>
+      <Type>Dragon</Type>
+      <MoveType>Fast</MoveType>
+      <DamageWindowStartTime>1100</DamageWindowStartTime>
+      <DamageWindowDuration>300</DamageWindowDuration>
+    </Move>
+    <Move xsi:type="FastMove">
+      <Name>Hidden Power - Electric</Name>
+      <Power>15</Power>
+      <Time>1500</Time>
+      <Energy>15</Energy>
+      <Type>Electric</Type>
+      <MoveType>Fast</MoveType>
+      <DamageWindowStartTime>1100</DamageWindowStartTime>
+      <DamageWindowDuration>300</DamageWindowDuration>
+    </Move>
+    <Move xsi:type="FastMove">
+      <Name>Hidden Power - Fighting</Name>
+      <Power>15</Power>
+      <Time>1500</Time>
+      <Energy>15</Energy>
+      <Type>Fighting</Type>
+      <MoveType>Fast</MoveType>
+      <DamageWindowStartTime>1100</DamageWindowStartTime>
+      <DamageWindowDuration>300</DamageWindowDuration>
+    </Move>
+    <Move xsi:type="FastMove">
+      <Name>Hidden Power - Fire</Name>
+      <Power>15</Power>
+      <Time>1500</Time>
+      <Energy>15</Energy>
+      <Type>Fire</Type>
+      <MoveType>Fast</MoveType>
+      <DamageWindowStartTime>1100</DamageWindowStartTime>
+      <DamageWindowDuration>300</DamageWindowDuration>
+    </Move>
+    <Move xsi:type="FastMove">
+      <Name>Hidden Power - Flying</Name>
+      <Power>15</Power>
+      <Time>1500</Time>
+      <Energy>15</Energy>
+      <Type>Flying</Type>
+      <MoveType>Fast</MoveType>
+      <DamageWindowStartTime>1100</DamageWindowStartTime>
+      <DamageWindowDuration>300</DamageWindowDuration>
+    </Move>
+    <Move xsi:type="FastMove">
+      <Name>Hidden Power - Ghost</Name>
+      <Power>15</Power>
+      <Time>1500</Time>
+      <Energy>15</Energy>
+      <Type>Ghost</Type>
+      <MoveType>Fast</MoveType>
+      <DamageWindowStartTime>1100</DamageWindowStartTime>
+      <DamageWindowDuration>300</DamageWindowDuration>
+    </Move>
+    <Move xsi:type="FastMove">
+      <Name>Hidden Power - Grass</Name>
+      <Power>15</Power>
+      <Time>1500</Time>
+      <Energy>15</Energy>
+      <Type>Grass</Type>
+      <MoveType>Fast</MoveType>
+      <DamageWindowStartTime>1100</DamageWindowStartTime>
+      <DamageWindowDuration>300</DamageWindowDuration>
+    </Move>
+    <Move xsi:type="FastMove">
+      <Name>Hidden Power - Ground</Name>
+      <Power>15</Power>
+      <Time>1500</Time>
+      <Energy>15</Energy>
+      <Type>Ground</Type>
+      <MoveType>Fast</MoveType>
+      <DamageWindowStartTime>1100</DamageWindowStartTime>
+      <DamageWindowDuration>300</DamageWindowDuration>
+    </Move>
+    <Move xsi:type="FastMove">
+      <Name>Hidden Power - Ice</Name>
+      <Power>15</Power>
+      <Time>1500</Time>
+      <Energy>15</Energy>
+      <Type>Ice</Type>
+      <MoveType>Fast</MoveType>
+      <DamageWindowStartTime>1100</DamageWindowStartTime>
+      <DamageWindowDuration>300</DamageWindowDuration>
+    </Move>
+    <Move xsi:type="FastMove">
+      <Name>Hidden Power - Normal</Name>
       <Power>15</Power>
       <Time>1500</Time>
       <Energy>15</Energy>
       <Type>Normal</Type>
+      <MoveType>Fast</MoveType>
+      <DamageWindowStartTime>1100</DamageWindowStartTime>
+      <DamageWindowDuration>300</DamageWindowDuration>
+    </Move>
+    <Move xsi:type="FastMove">
+      <Name>Hidden Power - Poison</Name>
+      <Power>15</Power>
+      <Time>1500</Time>
+      <Energy>15</Energy>
+      <Type>Poison</Type>
+      <MoveType>Fast</MoveType>
+      <DamageWindowStartTime>1100</DamageWindowStartTime>
+      <DamageWindowDuration>300</DamageWindowDuration>
+    </Move>
+    <Move xsi:type="FastMove">
+      <Name>Hidden Power - Psychic</Name>
+      <Power>15</Power>
+      <Time>1500</Time>
+      <Energy>15</Energy>
+      <Type>Psychic</Type>
+      <MoveType>Fast</MoveType>
+      <DamageWindowStartTime>1100</DamageWindowStartTime>
+      <DamageWindowDuration>300</DamageWindowDuration>
+    </Move>
+    <Move xsi:type="FastMove">
+      <Name>Hidden Power - Rock</Name>
+      <Power>15</Power>
+      <Time>1500</Time>
+      <Energy>15</Energy>
+      <Type>Rock</Type>
+      <MoveType>Fast</MoveType>
+      <DamageWindowStartTime>1100</DamageWindowStartTime>
+      <DamageWindowDuration>300</DamageWindowDuration>
+    </Move>
+    <Move xsi:type="FastMove">
+      <Name>Hidden Power - Steel</Name>
+      <Power>15</Power>
+      <Time>1500</Time>
+      <Energy>15</Energy>
+      <Type>Steel</Type>
+      <MoveType>Fast</MoveType>
+      <DamageWindowStartTime>1100</DamageWindowStartTime>
+      <DamageWindowDuration>300</DamageWindowDuration>
+    </Move>
+    <Move xsi:type="FastMove">
+      <Name>Hidden Power - Water</Name>
+      <Power>15</Power>
+      <Time>1500</Time>
+      <Energy>15</Energy>
+      <Type>Water</Type>
       <MoveType>Fast</MoveType>
       <DamageWindowStartTime>1100</DamageWindowStartTime>
       <DamageWindowDuration>300</DamageWindowDuration>
@@ -630,6 +790,17 @@
       <MoveType>Fast</MoveType>
       <DamageWindowStartTime>850</DamageWindowStartTime>
       <DamageWindowDuration>200</DamageWindowDuration>
+    </Move>
+    <Move xsi:type="ChargeMove">
+      <Name>Acid Spray</Name>
+      <Power>20</Power>
+      <Time>3000</Time>
+      <Energy>33</Energy>
+      <Type>Poison</Type>
+      <MoveType>Charge</MoveType>
+      <DamageWindowStartTime>2100</DamageWindowStartTime>
+      <DamageWindowDuration>900</DamageWindowDuration>
+      <DodgeFlashTime>0</DodgeFlashTime>
     </Move>
     <Move xsi:type="ChargeMove">
       <Name>Aerial Ace</Name>
@@ -1333,6 +1504,17 @@
       <MoveType>Charge</MoveType>
       <DamageWindowStartTime>1250</DamageWindowStartTime>
       <DamageWindowDuration>950</DamageWindowDuration>
+      <DodgeFlashTime>0</DodgeFlashTime>
+    </Move>
+    <Move xsi:type="ChargeMove">
+      <Name>Leaf Tornado</Name>
+      <Power>45</Power>
+      <Time>3100</Time>
+      <Energy>33</Energy>
+      <Type>Grass</Type>
+      <MoveType>Charge</MoveType>
+      <DamageWindowStartTime>2000</DamageWindowStartTime>
+      <DamageWindowDuration>1100</DamageWindowDuration>
       <DodgeFlashTime>0</DodgeFlashTime>
     </Move>
     <Move xsi:type="ChargeMove">
@@ -4011,6 +4193,20 @@
             <Type>Dark</Type>
             <MoveType>Charge</MoveType>
             <DamageWindowStartTime>1400</DamageWindowStartTime>
+            <DamageWindowDuration>900</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Acid Spray</Name>
+            <Power>20</Power>
+            <Time>3000</Time>
+            <Energy>33</Energy>
+            <Type>Poison</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>2100</DamageWindowStartTime>
             <DamageWindowDuration>900</DamageWindowDuration>
             <DodgeFlashTime>0</DodgeFlashTime>
           </ChargeMove>
@@ -8383,6 +8579,34 @@
           </ChargeMove>
           <IsLegacy>false</IsLegacy>
         </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Leaf Tornado</Name>
+            <Power>45</Power>
+            <Time>3100</Time>
+            <Energy>33</Energy>
+            <Type>Grass</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>2000</DamageWindowStartTime>
+            <DamageWindowDuration>1100</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Acid Spray</Name>
+            <Power>20</Power>
+            <Time>3000</Time>
+            <Energy>33</Energy>
+            <Type>Poison</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>2100</DamageWindowStartTime>
+            <DamageWindowDuration>900</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>207</Attack>
       <Defense>135</Defense>
@@ -8541,6 +8765,20 @@
             <MoveType>Charge</MoveType>
             <DamageWindowStartTime>2000</DamageWindowStartTime>
             <DamageWindowDuration>1000</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Acid Spray</Name>
+            <Power>20</Power>
+            <Time>3000</Time>
+            <Energy>33</Energy>
+            <Type>Poison</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>2100</DamageWindowStartTime>
+            <DamageWindowDuration>900</DamageWindowDuration>
             <DodgeFlashTime>0</DodgeFlashTime>
           </ChargeMove>
           <IsLegacy>false</IsLegacy>
@@ -10093,6 +10331,20 @@
             <MoveType>Charge</MoveType>
             <DamageWindowStartTime>1550</DamageWindowStartTime>
             <DamageWindowDuration>1700</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Acid Spray</Name>
+            <Power>20</Power>
+            <Time>3000</Time>
+            <Energy>33</Energy>
+            <Type>Poison</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>2100</DamageWindowStartTime>
+            <DamageWindowDuration>900</DamageWindowDuration>
             <DodgeFlashTime>0</DodgeFlashTime>
           </ChargeMove>
           <IsLegacy>false</IsLegacy>
@@ -13125,11 +13377,219 @@
         </PokedexFastMoveWrapper>
         <PokedexFastMoveWrapper>
           <FastMove>
-            <Name>Hidden Power</Name>
+            <Name>Hidden Power - Bug</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Bug</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Dark</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Dark</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>HIdden Power - Dragon</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Dragon</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Electric</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Electric</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Fighting</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Fighting</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Fire</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Fire</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Flying</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Flying</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Ghost</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Ghost</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Grass</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Grass</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Ground</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Ground</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Ice</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Ice</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Normal</Name>
             <Power>15</Power>
             <Time>1500</Time>
             <Energy>15</Energy>
             <Type>Normal</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Poison</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Poison</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Psychic</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Psychic</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Rock</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Rock</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Steel</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Steel</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Water</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Water</Type>
             <MoveType>Fast</MoveType>
             <DamageWindowStartTime>1100</DamageWindowStartTime>
             <DamageWindowDuration>300</DamageWindowDuration>
@@ -14558,11 +15018,219 @@
       <FastMoves>
         <PokedexFastMoveWrapper>
           <FastMove>
-            <Name>Hidden Power</Name>
+            <Name>Hidden Power - Bug</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Bug</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Dark</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Dark</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>HIdden Power - Dragon</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Dragon</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Electric</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Electric</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Fighting</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Fighting</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Fire</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Fire</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Flying</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Flying</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Ghost</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Ghost</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Grass</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Grass</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Ground</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Ground</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Ice</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Ice</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Normal</Name>
             <Power>15</Power>
             <Time>1500</Time>
             <Energy>15</Energy>
             <Type>Normal</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Poison</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Poison</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Psychic</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Psychic</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Rock</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Rock</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Steel</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Steel</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Water</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Water</Type>
             <MoveType>Fast</MoveType>
             <DamageWindowStartTime>1100</DamageWindowStartTime>
             <DamageWindowDuration>300</DamageWindowDuration>
@@ -18541,11 +19209,219 @@
         </PokedexFastMoveWrapper>
         <PokedexFastMoveWrapper>
           <FastMove>
-            <Name>Hidden Power</Name>
+            <Name>Hidden Power - Bug</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Bug</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Dark</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Dark</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>HIdden Power - Dragon</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Dragon</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Electric</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Electric</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Fighting</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Fighting</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Fire</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Fire</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Flying</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Flying</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Ghost</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Ghost</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Grass</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Grass</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Ground</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Ground</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Ice</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Ice</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Normal</Name>
             <Power>15</Power>
             <Time>1500</Time>
             <Energy>15</Energy>
             <Type>Normal</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Poison</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Poison</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Psychic</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Psychic</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Rock</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Rock</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Steel</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Steel</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Water</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Water</Type>
             <MoveType>Fast</MoveType>
             <DamageWindowStartTime>1100</DamageWindowStartTime>
             <DamageWindowDuration>300</DamageWindowDuration>
@@ -18635,11 +19511,219 @@
         </PokedexFastMoveWrapper>
         <PokedexFastMoveWrapper>
           <FastMove>
-            <Name>Hidden Power</Name>
+            <Name>Hidden Power - Bug</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Bug</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Dark</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Dark</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>HIdden Power - Dragon</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Dragon</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Electric</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Electric</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Fighting</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Fighting</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Fire</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Fire</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Flying</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Flying</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Ghost</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Ghost</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Grass</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Grass</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Ground</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Ground</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Ice</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Ice</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Normal</Name>
             <Power>15</Power>
             <Time>1500</Time>
             <Energy>15</Energy>
             <Type>Normal</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Poison</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Poison</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Psychic</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Psychic</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Rock</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Rock</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Steel</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Steel</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Water</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Water</Type>
             <MoveType>Fast</MoveType>
             <DamageWindowStartTime>1100</DamageWindowStartTime>
             <DamageWindowDuration>300</DamageWindowDuration>
@@ -20283,6 +21367,20 @@
           </ChargeMove>
           <IsLegacy>false</IsLegacy>
         </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Acid Spray</Name>
+            <Power>20</Power>
+            <Time>3000</Time>
+            <Energy>33</Energy>
+            <Type>Poison</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>2100</DamageWindowStartTime>
+            <DamageWindowDuration>900</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>152</Attack>
       <Defense>143</Defense>
@@ -20687,11 +21785,219 @@
       <FastMoves>
         <PokedexFastMoveWrapper>
           <FastMove>
-            <Name>Hidden Power</Name>
+            <Name>Hidden Power - Bug</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Bug</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Dark</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Dark</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>HIdden Power - Dragon</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Dragon</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Electric</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Electric</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Fighting</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Fighting</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Fire</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Fire</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Flying</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Flying</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Ghost</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Ghost</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Grass</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Grass</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Ground</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Ground</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Ice</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Ice</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Normal</Name>
             <Power>15</Power>
             <Time>1500</Time>
             <Energy>15</Energy>
             <Type>Normal</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Poison</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Poison</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Psychic</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Psychic</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Rock</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Rock</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Steel</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Steel</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Water</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Water</Type>
             <MoveType>Fast</MoveType>
             <DamageWindowStartTime>1100</DamageWindowStartTime>
             <DamageWindowDuration>300</DamageWindowDuration>
@@ -21492,6 +22798,20 @@
             <MoveType>Charge</MoveType>
             <DamageWindowStartTime>1500</DamageWindowStartTime>
             <DamageWindowDuration>1500</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Acid Spray</Name>
+            <Power>20</Power>
+            <Time>3000</Time>
+            <Energy>33</Energy>
+            <Type>Poison</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>2100</DamageWindowStartTime>
+            <DamageWindowDuration>900</DamageWindowDuration>
             <DodgeFlashTime>0</DodgeFlashTime>
           </ChargeMove>
           <IsLegacy>false</IsLegacy>
@@ -22562,6 +23882,20 @@
           </ChargeMove>
           <IsLegacy>false</IsLegacy>
         </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Acid Spray</Name>
+            <Power>20</Power>
+            <Time>3000</Time>
+            <Energy>33</Energy>
+            <Type>Poison</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>2100</DamageWindowStartTime>
+            <DamageWindowDuration>900</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>197</Attack>
       <Defense>141</Defense>
@@ -23289,11 +24623,219 @@
       <FastMoves>
         <PokedexFastMoveWrapper>
           <FastMove>
-            <Name>Hidden Power</Name>
+            <Name>Hidden Power - Bug</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Bug</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Dark</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Dark</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>HIdden Power - Dragon</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Dragon</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Electric</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Electric</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Fighting</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Fighting</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Fire</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Fire</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Flying</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Flying</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Ghost</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Ghost</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Grass</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Grass</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Ground</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Ground</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Ice</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Ice</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Normal</Name>
             <Power>15</Power>
             <Time>1500</Time>
             <Energy>15</Energy>
             <Type>Normal</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Poison</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Poison</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Psychic</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Psychic</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Rock</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Rock</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Steel</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Steel</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Water</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Water</Type>
             <MoveType>Fast</MoveType>
             <DamageWindowStartTime>1100</DamageWindowStartTime>
             <DamageWindowDuration>300</DamageWindowDuration>
@@ -24343,7 +25885,7 @@
         </PokedexFastMoveWrapper>
         <PokedexFastMoveWrapper>
           <FastMove>
-            <Name>Hidden Power</Name>
+            <Name>Hidden Power - Normal</Name>
             <Power>15</Power>
             <Time>1500</Time>
             <Energy>15</Energy>
@@ -24788,11 +26330,219 @@
         </PokedexFastMoveWrapper>
         <PokedexFastMoveWrapper>
           <FastMove>
-            <Name>Hidden Power</Name>
+            <Name>Hidden Power - Bug</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Bug</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Dark</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Dark</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>HIdden Power - Dragon</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Dragon</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Electric</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Electric</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Fighting</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Fighting</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Fire</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Fire</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Flying</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Flying</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Ghost</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Ghost</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Grass</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Grass</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Ground</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Ground</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Ice</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Ice</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Normal</Name>
             <Power>15</Power>
             <Time>1500</Time>
             <Energy>15</Energy>
             <Type>Normal</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Poison</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Poison</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Psychic</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Psychic</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Rock</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Rock</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Steel</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Steel</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Water</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Water</Type>
             <MoveType>Fast</MoveType>
             <DamageWindowStartTime>1100</DamageWindowStartTime>
             <DamageWindowDuration>300</DamageWindowDuration>
@@ -25166,6 +26916,20 @@
             <DodgeFlashTime>0</DodgeFlashTime>
           </ChargeMove>
           <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Frenzy Plant</Name>
+            <Power>100</Power>
+            <Time>2800</Time>
+            <Energy>50</Energy>
+            <Type>Grass</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>2150</DamageWindowStartTime>
+            <DamageWindowDuration>400</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+          </ChargeMove>
+          <IsLegacy>true</IsLegacy>
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>223</Attack>
@@ -26794,6 +28558,20 @@
             <MoveType>Charge</MoveType>
             <DamageWindowStartTime>1250</DamageWindowStartTime>
             <DamageWindowDuration>950</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Leaf Tornado</Name>
+            <Power>45</Power>
+            <Time>3100</Time>
+            <Energy>33</Energy>
+            <Type>Grass</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>2000</DamageWindowStartTime>
+            <DamageWindowDuration>1100</DamageWindowDuration>
             <DodgeFlashTime>0</DodgeFlashTime>
           </ChargeMove>
           <IsLegacy>false</IsLegacy>
@@ -30184,6 +31962,20 @@
             <MoveType>Charge</MoveType>
             <DamageWindowStartTime>1500</DamageWindowStartTime>
             <DamageWindowDuration>1500</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Acid Spray</Name>
+            <Power>20</Power>
+            <Time>3000</Time>
+            <Energy>33</Energy>
+            <Type>Poison</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>2100</DamageWindowStartTime>
+            <DamageWindowDuration>900</DamageWindowDuration>
             <DodgeFlashTime>0</DodgeFlashTime>
           </ChargeMove>
           <IsLegacy>false</IsLegacy>
@@ -37408,6 +39200,20 @@
           </ChargeMove>
           <IsLegacy>false</IsLegacy>
         </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Acid Spray</Name>
+            <Power>20</Power>
+            <Time>3000</Time>
+            <Energy>33</Energy>
+            <Type>Poison</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>2100</DamageWindowStartTime>
+            <DamageWindowDuration>900</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>190</Attack>
       <Defense>172</Defense>
@@ -38944,11 +40750,219 @@
         </PokedexFastMoveWrapper>
         <PokedexFastMoveWrapper>
           <FastMove>
-            <Name>Hidden Power</Name>
+            <Name>Hidden Power - Bug</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Bug</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Dark</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Dark</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>HIdden Power - Dragon</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Dragon</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Electric</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Electric</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Fighting</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Fighting</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Fire</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Fire</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Flying</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Flying</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Ghost</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Ghost</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Grass</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Grass</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Ground</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Ground</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Ice</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Ice</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Normal</Name>
             <Power>15</Power>
             <Time>1500</Time>
             <Energy>15</Energy>
             <Type>Normal</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Poison</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Poison</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Psychic</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Psychic</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Rock</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Rock</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Steel</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Steel</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Water</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Water</Type>
             <MoveType>Fast</MoveType>
             <DamageWindowStartTime>1100</DamageWindowStartTime>
             <DamageWindowDuration>300</DamageWindowDuration>
@@ -39012,11 +41026,219 @@
       <FastMoves>
         <PokedexFastMoveWrapper>
           <FastMove>
-            <Name>Hidden Power</Name>
+            <Name>Hidden Power - Bug</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Bug</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Dark</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Dark</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>HIdden Power - Dragon</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Dragon</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Electric</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Electric</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Fighting</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Fighting</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Fire</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Fire</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Flying</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Flying</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Ghost</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Ghost</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Grass</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Grass</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Ground</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Ground</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Ice</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Ice</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Normal</Name>
             <Power>15</Power>
             <Time>1500</Time>
             <Energy>15</Energy>
             <Type>Normal</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Poison</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Poison</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Psychic</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Psychic</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Rock</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Rock</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Steel</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Steel</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Water</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Water</Type>
             <MoveType>Fast</MoveType>
             <DamageWindowStartTime>1100</DamageWindowStartTime>
             <DamageWindowDuration>300</DamageWindowDuration>
@@ -40211,11 +42433,219 @@
         </PokedexFastMoveWrapper>
         <PokedexFastMoveWrapper>
           <FastMove>
-            <Name>Hidden Power</Name>
+            <Name>Hidden Power - Bug</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Bug</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Dark</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Dark</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>HIdden Power - Dragon</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Dragon</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Electric</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Electric</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Fighting</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Fighting</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Fire</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Fire</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Flying</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Flying</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Ghost</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Ghost</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Grass</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Grass</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Ground</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Ground</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Ice</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Ice</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Normal</Name>
             <Power>15</Power>
             <Time>1500</Time>
             <Energy>15</Energy>
             <Type>Normal</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Poison</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Poison</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Psychic</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Psychic</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Rock</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Rock</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Steel</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Steel</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Water</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Water</Type>
             <MoveType>Fast</MoveType>
             <DamageWindowStartTime>1100</DamageWindowStartTime>
             <DamageWindowDuration>300</DamageWindowDuration>
@@ -40292,11 +42722,219 @@
         </PokedexFastMoveWrapper>
         <PokedexFastMoveWrapper>
           <FastMove>
-            <Name>Hidden Power</Name>
+            <Name>Hidden Power - Bug</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Bug</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Dark</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Dark</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>HIdden Power - Dragon</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Dragon</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Electric</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Electric</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Fighting</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Fighting</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Fire</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Fire</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Flying</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Flying</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Ghost</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Ghost</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Grass</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Grass</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Ground</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Ground</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Ice</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Ice</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Normal</Name>
             <Power>15</Power>
             <Time>1500</Time>
             <Energy>15</Energy>
             <Type>Normal</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Poison</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Poison</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Psychic</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Psychic</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Rock</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Rock</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Steel</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Steel</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Water</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Water</Type>
             <MoveType>Fast</MoveType>
             <DamageWindowStartTime>1100</DamageWindowStartTime>
             <DamageWindowDuration>300</DamageWindowDuration>
@@ -43912,11 +46550,219 @@
       <FastMoves>
         <PokedexFastMoveWrapper>
           <FastMove>
-            <Name>Hidden Power</Name>
+            <Name>Hidden Power - Bug</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Bug</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Dark</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Dark</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>HIdden Power - Dragon</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Dragon</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Electric</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Electric</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Fighting</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Fighting</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Fire</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Fire</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Flying</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Flying</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Ghost</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Ghost</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Grass</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Grass</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Ground</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Ground</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Ice</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Ice</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Normal</Name>
             <Power>15</Power>
             <Time>1500</Time>
             <Energy>15</Energy>
             <Type>Normal</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Poison</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Poison</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Psychic</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Psychic</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Rock</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Rock</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Steel</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Steel</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Water</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Water</Type>
             <MoveType>Fast</MoveType>
             <DamageWindowStartTime>1100</DamageWindowStartTime>
             <DamageWindowDuration>300</DamageWindowDuration>
@@ -44426,11 +47272,219 @@
       <FastMoves>
         <PokedexFastMoveWrapper>
           <FastMove>
-            <Name>Hidden Power</Name>
+            <Name>Hidden Power - Bug</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Bug</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Dark</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Dark</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>HIdden Power - Dragon</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Dragon</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Electric</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Electric</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Fighting</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Fighting</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Fire</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Fire</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Flying</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Flying</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Ghost</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Ghost</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Grass</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Grass</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Ground</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Ground</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Ice</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Ice</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Normal</Name>
             <Power>15</Power>
             <Time>1500</Time>
             <Energy>15</Energy>
             <Type>Normal</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Poison</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Poison</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Psychic</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Psychic</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Rock</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Rock</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Steel</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Steel</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Water</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Water</Type>
             <MoveType>Fast</MoveType>
             <DamageWindowStartTime>1100</DamageWindowStartTime>
             <DamageWindowDuration>300</DamageWindowDuration>
@@ -45925,11 +48979,219 @@
       <FastMoves>
         <PokedexFastMoveWrapper>
           <FastMove>
-            <Name>Hidden Power</Name>
+            <Name>Hidden Power - Bug</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Bug</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Dark</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Dark</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>HIdden Power - Dragon</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Dragon</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Electric</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Electric</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Fighting</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Fighting</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Fire</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Fire</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Flying</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Flying</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Ghost</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Ghost</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Grass</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Grass</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Ground</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Ground</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Ice</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Ice</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Normal</Name>
             <Power>15</Power>
             <Time>1500</Time>
             <Energy>15</Energy>
             <Type>Normal</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Poison</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Poison</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Psychic</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Psychic</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Rock</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Rock</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Steel</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Steel</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Water</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Water</Type>
             <MoveType>Fast</MoveType>
             <DamageWindowStartTime>1100</DamageWindowStartTime>
             <DamageWindowDuration>300</DamageWindowDuration>
@@ -46006,11 +49268,219 @@
       <FastMoves>
         <PokedexFastMoveWrapper>
           <FastMove>
-            <Name>Hidden Power</Name>
+            <Name>Hidden Power - Bug</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Bug</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Dark</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Dark</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>HIdden Power - Dragon</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Dragon</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Electric</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Electric</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Fighting</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Fighting</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Fire</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Fire</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Flying</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Flying</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Ghost</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Ghost</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Grass</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Grass</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Ground</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Ground</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Ice</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Ice</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Normal</Name>
             <Power>15</Power>
             <Time>1500</Time>
             <Energy>15</Energy>
             <Type>Normal</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Poison</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Poison</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Psychic</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Psychic</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Rock</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Rock</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Steel</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Steel</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Hidden Power - Water</Name>
+            <Power>15</Power>
+            <Time>1500</Time>
+            <Energy>15</Energy>
+            <Type>Water</Type>
             <MoveType>Fast</MoveType>
             <DamageWindowStartTime>1100</DamageWindowStartTime>
             <DamageWindowDuration>300</DamageWindowDuration>
