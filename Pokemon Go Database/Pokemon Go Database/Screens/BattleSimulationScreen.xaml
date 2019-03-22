@@ -62,10 +62,6 @@
                     <Button Content="Add Pokemon" Command="{Binding IncrementPartySizeCommand}" Width="100" Margin="2" Visibility="{Binding IncrementPartyButtonVisible, Converter={StaticResource BooleanToVisibilityConverter}}"/>
                     <Button Content="Remove Pokemon" Command="{Binding DecrementPartySizeCommand}" Width="100" Margin="2" Visibility="{Binding DecrementPartyButtonVisible, Converter={StaticResource BooleanToVisibilityConverter}}"/>
                 </StackPanel>
-                <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
-                    <Label Content="Next breakpoint at level"/>
-                    <TextBlock Text="{Binding BattleResult.NextBreakpoint}" VerticalAlignment="Center"/>
-                </StackPanel>
             </StackPanel>
             <StackPanel Name="DefenderWrapper" Grid.Row="1" Margin="2">
                 <StackPanel Name="DefenderDisplay" Orientation="Horizontal" HorizontalAlignment="Center">

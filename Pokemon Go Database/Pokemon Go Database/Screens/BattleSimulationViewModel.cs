@@ -342,7 +342,7 @@ namespace Pokemon_Go_Database.Screens
             {
                 await this._messageViewer.DisplayMessage($"Error when simulating battle: {ex.Message}", "Simulation Error", MessageViewerButton.Ok, MessageViewerIcon.Error);
             }
-            this.BattleLog = new ObservableCollection<BattleLogEntry>(results[0].BattleLog);
+            //this.BattleLog = new ObservableCollection<BattleLogEntry>(results[0].BattleLog);
         }
 
         private async void SimulateAllPokemon()

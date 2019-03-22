@@ -19,6 +19,8 @@
             <TextBlock Text="{Binding Result.DPS, StringFormat=N2, ElementName=ResultViewer}" VerticalAlignment="Center"/>
             <Label Content="TDO:"/>
             <TextBlock Text="{Binding Result.TDO, StringFormat=P2, ElementName=ResultViewer}" VerticalAlignment="Center"/>
+            <Label Content="Next breakpoint at level"/>
+            <TextBlock Text="{Binding Result.NextBreakpoint, ElementName=ResultViewer}" VerticalAlignment="Center"/>
         </StackPanel>
         <StackPanel Name="CumulativeBattleResults" Orientation="Horizontal" HorizontalAlignment="Center">
             <Label Content="Total Time Required:"/>
