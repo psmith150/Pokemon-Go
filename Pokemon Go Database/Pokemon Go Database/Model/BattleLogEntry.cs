@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Pokemon_Go_Database.Model
 {
-    public class BattleLogEntry
+    public class BattleLogEntry : ObservableObject
     {
         public BattleLogEntry(int time, int attackerHP, int attackerEnergy, int defenderHP, int defenderEnergy, string attackerAction = "None", string defenderAction = "None")
         {
