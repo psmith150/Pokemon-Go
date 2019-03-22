@@ -23,6 +23,7 @@ namespace Pokemon_Go_Database.Screens
         public ICommand SimulateAllPokemonCommand { get; private set; }
         public ICommand IncrementPartySizeCommand { get; private set; }
         public ICommand DecrementPartySizeCommand { get; private set; }
+        public ICommand AssignAttackerPokemonCommand { get; private set; }
         #endregion
 
         #region Constructor
@@ -39,6 +40,7 @@ namespace Pokemon_Go_Database.Screens
             this.SimulateAllPokemonCommand = new RelayCommand(() => this.SimulateAllPokemon());
             this.IncrementPartySizeCommand = new RelayCommand(() => this.IncrementPartySize());
             this.DecrementPartySizeCommand = new RelayCommand(() => this.DecrementPartySize());
+            this.AssignAttackerPokemonCommand = new RelayCommand<int>((position) => this.AssignSelectedPokemonToParty(position));
 
             this._partySize = 1;
             Pokemon newPokemon = new Pokemon();
@@ -315,6 +317,7 @@ namespace Pokemon_Go_Database.Screens
                 newPokemon.IVSets.Add(new IVSet());
                 this.Attackers.Add(new AttackerSimulationWrapper(newPokemon, new BattleResult()));
             }
+            List<string> speciesNames = new List<string>(this.Attackers.Select(x => x.Attacker.Species.Species));
             this.UpdatePartyVisibility();
         }
         private void DecrementPartySize()
@@ -329,6 +332,12 @@ namespace Pokemon_Go_Database.Screens
                 this.Attackers.RemoveAt(this.Attackers.Count - 1);
             }
             this.UpdatePartyVisibility();
+        }
+        private void AssignSelectedPokemonToParty(int position)
+        {
+            if (position < 0 || position >= this._partySize || this.SelectedAttackerPokemon == null)
+                return;
+            this.Attackers[position].Attacker = this.SelectedAttackerPokemon.Copy();
         }
         private async void SimulateSingleBattle()
         {
