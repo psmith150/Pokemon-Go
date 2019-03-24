@@ -406,7 +406,6 @@ namespace Pokemon_Go_Database.Model
                 return this.Moveset.GetDPS(this.GetAttack(), this.Species.Type1, this.Species.Type2);
             }
         }
-        private float _offenseDPSPercent;
         [XmlIgnore]
         public double OffenseDPSAtMaxLevel
         {
@@ -417,7 +416,6 @@ namespace Pokemon_Go_Database.Model
                 return this.Moveset.GetDPS(this.GetAttack(-1, Constants.MaxLevel), this.Species.Type1, this.Species.Type2);
             }
         }
-        private float _offenseDPSPercentAtMax;
         [XmlIgnore]
         public double OffenseTotalDamage
         {
@@ -464,7 +462,6 @@ namespace Pokemon_Go_Database.Model
                 return this.Moveset.GetDPS(this.GetAttack(), this.Species.Type1, this.Species.Type2, true);
             }
         }
-        private float _defenseDPSPercent;
         [XmlIgnore]
         public double DefenseDPSAtMaxLevel
         {
@@ -475,7 +472,6 @@ namespace Pokemon_Go_Database.Model
                 return this.Moveset.GetDPS(this.GetAttack(-1, Constants.MaxLevel), this.Species.Type1, this.Species.Type2, true);
             }
         }
-        private float _defenseDPSPercentAtMax;
         [XmlIgnore]
         public double DefenseTotalDamage
         {

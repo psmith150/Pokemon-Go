@@ -173,7 +173,6 @@ namespace Pokemon_Go_Database.Screens
                     this.Defender.IVSets[0].AttackIV = Constants.MaxIV;
                     this.Defender.IVSets[0].DefenseIV = Constants.MaxIV;
                     this.Defender.IVSets[0].StaminaIV = Constants.MaxIV;
-                    int index;
                     double level = 1.0;
                     switch (this.DefenderType)
                     {
@@ -395,12 +394,8 @@ namespace Pokemon_Go_Database.Screens
                 }
             }
             const int timeInterval = 50;
-            int attackerDamageWindowStartTime;
-            int defenderDamageWindowStartTime;
-            bool defenderUseChargeMove = false;
             int attackerLivesNeeded = 0;
             Random rand = new Random();
-            bool errorShown = false;
             for (int i = 0; i < Constants.NumSimulations; i++)
             {
                 int attackerIndex = 0;
@@ -438,7 +433,6 @@ namespace Pokemon_Go_Database.Screens
                 while (attackerIndex < attackers.Count && time < 1000000)
                 {
                     int attackerDamage = 0, defenderDamage = 0;
-                    double currentDPS = 0.0, currentTDO = 0.0;
                     if (attackerState == BattleState.Idle)
                     {
                         attackerPower = 0;
@@ -687,7 +681,6 @@ namespace Pokemon_Go_Database.Screens
                         timeRemaining = Constants.GymTimer - time / 1000.0;
                 }
             }
-            int resultIndex = 0;
             foreach (AttackerSimulationWrapper wrapper in attackers)
             {
                 BattleResult result = wrapper.BattleResult;
