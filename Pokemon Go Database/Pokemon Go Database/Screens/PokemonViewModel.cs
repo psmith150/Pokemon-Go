@@ -13,6 +13,7 @@ using Pokemon_Go_Database.Popups;
 using System.Collections.ObjectModel;
 using GalaSoft.MvvmLight.Messaging;
 using Pokemon_Go_Database.Base.AbstractClasses;
+using System.Text.RegularExpressions;
 
 namespace Pokemon_Go_Database.Screens
 {
@@ -195,7 +196,7 @@ namespace Pokemon_Go_Database.Screens
                 DefenseBest = false,
                 StaminaBest = false
             };
-            IVCalculatorPopupEventArgs args =  await navigationService.OpenPopup<IVCalculatorViewModel>(new IVCalculatorWrapper(calculator, true)) as IVCalculatorPopupEventArgs;
+            IVCalculatorPopupEventArgs args = await navigationService.OpenPopup<IVCalculatorViewModel>(new IVCalculatorWrapper(calculator, true)) as IVCalculatorPopupEventArgs;
             if (args != null)
             {
                 this.Session.MyPokemon.Add(args.NewPokemon);

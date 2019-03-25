@@ -202,7 +202,7 @@
             <Setter.Value>
                 <ControlTemplate TargetType="Button">
                     <Grid>
-                        <Ellipse Stroke="Black" StrokeThickness="0" Fill="{DynamicResource DuplicateButtonBackgroundColor}"/>
+                        <Ellipse Stroke="Black" StrokeThickness="0" Fill="{DynamicResource DetailButtonBackgroundColor}"/>
                         <Image Source="/Images/Search_50x.png" Margin="5" HorizontalAlignment="Center" VerticalAlignment="Center" RenderOptions.BitmapScalingMode="HighQuality"/>
                     </Grid>
                 </ControlTemplate>
@@ -212,19 +212,19 @@
     <Style x:Key="AssignmentButtonStyle" TargetType="Button">
         <Setter Property="Width" Value="25"/>
         <Setter Property="Height" Value="25"/>
-        <!--<Setter Property="Background" Value="Transparent"/>
-        <Setter Property="Margin" Value="5,10,5,10"/>
-        <Setter Property="Padding" Value="10"/>
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="Margin" Value="2"/>
+        <Setter Property="Padding" Value="5"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="Button">
                     <Grid>
-                        <Ellipse Stroke="Black" StrokeThickness="0" Fill="{DynamicResource DuplicateButtonBackgroundColor}"/>
-                        <Image Source="/Images/Search_50x.png" Margin="5" HorizontalAlignment="Center" VerticalAlignment="Center" RenderOptions.BitmapScalingMode="HighQuality"/>
+                        <Ellipse Stroke="Black" StrokeThickness="0" Fill="{DynamicResource AssignmentButtonBackgroundColor}"/>
+                        <TextBlock Text="{TemplateBinding Content}" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White"/>
                     </Grid>
                 </ControlTemplate>
             </Setter.Value>
-        </Setter>-->
+        </Setter>
     </Style>
     <Style x:Key="AddGroupButton" TargetType="{x:Type Button}">
         <Setter Property="Width" Value="25"/>

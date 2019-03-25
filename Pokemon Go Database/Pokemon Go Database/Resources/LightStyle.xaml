@@ -12,6 +12,8 @@
     <SolidColorBrush x:Key="AddButtonBackgroundColor" Color="MediumSeaGreen"/>
     <SolidColorBrush x:Key="DeleteButtonBackgroundColor" Color="Firebrick"/>
     <SolidColorBrush x:Key="DuplicateButtonBackgroundColor" Color="DodgerBlue"/>
+    <SolidColorBrush x:Key="DetailButtonBackgroundColor" Color="LightSteelBlue"/>
+    <SolidColorBrush x:Key="AssignmentButtonBackgroundColor" Color="Crimson"/>
     <SolidColorBrush x:Key="ButtonSquareBackgroundColor" Color="WhiteSmoke"/>
     <SolidColorBrush x:Key="ButtonSquareBorderColor" Color="DarkGray"/>
     <SolidColorBrush x:Key="ButtonSquareMouseoverBackgroundColor" Color="LightGray"/>
@@ -30,11 +32,5 @@
     <SolidColorBrush x:Key="HelpButtonBackgroundColor" Color="LightGray"/>
     <SolidColorBrush x:Key="HelpButtonForegroundColor" Color="Black"/>
     <SolidColorBrush x:Key="BusyWindowBackgroundColor" Color="LightGray"/>
-    <SolidColorBrush x:Key="PositiveMoneyBackgroundColor" Color="Green"/>
-    <SolidColorBrush x:Key="NegativeMoneyBackgroundColor" Color="Red"/>
-    <SolidColorBrush x:Key="NeutralMoneyBackgroundColor" Color="White"/>
-    <SolidColorBrush x:Key="MoneyGridBackgroundColor" Color="#FFE5E5E5"/>
-    <SolidColorBrush x:Key="MoneyGridForegroundColor" Color="Black"/>
-    <SolidColorBrush x:Key="MonthDetailProgressIndicatorColor" Color="Chocolate"/>
     <!--#endregion-->
 </ResourceDictionary>

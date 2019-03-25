@@ -627,9 +627,9 @@ namespace Pokemon_Go_Database.Screens
                         if (defenderDamage > 0)
                         {
                             if (defenderState == BattleState.FastAttackWindow)
-                                defenderAction = $"{defender.Species} used {defender.FastMove.FastMove.Name}";
+                                defenderAction = $"{defender.Species.Species} used {defender.FastMove.FastMove.Name}";
                             else if (defenderState == BattleState.ChargeAttackWindow)
-                                defenderAction = $"{defender.Species} used {defender.ChargeMove.ChargeMove.Name}";
+                                defenderAction = $"{defender.Species.Species} used {defender.ChargeMove.ChargeMove.Name}";
                             recordAction = true;
                         }
                         if (recordAction)
@@ -663,7 +663,7 @@ namespace Pokemon_Go_Database.Screens
                     if (defenderHP <= 0)
                     {
                         if (i == 0)
-                            battleLog.Add(new BattleLogEntry(time, attackerHP, attackerEnergy, defenderHP, defenderEnergy, $"{attacker.FullName} wins!", $"{defender.Species} fainted"));
+                            battleLog.Add(new BattleLogEntry(time, attackerHP, attackerEnergy, defenderHP, defenderEnergy, $"{attacker.FullName} wins!", $"{defender.Species.Species} fainted"));
 
                         result.DPS += (double)(defenderStartHP - defenderHP) / ((double)(time - timeInterval) / 1000.0);
                         result.TDO += (double)(defenderStartHP - 0) / (double)defenderTotalHP;

@@ -31,6 +31,11 @@
         </CollectionViewSource>
         <CollectionViewSource x:Key="WeatherView" Source="{Binding WeatherOptions}"/>
         <CollectionViewSource x:Key="FriendshipView" Source="{Binding FriendshipOptions}"/>
+        <CollectionViewSource x:Key="AllPokemonResultsView" Source="{Binding AllPokemonResults}">
+            <CollectionViewSource.SortDescriptions>
+                <scm:SortDescription PropertyName="DPS" Direction="Descending"/>
+            </CollectionViewSource.SortDescriptions>
+        </CollectionViewSource>
         <converters:EnumToStringConverter x:Key="EnumToStringConverter"/>
         <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter"/>
     </UserControl.Resources>
@@ -157,7 +162,7 @@
                         </Style.Triggers>
                     </Style>
                 </Expander.Style>
-                <DataGrid ItemsSource="{Binding AllPokemonResults}" AutoGenerateColumns="False">
+                <DataGrid ItemsSource="{Binding Source={StaticResource AllPokemonResultsView}}" AutoGenerateColumns="False" EnableRowVirtualization="False">
                     <DataGrid.Columns>
                         <DataGridTextColumn Header="Pokemon" Binding="{Binding Path=Name}" Width="60*"/>
                         <DataGridTextColumn Header="DPS" Binding="{Binding Path=DPS, StringFormat=N2}" Width="10*"/>

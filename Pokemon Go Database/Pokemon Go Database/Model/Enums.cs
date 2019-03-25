@@ -79,4 +79,29 @@ namespace Pokemon_Go_Database.Model
         [Display(Description = "Ultra Friends")] Ultra,
         [Display(Description = "Best Friends")] Best
     }
+
+    public enum PokemonFilterType
+    {
+        [Display(Description = "Name")] Name,
+        [Display(Description = "Species")] Species,
+        [Display(Description = "Move")] Move,
+        [Display(Description = "Move Type")] MoveType,
+        [Display(Description = "Type")] Type,
+        [Display(Description = "CP")] CP,
+        [Display(Description = "HP")] HP,
+        [Display(Description = "Attack IV")] Attack,
+        [Display(Description = "Defense IV")] Defense,
+        [Display(Description = "Stamina IV")] Stamina,
+        [Display(Description = "Level")] Level
+    }
+
+    public enum FilterComparisonType
+    {
+        [Display(Description = "==")] Equal,
+        [Display(Description = ">=")] GreaterThanOrEqual,
+        [Display(Description = "<=")] LessThanOrEqual,
+        [Display(Description = ">")] GreaterThan,
+        [Display(Description = "<")] LessThan,
+        [Display(Description = "!=")] NotEqual
+    }
 }
