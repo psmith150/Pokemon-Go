@@ -92,7 +92,9 @@ namespace Pokemon_Go_Database.Model
         [Display(Description = "Attack IV")] Attack,
         [Display(Description = "Defense IV")] Defense,
         [Display(Description = "Stamina IV")] Stamina,
-        [Display(Description = "Level")] Level
+        [Display(Description = "Level")] Level,
+        [Display(Description = "IV %")] IVPercent,
+        [Display(Description = "Pokedex #")] PokedexNum
     }
 
     public enum FilterComparisonType
