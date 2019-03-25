@@ -99,6 +99,9 @@
     <Compile Include="CustomControls\BattleResultViewer.xaml.cs">
       <DependentUpon>BattleResultViewer.xaml</DependentUpon>
     </Compile>
+    <Compile Include="CustomControls\PokemonFilterViewer.xaml.cs">
+      <DependentUpon>PokemonFilterViewer.xaml</DependentUpon>
+    </Compile>
     <Compile Include="CustomControls\PokemonSimulationViewer.xaml.cs">
       <DependentUpon>PokemonSimulationViewer.xaml</DependentUpon>
     </Compile>
@@ -176,6 +179,10 @@
     <Page Include="CustomControls\BattleResultViewer.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="CustomControls\PokemonFilterViewer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="CustomControls\PokemonSimulationViewer.xaml">
       <SubType>Designer</SubType>

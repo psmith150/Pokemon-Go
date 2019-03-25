@@ -96,24 +96,42 @@ namespace Pokemon_Go_Database.Model
                         default:
                             return false;
                     }
-                //case PokemonFilterType.Type:
-                //    switch (this.ComparisonType)
-                //    {
-                //        case FilterComparisonType.Equal:
-                //            return pokemon.Species.Type1.ToString().Equals(this.FilterValue, StringComparison.InvariantCultureIgnoreCase) || pokemon.Species.Type2.ToString().Equals(this.FilterValue, StringComparison.InvariantCultureIgnoreCase);
-                //        case FilterComparisonType.GreaterThan:
-                //            return string.Compare(pokemon.Species.Type1.ToString(), this.FilterValue) >= 1;
-                //        case FilterComparisonType.LessThan:
-                //            return string.Compare(pokemon.Species.Species, this.FilterValue) <= -1;
-                //        case FilterComparisonType.GreaterThanOrEqual:
-                //            return string.Compare(pokemon.Species.Species, this.FilterValue) >= 0;
-                //        case FilterComparisonType.LessThanOrEqual:
-                //            return string.Compare(pokemon.Species.Species, this.FilterValue) <= 0;
-                //        case FilterComparisonType.NotEqual:
-                //            return !pokemon.Species.Species.Equals(this.FilterValue);
-                //        default:
-                //            return false;
-                //    }
+                case PokemonFilterType.Type:
+                    switch (this.ComparisonType)
+                    {
+                        case FilterComparisonType.Equal:
+                            return pokemon.Species.Type1.ToString().Equals(this.FilterValue, StringComparison.InvariantCultureIgnoreCase) || pokemon.Species.Type2.ToString().Equals(this.FilterValue, StringComparison.InvariantCultureIgnoreCase);
+                        case FilterComparisonType.GreaterThan:
+                            return string.Compare(pokemon.Species.Type1.ToString(), this.FilterValue, true) >= 1 || string.Compare(pokemon.Species.Type2.ToString(), this.FilterValue, true) >= 1;
+                        case FilterComparisonType.LessThan:
+                            return string.Compare(pokemon.Species.Type1.ToString(), this.FilterValue, true) <= -1 || string.Compare(pokemon.Species.Type2.ToString(), this.FilterValue, true) <= -1;
+                        case FilterComparisonType.GreaterThanOrEqual:
+                            return string.Compare(pokemon.Species.Type1.ToString(), this.FilterValue, true) >= 0 || string.Compare(pokemon.Species.Type2.ToString(), this.FilterValue, true) >= 0;
+                        case FilterComparisonType.LessThanOrEqual:
+                            return string.Compare(pokemon.Species.Type1.ToString(), this.FilterValue, true) <= 0 || string.Compare(pokemon.Species.Type2.ToString(), this.FilterValue, true) <= 0;
+                        case FilterComparisonType.NotEqual:
+                            return !(pokemon.Species.Type1.ToString().Equals(this.FilterValue, StringComparison.InvariantCultureIgnoreCase) || pokemon.Species.Type2.ToString().Equals(this.FilterValue, StringComparison.InvariantCultureIgnoreCase));
+                        default:
+                            return false;
+                    }
+                case PokemonFilterType.MoveType:
+                    switch (this.ComparisonType)
+                    {
+                        case FilterComparisonType.Equal:
+                            return pokemon.FastMove.FastMove.Type.ToString().Equals(this.FilterValue, StringComparison.InvariantCultureIgnoreCase) || pokemon.ChargeMove.ChargeMove.Type.ToString().Equals(this.FilterValue, StringComparison.InvariantCultureIgnoreCase);
+                        case FilterComparisonType.GreaterThan:
+                            return string.Compare(pokemon.FastMove.FastMove.Type.ToString(), this.FilterValue, true) >= 1 || string.Compare(pokemon.ChargeMove.ChargeMove.Type.ToString(), this.FilterValue, true) >= 1;
+                        case FilterComparisonType.LessThan:
+                            return string.Compare(pokemon.FastMove.FastMove.Type.ToString(), this.FilterValue, true) <= -1 || string.Compare(pokemon.ChargeMove.ChargeMove.Type.ToString(), this.FilterValue, true) <= -1;
+                        case FilterComparisonType.GreaterThanOrEqual:
+                            return string.Compare(pokemon.FastMove.FastMove.Type.ToString(), this.FilterValue, true) >= 0 || string.Compare(pokemon.ChargeMove.ChargeMove.Type.ToString(), this.FilterValue, true) >= 0;
+                        case FilterComparisonType.LessThanOrEqual:
+                            return string.Compare(pokemon.FastMove.FastMove.Type.ToString(), this.FilterValue, true) <= 0 || string.Compare(pokemon.ChargeMove.ChargeMove.Type.ToString(), this.FilterValue, true) <= 0;
+                        case FilterComparisonType.NotEqual:
+                            return !(pokemon.FastMove.FastMove.Type.ToString().Equals(this.FilterValue, StringComparison.InvariantCultureIgnoreCase) || pokemon.ChargeMove.ChargeMove.Type.ToString().Equals(this.FilterValue, StringComparison.InvariantCultureIgnoreCase));
+                        default:
+                            return false;
+                    }
                 default:
                     return false;
             }            
