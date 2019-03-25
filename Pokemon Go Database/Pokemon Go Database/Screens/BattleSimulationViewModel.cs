@@ -21,6 +21,7 @@ namespace Pokemon_Go_Database.Screens
         #region Commands
         public ICommand SimulateBattleCommand { get; private set; }
         public ICommand SimulateAllPokemonCommand { get; private set; }
+        public ICommand SimulateAllPokemonAt40Command { get; private set; }
         public ICommand IncrementPartySizeCommand { get; private set; }
         public ICommand DecrementPartySizeCommand { get; private set; }
         public ICommand AssignAttackerPokemonCommand { get; private set; }
@@ -38,6 +39,7 @@ namespace Pokemon_Go_Database.Screens
 
             this.SimulateBattleCommand = new RelayCommand(() => this.SimulateSingleBattle());
             this.SimulateAllPokemonCommand = new RelayCommand(() => this.SimulateAllPokemon());
+            this.SimulateAllPokemonAt40Command = new RelayCommand(() => this.SimulateAllPokemonAt40());
             this.IncrementPartySizeCommand = new RelayCommand(() => this.IncrementPartySize());
             this.DecrementPartySizeCommand = new RelayCommand(() => this.DecrementPartySize());
             this.AssignAttackerPokemonCommand = new RelayCommand<int>((position) => this.AssignSelectedPokemonToParty(position));
@@ -367,6 +369,37 @@ namespace Pokemon_Go_Database.Screens
             {
                 List<AttackerSimulationWrapper> attackers = new List<AttackerSimulationWrapper>();
                 attackers.Add(new AttackerSimulationWrapper(pokemon, new BattleResult()));
+                try
+                {
+                    await Task.Run(() => this.SimulateBattleAsync(attackers, this.Defender, this.DefenderType));
+                    results.Add(attackers[0].BattleResult);
+                }
+                catch (Exception ex)
+                {
+                    await this._messageViewer.DisplayMessage($"Error when simulating battle: {ex.Message}", "Simulation Error", MessageViewerButton.Ok, MessageViewerIcon.Error);
+                }
+            }
+            this.AllPokemonResults.Clear();
+            this.AllPokemonResults.InsertRange(results);
+        }
+        private async void SimulateAllPokemonAt40()
+        {
+            if (this.Defender == null || this.Defender.FastMove == null || this.Defender.ChargeMove == null)
+            {
+                await this._messageViewer.DisplayMessage("Pokemon not fully specified", "Invalid Data", MessageViewerButton.Ok, MessageViewerIcon.Warning);
+                this.AllPokemonResults.Clear();
+                return;
+            }
+            List<BattleResult> results = new List<BattleResult>();
+            foreach (Pokemon pokemon in this.Session.MyPokemon)
+            {
+                Pokemon newPokemon = pokemon.Copy();
+                int count = newPokemon.IVSets.Count;
+                for (int i = 1; i < count; i++)
+                    newPokemon.IVSets.RemoveAt(1);
+                newPokemon.IVSets[0].Level = 40.0;
+                List<AttackerSimulationWrapper> attackers = new List<AttackerSimulationWrapper>();
+                attackers.Add(new AttackerSimulationWrapper(newPokemon, new BattleResult()));
                 try
                 {
                     await Task.Run(() => this.SimulateBattleAsync(attackers, this.Defender, this.DefenderType));

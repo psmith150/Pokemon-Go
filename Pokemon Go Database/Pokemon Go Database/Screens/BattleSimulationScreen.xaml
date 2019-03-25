@@ -149,6 +149,7 @@
             </Expander>
             <StackPanel Grid.Row="4" HorizontalAlignment="Center" Orientation="Horizontal">
                 <Button Content="Simulate All Pokemon" Width="250" Command="{Binding SimulateAllPokemonCommand}"/>
+                <Button Content="Simulate All Pokemon at Level 40" Width="250" Command="{Binding SimulateAllPokemonAt40Command}"/>
             </StackPanel>
             <Expander Grid.Row="5">
                 <Expander.Style>
