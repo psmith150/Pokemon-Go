@@ -47,6 +47,17 @@
                 <ToggleButton Content="Needs Charge TM" IsChecked="{Binding ChargeTMFilterActive}" VerticalAlignment="Center"  Margin="5,0,5,0"/>
                 <ToggleButton Content="Needs Power Up" IsChecked="{Binding PowerUpFilterActive}" VerticalAlignment="Center"  Margin="5,0,5,0"/>
             </StackPanel>
+            <ItemsControl DockPanel.Dock="Top" ItemsSource="{Binding Filters}">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBox Text="{Binding Path=FilterValue}" Width="150"/>
+                            <Button Content="Remove" Command="{Binding Path=DataContext.RemoveFilterCommand, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type UserControl}}}" CommandParameter="{Binding Path=.}"/>
+                        </StackPanel>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+            <Button DockPanel.Dock="Top" Content="Add Filter" Command="{Binding AddFilterCommand}" Width="150"/>
             <StackPanel DockPanel.Dock="Left" Orientation="Vertical" VerticalAlignment="Top" Width="Auto">
                 <Button Command="{Binding AddPokemonCommand}" Style="{StaticResource AddButtonStyle}"/>
                 <Button Command="{Binding DeletePokemonCommand}" Style="{StaticResource RemoveButtonStyle}" Width="50" Height="50"  Margin="5,10,5,10"/>
