@@ -28,6 +28,7 @@ namespace Pokemon_Go_Database.Model
             set
             {
                 this.Set(ref this._FilterType, value);
+                this.FilterValue = "";
             }
         }
         private FilterComparisonType _ComparisonType;
@@ -65,17 +66,17 @@ namespace Pokemon_Go_Database.Model
                     switch (this.ComparisonType)
                     {
                         case FilterComparisonType.Equal:
-                            return pokemon.Name.Equals(this.FilterValue);
+                            return pokemon.Name.Equals(this.FilterValue, StringComparison.InvariantCultureIgnoreCase);
                         case FilterComparisonType.GreaterThan:
-                            return string.Compare(pokemon.Name, this.FilterValue) >= 1;
+                            return string.Compare(pokemon.Name, this.FilterValue, true) >= 1;
                         case FilterComparisonType.LessThan:
-                            return string.Compare(pokemon.Name, this.FilterValue) <= -1;
+                            return string.Compare(pokemon.Name, this.FilterValue, true) <= -1;
                         case FilterComparisonType.GreaterThanOrEqual:
-                            return string.Compare(pokemon.Name, this.FilterValue) >= 0;
+                            return string.Compare(pokemon.Name, this.FilterValue, true) >= 0;
                         case FilterComparisonType.LessThanOrEqual:
-                            return string.Compare(pokemon.Name, this.FilterValue) <= 0;
+                            return string.Compare(pokemon.Name, this.FilterValue, true) <= 0;
                         case FilterComparisonType.NotEqual:
-                            return !pokemon.Name.Equals(this.FilterValue);
+                            return !pokemon.Name.Equals(this.FilterValue, StringComparison.InvariantCultureIgnoreCase);
                         default:
                             return false;
                     }

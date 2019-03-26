@@ -96,6 +96,18 @@ namespace Pokemon_Go_Database.Model
         [Display(Description = "IV %")] IVPercent,
         [Display(Description = "Pokedex #")] PokedexNum
     }
+    public enum PokedexFilterType
+    {
+        [Display(Description = "Name")] Name,
+        [Display(Description = "Pokedex #")] PokedexNum,
+        [Display(Description = "Move")] Move,
+        [Display(Description = "Type")] Type,
+        [Display(Description = "Attack")] BaseAttack,
+        [Display(Description = "Defense")] BaseDefense,
+        [Display(Description = "Stamina")] BaseStamina,
+        [Display(Description = "Max CP")] MaxCP,
+        [Display(Description = "Total Stats")] BaseStatTotal
+    }
 
     public enum FilterComparisonType
     {

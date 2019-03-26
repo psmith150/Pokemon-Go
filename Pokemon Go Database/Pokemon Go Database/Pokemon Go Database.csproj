@@ -99,6 +99,9 @@
     <Compile Include="CustomControls\BattleResultViewer.xaml.cs">
       <DependentUpon>BattleResultViewer.xaml</DependentUpon>
     </Compile>
+    <Compile Include="CustomControls\PokedexFilterViewer.xaml.cs">
+      <DependentUpon>PokedexFilterViewer.xaml</DependentUpon>
+    </Compile>
     <Compile Include="CustomControls\PokemonFilterViewer.xaml.cs">
       <DependentUpon>PokemonFilterViewer.xaml</DependentUpon>
     </Compile>
@@ -114,6 +117,7 @@
     <Compile Include="Model\Constants.cs" />
     <Compile Include="Model\BaseDataWrapper.cs" />
     <Compile Include="Model\FastMove.cs" />
+    <Compile Include="Model\PokedexFilterElement.cs" />
     <Compile Include="Model\PokemonFilterElement.cs" />
     <Compile Include="Model\IVSet.cs" />
     <Compile Include="Model\PokemonMessage.cs" />
@@ -177,6 +181,10 @@
     <Compile Include="ValueConverters\ViewModelToViewConverter.cs" />
     <Compile Include="Windows\MainWindowViewModel.cs" />
     <Page Include="CustomControls\BattleResultViewer.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="CustomControls\PokedexFilterViewer.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

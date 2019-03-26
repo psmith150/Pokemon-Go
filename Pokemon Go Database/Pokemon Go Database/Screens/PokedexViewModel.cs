@@ -19,6 +19,8 @@ namespace Pokemon_Go_Database.Screens
         #region Commands
         public ICommand ShowMovesetsCommand { get; private set; }
         public ICommand JumpToTargetCommand { get; private set; }
+        public ICommand AddFilterCommand { get; private set; }
+        public ICommand RemoveFilterCommand { get; private set; }
         #endregion
 
         private readonly NavigationService navigationService;
@@ -30,6 +32,12 @@ namespace Pokemon_Go_Database.Screens
             this.PokedexEntries = new ListCollectionView(this.Session.Pokedex);
             this.ShowMovesetsCommand = new RelayCommand<PokedexEntry>((species) => ShowMovesets(species));
             this.JumpToTargetCommand = new RelayCommand(() => this.JumpTo(this.JumpTargetName));
+            this.AddFilterCommand = new RelayCommand(() => this.AddFilter());
+            this.RemoveFilterCommand = new RelayCommand<PokedexFilterElement>((filter) => this.RemoveFilter(filter));
+
+            this.Filters = new MyObservableCollection<PokedexFilterElement>();
+            this.Filters.CollectionChanged += (o, a) => this.UpdateFilter();
+            this.Filters.MemberChanged += (o, a) => this.UpdateFilter();
         }
 
         public override void Initialize()
@@ -53,7 +61,8 @@ namespace Pokemon_Go_Database.Screens
             private set
             {
                 this.Set(ref this._pokedexEntries, value);
-                this._pokedexEntries.SortDescriptions.Add(new System.ComponentModel.SortDescription("Number", System.ComponentModel.ListSortDirection.Ascending));
+                this.PokedexEntries.SortDescriptions.Add(new System.ComponentModel.SortDescription("Number", System.ComponentModel.ListSortDirection.Ascending));
+                this.PokedexEntries.Filter = this.PokedexFilter;
             }
         }
 
@@ -64,6 +73,18 @@ namespace Pokemon_Go_Database.Screens
             get
             {
                 return Enum.GetValues(typeof(Model.Type));
+            }
+        }
+        private MyObservableCollection<PokedexFilterElement> _Filters;
+        public MyObservableCollection<PokedexFilterElement> Filters
+        {
+            get
+            {
+                return this._Filters;
+            }
+            private set
+            {
+                this.Set(ref this._Filters, value);
             }
         }
         #endregion
@@ -78,6 +99,30 @@ namespace Pokemon_Go_Database.Screens
         {
             PokedexEntry jumpTarget = this.Session.Pokedex.FirstOrDefault(x => x.Species.Equals(name));
             this.PokedexEntries.MoveCurrentTo(jumpTarget);
+        }
+        private bool PokedexFilter(object item)
+        {
+            PokedexEntry pokemon = item as PokedexEntry;
+            bool result = true;
+            foreach (PokedexFilterElement filter in this.Filters)
+            {
+                if (!filter.EvaluateFilter(pokemon))
+                    result = false;
+            }
+            return result;
+        }
+        private void UpdateFilter()
+        {
+            this.PokedexEntries.Refresh();
+        }
+        private void AddFilter()
+        {
+            this.Filters.Add(new PokedexFilterElement());
+        }
+        private void RemoveFilter(PokedexFilterElement filter)
+        {
+            if (this.Filters != null && this.Filters.Contains(filter))
+                this.Filters.Remove(filter);
         }
         #endregion
     }
