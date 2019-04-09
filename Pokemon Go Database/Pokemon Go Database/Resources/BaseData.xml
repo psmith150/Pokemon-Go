@@ -48628,13 +48628,13 @@
       <FastMoves>
         <PokedexFastMoveWrapper>
           <FastMove>
-            <Name>Dragon Breath</Name>
-            <Power>6</Power>
-            <Time>500</Time>
-            <Energy>4</Energy>
+            <Name>Dragon Tail</Name>
+            <Power>15</Power>
+            <Time>1100</Time>
+            <Energy>9</Energy>
             <Type>Dragon</Type>
             <MoveType>Fast</MoveType>
-            <DamageWindowStartTime>300</DamageWindowStartTime>
+            <DamageWindowStartTime>850</DamageWindowStartTime>
             <DamageWindowDuration>200</DamageWindowDuration>
           </FastMove>
           <IsLegacy>false</IsLegacy>
@@ -48656,27 +48656,27 @@
       <ChargeMoves>
         <PokedexChargeMoveWrapper>
           <ChargeMove>
-            <Name>Dragon Claw</Name>
-            <Power>50</Power>
-            <Time>1700</Time>
+            <Name>Dragon Pulse</Name>
+            <Power>90</Power>
+            <Time>3600</Time>
             <Energy>33</Energy>
             <Type>Dragon</Type>
             <MoveType>Charge</MoveType>
-            <DamageWindowStartTime>1100</DamageWindowStartTime>
-            <DamageWindowDuration>200</DamageWindowDuration>
+            <DamageWindowStartTime>2150</DamageWindowStartTime>
+            <DamageWindowDuration>1150</DamageWindowDuration>
             <DodgeFlashTime>0</DodgeFlashTime>
           </ChargeMove>
           <IsLegacy>false</IsLegacy>
         </PokedexChargeMoveWrapper>
         <PokedexChargeMoveWrapper>
           <ChargeMove>
-            <Name>Ancient Power</Name>
-            <Power>70</Power>
-            <Time>3500</Time>
+            <Name>Ominous Wind</Name>
+            <Power>50</Power>
+            <Time>2300</Time>
             <Energy>33</Energy>
-            <Type>Rock</Type>
+            <Type>Ghost</Type>
             <MoveType>Charge</MoveType>
-            <DamageWindowStartTime>2850</DamageWindowStartTime>
+            <DamageWindowStartTime>1850</DamageWindowStartTime>
             <DamageWindowDuration>250</DamageWindowDuration>
             <DodgeFlashTime>0</DodgeFlashTime>
           </ChargeMove>
@@ -48684,14 +48684,14 @@
         </PokedexChargeMoveWrapper>
         <PokedexChargeMoveWrapper>
           <ChargeMove>
-            <Name>Shadow Sneak</Name>
-            <Power>50</Power>
-            <Time>2900</Time>
-            <Energy>33</Energy>
+            <Name>Shadow Ball</Name>
+            <Power>100</Power>
+            <Time>3000</Time>
+            <Energy>50</Energy>
             <Type>Ghost</Type>
             <MoveType>Charge</MoveType>
-            <DamageWindowStartTime>2200</DamageWindowStartTime>
-            <DamageWindowDuration>500</DamageWindowDuration>
+            <DamageWindowStartTime>2400</DamageWindowStartTime>
+            <DamageWindowDuration>400</DamageWindowDuration>
             <DodgeFlashTime>0</DodgeFlashTime>
           </ChargeMove>
           <IsLegacy>false</IsLegacy>
