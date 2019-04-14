@@ -36569,6 +36569,20 @@
           </ChargeMove>
           <IsLegacy>false</IsLegacy>
         </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Outrage</Name>
+            <Power>110</Power>
+            <Time>3900</Time>
+            <Energy>50</Energy>
+            <Type>Dragon</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>1400</DamageWindowStartTime>
+            <DamageWindowDuration>1200</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+          </ChargeMove>
+          <IsLegacy>true</IsLegacy>
+        </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>277</Attack>
       <Defense>168</Defense>
