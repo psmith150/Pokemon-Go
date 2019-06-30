@@ -1090,9 +1090,9 @@
     </Move>
     <Move xsi:type="ChargeMove">
       <Name>Doom Desire</Name>
-      <Power>80</Power>
+      <Power>70</Power>
       <Time>1700</Time>
-      <Energy>50</Energy>
+      <Energy>33</Energy>
       <Type>Steel</Type>
       <MoveType>Charge</MoveType>
       <DamageWindowStartTime>1400</DamageWindowStartTime>
@@ -1106,7 +1106,7 @@
       <Energy>100</Energy>
       <Type>Dragon</Type>
       <MoveType>Charge</MoveType>
-      <DamageWindowStartTime>3000</DamageWindowStartTime>
+      <DamageWindowStartTime>1400</DamageWindowStartTime>
       <DamageWindowDuration>500</DamageWindowDuration>
       <DodgeFlashTime>0</DodgeFlashTime>
     </Move>
@@ -1174,6 +1174,17 @@
       <MoveType>Charge</MoveType>
       <DamageWindowStartTime>1200</DamageWindowStartTime>
       <DamageWindowDuration>1500</DamageWindowDuration>
+      <DodgeFlashTime>0</DodgeFlashTime>
+    </Move>
+    <Move xsi:type="ChargeMove">
+      <Name>Earth Power</Name>
+      <Power>100</Power>
+      <Time>3600</Time>
+      <Energy>50</Energy>
+      <Type>Ground</Type>
+      <MoveType>Charge</MoveType>
+      <DamageWindowStartTime>2700</DamageWindowStartTime>
+      <DamageWindowDuration>500</DamageWindowDuration>
       <DodgeFlashTime>0</DodgeFlashTime>
     </Move>
     <Move xsi:type="ChargeMove">
@@ -4834,6 +4845,20 @@
           </ChargeMove>
           <IsLegacy>false</IsLegacy>
         </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Earth Power</Name>
+            <Power>100</Power>
+            <Time>3600</Time>
+            <Energy>50</Energy>
+            <Type>Ground</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>2700</DamageWindowStartTime>
+            <DamageWindowDuration>500</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>180</Attack>
       <Defense>173</Defense>
@@ -5086,6 +5111,20 @@
             <MoveType>Charge</MoveType>
             <DamageWindowStartTime>2000</DamageWindowStartTime>
             <DamageWindowDuration>1000</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Earth Power</Name>
+            <Power>100</Power>
+            <Time>3600</Time>
+            <Energy>50</Energy>
+            <Type>Ground</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>2700</DamageWindowStartTime>
+            <DamageWindowDuration>500</DamageWindowDuration>
             <DodgeFlashTime>0</DodgeFlashTime>
           </ChargeMove>
           <IsLegacy>false</IsLegacy>
@@ -15862,6 +15901,20 @@
           </ChargeMove>
           <IsLegacy>false</IsLegacy>
         </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Earth Power</Name>
+            <Power>100</Power>
+            <Time>3600</Time>
+            <Energy>50</Energy>
+            <Type>Ground</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>2700</DamageWindowStartTime>
+            <DamageWindowDuration>500</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>221</Attack>
       <Defense>159</Defense>
@@ -15898,6 +15951,19 @@
             <DamageWindowDuration>200</DamageWindowDuration>
           </FastMove>
           <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Yawn</Name>
+            <Power>0</Power>
+            <Time>1700</Time>
+            <Energy>15</Energy>
+            <Type>Normal</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1400</DamageWindowStartTime>
+            <DamageWindowDuration>200</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>true</IsLegacy>
         </PokedexFastMoveWrapper>
       </FastMoves>
       <ChargeMoves>
@@ -16521,7 +16587,7 @@
             <Energy>100</Energy>
             <Type>Dragon</Type>
             <MoveType>Charge</MoveType>
-            <DamageWindowStartTime>3000</DamageWindowStartTime>
+            <DamageWindowStartTime>1400</DamageWindowStartTime>
             <DamageWindowDuration>500</DamageWindowDuration>
             <DodgeFlashTime>0</DodgeFlashTime>
           </ChargeMove>
@@ -29670,6 +29736,20 @@
           </ChargeMove>
           <IsLegacy>false</IsLegacy>
         </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Body Slam</Name>
+            <Power>50</Power>
+            <Time>1900</Time>
+            <Energy>33</Energy>
+            <Type>Normal</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>1200</DamageWindowStartTime>
+            <DamageWindowDuration>500</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+          </ChargeMove>
+          <IsLegacy>true</IsLegacy>
+        </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>290</Attack>
       <Defense>166</Defense>
@@ -32466,6 +32546,20 @@
           </ChargeMove>
           <IsLegacy>false</IsLegacy>
         </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Earth Power</Name>
+            <Power>100</Power>
+            <Time>3600</Time>
+            <Energy>50</Energy>
+            <Type>Ground</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>2700</DamageWindowStartTime>
+            <DamageWindowDuration>500</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>194</Attack>
       <Defense>136</Defense>
@@ -34163,6 +34257,20 @@
             <MoveType>Charge</MoveType>
             <DamageWindowStartTime>3000</DamageWindowStartTime>
             <DamageWindowDuration>300</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Earth Power</Name>
+            <Power>100</Power>
+            <Time>3600</Time>
+            <Energy>50</Energy>
+            <Type>Ground</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>2700</DamageWindowStartTime>
+            <DamageWindowDuration>500</DamageWindowDuration>
             <DodgeFlashTime>0</DodgeFlashTime>
           </ChargeMove>
           <IsLegacy>false</IsLegacy>
@@ -36535,7 +36643,7 @@
             <Energy>100</Energy>
             <Type>Dragon</Type>
             <MoveType>Charge</MoveType>
-            <DamageWindowStartTime>3000</DamageWindowStartTime>
+            <DamageWindowStartTime>1400</DamageWindowStartTime>
             <DamageWindowDuration>500</DamageWindowDuration>
             <DodgeFlashTime>0</DodgeFlashTime>
           </ChargeMove>
@@ -37489,9 +37597,9 @@
         <PokedexChargeMoveWrapper>
           <ChargeMove>
             <Name>Doom Desire</Name>
-            <Power>80</Power>
+            <Power>70</Power>
             <Time>1700</Time>
-            <Energy>50</Energy>
+            <Energy>33</Energy>
             <Type>Steel</Type>
             <MoveType>Charge</MoveType>
             <DamageWindowStartTime>1400</DamageWindowStartTime>
@@ -42999,6 +43107,20 @@
           </ChargeMove>
           <IsLegacy>false</IsLegacy>
         </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Earth Power</Name>
+            <Power>100</Power>
+            <Time>3600</Time>
+            <Energy>50</Energy>
+            <Type>Ground</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>2700</DamageWindowStartTime>
+            <DamageWindowDuration>500</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>169</Attack>
       <Defense>143</Defense>
@@ -45155,6 +45277,20 @@
             <Type>Normal</Type>
             <MoveType>Charge</MoveType>
             <DamageWindowStartTime>1200</DamageWindowStartTime>
+            <DamageWindowDuration>500</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Earth Power</Name>
+            <Power>100</Power>
+            <Time>3600</Time>
+            <Energy>50</Energy>
+            <Type>Ground</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>2700</DamageWindowStartTime>
             <DamageWindowDuration>500</DamageWindowDuration>
             <DodgeFlashTime>0</DodgeFlashTime>
           </ChargeMove>
@@ -47670,14 +47806,14 @@
       <FastMoves>
         <PokedexFastMoveWrapper>
           <FastMove>
-            <Name>Rock Smash</Name>
-            <Power>15</Power>
-            <Time>1300</Time>
-            <Energy>10</Energy>
-            <Type>Fighting</Type>
+            <Name>Rock Throw</Name>
+            <Power>12</Power>
+            <Time>900</Time>
+            <Energy>7</Energy>
+            <Type>Rock</Type>
             <MoveType>Fast</MoveType>
-            <DamageWindowStartTime>550</DamageWindowStartTime>
-            <DamageWindowDuration>250</DamageWindowDuration>
+            <DamageWindowStartTime>500</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
           </FastMove>
           <IsLegacy>false</IsLegacy>
         </PokedexFastMoveWrapper>
@@ -48271,7 +48407,7 @@
             <Energy>100</Energy>
             <Type>Dragon</Type>
             <MoveType>Charge</MoveType>
-            <DamageWindowStartTime>3000</DamageWindowStartTime>
+            <DamageWindowStartTime>1400</DamageWindowStartTime>
             <DamageWindowDuration>500</DamageWindowDuration>
             <DodgeFlashTime>0</DodgeFlashTime>
           </ChargeMove>
@@ -48366,7 +48502,7 @@
             <Energy>100</Energy>
             <Type>Dragon</Type>
             <MoveType>Charge</MoveType>
-            <DamageWindowStartTime>3000</DamageWindowStartTime>
+            <DamageWindowStartTime>1400</DamageWindowStartTime>
             <DamageWindowDuration>500</DamageWindowDuration>
             <DodgeFlashTime>0</DodgeFlashTime>
           </ChargeMove>

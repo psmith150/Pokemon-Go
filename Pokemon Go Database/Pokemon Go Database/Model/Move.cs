@@ -56,6 +56,7 @@ namespace Pokemon_Go_Database.Model
             {
                 _power = value;
                 RaisePropertyChanged("Power");
+                RaisePropertyChanged("DPS");
             }
         }
 
@@ -69,6 +70,8 @@ namespace Pokemon_Go_Database.Model
             {
                 _time = value;
                 RaisePropertyChanged("Time");
+                RaisePropertyChanged("DPS");
+                RaisePropertyChanged("EPS");
             }
         }
 
@@ -82,6 +85,7 @@ namespace Pokemon_Go_Database.Model
             {
                 _energy = value;
                 RaisePropertyChanged("Energy");
+                RaisePropertyChanged("EPS");
             }
         }
 
