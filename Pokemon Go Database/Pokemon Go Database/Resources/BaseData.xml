@@ -27831,6 +27831,20 @@
           </ChargeMove>
           <IsLegacy>false</IsLegacy>
         </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Hydro Cannon</Name>
+            <Power>90</Power>
+            <Time>1900</Time>
+            <Energy>50</Energy>
+            <Type>Water</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>500</DamageWindowStartTime>
+            <DamageWindowDuration>1100</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+          </ChargeMove>
+          <IsLegacy>true</IsLegacy>
+        </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>208</Attack>
       <Defense>175</Defense>
@@ -42289,7 +42303,7 @@
     </PokedexEntry>
     <PokedexEntry>
       <Number>413</Number>
-      <Species>Wormadam</Species>
+      <Species>Wormadam - Plant</Species>
       <Type1>Bug</Type1>
       <Type2>Grass</Type2>
       <FastMoves>
@@ -42308,14 +42322,14 @@
         </PokedexFastMoveWrapper>
         <PokedexFastMoveWrapper>
           <FastMove>
-            <Name>Tackle</Name>
-            <Power>5</Power>
-            <Time>500</Time>
-            <Energy>5</Energy>
-            <Type>Normal</Type>
+            <Name>Confusion</Name>
+            <Power>20</Power>
+            <Time>1600</Time>
+            <Energy>15</Energy>
+            <Type>Psychic</Type>
             <MoveType>Fast</MoveType>
-            <DamageWindowStartTime>300</DamageWindowStartTime>
-            <DamageWindowDuration>200</DamageWindowDuration>
+            <DamageWindowStartTime>600</DamageWindowStartTime>
+            <DamageWindowDuration>1000</DamageWindowDuration>
           </FastMove>
           <IsLegacy>false</IsLegacy>
         </PokedexFastMoveWrapper>
@@ -42323,14 +42337,42 @@
       <ChargeMoves>
         <PokedexChargeMoveWrapper>
           <ChargeMove>
-            <Name>Struggle</Name>
-            <Power>35</Power>
-            <Time>2200</Time>
-            <Energy>33</Energy>
-            <Type>Normal</Type>
+            <Name>Psybeam</Name>
+            <Power>70</Power>
+            <Time>3200</Time>
+            <Energy>50</Energy>
+            <Type>Psychic</Type>
             <MoveType>Charge</MoveType>
-            <DamageWindowStartTime>1200</DamageWindowStartTime>
+            <DamageWindowStartTime>1300</DamageWindowStartTime>
+            <DamageWindowDuration>1400</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Energy Ball</Name>
+            <Power>90</Power>
+            <Time>3900</Time>
+            <Energy>50</Energy>
+            <Type>Grass</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>3000</DamageWindowStartTime>
             <DamageWindowDuration>800</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Bug Buzz</Name>
+            <Power>90</Power>
+            <Time>3700</Time>
+            <Energy>50</Energy>
+            <Type>Bug</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>2000</DamageWindowStartTime>
+            <DamageWindowDuration>1100</DamageWindowDuration>
             <DodgeFlashTime>0</DodgeFlashTime>
           </ChargeMove>
           <IsLegacy>false</IsLegacy>
@@ -50681,6 +50723,263 @@
       <Attack>231</Attack>
       <Defense>213</Defense>
       <Stamina>264</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>413</Number>
+      <Species>Wormadam - Trash</Species>
+      <Type1>Bug</Type1>
+      <Type2>Steel</Type2>
+      <FastMoves>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Confusion</Name>
+            <Power>20</Power>
+            <Time>1600</Time>
+            <Energy>15</Energy>
+            <Type>Psychic</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>600</DamageWindowStartTime>
+            <DamageWindowDuration>1000</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Bug Bite</Name>
+            <Power>5</Power>
+            <Time>500</Time>
+            <Energy>6</Energy>
+            <Type>Bug</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>250</DamageWindowStartTime>
+            <DamageWindowDuration>200</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+      </FastMoves>
+      <ChargeMoves>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Psybeam</Name>
+            <Power>70</Power>
+            <Time>3200</Time>
+            <Energy>50</Energy>
+            <Type>Psychic</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>1300</DamageWindowStartTime>
+            <DamageWindowDuration>1400</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Iron Head</Name>
+            <Power>60</Power>
+            <Time>1900</Time>
+            <Energy>50</Energy>
+            <Type>Steel</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>1300</DamageWindowStartTime>
+            <DamageWindowDuration>400</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Bug Buzz</Name>
+            <Power>90</Power>
+            <Time>3700</Time>
+            <Energy>50</Energy>
+            <Type>Bug</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>2000</DamageWindowStartTime>
+            <DamageWindowDuration>1100</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
+      </ChargeMoves>
+      <Attack>127</Attack>
+      <Defense>175</Defense>
+      <Stamina>155</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>413</Number>
+      <Species>Wormadam - Sandy</Species>
+      <Type1>Bug</Type1>
+      <Type2>Ground</Type2>
+      <FastMoves>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Confusion</Name>
+            <Power>20</Power>
+            <Time>1600</Time>
+            <Energy>15</Energy>
+            <Type>Psychic</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>600</DamageWindowStartTime>
+            <DamageWindowDuration>1000</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Bug Bite</Name>
+            <Power>5</Power>
+            <Time>500</Time>
+            <Energy>6</Energy>
+            <Type>Bug</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>250</DamageWindowStartTime>
+            <DamageWindowDuration>200</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+      </FastMoves>
+      <ChargeMoves>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Psybeam</Name>
+            <Power>70</Power>
+            <Time>3200</Time>
+            <Energy>50</Energy>
+            <Type>Psychic</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>1300</DamageWindowStartTime>
+            <DamageWindowDuration>1400</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Bulldoze</Name>
+            <Power>80</Power>
+            <Time>3500</Time>
+            <Energy>50</Energy>
+            <Type>Ground</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>2600</DamageWindowStartTime>
+            <DamageWindowDuration>500</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Bug Buzz</Name>
+            <Power>90</Power>
+            <Time>3700</Time>
+            <Energy>50</Energy>
+            <Type>Bug</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>2000</DamageWindowStartTime>
+            <DamageWindowDuration>1100</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
+      </ChargeMoves>
+      <Attack>141</Attack>
+      <Defense>180</Defense>
+      <Stamina>155</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>150</Number>
+      <Species>Mewtwo - Armored</Species>
+      <Type1>Psychic</Type1>
+      <Type2>None</Type2>
+      <FastMoves>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Confusion</Name>
+            <Power>20</Power>
+            <Time>1600</Time>
+            <Energy>15</Energy>
+            <Type>Psychic</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>600</DamageWindowStartTime>
+            <DamageWindowDuration>1000</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Iron Tail</Name>
+            <Power>15</Power>
+            <Time>1100</Time>
+            <Energy>7</Energy>
+            <Type>Steel</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>850</DamageWindowStartTime>
+            <DamageWindowDuration>200</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+      </FastMoves>
+      <ChargeMoves>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Rock Slide</Name>
+            <Power>80</Power>
+            <Time>2700</Time>
+            <Energy>50</Energy>
+            <Type>Rock</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>1500</DamageWindowStartTime>
+            <DamageWindowDuration>1100</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Dynamic Punch</Name>
+            <Power>90</Power>
+            <Time>2700</Time>
+            <Energy>50</Energy>
+            <Type>Fighting</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>1200</DamageWindowStartTime>
+            <DamageWindowDuration>1500</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Earthquake</Name>
+            <Power>120</Power>
+            <Time>3600</Time>
+            <Energy>100</Energy>
+            <Type>Ground</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>2700</DamageWindowStartTime>
+            <DamageWindowDuration>800</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Future Sight</Name>
+            <Power>120</Power>
+            <Time>2700</Time>
+            <Energy>100</Energy>
+            <Type>Psychic</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>1400</DamageWindowStartTime>
+            <DamageWindowDuration>1300</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
+      </ChargeMoves>
+      <Attack>182</Attack>
+      <Defense>278</Defense>
+      <Stamina>214</Stamina>
     </PokedexEntry>
   </PokedexEntries>
 </Data>
