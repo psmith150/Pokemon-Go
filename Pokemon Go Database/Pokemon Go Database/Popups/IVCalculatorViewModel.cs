@@ -50,6 +50,8 @@ namespace Pokemon_Go_Database.Popups
             {
                 this._messageViewer.DisplayMessage("Invalid pokemon!", "Invalid Pokemon", MessageViewerButton.Ok);
             }
+            if (!this.Session.Pokedex.Contains(this.Calculator.Pokemon.Species))
+                this.Calculator.Pokemon.Species = this._lastSpecies;
             this._originalFastMove = this.Calculator.Pokemon.FastMove;
             this._originalChargeMove = this.Calculator.Pokemon.ChargeMove;
             this.MinLevel = this.Calculator.Pokemon.Level;
@@ -60,7 +62,8 @@ namespace Pokemon_Go_Database.Popups
 
         public override void Deinitialize()
         {
-            this.Calculator = null;
+            //this.Calculator = null;
+            this._lastSpecies = this.Calculator.Pokemon.Species;
         }
 
         #region Private Fields
@@ -68,6 +71,7 @@ namespace Pokemon_Go_Database.Popups
         private MessageViewerBase _messageViewer;
         private PokedexFastMoveWrapper _originalFastMove;
         private PokedexChargeMoveWrapper _originalChargeMove;
+        private PokedexEntry _lastSpecies;
         #endregion
 
         #region Public Properties
@@ -102,7 +106,7 @@ namespace Pokemon_Go_Database.Popups
         {
             get
             {
-                if (this.Calculator.Pokemon.IsLucky)
+                if (this.Calculator != null && this.Calculator.Pokemon != null && this.Calculator.Pokemon.IsLucky)
                 {
                     int[] dustCutoffs = new int[Constants.DustCutoffs.Length];
                     Array.Copy(Constants.DustCutoffs, dustCutoffs, Constants.DustCutoffs.Length);
@@ -333,7 +337,7 @@ namespace Pokemon_Go_Database.Popups
                     lookupIndex++;
                 stardust += Constants.DustCutoffs[lookupIndex];
             }
-            if (this.Calculator.Pokemon.IsLucky)
+            if (this.Calculator != null && this.Calculator.Pokemon != null && this.Calculator.Pokemon.IsLucky)
                 stardust = (int)Math.Round(stardust * Constants.LuckyStardustMultiplier);
             return stardust;
         }

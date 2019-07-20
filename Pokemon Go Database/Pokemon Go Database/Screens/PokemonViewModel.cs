@@ -12,6 +12,8 @@ using System.Diagnostics;
 using Pokemon_Go_Database.Popups;
 using System.Collections.ObjectModel;
 using GalaSoft.MvvmLight.Messaging;
+using Pokemon_Go_Database.Base.AbstractClasses;
+using System.Text.RegularExpressions;
 
 namespace Pokemon_Go_Database.Screens
 {
@@ -19,24 +21,37 @@ namespace Pokemon_Go_Database.Screens
     {
         #region Commands
         public ICommand CheckIVCommand { get; private set; }
-        public ICommand AddNewPokemonCommand { get; private set; }
+        public ICommand AddPokemonCommand { get; private set; }
+        public ICommand DeletePokemonCommand { get; private set; }
+        public ICommand CopyPokemonCommand { get; private set; }
         public ICommand ShowMovesetsCommand { get; private set; }
         public ICommand GoToSpeciesCommand { get; private set; }
+        public ICommand AddFilterCommand { get; private set; }
+        public ICommand RemoveFilterCommand { get; private set; }
         #endregion
 
         private readonly NavigationService navigationService;
+        private MessageViewerBase _messageViewer;
 
-        public PokemonViewModel(NavigationService navigationService, SessionService session) : base(session)
+        public PokemonViewModel(NavigationService navigationService, SessionService session, MessageViewerBase messageViewer) : base(session)
         {
             this.navigationService = navigationService;
+            this._messageViewer = messageViewer;
 
             this.CheckIVCommand = new RelayCommand(async () => await CheckIVAsync());
-            this.AddNewPokemonCommand = new RelayCommand(async () => await AddNewPokemonAsync());
+            this.AddPokemonCommand = new RelayCommand(async () => await AddPokemonAsync());
+            this.DeletePokemonCommand = new RelayCommand(async () => await DeletePokemonAsync());
+            this.CopyPokemonCommand = new RelayCommand(async () => await CopyPokemonAsync());
             this.ShowMovesetsCommand = new RelayCommand(async () => await ShowMovesetsAsync());
             this.GoToSpeciesCommand = new RelayCommand(() => GoToSpecies());
+            this.AddFilterCommand = new RelayCommand(() => this.AddFilter());
+            this.RemoveFilterCommand = new RelayCommand<PokemonFilterElement>((filter) => this.RemoveFilter(filter));
 
             this.AllSpecies = this.Session.Pokedex;
             this.MyPokemon = new ListCollectionView(this.Session.MyPokemon);
+            this.Filters = new MyObservableCollection<PokemonFilterElement>();
+            this.Filters.CollectionChanged += (o,a) => this.UpdateFilter();
+            this.Filters.MemberChanged += (o, a) => this.UpdateFilter();
         }
 
         public override void Initialize()
@@ -150,6 +165,18 @@ namespace Pokemon_Go_Database.Screens
                 UpdateFilter();
             }
         }
+        private MyObservableCollection<PokemonFilterElement> _Filters;
+        public MyObservableCollection<PokemonFilterElement> Filters
+        {
+            get
+            {
+                return this._Filters;
+            }
+            private set
+            {
+                this.Set(ref this._Filters, value);
+            }
+        }
         #endregion
 
         #region Private Methods
@@ -167,6 +194,11 @@ namespace Pokemon_Go_Database.Screens
                 result = false;
             if (this.PowerUpFilterActive && !pokemon.ShouldBePoweredUp)
                 result = false;
+            foreach (PokemonFilterElement filter in this.Filters)
+            {
+                if (!filter.EvaluateFilter(pokemon))
+                    result = false;
+            }
             return result;
         }
         private void UpdateFilter()
@@ -179,7 +211,7 @@ namespace Pokemon_Go_Database.Screens
                 return;
             await navigationService.OpenPopup<IVCalculatorViewModel>(new IVCalculatorWrapper(new IVCalculator(this.SelectedPokemon)));
         }
-        private async Task AddNewPokemonAsync()
+        private async Task AddPokemonAsync()
         {
             Pokemon newPokemon = new Pokemon();
             IVCalculator calculator = new IVCalculator(newPokemon)
@@ -188,12 +220,30 @@ namespace Pokemon_Go_Database.Screens
                 DefenseBest = false,
                 StaminaBest = false
             };
-            IVCalculatorPopupEventArgs args =  await navigationService.OpenPopup<IVCalculatorViewModel>(new IVCalculatorWrapper(calculator, true)) as IVCalculatorPopupEventArgs;
+            IVCalculatorPopupEventArgs args = await navigationService.OpenPopup<IVCalculatorViewModel>(new IVCalculatorWrapper(calculator, true)) as IVCalculatorPopupEventArgs;
             if (args != null)
             {
                 this.Session.MyPokemon.Add(args.NewPokemon);
                 Messenger.Default.Send(new PokemonMessage(args.NewPokemon));
             }
+        }
+        private async Task DeletePokemonAsync()
+        {
+            if (this.SelectedPokemon == null || !this.Session.MyPokemon.Contains(this.SelectedPokemon))
+            {
+                await this._messageViewer.DisplayMessage("Select a valid Pokemon.", "Invalid Pokemon", Base.Enums.MessageViewerButton.Ok, Base.Enums.MessageViewerIcon.Error);
+                return;
+            }
+            this.Session.MyPokemon.Remove(this.SelectedPokemon);
+        }
+        private async Task CopyPokemonAsync()
+        {
+            if (this.SelectedPokemon == null || !this.Session.MyPokemon.Contains(this.SelectedPokemon))
+            {
+                await this._messageViewer.DisplayMessage("Select a valid Pokemon.", "Invalid Pokemon", Base.Enums.MessageViewerButton.Ok, Base.Enums.MessageViewerIcon.Error);
+                return;
+            }
+            this.Session.MyPokemon.Add(this.SelectedPokemon.Copy());
         }
         private async Task ShowMovesetsAsync()
         {
@@ -204,6 +254,15 @@ namespace Pokemon_Go_Database.Screens
         private void GoToSpecies()
         {
             this.navigationService.NavigateTo<PokedexViewModel>();
+        }
+        private void AddFilter()
+        {
+            this.Filters.Add(new PokemonFilterElement());
+        }
+        private void RemoveFilter(PokemonFilterElement filter)
+        {
+            if (this.Filters != null && this.Filters.Contains(filter))
+                this.Filters.Remove(filter);
         }
         #endregion
     }

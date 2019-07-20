@@ -24,7 +24,7 @@
                 <DataGridTextColumn Header="Power" Binding="{Binding Path=Power}" Width="Auto"/>
                 <DataGridTextColumn Header="Duration" Binding="{Binding Path=Time}" Width="Auto"/>
                 <DataGridTextColumn Header="Energy Needed" Binding="{Binding Path=Energy}" Width="Auto"/>
-                <DataGridTextColumn Header="DPS" Binding="{Binding Path=DPS, StringFormat=N2}" Width="Auto"/>
+                <DataGridTextColumn Header="DPS" Binding="{Binding Path=DPS, StringFormat=N2, Mode=OneWay}" IsReadOnly="True" Width="Auto"/>
                 <DataGridTextColumn Header="Damage Window Start" Binding="{Binding Path=DamageWindowStartTime}" Width="Auto"/>
                 <DataGridTextColumn Header="Damage Window Duration" Binding="{Binding Path=DamageWindowDuration}" Width="Auto"/>
                 <DataGridTextColumn Header="Dodge Flash Time" Binding="{Binding Path=DodgeFlashTime}" Width="Auto"/>

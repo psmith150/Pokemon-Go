@@ -59,6 +59,7 @@
       <HintPath>..\packages\SpreadsheetLight.3.4.9\lib\SpreadsheetLight.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.IO.Compression.FileSystem" />
@@ -95,14 +96,29 @@
     </ApplicationDefinition>
     <Compile Include="BaseViewModel.cs" />
     <Compile Include="CustomControls\HoverButton.cs" />
+    <Compile Include="CustomControls\BattleResultViewer.xaml.cs">
+      <DependentUpon>BattleResultViewer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControls\PokedexFilterViewer.xaml.cs">
+      <DependentUpon>PokedexFilterViewer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControls\PokemonFilterViewer.xaml.cs">
+      <DependentUpon>PokemonFilterViewer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControls\PokemonSimulationViewer.xaml.cs">
+      <DependentUpon>PokemonSimulationViewer.xaml</DependentUpon>
+    </Compile>
     <Compile Include="IOC\IOCContainer.cs" />
     <Compile Include="IOC\MessageViewer.cs" />
+    <Compile Include="Model\AttackerSimulationWrapper.cs" />
     <Compile Include="Model\BattleLogEntry.cs" />
     <Compile Include="Model\BattleResult.cs" />
     <Compile Include="Model\ChargeMove.cs" />
     <Compile Include="Model\Constants.cs" />
     <Compile Include="Model\BaseDataWrapper.cs" />
     <Compile Include="Model\FastMove.cs" />
+    <Compile Include="Model\PokedexFilterElement.cs" />
+    <Compile Include="Model\PokemonFilterElement.cs" />
     <Compile Include="Model\IVSet.cs" />
     <Compile Include="Model\PokemonMessage.cs" />
     <Compile Include="Model\UserDataWrapper.cs" />
@@ -160,11 +176,26 @@
     <Compile Include="Services\NavigationService.cs" />
     <Compile Include="Services\SessionService.cs" />
     <Compile Include="ValueConverters\DPSValueToBrushConverter.cs" />
-    <Compile Include="ValueConverters\TotalIVEnumToNameConverter.cs" />
-    <Compile Include="ValueConverters\IVEnumToNameConverter.cs" />
+    <Compile Include="ValueConverters\EnumToStringConverter.cs" />
     <Compile Include="ValueConverters\TypeToBoolConverter.cs" />
     <Compile Include="ValueConverters\ViewModelToViewConverter.cs" />
     <Compile Include="Windows\MainWindowViewModel.cs" />
+    <Page Include="CustomControls\BattleResultViewer.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="CustomControls\PokedexFilterViewer.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="CustomControls\PokemonFilterViewer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CustomControls\PokemonSimulationViewer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Popups\SettingsPopup.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -174,6 +205,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Popups\EditMovesetsPopup.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resources\LightStyle.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -251,11 +286,11 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\Down_arrow.png" />
-    <Resource Include="Resources\Filter.png" />
-    <Resource Include="Resources\minus_sign.png" />
-    <Resource Include="Resources\plus_sign.png" />
-    <Resource Include="Resources\Up_arrow.png" />
+    <Resource Include="Images\Down_arrow.png" />
+    <Resource Include="Images\Filter.png" />
+    <Resource Include="Images\minus_sign.png" />
+    <Resource Include="Images\plus_sign.png" />
+    <Resource Include="Images\Up_arrow.png" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Pokemon_Go_Database.Base\Pokemon_Go_Database.Base.csproj">
@@ -266,7 +301,11 @@
   <ItemGroup>
     <EmbeddedResource Include="Resources\BaseData.xml" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Images\Add_15xMD_white.png" />
+    <Resource Include="Images\Copy_50x.png" />
+    <Resource Include="Images\Remove_15xMD.png" />
+  </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\StatusCriticalError_16x.png" />
   </ItemGroup>
@@ -275,6 +314,15 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\StatusWarning_16x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Search_16xMD.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Search_50x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Cancel.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -18,7 +18,6 @@ namespace Pokemon_Go_Database.Model
             this.DPS = 0.0;
             this.TDO = 0.0;
             this.Name = "New Pokemon";
-            this.BattleLog = new List<BattleLogEntry>();
             this.NextBreakpoint = 0.0;
         }
         #endregion
@@ -76,19 +75,42 @@ namespace Pokemon_Go_Database.Model
             }
         }
 
-        private List<BattleLogEntry> _BattleLog;
-        public List<BattleLogEntry> BattleLog
+        private double _CumulativeDuration;
+        public double CumulativeDuration
         {
             get
             {
-                return this._BattleLog;
+                return this._CumulativeDuration;
             }
             set
             {
-                this.Set(ref this._BattleLog, value);
+                this.Set(ref this._CumulativeDuration, value);
             }
         }
-
+        private double _CumulativeDPS;
+        public double CumulativeDPS
+        {
+            get
+            {
+                return this._CumulativeDPS;
+            }
+            set
+            {
+                this.Set(ref this._CumulativeDPS, value);
+            }
+        }
+        private double _CumulativeTDO;
+        public double CumulativeTDO
+        {
+            get
+            {
+                return this._CumulativeTDO;
+            }
+            set
+            {
+                this.Set(ref this._CumulativeTDO, value);
+            }
+        }
         private string _Name;
         public string Name
         {

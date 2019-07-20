@@ -5,6 +5,8 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Pokemon_Go_Database.Screens"
              xmlns:scm="clr-namespace:System.ComponentModel;assembly=WindowsBase"
+             xmlns:customControls="clr-namespace:Pokemon_Go_Database.CustomControls"
+             xmlns:converters="clr-namespace:Pokemon_Go_Database.ValueConverters"
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="500"
              d:DataContext="{d:DesignInstance Type=local:PokedexViewModel}">
@@ -12,31 +14,50 @@
         <CollectionViewSource x:Key="TypeView" Source="{Binding Types}"/>
     </UserControl.Resources>
     <Grid Background="{StaticResource MainBackgroundColor}">
-        <DataGrid Name="PokedexGrid" ItemsSource="{Binding PokedexEntries}" HorizontalAlignment="Stretch" AutoGenerateColumns="False">
-            <DataGrid.Columns>
-                <DataGridTextColumn Header="Number" Binding="{Binding Path=Number}" Width="Auto"/>
-                <DataGridTextColumn Header="Species" Binding="{Binding Path=Species}" Width="Auto"/>
-                <DataGridComboBoxColumn Header="Type" SelectedItemBinding="{Binding Path=Type1}" Width="Auto" ItemsSource="{Binding Source={StaticResource TypeView}}"/>
-                <DataGridComboBoxColumn Header="Type" SelectedItemBinding="{Binding Path=Type2}" Width="Auto" ItemsSource="{Binding Source={StaticResource TypeView}}"/>
-                <DataGridTextColumn Header="Attack" Binding="{Binding Path=Attack}" Width="Auto"/>
-                <DataGridTextColumn Header="Defense" Binding="{Binding Path=Defense}" Width="Auto"/>
-                <DataGridTextColumn Header="Stamina" Binding="{Binding Path=Stamina}" Width="Auto"/>
-                <DataGridTextColumn Header="Total Stats" Binding="{Binding Path=TotalStats, Mode=OneWay}" IsReadOnly="True" Width="Auto"/>
-                <DataGridTextColumn Header="Max CP" Binding="{Binding Path=MaxCP, Mode=OneWay}" IsReadOnly="True" Width="Auto"/>
-                <DataGridTemplateColumn Header="Movesets" IsReadOnly="True">
-                    <!--<DataGridTemplateColumn.CellEditingTemplate>
+        <DockPanel>
+            <Expander DockPanel.Dock="Top" Header="Filters">
+                <StackPanel Orientation="Vertical" HorizontalAlignment="Left">
+                    <ItemsControl ItemsSource="{Binding Filters}">
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    <customControls:PokedexFilterViewer Filter="{Binding Path=.}"/>
+                                    <Button Style="{DynamicResource RemoveFilterButtonStyle}" HorizontalAlignment="Left" 
+                                            Command="{Binding Path=DataContext.RemoveFilterCommand, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type UserControl}}}" 
+                                            CommandParameter="{Binding Path=.}"/>
+                                </StackPanel>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
+                    <Button HorizontalAlignment="Left" Content="Add Filter" Command="{Binding AddFilterCommand}" Width="100"/>
+                </StackPanel>
+            </Expander>
+            <DataGrid Name="PokedexGrid" ItemsSource="{Binding PokedexEntries}" HorizontalAlignment="Stretch" AutoGenerateColumns="False">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Number" Binding="{Binding Path=Number}" Width="Auto"/>
+                    <DataGridTextColumn Header="Species" Binding="{Binding Path=Species}" Width="Auto"/>
+                    <DataGridComboBoxColumn Header="Type" SelectedItemBinding="{Binding Path=Type1}" Width="Auto" ItemsSource="{Binding Source={StaticResource TypeView}}"/>
+                    <DataGridComboBoxColumn Header="Type" SelectedItemBinding="{Binding Path=Type2}" Width="Auto" ItemsSource="{Binding Source={StaticResource TypeView}}"/>
+                    <DataGridTextColumn Header="Attack" Binding="{Binding Path=Attack}" Width="Auto"/>
+                    <DataGridTextColumn Header="Defense" Binding="{Binding Path=Defense}" Width="Auto"/>
+                    <DataGridTextColumn Header="Stamina" Binding="{Binding Path=Stamina}" Width="Auto"/>
+                    <DataGridTextColumn Header="Total Stats" Binding="{Binding Path=TotalStats, Mode=OneWay}" IsReadOnly="True" Width="Auto"/>
+                    <DataGridTextColumn Header="Max CP" Binding="{Binding Path=MaxCP, Mode=OneWay}" IsReadOnly="True" Width="Auto"/>
+                    <DataGridTemplateColumn Header="Movesets" IsReadOnly="True">
+                        <!--<DataGridTemplateColumn.CellEditingTemplate>
                         <DataTemplate>
                             <Button Content="Movesets" Command="{Binding Path=DataContext.ShowMovesetsCommand, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type UserControl}}}"/>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellEditingTemplate>-->
-                    <DataGridTemplateColumn.CellTemplate>
-                        <DataTemplate>
-                            <Button Content="Movesets" Command="{Binding Path=DataContext.ShowMovesetsCommand, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type UserControl}}}"
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button Content="Movesets" Command="{Binding Path=DataContext.ShowMovesetsCommand, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type UserControl}}}"
                                     CommandParameter="{Binding SelectedItem,ElementName=PokedexGrid}"/>
-                        </DataTemplate>
-                    </DataGridTemplateColumn.CellTemplate>
-                </DataGridTemplateColumn>
-            </DataGrid.Columns>
-        </DataGrid>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+        </DockPanel>
     </Grid>
 </UserControl>

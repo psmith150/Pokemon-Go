@@ -1,0 +1,34 @@
+﻿<UserControl x:Class="Pokemon_Go_Database.CustomControls.BattleResultViewer"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Pokemon_Go_Database.CustomControls"
+             xmlns:xtk="http://schemas.xceed.com/wpf/xaml/datagrid"
+             xmlns:converters="clr-namespace:Pokemon_Go_Database.ValueConverters"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800"
+             x:Name="ResultViewer">
+    <StackPanel Orientation="Vertical" HorizontalAlignment="Center" x:Name="LayoutRoot">
+        <StackPanel Name="BattleResults" Orientation="Horizontal" HorizontalAlignment="Center">
+            <Label Content="Time Required:"/>
+            <TextBlock Text="{Binding Result.BattleDuration, StringFormat={}{0:N1}, ElementName=ResultViewer}" VerticalAlignment="Center"/>
+            <Label Content="Number of Deaths:"/>
+            <TextBlock Text="{Binding Result.NumberOfDeaths, ElementName=ResultViewer}" VerticalAlignment="Center"/>
+            <Label Content="DPS:"/>
+            <TextBlock Text="{Binding Result.DPS, StringFormat=N2, ElementName=ResultViewer}" VerticalAlignment="Center"/>
+            <Label Content="TDO:"/>
+            <TextBlock Text="{Binding Result.TDO, StringFormat=P2, ElementName=ResultViewer}" VerticalAlignment="Center"/>
+            <Label Content="Next breakpoint at level"/>
+            <TextBlock Text="{Binding Result.NextBreakpoint, ElementName=ResultViewer}" VerticalAlignment="Center"/>
+        </StackPanel>
+        <StackPanel Name="CumulativeBattleResults" Orientation="Horizontal" HorizontalAlignment="Center">
+            <Label Content="Total Time Required:"/>
+            <TextBlock Text="{Binding Result.CumulativeDuration, StringFormat={}{0:N1} sec, ElementName=ResultViewer}" VerticalAlignment="Center"/>
+            <Label Content="Total DPS:"/>
+            <TextBlock Text="{Binding Result.CumulativeDPS, StringFormat=N2, ElementName=ResultViewer}" VerticalAlignment="Center"/>
+            <Label Content="Total TDO:"/>
+            <TextBlock Text="{Binding Result.CumulativeTDO, StringFormat=P2, ElementName=ResultViewer}" VerticalAlignment="Center"/>
+        </StackPanel>
+    </StackPanel>
+</UserControl>

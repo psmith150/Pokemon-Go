@@ -18,12 +18,8 @@ namespace Pokemon_Go_Database.Model
             this.StaminaIV = staminaIV;
             this.Level = level;
         }
-        public IVSet()
+        public IVSet() : this(0)
         {
-            this.AttackIV = 0;
-            this.DefenseIV = 0;
-            this.StaminaIV = 0;
-            this.Level = 1;
         }
 
         #region Public Properties
@@ -37,7 +33,7 @@ namespace Pokemon_Go_Database.Model
             set
             {
                 this.Set(ref this._AttackIV, value);
-                RaisePropertyChanged("IVPercentage");
+                this.RaisePropertyChanged("IVPercentage");
             }
         }
 
@@ -51,7 +47,7 @@ namespace Pokemon_Go_Database.Model
             set
             {
                 this.Set(ref this._DefenseIV, value);
-                RaisePropertyChanged("IVPercentage");
+                this.RaisePropertyChanged("IVPercentage");
             }
         }
 
@@ -65,7 +61,7 @@ namespace Pokemon_Go_Database.Model
             set
             {
                 this.Set(ref this._StaminaIV, value);
-                RaisePropertyChanged("IVPercentage");
+                this.RaisePropertyChanged("IVPercentage");
             }
         }
 
