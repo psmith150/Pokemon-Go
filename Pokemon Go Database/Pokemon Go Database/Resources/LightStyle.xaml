@@ -33,4 +33,11 @@
     <SolidColorBrush x:Key="HelpButtonForegroundColor" Color="Black"/>
     <SolidColorBrush x:Key="BusyWindowBackgroundColor" Color="LightGray"/>
     <!--#endregion-->
+    <!--#region IVSelectionSlider-->
+    <Color x:Key="SliderThumbGradientStart">LightGray</Color>
+    <Color x:Key="SliderThumbGradientEnd">LightGray</Color>
+    <Color x:Key="SliderThumbGradientStartMouseover">DarkGray</Color>
+    <Color x:Key="SliderThumbGradientEndMouseover">DarkGray</Color>
+    <SolidColorBrush x:Key="SliderTickBarFill" Color="Blue"/>
+    <!--#endregion-->
 </ResourceDictionary>
