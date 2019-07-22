@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Pokemon_Go_Database.Services;
 using GalaSoft.MvvmLight;
+using System.Reflection;
 
 namespace Pokemon_Go_Database
 {
@@ -26,6 +27,13 @@ namespace Pokemon_Go_Database
         protected BaseViewModel(SessionService session)
         {
             this.Session = session;
+        }
+        public string AppVersion
+        {
+            get
+            {
+                return Assembly.GetEntryAssembly().GetName().Version.ToString();
+            }
         }
     }
 }

@@ -140,6 +140,17 @@
         <Setter Property="BorderThickness" Value="0"/>
         <Setter Property="Foreground" Value="Orange"/>
     </Style>
+    <Style x:Key="BottomBarStyle" TargetType="DockPanel">
+        <Setter Property="Height" Value="26"/>
+        <Setter Property="Background" Value="{DynamicResource BottomBarBackgroundColor}"/>
+        <Style.Resources>
+            <Style TargetType="TextBlock">
+                <Setter Property="Foreground" Value="{DynamicResource BottomBarForegroundColor}"/>
+                <Setter Property="Margin" Value="5 0"/>
+                <Setter Property="VerticalAlignment" Value="Center"/>
+            </Style>
+        </Style.Resources>
+    </Style>
     <!--Add, remove, move button styles-->
     <Style x:Key="AddButtonStyle" TargetType="Button">
         <Setter Property="Width" Value="50"/>
@@ -331,7 +342,7 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type RepeatButton}">
-                    <Border Background="Orange" CornerRadius="4" Height="5"/>
+                    <Border Background="{DynamicResource SliderTrackFill}" CornerRadius="4" Height="5"/>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
@@ -368,8 +379,7 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Thumb}">
-                    <Ellipse x:Name="Ellipse"
-                 StrokeThickness="0" Fill="Transparent" Margin="-10">
+                    <Ellipse x:Name="Ellipse" StrokeThickness="1" Stroke="Transparent" Fill="Transparent" Margin="-7">
 
                         <!--<Ellipse.Fill>
                             <RadialGradientBrush GradientOrigin="0.5,0.5" Center="0.5,0.5" RadiusX="0.5" RadiusY="0.5">
@@ -386,8 +396,8 @@
                                 <Setter.Value>
                                     <RadialGradientBrush Opacity="0.25" GradientOrigin="0.5,0.5" Center="0.5,0.5" RadiusX="0.5" RadiusY="0.5">
                                         <RadialGradientBrush.GradientStops>
-                                            <GradientStop Offset="0" Color="{DynamicResource SliderThumbGradientStartMouseover}"/>
-                                            <GradientStop Offset="1.0" Color="{DynamicResource SliderThumbGradientEndMouseover}"/>
+                                            <GradientStop Offset="0" Color="{DynamicResource SliderThumbGradientStart}"/>
+                                            <GradientStop Offset="1.0" Color="{DynamicResource SliderThumbGradientEnd}"/>
                                         </RadialGradientBrush.GradientStops>
                                     </RadialGradientBrush>
                                 </Setter.Value>
@@ -396,14 +406,15 @@
                         <Trigger Property="IsDragging" Value="True">
                             <Setter TargetName="Ellipse" Property="Fill">
                                 <Setter.Value>
-                                    <RadialGradientBrush Opacity="0.25" GradientOrigin="0.5,0.5" Center="0.5,0.5" RadiusX="0.5" RadiusY="0.5">
+                                    <RadialGradientBrush Opacity="0.5" GradientOrigin="0.5,0.5" Center="0.5,0.5" RadiusX="0.5" RadiusY="0.5">
                                         <RadialGradientBrush.GradientStops>
-                                            <GradientStop Offset="0" Color="{DynamicResource SliderThumbGradientStartMouseover}"/>
-                                            <GradientStop Offset="1.0" Color="{DynamicResource SliderThumbGradientEndMouseover}"/>
+                                            <GradientStop Offset="0" Color="{DynamicResource SliderThumbGradientStart}"/>
+                                            <GradientStop Offset="1.0" Color="{DynamicResource SliderThumbGradientEnd}"/>
                                         </RadialGradientBrush.GradientStops>
                                     </RadialGradientBrush>
                                 </Setter.Value>
                             </Setter>
+                            <Setter TargetName="Ellipse" Property="Stroke" Value="{DynamicResource SliderThumbBorder}"/>
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
@@ -419,7 +430,7 @@
                 <RowDefinition Height="Auto" />
             </Grid.RowDefinitions>
             <TickBar x:Name="TopTick" SnapsToDevicePixels="True" Placement="Top" Height="4" Visibility="Collapsed" Fill="{DynamicResource SliderTickBarFill}"/>
-            <Border x:Name="TrackBackground" Margin="0" CornerRadius="2" Height="4" Grid.Row="1" BorderThickness="0" Background="White"/>
+            <Border x:Name="TrackBackground" Margin="0" CornerRadius="2" Height="6" Grid.Row="1" BorderThickness="0" Background="White"/>
             <Track Grid.Row="1" x:Name="PART_Track" Width="200" Height="20">
                 <Track.DecreaseRepeatButton>
                     <RepeatButton Style="{StaticResource SliderFilledButtonStyle}" Command="Slider.DecreaseLarge" Margin="0,0,0,0"/>
@@ -432,7 +443,7 @@
                     <Thumb Style="{StaticResource SliderThumbStyle}"/>
                 </Track.Thumb>
             </Track>
-            <TickBar x:Name="BottomTick" SnapsToDevicePixels="True" Grid.Row="2" Fill="{DynamicResource SliderTickBarFill}" Placement="Bottom" Height="4" Visibility="Collapsed" />
+            <TickBar x:Name="BottomTick" SnapsToDevicePixels="True" Grid.Row="2" Fill="{DynamicResource SliderTickBarFill}" Placement="Bottom" Height="6" Visibility="Collapsed" />
         </Grid>
         <ControlTemplate.Triggers>
             <Trigger Property="TickPlacement"
