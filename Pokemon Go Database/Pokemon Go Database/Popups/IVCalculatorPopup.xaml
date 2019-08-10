@@ -73,10 +73,10 @@
                 <Label Grid.Row="0" Grid.Column="0" Content="Attack IV:" HorizontalContentAlignment="Right"/>
                 <Slider Grid.Row="0" Grid.Column="1" Template="{StaticResource IVSelectionSliderStyle}" Value="{Binding Calculator.AttackIV}" Maximum="{Binding Source={StaticResource MaxIV}}" Minimum="{Binding Source={StaticResource MinIV}}" 
                             TickPlacement="Both" IsSnapToTickEnabled="False" TickFrequency="5" Width="200" AutoToolTipPlacement="BottomRight" AutoToolTipPrecision="0" Margin="0,3,0,3"/>
-                <Label Grid.Row="1" Grid.Column="0" Content="Stamina IV:" HorizontalContentAlignment="Right"/>
+                <Label Grid.Row="1" Grid.Column="0" Content="Defense IV:" HorizontalContentAlignment="Right"/>
                 <Slider Grid.Row="1" Grid.Column="1" Template="{StaticResource IVSelectionSliderStyle}" Value="{Binding Calculator.DefenseIV}" Maximum="{Binding Source={StaticResource MaxIV}}" Minimum="{Binding Source={StaticResource MinIV}}" 
                             TickPlacement="Both" IsSnapToTickEnabled="False" TickFrequency="5" Width="200" AutoToolTipPlacement="BottomRight" AutoToolTipPrecision="0" Margin="0,3,0,3"/>
-                <Label Grid.Row="2" Grid.Column="0" Content="Defense IV:" HorizontalContentAlignment="Right"/>
+                <Label Grid.Row="2" Grid.Column="0" Content="Stamina IV:" HorizontalContentAlignment="Right"/>
                 <Slider Grid.Row="2" Grid.Column="1" Template="{StaticResource IVSelectionSliderStyle}" Value="{Binding Calculator.StaminaIV}" Maximum="{Binding Source={StaticResource MaxIV}}" Minimum="{Binding Source={StaticResource MinIV}}" 
                             TickPlacement="Both" IsSnapToTickEnabled="False" TickFrequency="5" Width="200" AutoToolTipPlacement="BottomRight" AutoToolTipPrecision="0" Margin="0,3,0,3"/>
             </Grid>
