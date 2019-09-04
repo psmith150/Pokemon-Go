@@ -1011,6 +1011,17 @@
       <DodgeFlashTime>0</DodgeFlashTime>
     </Move>
     <Move xsi:type="ChargeMove">
+      <Name>Crabhammer</Name>
+      <Power>85</Power>
+      <Time>1900</Time>
+      <Energy>50</Energy>
+      <Type>Water</Type>
+      <MoveType>Charge</MoveType>
+      <DamageWindowStartTime>1500</DamageWindowStartTime>
+      <DamageWindowDuration>500</DamageWindowDuration>
+      <DodgeFlashTime>0</DodgeFlashTime>
+    </Move>
+    <Move xsi:type="ChargeMove">
       <Name>Cross Chop</Name>
       <Power>50</Power>
       <Time>1500</Time>
@@ -1624,6 +1635,17 @@
       <MoveType>Charge</MoveType>
       <DamageWindowStartTime>1700</DamageWindowStartTime>
       <DamageWindowDuration>400</DamageWindowDuration>
+      <DodgeFlashTime>0</DodgeFlashTime>
+    </Move>
+    <Move xsi:type="ChargeMove">
+      <Name>Muddy Water</Name>
+      <Power>50</Power>
+      <Time>2200</Time>
+      <Energy>33</Energy>
+      <Type>Water</Type>
+      <MoveType>Charge</MoveType>
+      <DamageWindowStartTime>1200</DamageWindowStartTime>
+      <DamageWindowDuration>0</DamageWindowDuration>
       <DodgeFlashTime>0</DodgeFlashTime>
     </Move>
     <Move xsi:type="ChargeMove">
@@ -11529,6 +11551,20 @@
             <MoveType>Charge</MoveType>
             <DamageWindowStartTime>1200</DamageWindowStartTime>
             <DamageWindowDuration>200</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Crabhammer</Name>
+            <Power>85</Power>
+            <Time>1900</Time>
+            <Energy>50</Energy>
+            <Type>Water</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>1500</DamageWindowStartTime>
+            <DamageWindowDuration>500</DamageWindowDuration>
             <DodgeFlashTime>0</DodgeFlashTime>
           </ChargeMove>
           <IsLegacy>false</IsLegacy>
@@ -27845,6 +27881,20 @@
           </ChargeMove>
           <IsLegacy>true</IsLegacy>
         </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Muddy Water</Name>
+            <Power>50</Power>
+            <Time>2200</Time>
+            <Energy>33</Energy>
+            <Type>Water</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>1200</DamageWindowStartTime>
+            <DamageWindowDuration>0</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>208</Attack>
       <Defense>175</Defense>
@@ -34482,6 +34532,20 @@
             <MoveType>Charge</MoveType>
             <DamageWindowStartTime>1100</DamageWindowStartTime>
             <DamageWindowDuration>400</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Crabhammer</Name>
+            <Power>85</Power>
+            <Time>1900</Time>
+            <Energy>50</Energy>
+            <Type>Water</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>1500</DamageWindowStartTime>
+            <DamageWindowDuration>500</DamageWindowDuration>
             <DodgeFlashTime>0</DodgeFlashTime>
           </ChargeMove>
           <IsLegacy>false</IsLegacy>
