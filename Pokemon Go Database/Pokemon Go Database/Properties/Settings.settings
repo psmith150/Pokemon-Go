@@ -11,5 +11,8 @@
     <Setting Name="SuggestedName" Type="System.String" Scope="User">
       <Value Profile="(Default)">&lt;Species&gt;&lt;IV%&gt;</Value>
     </Setting>
+    <Setting Name="BaseDataDirectory" Type="System.String" Scope="User">
+      <Value Profile="(Default)">D:\GitHub\Pokemon-Go\Pokemon Go Database\Pokemon Go Database\Resources\BaseData.xml</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

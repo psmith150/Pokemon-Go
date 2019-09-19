@@ -184,7 +184,7 @@ namespace Pokemon_Go_Database.Windows
             try
             {
                 var fileSearch = new SaveFileDialog();
-                fileSearch.InitialDirectory = Properties.Settings.Default.DefaultDirectory;
+                fileSearch.InitialDirectory = Properties.Settings.Default.BaseDataDirectory;
                 fileSearch.Filter = "XML File (*.xml) | *.xml";
                 fileSearch.FilterIndex = 2;
                 fileSearch.RestoreDirectory = true;

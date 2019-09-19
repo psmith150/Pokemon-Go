@@ -1837,12 +1837,12 @@
     </Move>
     <Move xsi:type="ChargeMove">
       <Name>Psystrike</Name>
-      <Power>100</Power>
-      <Time>4400</Time>
+      <Power>90</Power>
+      <Time>2300</Time>
       <Energy>50</Energy>
       <Type>Psychic</Type>
       <MoveType>Charge</MoveType>
-      <DamageWindowStartTime>3000</DamageWindowStartTime>
+      <DamageWindowStartTime>1000</DamageWindowStartTime>
       <DamageWindowDuration>1200</DamageWindowDuration>
       <DodgeFlashTime>0</DodgeFlashTime>
     </Move>
@@ -17074,6 +17074,20 @@
             <DodgeFlashTime>0</DodgeFlashTime>
           </ChargeMove>
           <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Psystrike</Name>
+            <Power>90</Power>
+            <Time>2300</Time>
+            <Energy>50</Energy>
+            <Type>Psychic</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>1000</DamageWindowStartTime>
+            <DamageWindowDuration>1200</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+          </ChargeMove>
+          <IsLegacy>true</IsLegacy>
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>300</Attack>
