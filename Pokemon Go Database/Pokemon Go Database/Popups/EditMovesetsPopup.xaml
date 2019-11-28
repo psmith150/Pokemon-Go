@@ -74,7 +74,7 @@
                 </DataGrid.Columns>
             </DataGrid>
             <DataGrid Name="ChargeMovesList" Grid.Row="1" Grid.Column="1" AutoGenerateColumns="False" ItemsSource="{Binding ChargeMoves}"
-                  CellStyle="{StaticResource SelectedCellStyle}" CanUserAddRows="False" CanUserSortColumns="False" SelectedItem="{Binding SelectedChargeMove}">
+                  CellStyle="{StaticResource SelectedCellStyle}" CanUserAddRows="False" CanUserDeleteRows="False" CanUserSortColumns="False" SelectedItem="{Binding SelectedChargeMove}">
                 <DataGrid.Columns>
                     <DataGridComboBoxColumn Header="Name" Width="*" SelectedItemBinding="{Binding ChargeMove}" DisplayMemberPath="Name">
                         <DataGridComboBoxColumn.ElementStyle>

@@ -92,7 +92,7 @@ namespace Pokemon_Go_Database.Model
                     {
                         if (moveset.FastMove == item as PokedexFastMoveWrapper)
                         {
-                            Movesets.Remove(moveset);
+                            toRemove.Add(moveset);
                         }
                     }
                     foreach (Moveset moveset in toRemove)
