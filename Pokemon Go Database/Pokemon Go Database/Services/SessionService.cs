@@ -280,10 +280,11 @@ namespace Pokemon_Go_Database.Services
                         move.FastMove = (this.FastMoveList.Single(x => x.Name.Equals(moveName)));
                         species.FastMoves[i] = move;
                     }
-                    catch (ArgumentException ex)
+                    catch (Exception ex)
                     {
                         throw new ArgumentException("Cannot find matching fast move " + move.FastMove.Name + " in fast move list.", ex);
                     }
+
                 }
                 for (int i = 0; i < species.ChargeMoves.Count; i++)
                 {
@@ -295,10 +296,11 @@ namespace Pokemon_Go_Database.Services
                         move.ChargeMove = (this.ChargeMoveList.Single(x => x.Name.Equals(moveName)));
                         species.ChargeMoves[i] = move;
                     }
-                    catch (ArgumentException ex)
+                    catch (Exception ex)
                     {
                         throw new ArgumentException("Cannot find matching charge move " + move.ChargeMove.Name + " in charge move list.", ex);
                     }
+
                 }
                 tempPokedex.Add(species);
                 this.Pokedex.Add(species);
