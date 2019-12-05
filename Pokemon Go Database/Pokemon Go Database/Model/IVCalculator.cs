@@ -15,19 +15,9 @@ namespace Pokemon_Go_Database.Model
         public IVCalculator(Pokemon pokemon)
         {
             this.Pokemon = pokemon;
-            if (this.Pokemon.GetAttackIV() >= this.Pokemon.GetDefenseIV() && this.Pokemon.GetAttackIV() >= this.Pokemon.GetStaminaIV())
-            {
-                this.AttackBest = true;
-            }
-            if (this.Pokemon.GetDefenseIV() >= this.Pokemon.GetAttackIV() && this.Pokemon.GetDefenseIV() >= this.Pokemon.GetStaminaIV())
-            {
-                this.DefenseBest = true;
-            }
-            if (this.Pokemon.GetStaminaIV() >= this.Pokemon.GetAttackIV() && this.Pokemon.GetStaminaIV() >= this.Pokemon.GetDefenseIV())
-            {
-                this.StaminaBest = true;
-            }
-            this.InitIVLevels(true);
+            this.AttackIV = this.Pokemon.GetAttackIV();
+            this.DefenseIV = this.Pokemon.GetDefenseIV();
+            this.StaminaIV = this.Pokemon.GetStaminaIV();
             this.IVSets = new MyObservableCollection<IVSet>();
             if (this.Pokemon.IVSets.Count > 0)
                 this.IVSets.InsertRange(this.Pokemon.IVSets);
@@ -67,50 +57,46 @@ namespace Pokemon_Go_Database.Model
                 Set(ref this._Pokemon, value);
             }
         }
-        private bool _AttackBest;
-        public bool AttackBest
+        private int _AttackIV;
+        public int AttackIV
         {
             get
             {
-                return _AttackBest;
+                return _AttackIV;
             }
             set
             {
-                Set(ref this._AttackBest, value);
+                Set(ref this._AttackIV, value);
             }
         }
-        private bool _DefenseBest;
-        public bool DefenseBest
+        private int _DefenseIV;
+        public int DefenseIV
         {
             get
             {
-                return _DefenseBest;
+                return _DefenseIV;
             }
             set
             {
-                Set(ref this._DefenseBest, value);
+                Set(ref this._DefenseIV, value);
             }
         }
-        private bool _StaminaBest;
-        public bool StaminaBest
+        private int _StaminaIV;
+        public int StaminaIV
         {
             get
             {
-                return _StaminaBest;
+                return _StaminaIV;
             }
             set
             {
-                Set(ref this._StaminaBest, value);
+                Set(ref this._StaminaIV, value);
             }
         }
-        public IVLevel BestIVLevel { get; set; }
-        public TotalIVLevel TotalIVLevel { get; set; }
         #endregion
 
         #region Private Fields
-        private IVLevel attackIVLevel;
-        private IVLevel defenseIVLevel;
-        private IVLevel staminaIVLevel;
+
         #endregion
 
         #region Public Methods
@@ -120,31 +106,16 @@ namespace Pokemon_Go_Database.Model
                 return;
             this.UpdateIVLevels();
             List<double> possibleLevels = GetPossibleLevels();
-            List<int> possibleAttackIVs = GetPossibleIVs(this.attackIVLevel, this.AttackBest);
-            List<int> possibleDefenseIVs = GetPossibleIVs(this.defenseIVLevel, this.DefenseBest);
-            List<int> possibleStaminaIVs = GetPossibleIVs(this.staminaIVLevel, this.StaminaBest);
             this.IVSets.Clear();
             foreach (double level in possibleLevels)
             {
-                foreach (int attackIV in possibleAttackIVs)
+                int cp = Pokemon.GetCP(this.AttackIV, this.StaminaIV, this.DefenseIV, level);
+                int hp = (int)Pokemon.GetStamina(this.StaminaIV, level);
+                if (cp == Pokemon.GameCP && hp == Pokemon.GameHP)
                 {
-                    foreach (int defenseIV in possibleDefenseIVs)
-                    {
-                        if (this.DefenseBest && this.AttackBest && defenseIV != attackIV)
-                            continue;
-                        foreach (int staminaIV in possibleStaminaIVs)
-                        {
-                            if (!this.ValidateIVs(attackIV, defenseIV, staminaIV))
-                                continue;
-                            int cp = Pokemon.GetCP(attackIV, staminaIV, defenseIV, level);
-                            int hp = (int)Pokemon.GetStamina(staminaIV, level);
-                            if (cp == Pokemon.GameCP && hp == Pokemon.GameHP)
-                            {
-                                this.IVSets.Add(new IVSet(attackIV, defenseIV, staminaIV, level));
-                            }
-                        }
-                    }
+                    this.IVSets.Add(new IVSet(this.AttackIV, this.DefenseIV, this.StaminaIV, level));
                 }
+
             }
             RaisePropertyChanged("AverageIVPercentage");
         }
@@ -196,34 +167,34 @@ namespace Pokemon_Go_Database.Model
         #region Private Methods
         private void InitIVLevels(bool evaluateTotalLevel = false)
         {
-            TotalIVLevel totalIVLevel = TotalIVLevel.Low;
-            for (int i = 0; i < Constants.IVLevelCutoffs.Count(); i++)
-            {
-                if (this.AttackBest && this.Pokemon.GetAttackIV() >= Constants.IVLevelCutoffs[i])
-                    attackIVLevel = (IVLevel)i;
-                if (this.DefenseBest && this.Pokemon.GetDefenseIV() >= Constants.IVLevelCutoffs[i])
-                    defenseIVLevel = (IVLevel)i;
-                if (this.StaminaBest && this.Pokemon.GetStaminaIV() >= Constants.IVLevelCutoffs[i])
-                    staminaIVLevel = (IVLevel)i;
-                if (Pokemon.GetAttackIV() + Pokemon.GetStaminaIV() + Pokemon.GetDefenseIV() >= Constants.IVSumCutoffs[i])
-                    totalIVLevel = (TotalIVLevel)i;
-            }
-            IVLevel[] tempArray = { attackIVLevel, defenseIVLevel, staminaIVLevel };
-            this.BestIVLevel = tempArray.Max();
-            if (evaluateTotalLevel)
-                this.TotalIVLevel = totalIVLevel;
+            //TotalIVLevel totalIVLevel = TotalIVLevel.Low;
+            //for (int i = 0; i < Constants.IVLevelCutoffs.Count(); i++)
+            //{
+            //    if (this.AttackBest && this.Pokemon.GetAttackIV() >= Constants.IVLevelCutoffs[i])
+            //        attackIVLevel = (IVLevel)i;
+            //    if (this.DefenseBest && this.Pokemon.GetDefenseIV() >= Constants.IVLevelCutoffs[i])
+            //        defenseIVLevel = (IVLevel)i;
+            //    if (this.StaminaBest && this.Pokemon.GetStaminaIV() >= Constants.IVLevelCutoffs[i])
+            //        staminaIVLevel = (IVLevel)i;
+            //    if (Pokemon.GetAttackIV() + Pokemon.GetStaminaIV() + Pokemon.GetDefenseIV() >= Constants.IVSumCutoffs[i])
+            //        totalIVLevel = (TotalIVLevel)i;
+            //}
+            //IVLevel[] tempArray = { attackIVLevel, defenseIVLevel, staminaIVLevel };
+            //this.BestIVLevel = tempArray.Max();
+            //if (evaluateTotalLevel)
+            //    this.TotalIVLevel = totalIVLevel;
         }
         private void UpdateIVLevels(bool evaluateTotalLevel = false)
         {
-            attackIVLevel = IVLevel.Low;
-            defenseIVLevel = IVLevel.Low;
-            staminaIVLevel = IVLevel.Low;
-            if (this.AttackBest)
-                attackIVLevel = this.BestIVLevel;
-            if (this.DefenseBest)
-                defenseIVLevel = this.BestIVLevel;
-            if (this.StaminaBest)
-                staminaIVLevel = this.BestIVLevel;
+            //attackIVLevel = IVLevel.Low;
+            //defenseIVLevel = IVLevel.Low;
+            //staminaIVLevel = IVLevel.Low;
+            //if (this.AttackBest)
+            //    attackIVLevel = this.BestIVLevel;
+            //if (this.DefenseBest)
+            //    defenseIVLevel = this.BestIVLevel;
+            //if (this.StaminaBest)
+            //    staminaIVLevel = this.BestIVLevel;
         }
 
         private List<int> GetPossibleIVs(IVLevel level, bool isBest)
@@ -271,46 +242,47 @@ namespace Pokemon_Go_Database.Model
         }
         private bool ValidateIVs(int attackIV, int defenseIV, int staminaIV)
         {
-            if (!this.AttackBest && !this.DefenseBest && this.StaminaBest)
-            {
-                if (staminaIV <= attackIV || staminaIV <= defenseIV)
-                    return false;
-            }
-            else if (!this.AttackBest && this.DefenseBest && !this.StaminaBest)
-            {
-                if (defenseIV <= attackIV || defenseIV <= staminaIV)
-                    return false;
-            }
-            else if (!this.AttackBest && this.DefenseBest && this.StaminaBest)
-            {
-                if (staminaIV <= attackIV || staminaIV != defenseIV)
-                    return false;
-            }
-            else if (this.AttackBest && !this.DefenseBest && !this.StaminaBest)
-            {
-                if (attackIV <= defenseIV || attackIV <= staminaIV)
-                    return false;
-            }
-            else if (this.AttackBest && !this.DefenseBest && this.StaminaBest)
-            {
-                if (attackIV <= defenseIV || attackIV != staminaIV)
-                    return false;
-            }
-            else if (this.AttackBest && this.DefenseBest && !this.StaminaBest)
-            {
-                if (attackIV != defenseIV || attackIV <= staminaIV)
-                    return false;
-            }
-            else if (this.AttackBest && this.DefenseBest && this.StaminaBest)
-            {
-                if (attackIV != defenseIV || attackIV != staminaIV)
-                    return false;
-            }
-            else
-            {
-                return false;
-            }
-            return this.GetPossibleIVSums(this.TotalIVLevel).Contains((attackIV + staminaIV + defenseIV)); // Final check
+            //if (!this.AttackBest && !this.DefenseBest && this.StaminaBest)
+            //{
+            //    if (staminaIV <= attackIV || staminaIV <= defenseIV)
+            //        return false;
+            //}
+            //else if (!this.AttackBest && this.DefenseBest && !this.StaminaBest)
+            //{
+            //    if (defenseIV <= attackIV || defenseIV <= staminaIV)
+            //        return false;
+            //}
+            //else if (!this.AttackBest && this.DefenseBest && this.StaminaBest)
+            //{
+            //    if (staminaIV <= attackIV || staminaIV != defenseIV)
+            //        return false;
+            //}
+            //else if (this.AttackBest && !this.DefenseBest && !this.StaminaBest)
+            //{
+            //    if (attackIV <= defenseIV || attackIV <= staminaIV)
+            //        return false;
+            //}
+            //else if (this.AttackBest && !this.DefenseBest && this.StaminaBest)
+            //{
+            //    if (attackIV <= defenseIV || attackIV != staminaIV)
+            //        return false;
+            //}
+            //else if (this.AttackBest && this.DefenseBest && !this.StaminaBest)
+            //{
+            //    if (attackIV != defenseIV || attackIV <= staminaIV)
+            //        return false;
+            //}
+            //else if (this.AttackBest && this.DefenseBest && this.StaminaBest)
+            //{
+            //    if (attackIV != defenseIV || attackIV != staminaIV)
+            //        return false;
+            //}
+            //else
+            //{
+            //    return false;
+            //}
+            //return this.GetPossibleIVSums(this.TotalIVLevel).Contains((attackIV + staminaIV + defenseIV)); // Final check
+            return true;
         }
         #endregion
     }

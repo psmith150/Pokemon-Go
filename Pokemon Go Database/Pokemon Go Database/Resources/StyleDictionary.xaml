@@ -140,6 +140,17 @@
         <Setter Property="BorderThickness" Value="0"/>
         <Setter Property="Foreground" Value="Orange"/>
     </Style>
+    <Style x:Key="BottomBarStyle" TargetType="DockPanel">
+        <Setter Property="Height" Value="26"/>
+        <Setter Property="Background" Value="{DynamicResource BottomBarBackgroundColor}"/>
+        <Style.Resources>
+            <Style TargetType="TextBlock">
+                <Setter Property="Foreground" Value="{DynamicResource BottomBarForegroundColor}"/>
+                <Setter Property="Margin" Value="5 0"/>
+                <Setter Property="VerticalAlignment" Value="Center"/>
+            </Style>
+        </Style.Resources>
+    </Style>
     <!--Add, remove, move button styles-->
     <Style x:Key="AddButtonStyle" TargetType="Button">
         <Setter Property="Width" Value="50"/>
@@ -317,6 +328,147 @@
             </Setter.Value>
         </Setter>
     </Style>
+    <!--Slider styles-->
+    <Style x:Key="SliderFilledButtonStyle"
+       TargetType="{x:Type RepeatButton}">
+        <Setter Property="SnapsToDevicePixels"
+          Value="true" />
+        <Setter Property="OverridesDefaultStyle"
+          Value="true" />
+        <Setter Property="IsTabStop"
+          Value="false" />
+        <Setter Property="Focusable"
+          Value="false" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type RepeatButton}">
+                    <Border Background="{DynamicResource SliderTrackFill}" CornerRadius="4" Height="5"/>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="SliderEmptyButtonStyle"
+       TargetType="{x:Type RepeatButton}">
+        <Setter Property="SnapsToDevicePixels"
+          Value="true" />
+        <Setter Property="OverridesDefaultStyle"
+          Value="true" />
+        <Setter Property="IsTabStop"
+          Value="false" />
+        <Setter Property="Focusable"
+          Value="false" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type RepeatButton}">
+                    <Border Background="Transparent" />
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="SliderThumbStyle"
+       TargetType="{x:Type Thumb}">
+        <Setter Property="SnapsToDevicePixels"
+          Value="true" />
+        <Setter Property="OverridesDefaultStyle"
+          Value="true" />
+        <Setter Property="Height"
+          Value="0" />
+        <Setter Property="Width"
+          Value="0" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Thumb}">
+                    <Ellipse x:Name="Ellipse" StrokeThickness="1" Stroke="Transparent" Fill="Transparent" Margin="-7">
+
+                        <!--<Ellipse.Fill>
+                            <RadialGradientBrush GradientOrigin="0.5,0.5" Center="0.5,0.5" RadiusX="0.5" RadiusY="0.5">
+                                <RadialGradientBrush.GradientStops>
+                                    <GradientStop Offset="0" Color="{DynamicResource SliderThumbGradientStart}"/>
+                                    <GradientStop Offset="1.0" Color="{DynamicResource SliderThumbGradientEnd}"/>
+                                </RadialGradientBrush.GradientStops>
+                            </RadialGradientBrush>
+                        </Ellipse.Fill>-->
+                    </Ellipse>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="Ellipse" Property="Fill">
+                                <Setter.Value>
+                                    <RadialGradientBrush Opacity="0.25" GradientOrigin="0.5,0.5" Center="0.5,0.5" RadiusX="0.5" RadiusY="0.5">
+                                        <RadialGradientBrush.GradientStops>
+                                            <GradientStop Offset="0" Color="{DynamicResource SliderThumbGradientStart}"/>
+                                            <GradientStop Offset="1.0" Color="{DynamicResource SliderThumbGradientEnd}"/>
+                                        </RadialGradientBrush.GradientStops>
+                                    </RadialGradientBrush>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                        <Trigger Property="IsDragging" Value="True">
+                            <Setter TargetName="Ellipse" Property="Fill">
+                                <Setter.Value>
+                                    <RadialGradientBrush Opacity="0.5" GradientOrigin="0.5,0.5" Center="0.5,0.5" RadiusX="0.5" RadiusY="0.5">
+                                        <RadialGradientBrush.GradientStops>
+                                            <GradientStop Offset="0" Color="{DynamicResource SliderThumbGradientStart}"/>
+                                            <GradientStop Offset="1.0" Color="{DynamicResource SliderThumbGradientEnd}"/>
+                                        </RadialGradientBrush.GradientStops>
+                                    </RadialGradientBrush>
+                                </Setter.Value>
+                            </Setter>
+                            <Setter TargetName="Ellipse" Property="Stroke" Value="{DynamicResource SliderThumbBorder}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <ControlTemplate x:Key="IVSelectionSliderStyle" TargetType="{x:Type Slider}">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto"
+                     MinHeight="{TemplateBinding MinHeight}" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <TickBar x:Name="TopTick" SnapsToDevicePixels="True" Placement="Top" Height="4" Visibility="Collapsed" Fill="{DynamicResource SliderTickBarFill}"/>
+            <Border x:Name="TrackBackground" Margin="0" CornerRadius="2" Height="6" Grid.Row="1" BorderThickness="0" Background="White"/>
+            <Track Grid.Row="1" x:Name="PART_Track" Width="200" Height="20">
+                <Track.DecreaseRepeatButton>
+                    <RepeatButton Style="{StaticResource SliderFilledButtonStyle}" Command="Slider.DecreaseLarge" Margin="0,0,0,0"/>
+                </Track.DecreaseRepeatButton>
+
+                <Track.IncreaseRepeatButton>
+                    <RepeatButton Style="{StaticResource SliderEmptyButtonStyle}" Command="Slider.IncreaseLarge"/>
+                </Track.IncreaseRepeatButton>
+                <Track.Thumb>
+                    <Thumb Style="{StaticResource SliderThumbStyle}"/>
+                </Track.Thumb>
+            </Track>
+            <TickBar x:Name="BottomTick" SnapsToDevicePixels="True" Grid.Row="2" Fill="{DynamicResource SliderTickBarFill}" Placement="Bottom" Height="6" Visibility="Collapsed" />
+        </Grid>
+        <ControlTemplate.Triggers>
+            <Trigger Property="TickPlacement"
+             Value="TopLeft">
+                <Setter TargetName="TopTick"
+              Property="Visibility"
+              Value="Visible" />
+            </Trigger>
+            <Trigger Property="TickPlacement"
+             Value="BottomRight">
+                <Setter TargetName="BottomTick"
+              Property="Visibility"
+              Value="Visible" />
+            </Trigger>
+            <Trigger Property="TickPlacement"
+             Value="Both">
+                <Setter TargetName="TopTick"
+              Property="Visibility"
+              Value="Visible" />
+                <Setter TargetName="BottomTick"
+              Property="Visibility"
+              Value="Visible" />
+            </Trigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
     <!--Datagrid elements-->
     <Style x:Key="GroupedStyle" TargetType="{x:Type GroupItem}">
         <Setter Property="Margin" Value="0,0,0,5"/>

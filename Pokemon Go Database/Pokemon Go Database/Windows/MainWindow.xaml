@@ -16,32 +16,33 @@
         WindowState="Maximized"
         ResizeMode="CanResizeWithGrip"
         Title="Pokemon Go Database"
+        Icon="/Images/Pokemon_Go_Icon.png"
         TextElement.Foreground="Black"
         Style="{StaticResource MainWindowStyle}"
         d:DataContext="{d:DesignInstance Type=local:MainWindowViewModel}">
 
-<Window.Resources>
-    <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
-    <valueConverters:TypeToBoolConverter x:Key="TypeToBoolConverter" />
-    <valueConverters:ViewModelToViewConverter x:Key="ViewModelToViewConverter" />
+    <Window.Resources>
+        <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
+        <valueConverters:TypeToBoolConverter x:Key="TypeToBoolConverter" />
+        <valueConverters:ViewModelToViewConverter x:Key="ViewModelToViewConverter" />
 
-    <Style TargetType="Border" x:Key="PopupBorderStyle">
-        <Setter Property="BorderThickness" Value="5" />
-        <Setter Property="BorderBrush" Value="#AFB4BE" />
-    </Style>
-    <Style TargetType="Grid" x:Key="OverlayGridStyle">
-        <Setter Property="Background" Value="Black" />
-        <Setter Property="Opacity" Value="0.5" />
-    </Style>
-</Window.Resources>
-<Window.InputBindings>
-    <KeyBinding Modifiers="Ctrl" Key="S" Command="{Binding SaveUserDataCommand}"/>
-    <KeyBinding Modifiers="Ctrl" Key="O" Command="{Binding LoadUserDataCommand}"/>
-    <KeyBinding Modifiers="Ctrl" Key="N" Command="{Binding NewFileCommand}"/>
-</Window.InputBindings>
-<Grid Background="{StaticResource MainBackgroundColor}">
-    <DockPanel>
-        <Menu DockPanel.Dock="Top">
+        <Style TargetType="Border" x:Key="PopupBorderStyle">
+            <Setter Property="BorderThickness" Value="5" />
+            <Setter Property="BorderBrush" Value="#AFB4BE" />
+        </Style>
+        <Style TargetType="Grid" x:Key="OverlayGridStyle">
+            <Setter Property="Background" Value="Black" />
+            <Setter Property="Opacity" Value="0.5" />
+        </Style>
+    </Window.Resources>
+    <Window.InputBindings>
+        <KeyBinding Modifiers="Ctrl" Key="S" Command="{Binding SaveUserDataCommand}"/>
+        <KeyBinding Modifiers="Ctrl" Key="O" Command="{Binding LoadUserDataCommand}"/>
+        <KeyBinding Modifiers="Ctrl" Key="N" Command="{Binding NewFileCommand}"/>
+    </Window.InputBindings>
+    <Grid Background="{StaticResource MainBackgroundColor}">
+        <DockPanel>
+            <Menu DockPanel.Dock="Top">
                 <MenuItem Header="_File">
                     <MenuItem Header="_Save" Command="{Binding SaveUserDataCommand}"/>
                     <MenuItem Header="SaveAs" Command="{Binding SaveUserDataAsCommand}"/>
@@ -62,39 +63,20 @@
                     <MenuItem Header="Save Pokedex and Move data." Command="{Binding SaveBaseDataCommand}"/>
                 </MenuItem>
             </Menu>
-        <Grid DockPanel.Dock="Top"
+            <Grid DockPanel.Dock="Top"
                    Height="40"
                    Background="Transparent">
-            <UniformGrid Rows="1" HorizontalAlignment="Left">
-                <UniformGrid.Resources>
-                    <!--<Image Source="/Images/DMC Wheel Transparent Background.ico" x:Key="ButtonImage"/>-->
-                    <Style TargetType="customControls:HoverButton" BasedOn="{StaticResource {x:Type customControls:HoverButton}}">
-                        <Setter Property="Background">
-                                <Setter.Value>
-                                    <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
-                                        <GradientStop Color="#B2F72424" Offset="0.0"/>
-                                        <GradientStop Color="#B2FFFFFF" Offset="1.0"/>
-                                        <GradientStop Color="#B2F72424" Offset="0.45"/>
-                                        <GradientStop Color="#B2FFFFFF" Offset="0.55"/>
-                                    </LinearGradientBrush>
-                                </Setter.Value>
-                            </Setter>
-                        <Setter Property="HoverBackgroundBrush" Value="LightBlue"/>
-                        <Setter Property="DisabledBackgroundBrush">
-                            <Setter.Value>
-                                    <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
-                                        <GradientStop Color="#FFF72424" Offset="0.0"/>
-                                        <GradientStop Color="#FFFFADAD" Offset="1.0"/>
-                                        <GradientStop Color="#B2F72424" Offset="0.45"/>
-                                        <GradientStop Color="#FFFFADAD" Offset="0.55"/>
-                                    </LinearGradientBrush>
-                            </Setter.Value>
-                        </Setter>
-                            <Setter Property="DisabledForegroundBrush" Value="White" />
+                <UniformGrid Rows="1" HorizontalAlignment="Left">
+                    <UniformGrid.Resources>
+                        <Style TargetType="customControls:HoverButton" BasedOn="{StaticResource {x:Type customControls:HoverButton}}">
+                            <Setter Property="Background" Value="{DynamicResource NavigationButtonBackgroundColor}"/>
+                            <Setter Property="HoverBackgroundBrush" Value="{DynamicResource NavigationButtonHoverBackgroundColor}"/>
+                            <Setter Property="DisabledBackgroundBrush" Value="{DynamicResource NavigationButtonSelectedBackgroundColor}"/>
+                            <Setter Property="DisabledForegroundBrush" Value="{DynamicResource NavigationButtonSelectedForegroundColor}" />
                             <Setter Property="Margin" Value="1 0 1 0"/>
-                        <Setter Property="Width" Value="130"/>
-                    </Style>
-                </UniformGrid.Resources>
+                            <Setter Property="Width" Value="130"/>
+                        </Style>
+                    </UniformGrid.Resources>
                     <customControls:HoverButton Content="My Pokemon" 
                                             CommandParameter="{x:Type screens:PokemonViewModel}"
                                             Command="{Binding NavigateToScreenCommand}"
@@ -116,17 +98,17 @@
                                             Command="{Binding NavigateToScreenCommand}"
                                             IsEnabled="{Binding NavigationService.ActiveViewModel, Converter={StaticResource TypeToBoolConverter}, ConverterParameter={x:Type screens:ChargeMoveViewModel}}"/>
                 </UniformGrid>
-            <!--<Grid Background="White">
+                <!--<Grid Background="White">
                     -->
-            <!--<Image HorizontalAlignment="Left" 
+                <!--<Image HorizontalAlignment="Left" 
                        Source="/Images/DMC-Logo.png" 
                        Margin="20 0" 
                        Height="48" />-->
-            <!--
+                <!--
                 </Grid>-->
-        </Grid>
-        <Separator DockPanel.Dock="Top" Background="DarkGray" Height="2" Width="Auto" HorizontalAlignment="Stretch"/>
-        <!--<DockPanel DockPanel.Dock="Bottom"
+            </Grid>
+            <Separator DockPanel.Dock="Top" Background="DarkGray" Height="2" Width="Auto" HorizontalAlignment="Stretch"/>
+            <!--<DockPanel DockPanel.Dock="Bottom"
                    Height="26"
                    Background="Gray">
                 <DockPanel.Resources>
@@ -150,25 +132,31 @@
                 <TextBlock DockPanel.Dock="Right" Text="{Binding AppVersion, StringFormat=Version: {0}}" />
                 <Grid/>
             </DockPanel>-->
-        <ContentPresenter Content="{Binding NavigationService.ActiveViewModel, Converter={StaticResource ViewModelToViewConverter}}" />
-    </DockPanel>
+            <DockPanel DockPanel.Dock="Bottom" Style="{DynamicResource BottomBarStyle}">
+                <!--<Button DockPanel.Dock="Right" ToolTip="Open the help menu." Style="{DynamicResource HelpButtonStyle}" Command="{Binding OpenHelpCommand}">
+                <Image Source="/Images\Question_16x.png" RenderOptions.BitmapScalingMode="HighQuality"/>
+            </Button>-->
+                <TextBlock DockPanel.Dock="Right" Text="{Binding AppVersion, StringFormat=Version: {0}}" />
+            </DockPanel>
+            <ContentPresenter Content="{Binding NavigationService.ActiveViewModel, Converter={StaticResource ViewModelToViewConverter}}" />
+        </DockPanel>
 
-    <!-- Popup -->
-    <Grid Background="Transparent" Visibility="{Binding NavigationService.IsPopupActive, Converter={StaticResource BooleanToVisibilityConverter}}">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="*" />
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="*" />
-        </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="Auto" />
-            <ColumnDefinition Width="*" />
-        </Grid.ColumnDefinitions>
-        <Grid Grid.Row="0" Grid.Column="0" Grid.RowSpan="3" Grid.ColumnSpan="3" 
+        <!-- Popup -->
+        <Grid Background="Transparent" Visibility="{Binding NavigationService.IsPopupActive, Converter={StaticResource BooleanToVisibilityConverter}}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Row="0" Grid.Column="0" Grid.RowSpan="3" Grid.ColumnSpan="3" 
                   Style="{StaticResource OverlayGridStyle}" />
-        <ContentPresenter Grid.Row="1" Grid.Column="1" Content="{Binding NavigationService.ActivePopupViewModel, Converter={StaticResource ViewModelToViewConverter}}" />
-    </Grid>
+            <ContentPresenter Grid.Row="1" Grid.Column="1" Content="{Binding NavigationService.ActivePopupViewModel, Converter={StaticResource ViewModelToViewConverter}}" />
+        </Grid>
 
         <!-- Message Window -->
         <Grid Background="Transparent" Visibility="{Binding MessageViewer.IsMessageActive, Converter={StaticResource BooleanToVisibilityConverter}}">
@@ -224,28 +212,28 @@
         </Grid>
 
         <!-- Busy Window -->
-    <Grid Background="Transparent" Visibility="{Binding Session.IsBusy, Converter={StaticResource BooleanToVisibilityConverter}}">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="*" />
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="*" />
-        </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="Auto" />
-            <ColumnDefinition Width="*" />
-        </Grid.ColumnDefinitions>
-        <Grid Grid.Row="0" Grid.Column="0" Grid.RowSpan="3" Grid.ColumnSpan="3" Style="{StaticResource OverlayGridStyle}" />
-        <Border Grid.Row="1" Grid.Column="1" Style="{StaticResource PopupBorderStyle}">
-            <Grid Width="300" Height="200" Background="LightGray">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="*" />
-                    <RowDefinition Height="2*" />
-                </Grid.RowDefinitions>
-                <ProgressBar Grid.Row="2" IsIndeterminate="True" Height="25" Margin="10" />
-            </Grid>
-        </Border>
+        <Grid Background="Transparent" Visibility="{Binding Session.IsBusy, Converter={StaticResource BooleanToVisibilityConverter}}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Row="0" Grid.Column="0" Grid.RowSpan="3" Grid.ColumnSpan="3" Style="{StaticResource OverlayGridStyle}" />
+            <Border Grid.Row="1" Grid.Column="1" Style="{StaticResource PopupBorderStyle}">
+                <Grid Width="300" Height="200" Background="LightGray">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="2*" />
+                    </Grid.RowDefinitions>
+                    <ProgressBar Grid.Row="2" IsIndeterminate="True" Height="25" Margin="10" />
+                </Grid>
+            </Border>
+        </Grid>
     </Grid>
-</Grid>
 </Window>

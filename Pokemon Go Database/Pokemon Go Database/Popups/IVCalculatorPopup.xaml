@@ -7,6 +7,7 @@
              xmlns:scm="clr-namespace:System.ComponentModel;assembly=WindowsBase"
              xmlns:xtk="http://schemas.xceed.com/wpf/xaml/datagrid"
              xmlns:converters="clr-namespace:Pokemon_Go_Database.ValueConverters"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
              mc:Ignorable="d" 
              d:DataContext="{d:DesignInstance Type=local:IVCalculatorViewModel}">
     <UserControl.Resources>
@@ -16,6 +17,8 @@
             </CollectionViewSource.SortDescriptions>
         </CollectionViewSource>
         <converters:EnumToStringConverter x:Key="EnumToStringConverter"/>
+        <sys:Int32 x:Key="MaxIV">15</sys:Int32>
+        <sys:Int32 x:Key="MinIV">0</sys:Int32>
     </UserControl.Resources>
     <Grid Background="{StaticResource MainBackgroundColor}" Width="750" Height="500">
         <Grid.RowDefinitions>
@@ -57,38 +60,26 @@
             </StackPanel>
         </StackPanel>
         <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center">
-            <StackPanel Orientation="Horizontal">
-                <Label Content="Attack is Best IV:"/>
-                <CheckBox IsChecked="{Binding Calculator.AttackBest}" VerticalAlignment="Center"/>
-            </StackPanel>
-            <StackPanel Orientation="Horizontal">
-                <Label Content="Defense is Best IV:"/>
-                <CheckBox IsChecked="{Binding Calculator.DefenseBest}" VerticalAlignment="Center"/>
-            </StackPanel>
-            <StackPanel Orientation="Horizontal">
-                <Label Content="Stamina is Best IV:"/>
-                <CheckBox IsChecked="{Binding Calculator.StaminaBest}" VerticalAlignment="Center"/>
-            </StackPanel>
-            <StackPanel Orientation="Horizontal">
-                <Label Content="Best IV Level:"/>
-                <ComboBox SelectedItem="{Binding Calculator.BestIVLevel}" ItemsSource="{Binding IVLevels}" Width="75">
-                    <ComboBox.ItemTemplate>
-                        <DataTemplate>
-                            <TextBlock Text="{Binding Path=., Converter={StaticResource EnumToStringConverter}}" />
-                        </DataTemplate>
-                    </ComboBox.ItemTemplate>
-                </ComboBox>
-            </StackPanel>
-            <StackPanel Orientation="Horizontal">
-                <Label Content="Overall IV Level:"/>
-                <ComboBox ItemsSource="{Binding TotalIVLevels}" SelectedItem="{Binding Calculator.TotalIVLevel}" Width="75">
-                    <ComboBox.ItemTemplate>
-                        <DataTemplate>
-                            <TextBlock Text="{Binding Path=., Converter={StaticResource EnumToStringConverter}}" />
-                        </DataTemplate>
-                    </ComboBox.ItemTemplate>
-                </ComboBox>
-            </StackPanel>
+            <Grid HorizontalAlignment="Center" Margin="0,10,0,5">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <Label Grid.Row="0" Grid.Column="0" Content="Attack IV:" HorizontalContentAlignment="Right"/>
+                <Slider Grid.Row="0" Grid.Column="1" Template="{StaticResource IVSelectionSliderStyle}" Value="{Binding Calculator.AttackIV}" Maximum="{Binding Source={StaticResource MaxIV}}" Minimum="{Binding Source={StaticResource MinIV}}" 
+                            TickPlacement="Both" IsSnapToTickEnabled="False" TickFrequency="5" Width="200" AutoToolTipPlacement="BottomRight" AutoToolTipPrecision="0" Margin="0,3,0,3"/>
+                <Label Grid.Row="1" Grid.Column="0" Content="Defense IV:" HorizontalContentAlignment="Right"/>
+                <Slider Grid.Row="1" Grid.Column="1" Template="{StaticResource IVSelectionSliderStyle}" Value="{Binding Calculator.DefenseIV}" Maximum="{Binding Source={StaticResource MaxIV}}" Minimum="{Binding Source={StaticResource MinIV}}" 
+                            TickPlacement="Both" IsSnapToTickEnabled="False" TickFrequency="5" Width="200" AutoToolTipPlacement="BottomRight" AutoToolTipPrecision="0" Margin="0,3,0,3"/>
+                <Label Grid.Row="2" Grid.Column="0" Content="Stamina IV:" HorizontalContentAlignment="Right"/>
+                <Slider Grid.Row="2" Grid.Column="1" Template="{StaticResource IVSelectionSliderStyle}" Value="{Binding Calculator.StaminaIV}" Maximum="{Binding Source={StaticResource MaxIV}}" Minimum="{Binding Source={StaticResource MinIV}}" 
+                            TickPlacement="Both" IsSnapToTickEnabled="False" TickFrequency="5" Width="200" AutoToolTipPlacement="BottomRight" AutoToolTipPrecision="0" Margin="0,3,0,3"/>
+            </Grid>
         </StackPanel>
         <Button Grid.Row="3" Content="Calculate IVs" Command="{Binding CalculateIVsCommand}" Width="150" HorizontalAlignment="Center"/>
         <StackPanel Grid.Row="4" HorizontalAlignment="Center" Orientation="Horizontal">

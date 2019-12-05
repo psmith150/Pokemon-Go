@@ -214,12 +214,7 @@ namespace Pokemon_Go_Database.Screens
         private async Task AddPokemonAsync()
         {
             Pokemon newPokemon = new Pokemon();
-            IVCalculator calculator = new IVCalculator(newPokemon)
-            {
-                AttackBest = false,
-                DefenseBest = false,
-                StaminaBest = false
-            };
+            IVCalculator calculator = new IVCalculator(newPokemon);
             IVCalculatorPopupEventArgs args = await navigationService.OpenPopup<IVCalculatorViewModel>(new IVCalculatorWrapper(calculator, true)) as IVCalculatorPopupEventArgs;
             if (args != null)
             {

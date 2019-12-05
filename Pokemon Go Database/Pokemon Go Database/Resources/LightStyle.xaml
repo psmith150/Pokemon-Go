@@ -32,5 +32,16 @@
     <SolidColorBrush x:Key="HelpButtonBackgroundColor" Color="LightGray"/>
     <SolidColorBrush x:Key="HelpButtonForegroundColor" Color="Black"/>
     <SolidColorBrush x:Key="BusyWindowBackgroundColor" Color="LightGray"/>
+    <SolidColorBrush x:Key="NavigationButtonBackgroundColor"  Color="#CCE0E0E0"/>
+    <SolidColorBrush x:Key="NavigationButtonHoverBackgroundColor"  Color="#8C54B8FD"/>
+    <SolidColorBrush x:Key="NavigationButtonSelectedBackgroundColor"  Color="#BF0546FF"/>
+    <SolidColorBrush x:Key="NavigationButtonSelectedForegroundColor"  Color="White" />
+    <!--#endregion-->
+    <!--#region IVSelectionSlider-->
+    <Color x:Key="SliderThumbGradientStart">LightGray</Color>
+    <Color x:Key="SliderThumbGradientEnd">LightGray</Color>
+    <SolidColorBrush x:Key="SliderTickBarFill" Color="Black"/>
+    <SolidColorBrush x:Key="SliderThumbBorder" Color="Black" Opacity="0.2"/>
+    <SolidColorBrush x:Key="SliderTrackFill" Color="CornflowerBlue" Opacity="0.75"/>
     <!--#endregion-->
 </ResourceDictionary>

@@ -160,6 +160,10 @@ namespace Pokemon_Go_Database.Windows
             {
                 var fileSearch = new SaveFileDialog();
                 fileSearch.InitialDirectory = Properties.Settings.Default.DefaultDirectory;
+                if (!Directory.Exists(fileSearch.InitialDirectory))
+                {
+                    fileSearch.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
+                }
                 fileSearch.Filter = "XML File (*.xml) | *.xml";
                 fileSearch.FilterIndex = 2;
                 fileSearch.RestoreDirectory = true;
@@ -184,7 +188,11 @@ namespace Pokemon_Go_Database.Windows
             try
             {
                 var fileSearch = new SaveFileDialog();
-                fileSearch.InitialDirectory = Properties.Settings.Default.DefaultDirectory;
+                fileSearch.InitialDirectory = Properties.Settings.Default.BaseDataDirectory;
+                if (!Directory.Exists(fileSearch.InitialDirectory))
+                {
+                    fileSearch.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
+                }
                 fileSearch.Filter = "XML File (*.xml) | *.xml";
                 fileSearch.FilterIndex = 2;
                 fileSearch.RestoreDirectory = true;
@@ -211,6 +219,10 @@ namespace Pokemon_Go_Database.Windows
             {
                 var fileSearch = new OpenFileDialog();
                 fileSearch.InitialDirectory = Properties.Settings.Default.DefaultDirectory;
+                if (!Directory.Exists(fileSearch.InitialDirectory))
+                {
+                    fileSearch.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
+                }
                 fileSearch.Filter = "XML File (*.xml) | *.xml";
                 fileSearch.FilterIndex = 2;
                 fileSearch.RestoreDirectory = true;
@@ -240,6 +252,10 @@ namespace Pokemon_Go_Database.Windows
             {
                 var fileSearch = new OpenFileDialog();
                 fileSearch.InitialDirectory = Properties.Settings.Default.DefaultDirectory;
+                if (!Directory.Exists(fileSearch.InitialDirectory))
+                {
+                    fileSearch.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
+                }
                 fileSearch.Filter = "XML File (*.xml) | *.xml";
                 fileSearch.FilterIndex = 2;
                 fileSearch.RestoreDirectory = true;
@@ -267,6 +283,10 @@ namespace Pokemon_Go_Database.Windows
             {
                 var fileSearch = new SaveFileDialog();
                 fileSearch.InitialDirectory = Properties.Settings.Default.DefaultDirectory;
+                if (!Directory.Exists(fileSearch.InitialDirectory))
+                {
+                    fileSearch.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
+                }
                 fileSearch.Filter = "XML File (*.xml) | *.xml";
                 fileSearch.FilterIndex = 2;
                 fileSearch.RestoreDirectory = true;

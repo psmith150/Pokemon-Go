@@ -14,13 +14,14 @@ namespace Pokemon_Go_Database.ValueConverters
     {
         public object Convert(object[] values, Type targetType, object parameter, CultureInfo culture)
         {
-            double number = (double)values[0];
+            double number = 0;
             double min = 0;
             double max = 100;
 
             // Get the value limits from parameter
             try
             {
+                number = (double)values[0];
                 min = (double)values[1];
                 max = (double)values[2];
             }
