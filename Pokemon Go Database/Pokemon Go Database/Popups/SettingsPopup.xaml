@@ -28,6 +28,12 @@
                 <Button Content="..." Command="{Binding SelectDirectoryCommand}" Width="{Binding Source={x:Reference DirectoryBox}, Path=ActualHeight}"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <TextBlock Text="Base Data Directory" />
+                <Separator Width="15" Background="Transparent"/>
+                <TextBox Text="{Binding DefaultBaseDataDirectory}" Width="200" Name="BaseDataDirectoryBox" IsReadOnly="True"/>
+                <Button Content="..." Command="{Binding SelectBaseDirectoryCommand}" Width="{Binding Source={x:Reference BaseDataDirectoryBox}, Path=ActualHeight}"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                 <TextBlock Text="Auto-Name Format" />
                 <Separator Width="15" Background="Transparent"/>
                 <TextBox Text="{Binding NameFormat}" Width="200"/>
