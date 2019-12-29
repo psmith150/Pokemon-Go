@@ -24,6 +24,7 @@ namespace Pokemon_Go_Database.Popups
         public ICommand ExitPopupCommand { get; private set; }
         public ICommand SaveCommand { get; private set; }
         public ICommand SelectDirectoryCommand { get; private set; }
+        public ICommand SelectBaseDirectoryCommand { get; private set; }
         #endregion
 
         public SettingsViewModel(SessionService session, MessageViewerBase messageViewer) : base(session)
@@ -33,6 +34,7 @@ namespace Pokemon_Go_Database.Popups
             this.ExitPopupCommand = new RelayCommand(() => Exit());
             this.SaveCommand = new RelayCommand(() => Save());
             this.SelectDirectoryCommand = new RelayCommand(() => this.SelectDirectory());
+            this.SelectBaseDirectoryCommand = new RelayCommand(() => this.SelectBaseDirectory());
         }
 
         
@@ -40,6 +42,7 @@ namespace Pokemon_Go_Database.Popups
         {
             this.DefaultDirectory = Properties.Settings.Default.DefaultDirectory;
             this.NameFormat = Properties.Settings.Default.SuggestedName;
+            this.DefaultBaseDataDirectory = Properties.Settings.Default.BaseDataDirectory;
             this._savingNeeded = false;
         }
 
@@ -80,6 +83,20 @@ namespace Pokemon_Go_Database.Popups
                 this._savingNeeded = true;
             }
         }
+
+        private string _DefaultBaseDataDirectory;
+        public string DefaultBaseDataDirectory
+        {
+            get
+            {
+                return this._DefaultBaseDataDirectory;
+            }
+            set
+            {
+                this.Set(ref this._DefaultBaseDataDirectory, value);
+                this._savingNeeded = true;
+            }
+        }
         #endregion
 
         #region Private Methods
@@ -93,6 +110,18 @@ namespace Pokemon_Go_Database.Popups
             if (result == DialogResult.OK)
             {
                 this.DefaultDirectory = dirDialog.SelectedPath;
+            }
+        }
+        private void SelectBaseDirectory()
+        {
+            FolderBrowserDialog dirDialog = new FolderBrowserDialog();
+            dirDialog.RootFolder = Environment.SpecialFolder.MyComputer;
+            dirDialog.ShowNewFolderButton = true;
+            dirDialog.Description = "Select a folder";
+            DialogResult result = dirDialog.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                this.DefaultBaseDataDirectory = dirDialog.SelectedPath;
             }
         }
         private async void Exit()
@@ -114,6 +143,7 @@ namespace Pokemon_Go_Database.Popups
             //TODO: implement saving
             Properties.Settings.Default.DefaultDirectory = this.DefaultDirectory;
             Properties.Settings.Default.SuggestedName = this.NameFormat;
+            Properties.Settings.Default.BaseDataDirectory = this.DefaultBaseDataDirectory;
             Properties.Settings.Default.Save();
             this.ClosePopup(null);
         }

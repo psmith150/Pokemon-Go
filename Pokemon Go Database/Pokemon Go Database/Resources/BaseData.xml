@@ -503,7 +503,7 @@
     </Move>
     <Move xsi:type="FastMove">
       <Name>Mud Slap</Name>
-      <Power>15</Power>
+      <Power>18</Power>
       <Time>1400</Time>
       <Energy>12</Energy>
       <Type>Ground</Type>
@@ -1273,7 +1273,7 @@
     </Move>
     <Move xsi:type="ChargeMove">
       <Name>Earthquake</Name>
-      <Power>120</Power>
+      <Power>140</Power>
       <Time>3600</Time>
       <Energy>100</Energy>
       <Type>Ground</Type>
@@ -1295,9 +1295,9 @@
     </Move>
     <Move xsi:type="ChargeMove">
       <Name>Fell Stinger</Name>
-      <Power>0</Power>
+      <Power>50</Power>
       <Time>2200</Time>
-      <Energy>0</Energy>
+      <Energy>33</Energy>
       <Type>Bug</Type>
       <MoveType>Charge</MoveType>
       <DamageWindowStartTime>1800</DamageWindowStartTime>
@@ -1779,9 +1779,9 @@
     </Move>
     <Move xsi:type="ChargeMove">
       <Name>Mirror Shot</Name>
-      <Power>0</Power>
+      <Power>50</Power>
       <Time>2400</Time>
-      <Energy>0</Energy>
+      <Energy>33</Energy>
       <Type>Steel</Type>
       <MoveType>Charge</MoveType>
       <DamageWindowStartTime>1800</DamageWindowStartTime>
@@ -1845,9 +1845,9 @@
     </Move>
     <Move xsi:type="ChargeMove">
       <Name>Octazooka</Name>
-      <Power>0</Power>
+      <Power>50</Power>
       <Time>2300</Time>
-      <Energy>0</Energy>
+      <Energy>50</Energy>
       <Type>Water</Type>
       <MoveType>Charge</MoveType>
       <DamageWindowStartTime>1300</DamageWindowStartTime>
@@ -2109,9 +2109,9 @@
     </Move>
     <Move xsi:type="ChargeMove">
       <Name>Sand Tomb</Name>
-      <Power>80</Power>
+      <Power>60</Power>
       <Time>4000</Time>
-      <Energy>50</Energy>
+      <Energy>33</Energy>
       <Type>Ground</Type>
       <MoveType>Charge</MoveType>
       <DamageWindowStartTime>1700</DamageWindowStartTime>
@@ -2318,9 +2318,9 @@
     </Move>
     <Move xsi:type="ChargeMove">
       <Name>Super Power</Name>
-      <Power>0</Power>
+      <Power>85</Power>
       <Time>3000</Time>
-      <Energy>0</Energy>
+      <Energy>50</Energy>
       <Type>Fighting</Type>
       <MoveType>Charge</MoveType>
       <DamageWindowStartTime>2100</DamageWindowStartTime>
@@ -2512,6 +2512,17 @@
       <MoveType>Charge</MoveType>
       <DamageWindowStartTime>3000</DamageWindowStartTime>
       <DamageWindowDuration>500</DamageWindowDuration>
+      <DodgeFlashTime>0</DodgeFlashTime>
+    </Move>
+    <Move xsi:type="ChargeMove">
+      <Name>Aura Sphere</Name>
+      <Power>90</Power>
+      <Time>1800</Time>
+      <Energy>50</Energy>
+      <Type>Fighting</Type>
+      <MoveType>Charge</MoveType>
+      <DamageWindowStartTime>1000</DamageWindowStartTime>
+      <DamageWindowDuration>600</DamageWindowDuration>
       <DodgeFlashTime>0</DodgeFlashTime>
     </Move>
   </Moves>
@@ -3749,6 +3760,20 @@
           </ChargeMove>
           <IsLegacy>false</IsLegacy>
         </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Fell Stinger</Name>
+            <Power>50</Power>
+            <Time>2200</Time>
+            <Energy>33</Energy>
+            <Type>Bug</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>1800</DamageWindowStartTime>
+            <DamageWindowDuration>200</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>169</Attack>
       <Defense>130</Defense>
@@ -4874,9 +4899,9 @@
         <PokedexChargeMoveWrapper>
           <ChargeMove>
             <Name>Sand Tomb</Name>
-            <Power>80</Power>
+            <Power>60</Power>
             <Time>4000</Time>
-            <Energy>50</Energy>
+            <Energy>33</Energy>
             <Type>Ground</Type>
             <MoveType>Charge</MoveType>
             <DamageWindowStartTime>1700</DamageWindowStartTime>
@@ -4969,7 +4994,7 @@
         <PokedexChargeMoveWrapper>
           <ChargeMove>
             <Name>Earthquake</Name>
-            <Power>120</Power>
+            <Power>140</Power>
             <Time>3600</Time>
             <Energy>100</Energy>
             <Type>Ground</Type>
@@ -5212,7 +5237,7 @@
         <PokedexChargeMoveWrapper>
           <ChargeMove>
             <Name>Earthquake</Name>
-            <Power>120</Power>
+            <Power>140</Power>
             <Time>3600</Time>
             <Energy>100</Energy>
             <Type>Ground</Type>
@@ -5468,7 +5493,7 @@
         <PokedexChargeMoveWrapper>
           <ChargeMove>
             <Name>Earthquake</Name>
-            <Power>120</Power>
+            <Power>140</Power>
             <Time>3600</Time>
             <Energy>100</Energy>
             <Type>Ground</Type>
@@ -6953,7 +6978,7 @@
         <PokedexFastMoveWrapper>
           <FastMove>
             <Name>Mud Slap</Name>
-            <Power>15</Power>
+            <Power>18</Power>
             <Time>1400</Time>
             <Energy>12</Energy>
             <Type>Ground</Type>
@@ -7047,7 +7072,7 @@
         <PokedexFastMoveWrapper>
           <FastMove>
             <Name>Mud Slap</Name>
-            <Power>15</Power>
+            <Power>18</Power>
             <Time>1400</Time>
             <Energy>12</Energy>
             <Type>Ground</Type>
@@ -7089,7 +7114,7 @@
         <PokedexChargeMoveWrapper>
           <ChargeMove>
             <Name>Earthquake</Name>
-            <Power>120</Power>
+            <Power>140</Power>
             <Time>3600</Time>
             <Energy>100</Energy>
             <Type>Ground</Type>
@@ -7911,7 +7936,7 @@
             <DamageWindowDuration>200</DamageWindowDuration>
             <DodgeFlashTime>0</DodgeFlashTime>
           </ChargeMove>
-          <IsLegacy>true</IsLegacy>
+          <IsLegacy>false</IsLegacy>
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>227</Attack>
@@ -8137,7 +8162,7 @@
             <DamageWindowStartTime>350</DamageWindowStartTime>
             <DamageWindowDuration>200</DamageWindowDuration>
           </FastMove>
-          <IsLegacy>true</IsLegacy>
+          <IsLegacy>false</IsLegacy>
         </PokedexFastMoveWrapper>
       </FastMoves>
       <ChargeMoves>
@@ -8791,7 +8816,7 @@
             <DamageWindowDuration>400</DamageWindowDuration>
             <DodgeFlashTime>0</DodgeFlashTime>
           </ChargeMove>
-          <IsLegacy>true</IsLegacy>
+          <IsLegacy>false</IsLegacy>
         </PokedexChargeMoveWrapper>
         <PokedexChargeMoveWrapper>
           <ChargeMove>
@@ -9403,7 +9428,7 @@
         <PokedexFastMoveWrapper>
           <FastMove>
             <Name>Mud Slap</Name>
-            <Power>15</Power>
+            <Power>18</Power>
             <Time>1400</Time>
             <Energy>12</Energy>
             <Type>Ground</Type>
@@ -9497,7 +9522,7 @@
         <PokedexFastMoveWrapper>
           <FastMove>
             <Name>Mud Slap</Name>
-            <Power>15</Power>
+            <Power>18</Power>
             <Time>1400</Time>
             <Energy>12</Energy>
             <Type>Ground</Type>
@@ -9539,7 +9564,7 @@
         <PokedexChargeMoveWrapper>
           <ChargeMove>
             <Name>Earthquake</Name>
-            <Power>120</Power>
+            <Power>140</Power>
             <Time>3600</Time>
             <Energy>100</Energy>
             <Type>Ground</Type>
@@ -9576,7 +9601,7 @@
             <DamageWindowDuration>250</DamageWindowDuration>
             <DodgeFlashTime>0</DodgeFlashTime>
           </ChargeMove>
-          <IsLegacy>true</IsLegacy>
+          <IsLegacy>false</IsLegacy>
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>211</Attack>
@@ -10646,7 +10671,7 @@
         <PokedexFastMoveWrapper>
           <FastMove>
             <Name>Mud Slap</Name>
-            <Power>15</Power>
+            <Power>18</Power>
             <Time>1400</Time>
             <Energy>12</Energy>
             <Type>Ground</Type>
@@ -11063,7 +11088,7 @@
             <DamageWindowDuration>800</DamageWindowDuration>
             <DodgeFlashTime>0</DodgeFlashTime>
           </ChargeMove>
-          <IsLegacy>true</IsLegacy>
+          <IsLegacy>false</IsLegacy>
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>186</Attack>
@@ -11329,7 +11354,7 @@
             <DamageWindowStartTime>250</DamageWindowStartTime>
             <DamageWindowDuration>250</DamageWindowDuration>
           </FastMove>
-          <IsLegacy>true</IsLegacy>
+          <IsLegacy>false</IsLegacy>
         </PokedexFastMoveWrapper>
         <PokedexFastMoveWrapper>
           <FastMove>
@@ -11500,9 +11525,9 @@
         <PokedexChargeMoveWrapper>
           <ChargeMove>
             <Name>Sand Tomb</Name>
-            <Power>80</Power>
+            <Power>60</Power>
             <Time>4000</Time>
-            <Energy>50</Energy>
+            <Energy>33</Energy>
             <Type>Ground</Type>
             <MoveType>Charge</MoveType>
             <DamageWindowStartTime>1700</DamageWindowStartTime>
@@ -12264,7 +12289,7 @@
             <DamageWindowStartTime>600</DamageWindowStartTime>
             <DamageWindowDuration>1000</DamageWindowDuration>
           </FastMove>
-          <IsLegacy>true</IsLegacy>
+          <IsLegacy>false</IsLegacy>
         </PokedexFastMoveWrapper>
         <PokedexFastMoveWrapper>
           <FastMove>
@@ -12350,7 +12375,7 @@
         <PokedexFastMoveWrapper>
           <FastMove>
             <Name>Mud Slap</Name>
-            <Power>15</Power>
+            <Power>18</Power>
             <Time>1400</Time>
             <Energy>12</Energy>
             <Type>Ground</Type>
@@ -12431,7 +12456,7 @@
         <PokedexFastMoveWrapper>
           <FastMove>
             <Name>Mud Slap</Name>
-            <Power>15</Power>
+            <Power>18</Power>
             <Time>1400</Time>
             <Energy>12</Energy>
             <Type>Ground</Type>
@@ -12474,7 +12499,7 @@
         <PokedexChargeMoveWrapper>
           <ChargeMove>
             <Name>Earthquake</Name>
-            <Power>120</Power>
+            <Power>140</Power>
             <Time>3600</Time>
             <Energy>100</Energy>
             <Type>Ground</Type>
@@ -13136,7 +13161,7 @@
         <PokedexFastMoveWrapper>
           <FastMove>
             <Name>Mud Slap</Name>
-            <Power>15</Power>
+            <Power>18</Power>
             <Time>1400</Time>
             <Energy>12</Energy>
             <Type>Ground</Type>
@@ -13217,7 +13242,7 @@
         <PokedexFastMoveWrapper>
           <FastMove>
             <Name>Mud Slap</Name>
-            <Power>15</Power>
+            <Power>18</Power>
             <Time>1400</Time>
             <Energy>12</Energy>
             <Type>Ground</Type>
@@ -13232,7 +13257,7 @@
         <PokedexChargeMoveWrapper>
           <ChargeMove>
             <Name>Earthquake</Name>
-            <Power>120</Power>
+            <Power>140</Power>
             <Time>3600</Time>
             <Energy>100</Energy>
             <Type>Ground</Type>
@@ -13502,7 +13527,7 @@
         <PokedexFastMoveWrapper>
           <FastMove>
             <Name>Mud Slap</Name>
-            <Power>15</Power>
+            <Power>18</Power>
             <Time>1400</Time>
             <Energy>12</Energy>
             <Type>Ground</Type>
@@ -13517,7 +13542,7 @@
         <PokedexChargeMoveWrapper>
           <ChargeMove>
             <Name>Earthquake</Name>
-            <Power>120</Power>
+            <Power>140</Power>
             <Time>3600</Time>
             <Energy>100</Energy>
             <Type>Ground</Type>
@@ -14894,7 +14919,7 @@
             <DamageWindowStartTime>100</DamageWindowStartTime>
             <DamageWindowDuration>300</DamageWindowDuration>
           </FastMove>
-          <IsLegacy>true</IsLegacy>
+          <IsLegacy>false</IsLegacy>
         </PokedexFastMoveWrapper>
       </FastMoves>
       <ChargeMoves>
@@ -14954,6 +14979,20 @@
           </ChargeMove>
           <IsLegacy>true</IsLegacy>
         </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Super Power</Name>
+            <Power>85</Power>
+            <Time>3000</Time>
+            <Energy>50</Energy>
+            <Type>Fighting</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>2100</DamageWindowStartTime>
+            <DamageWindowDuration>700</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>238</Attack>
       <Defense>182</Defense>
@@ -14996,7 +15035,7 @@
         <PokedexChargeMoveWrapper>
           <ChargeMove>
             <Name>Earthquake</Name>
-            <Power>120</Power>
+            <Power>140</Power>
             <Time>3600</Time>
             <Energy>100</Energy>
             <Type>Ground</Type>
@@ -15136,7 +15175,7 @@
             <DamageWindowStartTime>300</DamageWindowStartTime>
             <DamageWindowDuration>200</DamageWindowDuration>
           </FastMove>
-          <IsLegacy>true</IsLegacy>
+          <IsLegacy>false</IsLegacy>
         </PokedexFastMoveWrapper>
       </FastMoves>
       <ChargeMoves>
@@ -15208,7 +15247,7 @@
             <DamageWindowDuration>1650</DamageWindowDuration>
             <DodgeFlashTime>0</DodgeFlashTime>
           </ChargeMove>
-          <IsLegacy>true</IsLegacy>
+          <IsLegacy>false</IsLegacy>
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>237</Attack>
@@ -16664,7 +16703,7 @@
         <PokedexChargeMoveWrapper>
           <ChargeMove>
             <Name>Earthquake</Name>
-            <Power>120</Power>
+            <Power>140</Power>
             <Time>3600</Time>
             <Energy>100</Energy>
             <Type>Ground</Type>
@@ -16701,7 +16740,7 @@
             <DamageWindowDuration>500</DamageWindowDuration>
             <DodgeFlashTime>0</DodgeFlashTime>
           </ChargeMove>
-          <IsLegacy>true</IsLegacy>
+          <IsLegacy>false</IsLegacy>
         </PokedexChargeMoveWrapper>
         <PokedexChargeMoveWrapper>
           <ChargeMove>
@@ -16727,6 +16766,20 @@
             <MoveType>Charge</MoveType>
             <DamageWindowStartTime>1800</DamageWindowStartTime>
             <DamageWindowDuration>500</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Super Power</Name>
+            <Power>85</Power>
+            <Time>3000</Time>
+            <Energy>50</Energy>
+            <Type>Fighting</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>2100</DamageWindowStartTime>
+            <DamageWindowDuration>700</DamageWindowDuration>
             <DodgeFlashTime>0</DodgeFlashTime>
           </ChargeMove>
           <IsLegacy>false</IsLegacy>
@@ -17309,7 +17362,7 @@
             <DamageWindowStartTime>300</DamageWindowStartTime>
             <DamageWindowDuration>200</DamageWindowDuration>
           </FastMove>
-          <IsLegacy>true</IsLegacy>
+          <IsLegacy>false</IsLegacy>
         </PokedexFastMoveWrapper>
       </FastMoves>
       <ChargeMoves>
@@ -17381,7 +17434,7 @@
             <DamageWindowDuration>200</DamageWindowDuration>
             <DodgeFlashTime>0</DodgeFlashTime>
           </ChargeMove>
-          <IsLegacy>true</IsLegacy>
+          <IsLegacy>false</IsLegacy>
         </PokedexChargeMoveWrapper>
         <PokedexChargeMoveWrapper>
           <ChargeMove>
@@ -17830,7 +17883,7 @@
         <PokedexChargeMoveWrapper>
           <ChargeMove>
             <Name>Earthquake</Name>
-            <Power>120</Power>
+            <Power>140</Power>
             <Time>3600</Time>
             <Energy>100</Energy>
             <Type>Ground</Type>
@@ -18339,7 +18392,7 @@
         <PokedexChargeMoveWrapper>
           <ChargeMove>
             <Name>Earthquake</Name>
-            <Power>120</Power>
+            <Power>140</Power>
             <Time>3600</Time>
             <Energy>100</Energy>
             <Type>Ground</Type>
@@ -18830,6 +18883,19 @@
             <MoveType>Fast</MoveType>
             <DamageWindowStartTime>950</DamageWindowStartTime>
             <DamageWindowDuration>150</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Ice Fang</Name>
+            <Power>12</Power>
+            <Time>1500</Time>
+            <Energy>20</Energy>
+            <Type>Ice</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>400</DamageWindowStartTime>
+            <DamageWindowDuration>600</DamageWindowDuration>
           </FastMove>
           <IsLegacy>false</IsLegacy>
         </PokedexFastMoveWrapper>
@@ -21388,7 +21454,7 @@
         <PokedexChargeMoveWrapper>
           <ChargeMove>
             <Name>Earthquake</Name>
-            <Power>120</Power>
+            <Power>140</Power>
             <Time>3600</Time>
             <Energy>100</Energy>
             <Type>Ground</Type>
@@ -21469,7 +21535,7 @@
         <PokedexChargeMoveWrapper>
           <ChargeMove>
             <Name>Earthquake</Name>
-            <Power>120</Power>
+            <Power>140</Power>
             <Time>3600</Time>
             <Energy>100</Energy>
             <Type>Ground</Type>
@@ -22198,7 +22264,7 @@
         <PokedexChargeMoveWrapper>
           <ChargeMove>
             <Name>Earthquake</Name>
-            <Power>120</Power>
+            <Power>140</Power>
             <Time>3600</Time>
             <Energy>100</Energy>
             <Type>Ground</Type>
@@ -23093,9 +23159,9 @@
         <PokedexChargeMoveWrapper>
           <ChargeMove>
             <Name>Sand Tomb</Name>
-            <Power>80</Power>
+            <Power>60</Power>
             <Time>4000</Time>
-            <Energy>50</Energy>
+            <Energy>33</Energy>
             <Type>Ground</Type>
             <MoveType>Charge</MoveType>
             <DamageWindowStartTime>1700</DamageWindowStartTime>
@@ -23160,7 +23226,7 @@
         <PokedexChargeMoveWrapper>
           <ChargeMove>
             <Name>Earthquake</Name>
-            <Power>120</Power>
+            <Power>140</Power>
             <Time>3600</Time>
             <Energy>100</Energy>
             <Type>Ground</Type>
@@ -23181,6 +23247,34 @@
             <MoveType>Charge</MoveType>
             <DamageWindowStartTime>2250</DamageWindowStartTime>
             <DamageWindowDuration>750</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Sand Tomb</Name>
+            <Power>60</Power>
+            <Time>4000</Time>
+            <Energy>33</Energy>
+            <Type>Ground</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>1700</DamageWindowStartTime>
+            <DamageWindowDuration>2300</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Mirror Shot</Name>
+            <Power>50</Power>
+            <Time>2400</Time>
+            <Energy>33</Energy>
+            <Type>Steel</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>1800</DamageWindowStartTime>
+            <DamageWindowDuration>400</DamageWindowDuration>
             <DodgeFlashTime>0</DodgeFlashTime>
           </ChargeMove>
           <IsLegacy>false</IsLegacy>
@@ -23402,7 +23496,7 @@
         <PokedexChargeMoveWrapper>
           <ChargeMove>
             <Name>Earthquake</Name>
-            <Power>120</Power>
+            <Power>140</Power>
             <Time>3600</Time>
             <Energy>100</Energy>
             <Type>Ground</Type>
@@ -23711,6 +23805,20 @@
           </ChargeMove>
           <IsLegacy>false</IsLegacy>
         </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Fell Stinger</Name>
+            <Power>50</Power>
+            <Time>2200</Time>
+            <Energy>33</Energy>
+            <Type>Bug</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>1800</DamageWindowStartTime>
+            <DamageWindowDuration>200</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>184</Attack>
       <Defense>138</Defense>
@@ -23943,7 +24051,7 @@
         <PokedexChargeMoveWrapper>
           <ChargeMove>
             <Name>Earthquake</Name>
-            <Power>120</Power>
+            <Power>140</Power>
             <Time>3600</Time>
             <Energy>100</Energy>
             <Type>Ground</Type>
@@ -24791,6 +24899,20 @@
           </ChargeMove>
           <IsLegacy>false</IsLegacy>
         </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Octazooka</Name>
+            <Power>50</Power>
+            <Time>2300</Time>
+            <Energy>50</Energy>
+            <Type>Water</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>1300</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>197</Attack>
       <Defense>141</Defense>
@@ -25344,6 +25466,20 @@
           </ChargeMove>
           <IsLegacy>false</IsLegacy>
         </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Octazooka</Name>
+            <Power>50</Power>
+            <Time>2300</Time>
+            <Energy>50</Energy>
+            <Type>Water</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>1300</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>194</Attack>
       <Defense>194</Defense>
@@ -25465,7 +25601,7 @@
         <PokedexFastMoveWrapper>
           <FastMove>
             <Name>Mud Slap</Name>
-            <Power>15</Power>
+            <Power>18</Power>
             <Time>1400</Time>
             <Energy>12</Energy>
             <Type>Ground</Type>
@@ -25493,7 +25629,7 @@
         <PokedexChargeMoveWrapper>
           <ChargeMove>
             <Name>Earthquake</Name>
-            <Power>120</Power>
+            <Power>140</Power>
             <Time>3600</Time>
             <Energy>100</Energy>
             <Type>Ground</Type>
@@ -25774,6 +25910,19 @@
             <MoveType>Fast</MoveType>
             <DamageWindowStartTime>850</DamageWindowStartTime>
             <DamageWindowDuration>200</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Lock On</Name>
+            <Power>1</Power>
+            <Time>300</Time>
+            <Energy>6</Energy>
+            <Type>Normal</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>170</DamageWindowStartTime>
+            <DamageWindowDuration>130</DamageWindowDuration>
           </FastMove>
           <IsLegacy>false</IsLegacy>
         </PokedexFastMoveWrapper>
@@ -27609,6 +27758,20 @@
           </ChargeMove>
           <IsLegacy>false</IsLegacy>
         </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Seed Bomb</Name>
+            <Power>55</Power>
+            <Time>2100</Time>
+            <Energy>33</Energy>
+            <Type>Grass</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>1200</DamageWindowStartTime>
+            <DamageWindowDuration>700</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>210</Attack>
       <Defense>210</Defense>
@@ -27827,7 +27990,7 @@
         <PokedexChargeMoveWrapper>
           <ChargeMove>
             <Name>Earthquake</Name>
-            <Power>120</Power>
+            <Power>140</Power>
             <Time>3600</Time>
             <Energy>100</Energy>
             <Type>Ground</Type>
@@ -28383,7 +28546,7 @@
         <PokedexChargeMoveWrapper>
           <ChargeMove>
             <Name>Earthquake</Name>
-            <Power>120</Power>
+            <Power>140</Power>
             <Time>3600</Time>
             <Energy>100</Energy>
             <Type>Ground</Type>
@@ -29711,6 +29874,19 @@
           </FastMove>
           <IsLegacy>false</IsLegacy>
         </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Snarl</Name>
+            <Power>12</Power>
+            <Time>1100</Time>
+            <Energy>14</Energy>
+            <Type>Dark</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>850</DamageWindowStartTime>
+            <DamageWindowDuration>200</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
       </FastMoves>
       <ChargeMoves>
         <PokedexChargeMoveWrapper>
@@ -30333,7 +30509,7 @@
             <DamageWindowDuration>750</DamageWindowDuration>
             <DodgeFlashTime>0</DodgeFlashTime>
           </ChargeMove>
-          <IsLegacy>false</IsLegacy>
+          <IsLegacy>true</IsLegacy>
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>237</Attack>
@@ -30865,7 +31041,7 @@
         <PokedexChargeMoveWrapper>
           <ChargeMove>
             <Name>Earthquake</Name>
-            <Power>120</Power>
+            <Power>140</Power>
             <Time>3600</Time>
             <Energy>100</Energy>
             <Type>Ground</Type>
@@ -31575,6 +31751,20 @@
             <MoveType>Charge</MoveType>
             <DamageWindowStartTime>1500</DamageWindowStartTime>
             <DamageWindowDuration>400</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Super Power</Name>
+            <Power>85</Power>
+            <Time>3000</Time>
+            <Energy>50</Energy>
+            <Type>Fighting</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>2100</DamageWindowStartTime>
+            <DamageWindowDuration>700</DamageWindowDuration>
             <DodgeFlashTime>0</DodgeFlashTime>
           </ChargeMove>
           <IsLegacy>false</IsLegacy>
@@ -33754,7 +33944,7 @@
         <PokedexChargeMoveWrapper>
           <ChargeMove>
             <Name>Earthquake</Name>
-            <Power>120</Power>
+            <Power>140</Power>
             <Time>3600</Time>
             <Energy>100</Energy>
             <Type>Ground</Type>
@@ -33863,7 +34053,7 @@
         <PokedexChargeMoveWrapper>
           <ChargeMove>
             <Name>Earthquake</Name>
-            <Power>120</Power>
+            <Power>140</Power>
             <Time>3600</Time>
             <Energy>100</Energy>
             <Type>Ground</Type>
@@ -34173,9 +34363,9 @@
         <PokedexChargeMoveWrapper>
           <ChargeMove>
             <Name>Sand Tomb</Name>
-            <Power>80</Power>
+            <Power>60</Power>
             <Time>4000</Time>
-            <Energy>50</Energy>
+            <Energy>33</Energy>
             <Type>Ground</Type>
             <MoveType>Charge</MoveType>
             <DamageWindowStartTime>1700</DamageWindowStartTime>
@@ -34268,9 +34458,9 @@
         <PokedexChargeMoveWrapper>
           <ChargeMove>
             <Name>Sand Tomb</Name>
-            <Power>80</Power>
+            <Power>60</Power>
             <Time>4000</Time>
-            <Energy>50</Energy>
+            <Energy>33</Energy>
             <Type>Ground</Type>
             <MoveType>Charge</MoveType>
             <DamageWindowStartTime>1700</DamageWindowStartTime>
@@ -34335,7 +34525,7 @@
         <PokedexChargeMoveWrapper>
           <ChargeMove>
             <Name>Earthquake</Name>
-            <Power>120</Power>
+            <Power>140</Power>
             <Time>3600</Time>
             <Energy>100</Energy>
             <Type>Ground</Type>
@@ -35481,7 +35671,7 @@
         <PokedexFastMoveWrapper>
           <FastMove>
             <Name>Mud Slap</Name>
-            <Power>15</Power>
+            <Power>18</Power>
             <Time>1400</Time>
             <Energy>12</Energy>
             <Type>Ground</Type>
@@ -35510,7 +35700,7 @@
         <PokedexChargeMoveWrapper>
           <ChargeMove>
             <Name>Earthquake</Name>
-            <Power>120</Power>
+            <Power>140</Power>
             <Time>3600</Time>
             <Energy>100</Energy>
             <Type>Ground</Type>
@@ -37278,7 +37468,7 @@
         <PokedexChargeMoveWrapper>
           <ChargeMove>
             <Name>Earthquake</Name>
-            <Power>120</Power>
+            <Power>140</Power>
             <Time>3600</Time>
             <Energy>100</Energy>
             <Type>Ground</Type>
@@ -38156,7 +38346,7 @@
         <PokedexChargeMoveWrapper>
           <ChargeMove>
             <Name>Earthquake</Name>
-            <Power>120</Power>
+            <Power>140</Power>
             <Time>3600</Time>
             <Energy>100</Energy>
             <Type>Ground</Type>
@@ -38358,7 +38548,7 @@
         <PokedexChargeMoveWrapper>
           <ChargeMove>
             <Name>Earthquake</Name>
-            <Power>120</Power>
+            <Power>140</Power>
             <Time>3600</Time>
             <Energy>100</Energy>
             <Type>Ground</Type>
@@ -38719,6 +38909,20 @@
           </ChargeMove>
           <IsLegacy>false</IsLegacy>
         </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Surf</Name>
+            <Power>65</Power>
+            <Time>1700</Time>
+            <Energy>50</Energy>
+            <Type>Water</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>1400</DamageWindowStartTime>
+            <DamageWindowDuration>200</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>270</Attack>
       <Defense>228</Defense>
@@ -38761,7 +38965,7 @@
         <PokedexChargeMoveWrapper>
           <ChargeMove>
             <Name>Earthquake</Name>
-            <Power>120</Power>
+            <Power>140</Power>
             <Time>3600</Time>
             <Energy>100</Energy>
             <Type>Ground</Type>
@@ -40016,7 +40220,7 @@
         <PokedexFastMoveWrapper>
           <FastMove>
             <Name>Mud Slap</Name>
-            <Power>15</Power>
+            <Power>18</Power>
             <Time>1400</Time>
             <Energy>12</Energy>
             <Type>Ground</Type>
@@ -40110,7 +40314,7 @@
         <PokedexFastMoveWrapper>
           <FastMove>
             <Name>Mud Slap</Name>
-            <Power>15</Power>
+            <Power>18</Power>
             <Time>1400</Time>
             <Energy>12</Energy>
             <Type>Ground</Type>
@@ -40125,7 +40329,7 @@
         <PokedexChargeMoveWrapper>
           <ChargeMove>
             <Name>Earthquake</Name>
-            <Power>120</Power>
+            <Power>140</Power>
             <Time>3600</Time>
             <Energy>100</Energy>
             <Type>Ground</Type>
@@ -41112,7 +41316,7 @@
         <PokedexChargeMoveWrapper>
           <ChargeMove>
             <Name>Earthquake</Name>
-            <Power>120</Power>
+            <Power>140</Power>
             <Time>3600</Time>
             <Energy>100</Energy>
             <Type>Ground</Type>
@@ -41136,6 +41340,20 @@
             <DodgeFlashTime>0</DodgeFlashTime>
           </ChargeMove>
           <IsLegacy>true</IsLegacy>
+        </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Sand Tomb</Name>
+            <Power>60</Power>
+            <Time>4000</Time>
+            <Energy>33</Energy>
+            <Type>Ground</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>1700</DamageWindowStartTime>
+            <DamageWindowDuration>2300</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>202</Attack>
@@ -43656,6 +43874,20 @@
           </ChargeMove>
           <IsLegacy>false</IsLegacy>
         </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Fell Stinger</Name>
+            <Power>50</Power>
+            <Time>2200</Time>
+            <Energy>33</Energy>
+            <Type>Bug</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>1800</DamageWindowStartTime>
+            <DamageWindowDuration>200</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>149</Attack>
       <Defense>190</Defense>
@@ -44103,7 +44335,7 @@
         <PokedexFastMoveWrapper>
           <FastMove>
             <Name>Mud Slap</Name>
-            <Power>15</Power>
+            <Power>18</Power>
             <Time>1400</Time>
             <Energy>12</Energy>
             <Type>Ground</Type>
@@ -44392,7 +44624,7 @@
         <PokedexFastMoveWrapper>
           <FastMove>
             <Name>Mud Slap</Name>
-            <Power>15</Power>
+            <Power>18</Power>
             <Time>1400</Time>
             <Energy>12</Energy>
             <Type>Ground</Type>
@@ -44642,7 +44874,7 @@
         <PokedexChargeMoveWrapper>
           <ChargeMove>
             <Name>Earthquake</Name>
-            <Power>120</Power>
+            <Power>140</Power>
             <Time>3600</Time>
             <Energy>100</Energy>
             <Type>Ground</Type>
@@ -45927,7 +46159,7 @@
         <PokedexChargeMoveWrapper>
           <ChargeMove>
             <Name>Earthquake</Name>
-            <Power>120</Power>
+            <Power>140</Power>
             <Time>3600</Time>
             <Energy>100</Energy>
             <Type>Ground</Type>
@@ -46466,7 +46698,7 @@
         <PokedexChargeMoveWrapper>
           <ChargeMove>
             <Name>Earthquake</Name>
-            <Power>120</Power>
+            <Power>140</Power>
             <Time>3600</Time>
             <Energy>100</Energy>
             <Type>Ground</Type>
@@ -46487,6 +46719,20 @@
             <MoveType>Charge</MoveType>
             <DamageWindowStartTime>3100</DamageWindowStartTime>
             <DamageWindowDuration>800</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Sand Tomb</Name>
+            <Power>60</Power>
+            <Time>4000</Time>
+            <Energy>33</Energy>
+            <Type>Ground</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>1700</DamageWindowStartTime>
+            <DamageWindowDuration>2300</DamageWindowDuration>
             <DodgeFlashTime>0</DodgeFlashTime>
           </ChargeMove>
           <IsLegacy>false</IsLegacy>
@@ -46748,6 +46994,20 @@
           </ChargeMove>
           <IsLegacy>false</IsLegacy>
         </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Aura Sphere</Name>
+            <Power>90</Power>
+            <Time>1800</Time>
+            <Energy>50</Energy>
+            <Type>Fighting</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>1000</DamageWindowStartTime>
+            <DamageWindowDuration>600</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>236</Attack>
       <Defense>144</Defense>
@@ -46897,7 +47157,7 @@
         <PokedexChargeMoveWrapper>
           <ChargeMove>
             <Name>Earthquake</Name>
-            <Power>120</Power>
+            <Power>140</Power>
             <Time>3600</Time>
             <Energy>100</Energy>
             <Type>Ground</Type>
@@ -47134,6 +47394,20 @@
             <MoveType>Charge</MoveType>
             <DamageWindowStartTime>1100</DamageWindowStartTime>
             <DamageWindowDuration>1000</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Fell Stinger</Name>
+            <Power>50</Power>
+            <Time>2200</Time>
+            <Energy>33</Energy>
+            <Type>Bug</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>1800</DamageWindowStartTime>
+            <DamageWindowDuration>200</DamageWindowDuration>
             <DodgeFlashTime>0</DodgeFlashTime>
           </ChargeMove>
           <IsLegacy>false</IsLegacy>
@@ -47961,6 +48235,20 @@
           </ChargeMove>
           <IsLegacy>false</IsLegacy>
         </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Mirror Shot</Name>
+            <Power>50</Power>
+            <Time>2400</Time>
+            <Energy>33</Energy>
+            <Type>Steel</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>1800</DamageWindowStartTime>
+            <DamageWindowDuration>400</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>238</Attack>
       <Defense>205</Defense>
@@ -48017,7 +48305,7 @@
         <PokedexChargeMoveWrapper>
           <ChargeMove>
             <Name>Earthquake</Name>
-            <Power>120</Power>
+            <Power>140</Power>
             <Time>3600</Time>
             <Energy>100</Energy>
             <Type>Ground</Type>
@@ -48042,6 +48330,20 @@
           </ChargeMove>
           <IsLegacy>false</IsLegacy>
         </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Shadow Ball</Name>
+            <Power>100</Power>
+            <Time>3000</Time>
+            <Energy>50</Energy>
+            <Type>Ghost</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>2400</DamageWindowStartTime>
+            <DamageWindowDuration>400</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>161</Attack>
       <Defense>181</Defense>
@@ -48056,7 +48358,7 @@
         <PokedexFastMoveWrapper>
           <FastMove>
             <Name>Mud Slap</Name>
-            <Power>15</Power>
+            <Power>18</Power>
             <Time>1400</Time>
             <Energy>12</Energy>
             <Type>Ground</Type>
@@ -48098,7 +48400,7 @@
         <PokedexChargeMoveWrapper>
           <ChargeMove>
             <Name>Earthquake</Name>
-            <Power>120</Power>
+            <Power>140</Power>
             <Time>3600</Time>
             <Energy>100</Energy>
             <Type>Ground</Type>
@@ -48133,6 +48435,20 @@
             <MoveType>Charge</MoveType>
             <DamageWindowStartTime>1800</DamageWindowStartTime>
             <DamageWindowDuration>500</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Super Power</Name>
+            <Power>85</Power>
+            <Time>3000</Time>
+            <Energy>50</Energy>
+            <Type>Fighting</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>2100</DamageWindowStartTime>
+            <DamageWindowDuration>700</DamageWindowDuration>
             <DodgeFlashTime>0</DodgeFlashTime>
           </ChargeMove>
           <IsLegacy>false</IsLegacy>
@@ -48214,6 +48530,20 @@
             <MoveType>Charge</MoveType>
             <DamageWindowStartTime>2700</DamageWindowStartTime>
             <DamageWindowDuration>2000</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Power Whip</Name>
+            <Power>90</Power>
+            <Time>2600</Time>
+            <Energy>50</Energy>
+            <Type>Grass</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>1250</DamageWindowStartTime>
+            <DamageWindowDuration>1100</DamageWindowDuration>
             <DodgeFlashTime>0</DodgeFlashTime>
           </ChargeMove>
           <IsLegacy>false</IsLegacy>
@@ -49009,7 +49339,7 @@
         <PokedexChargeMoveWrapper>
           <ChargeMove>
             <Name>Earthquake</Name>
-            <Power>120</Power>
+            <Power>140</Power>
             <Time>3600</Time>
             <Energy>100</Energy>
             <Type>Ground</Type>
@@ -49048,6 +49378,20 @@
           </ChargeMove>
           <IsLegacy>false</IsLegacy>
         </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Sand Tomb</Name>
+            <Power>60</Power>
+            <Time>4000</Time>
+            <Energy>33</Energy>
+            <Type>Ground</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>1700</DamageWindowStartTime>
+            <DamageWindowDuration>2300</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>185</Attack>
       <Defense>222</Defense>
@@ -49062,7 +49406,7 @@
         <PokedexFastMoveWrapper>
           <FastMove>
             <Name>Mud Slap</Name>
-            <Power>15</Power>
+            <Power>18</Power>
             <Time>1400</Time>
             <Energy>12</Energy>
             <Type>Ground</Type>
@@ -49388,6 +49732,19 @@
           </FastMove>
           <IsLegacy>false</IsLegacy>
         </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Lock On</Name>
+            <Power>1</Power>
+            <Time>300</Time>
+            <Energy>6</Energy>
+            <Type>Normal</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>170</DamageWindowStartTime>
+            <DamageWindowDuration>130</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
       </FastMoves>
       <ChargeMoves>
         <PokedexChargeMoveWrapper>
@@ -49552,7 +49909,7 @@
             <DamageWindowDuration>750</DamageWindowDuration>
             <DodgeFlashTime>0</DodgeFlashTime>
           </ChargeMove>
-          <IsLegacy>false</IsLegacy>
+          <IsLegacy>true</IsLegacy>
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>237</Attack>
@@ -50373,6 +50730,20 @@
             <MoveType>Charge</MoveType>
             <DamageWindowStartTime>700</DamageWindowStartTime>
             <DamageWindowDuration>1400</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Flamethrower</Name>
+            <Power>70</Power>
+            <Time>2200</Time>
+            <Energy>50</Energy>
+            <Type>Fire</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>1500</DamageWindowStartTime>
+            <DamageWindowDuration>200</DamageWindowDuration>
             <DodgeFlashTime>0</DodgeFlashTime>
           </ChargeMove>
           <IsLegacy>false</IsLegacy>
@@ -52244,6 +52615,20 @@
           </ChargeMove>
           <IsLegacy>false</IsLegacy>
         </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Super Power</Name>
+            <Power>85</Power>
+            <Time>3000</Time>
+            <Energy>50</Energy>
+            <Type>Fighting</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>2100</DamageWindowStartTime>
+            <DamageWindowDuration>700</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>226</Attack>
       <Defense>190</Defense>
@@ -52476,7 +52861,7 @@
         <PokedexChargeMoveWrapper>
           <ChargeMove>
             <Name>Earthquake</Name>
-            <Power>120</Power>
+            <Power>140</Power>
             <Time>3600</Time>
             <Energy>100</Energy>
             <Type>Ground</Type>
@@ -53669,6 +54054,19 @@
             <MoveType>Fast</MoveType>
             <DamageWindowStartTime>950</DamageWindowStartTime>
             <DamageWindowDuration>150</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Ice Fang</Name>
+            <Power>12</Power>
+            <Time>1500</Time>
+            <Energy>20</Energy>
+            <Type>Ice</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>400</DamageWindowStartTime>
+            <DamageWindowDuration>600</DamageWindowDuration>
           </FastMove>
           <IsLegacy>false</IsLegacy>
         </PokedexFastMoveWrapper>
@@ -55026,7 +55424,7 @@
         <PokedexFastMoveWrapper>
           <FastMove>
             <Name>Mud Slap</Name>
-            <Power>15</Power>
+            <Power>18</Power>
             <Time>1400</Time>
             <Energy>12</Energy>
             <Type>Ground</Type>
@@ -55107,7 +55505,7 @@
         <PokedexFastMoveWrapper>
           <FastMove>
             <Name>Mud Slap</Name>
-            <Power>15</Power>
+            <Power>18</Power>
             <Time>1400</Time>
             <Energy>12</Energy>
             <Type>Ground</Type>
@@ -55377,7 +55775,7 @@
         <PokedexFastMoveWrapper>
           <FastMove>
             <Name>Mud Slap</Name>
-            <Power>15</Power>
+            <Power>18</Power>
             <Time>1400</Time>
             <Energy>12</Energy>
             <Type>Ground</Type>
@@ -55458,7 +55856,7 @@
         <PokedexFastMoveWrapper>
           <FastMove>
             <Name>Mud Slap</Name>
-            <Power>15</Power>
+            <Power>18</Power>
             <Time>1400</Time>
             <Energy>12</Energy>
             <Type>Ground</Type>
@@ -55487,7 +55885,7 @@
         <PokedexChargeMoveWrapper>
           <ChargeMove>
             <Name>Earthquake</Name>
-            <Power>120</Power>
+            <Power>140</Power>
             <Time>3600</Time>
             <Energy>100</Energy>
             <Type>Ground</Type>
@@ -57737,7 +58135,7 @@
         <PokedexFastMoveWrapper>
           <FastMove>
             <Name>Mud Slap</Name>
-            <Power>15</Power>
+            <Power>18</Power>
             <Time>1400</Time>
             <Energy>12</Energy>
             <Type>Ground</Type>
@@ -57818,7 +58216,7 @@
         <PokedexFastMoveWrapper>
           <FastMove>
             <Name>Mud Slap</Name>
-            <Power>15</Power>
+            <Power>18</Power>
             <Time>1400</Time>
             <Energy>12</Energy>
             <Type>Ground</Type>
@@ -57833,7 +58231,7 @@
         <PokedexChargeMoveWrapper>
           <ChargeMove>
             <Name>Earthquake</Name>
-            <Power>120</Power>
+            <Power>140</Power>
             <Time>3600</Time>
             <Energy>100</Energy>
             <Type>Ground</Type>
@@ -57899,7 +58297,7 @@
         <PokedexFastMoveWrapper>
           <FastMove>
             <Name>Mud Slap</Name>
-            <Power>15</Power>
+            <Power>18</Power>
             <Time>1400</Time>
             <Energy>12</Energy>
             <Type>Ground</Type>
@@ -57914,7 +58312,7 @@
         <PokedexChargeMoveWrapper>
           <ChargeMove>
             <Name>Earthquake</Name>
-            <Power>120</Power>
+            <Power>140</Power>
             <Time>3600</Time>
             <Energy>100</Energy>
             <Type>Ground</Type>
@@ -63165,6 +63563,20 @@
           </ChargeMove>
           <IsLegacy>false</IsLegacy>
         </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Mirror Shot</Name>
+            <Power>50</Power>
+            <Time>2400</Time>
+            <Energy>33</Energy>
+            <Type>Steel</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>1800</DamageWindowStartTime>
+            <DamageWindowDuration>400</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>158</Attack>
       <Defense>223</Defense>
@@ -63404,6 +63816,20 @@
             <MoveType>Charge</MoveType>
             <DamageWindowStartTime>3000</DamageWindowStartTime>
             <DamageWindowDuration>500</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Mirror Shot</Name>
+            <Power>50</Power>
+            <Time>2400</Time>
+            <Energy>33</Energy>
+            <Type>Steel</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>1800</DamageWindowStartTime>
+            <DamageWindowDuration>400</DamageWindowDuration>
             <DodgeFlashTime>0</DodgeFlashTime>
           </ChargeMove>
           <IsLegacy>false</IsLegacy>
@@ -64288,7 +64714,7 @@
         <PokedexChargeMoveWrapper>
           <ChargeMove>
             <Name>Earthquake</Name>
-            <Power>120</Power>
+            <Power>140</Power>
             <Time>3600</Time>
             <Energy>100</Energy>
             <Type>Ground</Type>
@@ -65083,7 +65509,7 @@
         <PokedexFastMoveWrapper>
           <FastMove>
             <Name>Mud Slap</Name>
-            <Power>15</Power>
+            <Power>18</Power>
             <Time>1400</Time>
             <Energy>12</Energy>
             <Type>Ground</Type>
@@ -65164,7 +65590,7 @@
         <PokedexFastMoveWrapper>
           <FastMove>
             <Name>Mud Slap</Name>
-            <Power>15</Power>
+            <Power>18</Power>
             <Time>1400</Time>
             <Energy>12</Energy>
             <Type>Ground</Type>
@@ -65478,7 +65904,7 @@
         <PokedexChargeMoveWrapper>
           <ChargeMove>
             <Name>Earthquake</Name>
-            <Power>120</Power>
+            <Power>140</Power>
             <Time>3600</Time>
             <Energy>100</Energy>
             <Type>Ground</Type>
@@ -66545,7 +66971,7 @@
         <PokedexChargeMoveWrapper>
           <ChargeMove>
             <Name>Earthquake</Name>
-            <Power>120</Power>
+            <Power>140</Power>
             <Time>3600</Time>
             <Energy>100</Energy>
             <Type>Ground</Type>
