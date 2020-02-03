@@ -773,13 +773,13 @@
     </Move>
     <Move xsi:type="FastMove">
       <Name>Volt Switch</Name>
-      <Power>20</Power>
-      <Time>2300</Time>
-      <Energy>25</Energy>
+      <Power>14</Power>
+      <Time>1600</Time>
+      <Energy>21</Energy>
       <Type>Electric</Type>
       <MoveType>Fast</MoveType>
-      <DamageWindowStartTime>1800</DamageWindowStartTime>
-      <DamageWindowDuration>300</DamageWindowDuration>
+      <DamageWindowStartTime>700</DamageWindowStartTime>
+      <DamageWindowDuration>200</DamageWindowDuration>
     </Move>
     <Move xsi:type="FastMove">
       <Name>Water Gun</Name>
@@ -895,6 +895,17 @@
       <MoveType>Charge</MoveType>
       <DamageWindowStartTime>1200</DamageWindowStartTime>
       <DamageWindowDuration>450</DamageWindowDuration>
+      <DodgeFlashTime>0</DodgeFlashTime>
+    </Move>
+    <Move xsi:type="ChargeMove">
+      <Name>Aura Sphere</Name>
+      <Power>90</Power>
+      <Time>1800</Time>
+      <Energy>50</Energy>
+      <Type>Fighting</Type>
+      <MoveType>Charge</MoveType>
+      <DamageWindowStartTime>1000</DamageWindowStartTime>
+      <DamageWindowDuration>600</DamageWindowDuration>
       <DodgeFlashTime>0</DodgeFlashTime>
     </Move>
     <Move xsi:type="ChargeMove">
@@ -1393,6 +1404,17 @@
       <DodgeFlashTime>0</DodgeFlashTime>
     </Move>
     <Move xsi:type="ChargeMove">
+      <Name>Flying Press</Name>
+      <Power>110</Power>
+      <Time>2300</Time>
+      <Energy>50</Energy>
+      <Type>Fighting</Type>
+      <MoveType>Charge</MoveType>
+      <DamageWindowStartTime>1000</DamageWindowStartTime>
+      <DamageWindowDuration>1000</DamageWindowDuration>
+      <DodgeFlashTime>0</DodgeFlashTime>
+    </Move>
+    <Move xsi:type="ChargeMove">
       <Name>Focus Blast</Name>
       <Power>140</Power>
       <Time>3500</Time>
@@ -1746,7 +1768,7 @@
     </Move>
     <Move xsi:type="ChargeMove">
       <Name>Megahorn</Name>
-      <Power>90</Power>
+      <Power>110</Power>
       <Time>2200</Time>
       <Energy>100</Energy>
       <Type>Bug</Type>
@@ -2512,17 +2534,6 @@
       <MoveType>Charge</MoveType>
       <DamageWindowStartTime>3000</DamageWindowStartTime>
       <DamageWindowDuration>500</DamageWindowDuration>
-      <DodgeFlashTime>0</DodgeFlashTime>
-    </Move>
-    <Move xsi:type="ChargeMove">
-      <Name>Aura Sphere</Name>
-      <Power>90</Power>
-      <Time>1800</Time>
-      <Energy>50</Energy>
-      <Type>Fighting</Type>
-      <MoveType>Charge</MoveType>
-      <DamageWindowStartTime>1000</DamageWindowStartTime>
-      <DamageWindowDuration>600</DamageWindowDuration>
       <DodgeFlashTime>0</DodgeFlashTime>
     </Move>
   </Moves>
@@ -4708,13 +4719,13 @@
         <PokedexFastMoveWrapper>
           <FastMove>
             <Name>Volt Switch</Name>
-            <Power>20</Power>
-            <Time>2300</Time>
-            <Energy>25</Energy>
+            <Power>14</Power>
+            <Time>1600</Time>
+            <Energy>21</Energy>
             <Type>Electric</Type>
             <MoveType>Fast</MoveType>
-            <DamageWindowStartTime>1800</DamageWindowStartTime>
-            <DamageWindowDuration>300</DamageWindowDuration>
+            <DamageWindowStartTime>700</DamageWindowStartTime>
+            <DamageWindowDuration>200</DamageWindowDuration>
           </FastMove>
           <IsLegacy>false</IsLegacy>
         </PokedexFastMoveWrapper>
@@ -4742,7 +4753,7 @@
             <DamageWindowStartTime>300</DamageWindowStartTime>
             <DamageWindowDuration>300</DamageWindowDuration>
           </FastMove>
-          <IsLegacy>true</IsLegacy>
+          <IsLegacy>false</IsLegacy>
         </PokedexFastMoveWrapper>
         <PokedexFastMoveWrapper>
           <FastMove>
@@ -5479,7 +5490,7 @@
         <PokedexChargeMoveWrapper>
           <ChargeMove>
             <Name>Megahorn</Name>
-            <Power>90</Power>
+            <Power>110</Power>
             <Time>2200</Time>
             <Energy>100</Energy>
             <Type>Bug</Type>
@@ -6949,7 +6960,7 @@
             <DamageWindowDuration>500</DamageWindowDuration>
             <DodgeFlashTime>0</DodgeFlashTime>
           </ChargeMove>
-          <IsLegacy>true</IsLegacy>
+          <IsLegacy>false</IsLegacy>
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>179</Attack>
@@ -10083,7 +10094,7 @@
             <DamageWindowStartTime>300</DamageWindowStartTime>
             <DamageWindowDuration>300</DamageWindowDuration>
           </FastMove>
-          <IsLegacy>true</IsLegacy>
+          <IsLegacy>false</IsLegacy>
         </PokedexFastMoveWrapper>
       </FastMoves>
       <ChargeMoves>
@@ -10141,7 +10152,7 @@
             <DamageWindowDuration>400</DamageWindowDuration>
             <DodgeFlashTime>0</DodgeFlashTime>
           </ChargeMove>
-          <IsLegacy>true</IsLegacy>
+          <IsLegacy>false</IsLegacy>
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>223</Attack>
@@ -11304,7 +11315,7 @@
             <DamageWindowDuration>400</DamageWindowDuration>
             <DodgeFlashTime>0</DodgeFlashTime>
           </ChargeMove>
-          <IsLegacy>true</IsLegacy>
+          <IsLegacy>false</IsLegacy>
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>223</Attack>
@@ -11768,6 +11779,20 @@
           </ChargeMove>
           <IsLegacy>false</IsLegacy>
         </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Shadow Ball</Name>
+            <Power>100</Power>
+            <Time>3000</Time>
+            <Energy>50</Energy>
+            <Type>Ghost</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>2400</DamageWindowStartTime>
+            <DamageWindowDuration>400</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>144</Attack>
       <Defense>193</Defense>
@@ -12066,13 +12091,13 @@
         <PokedexFastMoveWrapper>
           <FastMove>
             <Name>Volt Switch</Name>
-            <Power>20</Power>
-            <Time>2300</Time>
-            <Energy>25</Energy>
+            <Power>14</Power>
+            <Time>1600</Time>
+            <Energy>21</Energy>
             <Type>Electric</Type>
             <MoveType>Fast</MoveType>
-            <DamageWindowStartTime>1800</DamageWindowStartTime>
-            <DamageWindowDuration>300</DamageWindowDuration>
+            <DamageWindowStartTime>700</DamageWindowStartTime>
+            <DamageWindowDuration>200</DamageWindowDuration>
           </FastMove>
           <IsLegacy>false</IsLegacy>
         </PokedexFastMoveWrapper>
@@ -13285,7 +13310,7 @@
         <PokedexChargeMoveWrapper>
           <ChargeMove>
             <Name>Megahorn</Name>
-            <Power>90</Power>
+            <Power>110</Power>
             <Time>2200</Time>
             <Energy>100</Energy>
             <Type>Bug</Type>
@@ -13921,7 +13946,7 @@
         <PokedexChargeMoveWrapper>
           <ChargeMove>
             <Name>Megahorn</Name>
-            <Power>90</Power>
+            <Power>110</Power>
             <Time>2200</Time>
             <Energy>100</Energy>
             <Type>Bug</Type>
@@ -15601,13 +15626,13 @@
         <PokedexFastMoveWrapper>
           <FastMove>
             <Name>Volt Switch</Name>
-            <Power>20</Power>
-            <Time>2300</Time>
-            <Energy>25</Energy>
+            <Power>14</Power>
+            <Time>1600</Time>
+            <Energy>21</Energy>
             <Type>Electric</Type>
             <MoveType>Fast</MoveType>
-            <DamageWindowStartTime>1800</DamageWindowStartTime>
-            <DamageWindowDuration>300</DamageWindowDuration>
+            <DamageWindowStartTime>700</DamageWindowStartTime>
+            <DamageWindowDuration>200</DamageWindowDuration>
           </FastMove>
           <IsLegacy>false</IsLegacy>
         </PokedexFastMoveWrapper>
@@ -17667,13 +17692,13 @@
         <PokedexFastMoveWrapper>
           <FastMove>
             <Name>Volt Switch</Name>
-            <Power>20</Power>
-            <Time>2300</Time>
-            <Energy>25</Energy>
+            <Power>14</Power>
+            <Time>1600</Time>
+            <Energy>21</Energy>
             <Type>Electric</Type>
             <MoveType>Fast</MoveType>
-            <DamageWindowStartTime>1800</DamageWindowStartTime>
-            <DamageWindowDuration>300</DamageWindowDuration>
+            <DamageWindowStartTime>700</DamageWindowStartTime>
+            <DamageWindowDuration>200</DamageWindowDuration>
           </FastMove>
           <IsLegacy>false</IsLegacy>
         </PokedexFastMoveWrapper>
@@ -18943,6 +18968,20 @@
           </ChargeMove>
           <IsLegacy>false</IsLegacy>
         </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Hydro Cannon</Name>
+            <Power>90</Power>
+            <Time>1900</Time>
+            <Energy>50</Energy>
+            <Type>Water</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>500</DamageWindowStartTime>
+            <DamageWindowDuration>1100</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+          </ChargeMove>
+          <IsLegacy>true</IsLegacy>
+        </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>205</Attack>
       <Defense>188</Defense>
@@ -19552,7 +19591,7 @@
         <PokedexChargeMoveWrapper>
           <ChargeMove>
             <Name>Megahorn</Name>
-            <Power>90</Power>
+            <Power>110</Power>
             <Time>2200</Time>
             <Energy>100</Energy>
             <Type>Bug</Type>
@@ -19787,6 +19826,19 @@
             <MoveType>Fast</MoveType>
             <DamageWindowStartTime>850</DamageWindowStartTime>
             <DamageWindowDuration>200</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Spark</Name>
+            <Power>6</Power>
+            <Time>700</Time>
+            <Energy>9</Energy>
+            <Type>Electric</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>300</DamageWindowStartTime>
+            <DamageWindowDuration>400</DamageWindowDuration>
           </FastMove>
           <IsLegacy>false</IsLegacy>
         </PokedexFastMoveWrapper>
@@ -21060,13 +21112,13 @@
         <PokedexFastMoveWrapper>
           <FastMove>
             <Name>Volt Switch</Name>
-            <Power>20</Power>
-            <Time>2300</Time>
-            <Energy>25</Energy>
+            <Power>14</Power>
+            <Time>1600</Time>
+            <Energy>21</Energy>
             <Type>Electric</Type>
             <MoveType>Fast</MoveType>
-            <DamageWindowStartTime>1800</DamageWindowStartTime>
-            <DamageWindowDuration>300</DamageWindowDuration>
+            <DamageWindowStartTime>700</DamageWindowStartTime>
+            <DamageWindowDuration>200</DamageWindowDuration>
           </FastMove>
           <IsLegacy>false</IsLegacy>
         </PokedexFastMoveWrapper>
@@ -21137,6 +21189,20 @@
             <MoveType>Charge</MoveType>
             <DamageWindowStartTime>1950</DamageWindowStartTime>
             <DamageWindowDuration>750</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Thunder Punch</Name>
+            <Power>45</Power>
+            <Time>1800</Time>
+            <Energy>33</Energy>
+            <Type>Electric</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>1700</DamageWindowStartTime>
+            <DamageWindowDuration>-150</DamageWindowDuration>
             <DodgeFlashTime>0</DodgeFlashTime>
           </ChargeMove>
           <IsLegacy>false</IsLegacy>
@@ -24037,7 +24103,7 @@
         <PokedexChargeMoveWrapper>
           <ChargeMove>
             <Name>Megahorn</Name>
-            <Power>90</Power>
+            <Power>110</Power>
             <Time>2200</Time>
             <Energy>100</Energy>
             <Type>Bug</Type>
@@ -26012,7 +26078,7 @@
         <PokedexChargeMoveWrapper>
           <ChargeMove>
             <Name>Megahorn</Name>
-            <Power>90</Power>
+            <Power>110</Power>
             <Time>2200</Time>
             <Energy>100</Energy>
             <Type>Bug</Type>
@@ -26754,13 +26820,13 @@
         <PokedexFastMoveWrapper>
           <FastMove>
             <Name>Volt Switch</Name>
-            <Power>20</Power>
-            <Time>2300</Time>
-            <Energy>25</Energy>
+            <Power>14</Power>
+            <Time>1600</Time>
+            <Energy>21</Energy>
             <Type>Electric</Type>
             <MoveType>Fast</MoveType>
-            <DamageWindowStartTime>1800</DamageWindowStartTime>
-            <DamageWindowDuration>300</DamageWindowDuration>
+            <DamageWindowStartTime>700</DamageWindowStartTime>
+            <DamageWindowDuration>200</DamageWindowDuration>
           </FastMove>
           <IsLegacy>false</IsLegacy>
         </PokedexFastMoveWrapper>
@@ -30673,6 +30739,20 @@
           </ChargeMove>
           <IsLegacy>false</IsLegacy>
         </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Bubble Beam</Name>
+            <Power>45</Power>
+            <Time>1900</Time>
+            <Energy>33</Energy>
+            <Type>Water</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>1450</DamageWindowStartTime>
+            <DamageWindowDuration>250</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>192</Attack>
       <Defense>150</Defense>
@@ -32983,6 +33063,20 @@
           </ChargeMove>
           <IsLegacy>false</IsLegacy>
         </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Grass Knot</Name>
+            <Power>90</Power>
+            <Time>2600</Time>
+            <Energy>50</Energy>
+            <Type>Grass</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>1700</DamageWindowStartTime>
+            <DamageWindowDuration>900</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>167</Attack>
       <Defense>129</Defense>
@@ -33060,6 +33154,20 @@
             <MoveType>Charge</MoveType>
             <DamageWindowStartTime>2000</DamageWindowStartTime>
             <DamageWindowDuration>600</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Grass Knot</Name>
+            <Power>90</Power>
+            <Time>2600</Time>
+            <Energy>50</Energy>
+            <Type>Grass</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>1700</DamageWindowStartTime>
+            <DamageWindowDuration>900</DamageWindowDuration>
             <DodgeFlashTime>0</DodgeFlashTime>
           </ChargeMove>
           <IsLegacy>false</IsLegacy>
@@ -37010,7 +37118,7 @@
         <PokedexChargeMoveWrapper>
           <ChargeMove>
             <Name>Megahorn</Name>
-            <Power>90</Power>
+            <Power>110</Power>
             <Time>2200</Time>
             <Energy>100</Energy>
             <Type>Bug</Type>
@@ -39747,13 +39855,13 @@
         <PokedexFastMoveWrapper>
           <FastMove>
             <Name>Volt Switch</Name>
-            <Power>20</Power>
-            <Time>2300</Time>
-            <Energy>25</Energy>
+            <Power>14</Power>
+            <Time>1600</Time>
+            <Energy>21</Energy>
             <Type>Electric</Type>
             <MoveType>Fast</MoveType>
-            <DamageWindowStartTime>1800</DamageWindowStartTime>
-            <DamageWindowDuration>300</DamageWindowDuration>
+            <DamageWindowStartTime>700</DamageWindowStartTime>
+            <DamageWindowDuration>200</DamageWindowDuration>
           </FastMove>
           <IsLegacy>false</IsLegacy>
         </PokedexFastMoveWrapper>
@@ -40571,13 +40679,13 @@
         <PokedexFastMoveWrapper>
           <FastMove>
             <Name>Volt Switch</Name>
-            <Power>20</Power>
-            <Time>2300</Time>
-            <Energy>25</Energy>
+            <Power>14</Power>
+            <Time>1600</Time>
+            <Energy>21</Energy>
             <Type>Electric</Type>
             <MoveType>Fast</MoveType>
-            <DamageWindowStartTime>1800</DamageWindowStartTime>
-            <DamageWindowDuration>300</DamageWindowDuration>
+            <DamageWindowStartTime>700</DamageWindowStartTime>
+            <DamageWindowDuration>200</DamageWindowDuration>
           </FastMove>
           <IsLegacy>false</IsLegacy>
         </PokedexFastMoveWrapper>
@@ -40652,13 +40760,13 @@
         <PokedexFastMoveWrapper>
           <FastMove>
             <Name>Volt Switch</Name>
-            <Power>20</Power>
-            <Time>2300</Time>
-            <Energy>25</Energy>
+            <Power>14</Power>
+            <Time>1600</Time>
+            <Energy>21</Energy>
             <Type>Electric</Type>
             <MoveType>Fast</MoveType>
-            <DamageWindowStartTime>1800</DamageWindowStartTime>
-            <DamageWindowDuration>300</DamageWindowDuration>
+            <DamageWindowStartTime>700</DamageWindowStartTime>
+            <DamageWindowDuration>200</DamageWindowDuration>
           </FastMove>
           <IsLegacy>false</IsLegacy>
         </PokedexFastMoveWrapper>
@@ -40733,13 +40841,13 @@
         <PokedexFastMoveWrapper>
           <FastMove>
             <Name>Volt Switch</Name>
-            <Power>20</Power>
-            <Time>2300</Time>
-            <Energy>25</Energy>
+            <Power>14</Power>
+            <Time>1600</Time>
+            <Energy>21</Energy>
             <Type>Electric</Type>
             <MoveType>Fast</MoveType>
-            <DamageWindowStartTime>1800</DamageWindowStartTime>
-            <DamageWindowDuration>300</DamageWindowDuration>
+            <DamageWindowStartTime>700</DamageWindowStartTime>
+            <DamageWindowDuration>200</DamageWindowDuration>
           </FastMove>
           <IsLegacy>false</IsLegacy>
         </PokedexFastMoveWrapper>
@@ -41854,6 +41962,20 @@
             <DodgeFlashTime>0</DodgeFlashTime>
           </ChargeMove>
           <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Hydro Cannon</Name>
+            <Power>90</Power>
+            <Time>1900</Time>
+            <Energy>50</Energy>
+            <Type>Water</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>500</DamageWindowStartTime>
+            <DamageWindowDuration>1100</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+          </ChargeMove>
+          <IsLegacy>true</IsLegacy>
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>210</Attack>
@@ -43830,6 +43952,32 @@
           </FastMove>
           <IsLegacy>false</IsLegacy>
         </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Fury Cutter</Name>
+            <Power>3</Power>
+            <Time>400</Time>
+            <Energy>6</Energy>
+            <Type>Bug</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Air Slash</Name>
+            <Power>14</Power>
+            <Time>1200</Time>
+            <Energy>10</Energy>
+            <Type>Flying</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>1000</DamageWindowStartTime>
+            <DamageWindowDuration>200</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
       </FastMoves>
       <ChargeMoves>
         <PokedexChargeMoveWrapper>
@@ -43915,13 +44063,13 @@
         <PokedexFastMoveWrapper>
           <FastMove>
             <Name>Volt Switch</Name>
-            <Power>20</Power>
-            <Time>2300</Time>
-            <Energy>25</Energy>
+            <Power>14</Power>
+            <Time>1600</Time>
+            <Energy>21</Energy>
             <Type>Electric</Type>
             <MoveType>Fast</MoveType>
-            <DamageWindowStartTime>1800</DamageWindowStartTime>
-            <DamageWindowDuration>300</DamageWindowDuration>
+            <DamageWindowStartTime>700</DamageWindowStartTime>
+            <DamageWindowDuration>200</DamageWindowDuration>
           </FastMove>
           <IsLegacy>false</IsLegacy>
         </PokedexFastMoveWrapper>
@@ -53685,7 +53833,7 @@
         <PokedexChargeMoveWrapper>
           <ChargeMove>
             <Name>Megahorn</Name>
-            <Power>90</Power>
+            <Power>110</Power>
             <Time>2200</Time>
             <Energy>100</Energy>
             <Type>Bug</Type>
@@ -55410,6 +55558,20 @@
           </ChargeMove>
           <IsLegacy>false</IsLegacy>
         </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Bulldoze</Name>
+            <Power>80</Power>
+            <Time>3500</Time>
+            <Energy>50</Energy>
+            <Type>Ground</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>2600</DamageWindowStartTime>
+            <DamageWindowDuration>500</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>121</Attack>
       <Defense>110</Defense>
@@ -55487,6 +55649,20 @@
             <MoveType>Charge</MoveType>
             <DamageWindowStartTime>700</DamageWindowStartTime>
             <DamageWindowDuration>1400</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Bulldoze</Name>
+            <Power>80</Power>
+            <Time>3500</Time>
+            <Energy>50</Energy>
+            <Type>Ground</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>2600</DamageWindowStartTime>
+            <DamageWindowDuration>500</DamageWindowDuration>
             <DodgeFlashTime>0</DodgeFlashTime>
           </ChargeMove>
           <IsLegacy>false</IsLegacy>
@@ -55582,6 +55758,20 @@
             <MoveType>Charge</MoveType>
             <DamageWindowStartTime>1500</DamageWindowStartTime>
             <DamageWindowDuration>400</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Super Power</Name>
+            <Power>85</Power>
+            <Time>3000</Time>
+            <Energy>50</Energy>
+            <Type>Fighting</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>2100</DamageWindowStartTime>
+            <DamageWindowDuration>700</DamageWindowDuration>
             <DodgeFlashTime>0</DodgeFlashTime>
           </ChargeMove>
           <IsLegacy>false</IsLegacy>
@@ -57100,7 +57290,7 @@
         <PokedexChargeMoveWrapper>
           <ChargeMove>
             <Name>Megahorn</Name>
-            <Power>90</Power>
+            <Power>110</Power>
             <Time>2200</Time>
             <Energy>100</Energy>
             <Type>Bug</Type>
@@ -57135,6 +57325,20 @@
             <MoveType>Charge</MoveType>
             <DamageWindowStartTime>3000</DamageWindowStartTime>
             <DamageWindowDuration>300</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>X-Scissor</Name>
+            <Power>45</Power>
+            <Time>1600</Time>
+            <Energy>33</Energy>
+            <Type>Bug</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>1200</DamageWindowStartTime>
+            <DamageWindowDuration>200</DamageWindowDuration>
             <DodgeFlashTime>0</DodgeFlashTime>
           </ChargeMove>
           <IsLegacy>false</IsLegacy>
@@ -58418,20 +58622,6 @@
           </ChargeMove>
           <IsLegacy>false</IsLegacy>
         </PokedexChargeMoveWrapper>
-        <PokedexChargeMoveWrapper>
-          <ChargeMove>
-            <Name>Psychic</Name>
-            <Power>90</Power>
-            <Time>2800</Time>
-            <Energy>50</Energy>
-            <Type>Psychic</Type>
-            <MoveType>Charge</MoveType>
-            <DamageWindowStartTime>1300</DamageWindowStartTime>
-            <DamageWindowDuration>1300</DamageWindowDuration>
-            <DodgeFlashTime>0</DodgeFlashTime>
-          </ChargeMove>
-          <IsLegacy>false</IsLegacy>
-        </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>153</Attack>
       <Defense>86</Defense>
@@ -59634,14 +59824,14 @@
         </PokedexFastMoveWrapper>
         <PokedexFastMoveWrapper>
           <FastMove>
-            <Name>Acid</Name>
-            <Power>9</Power>
-            <Time>800</Time>
-            <Energy>8</Energy>
-            <Type>Poison</Type>
+            <Name>Take Down</Name>
+            <Power>8</Power>
+            <Time>1200</Time>
+            <Energy>10</Energy>
+            <Type>Normal</Type>
             <MoveType>Fast</MoveType>
-            <DamageWindowStartTime>400</DamageWindowStartTime>
-            <DamageWindowDuration>200</DamageWindowDuration>
+            <DamageWindowStartTime>950</DamageWindowStartTime>
+            <DamageWindowDuration>150</DamageWindowDuration>
           </FastMove>
           <IsLegacy>false</IsLegacy>
         </PokedexFastMoveWrapper>
@@ -59675,20 +59865,6 @@
           </ChargeMove>
           <IsLegacy>false</IsLegacy>
         </PokedexChargeMoveWrapper>
-        <PokedexChargeMoveWrapper>
-          <ChargeMove>
-            <Name>Gunk Shot</Name>
-            <Power>130</Power>
-            <Time>3100</Time>
-            <Energy>100</Energy>
-            <Type>Poison</Type>
-            <MoveType>Charge</MoveType>
-            <DamageWindowStartTime>1700</DamageWindowStartTime>
-            <DamageWindowDuration>1000</DamageWindowDuration>
-            <DodgeFlashTime>0</DodgeFlashTime>
-          </ChargeMove>
-          <IsLegacy>false</IsLegacy>
-        </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>96</Attack>
       <Defense>122</Defense>
@@ -59715,14 +59891,14 @@
         </PokedexFastMoveWrapper>
         <PokedexFastMoveWrapper>
           <FastMove>
-            <Name>Acid</Name>
-            <Power>9</Power>
-            <Time>800</Time>
-            <Energy>8</Energy>
-            <Type>Poison</Type>
+            <Name>Take Down</Name>
+            <Power>8</Power>
+            <Time>1200</Time>
+            <Energy>10</Energy>
+            <Type>Normal</Type>
             <MoveType>Fast</MoveType>
-            <DamageWindowStartTime>400</DamageWindowStartTime>
-            <DamageWindowDuration>200</DamageWindowDuration>
+            <DamageWindowStartTime>950</DamageWindowStartTime>
+            <DamageWindowDuration>150</DamageWindowDuration>
           </FastMove>
           <IsLegacy>false</IsLegacy>
         </PokedexFastMoveWrapper>
@@ -61989,7 +62165,7 @@
         <PokedexChargeMoveWrapper>
           <ChargeMove>
             <Name>Megahorn</Name>
-            <Power>90</Power>
+            <Power>110</Power>
             <Time>2200</Time>
             <Energy>100</Energy>
             <Type>Bug</Type>
@@ -62084,7 +62260,7 @@
         <PokedexChargeMoveWrapper>
           <ChargeMove>
             <Name>Megahorn</Name>
-            <Power>90</Power>
+            <Power>110</Power>
             <Time>2200</Time>
             <Energy>100</Energy>
             <Type>Bug</Type>
@@ -62179,7 +62355,7 @@
         <PokedexChargeMoveWrapper>
           <ChargeMove>
             <Name>Megahorn</Name>
-            <Power>90</Power>
+            <Power>110</Power>
             <Time>2200</Time>
             <Energy>100</Energy>
             <Type>Bug</Type>
@@ -62274,7 +62450,7 @@
         <PokedexChargeMoveWrapper>
           <ChargeMove>
             <Name>Megahorn</Name>
-            <Power>90</Power>
+            <Power>110</Power>
             <Time>2200</Time>
             <Energy>100</Energy>
             <Type>Bug</Type>
@@ -62540,12 +62716,25 @@
           </FastMove>
           <IsLegacy>false</IsLegacy>
         </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Counter</Name>
+            <Power>12</Power>
+            <Time>900</Time>
+            <Energy>8</Energy>
+            <Type>Fighting</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>700</DamageWindowStartTime>
+            <DamageWindowDuration>200</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
       </FastMoves>
       <ChargeMoves>
         <PokedexChargeMoveWrapper>
           <ChargeMove>
             <Name>Megahorn</Name>
-            <Power>90</Power>
+            <Power>110</Power>
             <Time>2200</Time>
             <Energy>100</Energy>
             <Type>Bug</Type>
@@ -62594,6 +62783,20 @@
             <MoveType>Charge</MoveType>
             <DamageWindowStartTime>1900</DamageWindowStartTime>
             <DamageWindowDuration>300</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Acid Spray</Name>
+            <Power>20</Power>
+            <Time>3000</Time>
+            <Energy>50</Energy>
+            <Type>Poison</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>2100</DamageWindowStartTime>
+            <DamageWindowDuration>700</DamageWindowDuration>
             <DodgeFlashTime>0</DodgeFlashTime>
           </ChargeMove>
           <IsLegacy>false</IsLegacy>
@@ -63329,6 +63532,19 @@
           </FastMove>
           <IsLegacy>false</IsLegacy>
         </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Volt Switch</Name>
+            <Power>14</Power>
+            <Time>1600</Time>
+            <Energy>21</Energy>
+            <Type>Electric</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>700</DamageWindowStartTime>
+            <DamageWindowDuration>200</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
       </FastMoves>
       <ChargeMoves>
         <PokedexChargeMoveWrapper>
@@ -63383,6 +63599,20 @@
             <MoveType>Charge</MoveType>
             <DamageWindowStartTime>3000</DamageWindowStartTime>
             <DamageWindowDuration>800</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Discharge</Name>
+            <Power>65</Power>
+            <Time>2500</Time>
+            <Energy>33</Energy>
+            <Type>Electric</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>1700</DamageWindowStartTime>
+            <DamageWindowDuration>400</DamageWindowDuration>
             <DodgeFlashTime>0</DodgeFlashTime>
           </ChargeMove>
           <IsLegacy>false</IsLegacy>
@@ -63591,13 +63821,13 @@
         <PokedexFastMoveWrapper>
           <FastMove>
             <Name>Volt Switch</Name>
-            <Power>20</Power>
-            <Time>2300</Time>
-            <Energy>25</Energy>
+            <Power>14</Power>
+            <Time>1600</Time>
+            <Energy>21</Energy>
             <Type>Electric</Type>
             <MoveType>Fast</MoveType>
-            <DamageWindowStartTime>1800</DamageWindowStartTime>
-            <DamageWindowDuration>300</DamageWindowDuration>
+            <DamageWindowStartTime>700</DamageWindowStartTime>
+            <DamageWindowDuration>200</DamageWindowDuration>
           </FastMove>
           <IsLegacy>false</IsLegacy>
         </PokedexFastMoveWrapper>
@@ -65862,7 +66092,7 @@
         <PokedexChargeMoveWrapper>
           <ChargeMove>
             <Name>Megahorn</Name>
-            <Power>90</Power>
+            <Power>110</Power>
             <Time>2200</Time>
             <Energy>100</Energy>
             <Type>Bug</Type>

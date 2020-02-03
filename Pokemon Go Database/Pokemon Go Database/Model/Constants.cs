@@ -84,6 +84,8 @@ namespace Pokemon_Go_Database.Model
 
         public const double BestFriendBonus = 1.1;
 
+        public const int TurnDuration = 500; // PvP turn duration in ms
+
         public static string BaseDataFilePath =  AppDomain.CurrentDomain.BaseDirectory + @"BaseData.xml";
         /// <summary>
         /// Attacker,Defender

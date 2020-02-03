@@ -133,6 +133,20 @@ namespace Pokemon_Go_Database.Model
                 UpdateAllCalculatedProperties();
             }
         }
+
+        private PokedexChargeMoveWrapper _ChargeMove2;
+        public PokedexChargeMoveWrapper ChargeMove2
+        {
+            get
+            {
+                return _ChargeMove2;
+            }
+            set
+            {
+                Set(ref _ChargeMove2, value);
+                UpdateAllCalculatedProperties();
+            }
+        }
         private MyObservableCollection<IVSet> _IVSets;
         public MyObservableCollection<IVSet> IVSets
         {
@@ -227,6 +241,14 @@ namespace Pokemon_Go_Database.Model
             get
             {
                 return this.Species.Movesets.SingleOrDefault(x => x.FastMove == this.FastMove && x.ChargeMove == this.ChargeMove);
+            }
+        }
+        [XmlIgnore]
+        public Moveset Moveset2
+        {
+            get
+            {
+                return this.Species.Movesets.SingleOrDefault(x => x.FastMove == this.FastMove && x.ChargeMove == this.ChargeMove2);
             }
         }
         [XmlIgnore]
