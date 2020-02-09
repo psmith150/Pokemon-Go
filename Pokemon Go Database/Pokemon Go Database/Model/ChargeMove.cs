@@ -7,11 +7,9 @@
             base.MoveType = MoveType.Charge;
         }
 
-        public ChargeMove(string name = "New Move", int power = 0, int time = 1000, int energy = 10, Type type = Type.None) : base(name, power, time, energy, type)
+        public ChargeMove(string name = "New Move", int power = 0, int time = 1000, int energy = 10, int powerPvp = 0, int energyPvp = 10, int turns = 1, Type type = Type.None) : base(name, power, time, energy, powerPvp, energyPvp, turns, type)
         {
             base.MoveType = MoveType.Charge;
-            this.DamageWindowStartTime = 0;
-            this.DamageWindowDuration = 0;
             this.DodgeFlashTime = 0;
         }
 
@@ -25,6 +23,63 @@
             set
             {
                 Set(ref this._DodgeFlashTime, value);
+            }
+        }
+
+        private int _selfBuff;
+        public int SelfBuff
+        {
+            get
+            {
+                return _selfBuff;
+            }
+            set
+            {
+                Set(ref this._selfBuff, value);
+                RaisePropertyChanged("HasSelfBuff");
+            }
+        }
+
+        public bool HasSelfBuff
+        {
+            get
+            {
+                return this.SelfBuff != 0;
+            }
+        }
+
+        private int _enemyBuff;
+        public int EnemyBuff
+        {
+            get
+            {
+                return this._enemyBuff;
+            }
+            set
+            {
+                Set(ref this._enemyBuff, value);
+                RaisePropertyChanged("HasEnemyBuff");
+            }
+        }
+
+        public bool HasEnemyBuff
+        {
+            get
+            {
+                return this.EnemyBuff != 0;
+            }
+        }
+
+        private double _buffProc;
+        public double BuffProc
+        {
+            get
+            {
+                return this._buffProc;
+            }
+            set
+            {
+                Set(ref this._buffProc, value);
             }
         }
     }

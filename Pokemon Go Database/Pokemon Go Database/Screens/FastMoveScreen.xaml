@@ -22,13 +22,18 @@
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Name" Binding="{Binding Path=Name}" Width="Auto"/>
                 <DataGridComboBoxColumn Header="Type" SelectedItemBinding="{Binding Type}" Width="Auto" ItemsSource="{Binding Source={StaticResource TypeView}}"/>
-                <DataGridTextColumn Header="Power" Binding="{Binding Path=Power}" Width="Auto"/>
+                <DataGridTextColumn Header="Power - PvE" Binding="{Binding Path=Power}" Width="Auto"/>
                 <DataGridTextColumn Header="Duration" Binding="{Binding Path=Time}" Width="Auto"/>
-                <DataGridTextColumn Header="Energy Gain" Binding="{Binding Path=Energy}" Width="Auto"/>
+                <DataGridTextColumn Header="Energy Gain - PvE" Binding="{Binding Path=Energy}" Width="Auto"/>
                 <DataGridTextColumn Header="DPS" Binding="{Binding Path=DPS, StringFormat=N2, Mode=OneWay}" IsReadOnly="True" Width="Auto"/>
                 <DataGridTextColumn Header="EPS" Binding="{Binding Path=EPS, StringFormat=N2, Mode=OneWay}" IsReadOnly="True" Width="Auto"/>
                 <DataGridTextColumn Header="Damage Window Start" Binding="{Binding Path=DamageWindowStartTime}" Width="Auto"/>
                 <DataGridTextColumn Header="Damage Window Duration" Binding="{Binding Path=DamageWindowDuration}" Width="Auto"/>
+                <DataGridTextColumn Header="Power - PvP" Binding="{Binding Path=PowerPvp}" Width="Auto"/>
+                <DataGridTextColumn Header="Turns" Binding="{Binding Path=Turns}" Width="Auto"/>
+                <DataGridTextColumn Header="Energy Gain - PvP" Binding="{Binding Path=EnergyPvp}" Width="Auto"/>
+                <DataGridTextColumn Header="DPT" Binding="{Binding Path=DPT, StringFormat=N2, Mode=OneWay}" IsReadOnly="True" Width="Auto"/>
+                <DataGridTextColumn Header="EPT" Binding="{Binding Path=EPT, StringFormat=N2, Mode=OneWay}" IsReadOnly="True" Width="Auto"/>
             </DataGrid.Columns>
         </DataGrid>
     </Grid>

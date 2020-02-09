@@ -116,13 +116,10 @@
     <Compile Include="Model\AttackerSimulationWrapper.cs" />
     <Compile Include="Model\BattleLogEntry.cs" />
     <Compile Include="Model\BattleResult.cs" />
-    <Compile Include="Model\ChargeMovePvp.cs" />
     <Compile Include="Model\ChargeMove.cs" />
     <Compile Include="Model\Constants.cs" />
     <Compile Include="Model\BaseDataWrapper.cs" />
-    <Compile Include="Model\FastMovePvp.cs" />
     <Compile Include="Model\FastMove.cs" />
-    <Compile Include="Model\MovePvp.cs" />
     <Compile Include="Model\PokedexFilterElement.cs" />
     <Compile Include="Model\PokemonFilterElement.cs" />
     <Compile Include="Model\IVSet.cs" />
@@ -183,6 +180,7 @@
     <Compile Include="Services\SessionService.cs" />
     <Compile Include="ValueConverters\DPSValueToBrushConverter.cs" />
     <Compile Include="ValueConverters\EnumToStringConverter.cs" />
+    <Compile Include="ValueConverters\PercentageConverter.cs" />
     <Compile Include="ValueConverters\TypeToBoolConverter.cs" />
     <Compile Include="ValueConverters\ViewModelToViewConverter.cs" />
     <Compile Include="Windows\MainWindowViewModel.cs" />

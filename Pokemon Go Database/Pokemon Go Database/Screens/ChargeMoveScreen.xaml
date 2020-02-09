@@ -5,6 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Pokemon_Go_Database.Screens"
              xmlns:scm="clr-namespace:System.ComponentModel;assembly=WindowsBase"
+             xmlns:converters="clr-namespace:Pokemon_Go_Database.ValueConverters"
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300"
              d:DataContext="{d:DesignInstance Type=local:ChargeMoveViewModel}">
@@ -15,6 +16,7 @@
             </CollectionViewSource.SortDescriptions>
         </CollectionViewSource>
         <CollectionViewSource x:Key="TypeView" Source="{Binding Types}"/>
+        <converters:PercentageConverter x:Key="percentageConverter"/>
     </UserControl.Resources>
     <Grid Background="{StaticResource MainBackgroundColor}">
         <DataGrid ItemsSource="{Binding Source={StaticResource MoveView}}" HorizontalAlignment="Stretch" AutoGenerateColumns="False">
@@ -28,6 +30,14 @@
                 <DataGridTextColumn Header="Damage Window Start" Binding="{Binding Path=DamageWindowStartTime}" Width="Auto"/>
                 <DataGridTextColumn Header="Damage Window Duration" Binding="{Binding Path=DamageWindowDuration}" Width="Auto"/>
                 <DataGridTextColumn Header="Dodge Flash Time" Binding="{Binding Path=DodgeFlashTime}" Width="Auto"/>
+                <DataGridTextColumn Header="Power - PvP" Binding="{Binding Path=PowerPvp}" Width="Auto"/>
+                <DataGridTextColumn Header="Turns" Binding="{Binding Path=Turns}" Width="Auto"/>
+                <DataGridTextColumn Header="Energy Gain - PvP" Binding="{Binding Path=EnergyPvp}" Width="Auto"/>
+                <DataGridTextColumn Header="DPT" Binding="{Binding Path=DPT, StringFormat=N2, Mode=OneWay}" IsReadOnly="True" Width="Auto"/>
+                <DataGridTextColumn Header="EPT" Binding="{Binding Path=EPT, StringFormat=N2, Mode=OneWay}" IsReadOnly="True" Width="Auto"/>
+                <DataGridTextColumn Header="Self Buff" Binding="{Binding Path=SelfBuff}" Width="Auto"/>
+                <DataGridTextColumn Header="Enemy Buff" Binding="{Binding Path=EnemyBuff}" Width="Auto"/>
+                <DataGridTextColumn Header="Buff Chance" Binding="{Binding Path=BuffProc, StringFormat=P0, Converter={StaticResource percentageConverter}}" Width="Auto"/>
             </DataGrid.Columns>
         </DataGrid>
     </Grid>
