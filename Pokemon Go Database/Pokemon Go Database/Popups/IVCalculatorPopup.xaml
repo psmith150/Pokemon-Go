@@ -99,7 +99,9 @@
             <Label Content="Fast Move:"/>
             <ComboBox Width="100" ItemsSource="{Binding Calculator.Pokemon.Species.FastMoves}" SelectedItem="{Binding Calculator.Pokemon.FastMove}" DisplayMemberPath="FastMove.Name"/>
             <Label Content="Charge Move:" Margin="25 0 0 0"/>
-            <ComboBox Width="100" ItemsSource="{Binding Calculator.Pokemon.Species.ChargeMoves}" SelectedItem="{Binding Calculator.Pokemon.ChargeMove}" DisplayMemberPath="ChargeMove.Name"/>
+            <ComboBox Width="100" ItemsSource="{Binding Calculator.Pokemon.Species.ChargeMoves}" SelectedItem="{Binding Calculator.Pokemon.ChargeMove}" DisplayMemberPath="ChargeMove.Name" Height="26" VerticalAlignment="Top"/>
+            <Label Content="2nd Charge Move:" Margin="25 0 0 0"/>
+            <ComboBox Width="100" ItemsSource="{Binding Calculator.Pokemon.Species.ChargeMoves}" SelectedItem="{Binding Calculator.Pokemon.ChargeMove2}" DisplayMemberPath="ChargeMove.Name" Height="26" VerticalAlignment="Top"/>
         </StackPanel>
         <Expander Grid.Row="7">
             <Expander.Style>

@@ -184,6 +184,18 @@ namespace Pokemon_Go_Database.Services
                 }
                 try
                 {
+                    if (pokemon.ChargeMove2 != null)
+                        pokemon.ChargeMove2 = pokemon.Species.ChargeMoves.Single(x => x.ChargeMove.Name.Equals(pokemon.ChargeMove2.ChargeMove.Name));
+                }
+                catch (Exception)
+                {
+                    if (pokemon.ChargeMove2 != null)
+                        throw new ArgumentException($"Cannot find matching charge move {pokemon.ChargeMove2.ChargeMove.Name} in charge move list for {pokemon.Species.Species}");
+                    else
+                        throw new ArgumentException($"Cannot find matching charge move {pokemon.ChargeMove2.ChargeMove.Name} in charge move list for {pokemon.Name}");
+                }
+                try
+                {
                     tempPokemon.Add(pokemon);
                 }
                 catch (Exception)
