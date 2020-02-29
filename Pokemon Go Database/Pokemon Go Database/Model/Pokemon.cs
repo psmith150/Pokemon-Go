@@ -134,6 +134,15 @@ namespace Pokemon_Go_Database.Model
             }
         }
 
+        [XmlIgnore]
+        public bool HasSecondChargeMove
+        {
+            get
+            {
+                return this.ChargeMove != null;
+            }
+        }
+
         private PokedexChargeMoveWrapper _ChargeMove2;
         public PokedexChargeMoveWrapper ChargeMove2
         {
@@ -144,6 +153,7 @@ namespace Pokemon_Go_Database.Model
             set
             {
                 Set(ref _ChargeMove2, value);
+                RaisePropertyChanged("HasSecondChargeMove");
                 UpdateAllCalculatedProperties();
             }
         }
@@ -240,6 +250,8 @@ namespace Pokemon_Go_Database.Model
         {
             get
             {
+                if (this.FastMove == null || this.ChargeMove == null)
+                    return null;
                 return this.Species.Movesets.SingleOrDefault(x => x.FastMove == this.FastMove && x.ChargeMove == this.ChargeMove);
             }
         }
@@ -248,6 +260,8 @@ namespace Pokemon_Go_Database.Model
         {
             get
             {
+                if (this.FastMove == null || this.ChargeMove == null)
+                    return null;
                 return this.Species.Movesets.SingleOrDefault(x => x.FastMove == this.FastMove && x.ChargeMove == this.ChargeMove2);
             }
         }

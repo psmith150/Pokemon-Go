@@ -111,6 +111,19 @@
                             </Style>
                         </DataGridComboBoxColumn.EditingElementStyle>
                     </DataGridComboBoxColumn>
+                    <DataGridComboBoxColumn Header="2nd Charge Move" Width="Auto" SelectedItemBinding="{Binding ChargeMove2}" DisplayMemberPath="ChargeMove.Name" SortMemberPath="ChargeMove2.ChargeMove.Name">
+                        <DataGridComboBoxColumn.ElementStyle>
+                            <Style TargetType="{x:Type ComboBox}">
+                                <Setter Property="ItemsSource" Value="{Binding Path=Species.ChargeMoves}" />
+                            </Style>
+                        </DataGridComboBoxColumn.ElementStyle>
+                        <DataGridComboBoxColumn.EditingElementStyle>
+                            <Style TargetType="{x:Type ComboBox}">
+                                <Setter Property="ItemsSource" Value="{Binding Path=Species.ChargeMoves}" />
+                                <!--<EventSetter Event="RequestBringIntoView" Handler="OnRequestBringIntoView"/>-->
+                            </Style>
+                        </DataGridComboBoxColumn.EditingElementStyle>
+                    </DataGridComboBoxColumn>
                     <DataGridTextColumn Header="CP" Binding="{Binding Path=ActualCP, Mode=OneWay}" IsReadOnly="True" Width="Auto"/>
                     <DataGridTextColumn Header="HP" Binding="{Binding Path=ActualHP, Mode=OneWay}" IsReadOnly="True" Width="Auto"/>
                     <DataGridTextColumn Header="Attack IV" Binding="{Binding Path=AttackIVExpression}" Width="Auto" IsReadOnly="True"/>
