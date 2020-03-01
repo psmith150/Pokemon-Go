@@ -102,6 +102,9 @@
     <Compile Include="CustomControls\BattleResultViewer.xaml.cs">
       <DependentUpon>BattleResultViewer.xaml</DependentUpon>
     </Compile>
+    <Compile Include="CustomControls\NullableComboBox.xaml.cs">
+      <DependentUpon>NullableComboBox.xaml</DependentUpon>
+    </Compile>
     <Compile Include="CustomControls\PokedexFilterViewer.xaml.cs">
       <DependentUpon>PokedexFilterViewer.xaml</DependentUpon>
     </Compile>
@@ -187,6 +190,10 @@
     <Page Include="CustomControls\BattleResultViewer.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="CustomControls\NullableComboBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="CustomControls\PokedexFilterViewer.xaml">
       <Generator>MSBuild:Compile</Generator>
