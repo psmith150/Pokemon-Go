@@ -170,6 +170,10 @@
     <Compile Include="Screens\FastMoveViewModel.cs" />
     <Compile Include="Screens\PokemonViewModel.cs" />
     <Compile Include="Screens\PokedexViewModel.cs" />
+    <Compile Include="Screens\PvpSimulationScreen.xaml.cs">
+      <DependentUpon>PvpSimulationScreen.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\PvpSimulationViewModel.cs" />
     <Compile Include="Screens\ScreenViewModel.cs" />
     <Compile Include="Screens\BattleSimulationScreen.xaml.cs">
       <DependentUpon>BattleSimulationScreen.xaml</DependentUpon>
@@ -246,6 +250,10 @@
     <Page Include="Screens\BattleSimulationScreen.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Screens\PvpSimulationScreen.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Screens\TemplateScreen.xaml">
       <SubType>Designer</SubType>
