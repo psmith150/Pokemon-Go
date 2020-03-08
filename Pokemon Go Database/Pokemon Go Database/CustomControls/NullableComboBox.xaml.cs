@@ -44,12 +44,14 @@ namespace Pokemon_Go_Database.CustomControls
             }
             set
             {
-                IEnumerable<object> collection = value.Cast<object>();
                 List<object> listWithNull = new List<object>();
                 listWithNull.Add(emptyItem);
-                foreach (var element in value)
+                if (value != null)
                 {
-                    listWithNull.Add(element);
+                    foreach (var element in value)
+                    {
+                        listWithNull.Add(element);
+                    }
                 }
                 combo.ItemsSource = listWithNull;
                 SelectedItem = null;
@@ -229,7 +231,7 @@ namespace Pokemon_Go_Database.CustomControls
         public static readonly DependencyProperty ItemsSourceProperty =
             DependencyProperty.Register("ItemsSource", typeof(IEnumerable), typeof(NullableComboBox), new FrameworkPropertyMetadata(null, OnDependencyPropertyChanged));
 
-        public static readonly DependencyProperty SelectedItemProperty = 
+        public static readonly DependencyProperty SelectedItemProperty =
             DependencyProperty.Register("SelectedItem", typeof(object), typeof(NullableComboBox), new FrameworkPropertyMetadata(null, FrameworkPropertyMetadataOptions.BindsTwoWayByDefault, OnDependencyPropertyChanged));
 
 
@@ -278,7 +280,7 @@ namespace Pokemon_Go_Database.CustomControls
 
         private void Combo_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            if ( combo.SelectedItem is EmptyItem)
+            if (combo.SelectedItem is EmptyItem)
                 this.SelectedItem = null;
             else
                 SelectedItem = combo.SelectedItem;
@@ -301,8 +303,8 @@ namespace Pokemon_Go_Database.CustomControls
             }
         }
 
-        
-        }
+
+    }
     public class EmptyItem : DynamicObject
     {
         public string DisplayString { get; set; }
