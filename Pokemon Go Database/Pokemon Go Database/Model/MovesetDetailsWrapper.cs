@@ -34,6 +34,8 @@ namespace Pokemon_Go_Database.Model
                 Set(ref this._Moveset, value);
                 RaisePropertyChanged("DPS");
                 RaisePropertyChanged("DPSPercentage");
+                RaisePropertyChanged("PvpDps");
+                RaisePropertyChanged("PvpDpsPercentage");
             }
         }
         private double _Attack;
@@ -48,6 +50,8 @@ namespace Pokemon_Go_Database.Model
                 this._Attack = value;
                 RaisePropertyChanged("DPS");
                 RaisePropertyChanged("DPSPercentage");
+                RaisePropertyChanged("PvpDps");
+                RaisePropertyChanged("PvpDpsPercentage");
             }
         }
         private bool _IsDefending;
@@ -76,6 +80,8 @@ namespace Pokemon_Go_Database.Model
                 this._Type1 = value;
                 RaisePropertyChanged("DPS");
                 RaisePropertyChanged("DPSPercentage");
+                RaisePropertyChanged("PvpDps");
+                RaisePropertyChanged("PvpDpsPercentage");
             }
         }
         private Type _Type2;
@@ -90,6 +96,8 @@ namespace Pokemon_Go_Database.Model
                 this._Type2 = value;
                 RaisePropertyChanged("DPS");
                 RaisePropertyChanged("DPSPercentage");
+                RaisePropertyChanged("PvpDps");
+                RaisePropertyChanged("PvpDpsPercentage");
             }
         }
         private double _DPSUpperLimit;
@@ -106,11 +114,32 @@ namespace Pokemon_Go_Database.Model
                 RaisePropertyChanged("DPSPercentage");
             }
         }
+        private double _PvpDpsUpperLimit;
+        public double PvpDpsUpperLimit
+        {
+            get
+            {
+                return this._PvpDpsUpperLimit;
+            }
+            set
+            {
+                this._PvpDpsUpperLimit = value;
+                RaisePropertyChanged("PvpDps");
+                RaisePropertyChanged("PvpDpsPercentage");
+            }
+        }
         public double DPS
         {
             get
             {
                 return this.Moveset.GetDPS(this.Attack, this.Type1, this.Type2, this.IsDefending);
+            }
+        }
+        public double PvpDps
+        {
+            get
+            {
+                return this.Moveset.GetPvpDps(this.Attack, this.Type1, this.Type2);
             }
         }
         public double DPSPercentage
@@ -119,6 +148,15 @@ namespace Pokemon_Go_Database.Model
             {
                 if (this.DPSUpperLimit != 0.0)
                     return this.DPS / this.DPSUpperLimit;
+                return 0.0;
+            }
+        }
+        public double PvpDpsPercentage
+        {
+            get
+            {
+                if (this.PvpDpsUpperLimit != 0.0)
+                    return this.PvpDps / this.PvpDpsUpperLimit;
                 return 0.0;
             }
         }

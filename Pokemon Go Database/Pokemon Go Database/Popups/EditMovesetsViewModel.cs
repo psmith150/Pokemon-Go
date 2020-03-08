@@ -29,6 +29,7 @@ namespace Pokemon_Go_Database.Popups
         public ICommand ShowEditMovesetsCommand { get; private set; }
         public ICommand ShowOffenseDetailsCommand { get; private set; }
         public ICommand ShowDefenseDetailsCommand { get; private set; }
+        public ICommand ShowPvpDetailsCommand { get; private set; }
         #endregion
 
         public EditMovesetsViewModel(SessionService session, MessageViewerBase messageViewer) : base(session)
@@ -55,6 +56,7 @@ namespace Pokemon_Go_Database.Popups
             this.ShowEditMovesetsCommand = new RelayCommand(() => { this.EditMovesetsVisible = true; this.OffenseDetailsVisible = false; this.DefenseDetailsVisible = false; });
             this.ShowOffenseDetailsCommand = new RelayCommand(() => ShowOffenseDetails());
             this.ShowDefenseDetailsCommand = new RelayCommand(() => ShowDefenseDetails());
+            this.ShowPvpDetailsCommand = new RelayCommand(() => ShowPvpDetails());
 
         }
 
@@ -82,6 +84,7 @@ namespace Pokemon_Go_Database.Popups
             this.EditMovesetsVisible = true;
             this.OffenseDetailsVisible = false;
             this.DefenseDetailsVisible = false;
+            this.PvpDetailsVisible = false;
             this.FastMoves.CollectionChanged += this.MoveCollectionChanged;
             this.ChargeMoves.CollectionChanged += this.MoveCollectionChanged;
         }
@@ -148,6 +151,19 @@ namespace Pokemon_Go_Database.Popups
                 this.MovesetsView.SortDescriptions.Add(new System.ComponentModel.SortDescription("DPS", System.ComponentModel.ListSortDirection.Descending));
             }
         }
+        private ListCollectionView _MovesetsViewPvp;
+        public ListCollectionView MovesetsViewPvp
+        {
+            get
+            {
+                return this._MovesetsViewPvp;
+            }
+            private set
+            {
+                Set(ref this._MovesetsViewPvp, value);
+                this.MovesetsViewPvp.SortDescriptions.Add(new System.ComponentModel.SortDescription("PvpDps", System.ComponentModel.ListSortDirection.Descending));
+            }
+        }
         private ObservableCollection<MovesetDetailsWrapper> _Movesets;
         public ObservableCollection<MovesetDetailsWrapper> Movesets
         {
@@ -159,6 +175,7 @@ namespace Pokemon_Go_Database.Popups
             {
                 Set(ref this._Movesets, value);
                 this.MovesetsView = new ListCollectionView(this.Movesets);
+                this.MovesetsViewPvp = new ListCollectionView(this.Movesets);
             }
         }
 
@@ -250,6 +267,18 @@ namespace Pokemon_Go_Database.Popups
                 Set(ref this._DefenseDetailsVisible, value);
             }
         }
+        private bool _PvpDetailsVisible;
+        public bool PvpDetailsVisible
+        {
+            get
+            {
+                return this._PvpDetailsVisible;
+            }
+            set
+            {
+                Set(ref this._PvpDetailsVisible, value);
+            }
+        }
         private double _MinDPS;
         public double MinDPS
         {
@@ -299,6 +328,7 @@ namespace Pokemon_Go_Database.Popups
             this.EditMovesetsVisible = false;
             this.OffenseDetailsVisible = true;
             this.DefenseDetailsVisible = false;
+            this.PvpDetailsVisible = false;
             double minDps = double.MaxValue;
             double maxDps = double.MinValue;
 
@@ -322,6 +352,7 @@ namespace Pokemon_Go_Database.Popups
             this.EditMovesetsVisible = false;
             this.OffenseDetailsVisible = false;
             this.DefenseDetailsVisible = true;
+            this.PvpDetailsVisible = false;
             double minDps = double.MaxValue;
             double maxDps = double.MinValue;
 
@@ -339,6 +370,29 @@ namespace Pokemon_Go_Database.Popups
             this.MinDPS = minDps;
             this.MovesetsView.Refresh();
         }
+        private void ShowPvpDetails()
+        {
+            this.EditMovesetsVisible = false;
+            this.OffenseDetailsVisible = false;
+            this.DefenseDetailsVisible = false;
+            this.PvpDetailsVisible = true;
+            double minDps = double.MaxValue;
+            double maxDps = double.MinValue;
+
+            foreach (MovesetDetailsWrapper moveset in Movesets)
+            {
+                if (moveset.PvpDps >= maxDps)
+                    maxDps = moveset.PvpDps;
+                if (moveset.PvpDps <= minDps)
+                    minDps = moveset.PvpDps;
+            }
+            foreach (MovesetDetailsWrapper moveset in Movesets)
+                moveset.PvpDpsUpperLimit = maxDps;
+            this.MaxDPS = maxDps;
+            this.MinDPS = minDps;
+            this.MovesetsView.Refresh();
+        }
+
 
         private void ChargeMoves_CollectionChanged(object sender, System.Collections.Specialized.NotifyCollectionChangedEventArgs e)
         {

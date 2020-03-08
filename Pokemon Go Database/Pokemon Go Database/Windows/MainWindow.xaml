@@ -81,7 +81,7 @@
                                             CommandParameter="{x:Type screens:PokemonViewModel}"
                                             Command="{Binding NavigateToScreenCommand}"
                                             IsEnabled="{Binding NavigationService.ActiveViewModel, Converter={StaticResource TypeToBoolConverter}, ConverterParameter={x:Type screens:PokemonViewModel}}"/>
-                    <customControls:HoverButton Content="Battle Simulation" 
+                    <customControls:HoverButton Content="PvE Battle Simulation" 
                                             CommandParameter="{x:Type screens:BattleSimulationViewModel}"
                                             Command="{Binding NavigateToScreenCommand}"
                                             IsEnabled="{Binding NavigationService.ActiveViewModel, Converter={StaticResource TypeToBoolConverter}, ConverterParameter={x:Type screens:BattleSimulationViewModel}}"/>

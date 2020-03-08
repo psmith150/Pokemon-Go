@@ -7,7 +7,7 @@
             base.MoveType = MoveType.Charge;
         }
 
-        public ChargeMove(string name = "New Move", int power = 0, int time = 1000, int energy = 10, int powerPvp = 0, int energyPvp = 10, int turns = 1, Type type = Type.None) : base(name, power, time, energy, powerPvp, energyPvp, turns, type)
+        public ChargeMove(string name = "New Move", int power = 0, int time = 1000, int energy = 10, int powerPvp = 0, int energyPvp = 10, int turns = 0, Type type = Type.None) : base(name, power, time, energy, powerPvp, energyPvp, turns, type)
         {
             base.MoveType = MoveType.Charge;
             this.DodgeFlashTime = 0;
@@ -23,6 +23,16 @@
             set
             {
                 Set(ref this._DodgeFlashTime, value);
+            }
+        }
+
+        public float Dpe
+        {
+            get
+            {
+                if (this.EnergyPvp <= 0)
+                    return 0;
+                return this.PowerPvp / ((float)this.EnergyPvp);
             }
         }
 

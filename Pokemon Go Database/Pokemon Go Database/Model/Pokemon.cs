@@ -219,6 +219,42 @@ namespace Pokemon_Go_Database.Model
                 Set(ref this._IsFavorite, value);
             }
         }
+        private bool _GreatLeague;
+        public bool GreatLeague
+        {
+            get
+            {
+                return this._GreatLeague;
+            }
+            set
+            {
+                Set(ref this._GreatLeague, value);
+            }
+        }
+        private bool _UltraLeague;
+        public bool UltraLeague
+        {
+            get
+            {
+                return this._UltraLeague;
+            }
+            set
+            {
+                Set(ref this._UltraLeague, value);
+            }
+        }
+        private bool _MasterLeague;
+        public bool MasterLeague
+        {
+            get
+            {
+                return this._MasterLeague;
+            }
+            set
+            {
+                Set(ref this._MasterLeague, value);
+            }
+        }
         private bool _IsLucky;
         public bool IsLucky
         {

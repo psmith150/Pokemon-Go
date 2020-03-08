@@ -167,6 +167,43 @@
                 </DataGrid.Columns>
             </DataGrid>
         </Grid>
+        <Grid Name="PvpDetailsGrid" Grid.Row="1" Visibility="{Binding PvpDetailsVisible, Converter={StaticResource BooleanToVisibilityConverter}}">
+            <DataGrid ItemsSource="{Binding MovesetsViewPvp}" IsReadOnly="True" AutoGenerateColumns="False" HorizontalAlignment="Stretch" EnableRowVirtualization="False">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Moveset" Binding="{Binding Moveset.Name}" Width="6*"/>
+                    <DataGridTextColumn Header="DPS" Binding="{Binding PvpDps, StringFormat={}{0:0.00}}" Width="2*">
+                        <DataGridTextColumn.CellStyle>
+                            <Style TargetType="DataGridCell">
+                                <Setter Property="Background">
+                                    <Setter.Value>
+                                        <MultiBinding Converter="{StaticResource DPSValueToBrushConverter}">
+                                            <Binding Path="PvpDps"/>
+                                            <Binding Path="DataContext.MinDPS" RelativeSource="{RelativeSource AncestorType={x:Type UserControl}}"/>
+                                            <Binding Path="DataContext.MaxDPS" RelativeSource="{RelativeSource AncestorType={x:Type UserControl}}"/>
+                                        </MultiBinding>
+                                    </Setter.Value>
+                                </Setter>
+                            </Style>
+                        </DataGridTextColumn.CellStyle>
+                    </DataGridTextColumn>
+                    <DataGridTextColumn Header="% Max DPS" Binding="{Binding PvpDpsPercentage, StringFormat=P2}" Width="2*">
+                        <DataGridTextColumn.CellStyle>
+                            <Style TargetType="DataGridCell">
+                                <Setter Property="Background">
+                                    <Setter.Value>
+                                        <MultiBinding Converter="{StaticResource DPSValueToBrushConverter}">
+                                            <Binding Path="PvpDps"/>
+                                            <Binding Path="DataContext.MinDPS" RelativeSource="{RelativeSource AncestorType={x:Type UserControl}}"/>
+                                            <Binding Path="DataContext.MaxDPS" RelativeSource="{RelativeSource AncestorType={x:Type UserControl}}"/>
+                                        </MultiBinding>
+                                    </Setter.Value>
+                                </Setter>
+                            </Style>
+                        </DataGridTextColumn.CellStyle>
+                    </DataGridTextColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+        </Grid>
         <StackPanel Grid.Row="2" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Center">
             <StackPanel.Resources>
                 <Style TargetType="customControls:HoverButton" BasedOn="{StaticResource {x:Type customControls:HoverButton}}">
@@ -202,6 +239,9 @@
             <Separator Width="15" Background="Transparent"/>
             <customControls:HoverButton Content="Defense Details" Command="{Binding ShowDefenseDetailsCommand}"
                 IsEnabled="{Binding DefenseDetailsVisible, Converter={StaticResource InverseBooleanConverter}}"/>
+            <Separator Width="15" Background="Transparent"/>
+            <customControls:HoverButton Content="PvP Details" Command="{Binding ShowPvpDetailsCommand}"
+                IsEnabled="{Binding PvpDetailsVisible, Converter={StaticResource InverseBooleanConverter}}"/>
         </StackPanel>
         <StackPanel Grid.Row="3" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Center">
             <Button Content="Close" Command="{Binding ExitPopupCommand}" Width="50"/>

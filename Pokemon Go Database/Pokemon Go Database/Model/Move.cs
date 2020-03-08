@@ -209,9 +209,9 @@ namespace Pokemon_Go_Database.Model
         {
             get
             {
-                if (this.Turns == 0)
+                if (this.Turns < 0)
                     return 0;
-                return (this.PowerPvp / (float)this.Turns);
+                return (this.PowerPvp / ((float)this.Turns+1));
             }
         }
 
@@ -219,9 +219,9 @@ namespace Pokemon_Go_Database.Model
         {
             get
             {
-                if (this.Turns == 0)
+                if (this.Turns < 0)
                     return 0;
-                return (this.EnergyPvp / (float)this.Turns);
+                return (this.EnergyPvp / ((float)this.Turns+1));
             }
         }
 

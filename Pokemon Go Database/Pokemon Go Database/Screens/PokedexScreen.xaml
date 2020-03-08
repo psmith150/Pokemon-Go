@@ -44,11 +44,6 @@
                     <DataGridTextColumn Header="Total Stats" Binding="{Binding Path=TotalStats, Mode=OneWay}" IsReadOnly="True" Width="Auto"/>
                     <DataGridTextColumn Header="Max CP" Binding="{Binding Path=MaxCP, Mode=OneWay}" IsReadOnly="True" Width="Auto"/>
                     <DataGridTemplateColumn Header="Movesets" IsReadOnly="True">
-                        <!--<DataGridTemplateColumn.CellEditingTemplate>
-                        <DataTemplate>
-                            <Button Content="Movesets" Command="{Binding Path=DataContext.ShowMovesetsCommand, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type UserControl}}}"/>
-                        </DataTemplate>
-                    </DataGridTemplateColumn.CellEditingTemplate>-->
                         <DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>
                                 <Button Content="Movesets" Command="{Binding Path=DataContext.ShowMovesetsCommand, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type UserControl}}}"

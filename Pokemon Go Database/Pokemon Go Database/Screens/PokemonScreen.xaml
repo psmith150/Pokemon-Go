@@ -72,7 +72,7 @@
                 <Button Command="{Binding CheckIVCommand}" Style="{StaticResource DetailsButtonStyle}" Width="50" Height="50"  Margin="5,10,5,10"/>
             </StackPanel>
             <DataGrid Name="PokemonGrid" ItemsSource="{Binding MyPokemon}" HorizontalAlignment="Stretch" AutoGenerateColumns="False" 
-                  SelectedItem="{Binding SelectedPokemon}" FrozenColumnCount="3" CanUserAddRows="False" CanUserDeleteRows="False">
+                  SelectedItem="{Binding SelectedPokemon}" FrozenColumnCount="3" CanUserAddRows="False" CanUserDeleteRows="False" EnableRowVirtualization="False">
                 <DataGrid.ContextMenu>
                     <ContextMenu>
                         <MenuItem Header="View Movesets" Command="{Binding ShowMovesetsCommand}"/>
@@ -134,6 +134,9 @@
                     <DataGridCheckBoxColumn Header="Lucky?" Binding="{Binding Path=IsLucky, UpdateSourceTrigger=PropertyChanged}" Width="Auto"/>
                     <DataGridCheckBoxColumn Header="Comparison" Binding="{Binding Path=Compare, UpdateSourceTrigger=PropertyChanged}" Width="Auto"/>
                     <DataGridCheckBoxColumn Header="Favorite" Binding="{Binding Path=IsFavorite, UpdateSourceTrigger=PropertyChanged}" Width="Auto"/>
+                    <DataGridCheckBoxColumn Header="Great League?" Binding="{Binding Path=GreatLeague, UpdateSourceTrigger=PropertyChanged}" Width="Auto"/>
+                    <DataGridCheckBoxColumn Header="Ultra League?" Binding="{Binding Path=UltraLeage, UpdateSourceTrigger=PropertyChanged}" Width="Auto"/>
+                    <DataGridCheckBoxColumn Header="Master League?" Binding="{Binding Path=MasterLeague, UpdateSourceTrigger=PropertyChanged}" Width="Auto"/>
                     <DataGridCheckBoxColumn Header="Fast TM?" Binding="{Binding Path=NeedsFastTM, UpdateSourceTrigger=PropertyChanged}" Width="Auto"/>
                     <DataGridCheckBoxColumn Header="Charge TM?" Binding="{Binding Path=NeedsChargeTM, UpdateSourceTrigger=PropertyChanged}" Width="Auto"/>
                     <DataGridCheckBoxColumn Header="Power Up?" Binding="{Binding Path=ShouldBePoweredUp, UpdateSourceTrigger=PropertyChanged}" Width="Auto"/>

@@ -72,6 +72,19 @@ namespace Pokemon_Go_Database.Model
 
             return (fastMoveDamage * this.ChargeMove.ChargeMove.Energy + chargeMoveDamage * this.FastMove.FastMove.Energy) / ((this.FastMove.FastMove.Time + defenseDuration) / 1000.0 * this.ChargeMove.ChargeMove.Energy + this.ChargeMove.ChargeMove.Time / 1000.0 * this.FastMove.FastMove.Energy);
         }
+
+        public double GetPvpDps(double attack, Type type1 = Type.None, Type type2 = Type.None)
+        {
+            double fastMoveStab = 1.0;
+            double chargeMoveStab = 1.0;
+            if (type1 == this.FastMove.FastMove.Type || type2 == this.FastMove.FastMove.Type)
+                fastMoveStab = Constants.StabBonus;
+            if (type1 == this.ChargeMove.ChargeMove.Type || type2 == this.ChargeMove.ChargeMove.Type)
+                chargeMoveStab = Constants.StabBonus;
+            int fastMoveDamage = (int)Math.Floor(0.5 * this.FastMove.FastMove.PowerPvp * attack * fastMoveStab / Constants.TestDefense) + 1;
+            int chargeMoveDamage = (int)Math.Floor(0.5 * this.ChargeMove.ChargeMove.PowerPvp * attack * chargeMoveStab / Constants.TestDefense) + 1;
+            return ((double)fastMoveDamage * this.ChargeMove.ChargeMove.EnergyPvp + chargeMoveDamage * this.FastMove.FastMove.EnergyPvp) / ((this.FastMove.FastMove.Turns+1) * Constants.TurnDuration / 1000.0 * this.ChargeMove.ChargeMove.EnergyPvp + (this.ChargeMove.ChargeMove.Turns+1) * Constants.TurnDuration / 1000.0 * this.FastMove.FastMove.EnergyPvp);
+        }
         #endregion
 
         #region Private Methods
