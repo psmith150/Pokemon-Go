@@ -4,9 +4,23 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Pokemon_Go_Database.CustomControls"
+             x:Name="Me"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <ComboBox x:Name="combo"
-              DataContext="{Binding RelativeSource={RelativeSource Mode=Self}}"
-              SelectionChanged="Combo_SelectionChanged" Width="200"/>
+              DataContext="{Binding ElementName=Me}"
+              SelectionChanged="Combo_SelectionChanged"
+              AlternationCount="{Binding AlternationCount}"
+              DisplayMemberPath="{Binding DisplayMemberPath}"
+              IsDropDownOpen="{Binding IsDropDownOpen}"
+              IsEditable="{Binding IsEditable}"
+              IsReadOnly="{Binding IsReadOnly}"
+              IsSynchronizedWithCurrentItem="{Binding IsSynchronizedWithCurrentItem}"
+              ItemStringFormat="{Binding ItemStringFormat}"
+              SelectedIndex="{Binding SelectedIndex}"
+              SelectedValue="{Binding SelectedValue}"
+              SelectedValuePath="{Binding SelectedValuePath}"
+              StaysOpenOnEdit="{Binding StaysOpenOnEdit}"
+              Text="{Binding Text}">
+    </ComboBox>
 </UserControl>

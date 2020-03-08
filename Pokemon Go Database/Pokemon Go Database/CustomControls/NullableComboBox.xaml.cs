@@ -25,7 +25,15 @@ namespace Pokemon_Go_Database.CustomControls
         public NullableComboBox()
         {
             InitializeComponent();
+            emptyItem = new EmptyItem()
+            {
+                DisplayString = this.PlaceholderText
+            };
         }
+
+        #region Private Fields
+        EmptyItem emptyItem;
+        #endregion
 
         #region Public Properties
         public IEnumerable ItemsSource
@@ -38,7 +46,7 @@ namespace Pokemon_Go_Database.CustomControls
             {
                 IEnumerable<object> collection = value.Cast<object>();
                 List<object> listWithNull = new List<object>();
-                listWithNull.Add(new EmptyItem());
+                listWithNull.Add(emptyItem);
                 foreach (var element in value)
                 {
                     listWithNull.Add(element);
@@ -59,7 +67,7 @@ namespace Pokemon_Go_Database.CustomControls
                 SetValue(SelectedItemProperty, value);
                 if (value is null)
                 {
-                    combo.SelectedItem = new EmptyItem();
+                    combo.SelectedItem = emptyItem;
                 }
                 else
                 {
@@ -77,6 +85,143 @@ namespace Pokemon_Go_Database.CustomControls
             set
             {
                 SetValue(PlaceholderTextProperty, value);
+                emptyItem.DisplayString = value;
+            }
+        }
+
+        public int AlternationCount
+        {
+            get
+            {
+                return (int)GetValue(AlternationCountProperty);
+            }
+            set
+            {
+                SetValue(AlternationCountProperty, value);
+            }
+        }
+        public string DisplayMemberPath
+        {
+            get
+            {
+                return (string)GetValue(DisplayMemberPathProperty);
+            }
+            set
+            {
+                SetValue(DisplayMemberPathProperty, value);
+            }
+        }
+        public bool IsDropDownOpen
+        {
+            get
+            {
+                return (bool)GetValue(IsDropDownOpenProperty);
+            }
+            set
+            {
+                SetValue(IsDropDownOpenProperty, value);
+            }
+        }
+        public bool HasItems
+        {
+            get
+            {
+                return combo.HasItems;
+            }
+        }
+        public bool IsEditable
+        {
+            get
+            {
+                return (bool)GetValue(IsEditableProperty);
+            }
+            set
+            {
+                SetValue(IsEditableProperty, value);
+            }
+        }
+        public bool IsReadOnly
+        {
+            get
+            {
+                return (bool)GetValue(IsReadOnlyProperty);
+            }
+            set
+            {
+                SetValue(IsReadOnlyProperty, value);
+            }
+        }
+        public bool? IsSynchronizedWithCurrentItem
+        {
+            get
+            {
+                return (bool)GetValue(IsSynchronizedWithCurrentItemProperty);
+            }
+            set
+            {
+                SetValue(IsSynchronizedWithCurrentItemProperty, value);
+            }
+        }
+        public int SelectedIndex
+        {
+            get
+            {
+                return (int)GetValue(SelectedIndexProperty);
+            }
+            set
+            {
+                SetValue(SelectedIndexProperty, value);
+            }
+        }
+        public object SelectedValue
+        {
+            get
+            {
+                return (object)GetValue(SelectedValueProperty);
+            }
+            set
+            {
+                SetValue(SelectedValueProperty, value);
+            }
+        }
+        public string SelectedValuePath
+        {
+            get
+            {
+                return (string)GetValue(SelectedValuePathProperty);
+            }
+            set
+            {
+                SetValue(SelectedValuePathProperty, value);
+            }
+        }
+        public object SelectionBoxItem
+        {
+            get
+            {
+                return combo.SelectionBoxItem;
+            }
+        }
+        public bool StaysOpenOnEdit
+        {
+            get
+            {
+                return (bool)GetValue(StaysOpenOnEditProperty);
+            }
+            set
+            {
+                SetValue(StaysOpenOnEditProperty, value);
+            }
+        }
+        public string Text
+        {
+            get
+            {
+                return (string)GetValue(TextProperty);
+            }
+            set
+            {
+                SetValue(TextProperty, value);
             }
         }
         #endregion
@@ -84,11 +229,51 @@ namespace Pokemon_Go_Database.CustomControls
         public static readonly DependencyProperty ItemsSourceProperty =
             DependencyProperty.Register("ItemsSource", typeof(IEnumerable), typeof(NullableComboBox), new FrameworkPropertyMetadata(null, OnDependencyPropertyChanged));
 
-        public static readonly DependencyProperty SelectedItemProperty =
-            DependencyProperty.Register("SelectedItem", typeof(object), typeof(NullableComboBox));
+        public static readonly DependencyProperty SelectedItemProperty = 
+            DependencyProperty.Register("SelectedItem", typeof(object), typeof(NullableComboBox), new FrameworkPropertyMetadata(null, FrameworkPropertyMetadataOptions.BindsTwoWayByDefault, OnDependencyPropertyChanged));
+
 
         public static readonly DependencyProperty PlaceholderTextProperty =
-            DependencyProperty.Register("PlaceholderText", typeof(string), typeof(NullableComboBox));
+            DependencyProperty.Register("PlaceholderText", typeof(string), typeof(NullableComboBox), new FrameworkPropertyMetadata(null, FrameworkPropertyMetadataOptions.BindsTwoWayByDefault, OnDependencyPropertyChanged));
+
+        public static readonly DependencyProperty AlternationCountProperty =
+            DependencyProperty.Register("AlternationCount", typeof(int), typeof(NullableComboBox), new FrameworkPropertyMetadata(ComboBox.AlternationCountProperty.DefaultMetadata.DefaultValue));
+
+        public static readonly DependencyProperty DisplayMemberPathProperty =
+            DependencyProperty.Register("DisplayMemberPath", typeof(string), typeof(NullableComboBox), new FrameworkPropertyMetadata(ComboBox.DisplayMemberPathProperty.DefaultMetadata.DefaultValue));
+
+        public static readonly DependencyProperty IsDropDownOpenProperty =
+            DependencyProperty.Register("IsDropDownOpen", typeof(bool), typeof(NullableComboBox), new FrameworkPropertyMetadata(ComboBox.IsDropDownOpenProperty.DefaultMetadata.DefaultValue));
+
+        public static readonly DependencyProperty HasItemsProperty =
+            DependencyProperty.Register("HasItems", typeof(bool), typeof(NullableComboBox), new FrameworkPropertyMetadata(ComboBox.HasItemsProperty.DefaultMetadata.DefaultValue));
+
+        public static readonly DependencyProperty IsEditableProperty =
+            DependencyProperty.Register("IsEditable", typeof(bool), typeof(NullableComboBox), new FrameworkPropertyMetadata(ComboBox.IsEditableProperty.DefaultMetadata.DefaultValue));
+
+        public static readonly DependencyProperty IsReadOnlyProperty =
+            DependencyProperty.Register("IsReadOnly", typeof(bool), typeof(NullableComboBox), new FrameworkPropertyMetadata(ComboBox.IsReadOnlyProperty.DefaultMetadata.DefaultValue));
+
+        public static readonly DependencyProperty IsSynchronizedWithCurrentItemProperty =
+            DependencyProperty.Register("IsSynchronizedWithCurrentItem", typeof(bool?), typeof(NullableComboBox), new FrameworkPropertyMetadata(ComboBox.IsSynchronizedWithCurrentItemProperty.DefaultMetadata.DefaultValue));
+
+        public static readonly DependencyProperty SelectedIndexProperty =
+            DependencyProperty.Register("SelectedIndex", typeof(int), typeof(NullableComboBox), new FrameworkPropertyMetadata(ComboBox.SelectedIndexProperty.DefaultMetadata.DefaultValue));
+
+        public static readonly DependencyProperty SelectedValueProperty =
+            DependencyProperty.Register("SelectedValue", typeof(object), typeof(NullableComboBox), new FrameworkPropertyMetadata(ComboBox.SelectedValueProperty.DefaultMetadata.DefaultValue));
+
+        public static readonly DependencyProperty SelectedValuePathProperty =
+            DependencyProperty.Register("SelectedValuePath", typeof(string), typeof(NullableComboBox), new FrameworkPropertyMetadata(ComboBox.SelectedValuePathProperty.DefaultMetadata.DefaultValue));
+
+        public static readonly DependencyProperty SelectionBoxItemProperty =
+            DependencyProperty.Register("SelectionBoxItem", typeof(object), typeof(NullableComboBox), new FrameworkPropertyMetadata(ComboBox.SelectionBoxItemProperty.DefaultMetadata.DefaultValue));
+
+        public static readonly DependencyProperty StaysOpenOnEditProperty =
+            DependencyProperty.Register("StaysOpenOnEdit", typeof(bool), typeof(NullableComboBox), new FrameworkPropertyMetadata(ComboBox.StaysOpenOnEditProperty.DefaultMetadata.DefaultValue));
+
+        public static readonly DependencyProperty TextProperty =
+            DependencyProperty.Register("Text", typeof(string), typeof(NullableComboBox), new FrameworkPropertyMetadata(ComboBox.TextProperty.DefaultMetadata.DefaultValue));
         #endregion
 
         private void Combo_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -112,22 +297,24 @@ namespace Pokemon_Go_Database.CustomControls
             }
             else if (object.ReferenceEquals(args.Property, PlaceholderTextProperty))
             {
-                //self.placeholder.DisplayString = args.NewValue.ToString();
+                self.emptyItem.DisplayString = args.NewValue.ToString();
             }
         }
 
-        private class EmptyItem : DynamicObject
+        
+        }
+    public class EmptyItem : DynamicObject
+    {
+        public string DisplayString { get; set; }
+        public override bool TryGetMember(GetMemberBinder binder, out object result)
         {
-            public override bool TryGetMember(GetMemberBinder binder, out object result)
-            {
-                // just set the result to null and return true 
-                result = null;
-                return true;
-            }
-            public override string ToString()
-            {
-                return "None";
-            }
+            // Return the instance, so that paths with nested properties will keep returning the instance until the last property is reached, which will call ToString()
+            result = this;
+            return true;
+        }
+        public override string ToString()
+        {
+            return DisplayString;
         }
     }
 }
