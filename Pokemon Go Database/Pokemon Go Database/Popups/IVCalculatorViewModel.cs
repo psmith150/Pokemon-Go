@@ -54,16 +54,18 @@ namespace Pokemon_Go_Database.Popups
                 this.Calculator.Pokemon.Species = this._lastSpecies;
             this._originalFastMove = this.Calculator.Pokemon.FastMove;
             this._originalChargeMove = this.Calculator.Pokemon.ChargeMove;
+            this._originalChargeMove2 = this.Calculator.Pokemon.ChargeMove2;
             this.MinLevel = this.Calculator.Pokemon.Level;
             this.SimulatedLevel = this.Calculator.Pokemon.Level;
-            this.Calculator.Pokemon.PropertyChanged += ((o, a) => { this.savingNeeded = true; if (a.PropertyName.Equals("IsLucky")){ this.RaisePropertyChanged("DustValues"); } });
+            this.Calculator.Pokemon.PropertyChanged += ((o, a) => { this.savingNeeded = true; if (a.PropertyName.Equals("IsLucky")) { this.RaisePropertyChanged("DustValues"); } });
             this.RaisePropertyChanged("DustValues");
         }
 
         public override void Deinitialize()
         {
-            //this.Calculator = null;
             this._lastSpecies = this.Calculator.Pokemon.Species;
+            this.Calculator.ClearPokemon();
+            this.Calculator = null; 
         }
 
         #region Private Fields
@@ -71,6 +73,7 @@ namespace Pokemon_Go_Database.Popups
         private MessageViewerBase _messageViewer;
         private PokedexFastMoveWrapper _originalFastMove;
         private PokedexChargeMoveWrapper _originalChargeMove;
+        private PokedexChargeMoveWrapper _originalChargeMove2;
         private PokedexEntry _lastSpecies;
         #endregion
 
@@ -252,6 +255,7 @@ namespace Pokemon_Go_Database.Popups
                 {
                     this.Calculator.Pokemon.FastMove = this._originalFastMove;
                     this.Calculator.Pokemon.ChargeMove = this._originalChargeMove;
+                    this.Calculator.Pokemon.ChargeMove2 = this._originalChargeMove2;
                     this.ClosePopup(null);
                 }
             }
@@ -259,6 +263,7 @@ namespace Pokemon_Go_Database.Popups
             {
                 this.Calculator.Pokemon.FastMove = this._originalFastMove;
                 this.Calculator.Pokemon.ChargeMove = this._originalChargeMove;
+                this.Calculator.Pokemon.ChargeMove2 = this._originalChargeMove2;
                 this.ClosePopup(null);
             }
         }
@@ -405,7 +410,8 @@ namespace Pokemon_Go_Database.Popups
             List<double> possibleDPS = new List<double>();
             foreach (IVSet combination in this.Calculator.Pokemon.IVSets)
             {
-                possibleDPS.Add(this.Calculator.Pokemon.Moveset.GetDPS(this.Calculator.Pokemon.GetAttack(combination.AttackIV, this.SimulatedLevel), this.Calculator.Pokemon.Species.Type1, this.Calculator.Pokemon.Species.Type2));
+                if (this.Calculator.Pokemon.Moveset != null)
+                    possibleDPS.Add(this.Calculator.Pokemon.Moveset.GetDPS(this.Calculator.Pokemon.GetAttack(combination.AttackIV, this.SimulatedLevel), this.Calculator.Pokemon.Species.Type1, this.Calculator.Pokemon.Species.Type2));
             }
             double minDPS = possibleDPS.Min(x => x);
             double maxDPS = possibleDPS.Max(x => x);

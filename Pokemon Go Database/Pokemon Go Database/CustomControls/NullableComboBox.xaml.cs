@@ -44,6 +44,7 @@ namespace Pokemon_Go_Database.CustomControls
             }
             set
             {
+                SetValue(ItemsSourceProperty, value);
                 List<object> listWithNull = new List<object>();
                 listWithNull.Add(emptyItem);
                 if (value != null)
@@ -52,6 +53,10 @@ namespace Pokemon_Go_Database.CustomControls
                     {
                         listWithNull.Add(element);
                     }
+                }
+                else
+                {
+                    BindingOperations.ClearAllBindings(combo);
                 }
                 combo.ItemsSource = listWithNull;
                 SelectedItem = null;
@@ -164,6 +169,17 @@ namespace Pokemon_Go_Database.CustomControls
                 SetValue(IsSynchronizedWithCurrentItemProperty, value);
             }
         }
+        public string ItemStringFormat
+        {
+            get
+            {
+                return (string)GetValue(ItemStringFormatProperty);
+            }
+            set
+            {
+                SetValue(ItemStringFormatProperty, value);
+            }
+        }
         public int SelectedIndex
         {
             get
@@ -234,7 +250,6 @@ namespace Pokemon_Go_Database.CustomControls
         public static readonly DependencyProperty SelectedItemProperty =
             DependencyProperty.Register("SelectedItem", typeof(object), typeof(NullableComboBox), new FrameworkPropertyMetadata(null, FrameworkPropertyMetadataOptions.BindsTwoWayByDefault, OnDependencyPropertyChanged));
 
-
         public static readonly DependencyProperty PlaceholderTextProperty =
             DependencyProperty.Register("PlaceholderText", typeof(string), typeof(NullableComboBox), new FrameworkPropertyMetadata(null, FrameworkPropertyMetadataOptions.BindsTwoWayByDefault, OnDependencyPropertyChanged));
 
@@ -258,6 +273,9 @@ namespace Pokemon_Go_Database.CustomControls
 
         public static readonly DependencyProperty IsSynchronizedWithCurrentItemProperty =
             DependencyProperty.Register("IsSynchronizedWithCurrentItem", typeof(bool?), typeof(NullableComboBox), new FrameworkPropertyMetadata(ComboBox.IsSynchronizedWithCurrentItemProperty.DefaultMetadata.DefaultValue));
+
+        public static readonly DependencyProperty ItemStringFormatProperty =
+            DependencyProperty.Register("ItemStringFormat", typeof(string), typeof(NullableComboBox), new FrameworkPropertyMetadata(ComboBox.ItemStringFormatProperty.DefaultMetadata.DefaultValue));
 
         public static readonly DependencyProperty SelectedIndexProperty =
             DependencyProperty.Register("SelectedIndex", typeof(int), typeof(NullableComboBox), new FrameworkPropertyMetadata(ComboBox.SelectedIndexProperty.DefaultMetadata.DefaultValue));

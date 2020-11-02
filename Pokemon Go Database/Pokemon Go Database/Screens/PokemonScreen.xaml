@@ -98,19 +98,18 @@
                             </Style>
                         </DataGridComboBoxColumn.EditingElementStyle>
                     </DataGridComboBoxColumn>
-                    <DataGridComboBoxColumn Header="Charge Move" Width="Auto" SelectedItemBinding="{Binding ChargeMove}" DisplayMemberPath="ChargeMove.Name" SortMemberPath="ChargeMove.ChargeMove.Name">
-                        <DataGridComboBoxColumn.ElementStyle>
-                            <Style TargetType="{x:Type ComboBox}">
-                                <Setter Property="ItemsSource" Value="{Binding Path=Species.ChargeMoves}" />
-                            </Style>
-                        </DataGridComboBoxColumn.ElementStyle>
-                        <DataGridComboBoxColumn.EditingElementStyle>
-                            <Style TargetType="{x:Type ComboBox}">
-                                <Setter Property="ItemsSource" Value="{Binding Path=Species.ChargeMoves}" />
-                                <!--<EventSetter Event="RequestBringIntoView" Handler="OnRequestBringIntoView"/>-->
-                            </Style>
-                        </DataGridComboBoxColumn.EditingElementStyle>
-                    </DataGridComboBoxColumn>
+                    <DataGridTemplateColumn Header="Charge Move" Width="Auto"  SortMemberPath="ChargeMove.ChargeMove.Name">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding ChargeMove.ChargeMove.Name, FallbackValue='None'}"/>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                        <DataGridTemplateColumn.CellEditingTemplate>
+                            <DataTemplate>
+                                <customControls:NullableComboBox ItemsSource="{Binding Path= Species.ChargeMoves}" SelectedItem="{Binding ChargeMove}" DisplayMemberPath="ChargeMove.Name" PlaceholderText="None"/>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellEditingTemplate>
+                    </DataGridTemplateColumn>
                     <!--<DataGridComboBoxColumn Header="2nd Charge Move" Width="Auto" SelectedItemBinding="{Binding ChargeMove2}" DisplayMemberPath="ChargeMove.Name" SortMemberPath="ChargeMove2.ChargeMove.Name">
                         <DataGridComboBoxColumn.ElementStyle>
                             <Style TargetType="{x:Type ComboBox}">

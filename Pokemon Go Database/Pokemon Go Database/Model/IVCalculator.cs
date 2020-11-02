@@ -162,6 +162,11 @@ namespace Pokemon_Go_Database.Model
             }
             return templateString;
         }
+
+        public void ClearPokemon()
+        {
+            this.Pokemon = null;
+        }
         #endregion
 
         #region Private Methods

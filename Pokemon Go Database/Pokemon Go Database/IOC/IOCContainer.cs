@@ -43,8 +43,7 @@ namespace Pokemon_Go_Database.IOC
                        .SingleInstance();
 
                 // Register Popups
-                builder.RegisterTypes(uiAssemblyTypes.Where(t => typeof(UserControl).IsAssignableFrom(t) && t.Namespace.EndsWith(".Popups")).ToArray())
-                       .SingleInstance();
+                builder.RegisterTypes(uiAssemblyTypes.Where(t => typeof(UserControl).IsAssignableFrom(t) && t.Namespace.EndsWith(".Popups")).ToArray());
 
                 container = builder.Build();
 
