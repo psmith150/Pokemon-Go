@@ -30,7 +30,6 @@
                         </ItemsControl.ItemTemplate>
                     </ItemsControl>
                     <Button HorizontalAlignment="Left" Content="Add Filter" Command="{Binding AddFilterCommand}" Width="100"/>
-                    <customControls:NullableComboBox ItemsSource="{Binding Path= TestValues}" SelectedItem="{Binding TestValue}" DisplayMemberPath="ChargeMove.Name" PlaceholderText="None"/>
                 </StackPanel>
             </Expander>
             <DataGrid Name="PokedexGrid" ItemsSource="{Binding PokedexEntries}" HorizontalAlignment="Stretch" AutoGenerateColumns="False">

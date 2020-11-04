@@ -288,13 +288,26 @@
       <DamageWindowDuration>300</DamageWindowDuration>
     </Move>
     <Move xsi:type="FastMove">
+      <Name>Gust</Name>
+      <Power>25</Power>
+      <Time>2000</Time>
+      <Energy>20</Energy>
+      <PowerPvp>16</PowerPvp>
+      <Turns>3</Turns>
+      <EnergyPvp>12</EnergyPvp>
+      <Type>Flying</Type>
+      <MoveType>Fast</MoveType>
+      <DamageWindowStartTime>900</DamageWindowStartTime>
+      <DamageWindowDuration>1100</DamageWindowDuration>
+    </Move>
+    <Move xsi:type="FastMove">
       <Name>Hex</Name>
       <Power>10</Power>
       <Time>1200</Time>
-      <Energy>15</Energy>
+      <Energy>16</Energy>
       <PowerPvp>6</PowerPvp>
       <Turns>2</Turns>
-      <EnergyPvp>11</EnergyPvp>
+      <EnergyPvp>12</EnergyPvp>
       <Type>Ghost</Type>
       <MoveType>Fast</MoveType>
       <DamageWindowStartTime>1000</DamageWindowStartTime>
@@ -567,7 +580,7 @@
       <Energy>14</Energy>
       <PowerPvp>6</PowerPvp>
       <Turns>2</Turns>
-      <EnergyPvp>11</EnergyPvp>
+      <EnergyPvp>12</EnergyPvp>
       <Type>Bug</Type>
       <MoveType>Fast</MoveType>
       <DamageWindowStartTime>850</DamageWindowStartTime>
@@ -734,7 +747,7 @@
       <Power>6</Power>
       <Time>1000</Time>
       <Energy>15</Energy>
-      <PowerPvp>4</PowerPvp>
+      <PowerPvp>5</PowerPvp>
       <Turns>1</Turns>
       <EnergyPvp>8</EnergyPvp>
       <Type>Ice</Type>
@@ -1298,7 +1311,7 @@
       <Power>130</Power>
       <Time>3100</Time>
       <Energy>100</Energy>
-      <PowerPvp>130</PowerPvp>
+      <PowerPvp>140</PowerPvp>
       <Turns>1</Turns>
       <EnergyPvp>75</EnergyPvp>
       <Type>Ice</Type>
@@ -1346,10 +1359,10 @@
     </Move>
     <Move xsi:type="ChargeMove">
       <Name>Brave Bird</Name>
-      <Power>90</Power>
+      <Power>130</Power>
       <Time>2000</Time>
       <Energy>100</Energy>
-      <PowerPvp>90</PowerPvp>
+      <PowerPvp>130</PowerPvp>
       <Turns>1</Turns>
       <EnergyPvp>55</EnergyPvp>
       <Type>Flying</Type>
@@ -1737,10 +1750,10 @@
     </Move>
     <Move xsi:type="ChargeMove">
       <Name>Drill Peck</Name>
-      <Power>60</Power>
+      <Power>65</Power>
       <Time>2300</Time>
       <Energy>33</Energy>
-      <PowerPvp>60</PowerPvp>
+      <PowerPvp>65</PowerPvp>
       <Turns>1</Turns>
       <EnergyPvp>40</EnergyPvp>
       <Type>Flying</Type>
@@ -1759,7 +1772,7 @@
       <Energy>50</Energy>
       <PowerPvp>80</PowerPvp>
       <Turns>1</Turns>
-      <EnergyPvp>55</EnergyPvp>
+      <EnergyPvp>45</EnergyPvp>
       <Type>Ground</Type>
       <MoveType>Charge</MoveType>
       <DamageWindowStartTime>1700</DamageWindowStartTime>
@@ -1927,7 +1940,7 @@
       <Power>70</Power>
       <Time>3800</Time>
       <Energy>33</Energy>
-      <PowerPvp>70</PowerPvp>
+      <PowerPvp>65</PowerPvp>
       <Turns>1</Turns>
       <EnergyPvp>50</EnergyPvp>
       <Type>Fire</Type>
@@ -1980,11 +1993,28 @@
       <Energy>100</Energy>
       <PowerPvp>110</PowerPvp>
       <Turns>1</Turns>
-      <EnergyPvp>65</EnergyPvp>
+      <EnergyPvp>70</EnergyPvp>
       <Type>Steel</Type>
       <MoveType>Charge</MoveType>
       <DamageWindowStartTime>1600</DamageWindowStartTime>
       <DamageWindowDuration>900</DamageWindowDuration>
+      <DodgeFlashTime>0</DodgeFlashTime>
+      <SelfBuff>0</SelfBuff>
+      <EnemyBuff>0</EnemyBuff>
+      <BuffProc>0</BuffProc>
+    </Move>
+    <Move xsi:type="ChargeMove">
+      <Name>Fly</Name>
+      <Power>80</Power>
+      <Time>1800</Time>
+      <Energy>50</Energy>
+      <PowerPvp>80</PowerPvp>
+      <Turns>1</Turns>
+      <EnergyPvp>45</EnergyPvp>
+      <Type>Flying</Type>
+      <MoveType>Charge</MoveType>
+      <DamageWindowStartTime>1200</DamageWindowStartTime>
+      <DamageWindowDuration>300</DamageWindowDuration>
       <DodgeFlashTime>0</DodgeFlashTime>
       <SelfBuff>0</SelfBuff>
       <EnemyBuff>0</EnemyBuff>
@@ -2012,7 +2042,7 @@
       <Power>140</Power>
       <Time>3500</Time>
       <Energy>100</Energy>
-      <PowerPvp>150</PowerPvp>
+      <PowerPvp>140</PowerPvp>
       <Turns>1</Turns>
       <EnergyPvp>75</EnergyPvp>
       <Type>Fighting</Type>
@@ -2519,12 +2549,12 @@
     </Move>
     <Move xsi:type="ChargeMove">
       <Name>Lunge</Name>
-      <Power>0</Power>
+      <Power>55</Power>
       <Time>2900</Time>
-      <Energy>0</Energy>
-      <PowerPvp>0</PowerPvp>
+      <Energy>33</Energy>
+      <PowerPvp>60</PowerPvp>
       <Turns>1</Turns>
-      <EnergyPvp>0</EnergyPvp>
+      <EnergyPvp>45</EnergyPvp>
       <Type>Bug</Type>
       <MoveType>Charge</MoveType>
       <DamageWindowStartTime>2400</DamageWindowStartTime>
@@ -2641,9 +2671,9 @@
       <Power>130</Power>
       <Time>3900</Time>
       <Energy>100</Energy>
-      <PowerPvp>130</PowerPvp>
+      <PowerPvp>110</PowerPvp>
       <Turns>1</Turns>
-      <EnergyPvp>70</EnergyPvp>
+      <EnergyPvp>60</EnergyPvp>
       <Type>Fairy</Type>
       <MoveType>Charge</MoveType>
       <DamageWindowStartTime>2200</DamageWindowStartTime>
@@ -3250,12 +3280,12 @@
     </Move>
     <Move xsi:type="ChargeMove">
       <Name>Shadow Bone</Name>
-      <Power>0</Power>
+      <Power>80</Power>
       <Time>2800</Time>
-      <Energy>0</Energy>
-      <PowerPvp>0</PowerPvp>
+      <Energy>50</Energy>
+      <PowerPvp>80</PowerPvp>
       <Turns>1</Turns>
-      <EnergyPvp>0</EnergyPvp>
+      <EnergyPvp>45</EnergyPvp>
       <Type>Ghost</Type>
       <MoveType>Charge</MoveType>
       <DamageWindowStartTime>2250</DamageWindowStartTime>
@@ -3623,6 +3653,23 @@
       <BuffProc>0</BuffProc>
     </Move>
     <Move xsi:type="ChargeMove">
+      <Name>Tri Attack</Name>
+      <Power>75</Power>
+      <Time>2500</Time>
+      <Energy>50</Energy>
+      <PowerPvp>65</PowerPvp>
+      <Turns>1</Turns>
+      <EnergyPvp>50</EnergyPvp>
+      <Type>Normal</Type>
+      <MoveType>Charge</MoveType>
+      <DamageWindowStartTime>1300</DamageWindowStartTime>
+      <DamageWindowDuration>1100</DamageWindowDuration>
+      <DodgeFlashTime>0</DodgeFlashTime>
+      <SelfBuff>0</SelfBuff>
+      <EnemyBuff>0</EnemyBuff>
+      <BuffProc>0</BuffProc>
+    </Move>
+    <Move xsi:type="ChargeMove">
       <Name>Twister</Name>
       <Power>45</Power>
       <Time>2800</Time>
@@ -3634,6 +3681,23 @@
       <MoveType>Charge</MoveType>
       <DamageWindowStartTime>950</DamageWindowStartTime>
       <DamageWindowDuration>1650</DamageWindowDuration>
+      <DodgeFlashTime>0</DodgeFlashTime>
+      <SelfBuff>0</SelfBuff>
+      <EnemyBuff>0</EnemyBuff>
+      <BuffProc>0</BuffProc>
+    </Move>
+    <Move xsi:type="ChargeMove">
+      <Name>V Create</Name>
+      <Power>95</Power>
+      <Time>2800</Time>
+      <Energy>33</Energy>
+      <PowerPvp>95</PowerPvp>
+      <Turns>1</Turns>
+      <EnergyPvp>40</EnergyPvp>
+      <Type>Fire</Type>
+      <MoveType>Charge</MoveType>
+      <DamageWindowStartTime>1700</DamageWindowStartTime>
+      <DamageWindowDuration>800</DamageWindowDuration>
       <DodgeFlashTime>0</DodgeFlashTime>
       <SelfBuff>0</SelfBuff>
       <EnemyBuff>0</EnemyBuff>
@@ -3746,9 +3810,9 @@
       <Power>90</Power>
       <Time>2600</Time>
       <Energy>50</Energy>
-      <PowerPvp>90</PowerPvp>
+      <PowerPvp>100</PowerPvp>
       <Turns>1</Turns>
-      <EnergyPvp>50</EnergyPvp>
+      <EnergyPvp>45</EnergyPvp>
       <Type>Electric</Type>
       <MoveType>Charge</MoveType>
       <DamageWindowStartTime>1700</DamageWindowStartTime>
@@ -4266,7 +4330,7 @@
             <Power>70</Power>
             <Time>3800</Time>
             <Energy>33</Energy>
-            <PowerPvp>70</PowerPvp>
+            <PowerPvp>65</PowerPvp>
             <Turns>1</Turns>
             <EnergyPvp>50</EnergyPvp>
             <Type>Fire</Type>
@@ -4472,6 +4536,22 @@
             <Type>Flying</Type>
             <MoveType>Fast</MoveType>
             <DamageWindowStartTime>550</DamageWindowStartTime>
+            <DamageWindowDuration>200</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>true</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Dragon Breath</Name>
+            <Power>6</Power>
+            <Time>500</Time>
+            <Energy>4</Energy>
+            <PowerPvp>4</PowerPvp>
+            <Turns>1</Turns>
+            <EnergyPvp>3</EnergyPvp>
+            <Type>Dragon</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>300</DamageWindowStartTime>
             <DamageWindowDuration>200</DamageWindowDuration>
           </FastMove>
           <IsLegacy>true</IsLegacy>
@@ -4881,7 +4961,7 @@
             <Energy>100</Energy>
             <PowerPvp>110</PowerPvp>
             <Turns>1</Turns>
-            <EnergyPvp>65</EnergyPvp>
+            <EnergyPvp>70</EnergyPvp>
             <Type>Steel</Type>
             <MoveType>Charge</MoveType>
             <DamageWindowStartTime>1600</DamageWindowStartTime>
@@ -5333,7 +5413,7 @@
             <Energy>14</Energy>
             <PowerPvp>6</PowerPvp>
             <Turns>2</Turns>
-            <EnergyPvp>11</EnergyPvp>
+            <EnergyPvp>12</EnergyPvp>
             <Type>Bug</Type>
             <MoveType>Fast</MoveType>
             <DamageWindowStartTime>850</DamageWindowStartTime>
@@ -5769,10 +5849,10 @@
         <PokedexChargeMoveWrapper>
           <ChargeMove>
             <Name>Brave Bird</Name>
-            <Power>90</Power>
+            <Power>130</Power>
             <Time>2000</Time>
             <Energy>100</Energy>
-            <PowerPvp>90</PowerPvp>
+            <PowerPvp>130</PowerPvp>
             <Turns>1</Turns>
             <EnergyPvp>55</EnergyPvp>
             <Type>Flying</Type>
@@ -6104,10 +6184,10 @@
         <PokedexChargeMoveWrapper>
           <ChargeMove>
             <Name>Drill Peck</Name>
-            <Power>60</Power>
+            <Power>65</Power>
             <Time>2300</Time>
             <Energy>33</Energy>
-            <PowerPvp>60</PowerPvp>
+            <PowerPvp>65</PowerPvp>
             <Turns>1</Turns>
             <EnergyPvp>40</EnergyPvp>
             <Type>Flying</Type>
@@ -6234,7 +6314,7 @@
             <Energy>50</Energy>
             <PowerPvp>80</PowerPvp>
             <Turns>1</Turns>
-            <EnergyPvp>55</EnergyPvp>
+            <EnergyPvp>45</EnergyPvp>
             <Type>Ground</Type>
             <MoveType>Charge</MoveType>
             <DamageWindowStartTime>1700</DamageWindowStartTime>
@@ -6623,9 +6703,9 @@
             <Power>90</Power>
             <Time>2600</Time>
             <Energy>50</Energy>
-            <PowerPvp>90</PowerPvp>
+            <PowerPvp>100</PowerPvp>
             <Turns>1</Turns>
-            <EnergyPvp>50</EnergyPvp>
+            <EnergyPvp>45</EnergyPvp>
             <Type>Electric</Type>
             <MoveType>Charge</MoveType>
             <DamageWindowStartTime>1700</DamageWindowStartTime>
@@ -6740,9 +6820,9 @@
             <Power>90</Power>
             <Time>2600</Time>
             <Energy>50</Energy>
-            <PowerPvp>90</PowerPvp>
+            <PowerPvp>100</PowerPvp>
             <Turns>1</Turns>
-            <EnergyPvp>50</EnergyPvp>
+            <EnergyPvp>45</EnergyPvp>
             <Type>Electric</Type>
             <MoveType>Charge</MoveType>
             <DamageWindowStartTime>1700</DamageWindowStartTime>
@@ -7841,9 +7921,9 @@
             <Power>130</Power>
             <Time>3900</Time>
             <Energy>100</Energy>
-            <PowerPvp>130</PowerPvp>
+            <PowerPvp>110</PowerPvp>
             <Turns>1</Turns>
-            <EnergyPvp>70</EnergyPvp>
+            <EnergyPvp>60</EnergyPvp>
             <Type>Fairy</Type>
             <MoveType>Charge</MoveType>
             <DamageWindowStartTime>2200</DamageWindowStartTime>
@@ -7978,9 +8058,9 @@
             <Power>130</Power>
             <Time>3900</Time>
             <Energy>100</Energy>
-            <PowerPvp>130</PowerPvp>
+            <PowerPvp>110</PowerPvp>
             <Turns>1</Turns>
-            <EnergyPvp>70</EnergyPvp>
+            <EnergyPvp>60</EnergyPvp>
             <Type>Fairy</Type>
             <MoveType>Charge</MoveType>
             <DamageWindowStartTime>2200</DamageWindowStartTime>
@@ -8103,7 +8183,7 @@
             <Power>70</Power>
             <Time>3800</Time>
             <Energy>33</Energy>
-            <PowerPvp>70</PowerPvp>
+            <PowerPvp>65</PowerPvp>
             <Turns>1</Turns>
             <EnergyPvp>50</EnergyPvp>
             <Type>Fire</Type>
@@ -8845,9 +8925,9 @@
             <Power>130</Power>
             <Time>3900</Time>
             <Energy>100</Energy>
-            <PowerPvp>130</PowerPvp>
+            <PowerPvp>110</PowerPvp>
             <Turns>1</Turns>
-            <EnergyPvp>70</EnergyPvp>
+            <EnergyPvp>60</EnergyPvp>
             <Type>Fairy</Type>
             <MoveType>Charge</MoveType>
             <DamageWindowStartTime>2200</DamageWindowStartTime>
@@ -8950,9 +9030,9 @@
             <Power>130</Power>
             <Time>3900</Time>
             <Energy>100</Energy>
-            <PowerPvp>130</PowerPvp>
+            <PowerPvp>110</PowerPvp>
             <Turns>1</Turns>
-            <EnergyPvp>70</EnergyPvp>
+            <EnergyPvp>60</EnergyPvp>
             <Type>Fairy</Type>
             <MoveType>Charge</MoveType>
             <DamageWindowStartTime>2200</DamageWindowStartTime>
@@ -9055,9 +9135,9 @@
             <Power>130</Power>
             <Time>3900</Time>
             <Energy>100</Energy>
-            <PowerPvp>130</PowerPvp>
+            <PowerPvp>110</PowerPvp>
             <Turns>1</Turns>
-            <EnergyPvp>70</EnergyPvp>
+            <EnergyPvp>60</EnergyPvp>
             <Type>Fairy</Type>
             <MoveType>Charge</MoveType>
             <DamageWindowStartTime>2200</DamageWindowStartTime>
@@ -9511,7 +9591,7 @@
             <Energy>14</Energy>
             <PowerPvp>6</PowerPvp>
             <Turns>2</Turns>
-            <EnergyPvp>11</EnergyPvp>
+            <EnergyPvp>12</EnergyPvp>
             <Type>Bug</Type>
             <MoveType>Fast</MoveType>
             <DamageWindowStartTime>850</DamageWindowStartTime>
@@ -10837,9 +10917,9 @@
             <Power>90</Power>
             <Time>2600</Time>
             <Energy>50</Energy>
-            <PowerPvp>90</PowerPvp>
+            <PowerPvp>100</PowerPvp>
             <Turns>1</Turns>
-            <EnergyPvp>50</EnergyPvp>
+            <EnergyPvp>45</EnergyPvp>
             <Type>Electric</Type>
             <MoveType>Charge</MoveType>
             <DamageWindowStartTime>1700</DamageWindowStartTime>
@@ -11579,7 +11659,7 @@
             <Power>140</Power>
             <Time>3500</Time>
             <Energy>100</Energy>
-            <PowerPvp>150</PowerPvp>
+            <PowerPvp>140</PowerPvp>
             <Turns>1</Turns>
             <EnergyPvp>75</EnergyPvp>
             <Type>Fighting</Type>
@@ -12647,7 +12727,7 @@
             <Power>130</Power>
             <Time>3100</Time>
             <Energy>100</Energy>
-            <PowerPvp>130</PowerPvp>
+            <PowerPvp>140</PowerPvp>
             <Turns>1</Turns>
             <EnergyPvp>75</EnergyPvp>
             <Type>Ice</Type>
@@ -13179,7 +13259,7 @@
             <Power>70</Power>
             <Time>3800</Time>
             <Energy>33</Energy>
-            <PowerPvp>70</PowerPvp>
+            <PowerPvp>65</PowerPvp>
             <Turns>1</Turns>
             <EnergyPvp>50</EnergyPvp>
             <Type>Fire</Type>
@@ -13322,7 +13402,7 @@
             <Energy>50</Energy>
             <PowerPvp>80</PowerPvp>
             <Turns>1</Turns>
-            <EnergyPvp>55</EnergyPvp>
+            <EnergyPvp>45</EnergyPvp>
             <Type>Ground</Type>
             <MoveType>Charge</MoveType>
             <DamageWindowStartTime>1700</DamageWindowStartTime>
@@ -13758,7 +13838,7 @@
             <Energy>100</Energy>
             <PowerPvp>110</PowerPvp>
             <Turns>1</Turns>
-            <EnergyPvp>65</EnergyPvp>
+            <EnergyPvp>70</EnergyPvp>
             <Type>Steel</Type>
             <MoveType>Charge</MoveType>
             <DamageWindowStartTime>1600</DamageWindowStartTime>
@@ -13959,10 +14039,10 @@
         <PokedexChargeMoveWrapper>
           <ChargeMove>
             <Name>Brave Bird</Name>
-            <Power>90</Power>
+            <Power>130</Power>
             <Time>2000</Time>
             <Energy>100</Energy>
-            <PowerPvp>90</PowerPvp>
+            <PowerPvp>130</PowerPvp>
             <Turns>1</Turns>
             <EnergyPvp>55</EnergyPvp>
             <Type>Flying</Type>
@@ -13999,10 +14079,10 @@
         <PokedexChargeMoveWrapper>
           <ChargeMove>
             <Name>Drill Peck</Name>
-            <Power>60</Power>
+            <Power>65</Power>
             <Time>2300</Time>
             <Energy>33</Energy>
-            <PowerPvp>60</PowerPvp>
+            <PowerPvp>65</PowerPvp>
             <Turns>1</Turns>
             <EnergyPvp>40</EnergyPvp>
             <Type>Flying</Type>
@@ -14084,10 +14164,10 @@
         <PokedexChargeMoveWrapper>
           <ChargeMove>
             <Name>Drill Peck</Name>
-            <Power>60</Power>
+            <Power>65</Power>
             <Time>2300</Time>
             <Energy>33</Energy>
-            <PowerPvp>60</PowerPvp>
+            <PowerPvp>65</PowerPvp>
             <Turns>1</Turns>
             <EnergyPvp>40</EnergyPvp>
             <Type>Flying</Type>
@@ -14124,10 +14204,10 @@
         <PokedexChargeMoveWrapper>
           <ChargeMove>
             <Name>Brave Bird</Name>
-            <Power>90</Power>
+            <Power>130</Power>
             <Time>2000</Time>
             <Energy>100</Energy>
-            <PowerPvp>90</PowerPvp>
+            <PowerPvp>130</PowerPvp>
             <Turns>1</Turns>
             <EnergyPvp>55</EnergyPvp>
             <Type>Flying</Type>
@@ -14409,7 +14489,7 @@
             <Power>130</Power>
             <Time>3100</Time>
             <Energy>100</Energy>
-            <PowerPvp>130</PowerPvp>
+            <PowerPvp>140</PowerPvp>
             <Turns>1</Turns>
             <EnergyPvp>75</EnergyPvp>
             <Type>Ice</Type>
@@ -14619,7 +14699,7 @@
             <Energy>14</Energy>
             <PowerPvp>6</PowerPvp>
             <Turns>2</Turns>
-            <EnergyPvp>11</EnergyPvp>
+            <EnergyPvp>12</EnergyPvp>
             <Type>Bug</Type>
             <MoveType>Fast</MoveType>
             <DamageWindowStartTime>850</DamageWindowStartTime>
@@ -14997,7 +15077,7 @@
             <Power>130</Power>
             <Time>3100</Time>
             <Energy>100</Energy>
-            <PowerPvp>130</PowerPvp>
+            <PowerPvp>140</PowerPvp>
             <Turns>1</Turns>
             <EnergyPvp>75</EnergyPvp>
             <Type>Ice</Type>
@@ -15329,10 +15409,10 @@
             <Name>Hex</Name>
             <Power>10</Power>
             <Time>1200</Time>
-            <Energy>15</Energy>
+            <Energy>16</Energy>
             <PowerPvp>6</PowerPvp>
             <Turns>2</Turns>
-            <EnergyPvp>11</EnergyPvp>
+            <EnergyPvp>12</EnergyPvp>
             <Type>Ghost</Type>
             <MoveType>Fast</MoveType>
             <DamageWindowStartTime>1000</DamageWindowStartTime>
@@ -15396,7 +15476,7 @@
             <Power>140</Power>
             <Time>3500</Time>
             <Energy>100</Energy>
-            <PowerPvp>150</PowerPvp>
+            <PowerPvp>140</PowerPvp>
             <Turns>1</Turns>
             <EnergyPvp>75</EnergyPvp>
             <Type>Fighting</Type>
@@ -15503,6 +15583,26 @@
             <MoveType>Charge</MoveType>
             <DamageWindowStartTime>1300</DamageWindowStartTime>
             <DamageWindowDuration>1300</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+            <SelfBuff>0</SelfBuff>
+            <EnemyBuff>0</EnemyBuff>
+            <BuffProc>0</BuffProc>
+          </ChargeMove>
+          <IsLegacy>true</IsLegacy>
+        </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Shadow Punch</Name>
+            <Power>40</Power>
+            <Time>1700</Time>
+            <Energy>33</Energy>
+            <PowerPvp>40</PowerPvp>
+            <Turns>1</Turns>
+            <EnergyPvp>35</EnergyPvp>
+            <Type>Ghost</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>1300</DamageWindowStartTime>
+            <DamageWindowDuration>200</DamageWindowDuration>
             <DodgeFlashTime>0</DodgeFlashTime>
             <SelfBuff>0</SelfBuff>
             <EnemyBuff>0</EnemyBuff>
@@ -15851,7 +15951,7 @@
             <Power>140</Power>
             <Time>3500</Time>
             <Energy>100</Energy>
-            <PowerPvp>150</PowerPvp>
+            <PowerPvp>140</PowerPvp>
             <Turns>1</Turns>
             <EnergyPvp>75</EnergyPvp>
             <Type>Fighting</Type>
@@ -17375,7 +17475,7 @@
             <Energy>14</Energy>
             <PowerPvp>6</PowerPvp>
             <Turns>2</Turns>
-            <EnergyPvp>11</EnergyPvp>
+            <EnergyPvp>12</EnergyPvp>
             <Type>Bug</Type>
             <MoveType>Fast</MoveType>
             <DamageWindowStartTime>850</DamageWindowStartTime>
@@ -17496,7 +17596,7 @@
             <Energy>14</Energy>
             <PowerPvp>6</PowerPvp>
             <Turns>2</Turns>
-            <EnergyPvp>11</EnergyPvp>
+            <EnergyPvp>12</EnergyPvp>
             <Type>Bug</Type>
             <MoveType>Fast</MoveType>
             <DamageWindowStartTime>850</DamageWindowStartTime>
@@ -18121,7 +18221,7 @@
             <Energy>14</Energy>
             <PowerPvp>6</PowerPvp>
             <Turns>2</Turns>
-            <EnergyPvp>11</EnergyPvp>
+            <EnergyPvp>12</EnergyPvp>
             <Type>Bug</Type>
             <MoveType>Fast</MoveType>
             <DamageWindowStartTime>850</DamageWindowStartTime>
@@ -18429,7 +18529,7 @@
             <Energy>100</Energy>
             <PowerPvp>110</PowerPvp>
             <Turns>1</Turns>
-            <EnergyPvp>65</EnergyPvp>
+            <EnergyPvp>70</EnergyPvp>
             <Type>Steel</Type>
             <MoveType>Charge</MoveType>
             <DamageWindowStartTime>1600</DamageWindowStartTime>
@@ -18552,7 +18652,7 @@
             <Power>130</Power>
             <Time>3100</Time>
             <Energy>100</Energy>
-            <PowerPvp>130</PowerPvp>
+            <PowerPvp>140</PowerPvp>
             <Turns>1</Turns>
             <EnergyPvp>75</EnergyPvp>
             <Type>Ice</Type>
@@ -18820,7 +18920,7 @@
             <Energy>50</Energy>
             <PowerPvp>80</PowerPvp>
             <Turns>1</Turns>
-            <EnergyPvp>55</EnergyPvp>
+            <EnergyPvp>45</EnergyPvp>
             <Type>Ground</Type>
             <MoveType>Charge</MoveType>
             <DamageWindowStartTime>1700</DamageWindowStartTime>
@@ -19763,7 +19863,7 @@
             <Power>140</Power>
             <Time>3500</Time>
             <Energy>100</Energy>
-            <PowerPvp>150</PowerPvp>
+            <PowerPvp>140</PowerPvp>
             <Turns>1</Turns>
             <EnergyPvp>75</EnergyPvp>
             <Type>Fighting</Type>
@@ -20586,7 +20686,7 @@
             <Power>130</Power>
             <Time>3100</Time>
             <Energy>100</Energy>
-            <PowerPvp>130</PowerPvp>
+            <PowerPvp>140</PowerPvp>
             <Turns>1</Turns>
             <EnergyPvp>75</EnergyPvp>
             <Type>Ice</Type>
@@ -22567,7 +22667,7 @@
             <Power>130</Power>
             <Time>3100</Time>
             <Energy>100</Energy>
-            <PowerPvp>130</PowerPvp>
+            <PowerPvp>140</PowerPvp>
             <Turns>1</Turns>
             <EnergyPvp>75</EnergyPvp>
             <Type>Ice</Type>
@@ -22749,10 +22849,10 @@
         <PokedexChargeMoveWrapper>
           <ChargeMove>
             <Name>Drill Peck</Name>
-            <Power>60</Power>
+            <Power>65</Power>
             <Time>2300</Time>
             <Energy>33</Energy>
-            <PowerPvp>60</PowerPvp>
+            <PowerPvp>65</PowerPvp>
             <Turns>1</Turns>
             <EnergyPvp>40</EnergyPvp>
             <Type>Flying</Type>
@@ -23469,7 +23569,7 @@
             <Power>140</Power>
             <Time>3500</Time>
             <Energy>100</Energy>
-            <PowerPvp>150</PowerPvp>
+            <PowerPvp>140</PowerPvp>
             <Turns>1</Turns>
             <EnergyPvp>75</EnergyPvp>
             <Type>Fighting</Type>
@@ -23710,7 +23810,7 @@
             <Energy>14</Energy>
             <PowerPvp>6</PowerPvp>
             <Turns>2</Turns>
-            <EnergyPvp>11</EnergyPvp>
+            <EnergyPvp>12</EnergyPvp>
             <Type>Bug</Type>
             <MoveType>Fast</MoveType>
             <DamageWindowStartTime>850</DamageWindowStartTime>
@@ -23826,7 +23926,7 @@
             <Power>130</Power>
             <Time>3100</Time>
             <Energy>100</Energy>
-            <PowerPvp>130</PowerPvp>
+            <PowerPvp>140</PowerPvp>
             <Turns>1</Turns>
             <EnergyPvp>75</EnergyPvp>
             <Type>Ice</Type>
@@ -23866,7 +23966,7 @@
             <Power>140</Power>
             <Time>3500</Time>
             <Energy>100</Energy>
-            <PowerPvp>150</PowerPvp>
+            <PowerPvp>140</PowerPvp>
             <Turns>1</Turns>
             <EnergyPvp>75</EnergyPvp>
             <Type>Fighting</Type>
@@ -24046,7 +24146,7 @@
             <Power>70</Power>
             <Time>3800</Time>
             <Energy>33</Energy>
-            <PowerPvp>70</PowerPvp>
+            <PowerPvp>65</PowerPvp>
             <Turns>1</Turns>
             <EnergyPvp>50</EnergyPvp>
             <Type>Fire</Type>
@@ -24228,7 +24328,7 @@
             <Energy>100</Energy>
             <PowerPvp>110</PowerPvp>
             <Turns>1</Turns>
-            <EnergyPvp>65</EnergyPvp>
+            <EnergyPvp>70</EnergyPvp>
             <Type>Steel</Type>
             <MoveType>Charge</MoveType>
             <DamageWindowStartTime>1600</DamageWindowStartTime>
@@ -24246,9 +24346,9 @@
             <Power>90</Power>
             <Time>2600</Time>
             <Energy>50</Energy>
-            <PowerPvp>90</PowerPvp>
+            <PowerPvp>100</PowerPvp>
             <Turns>1</Turns>
-            <EnergyPvp>50</EnergyPvp>
+            <EnergyPvp>45</EnergyPvp>
             <Type>Electric</Type>
             <MoveType>Charge</MoveType>
             <DamageWindowStartTime>1700</DamageWindowStartTime>
@@ -24726,7 +24826,7 @@
             <Power>70</Power>
             <Time>3800</Time>
             <Energy>33</Energy>
-            <PowerPvp>70</PowerPvp>
+            <PowerPvp>65</PowerPvp>
             <Turns>1</Turns>
             <EnergyPvp>50</EnergyPvp>
             <Type>Fire</Type>
@@ -24831,7 +24931,7 @@
             <Power>70</Power>
             <Time>3800</Time>
             <Energy>33</Energy>
-            <PowerPvp>70</PowerPvp>
+            <PowerPvp>65</PowerPvp>
             <Turns>1</Turns>
             <EnergyPvp>50</EnergyPvp>
             <Type>Fire</Type>
@@ -26111,7 +26211,7 @@
             <Energy>14</Energy>
             <PowerPvp>6</PowerPvp>
             <Turns>2</Turns>
-            <EnergyPvp>11</EnergyPvp>
+            <EnergyPvp>12</EnergyPvp>
             <Type>Bug</Type>
             <MoveType>Fast</MoveType>
             <DamageWindowStartTime>850</DamageWindowStartTime>
@@ -26849,9 +26949,9 @@
             <Power>90</Power>
             <Time>2600</Time>
             <Energy>50</Energy>
-            <PowerPvp>90</PowerPvp>
+            <PowerPvp>100</PowerPvp>
             <Turns>1</Turns>
-            <EnergyPvp>50</EnergyPvp>
+            <EnergyPvp>45</EnergyPvp>
             <Type>Electric</Type>
             <MoveType>Charge</MoveType>
             <DamageWindowStartTime>1700</DamageWindowStartTime>
@@ -27701,10 +27801,10 @@
         <PokedexChargeMoveWrapper>
           <ChargeMove>
             <Name>Drill Peck</Name>
-            <Power>60</Power>
+            <Power>65</Power>
             <Time>2300</Time>
             <Energy>33</Energy>
-            <PowerPvp>60</PowerPvp>
+            <PowerPvp>65</PowerPvp>
             <Turns>1</Turns>
             <EnergyPvp>40</EnergyPvp>
             <Type>Flying</Type>
@@ -28164,7 +28264,7 @@
             <Power>140</Power>
             <Time>3500</Time>
             <Energy>100</Energy>
-            <PowerPvp>150</PowerPvp>
+            <PowerPvp>140</PowerPvp>
             <Turns>1</Turns>
             <EnergyPvp>75</EnergyPvp>
             <Type>Fighting</Type>
@@ -28257,6 +28357,22 @@
             <Type>Poison</Type>
             <MoveType>Fast</MoveType>
             <DamageWindowStartTime>400</DamageWindowStartTime>
+            <DamageWindowDuration>200</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Bullet Seed</Name>
+            <Power>8</Power>
+            <Time>1100</Time>
+            <Energy>14</Energy>
+            <PowerPvp>5</PowerPvp>
+            <Turns>2</Turns>
+            <EnergyPvp>13</EnergyPvp>
+            <Type>Grass</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>850</DamageWindowStartTime>
             <DamageWindowDuration>200</DamageWindowDuration>
           </FastMove>
           <IsLegacy>false</IsLegacy>
@@ -28709,7 +28825,7 @@
             <Power>130</Power>
             <Time>3100</Time>
             <Energy>100</Energy>
-            <PowerPvp>130</PowerPvp>
+            <PowerPvp>140</PowerPvp>
             <Turns>1</Turns>
             <EnergyPvp>75</EnergyPvp>
             <Type>Ice</Type>
@@ -29008,7 +29124,7 @@
             <Energy>14</Energy>
             <PowerPvp>6</PowerPvp>
             <Turns>2</Turns>
-            <EnergyPvp>11</EnergyPvp>
+            <EnergyPvp>12</EnergyPvp>
             <Type>Bug</Type>
             <MoveType>Fast</MoveType>
             <DamageWindowStartTime>850</DamageWindowStartTime>
@@ -30026,10 +30142,10 @@
         <PokedexChargeMoveWrapper>
           <ChargeMove>
             <Name>Drill Peck</Name>
-            <Power>60</Power>
+            <Power>65</Power>
             <Time>2300</Time>
             <Energy>33</Energy>
-            <PowerPvp>60</PowerPvp>
+            <PowerPvp>65</PowerPvp>
             <Turns>1</Turns>
             <EnergyPvp>40</EnergyPvp>
             <Type>Flying</Type>
@@ -30114,7 +30230,7 @@
             <Power>130</Power>
             <Time>3100</Time>
             <Energy>100</Energy>
-            <PowerPvp>130</PowerPvp>
+            <PowerPvp>140</PowerPvp>
             <Turns>1</Turns>
             <EnergyPvp>75</EnergyPvp>
             <Type>Ice</Type>
@@ -30164,10 +30280,10 @@
             <Name>Hex</Name>
             <Power>10</Power>
             <Time>1200</Time>
-            <Energy>15</Energy>
+            <Energy>16</Energy>
             <PowerPvp>6</PowerPvp>
             <Turns>2</Turns>
-            <EnergyPvp>11</EnergyPvp>
+            <EnergyPvp>12</EnergyPvp>
             <Type>Ghost</Type>
             <MoveType>Fast</MoveType>
             <DamageWindowStartTime>1000</DamageWindowStartTime>
@@ -31067,7 +31183,7 @@
             <Energy>50</Energy>
             <PowerPvp>80</PowerPvp>
             <Turns>1</Turns>
-            <EnergyPvp>55</EnergyPvp>
+            <EnergyPvp>45</EnergyPvp>
             <Type>Ground</Type>
             <MoveType>Charge</MoveType>
             <DamageWindowStartTime>1700</DamageWindowStartTime>
@@ -32433,7 +32549,7 @@
             <Power>70</Power>
             <Time>3800</Time>
             <Energy>33</Energy>
-            <PowerPvp>70</PowerPvp>
+            <PowerPvp>65</PowerPvp>
             <Turns>1</Turns>
             <EnergyPvp>50</EnergyPvp>
             <Type>Fire</Type>
@@ -32585,7 +32701,7 @@
             <Power>6</Power>
             <Time>1000</Time>
             <Energy>15</Energy>
-            <PowerPvp>4</PowerPvp>
+            <PowerPvp>5</PowerPvp>
             <Turns>1</Turns>
             <EnergyPvp>8</EnergyPvp>
             <Type>Ice</Type>
@@ -32690,7 +32806,7 @@
             <Power>6</Power>
             <Time>1000</Time>
             <Energy>15</Energy>
-            <PowerPvp>4</PowerPvp>
+            <PowerPvp>5</PowerPvp>
             <Turns>1</Turns>
             <EnergyPvp>8</EnergyPvp>
             <Type>Ice</Type>
@@ -33427,10 +33543,10 @@
         <PokedexChargeMoveWrapper>
           <ChargeMove>
             <Name>Brave Bird</Name>
-            <Power>90</Power>
+            <Power>130</Power>
             <Time>2000</Time>
             <Energy>100</Energy>
-            <PowerPvp>90</PowerPvp>
+            <PowerPvp>130</PowerPvp>
             <Turns>1</Turns>
             <EnergyPvp>55</EnergyPvp>
             <Type>Flying</Type>
@@ -33452,7 +33568,7 @@
             <Energy>100</Energy>
             <PowerPvp>110</PowerPvp>
             <Turns>1</Turns>
-            <EnergyPvp>65</EnergyPvp>
+            <EnergyPvp>70</EnergyPvp>
             <Type>Steel</Type>
             <MoveType>Charge</MoveType>
             <DamageWindowStartTime>1600</DamageWindowStartTime>
@@ -33801,7 +33917,7 @@
             <Power>130</Power>
             <Time>3100</Time>
             <Energy>100</Energy>
-            <PowerPvp>130</PowerPvp>
+            <PowerPvp>140</PowerPvp>
             <Turns>1</Turns>
             <EnergyPvp>75</EnergyPvp>
             <Type>Ice</Type>
@@ -34565,9 +34681,9 @@
             <Power>90</Power>
             <Time>2600</Time>
             <Energy>50</Energy>
-            <PowerPvp>90</PowerPvp>
+            <PowerPvp>100</PowerPvp>
             <Turns>1</Turns>
-            <EnergyPvp>50</EnergyPvp>
+            <EnergyPvp>45</EnergyPvp>
             <Type>Electric</Type>
             <MoveType>Charge</MoveType>
             <DamageWindowStartTime>1700</DamageWindowStartTime>
@@ -34871,7 +34987,7 @@
             <Power>6</Power>
             <Time>1000</Time>
             <Energy>15</Energy>
-            <PowerPvp>4</PowerPvp>
+            <PowerPvp>5</PowerPvp>
             <Turns>1</Turns>
             <EnergyPvp>8</EnergyPvp>
             <Type>Ice</Type>
@@ -35530,9 +35646,9 @@
             <Power>90</Power>
             <Time>2600</Time>
             <Energy>50</Energy>
-            <PowerPvp>90</PowerPvp>
+            <PowerPvp>100</PowerPvp>
             <Turns>1</Turns>
-            <EnergyPvp>50</EnergyPvp>
+            <EnergyPvp>45</EnergyPvp>
             <Type>Electric</Type>
             <MoveType>Charge</MoveType>
             <DamageWindowStartTime>1700</DamageWindowStartTime>
@@ -36622,10 +36738,10 @@
         <PokedexChargeMoveWrapper>
           <ChargeMove>
             <Name>Brave Bird</Name>
-            <Power>90</Power>
+            <Power>130</Power>
             <Time>2000</Time>
             <Energy>100</Energy>
-            <PowerPvp>90</PowerPvp>
+            <PowerPvp>130</PowerPvp>
             <Turns>1</Turns>
             <EnergyPvp>55</EnergyPvp>
             <Type>Flying</Type>
@@ -37250,7 +37366,7 @@
             <Power>70</Power>
             <Time>3800</Time>
             <Energy>33</Energy>
-            <PowerPvp>70</PowerPvp>
+            <PowerPvp>65</PowerPvp>
             <Turns>1</Turns>
             <EnergyPvp>50</EnergyPvp>
             <Type>Fire</Type>
@@ -37375,7 +37491,7 @@
             <Power>70</Power>
             <Time>3800</Time>
             <Energy>33</Energy>
-            <PowerPvp>70</PowerPvp>
+            <PowerPvp>65</PowerPvp>
             <Turns>1</Turns>
             <EnergyPvp>50</EnergyPvp>
             <Type>Fire</Type>
@@ -37460,7 +37576,7 @@
             <Power>140</Power>
             <Time>3500</Time>
             <Energy>100</Energy>
-            <PowerPvp>150</PowerPvp>
+            <PowerPvp>140</PowerPvp>
             <Turns>1</Turns>
             <EnergyPvp>75</EnergyPvp>
             <Type>Fighting</Type>
@@ -37477,10 +37593,10 @@
         <PokedexChargeMoveWrapper>
           <ChargeMove>
             <Name>Brave Bird</Name>
-            <Power>90</Power>
+            <Power>130</Power>
             <Time>2000</Time>
             <Energy>100</Energy>
-            <PowerPvp>90</PowerPvp>
+            <PowerPvp>130</PowerPvp>
             <Turns>1</Turns>
             <EnergyPvp>55</EnergyPvp>
             <Type>Flying</Type>
@@ -38285,17 +38401,17 @@
         </PokedexFastMoveWrapper>
         <PokedexFastMoveWrapper>
           <FastMove>
-            <Name>Rock Smash</Name>
-            <Power>15</Power>
-            <Time>1300</Time>
+            <Name>Take Down</Name>
+            <Power>8</Power>
+            <Time>1200</Time>
             <Energy>10</Energy>
-            <PowerPvp>9</PowerPvp>
+            <PowerPvp>5</PowerPvp>
             <Turns>2</Turns>
-            <EnergyPvp>7</EnergyPvp>
-            <Type>Fighting</Type>
+            <EnergyPvp>8</EnergyPvp>
+            <Type>Normal</Type>
             <MoveType>Fast</MoveType>
-            <DamageWindowStartTime>550</DamageWindowStartTime>
-            <DamageWindowDuration>250</DamageWindowDuration>
+            <DamageWindowStartTime>950</DamageWindowStartTime>
+            <DamageWindowDuration>150</DamageWindowDuration>
           </FastMove>
           <IsLegacy>false</IsLegacy>
         </PokedexFastMoveWrapper>
@@ -38354,6 +38470,46 @@
             <MoveType>Charge</MoveType>
             <DamageWindowStartTime>1800</DamageWindowStartTime>
             <DamageWindowDuration>500</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+            <SelfBuff>0</SelfBuff>
+            <EnemyBuff>0</EnemyBuff>
+            <BuffProc>0</BuffProc>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Body Slam</Name>
+            <Power>50</Power>
+            <Time>1900</Time>
+            <Energy>33</Energy>
+            <PowerPvp>60</PowerPvp>
+            <Turns>1</Turns>
+            <EnergyPvp>35</EnergyPvp>
+            <Type>Normal</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>1200</DamageWindowStartTime>
+            <DamageWindowDuration>500</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+            <SelfBuff>0</SelfBuff>
+            <EnemyBuff>0</EnemyBuff>
+            <BuffProc>0</BuffProc>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Swift</Name>
+            <Power>60</Power>
+            <Time>2800</Time>
+            <Energy>50</Energy>
+            <PowerPvp>60</PowerPvp>
+            <Turns>1</Turns>
+            <EnergyPvp>55</EnergyPvp>
+            <Type>Normal</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>2000</DamageWindowStartTime>
+            <DamageWindowDuration>600</DamageWindowDuration>
             <DodgeFlashTime>0</DodgeFlashTime>
             <SelfBuff>0</SelfBuff>
             <EnemyBuff>0</EnemyBuff>
@@ -38495,17 +38651,33 @@
         </PokedexFastMoveWrapper>
         <PokedexFastMoveWrapper>
           <FastMove>
-            <Name>Tackle</Name>
+            <Name>Snarl</Name>
+            <Power>12</Power>
+            <Time>1100</Time>
+            <Energy>14</Energy>
+            <PowerPvp>5</PowerPvp>
+            <Turns>2</Turns>
+            <EnergyPvp>13</EnergyPvp>
+            <Type>Dark</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>850</DamageWindowStartTime>
+            <DamageWindowDuration>200</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Lick</Name>
             <Power>5</Power>
             <Time>500</Time>
-            <Energy>5</Energy>
+            <Energy>6</Energy>
             <PowerPvp>3</PowerPvp>
             <Turns>1</Turns>
-            <EnergyPvp>2</EnergyPvp>
-            <Type>Normal</Type>
+            <EnergyPvp>3</EnergyPvp>
+            <Type>Ghost</Type>
             <MoveType>Fast</MoveType>
-            <DamageWindowStartTime>300</DamageWindowStartTime>
-            <DamageWindowDuration>200</DamageWindowDuration>
+            <DamageWindowStartTime>200</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
           </FastMove>
           <IsLegacy>false</IsLegacy>
         </PokedexFastMoveWrapper>
@@ -38549,7 +38721,7 @@
             <EnemyBuff>0</EnemyBuff>
             <BuffProc>0</BuffProc>
           </ChargeMove>
-          <IsLegacy>false</IsLegacy>
+          <IsLegacy>true</IsLegacy>
         </PokedexChargeMoveWrapper>
         <PokedexChargeMoveWrapper>
           <ChargeMove>
@@ -38563,6 +38735,46 @@
             <Type>Electric</Type>
             <MoveType>Charge</MoveType>
             <DamageWindowStartTime>1200</DamageWindowStartTime>
+            <DamageWindowDuration>1000</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+            <SelfBuff>0</SelfBuff>
+            <EnemyBuff>0</EnemyBuff>
+            <BuffProc>0</BuffProc>
+          </ChargeMove>
+          <IsLegacy>true</IsLegacy>
+        </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Body Slam</Name>
+            <Power>50</Power>
+            <Time>1900</Time>
+            <Energy>33</Energy>
+            <PowerPvp>60</PowerPvp>
+            <Turns>1</Turns>
+            <EnergyPvp>35</EnergyPvp>
+            <Type>Normal</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>1200</DamageWindowStartTime>
+            <DamageWindowDuration>500</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+            <SelfBuff>0</SelfBuff>
+            <EnemyBuff>0</EnemyBuff>
+            <BuffProc>0</BuffProc>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Gunk Shot</Name>
+            <Power>130</Power>
+            <Time>3100</Time>
+            <Energy>100</Energy>
+            <PowerPvp>130</PowerPvp>
+            <Turns>1</Turns>
+            <EnergyPvp>75</EnergyPvp>
+            <Type>Poison</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>1700</DamageWindowStartTime>
             <DamageWindowDuration>1000</DamageWindowDuration>
             <DodgeFlashTime>0</DodgeFlashTime>
             <SelfBuff>0</SelfBuff>
@@ -38736,7 +38948,7 @@
             <Energy>14</Energy>
             <PowerPvp>6</PowerPvp>
             <Turns>2</Turns>
-            <EnergyPvp>11</EnergyPvp>
+            <EnergyPvp>12</EnergyPvp>
             <Type>Bug</Type>
             <MoveType>Fast</MoveType>
             <DamageWindowStartTime>850</DamageWindowStartTime>
@@ -39257,7 +39469,7 @@
             <Power>130</Power>
             <Time>3100</Time>
             <Energy>100</Energy>
-            <PowerPvp>130</PowerPvp>
+            <PowerPvp>140</PowerPvp>
             <Turns>1</Turns>
             <EnergyPvp>75</EnergyPvp>
             <Type>Ice</Type>
@@ -39775,10 +39987,10 @@
         <PokedexChargeMoveWrapper>
           <ChargeMove>
             <Name>Brave Bird</Name>
-            <Power>90</Power>
+            <Power>130</Power>
             <Time>2000</Time>
             <Energy>100</Energy>
-            <PowerPvp>90</PowerPvp>
+            <PowerPvp>130</PowerPvp>
             <Turns>1</Turns>
             <EnergyPvp>55</EnergyPvp>
             <Type>Flying</Type>
@@ -40028,13 +40240,33 @@
             <Power>130</Power>
             <Time>3100</Time>
             <Energy>100</Energy>
-            <PowerPvp>130</PowerPvp>
+            <PowerPvp>140</PowerPvp>
             <Turns>1</Turns>
             <EnergyPvp>75</EnergyPvp>
             <Type>Ice</Type>
             <MoveType>Charge</MoveType>
             <DamageWindowStartTime>1500</DamageWindowStartTime>
             <DamageWindowDuration>1400</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+            <SelfBuff>0</SelfBuff>
+            <EnemyBuff>0</EnemyBuff>
+            <BuffProc>0</BuffProc>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Weather Ball Water</Name>
+            <Power>60</Power>
+            <Time>1600</Time>
+            <Energy>33</Energy>
+            <PowerPvp>60</PowerPvp>
+            <Turns>1</Turns>
+            <EnergyPvp>35</EnergyPvp>
+            <Type>Water</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>1350</DamageWindowStartTime>
+            <DamageWindowDuration>250</DamageWindowDuration>
             <DodgeFlashTime>0</DodgeFlashTime>
             <SelfBuff>0</SelfBuff>
             <EnemyBuff>0</EnemyBuff>
@@ -40533,7 +40765,7 @@
             <Energy>14</Energy>
             <PowerPvp>6</PowerPvp>
             <Turns>2</Turns>
-            <EnergyPvp>11</EnergyPvp>
+            <EnergyPvp>12</EnergyPvp>
             <Type>Bug</Type>
             <MoveType>Fast</MoveType>
             <DamageWindowStartTime>850</DamageWindowStartTime>
@@ -40616,6 +40848,26 @@
             <MoveType>Charge</MoveType>
             <DamageWindowStartTime>1450</DamageWindowStartTime>
             <DamageWindowDuration>250</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+            <SelfBuff>0</SelfBuff>
+            <EnemyBuff>0</EnemyBuff>
+            <BuffProc>0</BuffProc>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Lunge</Name>
+            <Power>55</Power>
+            <Time>2900</Time>
+            <Energy>33</Energy>
+            <PowerPvp>60</PowerPvp>
+            <Turns>1</Turns>
+            <EnergyPvp>45</EnergyPvp>
+            <Type>Bug</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>2400</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
             <DodgeFlashTime>0</DodgeFlashTime>
             <SelfBuff>0</SelfBuff>
             <EnemyBuff>0</EnemyBuff>
@@ -42313,9 +42565,9 @@
             <Power>90</Power>
             <Time>2600</Time>
             <Energy>50</Energy>
-            <PowerPvp>90</PowerPvp>
+            <PowerPvp>100</PowerPvp>
             <Turns>1</Turns>
-            <EnergyPvp>50</EnergyPvp>
+            <EnergyPvp>45</EnergyPvp>
             <Type>Electric</Type>
             <MoveType>Charge</MoveType>
             <DamageWindowStartTime>1700</DamageWindowStartTime>
@@ -42434,9 +42686,9 @@
             <Power>90</Power>
             <Time>2600</Time>
             <Energy>50</Energy>
-            <PowerPvp>90</PowerPvp>
+            <PowerPvp>100</PowerPvp>
             <Turns>1</Turns>
-            <EnergyPvp>50</EnergyPvp>
+            <EnergyPvp>45</EnergyPvp>
             <Type>Electric</Type>
             <MoveType>Charge</MoveType>
             <DamageWindowStartTime>1700</DamageWindowStartTime>
@@ -43487,9 +43739,9 @@
             <Power>90</Power>
             <Time>2600</Time>
             <Energy>50</Energy>
-            <PowerPvp>90</PowerPvp>
+            <PowerPvp>100</PowerPvp>
             <Turns>1</Turns>
-            <EnergyPvp>50</EnergyPvp>
+            <EnergyPvp>45</EnergyPvp>
             <Type>Electric</Type>
             <MoveType>Charge</MoveType>
             <DamageWindowStartTime>1700</DamageWindowStartTime>
@@ -44226,7 +44478,7 @@
             <Energy>14</Energy>
             <PowerPvp>6</PowerPvp>
             <Turns>2</Turns>
-            <EnergyPvp>11</EnergyPvp>
+            <EnergyPvp>12</EnergyPvp>
             <Type>Bug</Type>
             <MoveType>Fast</MoveType>
             <DamageWindowStartTime>850</DamageWindowStartTime>
@@ -44702,7 +44954,7 @@
             <Power>130</Power>
             <Time>3100</Time>
             <Energy>100</Energy>
-            <PowerPvp>130</PowerPvp>
+            <PowerPvp>140</PowerPvp>
             <Turns>1</Turns>
             <EnergyPvp>75</EnergyPvp>
             <Type>Ice</Type>
@@ -46442,9 +46694,9 @@
             <Power>130</Power>
             <Time>3900</Time>
             <Energy>100</Energy>
-            <PowerPvp>130</PowerPvp>
+            <PowerPvp>110</PowerPvp>
             <Turns>1</Turns>
-            <EnergyPvp>70</EnergyPvp>
+            <EnergyPvp>60</EnergyPvp>
             <Type>Fairy</Type>
             <MoveType>Charge</MoveType>
             <DamageWindowStartTime>2200</DamageWindowStartTime>
@@ -46717,7 +46969,7 @@
             <Power>130</Power>
             <Time>3100</Time>
             <Energy>100</Energy>
-            <PowerPvp>130</PowerPvp>
+            <PowerPvp>140</PowerPvp>
             <Turns>1</Turns>
             <EnergyPvp>75</EnergyPvp>
             <Type>Ice</Type>
@@ -47282,7 +47534,7 @@
             <Energy>14</Energy>
             <PowerPvp>6</PowerPvp>
             <Turns>2</Turns>
-            <EnergyPvp>11</EnergyPvp>
+            <EnergyPvp>12</EnergyPvp>
             <Type>Bug</Type>
             <MoveType>Fast</MoveType>
             <DamageWindowStartTime>850</DamageWindowStartTime>
@@ -47387,7 +47639,7 @@
             <Energy>14</Energy>
             <PowerPvp>6</PowerPvp>
             <Turns>2</Turns>
-            <EnergyPvp>11</EnergyPvp>
+            <EnergyPvp>12</EnergyPvp>
             <Type>Bug</Type>
             <MoveType>Fast</MoveType>
             <DamageWindowStartTime>850</DamageWindowStartTime>
@@ -47835,7 +48087,7 @@
             <Power>130</Power>
             <Time>3100</Time>
             <Energy>100</Energy>
-            <PowerPvp>130</PowerPvp>
+            <PowerPvp>140</PowerPvp>
             <Turns>1</Turns>
             <EnergyPvp>75</EnergyPvp>
             <Type>Ice</Type>
@@ -47901,10 +48153,10 @@
             <Name>Hex</Name>
             <Power>10</Power>
             <Time>1200</Time>
-            <Energy>15</Energy>
+            <Energy>16</Energy>
             <PowerPvp>6</PowerPvp>
             <Turns>2</Turns>
-            <EnergyPvp>11</EnergyPvp>
+            <EnergyPvp>12</EnergyPvp>
             <Type>Ghost</Type>
             <MoveType>Fast</MoveType>
             <DamageWindowStartTime>1000</DamageWindowStartTime>
@@ -48332,10 +48584,10 @@
             <Name>Hex</Name>
             <Power>10</Power>
             <Time>1200</Time>
-            <Energy>15</Energy>
+            <Energy>16</Energy>
             <PowerPvp>6</PowerPvp>
             <Turns>2</Turns>
-            <EnergyPvp>11</EnergyPvp>
+            <EnergyPvp>12</EnergyPvp>
             <Type>Ghost</Type>
             <MoveType>Fast</MoveType>
             <DamageWindowStartTime>1000</DamageWindowStartTime>
@@ -48437,10 +48689,10 @@
             <Name>Hex</Name>
             <Power>10</Power>
             <Time>1200</Time>
-            <Energy>15</Energy>
+            <Energy>16</Energy>
             <PowerPvp>6</PowerPvp>
             <Turns>2</Turns>
-            <EnergyPvp>11</EnergyPvp>
+            <EnergyPvp>12</EnergyPvp>
             <Type>Ghost</Type>
             <MoveType>Fast</MoveType>
             <DamageWindowStartTime>1000</DamageWindowStartTime>
@@ -48542,10 +48794,10 @@
             <Name>Hex</Name>
             <Power>10</Power>
             <Time>1200</Time>
-            <Energy>15</Energy>
+            <Energy>16</Energy>
             <PowerPvp>6</PowerPvp>
             <Turns>2</Turns>
-            <EnergyPvp>11</EnergyPvp>
+            <EnergyPvp>12</EnergyPvp>
             <Type>Ghost</Type>
             <MoveType>Fast</MoveType>
             <DamageWindowStartTime>1000</DamageWindowStartTime>
@@ -49027,10 +49279,10 @@
             <Name>Hex</Name>
             <Power>10</Power>
             <Time>1200</Time>
-            <Energy>15</Energy>
+            <Energy>16</Energy>
             <PowerPvp>6</PowerPvp>
             <Turns>2</Turns>
-            <EnergyPvp>11</EnergyPvp>
+            <EnergyPvp>12</EnergyPvp>
             <Type>Ghost</Type>
             <MoveType>Fast</MoveType>
             <DamageWindowStartTime>1000</DamageWindowStartTime>
@@ -49044,7 +49296,7 @@
             <Power>6</Power>
             <Time>1000</Time>
             <Energy>15</Energy>
-            <PowerPvp>4</PowerPvp>
+            <PowerPvp>5</PowerPvp>
             <Turns>1</Turns>
             <EnergyPvp>8</EnergyPvp>
             <Type>Ice</Type>
@@ -49359,7 +49611,7 @@
             <Power>6</Power>
             <Time>1000</Time>
             <Energy>15</Energy>
-            <PowerPvp>4</PowerPvp>
+            <PowerPvp>5</PowerPvp>
             <Turns>1</Turns>
             <EnergyPvp>8</EnergyPvp>
             <Type>Ice</Type>
@@ -49482,7 +49734,7 @@
             <Power>130</Power>
             <Time>3100</Time>
             <Energy>100</Energy>
-            <PowerPvp>130</PowerPvp>
+            <PowerPvp>140</PowerPvp>
             <Turns>1</Turns>
             <EnergyPvp>75</EnergyPvp>
             <Type>Ice</Type>
@@ -50603,7 +50855,7 @@
             <Energy>100</Energy>
             <PowerPvp>110</PowerPvp>
             <Turns>1</Turns>
-            <EnergyPvp>65</EnergyPvp>
+            <EnergyPvp>70</EnergyPvp>
             <Type>Steel</Type>
             <MoveType>Charge</MoveType>
             <DamageWindowStartTime>1600</DamageWindowStartTime>
@@ -50762,7 +51014,7 @@
             <Power>140</Power>
             <Time>3500</Time>
             <Energy>100</Energy>
-            <PowerPvp>150</PowerPvp>
+            <PowerPvp>140</PowerPvp>
             <Turns>1</Turns>
             <EnergyPvp>75</EnergyPvp>
             <Type>Fighting</Type>
@@ -50863,7 +51115,7 @@
             <Power>130</Power>
             <Time>3100</Time>
             <Energy>100</Energy>
-            <PowerPvp>130</PowerPvp>
+            <PowerPvp>140</PowerPvp>
             <Turns>1</Turns>
             <EnergyPvp>75</EnergyPvp>
             <Type>Ice</Type>
@@ -50883,7 +51135,7 @@
             <Power>140</Power>
             <Time>3500</Time>
             <Energy>100</Energy>
-            <PowerPvp>150</PowerPvp>
+            <PowerPvp>140</PowerPvp>
             <Turns>1</Turns>
             <EnergyPvp>75</EnergyPvp>
             <Type>Fighting</Type>
@@ -50986,7 +51238,7 @@
             <Energy>100</Energy>
             <PowerPvp>110</PowerPvp>
             <Turns>1</Turns>
-            <EnergyPvp>65</EnergyPvp>
+            <EnergyPvp>70</EnergyPvp>
             <Type>Steel</Type>
             <MoveType>Charge</MoveType>
             <DamageWindowStartTime>1600</DamageWindowStartTime>
@@ -51004,7 +51256,7 @@
             <Power>140</Power>
             <Time>3500</Time>
             <Energy>100</Energy>
-            <PowerPvp>150</PowerPvp>
+            <PowerPvp>140</PowerPvp>
             <Turns>1</Turns>
             <EnergyPvp>75</EnergyPvp>
             <Type>Fighting</Type>
@@ -51335,7 +51587,7 @@
             <Power>130</Power>
             <Time>3100</Time>
             <Energy>100</Energy>
-            <PowerPvp>130</PowerPvp>
+            <PowerPvp>140</PowerPvp>
             <Turns>1</Turns>
             <EnergyPvp>75</EnergyPvp>
             <Type>Ice</Type>
@@ -52052,7 +52304,7 @@
             <Power>6</Power>
             <Time>1000</Time>
             <Energy>15</Energy>
-            <PowerPvp>4</PowerPvp>
+            <PowerPvp>5</PowerPvp>
             <Turns>1</Turns>
             <EnergyPvp>8</EnergyPvp>
             <Type>Ice</Type>
@@ -52070,7 +52322,7 @@
             <Power>130</Power>
             <Time>3100</Time>
             <Energy>100</Energy>
-            <PowerPvp>130</PowerPvp>
+            <PowerPvp>140</PowerPvp>
             <Turns>1</Turns>
             <EnergyPvp>75</EnergyPvp>
             <Type>Ice</Type>
@@ -52546,9 +52798,9 @@
             <Power>90</Power>
             <Time>2600</Time>
             <Energy>50</Energy>
-            <PowerPvp>90</PowerPvp>
+            <PowerPvp>100</PowerPvp>
             <Turns>1</Turns>
-            <EnergyPvp>50</EnergyPvp>
+            <EnergyPvp>45</EnergyPvp>
             <Type>Electric</Type>
             <MoveType>Charge</MoveType>
             <DamageWindowStartTime>1700</DamageWindowStartTime>
@@ -52613,7 +52865,7 @@
             <Power>6</Power>
             <Time>1000</Time>
             <Energy>15</Energy>
-            <PowerPvp>4</PowerPvp>
+            <PowerPvp>5</PowerPvp>
             <Turns>1</Turns>
             <EnergyPvp>8</EnergyPvp>
             <Type>Ice</Type>
@@ -52631,7 +52883,7 @@
             <Power>130</Power>
             <Time>3100</Time>
             <Energy>100</Energy>
-            <PowerPvp>130</PowerPvp>
+            <PowerPvp>140</PowerPvp>
             <Turns>1</Turns>
             <EnergyPvp>75</EnergyPvp>
             <Type>Ice</Type>
@@ -52718,7 +52970,7 @@
             <Power>6</Power>
             <Time>1000</Time>
             <Energy>15</Energy>
-            <PowerPvp>4</PowerPvp>
+            <PowerPvp>5</PowerPvp>
             <Turns>1</Turns>
             <EnergyPvp>8</EnergyPvp>
             <Type>Ice</Type>
@@ -52736,7 +52988,7 @@
             <Power>130</Power>
             <Time>3100</Time>
             <Energy>100</Energy>
-            <PowerPvp>130</PowerPvp>
+            <PowerPvp>140</PowerPvp>
             <Turns>1</Turns>
             <EnergyPvp>75</EnergyPvp>
             <Type>Ice</Type>
@@ -52843,7 +53095,7 @@
             <Power>6</Power>
             <Time>1000</Time>
             <Energy>15</Energy>
-            <PowerPvp>4</PowerPvp>
+            <PowerPvp>5</PowerPvp>
             <Turns>1</Turns>
             <EnergyPvp>8</EnergyPvp>
             <Type>Ice</Type>
@@ -52901,7 +53153,7 @@
             <Power>130</Power>
             <Time>3100</Time>
             <Energy>100</Energy>
-            <PowerPvp>130</PowerPvp>
+            <PowerPvp>140</PowerPvp>
             <Turns>1</Turns>
             <EnergyPvp>75</EnergyPvp>
             <Type>Ice</Type>
@@ -52948,7 +53200,7 @@
             <Power>6</Power>
             <Time>1000</Time>
             <Energy>15</Energy>
-            <PowerPvp>4</PowerPvp>
+            <PowerPvp>5</PowerPvp>
             <Turns>1</Turns>
             <EnergyPvp>8</EnergyPvp>
             <Type>Ice</Type>
@@ -53022,7 +53274,7 @@
             <Power>130</Power>
             <Time>3100</Time>
             <Energy>100</Energy>
-            <PowerPvp>130</PowerPvp>
+            <PowerPvp>140</PowerPvp>
             <Turns>1</Turns>
             <EnergyPvp>75</EnergyPvp>
             <Type>Ice</Type>
@@ -53797,9 +54049,9 @@
             <Power>90</Power>
             <Time>2600</Time>
             <Energy>50</Energy>
-            <PowerPvp>90</PowerPvp>
+            <PowerPvp>100</PowerPvp>
             <Turns>1</Turns>
-            <EnergyPvp>50</EnergyPvp>
+            <EnergyPvp>45</EnergyPvp>
             <Type>Electric</Type>
             <MoveType>Charge</MoveType>
             <DamageWindowStartTime>1700</DamageWindowStartTime>
@@ -54073,10 +54325,10 @@
             <Name>Hex</Name>
             <Power>10</Power>
             <Time>1200</Time>
-            <Energy>15</Energy>
+            <Energy>16</Energy>
             <PowerPvp>6</PowerPvp>
             <Turns>2</Turns>
-            <EnergyPvp>11</EnergyPvp>
+            <EnergyPvp>12</EnergyPvp>
             <Type>Ghost</Type>
             <MoveType>Fast</MoveType>
             <DamageWindowStartTime>1000</DamageWindowStartTime>
@@ -54644,7 +54896,7 @@
             <Power>70</Power>
             <Time>3800</Time>
             <Energy>33</Energy>
-            <PowerPvp>70</PowerPvp>
+            <PowerPvp>65</PowerPvp>
             <Turns>1</Turns>
             <EnergyPvp>50</EnergyPvp>
             <Type>Fire</Type>
@@ -54956,10 +55208,10 @@
         <PokedexChargeMoveWrapper>
           <ChargeMove>
             <Name>Drill Peck</Name>
-            <Power>60</Power>
+            <Power>65</Power>
             <Time>2300</Time>
             <Energy>33</Energy>
-            <PowerPvp>60</PowerPvp>
+            <PowerPvp>65</PowerPvp>
             <Turns>1</Turns>
             <EnergyPvp>40</EnergyPvp>
             <Type>Flying</Type>
@@ -55169,7 +55421,7 @@
             <Power>130</Power>
             <Time>3100</Time>
             <Energy>100</Energy>
-            <PowerPvp>130</PowerPvp>
+            <PowerPvp>140</PowerPvp>
             <Turns>1</Turns>
             <EnergyPvp>75</EnergyPvp>
             <Type>Ice</Type>
@@ -55191,7 +55443,7 @@
             <Energy>100</Energy>
             <PowerPvp>110</PowerPvp>
             <Turns>1</Turns>
-            <EnergyPvp>65</EnergyPvp>
+            <EnergyPvp>70</EnergyPvp>
             <Type>Steel</Type>
             <MoveType>Charge</MoveType>
             <DamageWindowStartTime>1600</DamageWindowStartTime>
@@ -55222,6 +55474,26 @@
             <BuffProc>0</BuffProc>
           </ChargeMove>
           <IsLegacy>true</IsLegacy>
+        </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Drill Peck</Name>
+            <Power>65</Power>
+            <Time>2300</Time>
+            <Energy>33</Energy>
+            <PowerPvp>65</PowerPvp>
+            <Turns>1</Turns>
+            <EnergyPvp>40</EnergyPvp>
+            <Type>Flying</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>1700</DamageWindowStartTime>
+            <DamageWindowDuration>400</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+            <SelfBuff>0</SelfBuff>
+            <EnemyBuff>0</EnemyBuff>
+            <BuffProc>0</BuffProc>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
         </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>210</Attack>
@@ -55291,10 +55563,10 @@
         <PokedexChargeMoveWrapper>
           <ChargeMove>
             <Name>Brave Bird</Name>
-            <Power>90</Power>
+            <Power>130</Power>
             <Time>2000</Time>
             <Energy>100</Energy>
-            <PowerPvp>90</PowerPvp>
+            <PowerPvp>130</PowerPvp>
             <Turns>1</Turns>
             <EnergyPvp>55</EnergyPvp>
             <Type>Flying</Type>
@@ -55376,10 +55648,10 @@
         <PokedexChargeMoveWrapper>
           <ChargeMove>
             <Name>Brave Bird</Name>
-            <Power>90</Power>
+            <Power>130</Power>
             <Time>2000</Time>
             <Energy>100</Energy>
-            <PowerPvp>90</PowerPvp>
+            <PowerPvp>130</PowerPvp>
             <Turns>1</Turns>
             <EnergyPvp>55</EnergyPvp>
             <Type>Flying</Type>
@@ -55461,10 +55733,10 @@
         <PokedexChargeMoveWrapper>
           <ChargeMove>
             <Name>Brave Bird</Name>
-            <Power>90</Power>
+            <Power>130</Power>
             <Time>2000</Time>
             <Energy>100</Energy>
-            <PowerPvp>90</PowerPvp>
+            <PowerPvp>130</PowerPvp>
             <Turns>1</Turns>
             <EnergyPvp>55</EnergyPvp>
             <Type>Flying</Type>
@@ -56074,9 +56346,9 @@
             <Power>90</Power>
             <Time>2600</Time>
             <Energy>50</Energy>
-            <PowerPvp>90</PowerPvp>
+            <PowerPvp>100</PowerPvp>
             <Turns>1</Turns>
-            <EnergyPvp>50</EnergyPvp>
+            <EnergyPvp>45</EnergyPvp>
             <Type>Electric</Type>
             <MoveType>Charge</MoveType>
             <DamageWindowStartTime>1700</DamageWindowStartTime>
@@ -56451,9 +56723,9 @@
             <Power>90</Power>
             <Time>2600</Time>
             <Energy>50</Energy>
-            <PowerPvp>90</PowerPvp>
+            <PowerPvp>100</PowerPvp>
             <Turns>1</Turns>
-            <EnergyPvp>50</EnergyPvp>
+            <EnergyPvp>45</EnergyPvp>
             <Type>Electric</Type>
             <MoveType>Charge</MoveType>
             <DamageWindowStartTime>1700</DamageWindowStartTime>
@@ -57359,7 +57631,7 @@
             <Energy>100</Energy>
             <PowerPvp>110</PowerPvp>
             <Turns>1</Turns>
-            <EnergyPvp>65</EnergyPvp>
+            <EnergyPvp>70</EnergyPvp>
             <Type>Steel</Type>
             <MoveType>Charge</MoveType>
             <DamageWindowStartTime>1600</DamageWindowStartTime>
@@ -57845,6 +58117,26 @@
             <MoveType>Charge</MoveType>
             <DamageWindowStartTime>1800</DamageWindowStartTime>
             <DamageWindowDuration>200</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+            <SelfBuff>0</SelfBuff>
+            <EnemyBuff>0</EnemyBuff>
+            <BuffProc>0</BuffProc>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Signal Beam</Name>
+            <Power>75</Power>
+            <Time>2900</Time>
+            <Energy>50</Energy>
+            <PowerPvp>75</PowerPvp>
+            <Turns>1</Turns>
+            <EnergyPvp>55</EnergyPvp>
+            <Type>Bug</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>1800</DamageWindowStartTime>
+            <DamageWindowDuration>800</DamageWindowDuration>
             <DodgeFlashTime>0</DodgeFlashTime>
             <SelfBuff>0</SelfBuff>
             <EnemyBuff>0</EnemyBuff>
@@ -59280,10 +59572,10 @@
             <Name>Hex</Name>
             <Power>10</Power>
             <Time>1200</Time>
-            <Energy>15</Energy>
+            <Energy>16</Energy>
             <PowerPvp>6</PowerPvp>
             <Turns>2</Turns>
-            <EnergyPvp>11</EnergyPvp>
+            <EnergyPvp>12</EnergyPvp>
             <Type>Ghost</Type>
             <MoveType>Fast</MoveType>
             <DamageWindowStartTime>1000</DamageWindowStartTime>
@@ -59385,10 +59677,10 @@
             <Name>Hex</Name>
             <Power>10</Power>
             <Time>1200</Time>
-            <Energy>15</Energy>
+            <Energy>16</Energy>
             <PowerPvp>6</PowerPvp>
             <Turns>2</Turns>
-            <EnergyPvp>11</EnergyPvp>
+            <EnergyPvp>12</EnergyPvp>
             <Type>Ghost</Type>
             <MoveType>Fast</MoveType>
             <DamageWindowStartTime>1000</DamageWindowStartTime>
@@ -59650,7 +59942,7 @@
             <Power>140</Power>
             <Time>3500</Time>
             <Energy>100</Energy>
-            <PowerPvp>150</PowerPvp>
+            <PowerPvp>140</PowerPvp>
             <Turns>1</Turns>
             <EnergyPvp>75</EnergyPvp>
             <Type>Fighting</Type>
@@ -59696,10 +59988,10 @@
             <Name>Hex</Name>
             <Power>10</Power>
             <Time>1200</Time>
-            <Energy>15</Energy>
+            <Energy>16</Energy>
             <PowerPvp>6</PowerPvp>
             <Turns>2</Turns>
-            <EnergyPvp>11</EnergyPvp>
+            <EnergyPvp>12</EnergyPvp>
             <Type>Ghost</Type>
             <MoveType>Fast</MoveType>
             <DamageWindowStartTime>1000</DamageWindowStartTime>
@@ -59817,10 +60109,10 @@
         <PokedexChargeMoveWrapper>
           <ChargeMove>
             <Name>Brave Bird</Name>
-            <Power>90</Power>
+            <Power>130</Power>
             <Time>2000</Time>
             <Energy>100</Energy>
-            <PowerPvp>90</PowerPvp>
+            <PowerPvp>130</PowerPvp>
             <Turns>1</Turns>
             <EnergyPvp>55</EnergyPvp>
             <Type>Flying</Type>
@@ -60577,7 +60869,7 @@
             <Energy>100</Energy>
             <PowerPvp>110</PowerPvp>
             <Turns>1</Turns>
-            <EnergyPvp>65</EnergyPvp>
+            <EnergyPvp>70</EnergyPvp>
             <Type>Steel</Type>
             <MoveType>Charge</MoveType>
             <DamageWindowStartTime>1600</DamageWindowStartTime>
@@ -61792,7 +62084,7 @@
             <Energy>100</Energy>
             <PowerPvp>110</PowerPvp>
             <Turns>1</Turns>
-            <EnergyPvp>65</EnergyPvp>
+            <EnergyPvp>70</EnergyPvp>
             <Type>Steel</Type>
             <MoveType>Charge</MoveType>
             <DamageWindowStartTime>1600</DamageWindowStartTime>
@@ -62181,7 +62473,7 @@
             <Energy>14</Energy>
             <PowerPvp>6</PowerPvp>
             <Turns>2</Turns>
-            <EnergyPvp>11</EnergyPvp>
+            <EnergyPvp>12</EnergyPvp>
             <Type>Bug</Type>
             <MoveType>Fast</MoveType>
             <DamageWindowStartTime>850</DamageWindowStartTime>
@@ -62286,7 +62578,7 @@
             <Energy>14</Energy>
             <PowerPvp>6</PowerPvp>
             <Turns>2</Turns>
-            <EnergyPvp>11</EnergyPvp>
+            <EnergyPvp>12</EnergyPvp>
             <Type>Bug</Type>
             <MoveType>Fast</MoveType>
             <DamageWindowStartTime>850</DamageWindowStartTime>
@@ -62899,7 +63191,7 @@
             <Power>130</Power>
             <Time>3100</Time>
             <Energy>100</Energy>
-            <PowerPvp>130</PowerPvp>
+            <PowerPvp>140</PowerPvp>
             <Turns>1</Turns>
             <EnergyPvp>75</EnergyPvp>
             <Type>Ice</Type>
@@ -63055,7 +63347,7 @@
             <Power>6</Power>
             <Time>1000</Time>
             <Energy>15</Energy>
-            <PowerPvp>4</PowerPvp>
+            <PowerPvp>5</PowerPvp>
             <Turns>1</Turns>
             <EnergyPvp>8</EnergyPvp>
             <Type>Ice</Type>
@@ -63160,7 +63452,7 @@
             <Power>6</Power>
             <Time>1000</Time>
             <Energy>15</Energy>
-            <PowerPvp>4</PowerPvp>
+            <PowerPvp>5</PowerPvp>
             <Turns>1</Turns>
             <EnergyPvp>8</EnergyPvp>
             <Type>Ice</Type>
@@ -63194,7 +63486,7 @@
             <Power>130</Power>
             <Time>3100</Time>
             <Energy>100</Energy>
-            <PowerPvp>130</PowerPvp>
+            <PowerPvp>140</PowerPvp>
             <Turns>1</Turns>
             <EnergyPvp>75</EnergyPvp>
             <Type>Ice</Type>
@@ -63241,6 +63533,26 @@
             <MoveType>Charge</MoveType>
             <DamageWindowStartTime>2500</DamageWindowStartTime>
             <DamageWindowDuration>1200</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+            <SelfBuff>0</SelfBuff>
+            <EnemyBuff>0</EnemyBuff>
+            <BuffProc>0</BuffProc>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Weather Ball Ice</Name>
+            <Power>60</Power>
+            <Time>1600</Time>
+            <Energy>33</Energy>
+            <PowerPvp>60</PowerPvp>
+            <Turns>1</Turns>
+            <EnergyPvp>35</EnergyPvp>
+            <Type>Ice</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>1350</DamageWindowStartTime>
+            <DamageWindowDuration>250</DamageWindowDuration>
             <DodgeFlashTime>0</DodgeFlashTime>
             <SelfBuff>0</SelfBuff>
             <EnemyBuff>0</EnemyBuff>
@@ -63335,7 +63647,7 @@
             <Power>140</Power>
             <Time>3500</Time>
             <Energy>100</Energy>
-            <PowerPvp>150</PowerPvp>
+            <PowerPvp>140</PowerPvp>
             <Turns>1</Turns>
             <EnergyPvp>75</EnergyPvp>
             <Type>Fighting</Type>
@@ -63440,9 +63752,9 @@
             <Power>90</Power>
             <Time>2600</Time>
             <Energy>50</Energy>
-            <PowerPvp>90</PowerPvp>
+            <PowerPvp>100</PowerPvp>
             <Turns>1</Turns>
-            <EnergyPvp>50</EnergyPvp>
+            <EnergyPvp>45</EnergyPvp>
             <Type>Electric</Type>
             <MoveType>Charge</MoveType>
             <DamageWindowStartTime>1700</DamageWindowStartTime>
@@ -63462,7 +63774,7 @@
             <Energy>100</Energy>
             <PowerPvp>110</PowerPvp>
             <Turns>1</Turns>
-            <EnergyPvp>65</EnergyPvp>
+            <EnergyPvp>70</EnergyPvp>
             <Type>Steel</Type>
             <MoveType>Charge</MoveType>
             <DamageWindowStartTime>1600</DamageWindowStartTime>
@@ -63819,7 +64131,7 @@
             <Energy>14</Energy>
             <PowerPvp>6</PowerPvp>
             <Turns>2</Turns>
-            <EnergyPvp>11</EnergyPvp>
+            <EnergyPvp>12</EnergyPvp>
             <Type>Bug</Type>
             <MoveType>Fast</MoveType>
             <DamageWindowStartTime>850</DamageWindowStartTime>
@@ -64000,9 +64312,9 @@
             <Power>90</Power>
             <Time>2600</Time>
             <Energy>50</Energy>
-            <PowerPvp>90</PowerPvp>
+            <PowerPvp>100</PowerPvp>
             <Turns>1</Turns>
-            <EnergyPvp>50</EnergyPvp>
+            <EnergyPvp>45</EnergyPvp>
             <Type>Electric</Type>
             <MoveType>Charge</MoveType>
             <DamageWindowStartTime>1700</DamageWindowStartTime>
@@ -65049,7 +65361,7 @@
             <Power>6</Power>
             <Time>1000</Time>
             <Energy>15</Energy>
-            <PowerPvp>4</PowerPvp>
+            <PowerPvp>5</PowerPvp>
             <Turns>1</Turns>
             <EnergyPvp>8</EnergyPvp>
             <Type>Ice</Type>
@@ -65524,7 +65836,7 @@
             <Power>130</Power>
             <Time>3100</Time>
             <Energy>100</Energy>
-            <PowerPvp>130</PowerPvp>
+            <PowerPvp>140</PowerPvp>
             <Turns>1</Turns>
             <EnergyPvp>75</EnergyPvp>
             <Type>Ice</Type>
@@ -65800,10 +66112,10 @@
             <Name>Hex</Name>
             <Power>10</Power>
             <Time>1200</Time>
-            <Energy>15</Energy>
+            <Energy>16</Energy>
             <PowerPvp>6</PowerPvp>
             <Turns>2</Turns>
-            <EnergyPvp>11</EnergyPvp>
+            <EnergyPvp>12</EnergyPvp>
             <Type>Ghost</Type>
             <MoveType>Fast</MoveType>
             <DamageWindowStartTime>1000</DamageWindowStartTime>
@@ -65906,7 +66218,7 @@
             <Power>6</Power>
             <Time>1000</Time>
             <Energy>15</Energy>
-            <PowerPvp>4</PowerPvp>
+            <PowerPvp>5</PowerPvp>
             <Turns>1</Turns>
             <EnergyPvp>8</EnergyPvp>
             <Type>Ice</Type>
@@ -65921,10 +66233,10 @@
             <Name>Hex</Name>
             <Power>10</Power>
             <Time>1200</Time>
-            <Energy>15</Energy>
+            <Energy>16</Energy>
             <PowerPvp>6</PowerPvp>
             <Turns>2</Turns>
-            <EnergyPvp>11</EnergyPvp>
+            <EnergyPvp>12</EnergyPvp>
             <Type>Ghost</Type>
             <MoveType>Fast</MoveType>
             <DamageWindowStartTime>1000</DamageWindowStartTime>
@@ -66311,7 +66623,7 @@
             <Power>130</Power>
             <Time>3100</Time>
             <Energy>100</Energy>
-            <PowerPvp>130</PowerPvp>
+            <PowerPvp>140</PowerPvp>
             <Turns>1</Turns>
             <EnergyPvp>75</EnergyPvp>
             <Type>Ice</Type>
@@ -66633,6 +66945,26 @@
             <MoveType>Charge</MoveType>
             <DamageWindowStartTime>900</DamageWindowStartTime>
             <DamageWindowDuration>2100</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+            <SelfBuff>0</SelfBuff>
+            <EnemyBuff>0</EnemyBuff>
+            <BuffProc>0</BuffProc>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Aqua Tail</Name>
+            <Power>50</Power>
+            <Time>1900</Time>
+            <Energy>33</Energy>
+            <PowerPvp>50</PowerPvp>
+            <Turns>1</Turns>
+            <EnergyPvp>35</EnergyPvp>
+            <Type>Water</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>1200</DamageWindowStartTime>
+            <DamageWindowDuration>450</DamageWindowDuration>
             <DodgeFlashTime>0</DodgeFlashTime>
             <SelfBuff>0</SelfBuff>
             <EnemyBuff>0</EnemyBuff>
@@ -67108,7 +67440,7 @@
             <Power>140</Power>
             <Time>3500</Time>
             <Energy>100</Energy>
-            <PowerPvp>150</PowerPvp>
+            <PowerPvp>140</PowerPvp>
             <Turns>1</Turns>
             <EnergyPvp>75</EnergyPvp>
             <Type>Fighting</Type>
@@ -67423,9 +67755,9 @@
             <Power>130</Power>
             <Time>3900</Time>
             <Energy>100</Energy>
-            <PowerPvp>130</PowerPvp>
+            <PowerPvp>110</PowerPvp>
             <Turns>1</Turns>
-            <EnergyPvp>70</EnergyPvp>
+            <EnergyPvp>60</EnergyPvp>
             <Type>Fairy</Type>
             <MoveType>Charge</MoveType>
             <DamageWindowStartTime>2200</DamageWindowStartTime>
@@ -67718,7 +68050,7 @@
             <Power>140</Power>
             <Time>3500</Time>
             <Energy>100</Energy>
-            <PowerPvp>150</PowerPvp>
+            <PowerPvp>140</PowerPvp>
             <Turns>1</Turns>
             <EnergyPvp>75</EnergyPvp>
             <Type>Fighting</Type>
@@ -69007,7 +69339,7 @@
             <Energy>100</Energy>
             <PowerPvp>110</PowerPvp>
             <Turns>1</Turns>
-            <EnergyPvp>65</EnergyPvp>
+            <EnergyPvp>70</EnergyPvp>
             <Type>Steel</Type>
             <MoveType>Charge</MoveType>
             <DamageWindowStartTime>1600</DamageWindowStartTime>
@@ -69076,7 +69408,7 @@
             <Energy>100</Energy>
             <PowerPvp>110</PowerPvp>
             <Turns>1</Turns>
-            <EnergyPvp>65</EnergyPvp>
+            <EnergyPvp>70</EnergyPvp>
             <Type>Steel</Type>
             <MoveType>Charge</MoveType>
             <DamageWindowStartTime>1600</DamageWindowStartTime>
@@ -69574,7 +69906,7 @@
             <Power>140</Power>
             <Time>3500</Time>
             <Energy>100</Energy>
-            <PowerPvp>150</PowerPvp>
+            <PowerPvp>140</PowerPvp>
             <Turns>1</Turns>
             <EnergyPvp>75</EnergyPvp>
             <Type>Fighting</Type>
@@ -69601,6 +69933,26 @@
             <MoveType>Charge</MoveType>
             <DamageWindowStartTime>1300</DamageWindowStartTime>
             <DamageWindowDuration>1300</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+            <SelfBuff>0</SelfBuff>
+            <EnemyBuff>0</EnemyBuff>
+            <BuffProc>0</BuffProc>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>V Create</Name>
+            <Power>95</Power>
+            <Time>2800</Time>
+            <Energy>33</Energy>
+            <PowerPvp>95</PowerPvp>
+            <Turns>1</Turns>
+            <EnergyPvp>40</EnergyPvp>
+            <Type>Fire</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>1700</DamageWindowStartTime>
+            <DamageWindowDuration>800</DamageWindowDuration>
             <DodgeFlashTime>0</DodgeFlashTime>
             <SelfBuff>0</SelfBuff>
             <EnemyBuff>0</EnemyBuff>
@@ -69974,7 +70326,7 @@
             <Power>70</Power>
             <Time>3800</Time>
             <Energy>33</Energy>
-            <PowerPvp>70</PowerPvp>
+            <PowerPvp>65</PowerPvp>
             <Turns>1</Turns>
             <EnergyPvp>50</EnergyPvp>
             <Type>Fire</Type>
@@ -70079,7 +70431,7 @@
             <Power>70</Power>
             <Time>3800</Time>
             <Energy>33</Energy>
-            <PowerPvp>70</PowerPvp>
+            <PowerPvp>65</PowerPvp>
             <Turns>1</Turns>
             <EnergyPvp>50</EnergyPvp>
             <Type>Fire</Type>
@@ -70224,7 +70576,7 @@
             <Power>140</Power>
             <Time>3500</Time>
             <Energy>100</Energy>
-            <PowerPvp>150</PowerPvp>
+            <PowerPvp>140</PowerPvp>
             <Turns>1</Turns>
             <EnergyPvp>75</EnergyPvp>
             <Type>Fighting</Type>
@@ -70519,7 +70871,7 @@
             <Power>130</Power>
             <Time>3100</Time>
             <Energy>100</Energy>
-            <PowerPvp>130</PowerPvp>
+            <PowerPvp>140</PowerPvp>
             <Turns>1</Turns>
             <EnergyPvp>75</EnergyPvp>
             <Type>Ice</Type>
@@ -71040,9 +71392,9 @@
             <Power>90</Power>
             <Time>2600</Time>
             <Energy>50</Energy>
-            <PowerPvp>90</PowerPvp>
+            <PowerPvp>100</PowerPvp>
             <Turns>1</Turns>
-            <EnergyPvp>50</EnergyPvp>
+            <EnergyPvp>45</EnergyPvp>
             <Type>Electric</Type>
             <MoveType>Charge</MoveType>
             <DamageWindowStartTime>1700</DamageWindowStartTime>
@@ -71585,7 +71937,7 @@
             <Power>70</Power>
             <Time>3800</Time>
             <Energy>33</Energy>
-            <PowerPvp>70</PowerPvp>
+            <PowerPvp>65</PowerPvp>
             <Turns>1</Turns>
             <EnergyPvp>50</EnergyPvp>
             <Type>Fire</Type>
@@ -72510,7 +72862,7 @@
             <Power>70</Power>
             <Time>3800</Time>
             <Energy>33</Energy>
-            <PowerPvp>70</PowerPvp>
+            <PowerPvp>65</PowerPvp>
             <Turns>1</Turns>
             <EnergyPvp>50</EnergyPvp>
             <Type>Fire</Type>
@@ -72615,7 +72967,7 @@
             <Power>70</Power>
             <Time>3800</Time>
             <Energy>33</Energy>
-            <PowerPvp>70</PowerPvp>
+            <PowerPvp>65</PowerPvp>
             <Turns>1</Turns>
             <EnergyPvp>50</EnergyPvp>
             <Type>Fire</Type>
@@ -72655,9 +73007,9 @@
             <Power>90</Power>
             <Time>2600</Time>
             <Energy>50</Energy>
-            <PowerPvp>90</PowerPvp>
+            <PowerPvp>100</PowerPvp>
             <Turns>1</Turns>
-            <EnergyPvp>50</EnergyPvp>
+            <EnergyPvp>45</EnergyPvp>
             <Type>Electric</Type>
             <MoveType>Charge</MoveType>
             <DamageWindowStartTime>1700</DamageWindowStartTime>
@@ -73367,7 +73719,7 @@
             <Energy>50</Energy>
             <PowerPvp>80</PowerPvp>
             <Turns>1</Turns>
-            <EnergyPvp>55</EnergyPvp>
+            <EnergyPvp>45</EnergyPvp>
             <Type>Ground</Type>
             <MoveType>Charge</MoveType>
             <DamageWindowStartTime>1700</DamageWindowStartTime>
@@ -73472,7 +73824,7 @@
             <Energy>50</Energy>
             <PowerPvp>80</PowerPvp>
             <Turns>1</Turns>
-            <EnergyPvp>55</EnergyPvp>
+            <EnergyPvp>45</EnergyPvp>
             <Type>Ground</Type>
             <MoveType>Charge</MoveType>
             <DamageWindowStartTime>1700</DamageWindowStartTime>
@@ -73890,7 +74242,7 @@
             <Power>140</Power>
             <Time>3500</Time>
             <Energy>100</Energy>
-            <PowerPvp>150</PowerPvp>
+            <PowerPvp>140</PowerPvp>
             <Turns>1</Turns>
             <EnergyPvp>75</EnergyPvp>
             <Type>Fighting</Type>
@@ -74290,7 +74642,7 @@
             <Power>140</Power>
             <Time>3500</Time>
             <Energy>100</Energy>
-            <PowerPvp>150</PowerPvp>
+            <PowerPvp>140</PowerPvp>
             <Turns>1</Turns>
             <EnergyPvp>75</EnergyPvp>
             <Type>Fighting</Type>
@@ -74395,7 +74747,7 @@
             <Power>140</Power>
             <Time>3500</Time>
             <Energy>100</Energy>
-            <PowerPvp>150</PowerPvp>
+            <PowerPvp>140</PowerPvp>
             <Turns>1</Turns>
             <EnergyPvp>75</EnergyPvp>
             <Type>Fighting</Type>
@@ -75295,9 +75647,9 @@
             <Power>130</Power>
             <Time>3900</Time>
             <Energy>100</Energy>
-            <PowerPvp>130</PowerPvp>
+            <PowerPvp>110</PowerPvp>
             <Turns>1</Turns>
-            <EnergyPvp>70</EnergyPvp>
+            <EnergyPvp>60</EnergyPvp>
             <Type>Fairy</Type>
             <MoveType>Charge</MoveType>
             <DamageWindowStartTime>2200</DamageWindowStartTime>
@@ -76712,33 +77064,13 @@
             <Power>70</Power>
             <Time>3800</Time>
             <Energy>33</Energy>
-            <PowerPvp>70</PowerPvp>
+            <PowerPvp>65</PowerPvp>
             <Turns>1</Turns>
             <EnergyPvp>50</EnergyPvp>
             <Type>Fire</Type>
             <MoveType>Charge</MoveType>
             <DamageWindowStartTime>2900</DamageWindowStartTime>
             <DamageWindowDuration>550</DamageWindowDuration>
-            <DodgeFlashTime>0</DodgeFlashTime>
-            <SelfBuff>0</SelfBuff>
-            <EnemyBuff>0</EnemyBuff>
-            <BuffProc>0</BuffProc>
-          </ChargeMove>
-          <IsLegacy>false</IsLegacy>
-        </PokedexChargeMoveWrapper>
-        <PokedexChargeMoveWrapper>
-          <ChargeMove>
-            <Name>Psychic</Name>
-            <Power>90</Power>
-            <Time>2800</Time>
-            <Energy>50</Energy>
-            <PowerPvp>90</PowerPvp>
-            <Turns>1</Turns>
-            <EnergyPvp>55</EnergyPvp>
-            <Type>Psychic</Type>
-            <MoveType>Charge</MoveType>
-            <DamageWindowStartTime>1300</DamageWindowStartTime>
-            <DamageWindowDuration>1300</DamageWindowDuration>
             <DodgeFlashTime>0</DodgeFlashTime>
             <SelfBuff>0</SelfBuff>
             <EnemyBuff>0</EnemyBuff>
@@ -76817,7 +77149,7 @@
             <Power>140</Power>
             <Time>3500</Time>
             <Energy>100</Energy>
-            <PowerPvp>150</PowerPvp>
+            <PowerPvp>140</PowerPvp>
             <Turns>1</Turns>
             <EnergyPvp>75</EnergyPvp>
             <Type>Fighting</Type>
@@ -76942,7 +77274,7 @@
             <Power>140</Power>
             <Time>3500</Time>
             <Energy>100</Energy>
-            <PowerPvp>150</PowerPvp>
+            <PowerPvp>140</PowerPvp>
             <Turns>1</Turns>
             <EnergyPvp>75</EnergyPvp>
             <Type>Fighting</Type>
@@ -78400,7 +78732,7 @@
             <Energy>14</Energy>
             <PowerPvp>6</PowerPvp>
             <Turns>2</Turns>
-            <EnergyPvp>11</EnergyPvp>
+            <EnergyPvp>12</EnergyPvp>
             <Type>Bug</Type>
             <MoveType>Fast</MoveType>
             <DamageWindowStartTime>850</DamageWindowStartTime>
@@ -80412,10 +80744,10 @@
         <PokedexChargeMoveWrapper>
           <ChargeMove>
             <Name>Brave Bird</Name>
-            <Power>90</Power>
+            <Power>130</Power>
             <Time>2000</Time>
             <Energy>100</Energy>
-            <PowerPvp>90</PowerPvp>
+            <PowerPvp>130</PowerPvp>
             <Turns>1</Turns>
             <EnergyPvp>55</EnergyPvp>
             <Type>Flying</Type>
@@ -80551,7 +80883,7 @@
             <Power>6</Power>
             <Time>1000</Time>
             <Energy>15</Energy>
-            <PowerPvp>4</PowerPvp>
+            <PowerPvp>5</PowerPvp>
             <Turns>1</Turns>
             <EnergyPvp>8</EnergyPvp>
             <Type>Ice</Type>
@@ -80795,7 +81127,7 @@
             <Power>130</Power>
             <Time>3100</Time>
             <Energy>100</Energy>
-            <PowerPvp>130</PowerPvp>
+            <PowerPvp>140</PowerPvp>
             <Turns>1</Turns>
             <EnergyPvp>75</EnergyPvp>
             <Type>Ice</Type>
@@ -80817,7 +81149,7 @@
             <Energy>100</Energy>
             <PowerPvp>110</PowerPvp>
             <Turns>1</Turns>
-            <EnergyPvp>65</EnergyPvp>
+            <EnergyPvp>70</EnergyPvp>
             <Type>Steel</Type>
             <MoveType>Charge</MoveType>
             <DamageWindowStartTime>1600</DamageWindowStartTime>
@@ -80856,7 +81188,7 @@
     </PokedexEntry>
     <PokedexEntry>
       <Number>585</Number>
-      <Species>Deerling - Autumn</Species>
+      <Species>Deerling</Species>
       <Type1>Normal</Type1>
       <Type2>Grass</Type2>
       <FastMoves>
@@ -80940,324 +81272,9 @@
             <Power>90</Power>
             <Time>2600</Time>
             <Energy>50</Energy>
-            <PowerPvp>90</PowerPvp>
+            <PowerPvp>100</PowerPvp>
             <Turns>1</Turns>
-            <EnergyPvp>50</EnergyPvp>
-            <Type>Electric</Type>
-            <MoveType>Charge</MoveType>
-            <DamageWindowStartTime>1700</DamageWindowStartTime>
-            <DamageWindowDuration>400</DamageWindowDuration>
-            <DodgeFlashTime>0</DodgeFlashTime>
-            <SelfBuff>0</SelfBuff>
-            <EnemyBuff>0</EnemyBuff>
-            <BuffProc>0</BuffProc>
-          </ChargeMove>
-          <IsLegacy>false</IsLegacy>
-        </PokedexChargeMoveWrapper>
-      </ChargeMoves>
-      <Attack>115</Attack>
-      <Defense>100</Defense>
-      <Stamina>155</Stamina>
-    </PokedexEntry>
-    <PokedexEntry>
-      <Number>585</Number>
-      <Species>Deerling - Spring</Species>
-      <Type1>Normal</Type1>
-      <Type2>Grass</Type2>
-      <FastMoves>
-        <PokedexFastMoveWrapper>
-          <FastMove>
-            <Name>Tackle</Name>
-            <Power>5</Power>
-            <Time>500</Time>
-            <Energy>5</Energy>
-            <PowerPvp>3</PowerPvp>
-            <Turns>1</Turns>
-            <EnergyPvp>2</EnergyPvp>
-            <Type>Normal</Type>
-            <MoveType>Fast</MoveType>
-            <DamageWindowStartTime>300</DamageWindowStartTime>
-            <DamageWindowDuration>200</DamageWindowDuration>
-          </FastMove>
-          <IsLegacy>false</IsLegacy>
-        </PokedexFastMoveWrapper>
-        <PokedexFastMoveWrapper>
-          <FastMove>
-            <Name>Take Down</Name>
-            <Power>8</Power>
-            <Time>1200</Time>
-            <Energy>10</Energy>
-            <PowerPvp>5</PowerPvp>
-            <Turns>2</Turns>
-            <EnergyPvp>8</EnergyPvp>
-            <Type>Normal</Type>
-            <MoveType>Fast</MoveType>
-            <DamageWindowStartTime>950</DamageWindowStartTime>
-            <DamageWindowDuration>150</DamageWindowDuration>
-          </FastMove>
-          <IsLegacy>false</IsLegacy>
-        </PokedexFastMoveWrapper>
-      </FastMoves>
-      <ChargeMoves>
-        <PokedexChargeMoveWrapper>
-          <ChargeMove>
-            <Name>Energy Ball</Name>
-            <Power>90</Power>
-            <Time>3900</Time>
-            <Energy>50</Energy>
-            <PowerPvp>90</PowerPvp>
-            <Turns>1</Turns>
-            <EnergyPvp>55</EnergyPvp>
-            <Type>Grass</Type>
-            <MoveType>Charge</MoveType>
-            <DamageWindowStartTime>3000</DamageWindowStartTime>
-            <DamageWindowDuration>800</DamageWindowDuration>
-            <DodgeFlashTime>0</DodgeFlashTime>
-            <SelfBuff>0</SelfBuff>
-            <EnemyBuff>0</EnemyBuff>
-            <BuffProc>0</BuffProc>
-          </ChargeMove>
-          <IsLegacy>false</IsLegacy>
-        </PokedexChargeMoveWrapper>
-        <PokedexChargeMoveWrapper>
-          <ChargeMove>
-            <Name>Seed Bomb</Name>
-            <Power>55</Power>
-            <Time>2100</Time>
-            <Energy>33</Energy>
-            <PowerPvp>55</PowerPvp>
-            <Turns>1</Turns>
-            <EnergyPvp>40</EnergyPvp>
-            <Type>Grass</Type>
-            <MoveType>Charge</MoveType>
-            <DamageWindowStartTime>1200</DamageWindowStartTime>
-            <DamageWindowDuration>700</DamageWindowDuration>
-            <DodgeFlashTime>0</DodgeFlashTime>
-            <SelfBuff>0</SelfBuff>
-            <EnemyBuff>0</EnemyBuff>
-            <BuffProc>0</BuffProc>
-          </ChargeMove>
-          <IsLegacy>false</IsLegacy>
-        </PokedexChargeMoveWrapper>
-        <PokedexChargeMoveWrapper>
-          <ChargeMove>
-            <Name>Wild Charge</Name>
-            <Power>90</Power>
-            <Time>2600</Time>
-            <Energy>50</Energy>
-            <PowerPvp>90</PowerPvp>
-            <Turns>1</Turns>
-            <EnergyPvp>50</EnergyPvp>
-            <Type>Electric</Type>
-            <MoveType>Charge</MoveType>
-            <DamageWindowStartTime>1700</DamageWindowStartTime>
-            <DamageWindowDuration>400</DamageWindowDuration>
-            <DodgeFlashTime>0</DodgeFlashTime>
-            <SelfBuff>0</SelfBuff>
-            <EnemyBuff>0</EnemyBuff>
-            <BuffProc>0</BuffProc>
-          </ChargeMove>
-          <IsLegacy>false</IsLegacy>
-        </PokedexChargeMoveWrapper>
-      </ChargeMoves>
-      <Attack>115</Attack>
-      <Defense>100</Defense>
-      <Stamina>155</Stamina>
-    </PokedexEntry>
-    <PokedexEntry>
-      <Number>585</Number>
-      <Species>Deerling - Summer</Species>
-      <Type1>Normal</Type1>
-      <Type2>Grass</Type2>
-      <FastMoves>
-        <PokedexFastMoveWrapper>
-          <FastMove>
-            <Name>Tackle</Name>
-            <Power>5</Power>
-            <Time>500</Time>
-            <Energy>5</Energy>
-            <PowerPvp>3</PowerPvp>
-            <Turns>1</Turns>
-            <EnergyPvp>2</EnergyPvp>
-            <Type>Normal</Type>
-            <MoveType>Fast</MoveType>
-            <DamageWindowStartTime>300</DamageWindowStartTime>
-            <DamageWindowDuration>200</DamageWindowDuration>
-          </FastMove>
-          <IsLegacy>false</IsLegacy>
-        </PokedexFastMoveWrapper>
-        <PokedexFastMoveWrapper>
-          <FastMove>
-            <Name>Take Down</Name>
-            <Power>8</Power>
-            <Time>1200</Time>
-            <Energy>10</Energy>
-            <PowerPvp>5</PowerPvp>
-            <Turns>2</Turns>
-            <EnergyPvp>8</EnergyPvp>
-            <Type>Normal</Type>
-            <MoveType>Fast</MoveType>
-            <DamageWindowStartTime>950</DamageWindowStartTime>
-            <DamageWindowDuration>150</DamageWindowDuration>
-          </FastMove>
-          <IsLegacy>false</IsLegacy>
-        </PokedexFastMoveWrapper>
-      </FastMoves>
-      <ChargeMoves>
-        <PokedexChargeMoveWrapper>
-          <ChargeMove>
-            <Name>Energy Ball</Name>
-            <Power>90</Power>
-            <Time>3900</Time>
-            <Energy>50</Energy>
-            <PowerPvp>90</PowerPvp>
-            <Turns>1</Turns>
-            <EnergyPvp>55</EnergyPvp>
-            <Type>Grass</Type>
-            <MoveType>Charge</MoveType>
-            <DamageWindowStartTime>3000</DamageWindowStartTime>
-            <DamageWindowDuration>800</DamageWindowDuration>
-            <DodgeFlashTime>0</DodgeFlashTime>
-            <SelfBuff>0</SelfBuff>
-            <EnemyBuff>0</EnemyBuff>
-            <BuffProc>0</BuffProc>
-          </ChargeMove>
-          <IsLegacy>false</IsLegacy>
-        </PokedexChargeMoveWrapper>
-        <PokedexChargeMoveWrapper>
-          <ChargeMove>
-            <Name>Seed Bomb</Name>
-            <Power>55</Power>
-            <Time>2100</Time>
-            <Energy>33</Energy>
-            <PowerPvp>55</PowerPvp>
-            <Turns>1</Turns>
-            <EnergyPvp>40</EnergyPvp>
-            <Type>Grass</Type>
-            <MoveType>Charge</MoveType>
-            <DamageWindowStartTime>1200</DamageWindowStartTime>
-            <DamageWindowDuration>700</DamageWindowDuration>
-            <DodgeFlashTime>0</DodgeFlashTime>
-            <SelfBuff>0</SelfBuff>
-            <EnemyBuff>0</EnemyBuff>
-            <BuffProc>0</BuffProc>
-          </ChargeMove>
-          <IsLegacy>false</IsLegacy>
-        </PokedexChargeMoveWrapper>
-        <PokedexChargeMoveWrapper>
-          <ChargeMove>
-            <Name>Wild Charge</Name>
-            <Power>90</Power>
-            <Time>2600</Time>
-            <Energy>50</Energy>
-            <PowerPvp>90</PowerPvp>
-            <Turns>1</Turns>
-            <EnergyPvp>50</EnergyPvp>
-            <Type>Electric</Type>
-            <MoveType>Charge</MoveType>
-            <DamageWindowStartTime>1700</DamageWindowStartTime>
-            <DamageWindowDuration>400</DamageWindowDuration>
-            <DodgeFlashTime>0</DodgeFlashTime>
-            <SelfBuff>0</SelfBuff>
-            <EnemyBuff>0</EnemyBuff>
-            <BuffProc>0</BuffProc>
-          </ChargeMove>
-          <IsLegacy>false</IsLegacy>
-        </PokedexChargeMoveWrapper>
-      </ChargeMoves>
-      <Attack>115</Attack>
-      <Defense>100</Defense>
-      <Stamina>155</Stamina>
-    </PokedexEntry>
-    <PokedexEntry>
-      <Number>585</Number>
-      <Species>Deerling - Winter</Species>
-      <Type1>Normal</Type1>
-      <Type2>Grass</Type2>
-      <FastMoves>
-        <PokedexFastMoveWrapper>
-          <FastMove>
-            <Name>Tackle</Name>
-            <Power>5</Power>
-            <Time>500</Time>
-            <Energy>5</Energy>
-            <PowerPvp>3</PowerPvp>
-            <Turns>1</Turns>
-            <EnergyPvp>2</EnergyPvp>
-            <Type>Normal</Type>
-            <MoveType>Fast</MoveType>
-            <DamageWindowStartTime>300</DamageWindowStartTime>
-            <DamageWindowDuration>200</DamageWindowDuration>
-          </FastMove>
-          <IsLegacy>false</IsLegacy>
-        </PokedexFastMoveWrapper>
-        <PokedexFastMoveWrapper>
-          <FastMove>
-            <Name>Take Down</Name>
-            <Power>8</Power>
-            <Time>1200</Time>
-            <Energy>10</Energy>
-            <PowerPvp>5</PowerPvp>
-            <Turns>2</Turns>
-            <EnergyPvp>8</EnergyPvp>
-            <Type>Normal</Type>
-            <MoveType>Fast</MoveType>
-            <DamageWindowStartTime>950</DamageWindowStartTime>
-            <DamageWindowDuration>150</DamageWindowDuration>
-          </FastMove>
-          <IsLegacy>false</IsLegacy>
-        </PokedexFastMoveWrapper>
-      </FastMoves>
-      <ChargeMoves>
-        <PokedexChargeMoveWrapper>
-          <ChargeMove>
-            <Name>Energy Ball</Name>
-            <Power>90</Power>
-            <Time>3900</Time>
-            <Energy>50</Energy>
-            <PowerPvp>90</PowerPvp>
-            <Turns>1</Turns>
-            <EnergyPvp>55</EnergyPvp>
-            <Type>Grass</Type>
-            <MoveType>Charge</MoveType>
-            <DamageWindowStartTime>3000</DamageWindowStartTime>
-            <DamageWindowDuration>800</DamageWindowDuration>
-            <DodgeFlashTime>0</DodgeFlashTime>
-            <SelfBuff>0</SelfBuff>
-            <EnemyBuff>0</EnemyBuff>
-            <BuffProc>0</BuffProc>
-          </ChargeMove>
-          <IsLegacy>false</IsLegacy>
-        </PokedexChargeMoveWrapper>
-        <PokedexChargeMoveWrapper>
-          <ChargeMove>
-            <Name>Seed Bomb</Name>
-            <Power>55</Power>
-            <Time>2100</Time>
-            <Energy>33</Energy>
-            <PowerPvp>55</PowerPvp>
-            <Turns>1</Turns>
-            <EnergyPvp>40</EnergyPvp>
-            <Type>Grass</Type>
-            <MoveType>Charge</MoveType>
-            <DamageWindowStartTime>1200</DamageWindowStartTime>
-            <DamageWindowDuration>700</DamageWindowDuration>
-            <DodgeFlashTime>0</DodgeFlashTime>
-            <SelfBuff>0</SelfBuff>
-            <EnemyBuff>0</EnemyBuff>
-            <BuffProc>0</BuffProc>
-          </ChargeMove>
-          <IsLegacy>false</IsLegacy>
-        </PokedexChargeMoveWrapper>
-        <PokedexChargeMoveWrapper>
-          <ChargeMove>
-            <Name>Wild Charge</Name>
-            <Power>90</Power>
-            <Time>2600</Time>
-            <Energy>50</Energy>
-            <PowerPvp>90</PowerPvp>
-            <Turns>1</Turns>
-            <EnergyPvp>50</EnergyPvp>
+            <EnergyPvp>45</EnergyPvp>
             <Type>Electric</Type>
             <MoveType>Charge</MoveType>
             <DamageWindowStartTime>1700</DamageWindowStartTime>
@@ -81276,7 +81293,7 @@
     </PokedexEntry>
     <PokedexEntry>
       <Number>586</Number>
-      <Species>Sawsbuck - Autumn</Species>
+      <Species>Sawsbuck</Species>
       <Type1>Normal</Type1>
       <Type2>Grass</Type2>
       <FastMoves>
@@ -81360,384 +81377,9 @@
             <Power>90</Power>
             <Time>2600</Time>
             <Energy>50</Energy>
-            <PowerPvp>90</PowerPvp>
-            <Turns>1</Turns>
-            <EnergyPvp>50</EnergyPvp>
-            <Type>Electric</Type>
-            <MoveType>Charge</MoveType>
-            <DamageWindowStartTime>1700</DamageWindowStartTime>
-            <DamageWindowDuration>400</DamageWindowDuration>
-            <DodgeFlashTime>0</DodgeFlashTime>
-            <SelfBuff>0</SelfBuff>
-            <EnemyBuff>0</EnemyBuff>
-            <BuffProc>0</BuffProc>
-          </ChargeMove>
-          <IsLegacy>false</IsLegacy>
-        </PokedexChargeMoveWrapper>
-        <PokedexChargeMoveWrapper>
-          <ChargeMove>
-            <Name>Hyper Beam</Name>
-            <Power>150</Power>
-            <Time>3800</Time>
-            <Energy>100</Energy>
-            <PowerPvp>150</PowerPvp>
-            <Turns>1</Turns>
-            <EnergyPvp>80</EnergyPvp>
-            <Type>Normal</Type>
-            <MoveType>Charge</MoveType>
-            <DamageWindowStartTime>3300</DamageWindowStartTime>
-            <DamageWindowDuration>300</DamageWindowDuration>
-            <DodgeFlashTime>0</DodgeFlashTime>
-            <SelfBuff>0</SelfBuff>
-            <EnemyBuff>0</EnemyBuff>
-            <BuffProc>0</BuffProc>
-          </ChargeMove>
-          <IsLegacy>false</IsLegacy>
-        </PokedexChargeMoveWrapper>
-      </ChargeMoves>
-      <Attack>198</Attack>
-      <Defense>146</Defense>
-      <Stamina>190</Stamina>
-    </PokedexEntry>
-    <PokedexEntry>
-      <Number>586</Number>
-      <Species>Sawsbuck - Spring</Species>
-      <Type1>Normal</Type1>
-      <Type2>Grass</Type2>
-      <FastMoves>
-        <PokedexFastMoveWrapper>
-          <FastMove>
-            <Name>Feint Attack</Name>
-            <Power>10</Power>
-            <Time>900</Time>
-            <Energy>9</Energy>
-            <PowerPvp>6</PowerPvp>
-            <Turns>1</Turns>
-            <EnergyPvp>6</EnergyPvp>
-            <Type>Dark</Type>
-            <MoveType>Fast</MoveType>
-            <DamageWindowStartTime>750</DamageWindowStartTime>
-            <DamageWindowDuration>150</DamageWindowDuration>
-          </FastMove>
-          <IsLegacy>false</IsLegacy>
-        </PokedexFastMoveWrapper>
-        <PokedexFastMoveWrapper>
-          <FastMove>
-            <Name>Take Down</Name>
-            <Power>8</Power>
-            <Time>1200</Time>
-            <Energy>10</Energy>
-            <PowerPvp>5</PowerPvp>
-            <Turns>2</Turns>
-            <EnergyPvp>8</EnergyPvp>
-            <Type>Normal</Type>
-            <MoveType>Fast</MoveType>
-            <DamageWindowStartTime>950</DamageWindowStartTime>
-            <DamageWindowDuration>150</DamageWindowDuration>
-          </FastMove>
-          <IsLegacy>false</IsLegacy>
-        </PokedexFastMoveWrapper>
-      </FastMoves>
-      <ChargeMoves>
-        <PokedexChargeMoveWrapper>
-          <ChargeMove>
-            <Name>Megahorn</Name>
-            <Power>110</Power>
-            <Time>2200</Time>
-            <Energy>100</Energy>
             <PowerPvp>100</PowerPvp>
             <Turns>1</Turns>
-            <EnergyPvp>55</EnergyPvp>
-            <Type>Bug</Type>
-            <MoveType>Charge</MoveType>
-            <DamageWindowStartTime>1700</DamageWindowStartTime>
-            <DamageWindowDuration>200</DamageWindowDuration>
-            <DodgeFlashTime>0</DodgeFlashTime>
-            <SelfBuff>0</SelfBuff>
-            <EnemyBuff>0</EnemyBuff>
-            <BuffProc>0</BuffProc>
-          </ChargeMove>
-          <IsLegacy>false</IsLegacy>
-        </PokedexChargeMoveWrapper>
-        <PokedexChargeMoveWrapper>
-          <ChargeMove>
-            <Name>Solar Beam</Name>
-            <Power>180</Power>
-            <Time>4900</Time>
-            <Energy>100</Energy>
-            <PowerPvp>150</PowerPvp>
-            <Turns>1</Turns>
-            <EnergyPvp>80</EnergyPvp>
-            <Type>Grass</Type>
-            <MoveType>Charge</MoveType>
-            <DamageWindowStartTime>2700</DamageWindowStartTime>
-            <DamageWindowDuration>2000</DamageWindowDuration>
-            <DodgeFlashTime>0</DodgeFlashTime>
-            <SelfBuff>0</SelfBuff>
-            <EnemyBuff>0</EnemyBuff>
-            <BuffProc>0</BuffProc>
-          </ChargeMove>
-          <IsLegacy>false</IsLegacy>
-        </PokedexChargeMoveWrapper>
-        <PokedexChargeMoveWrapper>
-          <ChargeMove>
-            <Name>Wild Charge</Name>
-            <Power>90</Power>
-            <Time>2600</Time>
-            <Energy>50</Energy>
-            <PowerPvp>90</PowerPvp>
-            <Turns>1</Turns>
-            <EnergyPvp>50</EnergyPvp>
-            <Type>Electric</Type>
-            <MoveType>Charge</MoveType>
-            <DamageWindowStartTime>1700</DamageWindowStartTime>
-            <DamageWindowDuration>400</DamageWindowDuration>
-            <DodgeFlashTime>0</DodgeFlashTime>
-            <SelfBuff>0</SelfBuff>
-            <EnemyBuff>0</EnemyBuff>
-            <BuffProc>0</BuffProc>
-          </ChargeMove>
-          <IsLegacy>false</IsLegacy>
-        </PokedexChargeMoveWrapper>
-        <PokedexChargeMoveWrapper>
-          <ChargeMove>
-            <Name>Hyper Beam</Name>
-            <Power>150</Power>
-            <Time>3800</Time>
-            <Energy>100</Energy>
-            <PowerPvp>150</PowerPvp>
-            <Turns>1</Turns>
-            <EnergyPvp>80</EnergyPvp>
-            <Type>Normal</Type>
-            <MoveType>Charge</MoveType>
-            <DamageWindowStartTime>3300</DamageWindowStartTime>
-            <DamageWindowDuration>300</DamageWindowDuration>
-            <DodgeFlashTime>0</DodgeFlashTime>
-            <SelfBuff>0</SelfBuff>
-            <EnemyBuff>0</EnemyBuff>
-            <BuffProc>0</BuffProc>
-          </ChargeMove>
-          <IsLegacy>false</IsLegacy>
-        </PokedexChargeMoveWrapper>
-      </ChargeMoves>
-      <Attack>198</Attack>
-      <Defense>146</Defense>
-      <Stamina>190</Stamina>
-    </PokedexEntry>
-    <PokedexEntry>
-      <Number>586</Number>
-      <Species>Sawsbuck - Summer</Species>
-      <Type1>Normal</Type1>
-      <Type2>Grass</Type2>
-      <FastMoves>
-        <PokedexFastMoveWrapper>
-          <FastMove>
-            <Name>Feint Attack</Name>
-            <Power>10</Power>
-            <Time>900</Time>
-            <Energy>9</Energy>
-            <PowerPvp>6</PowerPvp>
-            <Turns>1</Turns>
-            <EnergyPvp>6</EnergyPvp>
-            <Type>Dark</Type>
-            <MoveType>Fast</MoveType>
-            <DamageWindowStartTime>750</DamageWindowStartTime>
-            <DamageWindowDuration>150</DamageWindowDuration>
-          </FastMove>
-          <IsLegacy>false</IsLegacy>
-        </PokedexFastMoveWrapper>
-        <PokedexFastMoveWrapper>
-          <FastMove>
-            <Name>Take Down</Name>
-            <Power>8</Power>
-            <Time>1200</Time>
-            <Energy>10</Energy>
-            <PowerPvp>5</PowerPvp>
-            <Turns>2</Turns>
-            <EnergyPvp>8</EnergyPvp>
-            <Type>Normal</Type>
-            <MoveType>Fast</MoveType>
-            <DamageWindowStartTime>950</DamageWindowStartTime>
-            <DamageWindowDuration>150</DamageWindowDuration>
-          </FastMove>
-          <IsLegacy>false</IsLegacy>
-        </PokedexFastMoveWrapper>
-      </FastMoves>
-      <ChargeMoves>
-        <PokedexChargeMoveWrapper>
-          <ChargeMove>
-            <Name>Megahorn</Name>
-            <Power>110</Power>
-            <Time>2200</Time>
-            <Energy>100</Energy>
-            <PowerPvp>100</PowerPvp>
-            <Turns>1</Turns>
-            <EnergyPvp>55</EnergyPvp>
-            <Type>Bug</Type>
-            <MoveType>Charge</MoveType>
-            <DamageWindowStartTime>1700</DamageWindowStartTime>
-            <DamageWindowDuration>200</DamageWindowDuration>
-            <DodgeFlashTime>0</DodgeFlashTime>
-            <SelfBuff>0</SelfBuff>
-            <EnemyBuff>0</EnemyBuff>
-            <BuffProc>0</BuffProc>
-          </ChargeMove>
-          <IsLegacy>false</IsLegacy>
-        </PokedexChargeMoveWrapper>
-        <PokedexChargeMoveWrapper>
-          <ChargeMove>
-            <Name>Solar Beam</Name>
-            <Power>180</Power>
-            <Time>4900</Time>
-            <Energy>100</Energy>
-            <PowerPvp>150</PowerPvp>
-            <Turns>1</Turns>
-            <EnergyPvp>80</EnergyPvp>
-            <Type>Grass</Type>
-            <MoveType>Charge</MoveType>
-            <DamageWindowStartTime>2700</DamageWindowStartTime>
-            <DamageWindowDuration>2000</DamageWindowDuration>
-            <DodgeFlashTime>0</DodgeFlashTime>
-            <SelfBuff>0</SelfBuff>
-            <EnemyBuff>0</EnemyBuff>
-            <BuffProc>0</BuffProc>
-          </ChargeMove>
-          <IsLegacy>false</IsLegacy>
-        </PokedexChargeMoveWrapper>
-        <PokedexChargeMoveWrapper>
-          <ChargeMove>
-            <Name>Wild Charge</Name>
-            <Power>90</Power>
-            <Time>2600</Time>
-            <Energy>50</Energy>
-            <PowerPvp>90</PowerPvp>
-            <Turns>1</Turns>
-            <EnergyPvp>50</EnergyPvp>
-            <Type>Electric</Type>
-            <MoveType>Charge</MoveType>
-            <DamageWindowStartTime>1700</DamageWindowStartTime>
-            <DamageWindowDuration>400</DamageWindowDuration>
-            <DodgeFlashTime>0</DodgeFlashTime>
-            <SelfBuff>0</SelfBuff>
-            <EnemyBuff>0</EnemyBuff>
-            <BuffProc>0</BuffProc>
-          </ChargeMove>
-          <IsLegacy>false</IsLegacy>
-        </PokedexChargeMoveWrapper>
-        <PokedexChargeMoveWrapper>
-          <ChargeMove>
-            <Name>Hyper Beam</Name>
-            <Power>150</Power>
-            <Time>3800</Time>
-            <Energy>100</Energy>
-            <PowerPvp>150</PowerPvp>
-            <Turns>1</Turns>
-            <EnergyPvp>80</EnergyPvp>
-            <Type>Normal</Type>
-            <MoveType>Charge</MoveType>
-            <DamageWindowStartTime>3300</DamageWindowStartTime>
-            <DamageWindowDuration>300</DamageWindowDuration>
-            <DodgeFlashTime>0</DodgeFlashTime>
-            <SelfBuff>0</SelfBuff>
-            <EnemyBuff>0</EnemyBuff>
-            <BuffProc>0</BuffProc>
-          </ChargeMove>
-          <IsLegacy>false</IsLegacy>
-        </PokedexChargeMoveWrapper>
-      </ChargeMoves>
-      <Attack>198</Attack>
-      <Defense>146</Defense>
-      <Stamina>190</Stamina>
-    </PokedexEntry>
-    <PokedexEntry>
-      <Number>586</Number>
-      <Species>Sawsbuck - Winter</Species>
-      <Type1>Normal</Type1>
-      <Type2>Grass</Type2>
-      <FastMoves>
-        <PokedexFastMoveWrapper>
-          <FastMove>
-            <Name>Feint Attack</Name>
-            <Power>10</Power>
-            <Time>900</Time>
-            <Energy>9</Energy>
-            <PowerPvp>6</PowerPvp>
-            <Turns>1</Turns>
-            <EnergyPvp>6</EnergyPvp>
-            <Type>Dark</Type>
-            <MoveType>Fast</MoveType>
-            <DamageWindowStartTime>750</DamageWindowStartTime>
-            <DamageWindowDuration>150</DamageWindowDuration>
-          </FastMove>
-          <IsLegacy>false</IsLegacy>
-        </PokedexFastMoveWrapper>
-        <PokedexFastMoveWrapper>
-          <FastMove>
-            <Name>Take Down</Name>
-            <Power>8</Power>
-            <Time>1200</Time>
-            <Energy>10</Energy>
-            <PowerPvp>5</PowerPvp>
-            <Turns>2</Turns>
-            <EnergyPvp>8</EnergyPvp>
-            <Type>Normal</Type>
-            <MoveType>Fast</MoveType>
-            <DamageWindowStartTime>950</DamageWindowStartTime>
-            <DamageWindowDuration>150</DamageWindowDuration>
-          </FastMove>
-          <IsLegacy>false</IsLegacy>
-        </PokedexFastMoveWrapper>
-      </FastMoves>
-      <ChargeMoves>
-        <PokedexChargeMoveWrapper>
-          <ChargeMove>
-            <Name>Megahorn</Name>
-            <Power>110</Power>
-            <Time>2200</Time>
-            <Energy>100</Energy>
-            <PowerPvp>100</PowerPvp>
-            <Turns>1</Turns>
-            <EnergyPvp>55</EnergyPvp>
-            <Type>Bug</Type>
-            <MoveType>Charge</MoveType>
-            <DamageWindowStartTime>1700</DamageWindowStartTime>
-            <DamageWindowDuration>200</DamageWindowDuration>
-            <DodgeFlashTime>0</DodgeFlashTime>
-            <SelfBuff>0</SelfBuff>
-            <EnemyBuff>0</EnemyBuff>
-            <BuffProc>0</BuffProc>
-          </ChargeMove>
-          <IsLegacy>false</IsLegacy>
-        </PokedexChargeMoveWrapper>
-        <PokedexChargeMoveWrapper>
-          <ChargeMove>
-            <Name>Solar Beam</Name>
-            <Power>180</Power>
-            <Time>4900</Time>
-            <Energy>100</Energy>
-            <PowerPvp>150</PowerPvp>
-            <Turns>1</Turns>
-            <EnergyPvp>80</EnergyPvp>
-            <Type>Grass</Type>
-            <MoveType>Charge</MoveType>
-            <DamageWindowStartTime>2700</DamageWindowStartTime>
-            <DamageWindowDuration>2000</DamageWindowDuration>
-            <DodgeFlashTime>0</DodgeFlashTime>
-            <SelfBuff>0</SelfBuff>
-            <EnemyBuff>0</EnemyBuff>
-            <BuffProc>0</BuffProc>
-          </ChargeMove>
-          <IsLegacy>false</IsLegacy>
-        </PokedexChargeMoveWrapper>
-        <PokedexChargeMoveWrapper>
-          <ChargeMove>
-            <Name>Wild Charge</Name>
-            <Power>90</Power>
-            <Time>2600</Time>
-            <Energy>50</Energy>
-            <PowerPvp>90</PowerPvp>
-            <Turns>1</Turns>
-            <EnergyPvp>50</EnergyPvp>
+            <EnergyPvp>45</EnergyPvp>
             <Type>Electric</Type>
             <MoveType>Charge</MoveType>
             <DamageWindowStartTime>1700</DamageWindowStartTime>
@@ -81967,7 +81609,7 @@
             <Energy>50</Energy>
             <PowerPvp>80</PowerPvp>
             <Turns>1</Turns>
-            <EnergyPvp>55</EnergyPvp>
+            <EnergyPvp>45</EnergyPvp>
             <Type>Ground</Type>
             <MoveType>Charge</MoveType>
             <DamageWindowStartTime>1700</DamageWindowStartTime>
@@ -82108,7 +81750,7 @@
             <Energy>50</Energy>
             <PowerPvp>80</PowerPvp>
             <Turns>1</Turns>
-            <EnergyPvp>55</EnergyPvp>
+            <EnergyPvp>45</EnergyPvp>
             <Type>Ground</Type>
             <MoveType>Charge</MoveType>
             <DamageWindowStartTime>1700</DamageWindowStartTime>
@@ -82402,10 +82044,10 @@
             <Name>Hex</Name>
             <Power>10</Power>
             <Time>1200</Time>
-            <Energy>15</Energy>
+            <Energy>16</Energy>
             <PowerPvp>6</PowerPvp>
             <Turns>2</Turns>
-            <EnergyPvp>11</EnergyPvp>
+            <EnergyPvp>12</EnergyPvp>
             <Type>Ghost</Type>
             <MoveType>Fast</MoveType>
             <DamageWindowStartTime>1000</DamageWindowStartTime>
@@ -82507,10 +82149,10 @@
             <Name>Hex</Name>
             <Power>10</Power>
             <Time>1200</Time>
-            <Energy>15</Energy>
+            <Energy>16</Energy>
             <PowerPvp>6</PowerPvp>
             <Turns>2</Turns>
-            <EnergyPvp>11</EnergyPvp>
+            <EnergyPvp>12</EnergyPvp>
             <Type>Ghost</Type>
             <MoveType>Fast</MoveType>
             <DamageWindowStartTime>1000</DamageWindowStartTime>
@@ -82907,7 +82549,7 @@
             <Power>130</Power>
             <Time>3100</Time>
             <Energy>100</Energy>
-            <PowerPvp>130</PowerPvp>
+            <PowerPvp>140</PowerPvp>
             <Turns>1</Turns>
             <EnergyPvp>75</EnergyPvp>
             <Type>Ice</Type>
@@ -83207,6 +82849,26 @@
           </ChargeMove>
           <IsLegacy>false</IsLegacy>
         </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Lunge</Name>
+            <Power>55</Power>
+            <Time>2900</Time>
+            <Energy>33</Energy>
+            <PowerPvp>60</PowerPvp>
+            <Turns>1</Turns>
+            <EnergyPvp>45</EnergyPvp>
+            <Type>Bug</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>2400</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+            <SelfBuff>0</SelfBuff>
+            <EnemyBuff>0</EnemyBuff>
+            <BuffProc>0</BuffProc>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
       </ChargeMoves>
       <Attack>201</Attack>
       <Defense>128</Defense>
@@ -83280,7 +82942,7 @@
             <Energy>100</Energy>
             <PowerPvp>110</PowerPvp>
             <Turns>1</Turns>
-            <EnergyPvp>65</EnergyPvp>
+            <EnergyPvp>70</EnergyPvp>
             <Type>Steel</Type>
             <MoveType>Charge</MoveType>
             <DamageWindowStartTime>1600</DamageWindowStartTime>
@@ -83385,7 +83047,7 @@
             <Energy>100</Energy>
             <PowerPvp>110</PowerPvp>
             <Turns>1</Turns>
-            <EnergyPvp>65</EnergyPvp>
+            <EnergyPvp>70</EnergyPvp>
             <Type>Steel</Type>
             <MoveType>Charge</MoveType>
             <DamageWindowStartTime>1600</DamageWindowStartTime>
@@ -83740,7 +83402,7 @@
             <Energy>100</Energy>
             <PowerPvp>110</PowerPvp>
             <Turns>1</Turns>
-            <EnergyPvp>65</EnergyPvp>
+            <EnergyPvp>70</EnergyPvp>
             <Type>Steel</Type>
             <MoveType>Charge</MoveType>
             <DamageWindowStartTime>1600</DamageWindowStartTime>
@@ -84348,7 +84010,7 @@
             <Power>70</Power>
             <Time>3800</Time>
             <Energy>33</Energy>
-            <PowerPvp>70</PowerPvp>
+            <PowerPvp>65</PowerPvp>
             <Turns>1</Turns>
             <EnergyPvp>50</EnergyPvp>
             <Type>Fire</Type>
@@ -84523,10 +84185,10 @@
             <Name>Hex</Name>
             <Power>10</Power>
             <Time>1200</Time>
-            <Energy>15</Energy>
+            <Energy>16</Energy>
             <PowerPvp>6</PowerPvp>
             <Turns>2</Turns>
-            <EnergyPvp>11</EnergyPvp>
+            <EnergyPvp>12</EnergyPvp>
             <Type>Ghost</Type>
             <MoveType>Fast</MoveType>
             <DamageWindowStartTime>1000</DamageWindowStartTime>
@@ -84964,7 +84626,7 @@
             <Power>6</Power>
             <Time>1000</Time>
             <Energy>15</Energy>
-            <PowerPvp>4</PowerPvp>
+            <PowerPvp>5</PowerPvp>
             <Turns>1</Turns>
             <EnergyPvp>8</EnergyPvp>
             <Type>Ice</Type>
@@ -85069,7 +84731,7 @@
             <Power>6</Power>
             <Time>1000</Time>
             <Energy>15</Energy>
-            <PowerPvp>4</PowerPvp>
+            <PowerPvp>5</PowerPvp>
             <Turns>1</Turns>
             <EnergyPvp>8</EnergyPvp>
             <Type>Ice</Type>
@@ -85317,7 +84979,7 @@
             <Energy>14</Energy>
             <PowerPvp>6</PowerPvp>
             <Turns>2</Turns>
-            <EnergyPvp>11</EnergyPvp>
+            <EnergyPvp>12</EnergyPvp>
             <Type>Bug</Type>
             <MoveType>Fast</MoveType>
             <DamageWindowStartTime>850</DamageWindowStartTime>
@@ -85422,7 +85084,7 @@
             <Energy>14</Energy>
             <PowerPvp>6</PowerPvp>
             <Turns>2</Turns>
-            <EnergyPvp>11</EnergyPvp>
+            <EnergyPvp>12</EnergyPvp>
             <Type>Bug</Type>
             <MoveType>Fast</MoveType>
             <DamageWindowStartTime>850</DamageWindowStartTime>
@@ -85498,7 +85160,7 @@
             <Power>140</Power>
             <Time>3500</Time>
             <Energy>100</Energy>
-            <PowerPvp>150</PowerPvp>
+            <PowerPvp>140</PowerPvp>
             <Turns>1</Turns>
             <EnergyPvp>75</EnergyPvp>
             <Type>Fighting</Type>
@@ -85708,7 +85370,7 @@
             <Power>140</Power>
             <Time>3500</Time>
             <Energy>100</Energy>
-            <PowerPvp>150</PowerPvp>
+            <PowerPvp>140</PowerPvp>
             <Turns>1</Turns>
             <EnergyPvp>75</EnergyPvp>
             <Type>Fighting</Type>
@@ -86358,7 +86020,7 @@
             <Power>140</Power>
             <Time>3500</Time>
             <Energy>100</Energy>
-            <PowerPvp>150</PowerPvp>
+            <PowerPvp>140</PowerPvp>
             <Turns>1</Turns>
             <EnergyPvp>75</EnergyPvp>
             <Type>Fighting</Type>
@@ -86565,10 +86227,10 @@
         <PokedexChargeMoveWrapper>
           <ChargeMove>
             <Name>Brave Bird</Name>
-            <Power>90</Power>
+            <Power>130</Power>
             <Time>2000</Time>
             <Energy>100</Energy>
-            <PowerPvp>90</PowerPvp>
+            <PowerPvp>130</PowerPvp>
             <Turns>1</Turns>
             <EnergyPvp>55</EnergyPvp>
             <Type>Flying</Type>
@@ -86670,10 +86332,10 @@
         <PokedexChargeMoveWrapper>
           <ChargeMove>
             <Name>Brave Bird</Name>
-            <Power>90</Power>
+            <Power>130</Power>
             <Time>2000</Time>
             <Energy>100</Energy>
-            <PowerPvp>90</PowerPvp>
+            <PowerPvp>130</PowerPvp>
             <Turns>1</Turns>
             <EnergyPvp>55</EnergyPvp>
             <Type>Flying</Type>
@@ -86700,6 +86362,26 @@
             <MoveType>Charge</MoveType>
             <DamageWindowStartTime>1500</DamageWindowStartTime>
             <DamageWindowDuration>1100</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+            <SelfBuff>0</SelfBuff>
+            <EnemyBuff>0</EnemyBuff>
+            <BuffProc>0</BuffProc>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Close Combat</Name>
+            <Power>100</Power>
+            <Time>2300</Time>
+            <Energy>100</Energy>
+            <PowerPvp>100</PowerPvp>
+            <Turns>1</Turns>
+            <EnergyPvp>45</EnergyPvp>
+            <Type>Fighting</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>1000</DamageWindowStartTime>
+            <DamageWindowDuration>1300</DamageWindowDuration>
             <DodgeFlashTime>0</DodgeFlashTime>
             <SelfBuff>0</SelfBuff>
             <EnemyBuff>0</EnemyBuff>
@@ -86775,10 +86457,10 @@
         <PokedexChargeMoveWrapper>
           <ChargeMove>
             <Name>Brave Bird</Name>
-            <Power>90</Power>
+            <Power>130</Power>
             <Time>2000</Time>
             <Energy>100</Energy>
-            <PowerPvp>90</PowerPvp>
+            <PowerPvp>130</PowerPvp>
             <Turns>1</Turns>
             <EnergyPvp>55</EnergyPvp>
             <Type>Flying</Type>
@@ -87450,7 +87132,7 @@
             <Energy>100</Energy>
             <PowerPvp>110</PowerPvp>
             <Turns>1</Turns>
-            <EnergyPvp>65</EnergyPvp>
+            <EnergyPvp>70</EnergyPvp>
             <Type>Steel</Type>
             <MoveType>Charge</MoveType>
             <DamageWindowStartTime>1600</DamageWindowStartTime>
@@ -87513,7 +87195,7 @@
             <Power>70</Power>
             <Time>3800</Time>
             <Energy>33</Energy>
-            <PowerPvp>70</PowerPvp>
+            <PowerPvp>65</PowerPvp>
             <Turns>1</Turns>
             <EnergyPvp>50</EnergyPvp>
             <Type>Fire</Type>
@@ -88723,9 +88405,9 @@
             <Power>90</Power>
             <Time>2600</Time>
             <Energy>50</Energy>
-            <PowerPvp>90</PowerPvp>
+            <PowerPvp>100</PowerPvp>
             <Turns>1</Turns>
-            <EnergyPvp>50</EnergyPvp>
+            <EnergyPvp>45</EnergyPvp>
             <Type>Electric</Type>
             <MoveType>Charge</MoveType>
             <DamageWindowStartTime>1700</DamageWindowStartTime>
@@ -88745,7 +88427,7 @@
             <Energy>100</Energy>
             <PowerPvp>110</PowerPvp>
             <Turns>1</Turns>
-            <EnergyPvp>65</EnergyPvp>
+            <EnergyPvp>70</EnergyPvp>
             <Type>Steel</Type>
             <MoveType>Charge</MoveType>
             <DamageWindowStartTime>1600</DamageWindowStartTime>
@@ -88888,7 +88570,7 @@
             <Power>140</Power>
             <Time>3500</Time>
             <Energy>100</Energy>
-            <PowerPvp>150</PowerPvp>
+            <PowerPvp>140</PowerPvp>
             <Turns>1</Turns>
             <EnergyPvp>75</EnergyPvp>
             <Type>Fighting</Type>
@@ -89013,7 +88695,7 @@
             <Power>140</Power>
             <Time>3500</Time>
             <Energy>100</Energy>
-            <PowerPvp>150</PowerPvp>
+            <PowerPvp>140</PowerPvp>
             <Turns>1</Turns>
             <EnergyPvp>75</EnergyPvp>
             <Type>Fighting</Type>
@@ -89098,7 +88780,7 @@
             <Power>130</Power>
             <Time>3100</Time>
             <Energy>100</Energy>
-            <PowerPvp>130</PowerPvp>
+            <PowerPvp>140</PowerPvp>
             <Turns>1</Turns>
             <EnergyPvp>75</EnergyPvp>
             <Type>Ice</Type>
@@ -89223,7 +88905,7 @@
             <Power>130</Power>
             <Time>3100</Time>
             <Energy>100</Energy>
-            <PowerPvp>130</PowerPvp>
+            <PowerPvp>140</PowerPvp>
             <Turns>1</Turns>
             <EnergyPvp>75</EnergyPvp>
             <Type>Ice</Type>
@@ -89348,7 +89030,7 @@
             <Power>130</Power>
             <Time>3100</Time>
             <Energy>100</Energy>
-            <PowerPvp>130</PowerPvp>
+            <PowerPvp>140</PowerPvp>
             <Turns>1</Turns>
             <EnergyPvp>75</EnergyPvp>
             <Type>Ice</Type>
@@ -89388,7 +89070,7 @@
             <Power>140</Power>
             <Time>3500</Time>
             <Energy>100</Energy>
-            <PowerPvp>150</PowerPvp>
+            <PowerPvp>140</PowerPvp>
             <Turns>1</Turns>
             <EnergyPvp>75</EnergyPvp>
             <Type>Fighting</Type>
@@ -90326,6 +90008,1439 @@
       <Attack>252</Attack>
       <Defense>199</Defense>
       <Stamina>174</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>52</Number>
+      <Species>Meowth - Galarian</Species>
+      <Type1>Steel</Type1>
+      <Type2>None</Type2>
+      <FastMoves>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Scratch</Name>
+            <Power>6</Power>
+            <Time>500</Time>
+            <Energy>4</Energy>
+            <PowerPvp>4</PowerPvp>
+            <Turns>1</Turns>
+            <EnergyPvp>2</EnergyPvp>
+            <Type>Normal</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>300</DamageWindowStartTime>
+            <DamageWindowDuration>200</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Metal Claw</Name>
+            <Power>8</Power>
+            <Time>700</Time>
+            <Energy>7</Energy>
+            <PowerPvp>5</PowerPvp>
+            <Turns>1</Turns>
+            <EnergyPvp>6</EnergyPvp>
+            <Type>Steel</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>430</DamageWindowStartTime>
+            <DamageWindowDuration>200</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+      </FastMoves>
+      <ChargeMoves>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Night Slash</Name>
+            <Power>50</Power>
+            <Time>2200</Time>
+            <Energy>33</Energy>
+            <PowerPvp>50</PowerPvp>
+            <Turns>1</Turns>
+            <EnergyPvp>35</EnergyPvp>
+            <Type>Dark</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>1300</DamageWindowStartTime>
+            <DamageWindowDuration>700</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+            <SelfBuff>0</SelfBuff>
+            <EnemyBuff>0</EnemyBuff>
+            <BuffProc>0</BuffProc>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Gyro Ball</Name>
+            <Power>80</Power>
+            <Time>3300</Time>
+            <Energy>50</Energy>
+            <PowerPvp>80</PowerPvp>
+            <Turns>1</Turns>
+            <EnergyPvp>60</EnergyPvp>
+            <Type>Steel</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>3000</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+            <SelfBuff>0</SelfBuff>
+            <EnemyBuff>0</EnemyBuff>
+            <BuffProc>0</BuffProc>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Dig</Name>
+            <Power>100</Power>
+            <Time>4700</Time>
+            <Energy>50</Energy>
+            <PowerPvp>100</PowerPvp>
+            <Turns>1</Turns>
+            <EnergyPvp>80</EnergyPvp>
+            <Type>Ground</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>2800</DamageWindowStartTime>
+            <DamageWindowDuration>1700</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+            <SelfBuff>0</SelfBuff>
+            <EnemyBuff>0</EnemyBuff>
+            <BuffProc>0</BuffProc>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
+      </ChargeMoves>
+      <Attack>115</Attack>
+      <Defense>92</Defense>
+      <Stamina>137</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>83</Number>
+      <Species>Farfetch'd - Galarian</Species>
+      <Type1>Fighting</Type1>
+      <Type2>None</Type2>
+      <FastMoves>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Rock Smash</Name>
+            <Power>15</Power>
+            <Time>1300</Time>
+            <Energy>10</Energy>
+            <PowerPvp>9</PowerPvp>
+            <Turns>2</Turns>
+            <EnergyPvp>7</EnergyPvp>
+            <Type>Fighting</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>550</DamageWindowStartTime>
+            <DamageWindowDuration>250</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Fury Cutter</Name>
+            <Power>3</Power>
+            <Time>400</Time>
+            <Energy>6</Energy>
+            <PowerPvp>2</PowerPvp>
+            <Turns>1</Turns>
+            <EnergyPvp>4</EnergyPvp>
+            <Type>Bug</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+      </FastMoves>
+      <ChargeMoves>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Brick Break</Name>
+            <Power>40</Power>
+            <Time>1600</Time>
+            <Energy>33</Energy>
+            <PowerPvp>40</PowerPvp>
+            <Turns>1</Turns>
+            <EnergyPvp>35</EnergyPvp>
+            <Type>Fighting</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>800</DamageWindowStartTime>
+            <DamageWindowDuration>600</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+            <SelfBuff>0</SelfBuff>
+            <EnemyBuff>0</EnemyBuff>
+            <BuffProc>0</BuffProc>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Brave Bird</Name>
+            <Power>130</Power>
+            <Time>2000</Time>
+            <Energy>100</Energy>
+            <PowerPvp>130</PowerPvp>
+            <Turns>1</Turns>
+            <EnergyPvp>55</EnergyPvp>
+            <Type>Flying</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>1000</DamageWindowStartTime>
+            <DamageWindowDuration>600</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+            <SelfBuff>0</SelfBuff>
+            <EnemyBuff>0</EnemyBuff>
+            <BuffProc>0</BuffProc>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Leaf Blade</Name>
+            <Power>70</Power>
+            <Time>2400</Time>
+            <Energy>33</Energy>
+            <PowerPvp>70</PowerPvp>
+            <Turns>1</Turns>
+            <EnergyPvp>35</EnergyPvp>
+            <Type>Grass</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>1250</DamageWindowStartTime>
+            <DamageWindowDuration>950</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+            <SelfBuff>0</SelfBuff>
+            <EnemyBuff>0</EnemyBuff>
+            <BuffProc>0</BuffProc>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
+      </ChargeMoves>
+      <Attack>174</Attack>
+      <Defense>114</Defense>
+      <Stamina>141</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>554</Number>
+      <Species>Darumaka - Galarian</Species>
+      <Type1>Ice</Type1>
+      <Type2>None</Type2>
+      <FastMoves>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Tackle</Name>
+            <Power>5</Power>
+            <Time>500</Time>
+            <Energy>5</Energy>
+            <PowerPvp>3</PowerPvp>
+            <Turns>1</Turns>
+            <EnergyPvp>2</EnergyPvp>
+            <Type>Normal</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>300</DamageWindowStartTime>
+            <DamageWindowDuration>200</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Ice Fang</Name>
+            <Power>12</Power>
+            <Time>1500</Time>
+            <Energy>20</Energy>
+            <PowerPvp>8</PowerPvp>
+            <Turns>1</Turns>
+            <EnergyPvp>5</EnergyPvp>
+            <Type>Ice</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>400</DamageWindowStartTime>
+            <DamageWindowDuration>600</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+      </FastMoves>
+      <ChargeMoves>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Ice Punch</Name>
+            <Power>50</Power>
+            <Time>1900</Time>
+            <Energy>33</Energy>
+            <PowerPvp>55</PowerPvp>
+            <Turns>1</Turns>
+            <EnergyPvp>40</EnergyPvp>
+            <Type>Ice</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>1300</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+            <SelfBuff>0</SelfBuff>
+            <EnemyBuff>0</EnemyBuff>
+            <BuffProc>0</BuffProc>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Ice Beam</Name>
+            <Power>90</Power>
+            <Time>3300</Time>
+            <Energy>50</Energy>
+            <PowerPvp>90</PowerPvp>
+            <Turns>1</Turns>
+            <EnergyPvp>55</EnergyPvp>
+            <Type>Ice</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>1300</DamageWindowStartTime>
+            <DamageWindowDuration>1500</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+            <SelfBuff>0</SelfBuff>
+            <EnemyBuff>0</EnemyBuff>
+            <BuffProc>0</BuffProc>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
+      </ChargeMoves>
+      <Attack>153</Attack>
+      <Defense>86</Defense>
+      <Stamina>172</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>555</Number>
+      <Species>Darmanitan - Galarian Standard</Species>
+      <Type1>Ice</Type1>
+      <Type2>None</Type2>
+      <FastMoves>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Tackle</Name>
+            <Power>5</Power>
+            <Time>500</Time>
+            <Energy>5</Energy>
+            <PowerPvp>3</PowerPvp>
+            <Turns>1</Turns>
+            <EnergyPvp>2</EnergyPvp>
+            <Type>Normal</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>300</DamageWindowStartTime>
+            <DamageWindowDuration>200</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Ice Fang</Name>
+            <Power>12</Power>
+            <Time>1500</Time>
+            <Energy>20</Energy>
+            <PowerPvp>8</PowerPvp>
+            <Turns>1</Turns>
+            <EnergyPvp>5</EnergyPvp>
+            <Type>Ice</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>400</DamageWindowStartTime>
+            <DamageWindowDuration>600</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+      </FastMoves>
+      <ChargeMoves>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Overheat</Name>
+            <Power>160</Power>
+            <Time>4000</Time>
+            <Energy>100</Energy>
+            <PowerPvp>130</PowerPvp>
+            <Turns>1</Turns>
+            <EnergyPvp>55</EnergyPvp>
+            <Type>Fire</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>2600</DamageWindowStartTime>
+            <DamageWindowDuration>1200</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+            <SelfBuff>0</SelfBuff>
+            <EnemyBuff>0</EnemyBuff>
+            <BuffProc>0</BuffProc>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Avalanche</Name>
+            <Power>90</Power>
+            <Time>2700</Time>
+            <Energy>50</Energy>
+            <PowerPvp>90</PowerPvp>
+            <Turns>1</Turns>
+            <EnergyPvp>45</EnergyPvp>
+            <Type>Ice</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>1700</DamageWindowStartTime>
+            <DamageWindowDuration>400</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+            <SelfBuff>0</SelfBuff>
+            <EnemyBuff>0</EnemyBuff>
+            <BuffProc>0</BuffProc>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Super Power</Name>
+            <Power>85</Power>
+            <Time>3000</Time>
+            <Energy>50</Energy>
+            <PowerPvp>85</PowerPvp>
+            <Turns>1</Turns>
+            <EnergyPvp>40</EnergyPvp>
+            <Type>Fighting</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>2100</DamageWindowStartTime>
+            <DamageWindowDuration>700</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+            <SelfBuff>0</SelfBuff>
+            <EnemyBuff>0</EnemyBuff>
+            <BuffProc>0</BuffProc>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Ice Punch</Name>
+            <Power>50</Power>
+            <Time>1900</Time>
+            <Energy>33</Energy>
+            <PowerPvp>55</PowerPvp>
+            <Turns>1</Turns>
+            <EnergyPvp>40</EnergyPvp>
+            <Type>Ice</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>1300</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+            <SelfBuff>0</SelfBuff>
+            <EnemyBuff>0</EnemyBuff>
+            <BuffProc>0</BuffProc>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
+      </ChargeMoves>
+      <Attack>263</Attack>
+      <Defense>114</Defense>
+      <Stamina>233</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>555</Number>
+      <Species>Darmanitan - Galarian Zen</Species>
+      <Type1>Ice</Type1>
+      <Type2>Fire</Type2>
+      <FastMoves>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Tackle</Name>
+            <Power>5</Power>
+            <Time>500</Time>
+            <Energy>5</Energy>
+            <PowerPvp>3</PowerPvp>
+            <Turns>1</Turns>
+            <EnergyPvp>2</EnergyPvp>
+            <Type>Normal</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>300</DamageWindowStartTime>
+            <DamageWindowDuration>200</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Ice Fang</Name>
+            <Power>12</Power>
+            <Time>1500</Time>
+            <Energy>20</Energy>
+            <PowerPvp>8</PowerPvp>
+            <Turns>1</Turns>
+            <EnergyPvp>5</EnergyPvp>
+            <Type>Ice</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>400</DamageWindowStartTime>
+            <DamageWindowDuration>600</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+      </FastMoves>
+      <ChargeMoves>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Overheat</Name>
+            <Power>160</Power>
+            <Time>4000</Time>
+            <Energy>100</Energy>
+            <PowerPvp>130</PowerPvp>
+            <Turns>1</Turns>
+            <EnergyPvp>55</EnergyPvp>
+            <Type>Fire</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>2600</DamageWindowStartTime>
+            <DamageWindowDuration>1200</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+            <SelfBuff>0</SelfBuff>
+            <EnemyBuff>0</EnemyBuff>
+            <BuffProc>0</BuffProc>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Avalanche</Name>
+            <Power>90</Power>
+            <Time>2700</Time>
+            <Energy>50</Energy>
+            <PowerPvp>90</PowerPvp>
+            <Turns>1</Turns>
+            <EnergyPvp>45</EnergyPvp>
+            <Type>Ice</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>1700</DamageWindowStartTime>
+            <DamageWindowDuration>400</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+            <SelfBuff>0</SelfBuff>
+            <EnemyBuff>0</EnemyBuff>
+            <BuffProc>0</BuffProc>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Super Power</Name>
+            <Power>85</Power>
+            <Time>3000</Time>
+            <Energy>50</Energy>
+            <PowerPvp>85</PowerPvp>
+            <Turns>1</Turns>
+            <EnergyPvp>40</EnergyPvp>
+            <Type>Fighting</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>2100</DamageWindowStartTime>
+            <DamageWindowDuration>700</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+            <SelfBuff>0</SelfBuff>
+            <EnemyBuff>0</EnemyBuff>
+            <BuffProc>0</BuffProc>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Ice Punch</Name>
+            <Power>50</Power>
+            <Time>1900</Time>
+            <Energy>33</Energy>
+            <PowerPvp>55</PowerPvp>
+            <Turns>1</Turns>
+            <EnergyPvp>40</EnergyPvp>
+            <Type>Ice</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>1300</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+            <SelfBuff>0</SelfBuff>
+            <EnemyBuff>0</EnemyBuff>
+            <BuffProc>0</BuffProc>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
+      </ChargeMoves>
+      <Attack>323</Attack>
+      <Defense>123</Defense>
+      <Stamina>233</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>618</Number>
+      <Species>Stunfisk - Galarian</Species>
+      <Type1>Ground</Type1>
+      <Type2>Steel</Type2>
+      <FastMoves>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Mud Shot</Name>
+            <Power>5</Power>
+            <Time>600</Time>
+            <Energy>7</Energy>
+            <PowerPvp>3</PowerPvp>
+            <Turns>1</Turns>
+            <EnergyPvp>9</EnergyPvp>
+            <Type>Ground</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>350</DamageWindowStartTime>
+            <DamageWindowDuration>200</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Metal Claw</Name>
+            <Power>8</Power>
+            <Time>700</Time>
+            <Energy>7</Energy>
+            <PowerPvp>5</PowerPvp>
+            <Turns>1</Turns>
+            <EnergyPvp>6</EnergyPvp>
+            <Type>Steel</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>430</DamageWindowStartTime>
+            <DamageWindowDuration>200</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+      </FastMoves>
+      <ChargeMoves>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Earthquake</Name>
+            <Power>140</Power>
+            <Time>3600</Time>
+            <Energy>100</Energy>
+            <PowerPvp>120</PowerPvp>
+            <Turns>1</Turns>
+            <EnergyPvp>65</EnergyPvp>
+            <Type>Ground</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>2700</DamageWindowStartTime>
+            <DamageWindowDuration>800</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+            <SelfBuff>0</SelfBuff>
+            <EnemyBuff>0</EnemyBuff>
+            <BuffProc>0</BuffProc>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Flash Cannon</Name>
+            <Power>100</Power>
+            <Time>2700</Time>
+            <Energy>100</Energy>
+            <PowerPvp>110</PowerPvp>
+            <Turns>1</Turns>
+            <EnergyPvp>70</EnergyPvp>
+            <Type>Steel</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>1600</DamageWindowStartTime>
+            <DamageWindowDuration>900</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+            <SelfBuff>0</SelfBuff>
+            <EnemyBuff>0</EnemyBuff>
+            <BuffProc>0</BuffProc>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Muddy Water</Name>
+            <Power>50</Power>
+            <Time>2200</Time>
+            <Energy>33</Energy>
+            <PowerPvp>35</PowerPvp>
+            <Turns>1</Turns>
+            <EnergyPvp>35</EnergyPvp>
+            <Type>Water</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>1200</DamageWindowStartTime>
+            <DamageWindowDuration>700</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+            <SelfBuff>0</SelfBuff>
+            <EnemyBuff>0</EnemyBuff>
+            <BuffProc>0</BuffProc>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Rock Slide</Name>
+            <Power>80</Power>
+            <Time>2700</Time>
+            <Energy>50</Energy>
+            <PowerPvp>80</PowerPvp>
+            <Turns>1</Turns>
+            <EnergyPvp>45</EnergyPvp>
+            <Type>Rock</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>1500</DamageWindowStartTime>
+            <DamageWindowDuration>1100</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+            <SelfBuff>0</SelfBuff>
+            <EnemyBuff>0</EnemyBuff>
+            <BuffProc>0</BuffProc>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
+      </ChargeMoves>
+      <Attack>144</Attack>
+      <Defense>171</Defense>
+      <Stamina>240</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>862</Number>
+      <Species>Obstagoon</Species>
+      <Type1>Dark</Type1>
+      <Type2>Normal</Type2>
+      <FastMoves>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Counter</Name>
+            <Power>12</Power>
+            <Time>900</Time>
+            <Energy>8</Energy>
+            <PowerPvp>8</PowerPvp>
+            <Turns>1</Turns>
+            <EnergyPvp>7</EnergyPvp>
+            <Type>Fighting</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>700</DamageWindowStartTime>
+            <DamageWindowDuration>200</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Lick</Name>
+            <Power>5</Power>
+            <Time>500</Time>
+            <Energy>6</Energy>
+            <PowerPvp>3</PowerPvp>
+            <Turns>1</Turns>
+            <EnergyPvp>3</EnergyPvp>
+            <Type>Ghost</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>200</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+      </FastMoves>
+      <ChargeMoves>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Cross Chop</Name>
+            <Power>50</Power>
+            <Time>1500</Time>
+            <Energy>50</Energy>
+            <PowerPvp>50</PowerPvp>
+            <Turns>1</Turns>
+            <EnergyPvp>35</EnergyPvp>
+            <Type>Fighting</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>800</DamageWindowStartTime>
+            <DamageWindowDuration>400</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+            <SelfBuff>0</SelfBuff>
+            <EnemyBuff>0</EnemyBuff>
+            <BuffProc>0</BuffProc>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Night Slash</Name>
+            <Power>50</Power>
+            <Time>2200</Time>
+            <Energy>33</Energy>
+            <PowerPvp>50</PowerPvp>
+            <Turns>1</Turns>
+            <EnergyPvp>35</EnergyPvp>
+            <Type>Dark</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>1300</DamageWindowStartTime>
+            <DamageWindowDuration>700</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+            <SelfBuff>0</SelfBuff>
+            <EnemyBuff>0</EnemyBuff>
+            <BuffProc>0</BuffProc>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Hyper Beam</Name>
+            <Power>150</Power>
+            <Time>3800</Time>
+            <Energy>100</Energy>
+            <PowerPvp>150</PowerPvp>
+            <Turns>1</Turns>
+            <EnergyPvp>80</EnergyPvp>
+            <Type>Normal</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>3300</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+            <SelfBuff>0</SelfBuff>
+            <EnemyBuff>0</EnemyBuff>
+            <BuffProc>0</BuffProc>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Gunk Shot</Name>
+            <Power>130</Power>
+            <Time>3100</Time>
+            <Energy>100</Energy>
+            <PowerPvp>130</PowerPvp>
+            <Turns>1</Turns>
+            <EnergyPvp>75</EnergyPvp>
+            <Type>Poison</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>1700</DamageWindowStartTime>
+            <DamageWindowDuration>1000</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+            <SelfBuff>0</SelfBuff>
+            <EnemyBuff>0</EnemyBuff>
+            <BuffProc>0</BuffProc>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
+      </ChargeMoves>
+      <Attack>180</Attack>
+      <Defense>194</Defense>
+      <Stamina>212</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>863</Number>
+      <Species>Perrserker</Species>
+      <Type1>Steel</Type1>
+      <Type2>None</Type2>
+      <FastMoves>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Metal Claw</Name>
+            <Power>8</Power>
+            <Time>700</Time>
+            <Energy>7</Energy>
+            <PowerPvp>5</PowerPvp>
+            <Turns>1</Turns>
+            <EnergyPvp>6</EnergyPvp>
+            <Type>Steel</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>430</DamageWindowStartTime>
+            <DamageWindowDuration>200</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Shadow Claw</Name>
+            <Power>9</Power>
+            <Time>700</Time>
+            <Energy>6</Energy>
+            <PowerPvp>6</PowerPvp>
+            <Turns>1</Turns>
+            <EnergyPvp>8</EnergyPvp>
+            <Type>Ghost</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>250</DamageWindowStartTime>
+            <DamageWindowDuration>250</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+      </FastMoves>
+      <ChargeMoves>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Iron Head</Name>
+            <Power>60</Power>
+            <Time>1900</Time>
+            <Energy>50</Energy>
+            <PowerPvp>70</PowerPvp>
+            <Turns>1</Turns>
+            <EnergyPvp>50</EnergyPvp>
+            <Type>Steel</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>1300</DamageWindowStartTime>
+            <DamageWindowDuration>400</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+            <SelfBuff>0</SelfBuff>
+            <EnemyBuff>0</EnemyBuff>
+            <BuffProc>0</BuffProc>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Close Combat</Name>
+            <Power>100</Power>
+            <Time>2300</Time>
+            <Energy>100</Energy>
+            <PowerPvp>100</PowerPvp>
+            <Turns>1</Turns>
+            <EnergyPvp>45</EnergyPvp>
+            <Type>Fighting</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>1000</DamageWindowStartTime>
+            <DamageWindowDuration>1300</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+            <SelfBuff>0</SelfBuff>
+            <EnemyBuff>0</EnemyBuff>
+            <BuffProc>0</BuffProc>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Play Rough</Name>
+            <Power>90</Power>
+            <Time>2900</Time>
+            <Energy>50</Energy>
+            <PowerPvp>90</PowerPvp>
+            <Turns>1</Turns>
+            <EnergyPvp>60</EnergyPvp>
+            <Type>Fairy</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>1300</DamageWindowStartTime>
+            <DamageWindowDuration>1400</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+            <SelfBuff>0</SelfBuff>
+            <EnemyBuff>0</EnemyBuff>
+            <BuffProc>0</BuffProc>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Foul Play</Name>
+            <Power>70</Power>
+            <Time>2000</Time>
+            <Energy>50</Energy>
+            <PowerPvp>70</PowerPvp>
+            <Turns>1</Turns>
+            <EnergyPvp>45</EnergyPvp>
+            <Type>Dark</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>1700</DamageWindowStartTime>
+            <DamageWindowDuration>200</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+            <SelfBuff>0</SelfBuff>
+            <EnemyBuff>0</EnemyBuff>
+            <BuffProc>0</BuffProc>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
+      </ChargeMoves>
+      <Attack>195</Attack>
+      <Defense>162</Defense>
+      <Stamina>172</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>865</Number>
+      <Species>Sirfetch'd</Species>
+      <Type1>Fighting</Type1>
+      <Type2>None</Type2>
+      <FastMoves>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Counter</Name>
+            <Power>12</Power>
+            <Time>900</Time>
+            <Energy>8</Energy>
+            <PowerPvp>8</PowerPvp>
+            <Turns>1</Turns>
+            <EnergyPvp>7</EnergyPvp>
+            <Type>Fighting</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>700</DamageWindowStartTime>
+            <DamageWindowDuration>200</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Fury Cutter</Name>
+            <Power>3</Power>
+            <Time>400</Time>
+            <Energy>6</Energy>
+            <PowerPvp>2</PowerPvp>
+            <Turns>1</Turns>
+            <EnergyPvp>4</EnergyPvp>
+            <Type>Bug</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>100</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+      </FastMoves>
+      <ChargeMoves>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Close Combat</Name>
+            <Power>100</Power>
+            <Time>2300</Time>
+            <Energy>100</Energy>
+            <PowerPvp>100</PowerPvp>
+            <Turns>1</Turns>
+            <EnergyPvp>45</EnergyPvp>
+            <Type>Fighting</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>1000</DamageWindowStartTime>
+            <DamageWindowDuration>1300</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+            <SelfBuff>0</SelfBuff>
+            <EnemyBuff>0</EnemyBuff>
+            <BuffProc>0</BuffProc>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Brave Bird</Name>
+            <Power>130</Power>
+            <Time>2000</Time>
+            <Energy>100</Energy>
+            <PowerPvp>130</PowerPvp>
+            <Turns>1</Turns>
+            <EnergyPvp>55</EnergyPvp>
+            <Type>Flying</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>1000</DamageWindowStartTime>
+            <DamageWindowDuration>600</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+            <SelfBuff>0</SelfBuff>
+            <EnemyBuff>0</EnemyBuff>
+            <BuffProc>0</BuffProc>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Leaf Blade</Name>
+            <Power>70</Power>
+            <Time>2400</Time>
+            <Energy>33</Energy>
+            <PowerPvp>70</PowerPvp>
+            <Turns>1</Turns>
+            <EnergyPvp>35</EnergyPvp>
+            <Type>Grass</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>1250</DamageWindowStartTime>
+            <DamageWindowDuration>950</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+            <SelfBuff>0</SelfBuff>
+            <EnemyBuff>0</EnemyBuff>
+            <BuffProc>0</BuffProc>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Night Slash</Name>
+            <Power>50</Power>
+            <Time>2200</Time>
+            <Energy>33</Energy>
+            <PowerPvp>50</PowerPvp>
+            <Turns>1</Turns>
+            <EnergyPvp>35</EnergyPvp>
+            <Type>Dark</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>1300</DamageWindowStartTime>
+            <DamageWindowDuration>700</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+            <SelfBuff>0</SelfBuff>
+            <EnemyBuff>0</EnemyBuff>
+            <BuffProc>0</BuffProc>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
+      </ChargeMoves>
+      <Attack>248</Attack>
+      <Defense>176</Defense>
+      <Stamina>158</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>77</Number>
+      <Species>Ponyta - Galarian</Species>
+      <Type1>Psychic</Type1>
+      <Type2>None</Type2>
+      <FastMoves>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Low Kick</Name>
+            <Power>6</Power>
+            <Time>600</Time>
+            <Energy>6</Energy>
+            <PowerPvp>4</PowerPvp>
+            <Turns>1</Turns>
+            <EnergyPvp>5</EnergyPvp>
+            <Type>Fighting</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>300</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Psycho Cut</Name>
+            <Power>5</Power>
+            <Time>600</Time>
+            <Energy>8</Energy>
+            <PowerPvp>3</PowerPvp>
+            <Turns>1</Turns>
+            <EnergyPvp>9</EnergyPvp>
+            <Type>Psychic</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>370</DamageWindowStartTime>
+            <DamageWindowDuration>200</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+      </FastMoves>
+      <ChargeMoves>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Play Rough</Name>
+            <Power>90</Power>
+            <Time>2900</Time>
+            <Energy>50</Energy>
+            <PowerPvp>90</PowerPvp>
+            <Turns>1</Turns>
+            <EnergyPvp>60</EnergyPvp>
+            <Type>Fairy</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>1300</DamageWindowStartTime>
+            <DamageWindowDuration>1400</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+            <SelfBuff>0</SelfBuff>
+            <EnemyBuff>0</EnemyBuff>
+            <BuffProc>0</BuffProc>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Psybeam</Name>
+            <Power>70</Power>
+            <Time>3200</Time>
+            <Energy>50</Energy>
+            <PowerPvp>70</PowerPvp>
+            <Turns>1</Turns>
+            <EnergyPvp>60</EnergyPvp>
+            <Type>Psychic</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>1300</DamageWindowStartTime>
+            <DamageWindowDuration>1400</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+            <SelfBuff>0</SelfBuff>
+            <EnemyBuff>0</EnemyBuff>
+            <BuffProc>0</BuffProc>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Swift</Name>
+            <Power>60</Power>
+            <Time>2800</Time>
+            <Energy>50</Energy>
+            <PowerPvp>60</PowerPvp>
+            <Turns>1</Turns>
+            <EnergyPvp>55</EnergyPvp>
+            <Type>Normal</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>2000</DamageWindowStartTime>
+            <DamageWindowDuration>600</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+            <SelfBuff>0</SelfBuff>
+            <EnemyBuff>0</EnemyBuff>
+            <BuffProc>0</BuffProc>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
+      </ChargeMoves>
+      <Attack>170</Attack>
+      <Defense>127</Defense>
+      <Stamina>137</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>78</Number>
+      <Species>Rapidash - Galarian</Species>
+      <Type1>Psychic</Type1>
+      <Type2>Fairy</Type2>
+      <FastMoves>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Low Kick</Name>
+            <Power>6</Power>
+            <Time>600</Time>
+            <Energy>6</Energy>
+            <PowerPvp>4</PowerPvp>
+            <Turns>1</Turns>
+            <EnergyPvp>5</EnergyPvp>
+            <Type>Fighting</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>300</DamageWindowStartTime>
+            <DamageWindowDuration>300</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Psycho Cut</Name>
+            <Power>5</Power>
+            <Time>600</Time>
+            <Energy>8</Energy>
+            <PowerPvp>3</PowerPvp>
+            <Turns>1</Turns>
+            <EnergyPvp>9</EnergyPvp>
+            <Type>Psychic</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>370</DamageWindowStartTime>
+            <DamageWindowDuration>200</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+      </FastMoves>
+      <ChargeMoves>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Play Rough</Name>
+            <Power>90</Power>
+            <Time>2900</Time>
+            <Energy>50</Energy>
+            <PowerPvp>90</PowerPvp>
+            <Turns>1</Turns>
+            <EnergyPvp>60</EnergyPvp>
+            <Type>Fairy</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>1300</DamageWindowStartTime>
+            <DamageWindowDuration>1400</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+            <SelfBuff>0</SelfBuff>
+            <EnemyBuff>0</EnemyBuff>
+            <BuffProc>0</BuffProc>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Psychic</Name>
+            <Power>90</Power>
+            <Time>2800</Time>
+            <Energy>50</Energy>
+            <PowerPvp>90</PowerPvp>
+            <Turns>1</Turns>
+            <EnergyPvp>55</EnergyPvp>
+            <Type>Psychic</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>1300</DamageWindowStartTime>
+            <DamageWindowDuration>1300</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+            <SelfBuff>0</SelfBuff>
+            <EnemyBuff>0</EnemyBuff>
+            <BuffProc>0</BuffProc>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Body Slam</Name>
+            <Power>50</Power>
+            <Time>1900</Time>
+            <Energy>33</Energy>
+            <PowerPvp>60</PowerPvp>
+            <Turns>1</Turns>
+            <EnergyPvp>35</EnergyPvp>
+            <Type>Normal</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>1200</DamageWindowStartTime>
+            <DamageWindowDuration>500</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+            <SelfBuff>0</SelfBuff>
+            <EnemyBuff>0</EnemyBuff>
+            <BuffProc>0</BuffProc>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Megahorn</Name>
+            <Power>110</Power>
+            <Time>2200</Time>
+            <Energy>100</Energy>
+            <PowerPvp>100</PowerPvp>
+            <Turns>1</Turns>
+            <EnergyPvp>55</EnergyPvp>
+            <Type>Bug</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>1700</DamageWindowStartTime>
+            <DamageWindowDuration>200</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+            <SelfBuff>0</SelfBuff>
+            <EnemyBuff>0</EnemyBuff>
+            <BuffProc>0</BuffProc>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
+      </ChargeMoves>
+      <Attack>207</Attack>
+      <Defense>162</Defense>
+      <Stamina>163</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>562</Number>
+      <Species>Yamask - Galarian</Species>
+      <Type1>Ground</Type1>
+      <Type2>Ghost</Type2>
+      <FastMoves>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Astonish</Name>
+            <Power>8</Power>
+            <Time>1100</Time>
+            <Energy>14</Energy>
+            <PowerPvp>5</PowerPvp>
+            <Turns>2</Turns>
+            <EnergyPvp>9</EnergyPvp>
+            <Type>Ghost</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>700</DamageWindowStartTime>
+            <DamageWindowDuration>350</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+      </FastMoves>
+      <ChargeMoves>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Night Shade</Name>
+            <Power>60</Power>
+            <Time>2600</Time>
+            <Energy>50</Energy>
+            <PowerPvp>60</PowerPvp>
+            <Turns>1</Turns>
+            <EnergyPvp>55</EnergyPvp>
+            <Type>Ghost</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>2100</DamageWindowStartTime>
+            <DamageWindowDuration>400</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+            <SelfBuff>0</SelfBuff>
+            <EnemyBuff>0</EnemyBuff>
+            <BuffProc>0</BuffProc>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Rock Tomb</Name>
+            <Power>70</Power>
+            <Time>3200</Time>
+            <Energy>50</Energy>
+            <PowerPvp>70</PowerPvp>
+            <Turns>1</Turns>
+            <EnergyPvp>60</EnergyPvp>
+            <Type>Rock</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>2250</DamageWindowStartTime>
+            <DamageWindowDuration>750</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+            <SelfBuff>0</SelfBuff>
+            <EnemyBuff>0</EnemyBuff>
+            <BuffProc>0</BuffProc>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
+      </ChargeMoves>
+      <Attack>95</Attack>
+      <Defense>141</Defense>
+      <Stamina>116</Stamina>
+    </PokedexEntry>
+    <PokedexEntry>
+      <Number>867</Number>
+      <Species>Runerigus</Species>
+      <Type1>Ground</Type1>
+      <Type2>Ghost</Type2>
+      <FastMoves>
+        <PokedexFastMoveWrapper>
+          <FastMove>
+            <Name>Astonish</Name>
+            <Power>8</Power>
+            <Time>1100</Time>
+            <Energy>14</Energy>
+            <PowerPvp>5</PowerPvp>
+            <Turns>2</Turns>
+            <EnergyPvp>9</EnergyPvp>
+            <Type>Ghost</Type>
+            <MoveType>Fast</MoveType>
+            <DamageWindowStartTime>700</DamageWindowStartTime>
+            <DamageWindowDuration>350</DamageWindowDuration>
+          </FastMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexFastMoveWrapper>
+      </FastMoves>
+      <ChargeMoves>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Shadow Ball</Name>
+            <Power>100</Power>
+            <Time>3000</Time>
+            <Energy>50</Energy>
+            <PowerPvp>100</PowerPvp>
+            <Turns>1</Turns>
+            <EnergyPvp>55</EnergyPvp>
+            <Type>Ghost</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>2400</DamageWindowStartTime>
+            <DamageWindowDuration>400</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+            <SelfBuff>0</SelfBuff>
+            <EnemyBuff>0</EnemyBuff>
+            <BuffProc>0</BuffProc>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Sand Tomb</Name>
+            <Power>60</Power>
+            <Time>4000</Time>
+            <Energy>33</Energy>
+            <PowerPvp>25</PowerPvp>
+            <Turns>1</Turns>
+            <EnergyPvp>40</EnergyPvp>
+            <Type>Ground</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>1700</DamageWindowStartTime>
+            <DamageWindowDuration>2300</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+            <SelfBuff>0</SelfBuff>
+            <EnemyBuff>0</EnemyBuff>
+            <BuffProc>0</BuffProc>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
+        <PokedexChargeMoveWrapper>
+          <ChargeMove>
+            <Name>Rock Tomb</Name>
+            <Power>70</Power>
+            <Time>3200</Time>
+            <Energy>50</Energy>
+            <PowerPvp>70</PowerPvp>
+            <Turns>1</Turns>
+            <EnergyPvp>60</EnergyPvp>
+            <Type>Rock</Type>
+            <MoveType>Charge</MoveType>
+            <DamageWindowStartTime>2250</DamageWindowStartTime>
+            <DamageWindowDuration>750</DamageWindowDuration>
+            <DodgeFlashTime>0</DodgeFlashTime>
+            <SelfBuff>0</SelfBuff>
+            <EnemyBuff>0</EnemyBuff>
+            <BuffProc>0</BuffProc>
+          </ChargeMove>
+          <IsLegacy>false</IsLegacy>
+        </PokedexChargeMoveWrapper>
+      </ChargeMoves>
+      <Attack>163</Attack>
+      <Defense>237</Defense>
+      <Stamina>151</Stamina>
     </PokedexEntry>
   </PokedexEntries>
 </Data>

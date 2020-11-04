@@ -42,10 +42,7 @@ namespace Pokemon_Go_Database.Screens
 
         public override void Initialize()
         {
-            PokedexChargeMoveWrapper value1 = new PokedexChargeMoveWrapper(new ChargeMove("Test move 1"));
-            PokedexChargeMoveWrapper value2 = new PokedexChargeMoveWrapper(new ChargeMove("Test move 2"));
-            this.TestValues = new List<PokedexChargeMoveWrapper>(new PokedexChargeMoveWrapper[] { value1, value2 });
-            this.TestValue = value1;
+
         }
 
         public override void Deinitialize()
@@ -54,30 +51,6 @@ namespace Pokemon_Go_Database.Screens
         }
 
         #region Public Properties
-        private List<PokedexChargeMoveWrapper> _testValues;
-        public List<PokedexChargeMoveWrapper> TestValues
-        {
-            get
-            {
-                return this._testValues;
-            }
-            set
-            {
-                this.Set(ref this._testValues, value);
-            }
-        }
-        private PokedexChargeMoveWrapper _testValue;
-        public PokedexChargeMoveWrapper TestValue
-        {
-            get
-            {
-                return this._testValue;
-            }
-            set
-            {
-                this.Set(ref this._testValue, value);
-            }
-        }
         private ListCollectionView _pokedexEntries;
         public ListCollectionView PokedexEntries
         {
