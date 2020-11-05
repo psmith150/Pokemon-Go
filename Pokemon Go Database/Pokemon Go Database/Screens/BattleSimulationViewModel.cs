@@ -378,6 +378,27 @@ namespace Pokemon_Go_Database.Screens
                 {
                     await this._messageViewer.DisplayMessage($"Error when simulating battle: {ex.Message}", "Simulation Error", MessageViewerButton.Ok, MessageViewerIcon.Error);
                 }
+                // Check mega evolution
+                foreach (PokedexEntry megaEvolution in this.Session.Pokedex.Where(x => x.Species.Contains(pokemon.Species.Species + " - Mega")))
+                {
+                    attackers.Clear();
+                    Pokemon megaForm = pokemon.Copy();
+                    megaForm.Name = megaForm.Name + megaEvolution.Species.Substring(pokemon.Species.Species.Length);
+                    megaForm.Species = megaEvolution;
+                    megaForm.FastMove = megaEvolution.FastMoves.FirstOrDefault(x => x.FastMove.Name.Equals(megaForm.FastMove.FastMove.Name));
+                    megaForm.ChargeMove = megaEvolution.ChargeMoves.FirstOrDefault(x => x.ChargeMove.Name.Equals(megaForm.ChargeMove.ChargeMove.Name));
+                    megaForm.ChargeMove2 = megaEvolution.ChargeMoves.FirstOrDefault(x => x.ChargeMove.Name.Equals(megaForm.ChargeMove.ChargeMove.Name));
+                    attackers.Add(new AttackerSimulationWrapper(megaForm, new BattleResult()));
+                    try
+                    {
+                        await Task.Run(() => this.SimulateBattleAsync(attackers, this.Defender, this.DefenderType));
+                        results.Add(attackers[0].BattleResult);
+                    }
+                    catch (Exception ex)
+                    {
+                        await this._messageViewer.DisplayMessage($"Error when simulating battle: {ex.Message}", "Simulation Error", MessageViewerButton.Ok, MessageViewerIcon.Error);
+                    }
+                }
             }
             this.AllPokemonResults.Clear();
             this.AllPokemonResults.InsertRange(results);
@@ -408,6 +429,23 @@ namespace Pokemon_Go_Database.Screens
                 catch (Exception ex)
                 {
                     await this._messageViewer.DisplayMessage($"Error when simulating battle: {ex.Message}", "Simulation Error", MessageViewerButton.Ok, MessageViewerIcon.Error);
+                }
+                // Check mega evolution
+                foreach (PokedexEntry megaEvolution in this.Session.Pokedex.Where(x => x.Species.Contains(pokemon.Species.Species + " - Mega")))
+                {
+                    attackers.Clear();
+                    Pokemon megaForm = newPokemon.Copy();
+                    megaForm.Species = megaEvolution;
+                    attackers.Add(new AttackerSimulationWrapper(megaForm, new BattleResult()));
+                    try
+                    {
+                        await Task.Run(() => this.SimulateBattleAsync(attackers, this.Defender, this.DefenderType));
+                        results.Add(attackers[0].BattleResult);
+                    }
+                    catch (Exception ex)
+                    {
+                        await this._messageViewer.DisplayMessage($"Error when simulating battle: {ex.Message}", "Simulation Error", MessageViewerButton.Ok, MessageViewerIcon.Error);
+                    }
                 }
             }
             this.AllPokemonResults.Clear();
