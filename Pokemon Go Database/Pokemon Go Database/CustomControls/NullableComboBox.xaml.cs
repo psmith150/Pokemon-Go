@@ -115,6 +115,7 @@ namespace Pokemon_Go_Database.CustomControls
             }
             set
             {
+                combo.DisplayMemberPath = value;
                 SetValue(DisplayMemberPathProperty, value);
             }
         }
@@ -245,7 +246,7 @@ namespace Pokemon_Go_Database.CustomControls
         #endregion
         #region Dependency Properties
         public static readonly DependencyProperty ItemsSourceProperty =
-            DependencyProperty.Register("ItemsSource", typeof(IEnumerable), typeof(NullableComboBox), new FrameworkPropertyMetadata(null, OnDependencyPropertyChanged));
+            DependencyProperty.Register("ItemsSource", typeof(IEnumerable), typeof(NullableComboBox), new FrameworkPropertyMetadata(null, FrameworkPropertyMetadataOptions.BindsTwoWayByDefault, OnDependencyPropertyChanged));
 
         public static readonly DependencyProperty SelectedItemProperty =
             DependencyProperty.Register("SelectedItem", typeof(object), typeof(NullableComboBox), new FrameworkPropertyMetadata(null, FrameworkPropertyMetadataOptions.BindsTwoWayByDefault, OnDependencyPropertyChanged));
@@ -257,7 +258,7 @@ namespace Pokemon_Go_Database.CustomControls
             DependencyProperty.Register("AlternationCount", typeof(int), typeof(NullableComboBox), new FrameworkPropertyMetadata(ComboBox.AlternationCountProperty.DefaultMetadata.DefaultValue));
 
         public static readonly DependencyProperty DisplayMemberPathProperty =
-            DependencyProperty.Register("DisplayMemberPath", typeof(string), typeof(NullableComboBox), new FrameworkPropertyMetadata(ComboBox.DisplayMemberPathProperty.DefaultMetadata.DefaultValue));
+            DependencyProperty.Register("DisplayMemberPath", typeof(string), typeof(NullableComboBox), new FrameworkPropertyMetadata(ComboBox.DisplayMemberPathProperty.DefaultMetadata.DefaultValue, FrameworkPropertyMetadataOptions.BindsTwoWayByDefault, OnDependencyPropertyChanged));
 
         public static readonly DependencyProperty IsDropDownOpenProperty =
             DependencyProperty.Register("IsDropDownOpen", typeof(bool), typeof(NullableComboBox), new FrameworkPropertyMetadata(ComboBox.IsDropDownOpenProperty.DefaultMetadata.DefaultValue));
@@ -318,6 +319,10 @@ namespace Pokemon_Go_Database.CustomControls
             else if (object.ReferenceEquals(args.Property, PlaceholderTextProperty))
             {
                 self.emptyItem.DisplayString = args.NewValue.ToString();
+            }
+            else if (object.ReferenceEquals(args.Property, DisplayMemberPathProperty))
+            {
+                self.DisplayMemberPath = args.NewValue.ToString();
             }
         }
 
