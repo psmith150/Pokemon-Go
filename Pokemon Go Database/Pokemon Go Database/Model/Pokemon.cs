@@ -139,7 +139,7 @@ namespace Pokemon_Go_Database.Model
         {
             get
             {
-                return this.ChargeMove != null;
+                return this.ChargeMove2 != null;
             }
         }
 
@@ -693,6 +693,7 @@ namespace Pokemon_Go_Database.Model
             copy.HasBeenPowered = this.HasBeenPowered;
             copy.FastMove = this.FastMove;
             copy.ChargeMove = this.ChargeMove;
+            copy.ChargeMove2 = this.ChargeMove2;
             copy.IVSets = new MyObservableCollection<IVSet>();
             foreach (IVSet set in this.IVSets)
                 copy.IVSets.Add(set.Copy());

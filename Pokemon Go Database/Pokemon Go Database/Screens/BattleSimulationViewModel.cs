@@ -378,6 +378,23 @@ namespace Pokemon_Go_Database.Screens
                 {
                     await this._messageViewer.DisplayMessage($"Error when simulating battle: {ex.Message}", "Simulation Error", MessageViewerButton.Ok, MessageViewerIcon.Error);
                 }
+                // Run again with 2nd charge move
+                if (pokemon.HasSecondChargeMove)
+                {
+                    attackers.Clear();
+                    var pokemonCopy = pokemon.Copy();
+                    pokemonCopy.ChargeMove = pokemonCopy.ChargeMove2;
+                    attackers.Add(new AttackerSimulationWrapper(pokemonCopy, new BattleResult()));
+                    try
+                    {
+                        await Task.Run(() => this.SimulateBattleAsync(attackers, this.Defender, this.DefenderType));
+                        results.Add(attackers[0].BattleResult);
+                    }
+                    catch (Exception ex)
+                    {
+                        await this._messageViewer.DisplayMessage($"Error when simulating battle: {ex.Message}", "Simulation Error", MessageViewerButton.Ok, MessageViewerIcon.Error);
+                    }
+                }
                 // Check mega evolution
                 foreach (PokedexEntry megaEvolution in this.Session.Pokedex.Where(x => x.Species.Contains(pokemon.Species.Species + " - Mega")))
                 {
@@ -429,6 +446,23 @@ namespace Pokemon_Go_Database.Screens
                 catch (Exception ex)
                 {
                     await this._messageViewer.DisplayMessage($"Error when simulating battle: {ex.Message}", "Simulation Error", MessageViewerButton.Ok, MessageViewerIcon.Error);
+                }
+                // Run again with 2nd charge move
+                if (pokemon.HasSecondChargeMove)
+                {
+                    attackers.Clear();
+                    var pokemonCopy = newPokemon.Copy();
+                    pokemonCopy.ChargeMove = pokemonCopy.ChargeMove2;
+                    attackers.Add(new AttackerSimulationWrapper(pokemonCopy, new BattleResult()));
+                    try
+                    {
+                        await Task.Run(() => this.SimulateBattleAsync(attackers, this.Defender, this.DefenderType));
+                        results.Add(attackers[0].BattleResult);
+                    }
+                    catch (Exception ex)
+                    {
+                        await this._messageViewer.DisplayMessage($"Error when simulating battle: {ex.Message}", "Simulation Error", MessageViewerButton.Ok, MessageViewerIcon.Error);
+                    }
                 }
                 // Check mega evolution
                 foreach (PokedexEntry megaEvolution in this.Session.Pokedex.Where(x => x.Species.Contains(pokemon.Species.Species + " - Mega")))
